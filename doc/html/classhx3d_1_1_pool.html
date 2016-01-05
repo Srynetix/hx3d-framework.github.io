@@ -96,6 +96,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">hx3d::Pool&lt; T &gt; Class Template Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Manage poolable elements.  
+ <a href="classhx3d_1_1_pool.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="pool_8hpp_source.html">pool.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for hx3d::Pool&lt; T &gt;:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -111,15 +116,24 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 Public Member Functions</h2></td></tr>
 <tr class="memitem:af32567fd73538cd1f7533aca439b1cb2"><td class="memTemplParams" colspan="2">template&lt;class... Args&gt; </td></tr>
 <tr class="memitem:af32567fd73538cd1f7533aca439b1cb2"><td class="memTemplItemLeft" align="right" valign="top">&#160;</td><td class="memTemplItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_pool.html#af32567fd73538cd1f7533aca439b1cb2">Pool</a> (unsigned int size, Args...args)</td></tr>
+<tr class="memdesc:af32567fd73538cd1f7533aca439b1cb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">Construct a pool with a size and arguments.  <a href="#af32567fd73538cd1f7533aca439b1cb2">More...</a><br /></td></tr>
 <tr class="separator:af32567fd73538cd1f7533aca439b1cb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa73cdab3626f68f8647882ebb9463fe"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacehx3d.html#a43f43f67acdb2297ebb1d8fa899126e8">Ptr</a>&lt; T &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_pool.html#aaa73cdab3626f68f8647882ebb9463fe">take</a> ()</td></tr>
+<tr class="memdesc:aaa73cdab3626f68f8647882ebb9463fe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Fetch a free poolable element.  <a href="#aaa73cdab3626f68f8647882ebb9463fe">More...</a><br /></td></tr>
 <tr class="separator:aaa73cdab3626f68f8647882ebb9463fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a518d59a254dbc30a0fffd13d9f641611"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_pool.html#a518d59a254dbc30a0fffd13d9f641611">release</a> (const <a class="el" href="namespacehx3d.html#a43f43f67acdb2297ebb1d8fa899126e8">Ptr</a>&lt; T &gt; &amp;ptr)</td></tr>
+<tr class="memdesc:a518d59a254dbc30a0fffd13d9f641611"><td class="mdescLeft">&#160;</td><td class="mdescRight">Release a poolable element.  <a href="#a518d59a254dbc30a0fffd13d9f641611">More...</a><br /></td></tr>
 <tr class="separator:a518d59a254dbc30a0fffd13d9f641611"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1f827b559064fdd5b3222a431ff4197"><td class="memItemLeft" align="right" valign="top">const std::set&lt; <a class="el" href="namespacehx3d.html#a43f43f67acdb2297ebb1d8fa899126e8">Ptr</a>&lt; T &gt; &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_pool.html#ac1f827b559064fdd5b3222a431ff4197">getWorking</a> ()</td></tr>
+<tr class="memdesc:ac1f827b559064fdd5b3222a431ff4197"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the locked elements.  <a href="#ac1f827b559064fdd5b3222a431ff4197">More...</a><br /></td></tr>
 <tr class="separator:ac1f827b559064fdd5b3222a431ff4197"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><h3>template&lt;class T&gt;<br />
+class hx3d::Pool&lt; T &gt;</h3>
+
+<p>Manage poolable elements. </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="af32567fd73538cd1f7533aca439b1cb2"></a>
 <div class="memitem">
 <div class="memproto">
@@ -147,7 +161,8 @@ template&lt;class... Args&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Construct a pool with a size and arguments.</p>
+
+<p>Construct a pool with a size and arguments. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">size</td><td>Size </td></tr>
@@ -173,7 +188,8 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Get the locked elements.</p>
+
+<p>Get the locked elements. </p>
 <dl class="section return"><dt>Returns</dt><dd>Set of elements </dd></dl>
 
 </div>
@@ -193,13 +209,27 @@ template&lt;class T&gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Release a poolable element.</p>
+
+<p>Release a poolable element. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">ptr</td><td><a class="el" href="classhx3d_1_1_poolable.html">Poolable</a> (Ptr) </td></tr>
+    <tr><td class="paramname">ptr</td><td><a class="el" href="classhx3d_1_1_poolable.html" title="Reutilisable elements. Recycling is good for your memory. ">Poolable</a> (Ptr) </td></tr>
   </table>
   </dd>
 </dl>
+
+<p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classhx3d_1_1_pool_a518d59a254dbc30a0fffd13d9f641611_cgraph.png" border="0" usemap="#classhx3d_1_1_pool_a518d59a254dbc30a0fffd13d9f641611_cgraph" alt=""/></div>
+<map name="classhx3d_1_1_pool_a518d59a254dbc30a0fffd13d9f641611_cgraph" id="classhx3d_1_1_pool_a518d59a254dbc30a0fffd13d9f641611_cgraph">
+<area shape="rect" id="node2" href="classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17" title="Write an error message. " alt="" coords="188,5,328,32"/>
+<area shape="rect" id="node3" href="namespacehx3d.html#afc522941dc9d3d90bfc0765b6a52a6ae" title="Format a string using printf notation. " alt="" coords="376,5,471,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -217,8 +247,9 @@ template&lt;class T &gt; </div>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Fetch a free poolable element.</p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classhx3d_1_1_poolable.html">Poolable</a> element </dd></dl>
+
+<p>Fetch a free poolable element. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classhx3d_1_1_poolable.html" title="Reutilisable elements. Recycling is good for your memory. ">Poolable</a> element </dd></dl>
 
 </div>
 </div>

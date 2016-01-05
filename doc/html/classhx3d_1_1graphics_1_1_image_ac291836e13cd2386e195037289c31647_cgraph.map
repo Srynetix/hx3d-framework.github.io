@@ -1,3 +1,5 @@
 <map id="hx3d::graphics::Image::setRect" name="hx3d::graphics::Image::setRect">
-<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_image.html#a4bbf9667409e2bb181ccc7f01fc8b0b8" title="Set a pixel with a color. " alt="" coords="204,13,381,39"/>
+<area shape="rect" id="node2" href="$classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17" title="Write an error message. " alt="" coords="223,5,363,32"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1graphics_1_1_image.html#a4bbf9667409e2bb181ccc7f01fc8b0b8" title="Set a pixel with a color. " alt="" coords="204,56,381,83"/>
+<area shape="rect" id="node3" href="$namespacehx3d.html#afc522941dc9d3d90bfc0765b6a52a6ae" title="Format a string using printf notation. " alt="" coords="429,5,524,32"/>
 </map>

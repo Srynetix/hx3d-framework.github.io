@@ -97,6 +97,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">hx3d::File Class Reference</div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p><a class="el" href="classhx3d_1_1_file.html" title="File loading abstraction. ">File</a> loading abstraction.  
+ <a href="classhx3d_1_1_file.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="file_8hpp_source.html">file.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for hx3d::File:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -121,16 +126,63 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:abc0224968e89260a937c46065c7ec501"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_file.html#abc0224968e89260a937c46065c7ec501">toString</a> ()</td></tr>
+<tr class="memdesc:abc0224968e89260a937c46065c7ec501"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return the file content as a string.  <a href="#abc0224968e89260a937c46065c7ec501">More...</a><br /></td></tr>
 <tr class="separator:abc0224968e89260a937c46065c7ec501"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad7b2a7b6c196e6aef3c7fb7d5fc32abc"><td class="memItemLeft" align="right" valign="top">size_t&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_file.html#ad7b2a7b6c196e6aef3c7fb7d5fc32abc">getSize</a> () const </td></tr>
+<tr class="memdesc:ad7b2a7b6c196e6aef3c7fb7d5fc32abc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the file size.  <a href="#ad7b2a7b6c196e6aef3c7fb7d5fc32abc">More...</a><br /></td></tr>
+<tr class="separator:ad7b2a7b6c196e6aef3c7fb7d5fc32abc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85ed2620190364531c4fc4817a329456"><td class="memItemLeft" align="right" valign="top">char *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_file.html#a85ed2620190364531c4fc4817a329456">getData</a> () const </td></tr>
+<tr class="memdesc:a85ed2620190364531c4fc4817a329456"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the file data as an 8-bit array.  <a href="#a85ed2620190364531c4fc4817a329456">More...</a><br /></td></tr>
+<tr class="separator:a85ed2620190364531c4fc4817a329456"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-methods"></a>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aa196439f2f01d10e3e8c667f583dcaf8"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacehx3d.html#a43f43f67acdb2297ebb1d8fa899126e8">Ptr</a>&lt; <a class="el" href="classhx3d_1_1_file.html">File</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_file.html#aa196439f2f01d10e3e8c667f583dcaf8">loadAsciiFile</a> (std::string path)</td></tr>
+<tr class="memdesc:aa196439f2f01d10e3e8c667f583dcaf8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load an ascii file from a path.  <a href="#aa196439f2f01d10e3e8c667f583dcaf8">More...</a><br /></td></tr>
 <tr class="separator:aa196439f2f01d10e3e8c667f583dcaf8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9249e27317961fc11d7d321d5694ec7e"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="namespacehx3d.html#a43f43f67acdb2297ebb1d8fa899126e8">Ptr</a>&lt; <a class="el" href="classhx3d_1_1_file.html">File</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_file.html#a9249e27317961fc11d7d321d5694ec7e">loadBinaryFile</a> (std::string path)</td></tr>
+<tr class="memdesc:a9249e27317961fc11d7d321d5694ec7e"><td class="mdescLeft">&#160;</td><td class="mdescRight">Load a binary file from a path.  <a href="#a9249e27317961fc11d7d321d5694ec7e">More...</a><br /></td></tr>
 <tr class="separator:a9249e27317961fc11d7d321d5694ec7e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p><a class="el" href="classhx3d_1_1_file.html" title="File loading abstraction. ">File</a> loading abstraction. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a85ed2620190364531c4fc4817a329456"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">char * hx3d::File::getData </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the file data as an 8-bit array. </p>
+<dl class="section return"><dt>Returns</dt><dd>8-bit array </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="ad7b2a7b6c196e6aef3c7fb7d5fc32abc"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">size_t hx3d::File::getSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the file size. </p>
+<dl class="section return"><dt>Returns</dt><dd>Size </dd></dl>
+
+</div>
+</div>
 <a class="anchor" id="aa196439f2f01d10e3e8c667f583dcaf8"></a>
 <div class="memitem">
 <div class="memproto">
@@ -152,13 +204,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Load an ascii file from a path.</p>
+
+<p>Load an ascii file from a path. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Path to file </td></tr>
+    <tr><td class="paramname">path</td><td>Path to file</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classhx3d_1_1_file.html" title="File loading abstraction. ">File</a> handler </dd></dl>
 
 </div>
 </div>
@@ -183,13 +237,15 @@ Static Public Member Functions</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Load a binary file from a path.</p>
+
+<p>Load a binary file from a path. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
-    <tr><td class="paramname">path</td><td>Path to file </td></tr>
+    <tr><td class="paramname">path</td><td>Path to file</td></tr>
   </table>
   </dd>
 </dl>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classhx3d_1_1_file.html" title="File loading abstraction. ">File</a> handler </dd></dl>
 
 </div>
 </div>
@@ -205,7 +261,8 @@ Static Public Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Return the file content as a string.</p>
+
+<p>Return the file content as a string. </p>
 <dl class="section return"><dt>Returns</dt><dd>String </dd></dl>
 
 </div>

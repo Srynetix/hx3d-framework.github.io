@@ -96,6 +96,11 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="title">hx3d::Poolable Class Reference<span class="mlabels"><span class="mlabel">abstract</span></span></div>  </div>
 </div><!--header-->
 <div class="contents">
+
+<p>Reutilisable elements. Recycling is good for your memory.  
+ <a href="classhx3d_1_1_poolable.html#details">More...</a></p>
+
+<p><code>#include &lt;<a class="el" href="poolable_8hpp_source.html">poolable.hpp</a>&gt;</code></p>
 <div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
   <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for hx3d::Poolable:</div>
 <div id="dynsection-0-summary" class="dynsummary" style="display:block;">
@@ -109,38 +114,65 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a036085f0547de461e98af12b84bd736f"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_poolable.html#a036085f0547de461e98af12b84bd736f">reset</a> ()=0</td></tr>
+<tr class="memitem:aade7ad8983234ccf6bf152c2f52ddb5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_poolable.html#aade7ad8983234ccf6bf152c2f52ddb5b">setId</a> (const unsigned int id)</td></tr>
+<tr class="memdesc:aade7ad8983234ccf6bf152c2f52ddb5b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Change the poolable ID.  <a href="#aade7ad8983234ccf6bf152c2f52ddb5b">More...</a><br /></td></tr>
+<tr class="separator:aade7ad8983234ccf6bf152c2f52ddb5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3d23da5bec3720b62e039302e29c9741"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_poolable.html#a3d23da5bec3720b62e039302e29c9741">getId</a> () const </td></tr>
+<tr class="memdesc:a3d23da5bec3720b62e039302e29c9741"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the poolable ID.  <a href="#a3d23da5bec3720b62e039302e29c9741">More...</a><br /></td></tr>
+<tr class="separator:a3d23da5bec3720b62e039302e29c9741"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a036085f0547de461e98af12b84bd736f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a036085f0547de461e98af12b84bd736f"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_poolable.html#a036085f0547de461e98af12b84bd736f">reset</a> ()=0</td></tr>
+<tr class="memdesc:a036085f0547de461e98af12b84bd736f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the element. <br /></td></tr>
 <tr class="separator:a036085f0547de461e98af12b84bd736f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="a036085f0547de461e98af12b84bd736f"></a>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>Reutilisable elements. Recycling is good for your memory. </p>
+</div><h2 class="groupheader">Member Function Documentation</h2>
+<a class="anchor" id="a3d23da5bec3720b62e039302e29c9741"></a>
 <div class="memitem">
 <div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual void hx3d::Poolable::reset </td>
+          <td class="memname">unsigned int hx3d::Poolable::getId </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the poolable ID. </p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classhx3d_1_1_poolable.html" title="Reutilisable elements. Recycling is good for your memory. ">Poolable</a> ID </dd></dl>
+
+</div>
+</div>
+<a class="anchor" id="aade7ad8983234ccf6bf152c2f52ddb5b"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hx3d::Poolable::setId </td>
+          <td>(</td>
+          <td class="paramtype">const unsigned int&#160;</td>
+          <td class="paramname"><em>id</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
-  </tr>
-</table>
 </div><div class="memdoc">
-<p>Reset. </p>
 
-<p>Implemented in <a class="el" href="classhx3d_1_1graphics_1_1_particle.html#a0e455af71d1785acb04f2c44cd7d67ba">hx3d::graphics::Particle</a>.</p>
+<p>Change the poolable ID. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">id</td><td>New ID </td></tr>
+  </table>
+  </dd>
+</dl>
 
 </div>
 </div>
-<hr/>The documentation for this class was generated from the following file:<ul>
+<hr/>The documentation for this class was generated from the following files:<ul>
 <li>engine/include/hx3d/utils/<a class="el" href="poolable_8hpp_source.html">poolable.hpp</a></li>
+<li>engine/src/utils/poolable.cpp</li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

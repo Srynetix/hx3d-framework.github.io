@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['windows',['Windows',['../classhx3d_1_1_core.html#aead0847ba5ce147d0f1bf45203143788aaea23489ce3aa9b6406ebb28e0cda430',1,'hx3d::Core']]],
-  ['wrapx',['WrapX',['../classhx3d_1_1graphics_1_1_texture.html#aaf170e04a34e7f7ea8b338b21d9cf46aa35e44b0312207018f3760a11f7898c4a',1,'hx3d::graphics::Texture']]],
-  ['wrapy',['WrapY',['../classhx3d_1_1graphics_1_1_texture.html#aaf170e04a34e7f7ea8b338b21d9cf46aad1690834987522128b879c86ff6ae4e2',1,'hx3d::graphics::Texture']]]
+  ['unknown',['Unknown',['../classhx3d_1_1_core.html#aead0847ba5ce147d0f1bf45203143788a88183b946cc5f0e8c96b2e66e1c74a7e',1,'hx3d::Core']]],
+  ['up',['Up',['../classhx3d_1_1window_1_1_mouse_wheel_event.html#ab71edd90e69413a851e13fe0ddb15d4ca258f49887ef8d14ac268c92b02503aaa',1,'hx3d::window::MouseWheelEvent']]]
 ];

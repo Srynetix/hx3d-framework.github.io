@@ -1,4 +1,4 @@
 <map id="hx3d::audio::Music::Music" name="hx3d::audio::Music::Music">
 <area shape="rect" id="node2" href="$classhx3d_1_1audio_1_1_music.html#a9d84dd682b48aed6df3e68d52f62abc1" title="Initialize a music with a path. " alt="" coords="185,5,317,47"/>
-<area shape="rect" id="node3" href="$classhx3d_1_1_file.html#a9249e27317961fc11d7d321d5694ec7e" title="hx3d::File::loadBinaryFile" alt="" coords="365,13,535,39"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1_file.html#a9249e27317961fc11d7d321d5694ec7e" title="Load a binary file from a path. " alt="" coords="365,13,535,39"/>
 </map>

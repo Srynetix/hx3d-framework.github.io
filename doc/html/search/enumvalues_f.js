@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['zero',['Zero',['../classhx3d_1_1graphics_1_1_stencil.html#a443670cb9df9f5107215978ab5eda187ad7ed4ee1df437474d005188535f74875',1,'hx3d::graphics::Stencil']]],
-  ['zone',['Zone',['../structhx3d_1_1physics2d_1_1_attractor.html#ae70f881e2aca57aeaed8f53c02e7fe31ab3ff996fe5c77610359114835baf9b38',1,'hx3d::physics2d::Attractor']]]
+  ['windows',['Windows',['../classhx3d_1_1_core.html#aead0847ba5ce147d0f1bf45203143788aaea23489ce3aa9b6406ebb28e0cda430',1,'hx3d::Core']]],
+  ['wrapx',['WrapX',['../classhx3d_1_1graphics_1_1_texture.html#aaf170e04a34e7f7ea8b338b21d9cf46aa35e44b0312207018f3760a11f7898c4a',1,'hx3d::graphics::Texture']]],
+  ['wrapy',['WrapY',['../classhx3d_1_1graphics_1_1_texture.html#aaf170e04a34e7f7ea8b338b21d9cf46aad1690834987522128b879c86ff6ae4e2',1,'hx3d::graphics::Texture']]]
 ];

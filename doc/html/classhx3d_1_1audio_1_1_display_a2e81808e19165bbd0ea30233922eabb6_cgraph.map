@@ -3,6 +3,8 @@
 <area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1_image.html#a4a938c75101519608ba8f83cc15a6aff" title="Recreate a texture from the image. " alt="" coords="195,71,345,112"/>
 <area shape="rect" id="node4" href="$classhx3d_1_1_timer.html#a046191b4ebba7d3b9bf8d0141d539deb" title="Initialize the timer with a delay. " alt="" coords="197,137,343,163"/>
 <area shape="rect" id="node6" href="$classhx3d_1_1graphics_1_1_image.html#a711cbabe897380f0034763ac2802d175" title="Get the texture. " alt="" coords="195,188,345,229"/>
-<area shape="rect" id="node7" href="$classhx3d_1_1audio_1_1_display.html#ac6b6e665c65ee7b868035e1ef8f8a977" title="Use this to execute code after initialization. " alt="" coords="199,253,341,295"/>
-<area shape="rect" id="node5" href="$classhx3d_1_1_timer.html#a0b6754ef6d0b98fbe0ab14f6acb273c5" title="Reset the timer. " alt="" coords="393,137,521,163"/>
+<area shape="rect" id="node9" href="$classhx3d_1_1audio_1_1_display.html#ac6b6e665c65ee7b868035e1ef8f8a977" title="Use this to execute code after initialization. " alt="" coords="199,253,341,295"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1_timer.html#a0b6754ef6d0b98fbe0ab14f6acb273c5" title="Reset the timer. " alt="" coords="399,137,527,163"/>
+<area shape="rect" id="node7" href="$classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17" title="Write an error message. " alt="" coords="393,195,533,222"/>
+<area shape="rect" id="node8" href="$namespacehx3d.html#afc522941dc9d3d90bfc0765b6a52a6ae" title="Format a string using printf notation. " alt="" coords="581,195,676,222"/>
 </map>

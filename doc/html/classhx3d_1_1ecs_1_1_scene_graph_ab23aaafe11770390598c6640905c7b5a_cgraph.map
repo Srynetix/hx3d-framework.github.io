@@ -1,3 +1,5 @@
 <map id="hx3d::ecs::SceneGraph::remove" name="hx3d::ecs::SceneGraph::remove">
-<area shape="rect" id="node2" href="$classhx3d_1_1ecs_1_1_engine.html#a034954feecd70694f27cdcfd0309d981" title="Mark the entity for deletion from the engine. " alt="" coords="212,5,347,47"/>
+<area shape="rect" id="node2" href="$classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17" title="Write an error message. " alt="" coords="212,5,352,32"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1ecs_1_1_engine.html#a034954feecd70694f27cdcfd0309d981" title="Mark the entity for deletion from the engine. " alt="" coords="215,57,349,98"/>
+<area shape="rect" id="node3" href="$namespacehx3d.html#afc522941dc9d3d90bfc0765b6a52a6ae" title="Format a string using printf notation. " alt="" coords="400,5,495,32"/>
 </map>

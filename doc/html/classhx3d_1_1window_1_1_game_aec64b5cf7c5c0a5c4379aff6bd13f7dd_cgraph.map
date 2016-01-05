@@ -1,0 +1,5 @@
+<map id="hx3d::window::Game::setScreen" name="hx3d::window::Game::setScreen">
+<area shape="rect" id="node2" href="$classhx3d_1_1_core.html#ac4d754123cf7d4d8d229f733e2fe7471" title="Get the event manager. " alt="" coords="229,5,363,32"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1window_1_1_event_manager.html#a682bc6a47ca284e92943fecd67b0a601" title="Define an input handler. " alt="" coords="199,57,393,98"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1_core.html#a220695328a5f8a5b6d29cf9ae8cd7202" title="Get the application instance. " alt="" coords="237,123,355,149"/>
+</map>

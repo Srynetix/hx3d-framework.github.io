@@ -1,7 +1,10 @@
 <map id="hx3d::graphics::Shader::Shader" name="hx3d::graphics::Shader::Shader">
-<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_shader.html#a8a2b0d5cd1d34c6963b901679f685072" title="Compile the vertex and fragment shaders. " alt="" coords="209,39,365,80"/>
-<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1_shader.html#a4ad749df433a18e127deb308aac61ab1" title="Create the shader program. " alt="" coords="413,39,569,80"/>
-<area shape="rect" id="node4" href="$classhx3d_1_1graphics_1_1_shader.html#a4c0c44e9e4de92a022d30bd53a680f1f" title="Analyze the shader attributes (debug mode). " alt="" coords="617,5,773,47"/>
-<area shape="rect" id="node6" href="$classhx3d_1_1graphics_1_1_shader.html#acb43d298ed1d8a261526284014888e57" title="Analyze the shader uniforms (debug mode). " alt="" coords="617,71,773,112"/>
-<area shape="rect" id="node5" href="$classhx3d_1_1graphics_1_1_shader.html#a9b2ae35cad62c5568cabd6de760991fb" title="Get the parameter type (debug mode). " alt="" coords="821,39,977,80"/>
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_shader.html#a8a2b0d5cd1d34c6963b901679f685072" title="Compile the vertex and fragment shaders. " alt="" coords="209,5,365,47"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1_log_impl.html#a17a3fdd22886cb54637eb370108c82ce" title="Write a shader message. " alt="" coords="823,45,976,71"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1graphics_1_1_shader.html#a4ad749df433a18e127deb308aac61ab1" title="Create the shader program. " alt="" coords="413,60,569,101"/>
+<area shape="rect" id="node4" href="$namespacehx3d.html#afc522941dc9d3d90bfc0765b6a52a6ae" title="Format a string using printf notation. " alt="" coords="1025,70,1120,97"/>
+<area shape="rect" id="node6" href="$classhx3d_1_1graphics_1_1_shader.html#a4c0c44e9e4de92a022d30bd53a680f1f" title="Analyze the shader attributes (debug mode). " alt="" coords="617,85,773,127"/>
+<area shape="rect" id="node9" href="$classhx3d_1_1graphics_1_1_shader.html#acb43d298ed1d8a261526284014888e57" title="Analyze the shader uniforms (debug mode). " alt="" coords="617,151,773,192"/>
+<area shape="rect" id="node7" href="$classhx3d_1_1graphics_1_1_shader.html#a9b2ae35cad62c5568cabd6de760991fb" title="Get the parameter type (debug mode). " alt="" coords="821,149,977,191"/>
+<area shape="rect" id="node8" href="$classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17" title="Write an error message. " alt="" coords="829,95,969,122"/>
 </map>

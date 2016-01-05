@@ -157,6 +157,15 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>_content
 : <a class="el" href="classhx3d_1_1gui_1_1_text.html#aa615dd17122515ecd22d3414081a5390">hx3d::gui::Text</a>
 </li>
+<li>_currentFPS
+: <a class="el" href="classhx3d_1_1window_1_1_application.html#a1ed619fccffdf29f8483e5e3bd9ed6d5">hx3d::window::Application</a>
+</li>
+<li>_currentHandler
+: <a class="el" href="classhx3d_1_1window_1_1_event_manager.html#a830382c162aca8a994d6e111997810cf">hx3d::window::EventManager</a>
+</li>
+<li>_elapsedTime
+: <a class="el" href="classhx3d_1_1window_1_1_application.html#a30bf98380883e7e0aa63ace630d15c2b">hx3d::window::Application</a>
+</li>
 <li>_ended
 : <a class="el" href="classhx3d_1_1tweens_1_1_base_tween.html#a05de1e28ab4e6b4bd5bb4d2b87b1b9ac">hx3d::tweens::BaseTween</a>
 </li>
@@ -169,11 +178,20 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>_font
 : <a class="el" href="classhx3d_1_1gui_1_1_text.html#af7176ca67b57c06729e84fdd9739f639">hx3d::gui::Text</a>
 </li>
+<li>_fpsLimit
+: <a class="el" href="classhx3d_1_1window_1_1_application.html#a82154d7f0483ee2df2ff1df79058e9e1">hx3d::window::Application</a>
+</li>
 <li>_fragmentID
 : <a class="el" href="classhx3d_1_1graphics_1_1_shader.html#a9bc9a8eba848e58b366f8f2f39d64853">hx3d::graphics::Shader</a>
 </li>
+<li>_game
+: <a class="el" href="classhx3d_1_1window_1_1_application.html#adbc85dc0fb97450e49542d67b9a55346">hx3d::window::Application</a>
+</li>
 <li>_geometry
 : <a class="el" href="classhx3d_1_1graphics_1_1_mesh.html#a77452982bb65858cd645fc02f27b3e54">hx3d::graphics::Mesh</a>
+</li>
+<li>_height
+: <a class="el" href="classhx3d_1_1window_1_1_application.html#a44cd6b16bb677c38d421ffb202c1911a">hx3d::window::Application</a>
 </li>
 <li>_image
 : <a class="el" href="classhx3d_1_1audio_1_1_display.html#ae8a1ce85b48a09216b6cc5a2d2886f5b">hx3d::audio::Display</a>
@@ -185,9 +203,33 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>_initialized
 : <a class="el" href="classhx3d_1_1audio_1_1_display.html#af0b8192bf67544896e19d1aeebb24aef">hx3d::audio::Display</a>
 </li>
+<li>_keysPressed
+: <a class="el" href="classhx3d_1_1window_1_1_event_manager.html#af736480502766024a98ac86d63303b8d">hx3d::window::EventManager</a>
+</li>
+<li>_keysReleased
+: <a class="el" href="classhx3d_1_1window_1_1_event_manager.html#a3588ec66b6abcaf4198005c0c1035ff6">hx3d::window::EventManager</a>
+</li>
 <li>_length
 : <a class="el" href="classhx3d_1_1audio_1_1_effect.html#af49a18569f9c53647ef82a7b8de82249">hx3d::audio::Effect</a>
 , <a class="el" href="classhx3d_1_1gui_1_1_text.html#ad53a0784dfd3e6c83477d811d6eb6616">hx3d::gui::Text</a>
+</li>
+<li>_mouseButtonClicked
+: <a class="el" href="classhx3d_1_1window_1_1_event_manager.html#a1f8458d6f35874307932133a3d7d1d59">hx3d::window::EventManager</a>
+</li>
+<li>_mouseButtonReleased
+: <a class="el" href="classhx3d_1_1window_1_1_event_manager.html#a948ecf5bcef4f911cb31750879df2d41">hx3d::window::EventManager</a>
+</li>
+<li>_mouseMovement
+: <a class="el" href="classhx3d_1_1window_1_1_event_manager.html#ae460f49ae0b8bd10349e4d235c97f759">hx3d::window::EventManager</a>
+</li>
+<li>_mousePosition
+: <a class="el" href="classhx3d_1_1window_1_1_event_manager.html#a2592fb87c915954124d0930e854699cb">hx3d::window::EventManager</a>
+</li>
+<li>_mouseWheelMovement
+: <a class="el" href="classhx3d_1_1window_1_1_event_manager.html#ab6aa54de0b2c3f13a4cb8ac565ba022d">hx3d::window::EventManager</a>
+</li>
+<li>_mouseWheelTurned
+: <a class="el" href="classhx3d_1_1window_1_1_event_manager.html#a83d990092e10d21f6d77ebdfd89fde32">hx3d::window::EventManager</a>
 </li>
 <li>_name
 : <a class="el" href="classhx3d_1_1ecs_1_1_node.html#a1780fd821026a0046bdaf51cf1112ba5">hx3d::ecs::Node</a>
@@ -210,8 +252,17 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>_root
 : <a class="el" href="classhx3d_1_1ecs_1_1_scene_graph.html#ac31100dc18b5c38681407585bd47ee72">hx3d::ecs::SceneGraph</a>
 </li>
+<li>_running
+: <a class="el" href="classhx3d_1_1window_1_1_application.html#aca72cfafb741cc2cc3198ef4f25c8251">hx3d::window::Application</a>
+</li>
 <li>_screenHeight
 : <a class="el" href="classhx3d_1_1graphics_1_1viewports_1_1_viewport.html#a6f11e923cda7bbcc17d3d61c58920b5b">hx3d::graphics::viewports::Viewport</a>
+</li>
+<li>_screenReleased
+: <a class="el" href="classhx3d_1_1window_1_1_event_manager.html#aec15655d8e0164380e9f4e51e93b4fbb">hx3d::window::EventManager</a>
+</li>
+<li>_screenTouched
+: <a class="el" href="classhx3d_1_1window_1_1_event_manager.html#a5f27ee8673ec451ac17270e837502280">hx3d::window::EventManager</a>
 </li>
 <li>_screenWidth
 : <a class="el" href="classhx3d_1_1graphics_1_1viewports_1_1_viewport.html#a89b63d827eb9441406592e28e067935b">hx3d::graphics::viewports::Viewport</a>
@@ -234,11 +285,32 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>_tint
 : <a class="el" href="classhx3d_1_1graphics_1_1_mesh.html#ab4e92aa367a7e8ee3b0f62261ae57d04">hx3d::graphics::Mesh</a>
 </li>
+<li>_title
+: <a class="el" href="classhx3d_1_1window_1_1_application.html#a2ef86ad25fae6ece6305c0389a75ad9b">hx3d::window::Application</a>
+</li>
+<li>_touchMovement
+: <a class="el" href="classhx3d_1_1window_1_1_event_manager.html#a2aeddfe202f684f06e9b9a29bf0bd895">hx3d::window::EventManager</a>
+</li>
+<li>_touchPosition
+: <a class="el" href="classhx3d_1_1window_1_1_event_manager.html#ad1b67bde3ea0acd7ab07c98eac7ae99f">hx3d::window::EventManager</a>
+</li>
+<li>_touchPressure
+: <a class="el" href="classhx3d_1_1window_1_1_event_manager.html#a13cf61f47c490afaed288bc98012277a">hx3d::window::EventManager</a>
+</li>
+<li>_touchSimulation
+: <a class="el" href="classhx3d_1_1window_1_1_event_manager.html#a16c2c0735ef7ff00643b674d8037f9a8">hx3d::window::EventManager</a>
+</li>
 <li>_vector
 : <a class="el" href="classhx3d_1_1graphics_1_1buffers_1_1_buffer.html#a021101a5e0916d5d5e33891c6d4a4c7f">hx3d::graphics::buffers::Buffer&lt; T &gt;</a>
 </li>
 <li>_vertexID
 : <a class="el" href="classhx3d_1_1graphics_1_1_shader.html#a5ca0b960f4549fedb49cd7b09a5c2f1d">hx3d::graphics::Shader</a>
+</li>
+<li>_width
+: <a class="el" href="classhx3d_1_1window_1_1_application.html#a744abc12a4c2e6bd717f8551f32321f3">hx3d::window::Application</a>
+</li>
+<li>_windowEvents
+: <a class="el" href="classhx3d_1_1window_1_1_event_manager.html#ad0ce01dc086743410ece33df6649accd">hx3d::window::EventManager</a>
 </li>
 <li>_worldHeight
 : <a class="el" href="classhx3d_1_1graphics_1_1viewports_1_1_viewport.html#aae9b8274c46ba212e86246699e7d1840">hx3d::graphics::viewports::Viewport</a>
@@ -336,6 +408,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>force
 : <a class="el" href="classhx3d_1_1physics2d_1_1_collider.html#aed0d9bd26b7493555a336c832331e690">hx3d::physics2d::Collider</a>
 </li>
+<li>fpsLimit
+: <a class="el" href="classhx3d_1_1window_1_1_application_config.html#aac7be360cc4b2b52dd17fb443e340848">hx3d::window::ApplicationConfig</a>
+</li>
+<li>fullscreen
+: <a class="el" href="classhx3d_1_1window_1_1_application_config.html#a64c97a477ceb8136361d832605d71b81">hx3d::window::ApplicationConfig</a>
+</li>
 </ul>
 
 
@@ -362,6 +440,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>height
 : <a class="el" href="structhx3d_1_1physics2d_1_1_zone_attractor_1_1_definition.html#a1bbb1ed8926bd00ba1c2f6ba08a12728">hx3d::physics2d::ZoneAttractor::Definition</a>
 , <a class="el" href="structhx3d_1_1physics2d_1_1_zone_attractor.html#a487b5d2092dde2c074d4abbc8d6cfd38">hx3d::physics2d::ZoneAttractor</a>
+, <a class="el" href="classhx3d_1_1window_1_1_application_config.html#a95cbf41ae6b657cb89e5ade23fb2f271">hx3d::window::ApplicationConfig</a>
 </li>
 </ul>
 
@@ -502,6 +581,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 
 
 <h3><a class="anchor" id="index_t"></a>- t -</h3><ul>
+<li>title
+: <a class="el" href="classhx3d_1_1window_1_1_application_config.html#a339ecc47ec2445635dbc7d2917618616">hx3d::window::ApplicationConfig</a>
+</li>
 <li>torque
 : <a class="el" href="classhx3d_1_1physics2d_1_1_collider.html#a39bc7dbd49c6faa0f6606756419605c4">hx3d::physics2d::Collider</a>
 </li>
@@ -567,6 +649,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <li>width
 : <a class="el" href="structhx3d_1_1physics2d_1_1_zone_attractor_1_1_definition.html#af7dddbb9f3ffeb853c067e8e403e35da">hx3d::physics2d::ZoneAttractor::Definition</a>
 , <a class="el" href="structhx3d_1_1physics2d_1_1_zone_attractor.html#a3426832119f36f0dcb30167b279191c8">hx3d::physics2d::ZoneAttractor</a>
+, <a class="el" href="classhx3d_1_1window_1_1_application_config.html#a2b1db83832998f8246ffc26bce634218">hx3d::window::ApplicationConfig</a>
 </li>
 </ul>
 

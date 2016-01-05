@@ -87,7 +87,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <a href="#namespaces">Namespaces</a> &#124;
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#typedef-members">Typedefs</a> &#124;
-<a href="#func-members">Functions</a>  </div>
+<a href="#func-members">Functions</a> &#124;
+<a href="#var-members">Variables</a>  </div>
   <div class="headertitle">
 <div class="title">hx3d Namespace Reference</div>  </div>
 </div><!--header-->
@@ -125,25 +126,23 @@ Namespaces</h2></td></tr>
 <tr class="memitem:namespacehx3d_1_1tweens"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehx3d_1_1tweens.html">tweens</a></td></tr>
 <tr class="memdesc:namespacehx3d_1_1tweens"><td class="mdescLeft">&#160;</td><td class="mdescRight">Inbetweening animations. <br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:namespacehx3d_1_1window"><td class="memItemLeft" align="right" valign="top"> &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehx3d_1_1window.html">window</a></td></tr>
+<tr class="memdesc:namespacehx3d_1_1window"><td class="mdescLeft">&#160;</td><td class="mdescRight">Windowing and event components. <br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_application.html">Application</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_application_config.html">ApplicationConfig</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_application_listener.html">ApplicationListener</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_asset_manager.html">AssetManager</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Asset management.  <a href="classhx3d_1_1_asset_manager.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_bitset.html">Bitset</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classhx3d_1_1_bitset.html" title="Bitset helper in an unsigned int. ">Bitset</a> helper in an unsigned int.  <a href="classhx3d_1_1_bitset.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_callback_property.html">CallbackProperty</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Callback-on-change property.  <a href="classhx3d_1_1_callback_property.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_callback_timer.html">CallbackTimer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Improved timer with callback execution.  <a href="classhx3d_1_1_callback_timer.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_c_b_property.html">CBProperty</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_chronometer.html">Chronometer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple chronometer. Measures time.  <a href="classhx3d_1_1_chronometer.html#details">More...</a><br /></td></tr>
@@ -151,51 +150,35 @@ Classes</h2></td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_core.html">Core</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Centralized framework management.  <a href="classhx3d_1_1_core.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_event_manager.html">EventManager</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_file.html">File</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_game.html">Game</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_input_handler.html">InputHandler</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_key_event.html">KeyEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classhx3d_1_1_file.html" title="File loading abstraction. ">File</a> loading abstraction.  <a href="classhx3d_1_1_file.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_log_impl.html">LogImpl</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_matrix_queue.html">MatrixQueue</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_mouse_button_event.html">MouseButtonEvent</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_mouse_wheel_event.html">MouseWheelEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Logging implementation: to log, use <a class="el" href="namespacehx3d.html#a74cfa18d34984b615cc2b3a2933c07a7" title="Current log implementation. ">hx3d::Log</a>.  <a href="classhx3d_1_1_log_impl.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_object_map.html">ObjectMap</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Map of whatever you want. Useful for user data.  <a href="classhx3d_1_1_object_map.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_pool.html">Pool</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manage poolable elements.  <a href="classhx3d_1_1_pool.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_poolable.html">Poolable</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reutilisable elements. Recycling is good for your memory.  <a href="classhx3d_1_1_poolable.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_property.html">Property</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Observable property.  <a href="classhx3d_1_1_property.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_property_observer.html">PropertyObserver</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classhx3d_1_1_property.html" title="Observable property. ">Property</a> observer (Observer pattern)  <a href="classhx3d_1_1_property_observer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_resource.html">Resource</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classhx3d_1_1_resource.html" title="Resource type: to use in an asset manager. ">Resource</a> type: to use in an asset manager.  <a href="classhx3d_1_1_resource.html#details">More...</a><br /></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_screen.html">Screen</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_s_d_l2_application.html">SDL2Application</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_s_d_l2_event_manager.html">SDL2EventManager</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_timer.html">Timer</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Simple timer.  <a href="classhx3d_1_1_timer.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_timer_manager.html">TimerManager</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_touch_event.html">TouchEvent</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_window_event.html">WindowEvent</a></td></tr>
+<tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight">Manages multiple callback timers.  <a href="classhx3d_1_1_timer_manager.html#details">More...</a><br /></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="typedef-members"></a>
@@ -238,6 +221,13 @@ template&lt;class T , class... Args&gt; </td></tr>
 <tr class="memitem:af145e5b514ad925b48c0c11f96ca7df3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehx3d.html#af145e5b514ad925b48c0c11f96ca7df3">checkGLError</a> (const char *file, int line)</td></tr>
 <tr class="memdesc:af145e5b514ad925b48c0c11f96ca7df3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Display the last unchecked OpenGL errors.  <a href="#af145e5b514ad925b48c0c11f96ca7df3">More...</a><br /></td></tr>
 <tr class="separator:af145e5b514ad925b48c0c11f96ca7df3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="var-members"></a>
+Variables</h2></td></tr>
+<tr class="memitem:a74cfa18d34984b615cc2b3a2933c07a7"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a74cfa18d34984b615cc2b3a2933c07a7"></a>
+static <a class="el" href="classhx3d_1_1_log_impl.html">hx3d::LogImpl</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="namespacehx3d.html#a74cfa18d34984b615cc2b3a2933c07a7">Log</a></td></tr>
+<tr class="memdesc:a74cfa18d34984b615cc2b3a2933c07a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current log implementation. <br /></td></tr>
+<tr class="separator:a74cfa18d34984b615cc2b3a2933c07a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="namespacehx3d.html" title="hx3d framework namespace ">hx3d</a> framework namespace </p>
@@ -274,6 +264,19 @@ template&lt;class T , class... Args&gt; </td></tr>
   </table>
   </dd>
 </dl>
+
+<p><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="namespacehx3d_af145e5b514ad925b48c0c11f96ca7df3_cgraph.png" border="0" usemap="#namespacehx3d_af145e5b514ad925b48c0c11f96ca7df3_cgraph" alt=""/></div>
+<map name="namespacehx3d_af145e5b514ad925b48c0c11f96ca7df3_cgraph" id="namespacehx3d_af145e5b514ad925b48c0c11f96ca7df3_cgraph">
+<area shape="rect" id="node2" href="classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17" title="Write an error message. " alt="" coords="192,5,332,32"/>
+<area shape="rect" id="node3" href="namespacehx3d.html#afc522941dc9d3d90bfc0765b6a52a6ae" title="Format a string using printf notation. " alt="" coords="380,5,475,32"/>
+</map>
+</div>
+</p>
 
 </div>
 </div>
@@ -388,7 +391,7 @@ template&lt;class T , class... Args&gt; </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Splitted string </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Split string </dd></dl>
 
 </div>
 </div>
@@ -424,13 +427,13 @@ template&lt;class T , class... Args&gt; </td></tr>
   </table>
   </dd>
 </dl>
-<dl class="section return"><dt>Returns</dt><dd>Splitted string </dd></dl>
+<dl class="section return"><dt>Returns</dt><dd>Split string </dd></dl>
 
-<p><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="namespacehx3d_afdb7f11b5a67c288f125a0ada2de8b90_cgraph.png" border="0" usemap="#namespacehx3d_afdb7f11b5a67c288f125a0ada2de8b90_cgraph" alt=""/></div>
 <map name="namespacehx3d_afdb7f11b5a67c288f125a0ada2de8b90_cgraph" id="namespacehx3d_afdb7f11b5a67c288f125a0ada2de8b90_cgraph">
 <area shape="rect" id="node2" href="namespacehx3d.html#aae03fc1431ac84f0131ea6d63ee14809" title="Split a string using a delimiter and a container. " alt="" coords="136,5,219,32"/>

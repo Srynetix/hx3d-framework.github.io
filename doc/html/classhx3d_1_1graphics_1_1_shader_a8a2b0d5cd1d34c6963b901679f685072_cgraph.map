@@ -1,6 +1,9 @@
 <map id="hx3d::graphics::Shader::compile" name="hx3d::graphics::Shader::compile">
-<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_shader.html#a4ad749df433a18e127deb308aac61ab1" title="Create the shader program. " alt="" coords="209,39,365,80"/>
-<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1_shader.html#a4c0c44e9e4de92a022d30bd53a680f1f" title="Analyze the shader attributes (debug mode). " alt="" coords="413,5,569,47"/>
-<area shape="rect" id="node5" href="$classhx3d_1_1graphics_1_1_shader.html#acb43d298ed1d8a261526284014888e57" title="Analyze the shader uniforms (debug mode). " alt="" coords="413,71,569,112"/>
-<area shape="rect" id="node4" href="$classhx3d_1_1graphics_1_1_shader.html#a9b2ae35cad62c5568cabd6de760991fb" title="Get the parameter type (debug mode). " alt="" coords="617,39,773,80"/>
+<area shape="rect" id="node2" href="$classhx3d_1_1_log_impl.html#a17a3fdd22886cb54637eb370108c82ce" title="Write a shader message. " alt="" coords="619,45,772,71"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1graphics_1_1_shader.html#a4ad749df433a18e127deb308aac61ab1" title="Create the shader program. " alt="" coords="209,60,365,101"/>
+<area shape="rect" id="node3" href="$namespacehx3d.html#afc522941dc9d3d90bfc0765b6a52a6ae" title="Format a string using printf notation. " alt="" coords="821,70,916,97"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1graphics_1_1_shader.html#a4c0c44e9e4de92a022d30bd53a680f1f" title="Analyze the shader attributes (debug mode). " alt="" coords="413,85,569,127"/>
+<area shape="rect" id="node8" href="$classhx3d_1_1graphics_1_1_shader.html#acb43d298ed1d8a261526284014888e57" title="Analyze the shader uniforms (debug mode). " alt="" coords="413,151,569,192"/>
+<area shape="rect" id="node6" href="$classhx3d_1_1graphics_1_1_shader.html#a9b2ae35cad62c5568cabd6de760991fb" title="Get the parameter type (debug mode). " alt="" coords="617,149,773,191"/>
+<area shape="rect" id="node7" href="$classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17" title="Write an error message. " alt="" coords="625,95,765,122"/>
 </map>

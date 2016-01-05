@@ -1,3 +1,5 @@
 <map id="hx3d::ecs::SceneGraph::pathExists" name="hx3d::ecs::SceneGraph::pathExists">
-<area shape="rect" id="node2" href="$namespacehx3d.html#aae03fc1431ac84f0131ea6d63ee14809" title="Split a string using a delimiter and a container. " alt="" coords="212,13,295,39"/>
+<area shape="rect" id="node2" href="$classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17" title="Write an error message. " alt="" coords="212,5,352,32"/>
+<area shape="rect" id="node4" href="$namespacehx3d.html#aae03fc1431ac84f0131ea6d63ee14809" title="Split a string using a delimiter and a container. " alt="" coords="241,56,323,83"/>
+<area shape="rect" id="node3" href="$namespacehx3d.html#afc522941dc9d3d90bfc0765b6a52a6ae" title="Format a string using printf notation. " alt="" coords="400,5,495,32"/>
 </map>

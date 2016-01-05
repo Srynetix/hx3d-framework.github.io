@@ -1,5 +1,5 @@
 <map id="hx3d::Resource" name="hx3d::Resource">
-<area shape="rect" id="node2" href="$classhx3d_1_1_file.html" title="hx3d::File" alt="" coords="223,5,302,32"/>
+<area shape="rect" id="node2" href="$classhx3d_1_1_file.html" title="File loading abstraction. " alt="" coords="223,5,302,32"/>
 <area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1_font.html" title="Font management. " alt="" coords="192,56,333,83"/>
 <area shape="rect" id="node4" href="$classhx3d_1_1graphics_1_1_shader.html" title="Shader definition class. " alt="" coords="185,107,341,133"/>
 <area shape="rect" id="node5" href="$classhx3d_1_1graphics_1_1_texture.html" title="2D/3D texture management. " alt="" coords="183,157,342,184"/>

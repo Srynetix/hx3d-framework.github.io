@@ -144,7 +144,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keywordtype">void</span> begin() {</div>
 <div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">if</span> (shader == <span class="keyword">nullptr</span>) {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            Log.Error(<span class="stringliteral">&quot;FastBatch: no shader.&quot;</span>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <a class="code" href="namespacehx3d.html#a74cfa18d34984b615cc2b3a2933c07a7">Log</a>.<a class="code" href="classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17">Error</a>(<span class="stringliteral">&quot;FastBatch: no shader.&quot;</span>);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        }</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;</div>
@@ -161,7 +161,7 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">void</span> draw(<a class="code" href="classhx3d_1_1graphics_1_1_sprite.html">Sprite</a>&amp; sprite) {</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keywordflow">if</span> (!drawing) {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            Log.Error(<span class="stringliteral">&quot;FastBatch: not currently drawing !&quot;</span>);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            <a class="code" href="namespacehx3d.html#a74cfa18d34984b615cc2b3a2933c07a7">Log</a>.<a class="code" href="classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17">Error</a>(<span class="stringliteral">&quot;FastBatch: not currently drawing !&quot;</span>);</div>
 <div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            <span class="keywordflow">return</span>;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        }</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;</div>
@@ -176,12 +176,12 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        newPositions.resize(vertSize * 3);</div>
 <div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">if</span> (current + vertSize * 3 &gt; size * 36) {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            Log.Error(<span class="stringliteral">&quot;FastBatch too small: force flush.&quot;</span>);</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            <a class="code" href="namespacehx3d.html#a74cfa18d34984b615cc2b3a2933c07a7">Log</a>.<a class="code" href="classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17">Error</a>(<span class="stringliteral">&quot;FastBatch too small: force flush.&quot;</span>);</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;            flush();</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
 <div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;</div>
 <div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">if</span> (maxIdx &gt;= USHRT_MAX) {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            Log.Error(<span class="stringliteral">&quot;Too much indices ! (max: 65536): force flush.&quot;</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            <a class="code" href="namespacehx3d.html#a74cfa18d34984b615cc2b3a2933c07a7">Log</a>.<a class="code" href="classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17">Error</a>(<span class="stringliteral">&quot;Too much indices ! (max: 65536): force flush.&quot;</span>);</div>
 <div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            flush();</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
 <div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;</div>
@@ -270,6 +270,8 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <div class="ttc" id="classhx3d_1_1graphics_1_1_fast_batch_html"><div class="ttname"><a href="classhx3d_1_1graphics_1_1_fast_batch.html">hx3d::graphics::FastBatch</a></div><div class="ttdoc">Real batching using real-time VBO generation. </div><div class="ttdef"><b>Definition:</b> fast_batch.hpp:30</div></div>
 <div class="ttc" id="namespacehx3d_html"><div class="ttname"><a href="namespacehx3d.html">hx3d</a></div><div class="ttdoc">hx3d framework namespace </div><div class="ttdef"><b>Definition:</b> audio.hpp:26</div></div>
 <div class="ttc" id="classhx3d_1_1graphics_1_1_transform_html_a7311054e8f090f3b8424cbd247f76d99"><div class="ttname"><a href="classhx3d_1_1graphics_1_1_transform.html#a7311054e8f090f3b8424cbd247f76d99">hx3d::graphics::Transform::compute</a></div><div class="ttdeci">glm::mat4 compute()</div><div class="ttdoc">Build the model matrix using the position, scale, size and rotation. </div><div class="ttdef"><b>Definition:</b> transform.cpp:44</div></div>
+<div class="ttc" id="classhx3d_1_1_log_impl_html_ad872290e6fcb5751c8717ccc24ff7a17"><div class="ttname"><a href="classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17">hx3d::LogImpl::Error</a></div><div class="ttdeci">void Error(const std::string fmt,...)</div><div class="ttdoc">Write an error message. </div><div class="ttdef"><b>Definition:</b> log.cpp:72</div></div>
+<div class="ttc" id="namespacehx3d_html_a74cfa18d34984b615cc2b3a2933c07a7"><div class="ttname"><a href="namespacehx3d.html#a74cfa18d34984b615cc2b3a2933c07a7">hx3d::Log</a></div><div class="ttdeci">static hx3d::LogImpl Log</div><div class="ttdoc">Current log implementation. </div><div class="ttdef"><b>Definition:</b> log.hpp:91</div></div>
 <div class="ttc" id="classhx3d_1_1graphics_1_1_sprite_html"><div class="ttname"><a href="classhx3d_1_1graphics_1_1_sprite.html">hx3d::graphics::Sprite</a></div><div class="ttdoc">2D texture manipulation. </div><div class="ttdef"><b>Definition:</b> sprite.hpp:35</div></div>
 <div class="ttc" id="classhx3d_1_1graphics_1_1_mesh_html_a0dbaea7a6c04e4ccf003a95dbdf512ad"><div class="ttname"><a href="classhx3d_1_1graphics_1_1_mesh.html#a0dbaea7a6c04e4ccf003a95dbdf512ad">hx3d::graphics::Mesh::transform</a></div><div class="ttdeci">Transform transform</div><div class="ttdoc">Mesh transformation. </div><div class="ttdef"><b>Definition:</b> mesh.hpp:90</div></div>
 <div class="ttc" id="classhx3d_1_1graphics_1_1_mesh_html_ab4ce6d8907bc7738df08e5d96fef2b7a"><div class="ttname"><a href="classhx3d_1_1graphics_1_1_mesh.html#ab4ce6d8907bc7738df08e5d96fef2b7a">hx3d::graphics::Mesh::getGeometry</a></div><div class="ttdeci">Ptr&lt; geom::BaseGeometry &gt; &amp; getGeometry()</div><div class="ttdoc">Get the mesh geometry. </div><div class="ttdef"><b>Definition:</b> mesh.cpp:53</div></div>

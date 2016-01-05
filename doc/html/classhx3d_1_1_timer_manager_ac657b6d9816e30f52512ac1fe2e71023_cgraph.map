@@ -1,0 +1,5 @@
+<map id="hx3d::TimerManager::createTemporaryTimer" name="hx3d::TimerManager::createTemporaryTimer">
+<area shape="rect" id="node2" href="$classhx3d_1_1_callback_timer.html#aba8308048b2d46889914de1371152ef9" title="Initialize the timer. The delay is in milliseconds. " alt="" coords="215,5,357,47"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1_timer.html#a046191b4ebba7d3b9bf8d0141d539deb" title="Initialize the timer with a delay. " alt="" coords="405,13,552,39"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1_timer.html#a0b6754ef6d0b98fbe0ab14f6acb273c5" title="Reset the timer. " alt="" coords="600,13,728,39"/>
+</map>

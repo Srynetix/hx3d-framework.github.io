@@ -3,7 +3,7 @@ var searchData=
   ['effect',['Effect',['../classhx3d_1_1audio_1_1_effect.html',1,'hx3d::audio']]],
   ['emit',['emit',['../classhx3d_1_1graphics_1_1_particle_emitter.html#ab6062710f524ff7cd89fa8b44a302e70',1,'hx3d::graphics::ParticleEmitter']]],
   ['emitter_5fsize',['emitter_size',['../classhx3d_1_1graphics_1_1_particle_emitter.html#ab23e184d2dcc6865d0b41d949733ee71',1,'hx3d::graphics::ParticleEmitter']]],
-  ['emulatetouchwithmouse',['emulateTouchWithMouse',['../classhx3d_1_1_event_manager.html#ac9abfe2b7c838824909b208f66f4c4f3',1,'hx3d::EventManager']]],
+  ['emulatetouchwithmouse',['emulateTouchWithMouse',['../classhx3d_1_1window_1_1_event_manager.html#ae32a32156bfc01a0814f2ec5ba8632ad',1,'hx3d::window::EventManager']]],
   ['enable',['enable',['../classhx3d_1_1graphics_1_1_stencil.html#a6af2489f6fc7a8632321f54fdab879ce',1,'hx3d::graphics::Stencil']]],
   ['enablesharedthis',['EnableSharedThis',['../namespacehx3d.html#affe9a4151fe9cd5cf3e820b822ce9c59',1,'hx3d']]],
   ['end',['end',['../classhx3d_1_1graphics_1_1_batch.html#abe48e7e449a0a97e77547ffd32325e55',1,'hx3d::graphics::Batch::end()'],['../classhx3d_1_1graphics_1_1buffers_1_1_array_buffer.html#a01b47a66c90829e32663e6e9ae6b67ba',1,'hx3d::graphics::buffers::ArrayBuffer::end()'],['../classhx3d_1_1graphics_1_1buffers_1_1_attribute_array_buffer.html#a6cee378ce1f3983e70ddbe15368e4be9',1,'hx3d::graphics::buffers::AttributeArrayBuffer::end()'],['../classhx3d_1_1graphics_1_1buffers_1_1_attribute_stream_buffer.html#a391b4552fc5a36429c8e92e2a4642f60',1,'hx3d::graphics::buffers::AttributeStreamBuffer::end()'],['../classhx3d_1_1graphics_1_1buffers_1_1_index_array_buffer.html#a798cf1232973757958d1561c190ea067',1,'hx3d::graphics::buffers::IndexArrayBuffer::end()'],['../classhx3d_1_1graphics_1_1buffers_1_1_multi_array_buffer.html#a4b82b11e5fd448d2bfb6e9ae35e9fbc3',1,'hx3d::graphics::buffers::MultiArrayBuffer::end()'],['../classhx3d_1_1graphics_1_1_stencil.html#aae456fbb03f0d8b6448a5def91261bee',1,'hx3d::graphics::Stencil::end()']]],
@@ -13,7 +13,7 @@ var searchData=
   ['entity',['Entity',['../classhx3d_1_1ecs_1_1_entity.html',1,'hx3d::ecs']]],
   ['epsequal',['epsEqual',['../namespacehx3d_1_1math.html#ad722a22841edd890bd196cca3ae36310',1,'hx3d::math']]],
   ['equal',['Equal',['../classhx3d_1_1graphics_1_1_stencil.html#ab3e2613515874ba89ffedf8f171fa476af5f286e73bda105e538310b3190f75c5',1,'hx3d::graphics::Stencil']]],
-  ['error',['Error',['../classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17',1,'hx3d::LogImpl']]],
-  ['eventmanager',['EventManager',['../classhx3d_1_1_event_manager.html',1,'hx3d']]],
-  ['events',['Events',['../classhx3d_1_1_core.html#ac1c8c8b2aaf2f0789b9114a427558e0c',1,'hx3d::Core']]]
+  ['error',['Error',['../classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17',1,'hx3d::LogImpl::Error(const std::string fmt,...)'],['../classhx3d_1_1_log_impl.html#a37b90c310b2521eb39eaa9c2583e4948a902b0d55fddef6f8d651fe1035b7d4bd',1,'hx3d::LogImpl::Error()']]],
+  ['eventmanager',['EventManager',['../classhx3d_1_1window_1_1_event_manager.html',1,'hx3d::window']]],
+  ['events',['Events',['../classhx3d_1_1_core.html#ac4d754123cf7d4d8d229f733e2fe7471',1,'hx3d::Core']]]
 ];
