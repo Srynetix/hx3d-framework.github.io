@@ -1,0 +1,6 @@
+<map id="hx3d::physics2d::colliders::Circle" name="hx3d::physics2d::colliders::Circle">
+<area shape="rect" id="node2" href="$classhx3d_1_1physics2d_1_1_collider.html" title="Physical collider. " alt="" coords="177,95,346,121"/>
+<area shape="rect" id="node3" href="$structhx3d_1_1physics2d_1_1_material.html" title="Physical material: friction &amp; restitution. " alt="" coords="5,5,176,32"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1_object_map.html" title="hx3d::ObjectMap" alt="" coords="201,5,322,32"/>
+<area shape="rect" id="node5" href="$structhx3d_1_1physics2d_1_1_mass.html" title="Physical mass data. " alt="" coords="347,5,504,32"/>
+</map>

@@ -1,0 +1,7 @@
+<map id="hx3d::graphics::Sprite::Sprite" name="hx3d::graphics::Sprite::Sprite">
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_mesh.html#a378e9ffa1db203281e2fd51510044bf0" title="Set the mesh tint. " alt="" coords="203,71,349,112"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1_mesh.html#ab29e26e697176a340088eb54be453bb5" title="Update the mesh color from the tint. " alt="" coords="397,71,544,112"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1graphics_1_1_color.html#abd429c7088c0605743c0f130e3065f01" title="Convert the color to a float format (between 0 and 1). " alt="" coords="596,5,743,47"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1graphics_1_1buffers_1_1_buffer.html#ab4a3adfc2342a5737631095fc9243c0c" title="Get the buffer values. " alt="" coords="592,71,747,112"/>
+<area shape="rect" id="node6" href="$classhx3d_1_1graphics_1_1buffers_1_1_buffer.html#a8201780f1c2dd218ba90c14977a089f3" title="Get the buffer size. " alt="" coords="592,136,747,177"/>
+</map>

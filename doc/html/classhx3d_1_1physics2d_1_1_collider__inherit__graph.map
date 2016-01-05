@@ -1,0 +1,4 @@
+<map id="hx3d::physics2d::Collider" name="hx3d::physics2d::Collider">
+<area shape="rect" id="node2" href="$structhx3d_1_1physics2d_1_1colliders_1_1_circle.html" title="Circle shaped collider. " alt="" coords="5,80,179,121"/>
+<area shape="rect" id="node3" href="$structhx3d_1_1physics2d_1_1colliders_1_1_polygon.html" title="Polygon or box shaped collider. " alt="" coords="203,80,376,121"/>
+</map>

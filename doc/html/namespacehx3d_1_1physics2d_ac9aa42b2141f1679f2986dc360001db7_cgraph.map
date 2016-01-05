@@ -1,0 +1,4 @@
+<map id="hx3d::physics2d::checkCollisions" name="hx3d::physics2d::checkCollisions">
+<area shape="rect" id="node2" href="$namespacehx3d_1_1physics2d.html#a2c1060eb5c22c11aee714f22ccaedc3f" title="Collision test between two circles. " alt="" coords="271,5,488,32"/>
+<area shape="rect" id="node3" href="$namespacehx3d_1_1math.html#a954ec7f66a3781ff77ccfcd19aa8588a" title="Compute the square length of a 2D vector. " alt="" coords="536,5,709,32"/>
+</map>

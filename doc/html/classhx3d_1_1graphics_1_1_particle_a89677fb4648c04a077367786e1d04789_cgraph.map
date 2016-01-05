@@ -1,0 +1,7 @@
+<map id="hx3d::graphics::Particle::draw" name="hx3d::graphics::Particle::draw">
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_batch.html#ababfd52e75efd800dcc3fad3446ba63c" title="Draw the mesh. " alt="" coords="212,39,361,80"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1_transform.html#a7311054e8f090f3b8424cbd247f76d99" title="Build the model matrix using the position, scale, size and rotation. " alt="" coords="409,5,584,47"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1graphics_1_1_mesh.html#aa4d6dfd1b417e05ea52d368f765c836e" title="Draw the mesh using a shader. " alt="" coords="423,71,570,112"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1graphics_1_1_texture.html#ac061ab9fa1c6d7fbc001cfd488e809d6" title="Use the current texture for drawing. " alt="" coords="632,49,820,75"/>
+<area shape="rect" id="node6" href="$classhx3d_1_1graphics_1_1_texture.html#a56e9d520b6cf60b7e26a65574e569a24" title="Clear the current texture for drawing. " alt="" coords="647,100,805,141"/>
+</map>

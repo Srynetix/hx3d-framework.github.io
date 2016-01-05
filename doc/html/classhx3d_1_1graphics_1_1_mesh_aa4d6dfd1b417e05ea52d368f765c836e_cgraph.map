@@ -1,0 +1,4 @@
+<map id="hx3d::graphics::Mesh::draw" name="hx3d::graphics::Mesh::draw">
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_texture.html#ac061ab9fa1c6d7fbc001cfd488e809d6" title="Use the current texture for drawing. " alt="" coords="200,5,388,32"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1_texture.html#a56e9d520b6cf60b7e26a65574e569a24" title="Clear the current texture for drawing. " alt="" coords="215,57,373,98"/>
+</map>

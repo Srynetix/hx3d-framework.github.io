@@ -1,0 +1,11 @@
+<map id="hx3d::graphics::buffers::Buffer&lt; T &gt;" name="hx3d::graphics::buffers::Buffer&lt; T &gt;">
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1buffers_1_1_array_buffer.html" title="OpenGL GPU uploadable buffer. " alt="" coords="289,136,444,177"/>
+<area shape="rect" id="node9" href="$classhx3d_1_1graphics_1_1buffers_1_1_buffer.html" title="hx3d::graphics::buffers\l::Buffer\&lt; float \&gt;" alt="" coords="289,71,444,112"/>
+<area shape="rect" id="node10" href="$classhx3d_1_1graphics_1_1buffers_1_1_buffer.html" title="hx3d::graphics::buffers\l::Buffer\&lt; GLushort \&gt;" alt="" coords="289,201,444,243"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1buffers_1_1_array_buffer.html" title="hx3d::graphics::buffers\l::ArrayBuffer\&lt; float \&gt;" alt="" coords="583,71,737,112"/>
+<area shape="rect" id="node7" href="$classhx3d_1_1graphics_1_1buffers_1_1_array_buffer.html" title="hx3d::graphics::buffers\l::ArrayBuffer\&lt; GLushort \&gt;" alt="" coords="573,201,747,243"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1graphics_1_1buffers_1_1_attribute_array_buffer.html" title="Attribute specialized array buffer. " alt="" coords="797,71,951,112"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1graphics_1_1buffers_1_1_attribute_stream_buffer.html" title="Attribute specialized streamed array buffer. " alt="" coords="796,136,952,177"/>
+<area shape="rect" id="node6" href="$classhx3d_1_1graphics_1_1buffers_1_1_multi_array_buffer.html" title="Multi&#45;component array buffer for optimization purpose. " alt="" coords="797,5,951,47"/>
+<area shape="rect" id="node8" href="$classhx3d_1_1graphics_1_1buffers_1_1_index_array_buffer.html" title="Indexed array buffer. " alt="" coords="797,201,951,243"/>
+</map>

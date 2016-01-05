@@ -1,0 +1,4 @@
+<map id="hx3d::Chronometer::tickAsSeconds" name="hx3d::Chronometer::tickAsSeconds">
+<area shape="rect" id="node2" href="$classhx3d_1_1_chronometer.html#a78a4dde8d880d9d6d4ba220210b2ea5f" title="Get the elapsed time as milliseconds. " alt="" coords="195,5,336,47"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1_chronometer.html#a7d131fac362fc2e9a353c867a9f788fd" title="Get the elapsed time as nanoseconds. " alt="" coords="384,13,547,39"/>
+</map>

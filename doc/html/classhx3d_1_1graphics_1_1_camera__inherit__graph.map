@@ -1,0 +1,4 @@
+<map id="hx3d::graphics::Camera" name="hx3d::graphics::Camera">
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_orthographic_camera.html" title="2D orthographic camera w/ Z&#45;buffer. " alt="" coords="5,80,195,121"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1_perspective_camera.html" title="3D perspective camera. " alt="" coords="219,80,403,121"/>
+</map>

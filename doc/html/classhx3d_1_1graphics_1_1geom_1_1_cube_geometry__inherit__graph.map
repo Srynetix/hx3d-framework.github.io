@@ -1,0 +1,4 @@
+<map id="hx3d::graphics::geom::CubeGeometry" name="hx3d::graphics::geom::CubeGeometry">
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1geom_1_1_geometry.html" title="VBO drawing geometry w or w/o indices. " alt="" coords="5,95,152,136"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1geom_1_1_base_geometry.html" title="Base geometry. Must be inherited. " alt="" coords="5,5,152,47"/>
+</map>

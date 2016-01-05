@@ -1,0 +1,6 @@
+<map id="hx3d::physics2d::colliders::Circle::Circle" name="hx3d::physics2d::colliders::Circle::Circle">
+<area shape="rect" id="node2" href="$classhx3d_1_1physics2d_1_1_collider.html#a541bf4dcc7a8300a6a87b5dbf2839572" title="Set collider density. " alt="" coords="227,71,396,112"/>
+<area shape="rect" id="node3" href="$structhx3d_1_1physics2d_1_1_mass.html#a2072a2d33b2e490670611092d66e5074" title="Set the current mass. " alt="" coords="450,5,607,47"/>
+<area shape="rect" id="node4" href="$structhx3d_1_1physics2d_1_1_mass.html#aa86716523cf769968f43b72436138508" title="Set the current inertia. " alt="" coords="450,71,607,112"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1physics2d_1_1_collider.html#a8fffa93dbd4bda2b453d638a3200d86e" title="Compute the collider mass. " alt="" coords="444,136,613,177"/>
+</map>

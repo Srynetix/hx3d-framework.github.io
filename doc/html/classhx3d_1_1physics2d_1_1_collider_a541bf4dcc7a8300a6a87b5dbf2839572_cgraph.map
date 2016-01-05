@@ -1,0 +1,5 @@
+<map id="hx3d::physics2d::Collider::setDensity" name="hx3d::physics2d::Collider::setDensity">
+<area shape="rect" id="node2" href="$structhx3d_1_1physics2d_1_1_mass.html#a2072a2d33b2e490670611092d66e5074" title="Set the current mass. " alt="" coords="229,5,386,47"/>
+<area shape="rect" id="node3" href="$structhx3d_1_1physics2d_1_1_mass.html#aa86716523cf769968f43b72436138508" title="Set the current inertia. " alt="" coords="229,71,386,112"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1physics2d_1_1_collider.html#a8fffa93dbd4bda2b453d638a3200d86e" title="Compute the collider mass. " alt="" coords="223,136,392,177"/>
+</map>

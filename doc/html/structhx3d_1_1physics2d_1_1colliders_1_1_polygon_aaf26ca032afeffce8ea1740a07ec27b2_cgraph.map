@@ -1,0 +1,5 @@
+<map id="hx3d::physics2d::colliders::Polygon::computeMass" name="hx3d::physics2d::colliders::Polygon::computeMass">
+<area shape="rect" id="node2" href="$namespacehx3d_1_1math.html#a6223eee10d291796a6ffd8a87baee16c" title="Calculate the cross product vector between a 2D vector and a scalar. " alt="" coords="242,5,369,32"/>
+<area shape="rect" id="node3" href="$structhx3d_1_1physics2d_1_1_mass.html#a2072a2d33b2e490670611092d66e5074" title="Set the current mass. " alt="" coords="227,57,384,98"/>
+<area shape="rect" id="node4" href="$structhx3d_1_1physics2d_1_1_mass.html#aa86716523cf769968f43b72436138508" title="Set the current inertia. " alt="" coords="227,122,384,163"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="hx3d::physics2d::Attractor" name="hx3d::physics2d::Attractor">
+<area shape="rect" id="node2" href="$structhx3d_1_1physics2d_1_1_global_attractor.html" title="Global attractor. " alt="" coords="228,5,440,32"/>
+<area shape="rect" id="node3" href="$structhx3d_1_1physics2d_1_1_point_attractor.html" title="Point attractor. " alt="" coords="231,56,437,83"/>
+<area shape="rect" id="node4" href="$structhx3d_1_1physics2d_1_1_zone_attractor.html" title="Zone attractor. " alt="" coords="232,107,436,133"/>
+</map>

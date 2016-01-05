@@ -1,0 +1,5 @@
+<map id="hx3d::graphics::buffers::AttributeStreamBuffer::begin" name="hx3d::graphics::buffers::AttributeStreamBuffer::begin">
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1buffers_1_1_attribute.html#abafa3f583e2f5062e13f54eb50035204" title="Get the attribute name. " alt="" coords="209,5,364,47"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1buffers_1_1_attribute.html#a4a7b4884f206b4ab63a60cb6fd8d7487" title="Get the attribute size. " alt="" coords="209,71,364,112"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1graphics_1_1buffers_1_1_attribute.html#a0a5c02e8f7b45c65f052b5c7a60dc752" title="Get the attribute type. " alt="" coords="209,136,364,177"/>
+</map>

@@ -1,0 +1,5 @@
+<map id="hx3d::graphics::Camera::rotateAround" name="hx3d::graphics::Camera::rotateAround">
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_camera.html#aab6be275bd332ba893a8bed572b63e16" title="Translate the camera. " alt="" coords="215,5,376,47"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1_camera.html#ab80225f9f236c5e1559d637d010f4d01" title="Rotate the camera on one/multiple axes. " alt="" coords="215,71,376,112"/>
+<area shape="rect" id="node4" href="$namespacehx3d_1_1math.html#a24f9433ec35812f7c4cd76b34e57c0e0" title="Rotate a vector of an angle on one/multiple axis. " alt="" coords="424,107,552,134"/>
+</map>

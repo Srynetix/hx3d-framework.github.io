@@ -1,0 +1,9 @@
+<map id="hx3d::graphics::Sprite::setTexture" name="hx3d::graphics::Sprite::setTexture">
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_texture_region.html#a4719d9a5cc608347bff023cb07feaba4" title="Get the texture. " alt="" coords="469,5,669,47"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1_texture_region.html#a47e74e6d427667404346c3f3f992ae5e" title="Get the right coordinate. " alt="" coords="469,71,669,112"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1graphics_1_1_texture_region.html#a827be42effd83528fe0954a19bf4ef8f" title="Get the left coordinate. " alt="" coords="469,201,669,243"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1graphics_1_1_texture_region.html#a827954f7b80488e40d2088f9b08c2818" title="Get the top coordinate. " alt="" coords="469,267,669,308"/>
+<area shape="rect" id="node6" href="$classhx3d_1_1graphics_1_1_texture_region.html#a023c8b1a93c91479e326912dc96ba3de" title="Get the bottom coordinate. " alt="" coords="469,332,669,373"/>
+<area shape="rect" id="node7" href="$classhx3d_1_1graphics_1_1geom_1_1_sprite_geometry.html#acae55469f53bd4e8523539e2b26092e1" title="Set the geometry for a texture region. " alt="" coords="203,143,421,184"/>
+<area shape="rect" id="node8" href="$classhx3d_1_1graphics_1_1geom_1_1_base_geometry.html#aa94b3c1c6d5aedce0f48262232e99c94" title="Set an attribute with values. " alt="" coords="473,136,665,177"/>
+</map>

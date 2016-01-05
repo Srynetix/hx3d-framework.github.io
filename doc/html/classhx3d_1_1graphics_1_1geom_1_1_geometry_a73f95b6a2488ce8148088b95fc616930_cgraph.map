@@ -1,0 +1,5 @@
+<map id="hx3d::graphics::geom::Geometry::draw" name="hx3d::graphics::geom::Geometry::draw">
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1buffers_1_1_buffer.html#a8201780f1c2dd218ba90c14977a089f3" title="Get the buffer size. " alt="" coords="206,5,361,47"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1buffers_1_1_index_array_buffer.html#a764d90e3b0852d6ec2fabee72b2aa17a" title="Begin the use with a shader. " alt="" coords="200,71,367,112"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1graphics_1_1buffers_1_1_index_array_buffer.html#a798cf1232973757958d1561c190ea067" title="End the use with a shader. " alt="" coords="205,136,362,177"/>
+</map>

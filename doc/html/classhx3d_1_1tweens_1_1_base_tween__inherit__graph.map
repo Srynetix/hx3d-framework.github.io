@@ -1,0 +1,7 @@
+<map id="hx3d::tweens::BaseTween" name="hx3d::tweens::BaseTween">
+<area shape="rect" id="node2" href="$classhx3d_1_1tweens_1_1_callback.html" title="Callback tween. " alt="" coords="241,5,399,32"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1tweens_1_1_delay.html" title="Delay tween. " alt="" coords="249,56,391,83"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1tweens_1_1_parallel.html" title="Parallel suite of tweens. " alt="" coords="245,107,395,133"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1tweens_1_1_sequence.html" title="Sequential suite of tweens. " alt="" coords="237,157,403,184"/>
+<area shape="rect" id="node6" href="$classhx3d_1_1tweens_1_1_tween.html" title="Templated tween definition. " alt="" coords="231,208,409,235"/>
+</map>

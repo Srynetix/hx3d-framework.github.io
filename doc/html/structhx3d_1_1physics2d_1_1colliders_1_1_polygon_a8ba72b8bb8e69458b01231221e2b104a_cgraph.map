@@ -1,0 +1,8 @@
+<map id="hx3d::physics2d::colliders::Polygon::setPoints" name="hx3d::physics2d::colliders::Polygon::setPoints">
+<area shape="rect" id="node2" href="$namespacehx3d_1_1math.html#a6223eee10d291796a6ffd8a87baee16c" title="Calculate the cross product vector between a 2D vector and a scalar. " alt="" coords="250,5,377,32"/>
+<area shape="rect" id="node3" href="$namespacehx3d_1_1math.html#a954ec7f66a3781ff77ccfcd19aa8588a" title="Compute the square length of a 2D vector. " alt="" coords="227,56,400,83"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1physics2d_1_1_collider.html#a541bf4dcc7a8300a6a87b5dbf2839572" title="Set collider density. " alt="" coords="229,107,398,149"/>
+<area shape="rect" id="node5" href="$structhx3d_1_1physics2d_1_1_mass.html#a2072a2d33b2e490670611092d66e5074" title="Set the current mass. " alt="" coords="454,42,611,83"/>
+<area shape="rect" id="node6" href="$structhx3d_1_1physics2d_1_1_mass.html#aa86716523cf769968f43b72436138508" title="Set the current inertia. " alt="" coords="454,107,611,149"/>
+<area shape="rect" id="node7" href="$classhx3d_1_1physics2d_1_1_collider.html#a8fffa93dbd4bda2b453d638a3200d86e" title="Compute the collider mass. " alt="" coords="448,173,617,214"/>
+</map>

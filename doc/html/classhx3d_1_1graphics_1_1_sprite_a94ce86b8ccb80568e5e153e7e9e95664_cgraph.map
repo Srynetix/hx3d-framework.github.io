@@ -1,0 +1,5 @@
+<map id="hx3d::graphics::Sprite::setTexture" name="hx3d::graphics::Sprite::setTexture">
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_framebuffer.html#a2a9e107f68cf01e7027f78cdcb1f1b81" title="Get the framebuffer color buffer. " alt="" coords="249,5,434,47"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1geom_1_1_sprite_geometry.html#aae85789c16b817dc20d6380311164ded" title="Prepare the sprite for render&#45;to&#45;texture mode. " alt="" coords="203,71,480,112"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1graphics_1_1geom_1_1_base_geometry.html#aa94b3c1c6d5aedce0f48262232e99c94" title="Set an attribute with values. " alt="" coords="528,71,720,112"/>
+</map>

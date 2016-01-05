@@ -1,0 +1,10 @@
+<map id="hx3d::graphics::Mesh" name="hx3d::graphics::Mesh">
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_sprite.html" title="2D texture manipulation. " alt="" coords="275,80,425,107"/>
+<area shape="rect" id="node7" href="$classhx3d_1_1gui_1_1_widget.html" title="Base GUI element. " alt="" coords="448,80,572,107"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1audio_1_1_display.html" title="Audio effect display. " alt="" coords="107,155,249,181"/>
+<area shape="rect" id="node6" href="$classhx3d_1_1gui_1_1_image_button.html" title="GUI image button. " alt="" coords="273,155,430,181"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1audio_1_1_spectrum.html" title="Audio spectrum displaying. " alt="" coords="5,229,159,256"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1audio_1_1_waveform.html" title="Audio waveform displaying. " alt="" coords="183,229,341,256"/>
+<area shape="rect" id="node8" href="$classhx3d_1_1gui_1_1_text.html" title="Text GUI element. " alt="" coords="455,155,565,181"/>
+<area shape="rect" id="node9" href="$classhx3d_1_1gui_1_1_button.html" title="GUI text button. " alt="" coords="449,229,571,256"/>
+</map>

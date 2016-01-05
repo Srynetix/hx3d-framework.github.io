@@ -1,0 +1,7 @@
+<map id="hx3d::graphics::buffers::IndexArrayBuffer" name="hx3d::graphics::buffers::IndexArrayBuffer">
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1buffers_1_1_array_buffer.html" title="hx3d::graphics::buffers\l::ArrayBuffer\&lt; GLushort \&gt;" alt="" coords="969,57,1143,98"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1buffers_1_1_buffer.html" title="hx3d::graphics::buffers\l::Buffer\&lt; GLushort \&gt;" alt="" coords="685,23,840,65"/>
+<area shape="rect" id="node5" title="STL class. " alt="" coords="149,7,265,33"/>
+<area shape="rect" id="node7" href="$classhx3d_1_1graphics_1_1buffers_1_1_buffer.html" title="OpenGL data buffer. " alt="" coords="398,73,553,114"/>
+<area shape="rect" id="node8" href="$classhx3d_1_1graphics_1_1buffers_1_1_array_buffer.html" title="OpenGL GPU uploadable buffer. " alt="" coords="685,89,840,130"/>
+</map>
