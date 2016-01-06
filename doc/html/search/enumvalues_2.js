@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['decrement',['Decrement',['../classhx3d_1_1graphics_1_1_stencil.html#a443670cb9df9f5107215978ab5eda187a6182913ea7b5c02fe2773ea87177d4f9',1,'hx3d::graphics::Stencil']]],
-  ['decrementwrap',['DecrementWrap',['../classhx3d_1_1graphics_1_1_stencil.html#a443670cb9df9f5107215978ab5eda187a6ec565c329385c8d59333abc6a1003d1',1,'hx3d::graphics::Stencil']]],
-  ['down',['Down',['../classhx3d_1_1window_1_1_mouse_wheel_event.html#ab71edd90e69413a851e13fe0ddb15d4ca08a38277b0309070706f6652eeae9a53',1,'hx3d::window::MouseWheelEvent']]],
-  ['dynamic',['Dynamic',['../classhx3d_1_1physics2d_1_1_collider.html#a5d2c31547218f0bc9d4cfc34f1e90419a971fd8cc345d8bd9f92e9f7d88fdf20c',1,'hx3d::physics2d::Collider']]]
+  ['circle',['Circle',['../classhx3d_1_1physics2d_1_1_collider.html#a8a60368fbfebca90607126f9aa87c3b8a30954d90085f6eaaf5817917fc5fecb3',1,'hx3d::physics2d::Collider']]],
+  ['clamptoedge',['ClampToEdge',['../classhx3d_1_1graphics_1_1_texture.html#adac8fe74340e495ab58b6ae3595dc3b3a74556551231333c36debc3d373261134',1,'hx3d::graphics::Texture']]],
+  ['clicked',['Clicked',['../classhx3d_1_1window_1_1_mouse_button_event.html#aef823f6328b6b2dd29e38bafe1d2895faaac77152dd6ab723d807092db6e0daf4',1,'hx3d::window::MouseButtonEvent']]],
+  ['closed',['Closed',['../classhx3d_1_1window_1_1_window_event.html#a53563c9c2bdceacb1a6ae0b6eca31f5ea03f4a47830f97377a35321051685071e',1,'hx3d::window::WindowEvent']]]
 ];

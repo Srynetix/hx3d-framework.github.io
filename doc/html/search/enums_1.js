@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['direction',['Direction',['../classhx3d_1_1window_1_1_mouse_wheel_event.html#ab71edd90e69413a851e13fe0ddb15d4c',1,'hx3d::window::MouseWheelEvent']]]
+  ['culling',['Culling',['../namespacehx3d_1_1graphics.html#a1bb762c8986bc9fb6a5485a108968121',1,'hx3d::graphics']]]
 ];

@@ -152,6 +152,9 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a52b7cebfb2c4b972ec98840e95b0d32c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="classhx3d_1_1graphics_1_1buffers_1_1_index_array_buffer.html">IndexArrayBuffer</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1geom_1_1_base_geometry.html#a52b7cebfb2c4b972ec98840e95b0d32c">getIndices</a> ()</td></tr>
 <tr class="memdesc:a52b7cebfb2c4b972ec98840e95b0d32c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the index array buffer.  <a href="#a52b7cebfb2c4b972ec98840e95b0d32c">More...</a><br /></td></tr>
 <tr class="separator:a52b7cebfb2c4b972ec98840e95b0d32c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a992e74ec28d412172cad393755cf389a"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1geom_1_1_base_geometry.html#a992e74ec28d412172cad393755cf389a">setFaceCulling</a> (<a class="el" href="namespacehx3d_1_1graphics.html#a1bb762c8986bc9fb6a5485a108968121">Culling</a> culling)</td></tr>
+<tr class="memdesc:a992e74ec28d412172cad393755cf389a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the culling type.  <a href="#a992e74ec28d412172cad393755cf389a">More...</a><br /></td></tr>
+<tr class="separator:a992e74ec28d412172cad393755cf389a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a4613296e9211655edf3d212aa5c582"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a0a4613296e9211655edf3d212aa5c582"></a>
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1geom_1_1_base_geometry.html#a0a4613296e9211655edf3d212aa5c582">uploadAll</a> ()</td></tr>
 <tr class="memdesc:a0a4613296e9211655edf3d212aa5c582"><td class="mdescLeft">&#160;</td><td class="mdescRight">Upload all the buffers to the GPU. <br /></td></tr>
@@ -170,6 +173,10 @@ std::map&lt; std::string, <a class="el" href="classhx3d_1_1graphics_1_1buffers_1
 <a class="el" href="classhx3d_1_1graphics_1_1buffers_1_1_index_array_buffer.html">IndexArrayBuffer</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1geom_1_1_base_geometry.html#a7f195e2d0c2ea1467b21c7c3379dfdbb">_indices</a></td></tr>
 <tr class="memdesc:a7f195e2d0c2ea1467b21c7c3379dfdbb"><td class="mdescLeft">&#160;</td><td class="mdescRight">Index array buffer. <br /></td></tr>
 <tr class="separator:a7f195e2d0c2ea1467b21c7c3379dfdbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a87bcfb0e1dc432ff8a6669a5a91e7f21"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a87bcfb0e1dc432ff8a6669a5a91e7f21"></a>
+<a class="el" href="namespacehx3d_1_1graphics.html#a1bb762c8986bc9fb6a5485a108968121">Culling</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1geom_1_1_base_geometry.html#a87bcfb0e1dc432ff8a6669a5a91e7f21">_cullingType</a></td></tr>
+<tr class="memdesc:a87bcfb0e1dc432ff8a6669a5a91e7f21"><td class="mdescLeft">&#160;</td><td class="mdescRight">Current culling. <br /></td></tr>
+<tr class="separator:a87bcfb0e1dc432ff8a6669a5a91e7f21"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base geometry. Must be inherited. </p>
@@ -315,6 +322,30 @@ std::map&lt; std::string, <a class="el" href="classhx3d_1_1graphics_1_1buffers_1
   <table class="params">
     <tr><td class="paramname">name</td><td>Name </td></tr>
     <tr><td class="paramname">values</td><td>Values </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a992e74ec28d412172cad393755cf389a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hx3d::graphics::geom::BaseGeometry::setFaceCulling </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="namespacehx3d_1_1graphics.html#a1bb762c8986bc9fb6a5485a108968121">Culling</a>&#160;</td>
+          <td class="paramname"><em>culling</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the culling type. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">culling</td><td>Culling type </td></tr>
   </table>
   </dd>
 </dl>

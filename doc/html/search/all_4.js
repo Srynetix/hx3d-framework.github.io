@@ -11,7 +11,7 @@ var searchData=
   ['destroy',['destroy',['../classhx3d_1_1ecs_1_1_node.html#a0c404ccccf2793d44b0fdaeac13541ac',1,'hx3d::ecs::Node']]],
   ['direction',['Direction',['../classhx3d_1_1window_1_1_mouse_wheel_event.html#ab71edd90e69413a851e13fe0ddb15d4c',1,'hx3d::window::MouseWheelEvent::Direction()'],['../classhx3d_1_1graphics_1_1_camera.html#acaeca77360fdb8f634f6315831aa3a5a',1,'hx3d::graphics::Camera::direction()']]],
   ['disable',['disable',['../classhx3d_1_1graphics_1_1_shader.html#ab01c4c52ec925ef5d95729bb6c415f9f',1,'hx3d::graphics::Shader::disable()'],['../classhx3d_1_1graphics_1_1_stencil.html#a4a200f22c7d18a6c80d2fbfc7c6af4f2',1,'hx3d::graphics::Stencil::disable()'],['../classhx3d_1_1graphics_1_1_texture.html#a56e9d520b6cf60b7e26a65574e569a24',1,'hx3d::graphics::Texture::disable()']]],
-  ['disabled',['disabled',['../classhx3d_1_1physics2d_1_1_manifold.html#a8d945504d4f675e3aea265da8d2214c0',1,'hx3d::physics2d::Manifold']]],
+  ['disabled',['disabled',['../classhx3d_1_1physics2d_1_1_manifold.html#a8d945504d4f675e3aea265da8d2214c0',1,'hx3d::physics2d::Manifold::disabled()'],['../namespacehx3d_1_1graphics.html#a1bb762c8986bc9fb6a5485a108968121ab9f5c797ebbf55adccdd8539a65a0241',1,'hx3d::graphics::Disabled()']]],
   ['display',['Display',['../classhx3d_1_1audio_1_1_display.html',1,'hx3d::audio']]],
   ['display',['Display',['../classhx3d_1_1audio_1_1_display.html#a132f9a718a152c92997be32326673fac',1,'hx3d::audio::Display::Display()'],['../classhx3d_1_1audio_1_1_display.html#af9cfb8b350a761a1f932d06bdf56182e',1,'hx3d::audio::Display::Display(const int refreshDelay)']]],
   ['displayonconsole',['DisplayOnConsole',['../classhx3d_1_1_log_impl.html#a1cd65e6cfb0f97719cf7c59debeb3ae2',1,'hx3d::LogImpl']]],

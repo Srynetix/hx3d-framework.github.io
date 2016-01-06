@@ -1,6 +1,7 @@
 var searchData=
 [
   ['b',['b',['../classhx3d_1_1graphics_1_1_color.html#ad11bca08694948e26f5cc98b4ee3b520',1,'hx3d::graphics::Color::b()'],['../classhx3d_1_1physics2d_1_1_manifold.html#a3f63d4acd1410837938af05729bf92fc',1,'hx3d::physics2d::Manifold::b()']]],
+  ['back',['Back',['../namespacehx3d_1_1graphics.html#a1bb762c8986bc9fb6a5485a108968121a0557fa923dcee4d0f86b1409f5c2167f',1,'hx3d::graphics']]],
   ['basegeometry',['BaseGeometry',['../classhx3d_1_1graphics_1_1geom_1_1_base_geometry.html',1,'hx3d::graphics::geom']]],
   ['basetween',['BaseTween',['../classhx3d_1_1tweens_1_1_base_tween.html',1,'hx3d::tweens']]],
   ['batch',['Batch',['../classhx3d_1_1graphics_1_1_batch.html',1,'hx3d::graphics']]],

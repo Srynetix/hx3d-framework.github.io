@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['key',['Key',['../classhx3d_1_1window_1_1_key_event.html#a558069f07971195c5464ce150af1789e',1,'hx3d::window::KeyEvent']]]
+  ['interpolation',['Interpolation',['../namespacehx3d_1_1math.html#a8394dfe506812098714da2e8e810eba8',1,'hx3d::math']]]
 ];
