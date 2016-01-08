@@ -1,0 +1,5 @@
+<map id="hx3d::window::SDL2Application::SDL2Application" name="hx3d::window::SDL2Application::SDL2Application">
+<area shape="rect" id="node2" href="$classhx3d_1_1_core.html#a57c5f55e00c7fcfb6c5a4ab055a07bcb" title="Shutdown the core system. " alt="" coords="260,13,411,39"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17" title="Write an error message. " alt="" coords="459,13,599,39"/>
+<area shape="rect" id="node4" href="$namespacehx3d.html#afc522941dc9d3d90bfc0765b6a52a6ae" title="Format a string using printf notation. " alt="" coords="647,13,741,39"/>
+</map>

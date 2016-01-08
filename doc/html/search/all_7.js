@@ -56,6 +56,7 @@ var searchData=
   ['getroot',['getRoot',['../classhx3d_1_1ecs_1_1_scene_graph.html#a2b91c4af1bd21c287bc1c1c9aac59e7b',1,'hx3d::ecs::SceneGraph']]],
   ['gets16stream',['getS16Stream',['../classhx3d_1_1audio_1_1_s16_converter.html#a8e83af1b5a255c8f9ddd56b543c805ce',1,'hx3d::audio::S16Converter']]],
   ['getsamplesize',['getSampleSize',['../classhx3d_1_1audio_1_1_audio_device.html#ae8a3fbdac49b336d52b2f8db93038377',1,'hx3d::audio::AudioDevice::getSampleSize()'],['../classhx3d_1_1audio_1_1_effect.html#a07bbd008b0b642fbd8379b2a33ed40a8',1,'hx3d::audio::Effect::getSampleSize()']]],
+  ['getscreenconvertedtouchposition',['getScreenConvertedTouchPosition',['../classhx3d_1_1window_1_1_event_manager.html#aecf8138371be01ed16a9296c670b4110',1,'hx3d::window::EventManager']]],
   ['getshader',['getShader',['../classhx3d_1_1graphics_1_1_batch.html#a772a6c7b870db5bb4b7438fe96069222',1,'hx3d::graphics::Batch::getShader()'],['../classhx3d_1_1graphics_1_1_font.html#a0e4a4c207267d5c80da564f05c974f51',1,'hx3d::graphics::Font::getShader()']]],
   ['getsize',['getSize',['../classhx3d_1_1graphics_1_1buffers_1_1_attribute.html#a4a7b4884f206b4ab63a60cb6fd8d7487',1,'hx3d::graphics::buffers::Attribute::getSize()'],['../classhx3d_1_1_file.html#ad7b2a7b6c196e6aef3c7fb7d5fc32abc',1,'hx3d::File::getSize()'],['../classhx3d_1_1window_1_1_application.html#a2cc88c7e55977883426a3cc751451b0a',1,'hx3d::window::Application::getSize()']]],
   ['getstream',['getStream',['../classhx3d_1_1audio_1_1_effect.html#aca217330a230d3703522137a21d09b8d',1,'hx3d::audio::Effect']]],

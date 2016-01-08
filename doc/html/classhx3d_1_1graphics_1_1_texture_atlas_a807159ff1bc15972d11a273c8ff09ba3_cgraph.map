@@ -1,0 +1,6 @@
+<map id="hx3d::graphics::TextureAtlas::getRegion" name="hx3d::graphics::TextureAtlas::getRegion">
+<area shape="rect" id="node2" href="$classhx3d_1_1_file.html#aa196439f2f01d10e3e8c667f583dcaf8" title="Load an ascii file from a path. " alt="" coords="243,5,404,32"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1_log_impl.html#a4babf3f022eea8df55b821525be0f886" title="Write an info message. " alt="" coords="256,56,391,83"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17" title="Write an error message. " alt="" coords="253,107,393,133"/>
+<area shape="rect" id="node4" href="$namespacehx3d.html#afc522941dc9d3d90bfc0765b6a52a6ae" title="Format a string using printf notation. " alt="" coords="452,81,547,108"/>
+</map>

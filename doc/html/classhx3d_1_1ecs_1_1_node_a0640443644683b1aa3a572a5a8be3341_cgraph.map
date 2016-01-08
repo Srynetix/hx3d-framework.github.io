@@ -1,7 +1,6 @@
 <map id="hx3d::ecs::Node::removeChild" name="hx3d::ecs::Node::removeChild">
 <area shape="rect" id="node2" href="$classhx3d_1_1ecs_1_1_node.html#aea262bdcbfeb89be3c4b362a03f80bb3" title="Test if the object have a child. " alt="" coords="252,5,440,47"/>
-<area shape="rect" id="node3" href="$classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17" title="Write an error message. " alt="" coords="488,71,628,98"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17" title="Write an error message. " alt="" coords="488,101,628,127"/>
 <area shape="rect" id="node5" href="$classhx3d_1_1ecs_1_1_scene_graph.html#ab23aaafe11770390598c6640905c7b5a" title="Remove a game object from a path. " alt="" coords="267,123,425,164"/>
-<area shape="rect" id="node4" href="$namespacehx3d.html#afc522941dc9d3d90bfc0765b6a52a6ae" title="Format a string using printf notation. " alt="" coords="676,71,771,98"/>
-<area shape="rect" id="node6" href="$classhx3d_1_1ecs_1_1_engine.html#a034954feecd70694f27cdcfd0309d981" title="Mark the entity for deletion from the engine. " alt="" coords="491,123,625,164"/>
+<area shape="rect" id="node4" href="$namespacehx3d.html#afc522941dc9d3d90bfc0765b6a52a6ae" title="Format a string using printf notation. " alt="" coords="676,101,771,127"/>
 </map>

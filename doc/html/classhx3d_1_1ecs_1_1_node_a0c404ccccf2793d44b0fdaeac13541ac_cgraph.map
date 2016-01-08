@@ -1,7 +1,6 @@
 <map id="hx3d::ecs::Node::destroy" name="hx3d::ecs::Node::destroy">
-<area shape="rect" id="node2" href="$classhx3d_1_1ecs_1_1_scene_graph.html#ab23aaafe11770390598c6640905c7b5a" title="Remove a game object from a path. " alt="" coords="229,27,387,69"/>
-<area shape="rect" id="node6" href="$classhx3d_1_1ecs_1_1_node.html#a1e744d7e08bbeea787caf4e25a650959" title="Get the game object full path from the root. " alt="" coords="223,93,393,120"/>
-<area shape="rect" id="node3" href="$classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17" title="Write an error message. " alt="" coords="441,5,581,32"/>
-<area shape="rect" id="node5" href="$classhx3d_1_1ecs_1_1_engine.html#a034954feecd70694f27cdcfd0309d981" title="Mark the entity for deletion from the engine. " alt="" coords="444,57,579,98"/>
-<area shape="rect" id="node4" href="$namespacehx3d.html#afc522941dc9d3d90bfc0765b6a52a6ae" title="Format a string using printf notation. " alt="" coords="629,5,724,32"/>
+<area shape="rect" id="node2" href="$classhx3d_1_1ecs_1_1_scene_graph.html#ab23aaafe11770390598c6640905c7b5a" title="Remove a game object from a path. " alt="" coords="229,5,387,47"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1ecs_1_1_node.html#a1e744d7e08bbeea787caf4e25a650959" title="Get the game object full path from the root. " alt="" coords="223,71,393,98"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1_log_impl.html#ad872290e6fcb5751c8717ccc24ff7a17" title="Write an error message. " alt="" coords="441,13,581,39"/>
+<area shape="rect" id="node4" href="$namespacehx3d.html#afc522941dc9d3d90bfc0765b6a52a6ae" title="Format a string using printf notation. " alt="" coords="629,13,724,39"/>
 </map>

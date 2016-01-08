@@ -23,6 +23,7 @@ var searchData=
   ['analyzeattributes',['analyzeAttributes',['../classhx3d_1_1graphics_1_1_shader.html#a4c0c44e9e4de92a022d30bd53a680f1f',1,'hx3d::graphics::Shader']]],
   ['analyzeuniforms',['analyzeUniforms',['../classhx3d_1_1graphics_1_1_shader.html#acb43d298ed1d8a261526284014888e57',1,'hx3d::graphics::Shader']]],
   ['anglebetweenvecs',['angleBetweenVecs',['../namespacehx3d_1_1math.html#a843e7dcef66ff6b3a8a0792dc6bd0ae3',1,'hx3d::math']]],
+  ['animation',['Animation',['../classhx3d_1_1graphics_1_1_animation.html#af90e337dcdcf95b10b862758dee64348',1,'hx3d::graphics::Animation::Animation()'],['../classhx3d_1_1graphics_1_1_animation.html#a472b8a0c4d957e3f1f9954e28001894f',1,'hx3d::graphics::Animation::Animation(Ptr&lt; TextureAtlas &gt; atlas, std::vector&lt; std::string &gt; frames, float speed)']]],
   ['app',['App',['../classhx3d_1_1_core.html#a220695328a5f8a5b6d29cf9ae8cd7202',1,'hx3d::Core']]],
   ['application',['Application',['../classhx3d_1_1window_1_1_application.html#a69d9708d50a321aa3f080952d6fa6afd',1,'hx3d::window::Application']]],
   ['applicationconfig',['ApplicationConfig',['../classhx3d_1_1window_1_1_application_config.html#acd6e6a2651e02ddd9f393dff000d9149',1,'hx3d::window::ApplicationConfig']]],

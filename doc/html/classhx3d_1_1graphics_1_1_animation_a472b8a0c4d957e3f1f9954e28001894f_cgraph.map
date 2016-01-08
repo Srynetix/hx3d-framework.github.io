@@ -1,0 +1,6 @@
+<map id="hx3d::graphics::Animation::Animation" name="hx3d::graphics::Animation::Animation">
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_animation.html#a399944d35bbe47e73b88a20da3764df0" title="Initialize an animation with an atlas, frames and a speed. " alt="" coords="227,5,400,47"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1_sprite.html#a67153564d5a32fd45bfea0956087cebd" title="Set the sprite texture. " alt="" coords="448,5,597,47"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1graphics_1_1geom_1_1_sprite_geometry.html#a74c844ad9ccda1ce38956688b06a49ec" title="Prepare the sprite for simple texture mode. " alt="" coords="645,5,896,47"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1graphics_1_1geom_1_1_base_geometry.html#aa94b3c1c6d5aedce0f48262232e99c94" title="Set an attribute with values. " alt="" coords="944,5,1136,47"/>
+</map>

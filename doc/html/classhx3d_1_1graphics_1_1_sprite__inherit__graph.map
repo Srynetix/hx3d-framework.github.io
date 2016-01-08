@@ -1,7 +1,8 @@
 <map id="hx3d::graphics::Sprite" name="hx3d::graphics::Sprite">
 <area shape="rect" id="node3" href="$classhx3d_1_1audio_1_1_display.html" title="Audio effect display. " alt="" coords="101,155,242,181"/>
-<area shape="rect" id="node6" href="$classhx3d_1_1gui_1_1_image_button.html" title="GUI image button. " alt="" coords="266,155,423,181"/>
-<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_mesh.html" title="Displayable 2D/3D element. " alt="" coords="185,5,331,32"/>
+<area shape="rect" id="node6" href="$classhx3d_1_1graphics_1_1_animation.html" title="Animated texture&#45;atlas based sprite. " alt="" coords="266,155,439,181"/>
+<area shape="rect" id="node7" href="$classhx3d_1_1gui_1_1_image_button.html" title="GUI image button. " alt="" coords="463,155,621,181"/>
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_mesh.html" title="Displayable 2D/3D element. " alt="" coords="279,5,426,32"/>
 <area shape="rect" id="node4" href="$classhx3d_1_1audio_1_1_spectrum.html" title="Audio spectrum displaying. " alt="" coords="5,229,159,256"/>
 <area shape="rect" id="node5" href="$classhx3d_1_1audio_1_1_waveform.html" title="Audio waveform displaying. " alt="" coords="183,229,341,256"/>
 </map>

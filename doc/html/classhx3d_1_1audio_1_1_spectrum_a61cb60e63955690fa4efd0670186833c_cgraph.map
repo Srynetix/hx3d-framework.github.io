@@ -1,0 +1,5 @@
+<map id="hx3d::audio::Spectrum::getBarCount" name="hx3d::audio::Spectrum::getBarCount">
+<area shape="rect" id="node2" href="$classhx3d_1_1_core.html#a3d1c268b9440e73d7844c15dce40c4f4" title="Get the audio device instance. " alt="" coords="229,5,355,32"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1audio_1_1_audio_device.html#ab13b2513620e0da244d9bb306e2e725d" title="Get the audio device frequency rate. " alt="" coords="207,57,377,98"/>
+<area shape="rect" id="node4" href="$namespacehx3d_1_1math.html#a17cb6b78f2de3de029844c71ce8dd8f8" title="Calculate the log2. " alt="" coords="233,123,351,149"/>
+</map>
