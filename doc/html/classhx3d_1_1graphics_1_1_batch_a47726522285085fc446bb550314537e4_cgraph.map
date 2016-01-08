@@ -1,8 +1,10 @@
 <map id="hx3d::graphics::Batch::draw" name="hx3d::graphics::Batch::draw">
-<area shape="rect" id="node2" href="$classhx3d_1_1gui_1_1_text.html#a320c5bf54d7371a7dd059e60196cbd0f" title="Get the text font. " alt="" coords="231,5,393,32"/>
-<area shape="rect" id="node3" href="$classhx3d_1_1gui_1_1_text.html#a44c4602a8d2b574caea78cc4301ead01" title="Get the character size. " alt="" coords="203,56,421,83"/>
-<area shape="rect" id="node4" href="$classhx3d_1_1gui_1_1_text.html#a5a571bdb4e97ea430a0f0523ce514d67" title="Is the text center aligned ? " alt="" coords="229,107,395,149"/>
-<area shape="rect" id="node5" href="$classhx3d_1_1gui_1_1_text.html#a148a930413698f2ba466e36b700f2e89" title="Get the text length. " alt="" coords="225,173,399,200"/>
-<area shape="rect" id="node6" href="$classhx3d_1_1graphics_1_1_transform.html#a7311054e8f090f3b8424cbd247f76d99" title="Build the model matrix using the position, scale, size and rotation. " alt="" coords="225,225,399,266"/>
-<area shape="rect" id="node7" href="$classhx3d_1_1gui_1_1_text.html#adfeafc8360205e24f7ee098197657ab1" title="Draw the text following a function. " alt="" coords="215,291,409,317"/>
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_texture.html#ac061ab9fa1c6d7fbc001cfd488e809d6" title="Use the current texture for drawing. " alt="" coords="218,5,406,32"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1gui_1_1_text.html#a320c5bf54d7371a7dd059e60196cbd0f" title="Get the text font. " alt="" coords="231,56,393,83"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1gui_1_1_text.html#a44c4602a8d2b574caea78cc4301ead01" title="Get the character size. " alt="" coords="203,107,421,133"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1gui_1_1_text.html#a5a571bdb4e97ea430a0f0523ce514d67" title="Is the text center aligned ? " alt="" coords="229,158,395,199"/>
+<area shape="rect" id="node6" href="$classhx3d_1_1gui_1_1_text.html#a148a930413698f2ba466e36b700f2e89" title="Get the text length. " alt="" coords="225,224,399,251"/>
+<area shape="rect" id="node7" href="$classhx3d_1_1graphics_1_1_transform.html#a7311054e8f090f3b8424cbd247f76d99" title="Build the model matrix using the position, scale, size and rotation. " alt="" coords="225,275,399,317"/>
+<area shape="rect" id="node8" href="$classhx3d_1_1gui_1_1_text.html#adfeafc8360205e24f7ee098197657ab1" title="Draw the text following a function. " alt="" coords="215,341,409,368"/>
+<area shape="rect" id="node9" href="$classhx3d_1_1graphics_1_1_texture.html#a56e9d520b6cf60b7e26a65574e569a24" title="Clear the current texture for drawing. " alt="" coords="233,393,391,434"/>
 </map>

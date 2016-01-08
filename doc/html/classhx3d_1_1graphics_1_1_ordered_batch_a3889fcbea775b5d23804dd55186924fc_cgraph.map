@@ -1,0 +1,13 @@
+<map id="hx3d::graphics::OrderedBatch::end" name="hx3d::graphics::OrderedBatch::end">
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_mesh.html#aa4d6dfd1b417e05ea52d368f765c836e" title="Draw the mesh using a shader. " alt="" coords="313,51,460,93"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1_texture.html#ac061ab9fa1c6d7fbc001cfd488e809d6" title="Use the current texture for drawing. " alt="" coords="544,29,732,56"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1graphics_1_1_texture.html#a56e9d520b6cf60b7e26a65574e569a24" title="Clear the current texture for drawing. " alt="" coords="559,95,717,137"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1gui_1_1_text.html#a320c5bf54d7371a7dd059e60196cbd0f" title="Get the text font. " alt="" coords="306,168,467,195"/>
+<area shape="rect" id="node6" href="$classhx3d_1_1gui_1_1_text.html#a44c4602a8d2b574caea78cc4301ead01" title="Get the character size. " alt="" coords="277,219,496,245"/>
+<area shape="rect" id="node7" href="$classhx3d_1_1gui_1_1_text.html#a5a571bdb4e97ea430a0f0523ce514d67" title="Is the text center aligned ? " alt="" coords="303,270,470,311"/>
+<area shape="rect" id="node8" href="$classhx3d_1_1gui_1_1_text.html#a148a930413698f2ba466e36b700f2e89" title="Get the text length. " alt="" coords="299,336,474,363"/>
+<area shape="rect" id="node9" href="$classhx3d_1_1graphics_1_1_transform.html#a7311054e8f090f3b8424cbd247f76d99" title="Build the model matrix using the position, scale, size and rotation. " alt="" coords="299,387,474,429"/>
+<area shape="rect" id="node10" href="$classhx3d_1_1graphics_1_1_shader.html#a17de0a31ac08a5d24d4b01630581f5b4" title="Use the shader as the current shader. " alt="" coords="294,453,479,480"/>
+<area shape="rect" id="node11" href="$classhx3d_1_1gui_1_1_text.html#adfeafc8360205e24f7ee098197657ab1" title="Draw the text following a function. " alt="" coords="289,504,484,531"/>
+<area shape="rect" id="node12" href="$classhx3d_1_1graphics_1_1_shader.html#ab01c4c52ec925ef5d95729bb6c415f9f" title="Clear the current shader. " alt="" coords="309,555,465,597"/>
+</map>

@@ -1,6 +1,7 @@
 var searchData=
 [
   ['activateframebuffermode',['activateFramebufferMode',['../classhx3d_1_1graphics_1_1geom_1_1_sprite_geometry.html#aae85789c16b817dc20d6380311164ded',1,'hx3d::graphics::geom::SpriteGeometry']]],
+  ['activatestats',['activateStats',['../classhx3d_1_1window_1_1_game.html#a783452c5d7820bf8520af3b72989e5fc',1,'hx3d::window::Game']]],
   ['activatetexturemode',['activateTextureMode',['../classhx3d_1_1graphics_1_1geom_1_1_sprite_geometry.html#a74c844ad9ccda1ce38956688b06a49ec',1,'hx3d::graphics::geom::SpriteGeometry']]],
   ['add',['add',['../classhx3d_1_1graphics_1_1buffers_1_1_buffer.html#a5f9c6a402275ed2bec329e1141d9207e',1,'hx3d::graphics::buffers::Buffer::add()'],['../classhx3d_1_1graphics_1_1_transform.html#a17a9f917eb9cb4ee5e0f63919230afa8',1,'hx3d::graphics::Transform::add()'],['../classhx3d_1_1gui_1_1_widget.html#ab17671849b1a06b4312f08ae0f20897e',1,'hx3d::gui::Widget::add()'],['../classhx3d_1_1tweens_1_1_parallel.html#ad503fb06a394c200251eb981a3218114',1,'hx3d::tweens::Parallel::add()'],['../classhx3d_1_1tweens_1_1_sequence.html#a15b49af421e71a2e8365c0302583cfd2',1,'hx3d::tweens::Sequence::add()'],['../classhx3d_1_1tweens_1_1_tween_manager.html#a27bc29fefe0fc2e95fa83ef957f75053',1,'hx3d::tweens::TweenManager::add()'],['../classhx3d_1_1_asset_manager.html#ac75eed7b4e5e36d7403c8a6f236c797e',1,'hx3d::AssetManager::add()']]],
   ['addattractor',['addAttractor',['../classhx3d_1_1physics2d_1_1_world.html#af147cc6462ae1cefef3866a0f3c8c908',1,'hx3d::physics2d::World']]],
@@ -25,7 +26,7 @@ var searchData=
   ['anglebetweenvecs',['angleBetweenVecs',['../namespacehx3d_1_1math.html#a843e7dcef66ff6b3a8a0792dc6bd0ae3',1,'hx3d::math']]],
   ['animation',['Animation',['../classhx3d_1_1graphics_1_1_animation.html#af90e337dcdcf95b10b862758dee64348',1,'hx3d::graphics::Animation::Animation()'],['../classhx3d_1_1graphics_1_1_animation.html#a472b8a0c4d957e3f1f9954e28001894f',1,'hx3d::graphics::Animation::Animation(Ptr&lt; TextureAtlas &gt; atlas, std::vector&lt; std::string &gt; frames, float speed)']]],
   ['app',['App',['../classhx3d_1_1_core.html#a220695328a5f8a5b6d29cf9ae8cd7202',1,'hx3d::Core']]],
-  ['application',['Application',['../classhx3d_1_1window_1_1_application.html#a69d9708d50a321aa3f080952d6fa6afd',1,'hx3d::window::Application']]],
+  ['application',['Application',['../classhx3d_1_1window_1_1_application.html#ab408ef7efb8f5cf55545d6defcc548c9',1,'hx3d::window::Application']]],
   ['applicationconfig',['ApplicationConfig',['../classhx3d_1_1window_1_1_application_config.html#acd6e6a2651e02ddd9f393dff000d9149',1,'hx3d::window::ApplicationConfig']]],
   ['apply',['apply',['../classhx3d_1_1graphics_1_1viewports_1_1_viewport.html#aca6cf5ade16a00c1770bcb86be87718c',1,'hx3d::graphics::viewports::Viewport::apply()'],['../classhx3d_1_1graphics_1_1viewports_1_1_viewport.html#a012c3cb6c935f62513bf52121fcaca2d',1,'hx3d::graphics::viewports::Viewport::apply(const bool centerCamera)'],['../namespacehx3d_1_1algo.html#a37c4fd4008904065615dc60958d39f2b',1,'hx3d::algo::apply()']]],
   ['applyforce',['applyForce',['../structhx3d_1_1physics2d_1_1_attractor.html#abb4a90bbc5af9a8eb4a9c8eeef36d370',1,'hx3d::physics2d::Attractor::applyForce()'],['../classhx3d_1_1physics2d_1_1_collider.html#a6dd5cc0d2cbfe2f6a065cb53e76c0152',1,'hx3d::physics2d::Collider::applyForce()']]],
