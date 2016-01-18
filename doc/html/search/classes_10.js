@@ -8,6 +8,7 @@ var searchData=
   ['timermanager',['TimerManager',['../classhx3d_1_1_timer_manager.html',1,'hx3d']]],
   ['touchevent',['TouchEvent',['../classhx3d_1_1window_1_1_touch_event.html',1,'hx3d::window']]],
   ['transform',['Transform',['../classhx3d_1_1graphics_1_1_transform.html',1,'hx3d::graphics']]],
+  ['transition',['Transition',['../classhx3d_1_1graphics_1_1_transition.html',1,'hx3d::graphics']]],
   ['tween',['Tween',['../classhx3d_1_1tweens_1_1_tween.html',1,'hx3d::tweens']]],
   ['tweenmanager',['TweenManager',['../classhx3d_1_1tweens_1_1_tween_manager.html',1,'hx3d::tweens']]]
 ];

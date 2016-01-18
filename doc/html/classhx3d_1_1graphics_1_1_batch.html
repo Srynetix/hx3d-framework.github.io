@@ -97,46 +97,83 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 </div><!--header-->
 <div class="contents">
 
-<p>Draw meshes and texts on screen.  
+<p>Simple base batch implementation. Draw at each draw call.  
  <a href="classhx3d_1_1graphics_1_1_batch.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="batch_8hpp_source.html">batch.hpp</a>&gt;</code></p>
+<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for hx3d::graphics::Batch:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classhx3d_1_1graphics_1_1_batch__inherit__graph.png" border="0" usemap="#hx3d_1_1graphics_1_1_batch_inherit__map" alt="Inheritance graph"/></div>
+<map name="hx3d_1_1graphics_1_1_batch_inherit__map" id="hx3d_1_1graphics_1_1_batch_inherit__map">
+<area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1_base_batch.html" title="Draw meshes and texts on screen. " alt="" coords="5,5,184,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
+<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for hx3d::graphics::Batch:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classhx3d_1_1graphics_1_1_batch__coll__graph.png" border="0" usemap="#hx3d_1_1graphics_1_1_batch_coll__map" alt="Collaboration graph"/></div>
+<map name="hx3d_1_1graphics_1_1_batch_coll__map" id="hx3d_1_1graphics_1_1_batch_coll__map">
+<area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1_base_batch.html" title="Draw meshes and texts on screen. " alt="" coords="5,95,184,121"/>
+<area shape="rect" id="node3" href="classhx3d_1_1graphics_1_1_camera.html" title="2D/3D camera. " alt="" coords="14,5,175,32"/>
+</map>
+<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:aee21948c649ecbd7b83acdded2bdecf9"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aee21948c649ecbd7b83acdded2bdecf9"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_batch.html#aee21948c649ecbd7b83acdded2bdecf9">begin</a> ()</td></tr>
-<tr class="memdesc:aee21948c649ecbd7b83acdded2bdecf9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin the batching. <br /></td></tr>
-<tr class="separator:aee21948c649ecbd7b83acdded2bdecf9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abe48e7e449a0a97e77547ffd32325e55"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="abe48e7e449a0a97e77547ffd32325e55"></a>
-void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_batch.html#abe48e7e449a0a97e77547ffd32325e55">end</a> ()</td></tr>
-<tr class="memdesc:abe48e7e449a0a97e77547ffd32325e55"><td class="mdescLeft">&#160;</td><td class="mdescRight">End the batching. <br /></td></tr>
-<tr class="separator:abe48e7e449a0a97e77547ffd32325e55"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ababfd52e75efd800dcc3fad3446ba63c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_batch.html#ababfd52e75efd800dcc3fad3446ba63c">draw</a> (<a class="el" href="classhx3d_1_1graphics_1_1_mesh.html">Mesh</a> &amp;mesh)</td></tr>
-<tr class="memdesc:ababfd52e75efd800dcc3fad3446ba63c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the mesh.  <a href="#ababfd52e75efd800dcc3fad3446ba63c">More...</a><br /></td></tr>
-<tr class="separator:ababfd52e75efd800dcc3fad3446ba63c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a54cff855a81ced4692147af68c7dedf4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_batch.html#a54cff855a81ced4692147af68c7dedf4">draw</a> (<a class="el" href="classhx3d_1_1gui_1_1_text.html">gui::Text</a> &amp;text)</td></tr>
-<tr class="memdesc:a54cff855a81ced4692147af68c7dedf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the text.  <a href="#a54cff855a81ced4692147af68c7dedf4">More...</a><br /></td></tr>
-<tr class="separator:a54cff855a81ced4692147af68c7dedf4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a47726522285085fc446bb550314537e4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_batch.html#a47726522285085fc446bb550314537e4">draw</a> (<a class="el" href="classhx3d_1_1gui_1_1_text.html">gui::Text</a> &amp;text, <a class="el" href="classhx3d_1_1math_1_1_function.html">math::Function</a> function)</td></tr>
-<tr class="memdesc:a47726522285085fc446bb550314537e4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the text following a function.  <a href="#a47726522285085fc446bb550314537e4">More...</a><br /></td></tr>
-<tr class="separator:a47726522285085fc446bb550314537e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a35cc575eb96b434c1136f057628b97db"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_batch.html#a35cc575eb96b434c1136f057628b97db">setShader</a> (const <a class="el" href="namespacehx3d.html#a43f43f67acdb2297ebb1d8fa899126e8">Ptr</a>&lt; <a class="el" href="classhx3d_1_1graphics_1_1_shader.html">Shader</a> &gt; &amp;shader)</td></tr>
-<tr class="memdesc:a35cc575eb96b434c1136f057628b97db"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the shader for the next batching.  <a href="#a35cc575eb96b434c1136f057628b97db">More...</a><br /></td></tr>
-<tr class="separator:a35cc575eb96b434c1136f057628b97db"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a772a6c7b870db5bb4b7438fe96069222"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehx3d.html#a43f43f67acdb2297ebb1d8fa899126e8">Ptr</a>&lt; <a class="el" href="classhx3d_1_1graphics_1_1_shader.html">Shader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_batch.html#a772a6c7b870db5bb4b7438fe96069222">getShader</a> ()</td></tr>
-<tr class="memdesc:a772a6c7b870db5bb4b7438fe96069222"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current batching shader.  <a href="#a772a6c7b870db5bb4b7438fe96069222">More...</a><br /></td></tr>
-<tr class="separator:a772a6c7b870db5bb4b7438fe96069222"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9225522374717a142faa5dff9ee1ceab"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_batch.html#a9225522374717a142faa5dff9ee1ceab">setCamera</a> (<a class="el" href="classhx3d_1_1graphics_1_1_camera.html">Camera</a> &amp;camera)</td></tr>
-<tr class="memdesc:a9225522374717a142faa5dff9ee1ceab"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the camera for the next batching.  <a href="#a9225522374717a142faa5dff9ee1ceab">More...</a><br /></td></tr>
-<tr class="separator:a9225522374717a142faa5dff9ee1ceab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aaa686a3a8a1395fe0881f1658fdc2e50"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="aaa686a3a8a1395fe0881f1658fdc2e50"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_batch.html#aaa686a3a8a1395fe0881f1658fdc2e50">begin</a> () override</td></tr>
+<tr class="memdesc:aaa686a3a8a1395fe0881f1658fdc2e50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Begin the batching. <br /></td></tr>
+<tr class="separator:aaa686a3a8a1395fe0881f1658fdc2e50"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12352223ef6ee90ae299dd08dea58d0d"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a12352223ef6ee90ae299dd08dea58d0d"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_batch.html#a12352223ef6ee90ae299dd08dea58d0d">end</a> () override</td></tr>
+<tr class="memdesc:a12352223ef6ee90ae299dd08dea58d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">End the batching. <br /></td></tr>
+<tr class="separator:a12352223ef6ee90ae299dd08dea58d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4c221aaf8bf7610db864e07ce533977"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_batch.html#aa4c221aaf8bf7610db864e07ce533977">draw</a> (<a class="el" href="classhx3d_1_1graphics_1_1_mesh.html">Mesh</a> &amp;mesh) override</td></tr>
+<tr class="memdesc:aa4c221aaf8bf7610db864e07ce533977"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the mesh.  <a href="#aa4c221aaf8bf7610db864e07ce533977">More...</a><br /></td></tr>
+<tr class="separator:aa4c221aaf8bf7610db864e07ce533977"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d20c8d34962e2e194b7e7e63a71e9e1"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_batch.html#a2d20c8d34962e2e194b7e7e63a71e9e1">draw</a> (<a class="el" href="classhx3d_1_1gui_1_1_text.html">gui::Text</a> &amp;text) override</td></tr>
+<tr class="memdesc:a2d20c8d34962e2e194b7e7e63a71e9e1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the text.  <a href="#a2d20c8d34962e2e194b7e7e63a71e9e1">More...</a><br /></td></tr>
+<tr class="separator:a2d20c8d34962e2e194b7e7e63a71e9e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a3cfa02dc1c9c59ac820ae23226f446e5"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_batch.html#a3cfa02dc1c9c59ac820ae23226f446e5">draw</a> (<a class="el" href="classhx3d_1_1gui_1_1_text.html">gui::Text</a> &amp;text, <a class="el" href="classhx3d_1_1math_1_1_function.html">math::Function</a> function) override</td></tr>
+<tr class="memdesc:a3cfa02dc1c9c59ac820ae23226f446e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw the text following a function.  <a href="#a3cfa02dc1c9c59ac820ae23226f446e5">More...</a><br /></td></tr>
+<tr class="separator:a3cfa02dc1c9c59ac820ae23226f446e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_methods_classhx3d_1_1graphics_1_1_base_batch"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classhx3d_1_1graphics_1_1_base_batch')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classhx3d_1_1graphics_1_1_base_batch.html">hx3d::graphics::BaseBatch</a></td></tr>
+<tr class="memitem:aed5eceb555eb0fa44748aabfcdb62065 inherit pub_methods_classhx3d_1_1graphics_1_1_base_batch"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_base_batch.html#aed5eceb555eb0fa44748aabfcdb62065">setShader</a> (const <a class="el" href="namespacehx3d.html#a43f43f67acdb2297ebb1d8fa899126e8">Ptr</a>&lt; <a class="el" href="classhx3d_1_1graphics_1_1_shader.html">Shader</a> &gt; &amp;shader)</td></tr>
+<tr class="memdesc:aed5eceb555eb0fa44748aabfcdb62065 inherit pub_methods_classhx3d_1_1graphics_1_1_base_batch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the shader for the next batching.  <a href="#aed5eceb555eb0fa44748aabfcdb62065">More...</a><br /></td></tr>
+<tr class="separator:aed5eceb555eb0fa44748aabfcdb62065 inherit pub_methods_classhx3d_1_1graphics_1_1_base_batch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abd716be0d82167ae9828d004c6f55024 inherit pub_methods_classhx3d_1_1graphics_1_1_base_batch"><td class="memItemLeft" align="right" valign="top"><a class="el" href="namespacehx3d.html#a43f43f67acdb2297ebb1d8fa899126e8">Ptr</a>&lt; <a class="el" href="classhx3d_1_1graphics_1_1_shader.html">Shader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_base_batch.html#abd716be0d82167ae9828d004c6f55024">getShader</a> ()</td></tr>
+<tr class="memdesc:abd716be0d82167ae9828d004c6f55024 inherit pub_methods_classhx3d_1_1graphics_1_1_base_batch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current batching shader.  <a href="#abd716be0d82167ae9828d004c6f55024">More...</a><br /></td></tr>
+<tr class="separator:abd716be0d82167ae9828d004c6f55024 inherit pub_methods_classhx3d_1_1graphics_1_1_base_batch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6df7bb893df252ce294e02aef6e87cf1 inherit pub_methods_classhx3d_1_1graphics_1_1_base_batch"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_base_batch.html#a6df7bb893df252ce294e02aef6e87cf1">setCamera</a> (<a class="el" href="classhx3d_1_1graphics_1_1_camera.html">Camera</a> &amp;camera)</td></tr>
+<tr class="memdesc:a6df7bb893df252ce294e02aef6e87cf1 inherit pub_methods_classhx3d_1_1graphics_1_1_base_batch"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the camera for the next batching.  <a href="#a6df7bb893df252ce294e02aef6e87cf1">More...</a><br /></td></tr>
+<tr class="separator:a6df7bb893df252ce294e02aef6e87cf1 inherit pub_methods_classhx3d_1_1graphics_1_1_base_batch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_classhx3d_1_1graphics_1_1_base_batch"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_classhx3d_1_1graphics_1_1_base_batch')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="classhx3d_1_1graphics_1_1_base_batch.html">hx3d::graphics::BaseBatch</a></td></tr>
+<tr class="memitem:acc7285738690c9f5ce5c6dd80329250c inherit pro_attribs_classhx3d_1_1graphics_1_1_base_batch"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc7285738690c9f5ce5c6dd80329250c"></a>
+<a class="el" href="classhx3d_1_1graphics_1_1_camera.html">Camera</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_base_batch.html#acc7285738690c9f5ce5c6dd80329250c">_camera</a></td></tr>
+<tr class="memdesc:acc7285738690c9f5ce5c6dd80329250c inherit pro_attribs_classhx3d_1_1graphics_1_1_base_batch"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classhx3d_1_1graphics_1_1_camera.html" title="2D/3D camera. ">Camera</a>. <br /></td></tr>
+<tr class="separator:acc7285738690c9f5ce5c6dd80329250c inherit pro_attribs_classhx3d_1_1graphics_1_1_base_batch"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acc6d773559cfbc4a6eb91904ef96faab inherit pro_attribs_classhx3d_1_1graphics_1_1_base_batch"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="acc6d773559cfbc4a6eb91904ef96faab"></a>
+<a class="el" href="namespacehx3d.html#a43f43f67acdb2297ebb1d8fa899126e8">Ptr</a>&lt; <a class="el" href="classhx3d_1_1graphics_1_1_shader.html">Shader</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1graphics_1_1_base_batch.html#acc6d773559cfbc4a6eb91904ef96faab">_shader</a></td></tr>
+<tr class="memdesc:acc6d773559cfbc4a6eb91904ef96faab inherit pro_attribs_classhx3d_1_1graphics_1_1_base_batch"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="classhx3d_1_1graphics_1_1_shader.html" title="Shader definition class. ">Shader</a>. <br /></td></tr>
+<tr class="separator:acc6d773559cfbc4a6eb91904ef96faab inherit pro_attribs_classhx3d_1_1graphics_1_1_base_batch"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
-<div class="textblock"><p>Draw meshes and texts on screen. </p>
+<div class="textblock"><p>Simple base batch implementation. Draw at each draw call. </p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="ababfd52e75efd800dcc3fad3446ba63c"></a>
+<a class="anchor" id="aa4c221aaf8bf7610db864e07ce533977"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void hx3d::graphics::Batch::draw </td>
@@ -146,10 +183,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Draw the mesh. </p>
-<p>You must have called <a class="el" href="classhx3d_1_1graphics_1_1_batch.html#aee21948c649ecbd7b83acdded2bdecf9">begin</a> before.</p>
+<p>You must have called <a class="el" href="classhx3d_1_1graphics_1_1_batch.html#aaa686a3a8a1395fe0881f1658fdc2e50">begin</a> before.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">mesh</td><td><a class="el" href="classhx3d_1_1graphics_1_1_mesh.html" title="Displayable 2D/3D element. ">Mesh</a> </td></tr>
@@ -157,13 +199,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </dd>
 </dl>
 
-<p><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+<p>Implements <a class="el" href="classhx3d_1_1graphics_1_1_base_batch.html#a76c2f1698163ae521b417f6e6e49ee26">hx3d::graphics::BaseBatch</a>.</p>
+
+<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classhx3d_1_1graphics_1_1_batch_ababfd52e75efd800dcc3fad3446ba63c_cgraph.png" border="0" usemap="#classhx3d_1_1graphics_1_1_batch_ababfd52e75efd800dcc3fad3446ba63c_cgraph" alt=""/></div>
-<map name="classhx3d_1_1graphics_1_1_batch_ababfd52e75efd800dcc3fad3446ba63c_cgraph" id="classhx3d_1_1graphics_1_1_batch_ababfd52e75efd800dcc3fad3446ba63c_cgraph">
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classhx3d_1_1graphics_1_1_batch_aa4c221aaf8bf7610db864e07ce533977_cgraph.png" border="0" usemap="#classhx3d_1_1graphics_1_1_batch_aa4c221aaf8bf7610db864e07ce533977_cgraph" alt=""/></div>
+<map name="classhx3d_1_1graphics_1_1_batch_aa4c221aaf8bf7610db864e07ce533977_cgraph" id="classhx3d_1_1graphics_1_1_batch_aa4c221aaf8bf7610db864e07ce533977_cgraph">
 <area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1_transform.html#a7311054e8f090f3b8424cbd247f76d99" title="Build the model matrix using the position, scale, size and rotation. " alt="" coords="203,5,377,47"/>
 <area shape="rect" id="node3" href="classhx3d_1_1graphics_1_1_mesh.html#aa4d6dfd1b417e05ea52d368f765c836e" title="Draw the mesh using a shader. " alt="" coords="217,71,363,112"/>
 <area shape="rect" id="node4" href="classhx3d_1_1graphics_1_1_texture.html#ac061ab9fa1c6d7fbc001cfd488e809d6" title="Use the current texture for drawing. " alt="" coords="425,49,613,75"/>
@@ -174,9 +218,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 
 </div>
 </div>
-<a class="anchor" id="a54cff855a81ced4692147af68c7dedf4"></a>
+<a class="anchor" id="a2d20c8d34962e2e194b7e7e63a71e9e1"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void hx3d::graphics::Batch::draw </td>
@@ -186,10 +233,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Draw the text. </p>
-<p>You must have called <a class="el" href="classhx3d_1_1graphics_1_1_batch.html#aee21948c649ecbd7b83acdded2bdecf9">begin</a> before.</p>
+<p>You must have called <a class="el" href="classhx3d_1_1graphics_1_1_batch.html#aaa686a3a8a1395fe0881f1658fdc2e50">begin</a> before.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">text</td><td>Text </td></tr>
@@ -197,29 +249,36 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </dd>
 </dl>
 
-<p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+<p>Implements <a class="el" href="classhx3d_1_1graphics_1_1_base_batch.html#a3d898093f7ecc2af7278a3e494212ac6">hx3d::graphics::BaseBatch</a>.</p>
+
+<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classhx3d_1_1graphics_1_1_batch_a54cff855a81ced4692147af68c7dedf4_cgraph.png" border="0" usemap="#classhx3d_1_1graphics_1_1_batch_a54cff855a81ced4692147af68c7dedf4_cgraph" alt=""/></div>
-<map name="classhx3d_1_1graphics_1_1_batch_a54cff855a81ced4692147af68c7dedf4_cgraph" id="classhx3d_1_1graphics_1_1_batch_a54cff855a81ced4692147af68c7dedf4_cgraph">
+<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classhx3d_1_1graphics_1_1_batch_a2d20c8d34962e2e194b7e7e63a71e9e1_cgraph.png" border="0" usemap="#classhx3d_1_1graphics_1_1_batch_a2d20c8d34962e2e194b7e7e63a71e9e1_cgraph" alt=""/></div>
+<map name="classhx3d_1_1graphics_1_1_batch_a2d20c8d34962e2e194b7e7e63a71e9e1_cgraph" id="classhx3d_1_1graphics_1_1_batch_a2d20c8d34962e2e194b7e7e63a71e9e1_cgraph">
 <area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1_texture.html#ac061ab9fa1c6d7fbc001cfd488e809d6" title="Use the current texture for drawing. " alt="" coords="218,5,406,32"/>
 <area shape="rect" id="node3" href="classhx3d_1_1gui_1_1_text.html#a320c5bf54d7371a7dd059e60196cbd0f" title="Get the text font. " alt="" coords="231,56,393,83"/>
 <area shape="rect" id="node4" href="classhx3d_1_1gui_1_1_text.html#a44c4602a8d2b574caea78cc4301ead01" title="Get the character size. " alt="" coords="203,107,421,133"/>
-<area shape="rect" id="node5" href="classhx3d_1_1gui_1_1_text.html#a5a571bdb4e97ea430a0f0523ce514d67" title="Is the text center aligned ? " alt="" coords="229,158,395,199"/>
-<area shape="rect" id="node6" href="classhx3d_1_1gui_1_1_text.html#a148a930413698f2ba466e36b700f2e89" title="Get the text length. " alt="" coords="225,224,399,251"/>
-<area shape="rect" id="node7" href="classhx3d_1_1graphics_1_1_transform.html#a7311054e8f090f3b8424cbd247f76d99" title="Build the model matrix using the position, scale, size and rotation. " alt="" coords="225,275,399,317"/>
-<area shape="rect" id="node8" href="classhx3d_1_1graphics_1_1_texture.html#a56e9d520b6cf60b7e26a65574e569a24" title="Clear the current texture for drawing. " alt="" coords="233,341,391,382"/>
+<area shape="rect" id="node5" href="classhx3d_1_1graphics_1_1_base_batch.html#aed5eceb555eb0fa44748aabfcdb62065" title="Set the shader for the next batching. " alt="" coords="223,158,401,199"/>
+<area shape="rect" id="node6" href="classhx3d_1_1graphics_1_1_base_batch.html#a9cee55ab471835dd2492d1ed2de60490" title="Begin the batching. " alt="" coords="223,223,401,265"/>
+<area shape="rect" id="node7" href="classhx3d_1_1gui_1_1_text.html#a5a571bdb4e97ea430a0f0523ce514d67" title="Is the text center aligned ? " alt="" coords="229,289,395,330"/>
+<area shape="rect" id="node8" href="classhx3d_1_1gui_1_1_text.html#a148a930413698f2ba466e36b700f2e89" title="Get the text length. " alt="" coords="225,355,399,381"/>
+<area shape="rect" id="node9" href="classhx3d_1_1graphics_1_1_transform.html#a7311054e8f090f3b8424cbd247f76d99" title="Build the model matrix using the position, scale, size and rotation. " alt="" coords="225,406,399,447"/>
+<area shape="rect" id="node10" href="classhx3d_1_1graphics_1_1_texture.html#a56e9d520b6cf60b7e26a65574e569a24" title="Clear the current texture for drawing. " alt="" coords="233,471,391,513"/>
 </map>
 </div>
 </p>
 
 </div>
 </div>
-<a class="anchor" id="a47726522285085fc446bb550314537e4"></a>
+<a class="anchor" id="a3cfa02dc1c9c59ac820ae23226f446e5"></a>
 <div class="memitem">
 <div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
       <table class="memname">
         <tr>
           <td class="memname">void hx3d::graphics::Batch::draw </td>
@@ -239,10 +298,15 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td></td><td></td>
         </tr>
       </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
 </div><div class="memdoc">
 
 <p>Draw the text following a function. </p>
-<p>You must have called <a class="el" href="classhx3d_1_1graphics_1_1_batch.html#aee21948c649ecbd7b83acdded2bdecf9">begin</a> before.</p>
+<p>You must have called <a class="el" href="classhx3d_1_1graphics_1_1_batch.html#aaa686a3a8a1395fe0881f1658fdc2e50">begin</a> before.</p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">text</td><td>Text </td></tr>
@@ -251,90 +315,28 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   </dd>
 </dl>
 
-<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
+<p>Implements <a class="el" href="classhx3d_1_1graphics_1_1_base_batch.html#a90952c4f37171902f5c2f4f2c45f8c05">hx3d::graphics::BaseBatch</a>.</p>
+
+<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
-<div class="center"><img src="classhx3d_1_1graphics_1_1_batch_a47726522285085fc446bb550314537e4_cgraph.png" border="0" usemap="#classhx3d_1_1graphics_1_1_batch_a47726522285085fc446bb550314537e4_cgraph" alt=""/></div>
-<map name="classhx3d_1_1graphics_1_1_batch_a47726522285085fc446bb550314537e4_cgraph" id="classhx3d_1_1graphics_1_1_batch_a47726522285085fc446bb550314537e4_cgraph">
+<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classhx3d_1_1graphics_1_1_batch_a3cfa02dc1c9c59ac820ae23226f446e5_cgraph.png" border="0" usemap="#classhx3d_1_1graphics_1_1_batch_a3cfa02dc1c9c59ac820ae23226f446e5_cgraph" alt=""/></div>
+<map name="classhx3d_1_1graphics_1_1_batch_a3cfa02dc1c9c59ac820ae23226f446e5_cgraph" id="classhx3d_1_1graphics_1_1_batch_a3cfa02dc1c9c59ac820ae23226f446e5_cgraph">
 <area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1_texture.html#ac061ab9fa1c6d7fbc001cfd488e809d6" title="Use the current texture for drawing. " alt="" coords="218,5,406,32"/>
 <area shape="rect" id="node3" href="classhx3d_1_1gui_1_1_text.html#a320c5bf54d7371a7dd059e60196cbd0f" title="Get the text font. " alt="" coords="231,56,393,83"/>
 <area shape="rect" id="node4" href="classhx3d_1_1gui_1_1_text.html#a44c4602a8d2b574caea78cc4301ead01" title="Get the character size. " alt="" coords="203,107,421,133"/>
-<area shape="rect" id="node5" href="classhx3d_1_1gui_1_1_text.html#a5a571bdb4e97ea430a0f0523ce514d67" title="Is the text center aligned ? " alt="" coords="229,158,395,199"/>
-<area shape="rect" id="node6" href="classhx3d_1_1gui_1_1_text.html#a148a930413698f2ba466e36b700f2e89" title="Get the text length. " alt="" coords="225,224,399,251"/>
-<area shape="rect" id="node7" href="classhx3d_1_1graphics_1_1_transform.html#a7311054e8f090f3b8424cbd247f76d99" title="Build the model matrix using the position, scale, size and rotation. " alt="" coords="225,275,399,317"/>
-<area shape="rect" id="node8" href="classhx3d_1_1gui_1_1_text.html#adfeafc8360205e24f7ee098197657ab1" title="Draw the text following a function. " alt="" coords="215,341,409,368"/>
-<area shape="rect" id="node9" href="classhx3d_1_1graphics_1_1_texture.html#a56e9d520b6cf60b7e26a65574e569a24" title="Clear the current texture for drawing. " alt="" coords="233,393,391,434"/>
+<area shape="rect" id="node5" href="classhx3d_1_1graphics_1_1_base_batch.html#aed5eceb555eb0fa44748aabfcdb62065" title="Set the shader for the next batching. " alt="" coords="223,158,401,199"/>
+<area shape="rect" id="node6" href="classhx3d_1_1graphics_1_1_base_batch.html#a9cee55ab471835dd2492d1ed2de60490" title="Begin the batching. " alt="" coords="223,223,401,265"/>
+<area shape="rect" id="node7" href="classhx3d_1_1gui_1_1_text.html#a5a571bdb4e97ea430a0f0523ce514d67" title="Is the text center aligned ? " alt="" coords="229,289,395,330"/>
+<area shape="rect" id="node8" href="classhx3d_1_1gui_1_1_text.html#a148a930413698f2ba466e36b700f2e89" title="Get the text length. " alt="" coords="225,355,399,381"/>
+<area shape="rect" id="node9" href="classhx3d_1_1graphics_1_1_transform.html#a7311054e8f090f3b8424cbd247f76d99" title="Build the model matrix using the position, scale, size and rotation. " alt="" coords="225,406,399,447"/>
+<area shape="rect" id="node10" href="classhx3d_1_1gui_1_1_text.html#adfeafc8360205e24f7ee098197657ab1" title="Draw the text following a function. " alt="" coords="215,472,409,499"/>
+<area shape="rect" id="node11" href="classhx3d_1_1graphics_1_1_texture.html#a56e9d520b6cf60b7e26a65574e569a24" title="Clear the current texture for drawing. " alt="" coords="233,523,391,565"/>
 </map>
 </div>
 </p>
-
-</div>
-</div>
-<a class="anchor" id="a772a6c7b870db5bb4b7438fe96069222"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname"><a class="el" href="namespacehx3d.html#a43f43f67acdb2297ebb1d8fa899126e8">Ptr</a>&lt; <a class="el" href="classhx3d_1_1graphics_1_1_shader.html">Shader</a> &gt; hx3d::graphics::Batch::getShader </td>
-          <td>(</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Get the current batching shader. </p>
-<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classhx3d_1_1graphics_1_1_shader.html" title="Shader definition class. ">Shader</a> (Ptr) </dd></dl>
-
-</div>
-</div>
-<a class="anchor" id="a9225522374717a142faa5dff9ee1ceab"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void hx3d::graphics::Batch::setCamera </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="classhx3d_1_1graphics_1_1_camera.html">Camera</a> &amp;&#160;</td>
-          <td class="paramname"><em>camera</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the camera for the next batching. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">camera</td><td><a class="el" href="classhx3d_1_1graphics_1_1_camera.html" title="2D/3D camera. ">Camera</a> </td></tr>
-  </table>
-  </dd>
-</dl>
-
-</div>
-</div>
-<a class="anchor" id="a35cc575eb96b434c1136f057628b97db"></a>
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">void hx3d::graphics::Batch::setShader </td>
-          <td>(</td>
-          <td class="paramtype">const <a class="el" href="namespacehx3d.html#a43f43f67acdb2297ebb1d8fa899126e8">Ptr</a>&lt; <a class="el" href="classhx3d_1_1graphics_1_1_shader.html">Shader</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>shader</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Set the shader for the next batching. </p>
-<dl class="params"><dt>Parameters</dt><dd>
-  <table class="params">
-    <tr><td class="paramname">shader</td><td><a class="el" href="classhx3d_1_1graphics_1_1_shader.html" title="Shader definition class. ">Shader</a> (Ptr) </td></tr>
-  </table>
-  </dd>
-</dl>
 
 </div>
 </div>

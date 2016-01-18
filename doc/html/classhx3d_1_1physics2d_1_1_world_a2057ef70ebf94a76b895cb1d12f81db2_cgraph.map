@@ -1,0 +1,12 @@
+<map id="hx3d::physics2d::World::render" name="hx3d::physics2d::World::render">
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_sprite.html#a67153564d5a32fd45bfea0956087cebd" title="Set the sprite texture. " alt="" coords="241,5,390,47"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1graphics_1_1_base_batch.html#a76c2f1698163ae521b417f6e6e49ee26" title="Draw the mesh. " alt="" coords="226,71,405,112"/>
+<area shape="rect" id="node6" href="$classhx3d_1_1graphics_1_1_mesh.html#a378e9ffa1db203281e2fd51510044bf0" title="Set the mesh tint. " alt="" coords="242,136,389,177"/>
+<area shape="rect" id="node11" href="$namespacehx3d_1_1math.html#a843e7dcef66ff6b3a8a0792dc6bd0ae3" title="Compute the angle between two 2D vectors. " alt="" coords="212,202,419,229"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1geom_1_1_sprite_geometry.html#a74c844ad9ccda1ce38956688b06a49ec" title="Prepare the sprite for simple texture mode. " alt="" coords="467,5,717,47"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1graphics_1_1geom_1_1_base_geometry.html#aa94b3c1c6d5aedce0f48262232e99c94" title="Set an attribute with values. " alt="" coords="765,5,957,47"/>
+<area shape="rect" id="node7" href="$classhx3d_1_1graphics_1_1_mesh.html#ab29e26e697176a340088eb54be453bb5" title="Update the mesh color from the tint. " alt="" coords="519,136,665,177"/>
+<area shape="rect" id="node8" href="$classhx3d_1_1graphics_1_1_color.html#abd429c7088c0605743c0f130e3065f01" title="Convert the color to a float format (between 0 and 1). " alt="" coords="788,71,935,112"/>
+<area shape="rect" id="node9" href="$classhx3d_1_1graphics_1_1buffers_1_1_buffer.html#ab4a3adfc2342a5737631095fc9243c0c" title="Get the buffer values. " alt="" coords="784,136,939,177"/>
+<area shape="rect" id="node10" href="$classhx3d_1_1graphics_1_1buffers_1_1_buffer.html#a8201780f1c2dd218ba90c14977a089f3" title="Get the buffer size. " alt="" coords="784,201,939,243"/>
+</map>

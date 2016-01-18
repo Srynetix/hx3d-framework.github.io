@@ -11,6 +11,7 @@ var searchData=
   ['timer',['Timer',['../classhx3d_1_1_timer.html#aae4d538d7bda31881e84f44bda530687',1,'hx3d::Timer::Timer()'],['../classhx3d_1_1_timer.html#a26bd365007bb5098040ee7d31f17bdb9',1,'hx3d::Timer::Timer(long delay)']]],
   ['tofloat',['toFloat',['../classhx3d_1_1graphics_1_1_color.html#abd429c7088c0605743c0f130e3065f01',1,'hx3d::graphics::Color']]],
   ['tostring',['toString',['../classhx3d_1_1_file.html#abc0224968e89260a937c46065c7ec501',1,'hx3d::File']]],
+  ['transition',['Transition',['../classhx3d_1_1graphics_1_1_transition.html#a906c9e3632da94d3db8f0fe00e341c26',1,'hx3d::graphics::Transition']]],
   ['translate',['translate',['../classhx3d_1_1graphics_1_1_camera.html#aab6be275bd332ba893a8bed572b63e16',1,'hx3d::graphics::Camera']]],
   ['tween',['Tween',['../classhx3d_1_1tweens_1_1_tween.html#a54c2da3823715616b8a31bdcb1b31841',1,'hx3d::tweens::Tween']]]
 ];

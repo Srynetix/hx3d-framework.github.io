@@ -12,6 +12,6 @@ var searchData=
   ['spritegeometry',['SpriteGeometry',['../classhx3d_1_1graphics_1_1geom_1_1_sprite_geometry.html',1,'hx3d::graphics::geom']]],
   ['stargeometry',['StarGeometry',['../classhx3d_1_1graphics_1_1geom_1_1_star_geometry.html',1,'hx3d::graphics::geom']]],
   ['stencil',['Stencil',['../classhx3d_1_1graphics_1_1_stencil.html',1,'hx3d::graphics']]],
-  ['system',['System',['../classhx3d_1_1ecs_1_1_system.html',1,'hx3d::ecs']]],
-  ['system',['System',['../classhx3d_1_1gui_1_1_system.html',1,'hx3d::gui']]]
+  ['system',['System',['../classhx3d_1_1gui_1_1_system.html',1,'hx3d::gui']]],
+  ['system',['System',['../classhx3d_1_1ecs_1_1_system.html',1,'hx3d::ecs']]]
 ];
