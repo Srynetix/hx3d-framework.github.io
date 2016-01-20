@@ -143,6 +143,15 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <tr class="memitem:a1c5cb2d99b042b937b7f6254ec3160ad"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1window_1_1_game.html#a1c5cb2d99b042b937b7f6254ec3160ad">setTransition</a> (const <a class="el" href="namespacehx3d.html#a43f43f67acdb2297ebb1d8fa899126e8">Ptr</a>&lt; <a class="el" href="classhx3d_1_1graphics_1_1_transition.html">graphics::Transition</a> &gt; &amp;transition)</td></tr>
 <tr class="memdesc:a1c5cb2d99b042b937b7f6254ec3160ad"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current transition.  <a href="#a1c5cb2d99b042b937b7f6254ec3160ad">More...</a><br /></td></tr>
 <tr class="separator:a1c5cb2d99b042b937b7f6254ec3160ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5febb351860f65a63f3849eee0be50ae"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1window_1_1_game.html#a5febb351860f65a63f3849eee0be50ae">setViewport</a> (const <a class="el" href="namespacehx3d.html#a43f43f67acdb2297ebb1d8fa899126e8">Ptr</a>&lt; <a class="el" href="classhx3d_1_1graphics_1_1viewports_1_1_viewport.html">graphics::viewports::Viewport</a> &gt; &amp;viewport)</td></tr>
+<tr class="memdesc:a5febb351860f65a63f3849eee0be50ae"><td class="mdescLeft">&#160;</td><td class="mdescRight">Set the current viewport.  <a href="#a5febb351860f65a63f3849eee0be50ae">More...</a><br /></td></tr>
+<tr class="separator:a5febb351860f65a63f3849eee0be50ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae4ac481fab5f695d533f4d26766b6d0d"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="namespacehx3d.html#a43f43f67acdb2297ebb1d8fa899126e8">Ptr</a>&lt; <a class="el" href="classhx3d_1_1graphics_1_1viewports_1_1_viewport.html">graphics::viewports::Viewport</a> &gt; &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1window_1_1_game.html#ae4ac481fab5f695d533f4d26766b6d0d">getViewport</a> ()</td></tr>
+<tr class="memdesc:ae4ac481fab5f695d533f4d26766b6d0d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current viewport.  <a href="#ae4ac481fab5f695d533f4d26766b6d0d">More...</a><br /></td></tr>
+<tr class="separator:ae4ac481fab5f695d533f4d26766b6d0d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af72fbd55f2d9dd73c576536c9cce040a"><td class="memItemLeft" align="right" valign="top">glm::vec2&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1window_1_1_game.html#af72fbd55f2d9dd73c576536c9cce040a">getSize</a> ()</td></tr>
+<tr class="memdesc:af72fbd55f2d9dd73c576536c9cce040a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the current game size.  <a href="#af72fbd55f2d9dd73c576536c9cce040a">More...</a><br /></td></tr>
+<tr class="separator:af72fbd55f2d9dd73c576536c9cce040a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a666f75f2feae18b9986d30944f379c9f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1window_1_1_game.html#a666f75f2feae18b9986d30944f379c9f">isRunning</a> ()</td></tr>
 <tr class="memdesc:a666f75f2feae18b9986d30944f379c9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if the game is running.  <a href="#a666f75f2feae18b9986d30944f379c9f">More...</a><br /></td></tr>
 <tr class="separator:a666f75f2feae18b9986d30944f379c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -171,6 +180,56 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </table>
   </dd>
 </dl>
+
+</div>
+</div>
+<a class="anchor" id="af72fbd55f2d9dd73c576536c9cce040a"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">glm::vec2 hx3d::window::Game::getSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current game size. </p>
+<p>If a viewport is enabled, return the viewport size. Else, return the application size.</p>
+<dl class="section return"><dt>Returns</dt><dd><a class="el" href="classhx3d_1_1window_1_1_game.html" title="Game main class: multiple screens management. ">Game</a> size </dd></dl>
+
+<p><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+</div>
+<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="center"><img src="classhx3d_1_1window_1_1_game_af72fbd55f2d9dd73c576536c9cce040a_cgraph.png" border="0" usemap="#classhx3d_1_1window_1_1_game_af72fbd55f2d9dd73c576536c9cce040a_cgraph" alt=""/></div>
+<map name="classhx3d_1_1window_1_1_game_af72fbd55f2d9dd73c576536c9cce040a_cgraph" id="classhx3d_1_1window_1_1_game_af72fbd55f2d9dd73c576536c9cce040a_cgraph">
+<area shape="rect" id="node2" href="classhx3d_1_1_core.html#a220695328a5f8a5b6d29cf9ae8cd7202" title="Get the application instance. " alt="" coords="227,5,345,32"/>
+<area shape="rect" id="node3" href="classhx3d_1_1window_1_1_application.html#a2cc88c7e55977883426a3cc751451b0a" title="Get the window size (ivec2) " alt="" coords="199,57,373,98"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="ae4ac481fab5f695d533f4d26766b6d0d"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="namespacehx3d.html#a43f43f67acdb2297ebb1d8fa899126e8">Ptr</a>&lt; <a class="el" href="classhx3d_1_1graphics_1_1viewports_1_1_viewport.html">graphics::viewports::Viewport</a> &gt; &amp; hx3d::window::Game::getViewport </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Get the current viewport. </p>
+<dl class="section return"><dt>Returns</dt><dd>Viewport </dd></dl>
 
 </div>
 </div>
@@ -257,11 +316,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </dd>
 </dl>
 
-<p><div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div id="dynsection-1-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classhx3d_1_1window_1_1_game_aec64b5cf7c5c0a5c4379aff6bd13f7dd_cgraph.png" border="0" usemap="#classhx3d_1_1window_1_1_game_aec64b5cf7c5c0a5c4379aff6bd13f7dd_cgraph" alt=""/></div>
 <map name="classhx3d_1_1window_1_1_game_aec64b5cf7c5c0a5c4379aff6bd13f7dd_cgraph" id="classhx3d_1_1window_1_1_game_aec64b5cf7c5c0a5c4379aff6bd13f7dd_cgraph">
 <area shape="rect" id="node2" href="classhx3d_1_1_core.html#ac4d754123cf7d4d8d229f733e2fe7471" title="Get the event manager. " alt="" coords="229,5,363,32"/>
@@ -291,6 +350,30 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">transition</td><td>Transition </td></tr>
+  </table>
+  </dd>
+</dl>
+
+</div>
+</div>
+<a class="anchor" id="a5febb351860f65a63f3849eee0be50ae"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void hx3d::window::Game::setViewport </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="namespacehx3d.html#a43f43f67acdb2297ebb1d8fa899126e8">Ptr</a>&lt; <a class="el" href="classhx3d_1_1graphics_1_1viewports_1_1_viewport.html">graphics::viewports::Viewport</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>viewport</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Set the current viewport. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">viewport</td><td>Viewport </td></tr>
   </table>
   </dd>
 </dl>
@@ -327,11 +410,11 @@ virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" hr
   </dd>
 </dl>
 
-<p><div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
+<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
+  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
+<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
 </div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div id="dynsection-2-content" class="dyncontent" style="display:none;">
 <div class="center"><img src="classhx3d_1_1window_1_1_game_a6f11ac8671ca87148f0bbe2712ed7e15_cgraph.png" border="0" usemap="#classhx3d_1_1window_1_1_game_a6f11ac8671ca87148f0bbe2712ed7e15_cgraph" alt=""/></div>
 <map name="classhx3d_1_1window_1_1_game_a6f11ac8671ca87148f0bbe2712ed7e15_cgraph" id="classhx3d_1_1window_1_1_game_a6f11ac8671ca87148f0bbe2712ed7e15_cgraph">
 <area shape="rect" id="node2" href="namespacehx3d.html#afc522941dc9d3d90bfc0765b6a52a6ae" title="Format a string using printf notation. " alt="" coords="199,13,293,39"/>

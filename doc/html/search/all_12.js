@@ -2,7 +2,7 @@ var searchData=
 [
   ['take',['take',['../classhx3d_1_1_pool.html#aaa73cdab3626f68f8647882ebb9463fe',1,'hx3d::Pool']]],
   ['text',['Text',['../classhx3d_1_1gui_1_1_text.html',1,'hx3d::gui']]],
-  ['text',['Text',['../classhx3d_1_1gui_1_1_text.html#ab69825da06649dd14f01b1c7b3a6d102',1,'hx3d::gui::Text::Text()'],['../classhx3d_1_1gui_1_1_text.html#a2c78e58b9f5640f85aab54f72f1f4f56',1,'hx3d::gui::Text::Text(Ptr&lt; Font &gt; font)'],['../classhx3d_1_1gui_1_1_text.html#a44659c4a3c39bcfed8e8ddf07ee14dde',1,'hx3d::gui::Text::Text(Ptr&lt; Widget &gt; parent, Ptr&lt; Font &gt; font)']]],
+  ['text',['Text',['../classhx3d_1_1gui_1_1_text.html#ab69825da06649dd14f01b1c7b3a6d102',1,'hx3d::gui::Text::Text()'],['../classhx3d_1_1gui_1_1_text.html#a2c78e58b9f5640f85aab54f72f1f4f56',1,'hx3d::gui::Text::Text(Ptr&lt; Font &gt; font)'],['../classhx3d_1_1gui_1_1_text.html#a836c24dc4275afa873d84da693803a8d',1,'hx3d::gui::Text::Text(Widget *parent, Ptr&lt; Font &gt; font)']]],
   ['texture',['Texture',['../classhx3d_1_1graphics_1_1_texture.html',1,'hx3d::graphics']]],
   ['texture',['Texture',['../classhx3d_1_1graphics_1_1_texture.html#afab0353896f5b32057600ff287a84dbb',1,'hx3d::graphics::Texture::Texture()'],['../classhx3d_1_1graphics_1_1_texture.html#a9736d0780fec3db08f7782f4ca491b51',1,'hx3d::graphics::Texture::Texture(std::string pathToImage)'],['../classhx3d_1_1graphics_1_1_texture.html#a8bad69d84cfdc44b395694082104d003',1,'hx3d::graphics::Texture::Texture(Image &amp;image)']]],
   ['textureatlas',['TextureAtlas',['../classhx3d_1_1graphics_1_1_texture_atlas.html',1,'hx3d::graphics']]],

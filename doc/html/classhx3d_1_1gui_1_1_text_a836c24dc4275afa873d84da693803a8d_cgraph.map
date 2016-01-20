@@ -1,0 +1,10 @@
+<map id="hx3d::gui::Text::Text" name="hx3d::gui::Text::Text">
+<area shape="rect" id="node2" href="$classhx3d_1_1gui_1_1_text.html#aa426f640dcc9ef7209d76799505ad0a3" title="Initialize the text. " alt="" coords="196,111,331,138"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1_mesh.html#a378e9ffa1db203281e2fd51510044bf0" title="Set the mesh tint. " alt="" coords="386,73,533,115"/>
+<area shape="rect" id="node8" href="$classhx3d_1_1gui_1_1_text.html#aea555bf7d8dcf6c49abf9e8276f148bb" title="Set the font. " alt="" coords="379,141,540,167"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1graphics_1_1_mesh.html#ab29e26e697176a340088eb54be453bb5" title="Update the mesh color from the tint. " alt="" coords="599,71,746,112"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1graphics_1_1_color.html#abd429c7088c0605743c0f130e3065f01" title="Convert the color to a float format (between 0 and 1). " alt="" coords="809,5,956,47"/>
+<area shape="rect" id="node6" href="$classhx3d_1_1graphics_1_1buffers_1_1_buffer.html#ab4a3adfc2342a5737631095fc9243c0c" title="Get the buffer values. " alt="" coords="805,71,960,112"/>
+<area shape="rect" id="node7" href="$classhx3d_1_1graphics_1_1buffers_1_1_buffer.html#a8201780f1c2dd218ba90c14977a089f3" title="Get the buffer size. " alt="" coords="805,136,960,177"/>
+<area shape="rect" id="node9" href="$classhx3d_1_1gui_1_1_text.html#aeefdad6d7a3ec113249cd453729ee7de" title="Calculate the text length. " alt="" coords="588,136,757,177"/>
+</map>

@@ -1,5 +1,4 @@
 <map id="hx3d::gui::Text" name="hx3d::gui::Text">
-<area shape="rect" id="node5" href="$classhx3d_1_1gui_1_1_button.html" title="GUI text button. " alt="" coords="115,229,237,256"/>
-<area shape="rect" id="node2" href="$classhx3d_1_1gui_1_1_widget.html" title="Base GUI element. " alt="" coords="114,80,238,107"/>
+<area shape="rect" id="node2" href="$classhx3d_1_1gui_1_1_widget.html" title="Base GUI element. " alt="" coords="17,80,141,107"/>
 <area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1_mesh.html" title="Displayable 2D/3D element. " alt="" coords="5,5,152,32"/>
 </map>

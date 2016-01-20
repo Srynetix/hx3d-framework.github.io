@@ -1,3 +1,11 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classhx3d_1_1graphics_1_1_particle_emitter.html" title="Emit particles with parameters. " alt="" coords="5,5,164,47"/>
+<area shape="rect" id="node1" href="$classhx3d_1_1graphics_1_1_mesh.html" title="Displayable 2D/3D element. " alt="" coords="5,127,152,153"/>
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1_sprite.html" title="2D texture manipulation. " alt="" coords="200,95,349,121"/>
+<area shape="rect" id="node8" href="$classhx3d_1_1gui_1_1_widget.html" title="Base GUI element. " alt="" coords="213,157,337,184"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1audio_1_1_display.html" title="Audio effect display. " alt="" coords="413,31,555,57"/>
+<area shape="rect" id="node6" href="$classhx3d_1_1graphics_1_1_animation.html" title="Animated texture&#45;atlas based sprite. " alt="" coords="397,81,571,108"/>
+<area shape="rect" id="node7" href="$classhx3d_1_1gui_1_1_image_button.html" title="GUI image button. " alt="" coords="405,132,563,159"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1audio_1_1_spectrum.html" title="Audio spectrum displaying. " alt="" coords="621,5,774,32"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1audio_1_1_waveform.html" title="Audio waveform displaying. " alt="" coords="619,56,776,83"/>
+<area shape="rect" id="node9" href="$classhx3d_1_1gui_1_1_text.html" title="Text GUI element. " alt="" coords="429,183,539,209"/>
 </map>

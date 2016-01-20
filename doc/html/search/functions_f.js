@@ -49,6 +49,7 @@ var searchData=
   ['setuniformmatrix3f',['setUniformMatrix3f',['../classhx3d_1_1graphics_1_1_shader.html#af65b3984ced67356cd5f04acb22dd4b9',1,'hx3d::graphics::Shader']]],
   ['setuniformmatrix4f',['setUniformMatrix4f',['../classhx3d_1_1graphics_1_1_shader.html#a73b579b85c384f0316e66dd8302e54d3',1,'hx3d::graphics::Shader']]],
   ['setvalue',['setValue',['../classhx3d_1_1graphics_1_1buffers_1_1_buffer.html#a4e7f197c02946b4ff3e3bc5e099d14f9',1,'hx3d::graphics::buffers::Buffer']]],
+  ['setviewport',['setViewport',['../classhx3d_1_1window_1_1_game.html#a5febb351860f65a63f3849eee0be50ae',1,'hx3d::window::Game']]],
   ['shader',['Shader',['../classhx3d_1_1graphics_1_1_shader.html#ab6288c83f78ecdd5ccd6a231168492b9',1,'hx3d::graphics::Shader::Shader(std::string pathToShader)'],['../classhx3d_1_1graphics_1_1_shader.html#ae8bf4dfc470adb6e9f28f93fa29516b6',1,'hx3d::graphics::Shader::Shader(std::string vert, std::string frag)'],['../classhx3d_1_1_log_impl.html#a17a3fdd22886cb54637eb370108c82ce',1,'hx3d::LogImpl::Shader()']]],
   ['show',['show',['../classhx3d_1_1graphics_1_1_transform.html#a09313ba843aa7471adf34fce02d4f5d5',1,'hx3d::graphics::Transform::show()'],['../classhx3d_1_1window_1_1_screen.html#a293f3c24e7510b37d733a17496cd588b',1,'hx3d::window::Screen::show()']]],
   ['showindices',['showIndices',['../classhx3d_1_1ecs_1_1_scene_graph.html#aa6fc0f9b05d65766bb1ee3df44278b11',1,'hx3d::ecs::SceneGraph']]],

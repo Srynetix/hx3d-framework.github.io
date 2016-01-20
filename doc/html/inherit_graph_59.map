@@ -1,3 +1,8 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classhx3d_1_1tweens_1_1_tween_manager.html" title="Tweens management and update. " alt="" coords="5,5,203,32"/>
+<area shape="rect" id="node1" href="$classhx3d_1_1tweens_1_1_base_tween.html" title="Base abstract tween. " alt="" coords="5,107,183,133"/>
+<area shape="rect" id="node2" href="$classhx3d_1_1tweens_1_1_callback.html" title="Callback tween. " alt="" coords="241,5,399,32"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1tweens_1_1_delay.html" title="Delay tween. " alt="" coords="249,56,391,83"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1tweens_1_1_parallel.html" title="Parallel suite of tweens. " alt="" coords="245,107,395,133"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1tweens_1_1_sequence.html" title="Sequential suite of tweens. " alt="" coords="237,157,403,184"/>
+<area shape="rect" id="node6" href="$classhx3d_1_1tweens_1_1_tween.html" title="Templated tween definition. " alt="" coords="231,208,409,235"/>
 </map>

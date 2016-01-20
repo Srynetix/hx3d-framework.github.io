@@ -7,6 +7,5 @@ var searchData=
   ['bitset',['Bitset',['../classhx3d_1_1_bitset.html',1,'hx3d']]],
   ['buffer',['Buffer',['../classhx3d_1_1graphics_1_1buffers_1_1_buffer.html',1,'hx3d::graphics::buffers']]],
   ['buffer_3c_20float_20_3e',['Buffer&lt; float &gt;',['../classhx3d_1_1graphics_1_1buffers_1_1_buffer.html',1,'hx3d::graphics::buffers']]],
-  ['buffer_3c_20glushort_20_3e',['Buffer&lt; GLushort &gt;',['../classhx3d_1_1graphics_1_1buffers_1_1_buffer.html',1,'hx3d::graphics::buffers']]],
-  ['button',['Button',['../classhx3d_1_1gui_1_1_button.html',1,'hx3d::gui']]]
+  ['buffer_3c_20glushort_20_3e',['Buffer&lt; GLushort &gt;',['../classhx3d_1_1graphics_1_1buffers_1_1_buffer.html',1,'hx3d::graphics::buffers']]]
 ];

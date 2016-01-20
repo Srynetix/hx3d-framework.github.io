@@ -18,6 +18,5 @@ var searchData=
   ['buffer_3c_20float_20_3e',['Buffer&lt; float &gt;',['../classhx3d_1_1graphics_1_1buffers_1_1_buffer.html',1,'hx3d::graphics::buffers']]],
   ['buffer_3c_20glushort_20_3e',['Buffer&lt; GLushort &gt;',['../classhx3d_1_1graphics_1_1buffers_1_1_buffer.html',1,'hx3d::graphics::buffers']]],
   ['buildtexture',['buildTexture',['../classhx3d_1_1graphics_1_1_image.html#a4a938c75101519608ba8f83cc15a6aff',1,'hx3d::graphics::Image']]],
-  ['button',['Button',['../classhx3d_1_1gui_1_1_button.html',1,'hx3d::gui']]],
-  ['button',['Button',['../classhx3d_1_1window_1_1_mouse_button_event.html#a00a13d10ced97687ec4b2040380a5de9',1,'hx3d::window::MouseButtonEvent::Button()'],['../classhx3d_1_1gui_1_1_button.html#ad127e325b59c97d25a00d0f2251d03cf',1,'hx3d::gui::Button::Button()']]]
+  ['button',['Button',['../classhx3d_1_1window_1_1_mouse_button_event.html#a00a13d10ced97687ec4b2040380a5de9',1,'hx3d::window::MouseButtonEvent']]]
 ];
