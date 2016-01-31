@@ -102,11 +102,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classhx3d_1_1tweens_1_1_base_tween.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="base__tween_8hpp_source.html">base_tween.hpp</a>&gt;</code></p>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for hx3d::tweens::BaseTween:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="dynheader">
+Inheritance diagram for hx3d::tweens::BaseTween:</div>
+<div class="dyncontent">
 <div class="center"><img src="classhx3d_1_1tweens_1_1_base_tween__inherit__graph.png" border="0" usemap="#hx3d_1_1tweens_1_1_base_tween_inherit__map" alt="Inheritance graph"/></div>
 <map name="hx3d_1_1tweens_1_1_base_tween_inherit__map" id="hx3d_1_1tweens_1_1_base_tween_inherit__map">
 <area shape="rect" id="node2" href="classhx3d_1_1tweens_1_1_callback.html" title="Callback tween. " alt="" coords="241,5,399,32"/>
@@ -122,6 +120,10 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a6b24fa6b5438c322f429fce3841f2a03"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1tweens_1_1_base_tween.html#a6b24fa6b5438c322f429fce3841f2a03">hasEnded</a> ()</td></tr>
 <tr class="memdesc:a6b24fa6b5438c322f429fce3841f2a03"><td class="mdescLeft">&#160;</td><td class="mdescRight">Test if the tween has ended.  <a href="#a6b24fa6b5438c322f429fce3841f2a03">More...</a><br /></td></tr>
 <tr class="separator:a6b24fa6b5438c322f429fce3841f2a03"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a50aef9f2e54d808fd6dc10fcee21fae6"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a50aef9f2e54d808fd6dc10fcee21fae6"></a>
+virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1tweens_1_1_base_tween.html#a50aef9f2e54d808fd6dc10fcee21fae6">reset</a> ()=0</td></tr>
+<tr class="memdesc:a50aef9f2e54d808fd6dc10fcee21fae6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Reset the tween. <br /></td></tr>
+<tr class="separator:a50aef9f2e54d808fd6dc10fcee21fae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2def39419ea449460843b991b1954dd6"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1tweens_1_1_base_tween.html#a2def39419ea449460843b991b1954dd6">update</a> (const float delta)=0</td></tr>
 <tr class="memdesc:a2def39419ea449460843b991b1954dd6"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the tween.  <a href="#a2def39419ea449460843b991b1954dd6">More...</a><br /></td></tr>
 <tr class="separator:a2def39419ea449460843b991b1954dd6"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,8 +132,12 @@ Public Member Functions</h2></td></tr>
 Protected Attributes</h2></td></tr>
 <tr class="memitem:a05de1e28ab4e6b4bd5bb4d2b87b1b9ac"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a05de1e28ab4e6b4bd5bb4d2b87b1b9ac"></a>
 bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1tweens_1_1_base_tween.html#a05de1e28ab4e6b4bd5bb4d2b87b1b9ac">_ended</a></td></tr>
-<tr class="memdesc:a05de1e28ab4e6b4bd5bb4d2b87b1b9ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has the theen ended ? <br /></td></tr>
+<tr class="memdesc:a05de1e28ab4e6b4bd5bb4d2b87b1b9ac"><td class="mdescLeft">&#160;</td><td class="mdescRight">Has the tween ended ? <br /></td></tr>
 <tr class="separator:a05de1e28ab4e6b4bd5bb4d2b87b1b9ac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a85703add88e3c1f8e69f12aaa2e57a7f"><td class="memItemLeft" align="right" valign="top"><a class="anchor" id="a85703add88e3c1f8e69f12aaa2e57a7f"></a>
+bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1tweens_1_1_base_tween.html#a85703add88e3c1f8e69f12aaa2e57a7f">_infinite</a></td></tr>
+<tr class="memdesc:a85703add88e3c1f8e69f12aaa2e57a7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the tween infinite ? <br /></td></tr>
+<tr class="separator:a85703add88e3c1f8e69f12aaa2e57a7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Base abstract tween. </p>

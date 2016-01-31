@@ -1,3 +1,4 @@
 <map id="hx3d::tweens::Tween::update" name="hx3d::tweens::Tween::update">
-<area shape="rect" id="node2" href="$namespacehx3d_1_1math.html#a440eeef492352d3f2d1405197829096a" title="Interpolate between two values. " alt="" coords="200,13,355,39"/>
+<area shape="rect" id="node2" href="$namespacehx3d_1_1math.html#a440eeef492352d3f2d1405197829096a" title="Interpolate between two values. " alt="" coords="200,5,355,32"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1tweens_1_1_tween.html#a58ef82d6f8cb093442787831bdc56b77" title="Reset the tween. " alt="" coords="204,57,351,98"/>
 </map>

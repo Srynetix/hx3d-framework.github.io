@@ -1,0 +1,5 @@
+<map id="hx3d::graphics::viewports::Viewport::update" name="hx3d::graphics::viewports::Viewport::update">
+<area shape="rect" id="node2" href="$classhx3d_1_1graphics_1_1viewports_1_1_fit_viewport.html#a5529427987cbbbb1f8f4a0a2c225b187" title="Update the viewport, centering the camera (internal). " alt="" coords="224,5,412,47"/>
+<area shape="rect" id="node3" href="$classhx3d_1_1graphics_1_1viewports_1_1_viewport.html#ad9a878b67d825b6b28ad2690e410cdb1" title="Apply the viewport on the screen, centering the camera. " alt="" coords="460,5,631,47"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1graphics_1_1_camera.html#a39e5e922055cd59bc05bb636cb6fd232" title="Update the camera. " alt="" coords="679,5,840,47"/>
+</map>

@@ -101,11 +101,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classhx3d_1_1graphics_1_1_sprite.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="sprite_8hpp_source.html">sprite.hpp</a>&gt;</code></p>
-<div id="dynsection-0" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-0-trigger" src="closed.png" alt="+"/> Inheritance diagram for hx3d::graphics::Sprite:</div>
-<div id="dynsection-0-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-0-content" class="dyncontent" style="display:none;">
+<div class="dynheader">
+Inheritance diagram for hx3d::graphics::Sprite:</div>
+<div class="dyncontent">
 <div class="center"><img src="classhx3d_1_1graphics_1_1_sprite__inherit__graph.png" border="0" usemap="#hx3d_1_1graphics_1_1_sprite_inherit__map" alt="Inheritance graph"/></div>
 <map name="hx3d_1_1graphics_1_1_sprite_inherit__map" id="hx3d_1_1graphics_1_1_sprite_inherit__map">
 <area shape="rect" id="node3" href="classhx3d_1_1audio_1_1_display.html" title="Audio effect display. " alt="" coords="101,155,242,181"/>
@@ -116,11 +114,9 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
 <area shape="rect" id="node5" href="classhx3d_1_1audio_1_1_waveform.html" title="Audio waveform displaying. " alt="" coords="183,229,341,256"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div id="dynsection-1" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-1-trigger" src="closed.png" alt="+"/> Collaboration diagram for hx3d::graphics::Sprite:</div>
-<div id="dynsection-1-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-1-content" class="dyncontent" style="display:none;">
+<div class="dynheader">
+Collaboration diagram for hx3d::graphics::Sprite:</div>
+<div class="dyncontent">
 <div class="center"><img src="classhx3d_1_1graphics_1_1_sprite__coll__graph.png" border="0" usemap="#hx3d_1_1graphics_1_1_sprite_coll__map" alt="Collaboration graph"/></div>
 <map name="hx3d_1_1graphics_1_1_sprite_coll__map" id="hx3d_1_1graphics_1_1_sprite_coll__map">
 <area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1_mesh.html" title="Displayable 2D/3D element. " alt="" coords="191,141,337,168"/>
@@ -190,7 +186,7 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>2D texture manipulation. </p>
-</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p><em>Example code</em> </p><div class="fragment"><div class="line"><span class="comment">// Inside a create function...</span></div><div class="line"></div><div class="line"><a class="code" href="classhx3d_1_1graphics_1_1_sprite.html#aa4079e34d0bc652234e99920de04d901">Sprite</a> sprite;</div><div class="line"></div><div class="line"><span class="comment">// Load the texture &quot;my_texture&quot;</span></div><div class="line">sprite.setTexture(<a class="code" href="classhx3d_1_1_core.html#a3bae8af2eef216eacf739a788c458407">Core::Assets</a>()-&gt;get&lt;Texture&gt;(<span class="stringliteral">&quot;my_texture&quot;</span>));</div><div class="line"></div><div class="line"><span class="comment">// Set the sprite coordinate to (5, 5)</span></div><div class="line">sprite.transform.position.x = 5;</div><div class="line">sprite.transform.position.y = 5;</div><div class="line"></div><div class="line">[...]</div><div class="line"></div><div class="line"><span class="comment">// Inside a render function...</span></div><div class="line"></div><div class="line"><a class="code" href="classhx3d_1_1graphics_1_1_framebuffer.html#af4079532bb1b9d121ed03551c7ce1016">Framebuffer::clear</a>(<a class="code" href="classhx3d_1_1graphics_1_1_color.html#a08fb6921931c4a298ab38a7b2198ac6a">Color::Black</a>);</div><div class="line">batch.begin();</div><div class="line"></div><div class="line"><span class="comment">// Draw the sprite</span></div><div class="line">batch.draw(sprite);</div><div class="line"></div><div class="line">batch.end();</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa4079e34d0bc652234e99920de04d901"></a>
 <div class="memitem">
 <div class="memproto">
@@ -207,11 +203,9 @@ Additional Inherited Members</h2></td></tr>
 <p>Create a sprite without texture. </p>
 <p>You must set it after with <a class="el" href="classhx3d_1_1graphics_1_1_sprite.html#a67153564d5a32fd45bfea0956087cebd">setTexture</a>. </p>
 
-<p><div id="dynsection-2" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-2-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-2-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-2-content" class="dyncontent" style="display:none;">
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
 <div class="center"><img src="classhx3d_1_1graphics_1_1_sprite_aa4079e34d0bc652234e99920de04d901_cgraph.png" border="0" usemap="#classhx3d_1_1graphics_1_1_sprite_aa4079e34d0bc652234e99920de04d901_cgraph" alt=""/></div>
 <map name="classhx3d_1_1graphics_1_1_sprite_aa4079e34d0bc652234e99920de04d901_cgraph" id="classhx3d_1_1graphics_1_1_sprite_aa4079e34d0bc652234e99920de04d901_cgraph">
 <area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1_mesh.html#a378e9ffa1db203281e2fd51510044bf0" title="Set the mesh tint. " alt="" coords="203,71,349,112"/>
@@ -258,16 +252,14 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="classhx3d_1_1graphics_1_1_mesh.html#aa4d6dfd1b417e05ea52d368f765c836e">hx3d::graphics::Mesh</a>.</p>
 
-<p><div id="dynsection-3" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-3-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-3-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-3-content" class="dyncontent" style="display:none;">
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
 <div class="center"><img src="classhx3d_1_1graphics_1_1_sprite_ab50721d8fd3d9385d86af934d48f84e5_cgraph.png" border="0" usemap="#classhx3d_1_1graphics_1_1_sprite_ab50721d8fd3d9385d86af934d48f84e5_cgraph" alt=""/></div>
 <map name="classhx3d_1_1graphics_1_1_sprite_ab50721d8fd3d9385d86af934d48f84e5_cgraph" id="classhx3d_1_1graphics_1_1_sprite_ab50721d8fd3d9385d86af934d48f84e5_cgraph">
 <area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1_texture.html#ac061ab9fa1c6d7fbc001cfd488e809d6" title="Use the current texture for drawing. " alt="" coords="397,5,585,32"/>
-<area shape="rect" id="node3" href="classhx3d_1_1graphics_1_1_mesh.html#aa4d6dfd1b417e05ea52d368f765c836e" title="Draw the mesh using a shader. " alt="" coords="203,57,349,98"/>
-<area shape="rect" id="node4" href="classhx3d_1_1graphics_1_1_texture.html#a56e9d520b6cf60b7e26a65574e569a24" title="Clear the current texture for drawing. " alt="" coords="412,57,571,98"/>
+<area shape="rect" id="node3" href="classhx3d_1_1graphics_1_1_mesh.html#aa4d6dfd1b417e05ea52d368f765c836e" title="Draw the mesh using a shader. " alt="" coords="203,27,349,69"/>
+<area shape="rect" id="node4" href="classhx3d_1_1graphics_1_1_texture.html#a56e9d520b6cf60b7e26a65574e569a24" title="Clear the current texture for drawing. " alt="" coords="412,71,571,113"/>
 </map>
 </div>
 </p>
@@ -314,11 +306,9 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p><div id="dynsection-4" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-4-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-4-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-4-content" class="dyncontent" style="display:none;">
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
 <div class="center"><img src="classhx3d_1_1graphics_1_1_sprite_a67153564d5a32fd45bfea0956087cebd_cgraph.png" border="0" usemap="#classhx3d_1_1graphics_1_1_sprite_a67153564d5a32fd45bfea0956087cebd_cgraph" alt=""/></div>
 <map name="classhx3d_1_1graphics_1_1_sprite_a67153564d5a32fd45bfea0956087cebd_cgraph" id="classhx3d_1_1graphics_1_1_sprite_a67153564d5a32fd45bfea0956087cebd_cgraph">
 <area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1geom_1_1_sprite_geometry.html#a74c844ad9ccda1ce38956688b06a49ec" title="Prepare the sprite for simple texture mode. " alt="" coords="203,5,453,47"/>
@@ -351,11 +341,9 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p><div id="dynsection-5" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-5-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-5-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-5-content" class="dyncontent" style="display:none;">
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
 <div class="center"><img src="classhx3d_1_1graphics_1_1_sprite_a94ce86b8ccb80568e5e153e7e9e95664_cgraph.png" border="0" usemap="#classhx3d_1_1graphics_1_1_sprite_a94ce86b8ccb80568e5e153e7e9e95664_cgraph" alt=""/></div>
 <map name="classhx3d_1_1graphics_1_1_sprite_a94ce86b8ccb80568e5e153e7e9e95664_cgraph" id="classhx3d_1_1graphics_1_1_sprite_a94ce86b8ccb80568e5e153e7e9e95664_cgraph">
 <area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1_framebuffer.html#a2a9e107f68cf01e7027f78cdcb1f1b81" title="Get the framebuffer color buffer. " alt="" coords="249,5,434,47"/>
@@ -390,11 +378,9 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p><div id="dynsection-6" onclick="return toggleVisibility(this)" class="dynheader closed" style="cursor:pointer;">
-  <img id="dynsection-6-trigger" src="closed.png" alt="+"/> Here is the call graph for this function:</div>
-<div id="dynsection-6-summary" class="dynsummary" style="display:block;">
-</div>
-<div id="dynsection-6-content" class="dyncontent" style="display:none;">
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
 <div class="center"><img src="classhx3d_1_1graphics_1_1_sprite_aa9c3dfd5500d76e9e602f9d7fced6c68_cgraph.png" border="0" usemap="#classhx3d_1_1graphics_1_1_sprite_aa9c3dfd5500d76e9e602f9d7fced6c68_cgraph" alt=""/></div>
 <map name="classhx3d_1_1graphics_1_1_sprite_aa9c3dfd5500d76e9e602f9d7fced6c68_cgraph" id="classhx3d_1_1graphics_1_1_sprite_aa9c3dfd5500d76e9e602f9d7fced6c68_cgraph">
 <area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1_texture_region.html#a4719d9a5cc608347bff023cb07feaba4" title="Get the texture. " alt="" coords="469,5,669,47"/>
