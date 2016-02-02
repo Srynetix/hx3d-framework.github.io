@@ -60,7 +60,7 @@ var searchData=
   ['setviewport',['setViewport',['../classhx3d_1_1window_1_1_game.html#a5febb351860f65a63f3849eee0be50ae',1,'hx3d::window::Game']]],
   ['shader',['Shader',['../classhx3d_1_1graphics_1_1_shader.html',1,'hx3d::graphics']]],
   ['shader',['Shader',['../classhx3d_1_1graphics_1_1_shader.html#ab6288c83f78ecdd5ccd6a231168492b9',1,'hx3d::graphics::Shader::Shader(std::string pathToShader)'],['../classhx3d_1_1graphics_1_1_shader.html#ae8bf4dfc470adb6e9f28f93fa29516b6',1,'hx3d::graphics::Shader::Shader(std::string vert, std::string frag)'],['../classhx3d_1_1_log_impl.html#a17a3fdd22886cb54637eb370108c82ce',1,'hx3d::LogImpl::Shader()']]],
-  ['shape',['Shape',['../classhx3d_1_1physics2d_1_1_collider.html#a8a60368fbfebca90607126f9aa87c3b8',1,'hx3d::physics2d::Collider::Shape()'],['../classhx3d_1_1physics2d_1_1_collider.html#ac95e201e98d3bea31810bf4521239a79',1,'hx3d::physics2d::Collider::shape()']]],
+  ['shape',['shape',['../classhx3d_1_1physics2d_1_1_collider.html#ac95e201e98d3bea31810bf4521239a79',1,'hx3d::physics2d::Collider::shape()'],['../classhx3d_1_1physics2d_1_1_collider.html#a8a60368fbfebca90607126f9aa87c3b8',1,'hx3d::physics2d::Collider::Shape()']]],
   ['show',['show',['../classhx3d_1_1graphics_1_1_transform.html#a09313ba843aa7471adf34fce02d4f5d5',1,'hx3d::graphics::Transform::show()'],['../classhx3d_1_1window_1_1_screen.html#a293f3c24e7510b37d733a17496cd588b',1,'hx3d::window::Screen::show()']]],
   ['showindices',['showIndices',['../classhx3d_1_1ecs_1_1_scene_graph.html#aa6fc0f9b05d65766bb1ee3df44278b11',1,'hx3d::ecs::SceneGraph']]],
   ['shown',['Shown',['../classhx3d_1_1window_1_1_window_event.html#a53563c9c2bdceacb1a6ae0b6eca31f5eaa1921ede72e1b8f5c0a39c77ad1865b4',1,'hx3d::window::WindowEvent']]],

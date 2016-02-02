@@ -107,12 +107,12 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ae55b575327104559ac59521679531e90"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_callback_timer.html#ae55b575327104559ac59521679531e90">CallbackTimer</a> ()</td></tr>
 <tr class="memdesc:ae55b575327104559ac59521679531e90"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create an uninitialized callback timer.  <a href="#ae55b575327104559ac59521679531e90">More...</a><br /></td></tr>
 <tr class="separator:ae55b575327104559ac59521679531e90"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a874f7d44f26a644f2cb4e190cd49d194"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_callback_timer.html#a874f7d44f26a644f2cb4e190cd49d194">CallbackTimer</a> (float delay, std::function&lt; void()&gt; function)</td></tr>
-<tr class="memdesc:a874f7d44f26a644f2cb4e190cd49d194"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a callback timer using a delay and a function. The delay is in milliseconds.  <a href="#a874f7d44f26a644f2cb4e190cd49d194">More...</a><br /></td></tr>
-<tr class="separator:a874f7d44f26a644f2cb4e190cd49d194"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aba8308048b2d46889914de1371152ef9"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_callback_timer.html#aba8308048b2d46889914de1371152ef9">initialize</a> (float delay, std::function&lt; void()&gt; function)</td></tr>
-<tr class="memdesc:aba8308048b2d46889914de1371152ef9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the timer. The delay is in milliseconds.  <a href="#aba8308048b2d46889914de1371152ef9">More...</a><br /></td></tr>
-<tr class="separator:aba8308048b2d46889914de1371152ef9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8ee91869ed0c681f3f5f005e7b463084"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_callback_timer.html#a8ee91869ed0c681f3f5f005e7b463084">CallbackTimer</a> (float delay, std::function&lt; void()&gt; function, bool loop=false)</td></tr>
+<tr class="memdesc:a8ee91869ed0c681f3f5f005e7b463084"><td class="mdescLeft">&#160;</td><td class="mdescRight">Create a callback timer using a delay and a function. The delay is in milliseconds.  <a href="#a8ee91869ed0c681f3f5f005e7b463084">More...</a><br /></td></tr>
+<tr class="separator:a8ee91869ed0c681f3f5f005e7b463084"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a213669b70a34e22135fc8c8ac654bb50"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_callback_timer.html#a213669b70a34e22135fc8c8ac654bb50">initialize</a> (float delay, std::function&lt; void()&gt; function, bool loop=false)</td></tr>
+<tr class="memdesc:a213669b70a34e22135fc8c8ac654bb50"><td class="mdescLeft">&#160;</td><td class="mdescRight">Initialize the timer. The delay is in milliseconds.  <a href="#a213669b70a34e22135fc8c8ac654bb50">More...</a><br /></td></tr>
+<tr class="separator:a213669b70a34e22135fc8c8ac654bb50"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a371d755ddef427db9fd16cc850e1e5a7"><td class="memItemLeft" align="right" valign="top">long&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_callback_timer.html#a371d755ddef427db9fd16cc850e1e5a7">remaining</a> ()</td></tr>
 <tr class="memdesc:a371d755ddef427db9fd16cc850e1e5a7"><td class="mdescLeft">&#160;</td><td class="mdescRight">Get the remaining time in milliseconds.  <a href="#a371d755ddef427db9fd16cc850e1e5a7">More...</a><br /></td></tr>
 <tr class="separator:a371d755ddef427db9fd16cc850e1e5a7"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -124,6 +124,12 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_callback_timer.html#a9963c95638495c6c8e4b70e18905cbba">update</a> (float delta)</td></tr>
 <tr class="memdesc:a9963c95638495c6c8e4b70e18905cbba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Update the timer. <br /></td></tr>
 <tr class="separator:a9963c95638495c6c8e4b70e18905cbba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acb1d73479fb743d6f495dc8c19d4ea47"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_callback_timer.html#acb1d73479fb743d6f495dc8c19d4ea47">hasEnded</a> ()</td></tr>
+<tr class="memdesc:acb1d73479fb743d6f495dc8c19d4ea47"><td class="mdescLeft">&#160;</td><td class="mdescRight">Did the timer ended ?  <a href="#acb1d73479fb743d6f495dc8c19d4ea47">More...</a><br /></td></tr>
+<tr class="separator:acb1d73479fb743d6f495dc8c19d4ea47"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48de5a3063d4fc4d8fe62f6f7909c2d5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classhx3d_1_1_callback_timer.html#a48de5a3063d4fc4d8fe62f6f7909c2d5">isLooping</a> ()</td></tr>
+<tr class="memdesc:a48de5a3063d4fc4d8fe62f6f7909c2d5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Is the timer looping ?  <a href="#a48de5a3063d4fc4d8fe62f6f7909c2d5">More...</a><br /></td></tr>
+<tr class="separator:a48de5a3063d4fc4d8fe62f6f7909c2d5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Improved timer with callback execution. </p>
@@ -142,11 +148,11 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div><div class="memdoc">
 
 <p>Create an uninitialized callback timer. </p>
-<p>See <a class="el" href="classhx3d_1_1_callback_timer.html#aba8308048b2d46889914de1371152ef9">initialize</a>. </p>
+<p>See <a class="el" href="classhx3d_1_1_callback_timer.html#a213669b70a34e22135fc8c8ac654bb50">initialize</a>. </p>
 
 </div>
 </div>
-<a class="anchor" id="a874f7d44f26a644f2cb4e190cd49d194"></a>
+<a class="anchor" id="a8ee91869ed0c681f3f5f005e7b463084"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -160,7 +166,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
-          <td class="paramname"><em>function</em>&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>loop</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -175,6 +187,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   <table class="params">
     <tr><td class="paramname">delay</td><td><a class="el" href="classhx3d_1_1_timer.html" title="Simple timer. ">Timer</a> delay </td></tr>
     <tr><td class="paramname">function</td><td>Callback </td></tr>
+    <tr><td class="paramname">loop</td><td>Loop ? </td></tr>
   </table>
   </dd>
 </dl>
@@ -182,7 +195,37 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a class="anchor" id="aba8308048b2d46889914de1371152ef9"></a>
+<a class="anchor" id="acb1d73479fb743d6f495dc8c19d4ea47"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hx3d::CallbackTimer::hasEnded </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Did the timer ended ? </p>
+<dl class="section return"><dt>Returns</dt><dd>True/False </dd></dl>
+
+<p><div class="dynheader">
+Here is the call graph for this function:</div>
+<div class="dyncontent">
+<div class="center"><img src="classhx3d_1_1_callback_timer_acb1d73479fb743d6f495dc8c19d4ea47_cgraph.png" border="0" usemap="#classhx3d_1_1_callback_timer_acb1d73479fb743d6f495dc8c19d4ea47_cgraph" alt=""/></div>
+<map name="classhx3d_1_1_callback_timer_acb1d73479fb743d6f495dc8c19d4ea47_cgraph" id="classhx3d_1_1_callback_timer_acb1d73479fb743d6f495dc8c19d4ea47_cgraph">
+<area shape="rect" id="node2" href="classhx3d_1_1_timer.html#a52c166fec49e830bd49744bb52082eea" title="Test if the timer has ended. " alt="" coords="196,31,353,57"/>
+<area shape="rect" id="node3" href="classhx3d_1_1_timer.html#ac0b1ece0709caa8c7f6c0ed9c67de5b7" title="Get the remaining time as milliseconds. " alt="" coords="401,5,556,32"/>
+<area shape="rect" id="node4" href="classhx3d_1_1_timer.html#a0b6754ef6d0b98fbe0ab14f6acb273c5" title="Reset the timer. " alt="" coords="415,56,543,83"/>
+</map>
+</div>
+</p>
+
+</div>
+</div>
+<a class="anchor" id="a213669b70a34e22135fc8c8ac654bb50"></a>
 <div class="memitem">
 <div class="memproto">
       <table class="memname">
@@ -196,7 +239,13 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::function&lt; void()&gt;&#160;</td>
-          <td class="paramname"><em>function</em>&#160;</td>
+          <td class="paramname"><em>function</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>loop</em> = <code>false</code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -211,6 +260,7 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
   <table class="params">
     <tr><td class="paramname">delay</td><td><a class="el" href="classhx3d_1_1_timer.html" title="Simple timer. ">Timer</a> delay </td></tr>
     <tr><td class="paramname">function</td><td>Callback </td></tr>
+    <tr><td class="paramname">loop</td><td>Loop ? </td></tr>
   </table>
   </dd>
 </dl>
@@ -218,13 +268,31 @@ void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="clas
 <p><div class="dynheader">
 Here is the call graph for this function:</div>
 <div class="dyncontent">
-<div class="center"><img src="classhx3d_1_1_callback_timer_aba8308048b2d46889914de1371152ef9_cgraph.png" border="0" usemap="#classhx3d_1_1_callback_timer_aba8308048b2d46889914de1371152ef9_cgraph" alt=""/></div>
-<map name="classhx3d_1_1_callback_timer_aba8308048b2d46889914de1371152ef9_cgraph" id="classhx3d_1_1_callback_timer_aba8308048b2d46889914de1371152ef9_cgraph">
-<area shape="rect" id="node2" href="classhx3d_1_1_timer.html#a046191b4ebba7d3b9bf8d0141d539deb" title="Initialize the timer with a delay. " alt="" coords="196,13,343,39"/>
+<div class="center"><img src="classhx3d_1_1_callback_timer_a213669b70a34e22135fc8c8ac654bb50_cgraph.png" border="0" usemap="#classhx3d_1_1_callback_timer_a213669b70a34e22135fc8c8ac654bb50_cgraph" alt=""/></div>
+<map name="classhx3d_1_1_callback_timer_a213669b70a34e22135fc8c8ac654bb50_cgraph" id="classhx3d_1_1_callback_timer_a213669b70a34e22135fc8c8ac654bb50_cgraph">
+<area shape="rect" id="node2" href="classhx3d_1_1_timer.html#a80429bccc4e36e7bcf43882bad5b9e04" title="Initialize the timer with a delay. " alt="" coords="196,13,343,39"/>
 <area shape="rect" id="node3" href="classhx3d_1_1_timer.html#a0b6754ef6d0b98fbe0ab14f6acb273c5" title="Reset the timer. " alt="" coords="391,13,519,39"/>
 </map>
 </div>
 </p>
+
+</div>
+</div>
+<a class="anchor" id="a48de5a3063d4fc4d8fe62f6f7909c2d5"></a>
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool hx3d::CallbackTimer::isLooping </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Is the timer looping ? </p>
+<dl class="section return"><dt>Returns</dt><dd>True/False </dd></dl>
 
 </div>
 </div>

@@ -1,0 +1,5 @@
+<map id="hx3d::physics2d::World::getCollisionMatrix" name="hx3d::physics2d::World::getCollisionMatrix">
+<area shape="rect" id="node2" href="$structhx3d_1_1physics2d_1_1_attractor.html#abb4a90bbc5af9a8eb4a9c8eeef36d370" title="Apply an attractor force on a collider. " alt="" coords="212,5,387,47"/>
+<area shape="rect" id="node4" href="$namespacehx3d_1_1algo.html#a37c4fd4008904065615dc60958d39f2b" title="Function application helper on a container. " alt="" coords="239,71,360,98"/>
+<area shape="rect" id="node3" href="$structhx3d_1_1physics2d_1_1_attractor.html#a05cfad726f72842fd439ae184630fb62" title="Defines the current attractor on a collider. " alt="" coords="435,5,609,47"/>
+</map>

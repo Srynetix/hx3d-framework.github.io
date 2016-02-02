@@ -1,7 +1,10 @@
 <map id="hx3d::TimerManager::update" name="hx3d::TimerManager::update">
 <area shape="rect" id="node2" href="$namespacehx3d_1_1algo.html#a37c4fd4008904065615dc60958d39f2b" title="Function application helper on a container. " alt="" coords="205,5,327,32"/>
 <area shape="rect" id="node3" href="$classhx3d_1_1_callback_timer.html#a9963c95638495c6c8e4b70e18905cbba" title="Update the timer. " alt="" coords="195,57,337,98"/>
-<area shape="rect" id="node4" href="$classhx3d_1_1_timer.html#aecf017c3075a14b919df102d5c4f34d2" title="Update the timer. " alt="" coords="395,39,533,65"/>
-<area shape="rect" id="node5" href="$classhx3d_1_1_timer.html#a52c166fec49e830bd49744bb52082eea" title="Test if the timer has ended. " alt="" coords="385,89,543,116"/>
-<area shape="rect" id="node6" href="$classhx3d_1_1_timer.html#ac0b1ece0709caa8c7f6c0ed9c67de5b7" title="Get the remaining time as milliseconds. " alt="" coords="591,89,745,116"/>
+<area shape="rect" id="node9" href="$classhx3d_1_1_callback_timer.html#acb1d73479fb743d6f495dc8c19d4ea47" title="Did the timer ended ? " alt="" coords="195,122,337,163"/>
+<area shape="rect" id="node4" href="$classhx3d_1_1_timer.html#aecf017c3075a14b919df102d5c4f34d2" title="Update the timer. " alt="" coords="395,72,533,99"/>
+<area shape="rect" id="node5" href="$classhx3d_1_1_timer.html#a52c166fec49e830bd49744bb52082eea" title="Test if the timer has ended. " alt="" coords="385,123,543,149"/>
+<area shape="rect" id="node8" href="$classhx3d_1_1_callback_timer.html#adcd97a1745fd9e833ebf26395e8f4d6d" title="Reset the timer. " alt="" coords="393,6,535,47"/>
+<area shape="rect" id="node6" href="$classhx3d_1_1_timer.html#ac0b1ece0709caa8c7f6c0ed9c67de5b7" title="Get the remaining time as milliseconds. " alt="" coords="591,123,745,149"/>
+<area shape="rect" id="node7" href="$classhx3d_1_1_timer.html#a0b6754ef6d0b98fbe0ab14f6acb273c5" title="Reset the timer. " alt="" coords="604,43,732,69"/>
 </map>

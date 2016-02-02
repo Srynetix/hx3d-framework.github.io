@@ -8,7 +8,7 @@ var searchData=
   ['tick',['tick',['../classhx3d_1_1_chronometer.html#a7d131fac362fc2e9a353c867a9f788fd',1,'hx3d::Chronometer']]],
   ['tickasmillis',['tickAsMillis',['../classhx3d_1_1_chronometer.html#a78a4dde8d880d9d6d4ba220210b2ea5f',1,'hx3d::Chronometer']]],
   ['tickasseconds',['tickAsSeconds',['../classhx3d_1_1_chronometer.html#a121ceb34ae161a6af51cfc8f997411e9',1,'hx3d::Chronometer']]],
-  ['timer',['Timer',['../classhx3d_1_1_timer.html#aae4d538d7bda31881e84f44bda530687',1,'hx3d::Timer::Timer()'],['../classhx3d_1_1_timer.html#a26bd365007bb5098040ee7d31f17bdb9',1,'hx3d::Timer::Timer(long delay)']]],
+  ['timer',['Timer',['../classhx3d_1_1_timer.html#aae4d538d7bda31881e84f44bda530687',1,'hx3d::Timer::Timer()'],['../classhx3d_1_1_timer.html#a7152aa62a2ced509a509c9edbe46c75f',1,'hx3d::Timer::Timer(long delay, bool loop=false)']]],
   ['tofloat',['toFloat',['../classhx3d_1_1graphics_1_1_color.html#abd429c7088c0605743c0f130e3065f01',1,'hx3d::graphics::Color']]],
   ['tostring',['toString',['../classhx3d_1_1_file.html#abc0224968e89260a937c46065c7ec501',1,'hx3d::File']]],
   ['transition',['Transition',['../classhx3d_1_1graphics_1_1_transition.html#a906c9e3632da94d3db8f0fe00e341c26',1,'hx3d::graphics::Transition']]],

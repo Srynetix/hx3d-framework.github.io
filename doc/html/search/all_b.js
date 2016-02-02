@@ -11,6 +11,7 @@ var searchData=
   ['load',['load',['../classhx3d_1_1graphics_1_1_texture.html#a02d36ff0ae104c6a6b57ffaacad84ca7',1,'hx3d::graphics::Texture']]],
   ['loadasciifile',['loadAsciiFile',['../classhx3d_1_1_file.html#aa196439f2f01d10e3e8c667f583dcaf8',1,'hx3d::File']]],
   ['loadbinaryfile',['loadBinaryFile',['../classhx3d_1_1_file.html#a9249e27317961fc11d7d321d5694ec7e',1,'hx3d::File']]],
+  ['loadinternalasciifile',['loadInternalAsciiFile',['../classhx3d_1_1_file.html#a8b1263fac9f35238505d10e8a3f55355',1,'hx3d::File']]],
   ['log',['Log',['../namespacehx3d.html#a74cfa18d34984b615cc2b3a2933c07a7',1,'hx3d']]],
   ['log2',['log2',['../namespacehx3d_1_1math.html#a17cb6b78f2de3de029844c71ce8dd8f8',1,'hx3d::math']]],
   ['logimpl',['LogImpl',['../classhx3d_1_1_log_impl.html',1,'hx3d']]],

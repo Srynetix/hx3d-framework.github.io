@@ -13,7 +13,7 @@ var searchData=
   ['tickasmillis',['tickAsMillis',['../classhx3d_1_1_chronometer.html#a78a4dde8d880d9d6d4ba220210b2ea5f',1,'hx3d::Chronometer']]],
   ['tickasseconds',['tickAsSeconds',['../classhx3d_1_1_chronometer.html#a121ceb34ae161a6af51cfc8f997411e9',1,'hx3d::Chronometer']]],
   ['timer',['Timer',['../classhx3d_1_1_timer.html',1,'hx3d']]],
-  ['timer',['Timer',['../classhx3d_1_1_timer.html#aae4d538d7bda31881e84f44bda530687',1,'hx3d::Timer::Timer()'],['../classhx3d_1_1_timer.html#a26bd365007bb5098040ee7d31f17bdb9',1,'hx3d::Timer::Timer(long delay)']]],
+  ['timer',['Timer',['../classhx3d_1_1_timer.html#aae4d538d7bda31881e84f44bda530687',1,'hx3d::Timer::Timer()'],['../classhx3d_1_1_timer.html#a7152aa62a2ced509a509c9edbe46c75f',1,'hx3d::Timer::Timer(long delay, bool loop=false)']]],
   ['timermanager',['TimerManager',['../classhx3d_1_1_timer_manager.html',1,'hx3d']]],
   ['title',['title',['../classhx3d_1_1window_1_1_application_config.html#a339ecc47ec2445635dbc7d2917618616',1,'hx3d::window::ApplicationConfig']]],
   ['tofloat',['toFloat',['../classhx3d_1_1graphics_1_1_color.html#abd429c7088c0605743c0f130e3065f01',1,'hx3d::graphics::Color']]],
