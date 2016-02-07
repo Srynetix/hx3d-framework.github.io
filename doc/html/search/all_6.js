@@ -16,7 +16,7 @@ var searchData=
   ['fitviewport',['FitViewport',['../classhx3d_1_1graphics_1_1viewports_1_1_fit_viewport.html',1,'hx3d::graphics::viewports']]],
   ['fixedrotation',['fixedRotation',['../classhx3d_1_1physics2d_1_1_collider.html#a0eb25b5f02b969fd831eb361f14dc1bd',1,'hx3d::physics2d::Collider']]],
   ['flip_5fcoin',['flip_coin',['../namespacehx3d_1_1math.html#ada2eda97292474783ce049897ceec0e3',1,'hx3d::math']]],
-  ['font',['Font',['../classhx3d_1_1graphics_1_1_font.html#acf69c688e267c028038c6f7c06c0e872',1,'hx3d::graphics::Font::Font()'],['../structhx3d_1_1graphics_1_1_font_1_1_data.html#a9a5a758474e19b898fce209fd5953148',1,'hx3d::graphics::Font::Data::font()']]],
+  ['font',['font',['../structhx3d_1_1graphics_1_1_font_1_1_data.html#a9a5a758474e19b898fce209fd5953148',1,'hx3d::graphics::Font::Data::font()'],['../classhx3d_1_1graphics_1_1_font.html#acf69c688e267c028038c6f7c06c0e872',1,'hx3d::graphics::Font::Font()']]],
   ['font',['Font',['../classhx3d_1_1graphics_1_1_font.html',1,'hx3d::graphics']]],
   ['force',['force',['../classhx3d_1_1physics2d_1_1_collider.html#aed0d9bd26b7493555a336c832331e690',1,'hx3d::physics2d::Collider']]],
   ['format',['format',['../namespacehx3d.html#afc522941dc9d3d90bfc0765b6a52a6ae',1,'hx3d::format(const std::string fmt,...)'],['../namespacehx3d.html#a328ab8d31916302aad83a3688f62d5f7',1,'hx3d::format(const std::string fmt, va_list args)']]],

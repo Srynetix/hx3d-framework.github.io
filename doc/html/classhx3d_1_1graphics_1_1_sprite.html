@@ -101,29 +101,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classhx3d_1_1graphics_1_1_sprite.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="sprite_8hpp_source.html">sprite.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for hx3d::graphics::Sprite:</div>
-<div class="dyncontent">
-<div class="center"><img src="classhx3d_1_1graphics_1_1_sprite__inherit__graph.png" border="0" usemap="#hx3d_1_1graphics_1_1_sprite_inherit__map" alt="Inheritance graph"/></div>
-<map name="hx3d_1_1graphics_1_1_sprite_inherit__map" id="hx3d_1_1graphics_1_1_sprite_inherit__map">
-<area shape="rect" id="node3" href="classhx3d_1_1audio_1_1_display.html" title="Audio effect display. " alt="" coords="101,155,242,181"/>
-<area shape="rect" id="node6" href="classhx3d_1_1graphics_1_1_animation.html" title="Animated texture&#45;atlas based sprite. " alt="" coords="266,155,439,181"/>
-<area shape="rect" id="node7" href="classhx3d_1_1gui_1_1_image_button.html" title="GUI image button. " alt="" coords="463,155,621,181"/>
-<area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1_mesh.html" title="Displayable 2D/3D element. " alt="" coords="279,5,426,32"/>
-<area shape="rect" id="node4" href="classhx3d_1_1audio_1_1_spectrum.html" title="Audio spectrum displaying. " alt="" coords="5,229,159,256"/>
-<area shape="rect" id="node5" href="classhx3d_1_1audio_1_1_waveform.html" title="Audio waveform displaying. " alt="" coords="183,229,341,256"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for hx3d::graphics::Sprite:</div>
-<div class="dyncontent">
-<div class="center"><img src="classhx3d_1_1graphics_1_1_sprite__coll__graph.png" border="0" usemap="#hx3d_1_1graphics_1_1_sprite_coll__map" alt="Collaboration graph"/></div>
-<map name="hx3d_1_1graphics_1_1_sprite_coll__map" id="hx3d_1_1graphics_1_1_sprite_coll__map">
-<area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1_mesh.html" title="Displayable 2D/3D element. " alt="" coords="191,141,337,168"/>
-<area shape="rect" id="node3" href="classhx3d_1_1graphics_1_1_color.html" title="Four [0..255] components defined color. " alt="" coords="5,29,152,55"/>
-<area shape="rect" id="node4" href="classhx3d_1_1graphics_1_1_transform.html" title="2D/3D transform. " alt="" coords="239,29,414,55"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -186,7 +163,9 @@ Additional Inherited Members</h2></td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>2D texture manipulation. </p>
-<p><em>Example code</em> </p><div class="fragment"><div class="line"><span class="comment">// Inside a create function...</span></div><div class="line"></div><div class="line"><a class="code" href="classhx3d_1_1graphics_1_1_sprite.html#aa4079e34d0bc652234e99920de04d901">Sprite</a> sprite;</div><div class="line"></div><div class="line"><span class="comment">// Load the texture &quot;my_texture&quot;</span></div><div class="line">sprite.setTexture(<a class="code" href="classhx3d_1_1_core.html#a3bae8af2eef216eacf739a788c458407">Core::Assets</a>()-&gt;get&lt;Texture&gt;(<span class="stringliteral">&quot;my_texture&quot;</span>));</div><div class="line"></div><div class="line"><span class="comment">// Set the sprite coordinate to (5, 5)</span></div><div class="line">sprite.transform.position.x = 5;</div><div class="line">sprite.transform.position.y = 5;</div><div class="line"></div><div class="line">[...]</div><div class="line"></div><div class="line"><span class="comment">// Inside a render function...</span></div><div class="line"></div><div class="line"><a class="code" href="classhx3d_1_1graphics_1_1_framebuffer.html#af4079532bb1b9d121ed03551c7ce1016">Framebuffer::clear</a>(<a class="code" href="classhx3d_1_1graphics_1_1_color.html#a08fb6921931c4a298ab38a7b2198ac6a">Color::Black</a>);</div><div class="line">batch.begin();</div><div class="line"></div><div class="line"><span class="comment">// Draw the sprite</span></div><div class="line">batch.draw(sprite);</div><div class="line"></div><div class="line">batch.end();</div></div><!-- fragment --> </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<p><em>Example code</em> </p><div class="fragment"><div class="line"><span class="comment">// Inside a create function...</span></div><div class="line"></div><div class="line"><a class="code" href="classhx3d_1_1graphics_1_1_sprite.html#aa4079e34d0bc652234e99920de04d901">Sprite</a> sprite;</div><div class="line"></div><div class="line"><span class="comment">// Load the texture &quot;my_texture&quot;</span></div><div class="line">sprite.setTexture(<a class="code" href="classhx3d_1_1_core.html#a3bae8af2eef216eacf739a788c458407">Core::Assets</a>()-&gt;get&lt;Texture&gt;(<span class="stringliteral">&quot;my_texture&quot;</span>));</div><div class="line"></div><div class="line"><span class="comment">// Set the sprite coordinate to (5, 5)</span></div><div class="line">sprite.transform.position.x = 5;</div><div class="line">sprite.transform.position.y = 5;</div><div class="line"></div><div class="line">[...]</div><div class="line"></div><div class="line"><span class="comment">// Inside a render function...</span></div><div class="line"></div><div class="line"><a class="code" href="classhx3d_1_1graphics_1_1_framebuffer.html#af4079532bb1b9d121ed03551c7ce1016">Framebuffer::clear</a>(<a class="code" href="classhx3d_1_1graphics_1_1_color.html#a08fb6921931c4a298ab38a7b2198ac6a">Color::Black</a>);</div><div class="line">batch.begin();</div><div class="line"></div><div class="line"><span class="comment">// Draw the sprite</span></div><div class="line">batch.draw(sprite);</div><div class="line"></div><div class="line">batch.end();</div></div><!-- fragment --> 
+<p>Definition at line <a class="el" href="sprite_8hpp_source.html#l00062">62</a> of file <a class="el" href="sprite_8hpp_source.html">sprite.hpp</a>.</p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a class="anchor" id="aa4079e34d0bc652234e99920de04d901"></a>
 <div class="memitem">
 <div class="memproto">
@@ -203,19 +182,7 @@ Additional Inherited Members</h2></td></tr>
 <p>Create a sprite without texture. </p>
 <p>You must set it after with <a class="el" href="classhx3d_1_1graphics_1_1_sprite.html#a67153564d5a32fd45bfea0956087cebd">setTexture</a>. </p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classhx3d_1_1graphics_1_1_sprite_aa4079e34d0bc652234e99920de04d901_cgraph.png" border="0" usemap="#classhx3d_1_1graphics_1_1_sprite_aa4079e34d0bc652234e99920de04d901_cgraph" alt=""/></div>
-<map name="classhx3d_1_1graphics_1_1_sprite_aa4079e34d0bc652234e99920de04d901_cgraph" id="classhx3d_1_1graphics_1_1_sprite_aa4079e34d0bc652234e99920de04d901_cgraph">
-<area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1_mesh.html#a378e9ffa1db203281e2fd51510044bf0" title="Set the mesh tint. " alt="" coords="203,71,349,112"/>
-<area shape="rect" id="node3" href="classhx3d_1_1graphics_1_1_mesh.html#ab29e26e697176a340088eb54be453bb5" title="Update the mesh color from the tint. " alt="" coords="397,71,544,112"/>
-<area shape="rect" id="node4" href="classhx3d_1_1graphics_1_1_color.html#abd429c7088c0605743c0f130e3065f01" title="Convert the color to a float format (between 0 and 1). " alt="" coords="596,5,743,47"/>
-<area shape="rect" id="node5" href="classhx3d_1_1graphics_1_1buffers_1_1_buffer.html#ab4a3adfc2342a5737631095fc9243c0c" title="Get the buffer values. " alt="" coords="592,71,747,112"/>
-<area shape="rect" id="node6" href="classhx3d_1_1graphics_1_1buffers_1_1_buffer.html#a8201780f1c2dd218ba90c14977a089f3" title="Get the buffer size. " alt="" coords="592,136,747,177"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="sprite_8cpp_source.html#l00028">28</a> of file <a class="el" href="sprite_8cpp_source.html">sprite.cpp</a>.</p>
 
 </div>
 </div>
@@ -252,17 +219,7 @@ Here is the call graph for this function:</div>
 
 <p>Reimplemented from <a class="el" href="classhx3d_1_1graphics_1_1_mesh.html#aa4d6dfd1b417e05ea52d368f765c836e">hx3d::graphics::Mesh</a>.</p>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classhx3d_1_1graphics_1_1_sprite_ab50721d8fd3d9385d86af934d48f84e5_cgraph.png" border="0" usemap="#classhx3d_1_1graphics_1_1_sprite_ab50721d8fd3d9385d86af934d48f84e5_cgraph" alt=""/></div>
-<map name="classhx3d_1_1graphics_1_1_sprite_ab50721d8fd3d9385d86af934d48f84e5_cgraph" id="classhx3d_1_1graphics_1_1_sprite_ab50721d8fd3d9385d86af934d48f84e5_cgraph">
-<area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1_texture.html#ac061ab9fa1c6d7fbc001cfd488e809d6" title="Use the current texture for drawing. " alt="" coords="397,5,585,32"/>
-<area shape="rect" id="node3" href="classhx3d_1_1graphics_1_1_mesh.html#aa4d6dfd1b417e05ea52d368f765c836e" title="Draw the mesh using a shader. " alt="" coords="203,27,349,69"/>
-<area shape="rect" id="node4" href="classhx3d_1_1graphics_1_1_texture.html#a56e9d520b6cf60b7e26a65574e569a24" title="Clear the current texture for drawing. " alt="" coords="412,71,571,113"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="sprite_8cpp_source.html#l00094">94</a> of file <a class="el" href="sprite_8cpp_source.html">sprite.cpp</a>.</p>
 
 </div>
 </div>
@@ -281,6 +238,8 @@ Here is the call graph for this function:</div>
 
 <p>Get the sprite texture. </p>
 <dl class="section return"><dt>Returns</dt><dd><a class="el" href="classhx3d_1_1graphics_1_1_texture.html" title="2D/3D texture management. ">Texture</a> (Ptr) </dd></dl>
+
+<p>Definition at line <a class="el" href="sprite_8cpp_source.html#l00074">74</a> of file <a class="el" href="sprite_8cpp_source.html">sprite.cpp</a>.</p>
 
 </div>
 </div>
@@ -306,16 +265,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classhx3d_1_1graphics_1_1_sprite_a67153564d5a32fd45bfea0956087cebd_cgraph.png" border="0" usemap="#classhx3d_1_1graphics_1_1_sprite_a67153564d5a32fd45bfea0956087cebd_cgraph" alt=""/></div>
-<map name="classhx3d_1_1graphics_1_1_sprite_a67153564d5a32fd45bfea0956087cebd_cgraph" id="classhx3d_1_1graphics_1_1_sprite_a67153564d5a32fd45bfea0956087cebd_cgraph">
-<area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1geom_1_1_sprite_geometry.html#a74c844ad9ccda1ce38956688b06a49ec" title="Prepare the sprite for simple texture mode. " alt="" coords="203,5,453,47"/>
-<area shape="rect" id="node3" href="classhx3d_1_1graphics_1_1geom_1_1_base_geometry.html#aa94b3c1c6d5aedce0f48262232e99c94" title="Set an attribute with values. " alt="" coords="501,5,693,47"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="sprite_8cpp_source.html#l00036">36</a> of file <a class="el" href="sprite_8cpp_source.html">sprite.cpp</a>.</p>
 
 </div>
 </div>
@@ -341,18 +291,7 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classhx3d_1_1graphics_1_1_sprite_a94ce86b8ccb80568e5e153e7e9e95664_cgraph.png" border="0" usemap="#classhx3d_1_1graphics_1_1_sprite_a94ce86b8ccb80568e5e153e7e9e95664_cgraph" alt=""/></div>
-<map name="classhx3d_1_1graphics_1_1_sprite_a94ce86b8ccb80568e5e153e7e9e95664_cgraph" id="classhx3d_1_1graphics_1_1_sprite_a94ce86b8ccb80568e5e153e7e9e95664_cgraph">
-<area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1_framebuffer.html#a2a9e107f68cf01e7027f78cdcb1f1b81" title="Get the framebuffer color buffer. " alt="" coords="249,5,434,47"/>
-<area shape="rect" id="node4" href="classhx3d_1_1graphics_1_1geom_1_1_sprite_geometry.html#aae85789c16b817dc20d6380311164ded" title="Prepare the sprite for render&#45;to&#45;texture mode. " alt="" coords="203,71,480,112"/>
-<area shape="rect" id="node3" href="namespacehx3d.html#afc522941dc9d3d90bfc0765b6a52a6ae" title="Format a string using printf notation. " alt="" coords="577,13,671,39"/>
-<area shape="rect" id="node5" href="classhx3d_1_1graphics_1_1geom_1_1_base_geometry.html#aa94b3c1c6d5aedce0f48262232e99c94" title="Set an attribute with values. " alt="" coords="528,71,720,112"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="sprite_8cpp_source.html#l00049">49</a> of file <a class="el" href="sprite_8cpp_source.html">sprite.cpp</a>.</p>
 
 </div>
 </div>
@@ -378,27 +317,13 @@ Here is the call graph for this function:</div>
   </dd>
 </dl>
 
-<p><div class="dynheader">
-Here is the call graph for this function:</div>
-<div class="dyncontent">
-<div class="center"><img src="classhx3d_1_1graphics_1_1_sprite_aa9c3dfd5500d76e9e602f9d7fced6c68_cgraph.png" border="0" usemap="#classhx3d_1_1graphics_1_1_sprite_aa9c3dfd5500d76e9e602f9d7fced6c68_cgraph" alt=""/></div>
-<map name="classhx3d_1_1graphics_1_1_sprite_aa9c3dfd5500d76e9e602f9d7fced6c68_cgraph" id="classhx3d_1_1graphics_1_1_sprite_aa9c3dfd5500d76e9e602f9d7fced6c68_cgraph">
-<area shape="rect" id="node2" href="classhx3d_1_1graphics_1_1_texture_region.html#a4719d9a5cc608347bff023cb07feaba4" title="Get the texture. " alt="" coords="469,5,669,47"/>
-<area shape="rect" id="node3" href="classhx3d_1_1graphics_1_1_texture_region.html#a47e74e6d427667404346c3f3f992ae5e" title="Get the right coordinate. " alt="" coords="469,71,669,112"/>
-<area shape="rect" id="node4" href="classhx3d_1_1graphics_1_1_texture_region.html#a827be42effd83528fe0954a19bf4ef8f" title="Get the left coordinate. " alt="" coords="469,201,669,243"/>
-<area shape="rect" id="node5" href="classhx3d_1_1graphics_1_1_texture_region.html#a827954f7b80488e40d2088f9b08c2818" title="Get the top coordinate. " alt="" coords="469,267,669,308"/>
-<area shape="rect" id="node6" href="classhx3d_1_1graphics_1_1_texture_region.html#a023c8b1a93c91479e326912dc96ba3de" title="Get the bottom coordinate. " alt="" coords="469,332,669,373"/>
-<area shape="rect" id="node7" href="classhx3d_1_1graphics_1_1geom_1_1_sprite_geometry.html#acae55469f53bd4e8523539e2b26092e1" title="Set the geometry for a texture region. " alt="" coords="203,143,421,184"/>
-<area shape="rect" id="node8" href="classhx3d_1_1graphics_1_1geom_1_1_base_geometry.html#aa94b3c1c6d5aedce0f48262232e99c94" title="Set an attribute with values. " alt="" coords="473,136,665,177"/>
-</map>
-</div>
-</p>
+<p>Definition at line <a class="el" href="sprite_8cpp_source.html#l00062">62</a> of file <a class="el" href="sprite_8cpp_source.html">sprite.cpp</a>.</p>
 
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>engine/include/hx3d/graphics/<a class="el" href="sprite_8hpp_source.html">sprite.hpp</a></li>
-<li>engine/src/graphics/sprite.cpp</li>
+<li>engine/src/graphics/<a class="el" href="sprite_8cpp_source.html">sprite.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

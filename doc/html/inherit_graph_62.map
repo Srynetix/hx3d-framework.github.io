@@ -1,3 +1,4 @@
 <map id="Graphical Class Hierarchy" name="Graphical Class Hierarchy">
-<area shape="rect" id="node1" href="$classhx3d_1_1window_1_1_application_config.html" title="Application configuration. " alt="" coords="5,5,180,47"/>
+<area shape="rect" id="node1" href="$classhx3d_1_1window_1_1_application.html" title="Application management. " alt="" coords="5,5,180,32"/>
+<area shape="rect" id="node2" href="$classhx3d_1_1window_1_1_s_d_l2_application.html" title="SDL2 application implementation. " alt="" coords="228,5,435,32"/>
 </map>

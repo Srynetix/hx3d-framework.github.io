@@ -1,8 +1,9 @@
 var searchData=
 [
   ['randfloat',['randfloat',['../namespacehx3d_1_1math.html#a9fa9211313c2cf249a748fd6e3ea3924',1,'hx3d::math']]],
-  ['random',['random',['../namespacehx3d_1_1math.html#adfd5e783ffecedf64e93b6c68b1c6589',1,'hx3d::math']]],
+  ['random',['random',['../classhx3d_1_1math_1_1_weighted_random.html#a4ccf2e94356494606aaaeed3f77ade62',1,'hx3d::math::WeightedRandom::random()'],['../namespacehx3d_1_1math.html#adfd5e783ffecedf64e93b6c68b1c6589',1,'hx3d::math::random()']]],
   ['realsize',['realSize',['../classhx3d_1_1graphics_1_1_transform.html#a43c41de3aa9d425feda544159cbf8f9b',1,'hx3d::graphics::Transform']]],
+  ['reduce',['reduce',['../namespacehx3d_1_1algo.html#a2fe55987fbe38efb0769c882f6cefff0',1,'hx3d::algo::reduce(Container &amp;container, Type init)'],['../namespacehx3d_1_1algo.html#a7bf4a4ed83e3cc697f8f279fb4810a67',1,'hx3d::algo::reduce(Container &amp;container, Type init, Operation operation)']]],
   ['registercomponentadded',['registerComponentAdded',['../classhx3d_1_1ecs_1_1_engine.html#a2640f9a1dd69693e3c8417891c9f57f8',1,'hx3d::ecs::Engine']]],
   ['registercomponentremoved',['registerComponentRemoved',['../classhx3d_1_1ecs_1_1_engine.html#aba31d6c634ba875317f9624c35247a22',1,'hx3d::ecs::Engine']]],
   ['registereffect',['registerEffect',['../classhx3d_1_1audio_1_1_audio_device.html#a3f86f048808bb7279d14f01b8319ea22',1,'hx3d::audio::AudioDevice']]],

@@ -1,3 +1,5 @@
 <map id="hx3d::math::flip_coin" name="hx3d::math::flip_coin">
-<area shape="rect" id="node2" href="$namespacehx3d_1_1math.html#adfd5e783ffecedf64e93b6c68b1c6589" title="Generate a random integer between min and max. " alt="" coords="196,5,335,32"/>
+<area shape="rect" id="node2" href="$classhx3d_1_1math_1_1_weighted_random.html#a4ccf2e94356494606aaaeed3f77ade62" title="Choose a random number and execute the callback. " alt="" coords="196,23,395,65"/>
+<area shape="rect" id="node3" href="$namespacehx3d_1_1math.html#adfd5e783ffecedf64e93b6c68b1c6589" title="Generate a random integer between min and max. " alt="" coords="443,5,581,32"/>
+<area shape="rect" id="node4" href="$namespacehx3d_1_1algo.html#a2fe55987fbe38efb0769c882f6cefff0" title="Apply a simple reduce. " alt="" coords="447,56,577,83"/>
 </map>

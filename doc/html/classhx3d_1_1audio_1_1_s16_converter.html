@@ -101,22 +101,6 @@ var searchBox = new SearchBox("searchBox", "search",false,'Search');
  <a href="classhx3d_1_1audio_1_1_s16_converter.html#details">More...</a></p>
 
 <p><code>#include &lt;<a class="el" href="s16__converter_8hpp_source.html">s16_converter.hpp</a>&gt;</code></p>
-<div class="dynheader">
-Inheritance diagram for hx3d::audio::S16Converter:</div>
-<div class="dyncontent">
-<div class="center"><img src="classhx3d_1_1audio_1_1_s16_converter__inherit__graph.png" border="0" usemap="#hx3d_1_1audio_1_1_s16_converter_inherit__map" alt="Inheritance graph"/></div>
-<map name="hx3d_1_1audio_1_1_s16_converter_inherit__map" id="hx3d_1_1audio_1_1_s16_converter_inherit__map">
-<area shape="rect" id="node2" href="classhx3d_1_1audio_1_1_effect.html" title="Audio effect manipulation. " alt="" coords="28,5,160,32"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
-<div class="dynheader">
-Collaboration diagram for hx3d::audio::S16Converter:</div>
-<div class="dyncontent">
-<div class="center"><img src="classhx3d_1_1audio_1_1_s16_converter__coll__graph.png" border="0" usemap="#hx3d_1_1audio_1_1_s16_converter_coll__map" alt="Collaboration graph"/></div>
-<map name="hx3d_1_1audio_1_1_s16_converter_coll__map" id="hx3d_1_1audio_1_1_s16_converter_coll__map">
-<area shape="rect" id="node2" href="classhx3d_1_1audio_1_1_effect.html" title="Audio effect manipulation. " alt="" coords="28,5,160,32"/>
-</map>
-<center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -166,6 +150,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Convert an audio stream to the signed short format. </p>
+<p><em>Example code</em> </p><div class="fragment"><div class="line"><span class="comment">// Inside a create function...</span></div><div class="line"></div><div class="line"><span class="comment">// Converter creation</span></div><div class="line">audio::S16Converter converter;</div><div class="line"></div><div class="line"><span class="comment">// Assign the converter as an effect over the main post channel</span></div><div class="line"><a class="code" href="classhx3d_1_1_core.html#a3d1c268b9440e73d7844c15dce40c4f4">Core::Audio</a>()-&gt;<a class="code" href="classhx3d_1_1audio_1_1_audio_device.html#a3f86f048808bb7279d14f01b8319ea22">registerEffect</a>(<a class="code" href="classhx3d_1_1audio_1_1_audio_device.html#adece65232d878525aae8e49226a9c8b7">AudioDevice::PostChannel</a>, converter);</div><div class="line"></div><div class="line">[...]</div><div class="line"></div><div class="line"><span class="comment">// Inside an update function...</span></div><div class="line"></div><div class="line"><span class="comment">// If the converter has finished to convert</span></div><div class="line"><span class="keywordflow">if</span> (converter.hasProcessed()) {</div><div class="line"></div><div class="line">  <span class="comment">// Get the signed short stream and do whatever you want !</span></div><div class="line">  <span class="keywordtype">short</span>* stream = converter.getS16Stream();</div><div class="line">}</div></div><!-- fragment --> 
+<p>Definition at line <a class="el" href="s16__converter_8hpp_source.html#l00054">54</a> of file <a class="el" href="s16__converter_8hpp_source.html">s16_converter.hpp</a>.</p>
 </div><h2 class="groupheader">Member Function Documentation</h2>
 <a class="anchor" id="a8e83af1b5a255c8f9ddd56b543c805ce"></a>
 <div class="memitem">
@@ -182,6 +168,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 
 <p>Get the stream in signed short format. </p>
 <dl class="section return"><dt>Returns</dt><dd>Signed short stream </dd></dl>
+
+<p>Definition at line <a class="el" href="s16__converter_8cpp_source.html#l00054">54</a> of file <a class="el" href="s16__converter_8cpp_source.html">s16_converter.cpp</a>.</p>
 
 </div>
 </div>
@@ -217,6 +205,8 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 </dl>
 
 <p>Reimplemented from <a class="el" href="classhx3d_1_1audio_1_1_effect.html#a99721f77f12030ff131e0f702bd032e3">hx3d::audio::Effect</a>.</p>
+
+<p>Definition at line <a class="el" href="s16__converter_8cpp_source.html#l00051">51</a> of file <a class="el" href="s16__converter_8cpp_source.html">s16_converter.cpp</a>.</p>
 
 </div>
 </div>
@@ -271,11 +261,13 @@ int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class
 
 <p>Reimplemented from <a class="el" href="classhx3d_1_1audio_1_1_effect.html#a5685734a8b498f9bc0956a00da2c3106">hx3d::audio::Effect</a>.</p>
 
+<p>Definition at line <a class="el" href="s16__converter_8cpp_source.html#l00029">29</a> of file <a class="el" href="s16__converter_8cpp_source.html">s16_converter.cpp</a>.</p>
+
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
 <li>engine/include/hx3d/audio/converters/<a class="el" href="s16__converter_8hpp_source.html">s16_converter.hpp</a></li>
-<li>engine/src/audio/converters/s16_converter.cpp</li>
+<li>engine/src/audio/converters/<a class="el" href="s16__converter_8cpp_source.html">s16_converter.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->
