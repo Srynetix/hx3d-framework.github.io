@@ -1,0 +1,561 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>docknv.utils package &mdash; docknv 4.0.0.alpha documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="docknv 4.0.0.alpha documentation" href="index.html"/>
+        <link rel="up" title="docknv package" href="docknv.html"/>
+        <link rel="prev" title="docknv.tests package" href="docknv.tests.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> docknv
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.0.0.alpha
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pages/01.intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/02.architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/02.architecture.html#project-structure">Project structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/03.environment.html">Environment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">docknv</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="docknv.html">docknv package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="docknv.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="docknv.shell.html">docknv.shell package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.tests.html">docknv.tests package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">docknv.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.command_handler">docknv.command_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.composefile_handler">docknv.composefile_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.docker_api_wrapper">docknv.docker_api_wrapper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.docker_wrapper">docknv.docker_wrapper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.dockerfile_packer">docknv.dockerfile_packer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.environment_handler">docknv.environment_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.image_handler">docknv.image_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.lifecycle_handler">docknv.lifecycle_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.logger">docknv.logger module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.network_handler">docknv.network_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.project_handler">docknv.project_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.scaffolder">docknv.scaffolder module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.schema_handler">docknv.schema_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.session_handler">docknv.session_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.template_renderer">docknv.template_renderer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.user_handler">docknv.user_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.version">docknv.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.volume_handler">docknv.volume_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">docknv</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">docknv</a> &raquo;</li>
+        
+          <li><a href="docknv.html">docknv package</a> &raquo;</li>
+        
+      <li>docknv.utils package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/docknv.utils.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="docknv-utils-package">
+<h1>docknv.utils package<a class="headerlink" href="#docknv-utils-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-docknv.utils.diff_system">
+<span id="docknv-utils-diff-system-module"></span><h2>docknv.utils.diff_system module<a class="headerlink" href="#module-docknv.utils.diff_system" title="Permalink to this headline">¶</a></h2>
+<p>Diff system.</p>
+<dl class="function">
+<dt id="docknv.utils.diff_system.concat_diffs">
+<code class="descclassname">docknv.utils.diff_system.</code><code class="descname">concat_diffs</code><span class="sig-paren">(</span><em>old_time_data</em>, <em>new_time_data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/diff_system.html#concat_diffs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.diff_system.concat_diffs" title="Permalink to this definition">¶</a></dt>
+<dd><p>Concat diffs.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>old_time_data</strong> – Old time data (dict)</li>
+<li><strong>new_time_data</strong> – New time data (dict)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Time diff concat (dict)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.utils.diff_system.diff_modification_time">
+<code class="descclassname">docknv.utils.diff_system.</code><code class="descname">diff_modification_time</code><span class="sig-paren">(</span><em>old_time_data</em>, <em>new_time_data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/diff_system.html#diff_modification_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.diff_system.diff_modification_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check diff between two time datas.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>old_time_data</strong> – Old time data (dict)</li>
+<li><strong>new_time_data</strong> – New time data (dict)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Time diff dict (dict)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.utils.diff_system.get_files_last_modification_time">
+<code class="descclassname">docknv.utils.diff_system.</code><code class="descname">get_files_last_modification_time</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/diff_system.html#get_files_last_modification_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.diff_system.get_files_last_modification_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>For each file in path, recursively, get its last modification time as a timestamp.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> – Path (str)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Time dict (dict)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.utils.diff_system.read_last_modification_time">
+<code class="descclassname">docknv.utils.diff_system.</code><code class="descname">read_last_modification_time</code><span class="sig-paren">(</span><em>stream</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/diff_system.html#read_last_modification_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.diff_system.read_last_modification_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read last modification time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>stream</strong> – Stream (io)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Time dict (dict)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.utils.diff_system.save_last_modification_time">
+<code class="descclassname">docknv.utils.diff_system.</code><code class="descname">save_last_modification_time</code><span class="sig-paren">(</span><em>stream</em>, <em>results</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/diff_system.html#save_last_modification_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.diff_system.save_last_modification_time" title="Permalink to this definition">¶</a></dt>
+<dd><p>Save last modification time.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stream</strong> – Stream (io)</li>
+<li><strong>results</strong> – Time dict (dict)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-docknv.utils.ioutils">
+<span id="docknv-utils-ioutils-module"></span><h2>docknv.utils.ioutils module<a class="headerlink" href="#module-docknv.utils.ioutils" title="Permalink to this headline">¶</a></h2>
+<p>IO utils.</p>
+<dl class="function">
+<dt id="docknv.utils.ioutils.io_open">
+<code class="descclassname">docknv.utils.ioutils.</code><code class="descname">io_open</code><span class="sig-paren">(</span><em>filename</em>, <em>mode='r'</em>, <em>encoding='utf-8'</em>, <em>newline=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/ioutils.html#io_open"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.ioutils.io_open" title="Permalink to this definition">¶</a></dt>
+<dd><p>Universal open function for Python 2/3.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>filename</strong> – Filename (str)</li>
+<li><strong>mode</strong> – Mode (str) (default: ‘r’)</li>
+<li><strong>encoding</strong> – Encoding (str) (default: utf-8)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Context manager</strong></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-docknv.utils.paths">
+<span id="docknv-utils-paths-module"></span><h2>docknv.utils.paths module<a class="headerlink" href="#module-docknv.utils.paths" title="Permalink to this headline">¶</a></h2>
+<p>Path utilities.</p>
+<dl class="function">
+<dt id="docknv.utils.paths.create_path_or_replace">
+<code class="descclassname">docknv.utils.paths.</code><code class="descname">create_path_or_replace</code><span class="sig-paren">(</span><em>path_to_create</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/paths.html#create_path_or_replace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.paths.create_path_or_replace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create or replace path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path_to_create</strong> – Path to create (str)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.utils.paths.create_path_tree">
+<code class="descclassname">docknv.utils.paths.</code><code class="descname">create_path_tree</code><span class="sig-paren">(</span><em>path_to_create</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/paths.html#create_path_tree"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.paths.create_path_tree" title="Permalink to this definition">¶</a></dt>
+<dd><p>Create a path tree if folders does not exist.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path_to_create</strong> – Path to create (str)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-docknv.utils.prompt">
+<span id="docknv-utils-prompt-module"></span><h2>docknv.utils.prompt module<a class="headerlink" href="#module-docknv.utils.prompt" title="Permalink to this headline">¶</a></h2>
+<p>Prompt utilities.</p>
+<dl class="function">
+<dt id="docknv.utils.prompt.get_input">
+<code class="descclassname">docknv.utils.prompt.</code><code class="descname">get_input</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/prompt.html#get_input"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.prompt.get_input" title="Permalink to this definition">¶</a></dt>
+<dd><p>Return the user input.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">str</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.utils.prompt.prompt_yes_no">
+<code class="descclassname">docknv.utils.prompt.</code><code class="descname">prompt_yes_no</code><span class="sig-paren">(</span><em>message</em>, <em>force=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/prompt.html#prompt_yes_no"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.prompt.prompt_yes_no" title="Permalink to this definition">¶</a></dt>
+<dd><p>Prompt the user for a yes/no answer.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>message</strong> – Message to display (str)</li>
+<li><strong>force</strong> – Force choice to True (bool) (default: False)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Choice (bool)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-docknv.utils.serialization">
+<span id="docknv-utils-serialization-module"></span><h2>docknv.utils.serialization module<a class="headerlink" href="#module-docknv.utils.serialization" title="Permalink to this headline">¶</a></h2>
+<p>YAML utilities.</p>
+<dl class="function">
+<dt id="docknv.utils.serialization.yaml_merge">
+<code class="descclassname">docknv.utils.serialization.</code><code class="descname">yaml_merge</code><span class="sig-paren">(</span><em>contents</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/serialization.html#yaml_merge"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.serialization.yaml_merge" title="Permalink to this definition">¶</a></dt>
+<dd><p>Merge two YAML dict together.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>contents</strong> – Content (dict)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">YAML merge (dict)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.utils.serialization.yaml_ordered_dump">
+<code class="descclassname">docknv.utils.serialization.</code><code class="descname">yaml_ordered_dump</code><span class="sig-paren">(</span><em>data</em>, <em>stream=None</em>, <em>dumper_class=&lt;class 'yaml.dumper.Dumper'&gt;</em>, <em>**kwds</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/serialization.html#yaml_ordered_dump"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.serialization.yaml_ordered_dump" title="Permalink to this definition">¶</a></dt>
+<dd><p>Dump ordered YAML content.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stream</strong> – Stream (stream)</li>
+<li><strong>dumper_class</strong> – Dumper class (Dumper) (default: yaml.Dumper)</li>
+<li><strong>kwds</strong> – Keywords arguments</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.utils.serialization.yaml_ordered_load">
+<code class="descclassname">docknv.utils.serialization.</code><code class="descname">yaml_ordered_load</code><span class="sig-paren">(</span><em>stream</em>, <em>loader_class=&lt;class 'yaml.loader.Loader'&gt;</em>, <em>object_pairs_hook=&lt;class 'collections.OrderedDict'&gt;</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/serialization.html#yaml_ordered_load"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.serialization.yaml_ordered_load" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load ordered YAML content.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>stream</strong> – Stream (stream)</li>
+<li><strong>loader_class</strong> – Loader class (Loader) (default: yaml.Loader)</li>
+<li><strong>object_pairs_hook</strong> – Hook type (any) (default: OrderedDict)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-docknv.utils.words">
+<span id="docknv-utils-words-module"></span><h2>docknv.utils.words module<a class="headerlink" href="#module-docknv.utils.words" title="Permalink to this headline">¶</a></h2>
+<p>Words utilities.</p>
+<dl class="function">
+<dt id="docknv.utils.words.generate_config_name">
+<code class="descclassname">docknv.utils.words.</code><code class="descname">generate_config_name</code><span class="sig-paren">(</span><em>config_list</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/words.html#generate_config_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.words.generate_config_name" title="Permalink to this definition">¶</a></dt>
+<dd><p>Generate a unique config name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>config_list</strong> – Config list (iterable)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Config name (str)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.utils.words.get_random_word_from_dictionary">
+<code class="descclassname">docknv.utils.words.</code><code class="descname">get_random_word_from_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/words.html#get_random_word_from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.words.get_random_word_from_dictionary" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get a random word from a dictionary.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Random word (str)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-docknv.utils">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-docknv.utils" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="docknv.tests.html" class="btn btn-neutral" title="docknv.tests package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Denis BOURGE.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'4.0.0.alpha',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

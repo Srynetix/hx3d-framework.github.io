@@ -1,0 +1,331 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Architecture &mdash; docknv 4.0.0.alpha documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="docknv 4.0.0.alpha documentation" href="../index.html"/>
+        <link rel="next" title="Environment" href="03.environment.html"/>
+        <link rel="prev" title="Introduction" href="01.intro.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> docknv
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.0.0.alpha
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="01.intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#machine-layer">1. Machine layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#schema-layer">2. Schema layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-layer">3. Configuration layer</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#bundle-layer">4. Bundle layer</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#project-structure">Project structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03.environment.html">Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">docknv</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">docknv</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Architecture</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/pages/02.architecture.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="architecture">
+<h1>Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h1>
+<p>The docknv architecture is composed of four superposed layers.
+Each layer allows special commands and behaviors.</p>
+<blockquote>
+<div><ul class="simple">
+<li>Machine</li>
+<li>Schema</li>
+<li>Configuration</li>
+<li>Bundle</li>
+</ul>
+</div></blockquote>
+<div class="section" id="machine-layer">
+<h2>1. Machine layer<a class="headerlink" href="#machine-layer" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>machine</strong> layer can be considered as a <strong>service entry</strong> in a Docker Compose file.
+It contains <strong>one service, one image</strong>, and it can be linked to <strong>volumes</strong> and <strong>networks</strong>.</p>
+<p>You can define machines by inserting service entries in your <em>composefiles (Docker Compose YML files)</em>.</p>
+<p>Definition example:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">ipython</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">build</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">images/ipython</span>
+  <span class="l l-Scalar l-Scalar-Plain">ports</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">8888:8888</span>
+  <span class="l l-Scalar l-Scalar-Plain">volumes</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ipython_notebooks:/data</span>
+  <span class="l l-Scalar l-Scalar-Plain">networks</span><span class="p p-Indicator">:</span>
+    <span class="l l-Scalar l-Scalar-Plain">net</span><span class="p p-Indicator">:</span>
+</pre></div>
+</div>
+<p>From the command-line, with the <code class="docutils literal"><span class="pre">machine</span></code> command, you can directly manipulate one service: <em>start</em>, <em>stop</em>, <em>restart</em>, <em>execute a custom command</em>, <em>drop a shell</em>, <em>view logs</em>, <em>pushing and pulling a file</em>, <em>etc.</em></p>
+</div>
+<div class="section" id="schema-layer">
+<h2>2. Schema layer<a class="headerlink" href="#schema-layer" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>schema</strong> layer is composed of multiple machines together.
+It can actually be considered as a group of service entries in multiple Docker Compose files.
+So, in a schema, there are one or more services, images, volumes and networks.</p>
+<p>You can define schemas in the <em>config.yml</em> at your project root.</p>
+<p>Definition example:</p>
+<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">standard</span><span class="p p-Indicator">:</span>
+  <span class="l l-Scalar l-Scalar-Plain">services</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ipython</span>
+  <span class="l l-Scalar l-Scalar-Plain">volumes</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ipython_notebooks</span>
+  <span class="l l-Scalar l-Scalar-Plain">networks</span><span class="p p-Indicator">:</span>
+    <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">net</span>
+</pre></div>
+</div>
+<p>From the command-line, with the <code class="docutils literal"><span class="pre">schema</span></code> command, you can <em>list</em> available schemas.</p>
+</div>
+<div class="section" id="configuration-layer">
+<h2>3. Configuration layer<a class="headerlink" href="#configuration-layer" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>configuration</strong> layer is the link between three components: the <strong>schema</strong>, the <strong>environment</strong>, and the <strong>namespace</strong>.</p>
+<p>The environment contains a variable list, used in template files and injected in your services.
+You can see more about environments in the <strong>Environment</strong> section of the documentation.</p>
+<p>The namespace allow <em>configuration separation</em>: you can deploy two schemas in parallel, without conflicting by prefixing every service by a chosen namespace.</p>
+<p>To create a configuration, you have to execute the <code class="docutils literal"><span class="pre">docknv</span> <span class="pre">config</span> <span class="pre">create</span></code> command.</p>
+<p>From the command-line, with the <code class="docutils literal"><span class="pre">config</span></code> command, you can manipulate configurations: <em>start</em>, <em>stop</em>, <em>restart</em>, <em>view processes status</em>, <em>update</em>, <em>etc.</em></p>
+</div>
+<div class="section" id="bundle-layer">
+<h2>4. Bundle layer<a class="headerlink" href="#bundle-layer" title="Permalink to this headline">¶</a></h2>
+<p>The <strong>bundle</strong> layer is above of the <strong>configuration</strong> layer, a bundle manipulate multiple configurations.</p>
+<p>You do not create bundles, it is just an abstraction over multiple configurations, and this distinction is only relevant in the command-line.</p>
+<p>To manipulate <em>bundles</em>, you use the <code class="docutils literal"><span class="pre">bundle</span></code> command, followed by the configuration names you want to manipulate.</p>
+<p><strong>Example</strong>: starting two configurations, <em>base</em> and <em>app</em></p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span>docknv bundle start base app
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="project-structure">
+<h1>Project structure<a class="headerlink" href="#project-structure" title="Permalink to this headline">¶</a></h1>
+<p>To use <strong>docknv</strong>, you need to respect the following structure:</p>
+<ul class="simple">
+<li><strong>commands</strong>: The location of your custom docknv commands. <em>(optional)</em></li>
+<li><strong>composefiles</strong>: The location of your Docker Compose files.</li>
+<li><strong>data</strong>: Your project data:<ul>
+<li><strong>files</strong>: Static files and Jinja2 templates imported via volumes
+should be stored here, with one folder per container</li>
+<li><strong>standard</strong>: Here you can put private files to be imported</li>
+</ul>
+</li>
+<li><strong>envs</strong>: The location of your environment configuration files,
+ending with <code class="docutils literal"><span class="pre">.env.yml</span></code> (example for <em>debug</em>, the filename is
+<code class="docutils literal"><span class="pre">debug.env.yml</span></code>).</li>
+<li><strong>images</strong>: The location of your Docker images, one folder per
+container. You should always use the “building” way (instead of the
+direct fetching) when including new Docker images in your Compose
+files.</li>
+<li><strong>config.yml</strong>: The main Docknv configuration file for your project.</li>
+</ul>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="03.environment.html" class="btn btn-neutral float-right" title="Environment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="01.intro.html" class="btn btn-neutral" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Denis BOURGE.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'4.0.0.alpha',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

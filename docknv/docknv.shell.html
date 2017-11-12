@@ -1,0 +1,400 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>docknv.shell package &mdash; docknv 4.0.0.alpha documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="genindex.html"/>
+        <link rel="search" title="Search" href="search.html"/>
+    <link rel="top" title="docknv 4.0.0.alpha documentation" href="index.html"/>
+        <link rel="up" title="docknv package" href="docknv.html"/>
+        <link rel="next" title="docknv.shell.handlers package" href="docknv.shell.handlers.html"/>
+        <link rel="prev" title="docknv package" href="docknv.html"/> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> docknv
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.0.0.alpha
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pages/01.intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/02.architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/02.architecture.html#project-structure">Project structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/03.environment.html">Environment</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">docknv</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="docknv.html">docknv package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="docknv.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4 current"><a class="current reference internal" href="#">docknv.shell package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.tests.html">docknv.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.utils.html">docknv.utils package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.command_handler">docknv.command_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.composefile_handler">docknv.composefile_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.docker_api_wrapper">docknv.docker_api_wrapper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.docker_wrapper">docknv.docker_wrapper module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.dockerfile_packer">docknv.dockerfile_packer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.environment_handler">docknv.environment_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.image_handler">docknv.image_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.lifecycle_handler">docknv.lifecycle_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.logger">docknv.logger module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.network_handler">docknv.network_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.project_handler">docknv.project_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.scaffolder">docknv.scaffolder module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.schema_handler">docknv.schema_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.session_handler">docknv.session_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.template_renderer">docknv.template_renderer module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.user_handler">docknv.user_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.version">docknv.version module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.volume_handler">docknv.volume_handler module</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">docknv</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">docknv</a> &raquo;</li>
+        
+          <li><a href="docknv.html">docknv package</a> &raquo;</li>
+        
+      <li>docknv.shell package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/docknv.shell.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="docknv-shell-package">
+<h1>docknv.shell package<a class="headerlink" href="#docknv-shell-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="docknv.shell.handlers.html">docknv.shell.handlers package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.handlers.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.bundle">docknv.shell.handlers.bundle module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.config">docknv.shell.handlers.config module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.env">docknv.shell.handlers.env module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.machine">docknv.shell.handlers.machine module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.network">docknv.shell.handlers.network module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.registry">docknv.shell.handlers.registry module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.scaffold">docknv.shell.handlers.scaffold module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.schema">docknv.shell.handlers.schema module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.swarm">docknv.shell.handlers.swarm module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.user">docknv.shell.handlers.user module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.volume">docknv.shell.handlers.volume module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers">Module contents</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-docknv.shell.common">
+<span id="docknv-shell-common-module"></span><h2>docknv.shell.common module<a class="headerlink" href="#module-docknv.shell.common" title="Permalink to this headline">¶</a></h2>
+<p>Common handler code.</p>
+<dl class="function">
+<dt id="docknv.shell.common.exec_handler">
+<code class="descclassname">docknv.shell.common.</code><code class="descname">exec_handler</code><span class="sig-paren">(</span><em>cmd_name</em>, <em>args</em>, <em>handlers</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/shell/common.html#exec_handler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.shell.common.exec_handler" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute handler.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>cmd_name</strong> – Command name (str)</li>
+<li><strong>args</strong> – Arguments (iterable)</li>
+<li><strong>handlers</strong> – Handlers (dict)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Status</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-docknv.shell.main">
+<span id="docknv-shell-main-module"></span><h2>docknv.shell.main module<a class="headerlink" href="#module-docknv.shell.main" title="Permalink to this headline">¶</a></h2>
+<p>Handler main functions.</p>
+<dl class="class">
+<dt id="docknv.shell.main.Shell">
+<em class="property">class </em><code class="descclassname">docknv.shell.main.</code><code class="descname">Shell</code><a class="reference internal" href="_modules/docknv/shell/main.html#Shell"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.shell.main.Shell" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
+<p>Shell entry-point.</p>
+<dl class="method">
+<dt id="docknv.shell.main.Shell.init_parsers">
+<code class="descname">init_parsers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/shell/main.html#Shell.init_parsers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.shell.main.Shell.init_parsers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Initialize each parsers.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="docknv.shell.main.Shell.parse_args">
+<code class="descname">parse_args</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/shell/main.html#Shell.parse_args"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.shell.main.Shell.parse_args" title="Permalink to this definition">¶</a></dt>
+<dd><p>Parse command-line args.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> – Arguments (iterable)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="docknv.shell.main.Shell.register_post_parser">
+<code class="descname">register_post_parser</code><span class="sig-paren">(</span><em>fct</em>, <em>cfg</em>, <em>ctx</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/shell/main.html#Shell.register_post_parser"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.shell.main.Shell.register_post_parser" title="Permalink to this definition">¶</a></dt>
+<dd><p>Register a new parser function.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>fct</strong> – Parser function (fn)</li>
+<li><strong>cfg</strong> – Configuration (dict)</li>
+<li><strong>ctx</strong> – Context (dict)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="docknv.shell.main.Shell.run">
+<code class="descname">run</code><span class="sig-paren">(</span><em>args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/shell/main.html#Shell.run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.shell.main.Shell.run" title="Permalink to this definition">¶</a></dt>
+<dd><p>Start and read command-line arguments.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> – Arguments</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.shell.main.docknv_entry_point">
+<code class="descclassname">docknv.shell.main.</code><code class="descname">docknv_entry_point</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/shell/main.html#docknv_entry_point"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.shell.main.docknv_entry_point" title="Permalink to this definition">¶</a></dt>
+<dd><p>Entry point for docknv.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-docknv.shell">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-docknv.shell" title="Permalink to this headline">¶</a></h2>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="docknv.shell.handlers.html" class="btn btn-neutral float-right" title="docknv.shell.handlers package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="docknv.html" class="btn btn-neutral" title="docknv package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Denis BOURGE.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'./',
+            VERSION:'4.0.0.alpha',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="_static/jquery.js"></script>
+      <script type="text/javascript" src="_static/underscore.js"></script>
+      <script type="text/javascript" src="_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

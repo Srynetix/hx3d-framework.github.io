@@ -1,0 +1,198 @@
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>docknv - Docker with environments &#8212; docknv 3.7 documentation</title>
+    <link rel="stylesheet" href="_static/alabaster.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '3.7',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true,
+        SOURCELINK_SUFFIX: '.txt'
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API Documentation" href="modules.html" />
+    <link rel="prev" title="Welcome to docknv’s documentation!" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head>
+  <body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="docknv-docker-with-environments">
+<h1>docknv - Docker with environments<a class="headerlink" href="#docknv-docker-with-environments" title="Permalink to this headline">¶</a></h1>
+<blockquote>
+<div>One entry-point, multiple deployments</div></blockquote>
+<div class="section" id="introduction">
+<h2>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h2>
+<p><strong>docknv</strong> (for <em>Docker with environments</em>) is a wrapper around
+<em>Docker</em>, <em>Docker Compose</em> and <em>Docker Swarm</em>.</p>
+<p>Here are the features:</p>
+<ul class="simple">
+<li><strong>Environment configuration management</strong>: you can define environment
+configuration files, to easily set and use values.</li>
+<li><strong>Templating system</strong>: you can insert your defined environment values
+in templates all over your volumes files, using the powerful Jinja2
+template engine.</li>
+<li><strong>Mixing Compose files</strong>: you can easily merge classic Docker Compose
+templates together.</li>
+<li><strong>Use schemas and namespaces to isolate</strong>: you can isolate portions
+of infrastructure to build and run services independently.</li>
+<li><strong>Concurrent executions</strong>: on a single host, and from the same entry
+point, you can deploy multiple schemas in different namespaces.</li>
+<li><strong>Custom commands</strong>: you can extend the docknv command system to
+include your own custom commands and execute any action within
+docknv.</li>
+</ul>
+</div>
+<div class="section" id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Quick install:</p>
+<div class="highlight-bash" id="quick-install"><div class="highlight"><pre><span></span>git clone https://bitbucket.org/sharingcloud/docknv.git
+pip install --upgrade -e ./docknv <span class="c1"># or sudo</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="about-docknv">
+<h2>About docknv<a class="headerlink" href="#about-docknv" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="project-structure">
+<h3>Project structure<a class="headerlink" href="#project-structure" title="Permalink to this headline">¶</a></h3>
+<p>To use <strong>Docknv</strong>, you need to respect the following structure, all
+contained in a root folder:</p>
+<ul class="simple">
+<li><strong>commands</strong>: The location of your custom docknv commands. <em>(optional)</em></li>
+<li><strong>composefiles</strong>: The location of your Docker Compose files.</li>
+<li><strong>data</strong>: Your project data, organized in three different folders:<ul>
+<li><strong>files</strong>: Static files and Jinja2 templates imported via volumes
+should be stored here, with one folder per container</li>
+<li><strong>standard</strong>: Here you can put private files to be imported</li>
+</ul>
+</li>
+<li><strong>envs</strong>: The location of your environment configuration files,
+ending with <code class="docutils literal"><span class="pre">.env.py</span></code> (example for <em>debug</em>, the filename is
+<code class="docutils literal"><span class="pre">debug.env.py</span></code>). By default, there is always a <code class="docutils literal"><span class="pre">default.env.py</span></code>.</li>
+<li><strong>images</strong>: The location of your Docker images, one folder per
+container. You should always use the “building” way (instead of the
+direct fetching) when including new Docker images in your Compose
+files.</li>
+<li><strong>config.yml</strong>: The main Docknv configuration file for your project.</li>
+</ul>
+</div>
+<div class="section" id="environment-configuration-management">
+<h3>Environment configuration management<a class="headerlink" href="#environment-configuration-management" title="Permalink to this headline">¶</a></h3>
+<p>TODO</p>
+</div>
+<div class="section" id="templating-system">
+<h3>Templating system<a class="headerlink" href="#templating-system" title="Permalink to this headline">¶</a></h3>
+<p>TODO</p>
+</div>
+<div class="section" id="mixing-compose-files">
+<h3>Mixing Compose files<a class="headerlink" href="#mixing-compose-files" title="Permalink to this headline">¶</a></h3>
+<p>TODO</p>
+</div>
+<div class="section" id="use-schemas-and-namespaces-to-isolate">
+<h3>Use schemas and namespaces to isolate<a class="headerlink" href="#use-schemas-and-namespaces-to-isolate" title="Permalink to this headline">¶</a></h3>
+<p>TODO</p>
+</div>
+</div>
+<div class="section" id="using-docknv">
+<h2>Using docknv<a class="headerlink" href="#using-docknv" title="Permalink to this headline">¶</a></h2>
+<p>You can use docknv on a project from scratch by letting it automatically
+create your project tree, or use it on an already <em>docknv-configured</em>
+project.</p>
+<div class="section" id="create-a-new-project">
+<h3>Create a new project<a class="headerlink" href="#create-a-new-project" title="Permalink to this headline">¶</a></h3>
+<p>You can use the <code class="docutils literal"><span class="pre">scaffold</span></code> subparser to create a new project.</p>
+</div>
+</div>
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">docknv</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">docknv - Docker with environments</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#introduction">Introduction</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#about-docknv">About docknv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-docknv">Using docknv</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="modules.html">API Documentation</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Welcome to docknv’s documentation!</a></li>
+      <li>Next: <a href="modules.html" title="next chapter">API Documentation</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <div><input type="text" name="q" /></div>
+      <div><input type="submit" value="Go" /></div>
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;2017, Denis BOURGE.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 1.6.5</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.10</a>
+      
+      |
+      <a href="_sources/intro.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
