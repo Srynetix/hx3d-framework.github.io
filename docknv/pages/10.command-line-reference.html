@@ -35,7 +35,9 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="docknv 4.0.0.alpha documentation" href="../index.html"/> 
+    <link rel="top" title="docknv 4.0.0.alpha documentation" href="../index.html"/>
+        <link rel="next" title="docknv" href="../modules.html"/>
+        <link rel="prev" title="Environment" href="03.environment.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -89,11 +91,84 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="01.intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02.architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02.architecture.html#project-structure">Project structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03.environment.html">Environment</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Command-line reference</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#machine-commands">Machine commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#machine-start">machine start</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#machine-stop">machine stop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#machine-restart">machine restart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#machine-run">machine run</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#machine-exec">machine exec</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#machine-shell">machine shell</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#machine-logs">machine logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#machine-push">machine push</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#machine-pull">machine pull</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#machine-build">machine build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#machine-freeze-experimental">machine freeze [EXPERIMENTAL]</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#configuration-commands">Configuration commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#config-status">config status</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-ls">config ls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-use">config use</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-start">config start</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-restart">config restart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-stop">config stop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-ps">config ps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-unset">config unset</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-build">config build</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-create">config create</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-update">config update</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-set-schema">config set-schema</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-set-env">config set-env</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#config-rm">config rm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#bundle-commands">Bundle commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#bundle-start">bundle start</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bundle-restart">bundle restart</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bundle-stop">bundle stop</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bundle-ps">bundle ps</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#bundle-build">bundle build</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#environment-commands">Environment commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#env-ls">env ls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#env-show">env show</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#env-use">env use</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#schema-commands">Schema commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#schema-ls">schema ls</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#volume-commands">Volume commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#volume-ls">volume ls</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#volume-rm">volume rm</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#user-commands">User commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#user-clean">user clean</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-rm-lock">user rm-lock</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#scaffold-commands">Scaffold commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#scaffold-project">scaffold project</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scaffold-image">scaffold image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#scaffold-env">scaffold env</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#registry-commands">Registry commands</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#registry-start">registry start</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#registry-stop">registry stop</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">docknv</a></li>
 </ul>
 
@@ -182,6 +257,7 @@
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Start the `test` machine in foreground</span>
 docknv machine start <span class="nb">test</span>
+
 <span class="c1"># Start the `test` machine in background</span>
 docknv machine start <span class="nb">test</span> -d <span class="c1"># or --daemon</span>
 </pre></div>
@@ -203,8 +279,10 @@ docknv machine stop <span class="nb">test</span>
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Restart the `test` machine in foreground</span>
 docknv machine restart <span class="nb">test</span>
+
 <span class="c1"># Restart the `test` machine in background</span>
 docknv machine restart <span class="nb">test</span> -d <span class="c1"># or --daemon</span>
+
 <span class="c1"># Force restart the `test` machine in background</span>
 docknv machine restart <span class="nb">test</span> -f -d <span class="c1"># or --force --daemon</span>
 </pre></div>
@@ -216,6 +294,7 @@ docknv machine restart <span class="nb">test</span> -f -d <span class="c1"># or 
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Run a Python HTTP server on machine `test`</span>
 docknv machine run <span class="nb">test</span> <span class="s2">&quot;python -m http.server&quot;</span>
+
 <span class="c1"># Execute a ping command in background on machine `test`</span>
 docknv machine run <span class="nb">test</span> -d <span class="s2">&quot;ping www.google.fr&quot;</span>
 </pre></div>
@@ -384,6 +463,15 @@ docknv machine <span class="nb">exec</span> <span class="nb">test</span> --no-tt
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="../modules.html" class="btn btn-neutral float-right" title="docknv" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="03.environment.html" class="btn btn-neutral" title="Environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
