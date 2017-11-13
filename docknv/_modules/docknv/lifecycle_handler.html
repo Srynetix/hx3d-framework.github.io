@@ -93,7 +93,6 @@
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../pages/01.intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../pages/02.architecture.html">Architecture</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../pages/02.architecture.html#project-structure">Project structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../pages/03.environment.html">Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../pages/10.command-line-reference.html">Command-line reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modules.html">docknv</a></li>
@@ -258,20 +257,19 @@
                 <span class="n">ec</span><span class="o">=</span><span class="n">Style</span><span class="o">.</span><span class="n">RESET_ALL</span>
             <span class="p">))</span></div>
 
-    <span class="c1"># exec_compose_pretty(project_path, [&quot;ps&quot;])</span>
 
-
-<div class="viewcode-block" id="lifecycle_schema_restart"><a class="viewcode-back" href="../../docknv.html#docknv.lifecycle_handler.lifecycle_schema_restart">[docs]</a><span class="k">def</span> <span class="nf">lifecycle_schema_restart</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="lifecycle_schema_restart"><a class="viewcode-back" href="../../docknv.html#docknv.lifecycle_handler.lifecycle_schema_restart">[docs]</a><span class="k">def</span> <span class="nf">lifecycle_schema_restart</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">foreground</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Restart a schema.</span>
 
 <span class="sd">    :param project_path:     Project path (str)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">force</span><span class="p">:</span>
-        <span class="n">exec_compose_pretty</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;restart&quot;</span><span class="p">])</span>
+        <span class="n">d_cmd</span> <span class="o">=</span> <span class="s2">&quot;-d&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">foreground</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
+        <span class="n">exec_compose_pretty</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;restart&quot;</span><span class="p">,</span> <span class="n">d_cmd</span><span class="p">])</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">lifecycle_schema_stop</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
-        <span class="n">lifecycle_schema_start</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span></div>
+        <span class="n">lifecycle_schema_start</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">foreground</span><span class="p">)</span></div>
 
 <span class="c1"># BUNDLE FUNCTIONS ##############</span>
 

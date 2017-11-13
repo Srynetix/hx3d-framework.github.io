@@ -94,7 +94,6 @@
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="01.intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02.architecture.html">Architecture</a></li>
-<li class="toctree-l1"><a class="reference internal" href="02.architecture.html#project-structure">Project structure</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03.environment.html">Environment</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Command-line reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#machine-commands">Machine commands</a><ul>
@@ -317,51 +316,173 @@ docknv machine <span class="nb">exec</span> <span class="nb">test</span> --no-tt
 </div>
 <div class="section" id="machine-shell">
 <h3>machine shell<a class="headerlink" href="#machine-shell" title="Permalink to this headline">¶</a></h3>
+<p>Run a shell on a <strong>running</strong> container. You can change the shell executable as a second parameter, and if needed you can <em>create</em> the container before running the shell (<em>-c/–create</em>).</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Run a shell (/bin/bash as default) on running machine `test`</span>
+docknv machine shell <span class="nb">test</span>
+
+<span class="c1"># Run a custom shell (/bin/zsh) on running machine `test`</span>
+docknv machine shell <span class="nb">test</span> /bin/zsh
+
+<span class="c1"># Create the container and run a shell on machine `test`</span>
+docknv machine shell <span class="nb">test</span> -c <span class="c1"># or --create</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="machine-logs">
 <h3>machine logs<a class="headerlink" href="#machine-logs" title="Permalink to this headline">¶</a></h3>
+<p>View the logs of a <strong>running</strong> container. You can show everything, or get the last lines (<em>–tail with count parameter</em>), or even follow the logs (<em>-f/–follow</em>).</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Get complete logs from running machine `test`</span>
+docknv machine logs <span class="nb">test</span>
+
+<span class="c1"># Get 10 last lines of logs from running machine `test`</span>
+docknv machine logs <span class="nb">test</span> --tail <span class="m">10</span>
+
+<span class="c1"># Follow the logs from running machine `test`</span>
+docknv machine logs <span class="nb">test</span> -f <span class="c1"># or --follow</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="machine-push">
 <h3>machine push<a class="headerlink" href="#machine-push" title="Permalink to this headline">¶</a></h3>
+<p>Push a file from the host to a <strong>running</strong> container. First, you specify the host path, then the container path.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Push a sample.txt file to a running machine `test`</span>
+docknv machine push <span class="nb">test</span> ./sample.txt /tmp/sample.txt
+</pre></div>
+</div>
 </div>
 <div class="section" id="machine-pull">
 <h3>machine pull<a class="headerlink" href="#machine-pull" title="Permalink to this headline">¶</a></h3>
+<p>Pull a file from a <strong>running</strong> container to the host. First, you specify the container path then the host path.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Pull a sample.txt file from a running machine `test`</span>
+docknv machine pull <span class="nb">test</span> /tmp/sample.txt ./sample.txt
+</pre></div>
+</div>
 </div>
 <div class="section" id="machine-build">
 <h3>machine build<a class="headerlink" href="#machine-build" title="Permalink to this headline">¶</a></h3>
+<p>Build a machine image. If you have edited the Dockerfile of your image, run this command to rebuild.</p>
+<p>The image will automatically be pushed to the local registry, but you can prevent this (<em>with -d/–do-not-push</em>). You can also ignore the cache and rebuild everything (<em>-n/–no-cache</em>).</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Update the build of the `test` machine</span>
+docknv machine build <span class="nb">test</span>
+
+<span class="c1"># Update the build of the `test` machine without pushing it to the local registry</span>
+docknv machine build <span class="nb">test</span> --do-not-push
+
+<span class="c1"># Rebuild the `test` machine without cache</span>
+docknv machine build <span class="nb">test</span> --no-cache
+</pre></div>
+</div>
 </div>
 <div class="section" id="machine-freeze-experimental">
 <h3>machine freeze [EXPERIMENTAL]<a class="headerlink" href="#machine-freeze-experimental" title="Permalink to this headline">¶</a></h3>
+<p>Freeze a machine, by packing linked static volumes inside of the Dockerfile.
+This allows for quick development cycle and ready-to-use Dockerfile for Swarm deployment (for example).</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Freeze the `test` machine</span>
+docknv machine freeze <span class="nb">test</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="configuration-commands">
 <h2>Configuration commands<a class="headerlink" href="#configuration-commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="config-status">
 <h3>config status<a class="headerlink" href="#config-status" title="Permalink to this headline">¶</a></h3>
+<p>Show the current configuration for the project.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Show the current configuration name</span>
+docknv config status
+</pre></div>
+</div>
 </div>
 <div class="section" id="config-ls">
 <h3>config ls<a class="headerlink" href="#config-ls" title="Permalink to this headline">¶</a></h3>
+<p>List the available configurations for the project.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># List the available configurations</span>
+docknv config ls
+</pre></div>
+</div>
 </div>
 <div class="section" id="config-use">
 <h3>config use<a class="headerlink" href="#config-use" title="Permalink to this headline">¶</a></h3>
+<p>Set a configuration as active for the project.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Define the `standard` configuration as current</span>
+docknv config use standard
+</pre></div>
+</div>
 </div>
 <div class="section" id="config-start">
 <h3>config start<a class="headerlink" href="#config-start" title="Permalink to this headline">¶</a></h3>
+<p>Start the machines from the active configuration. You can start these machines in the foreground if needed (<em>–foreground</em>).</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Start the current configuration in background (default)</span>
+docknv config start
+
+<span class="c1"># Start the current configuration in foreground</span>
+docknv config start --foreground
+</pre></div>
+</div>
 </div>
 <div class="section" id="config-restart">
 <h3>config restart<a class="headerlink" href="#config-restart" title="Permalink to this headline">¶</a></h3>
+<p>Restart the machines from the active configuration. You can restart these machines in the foreground if needed (<em>–foreground</em>), and you can <em>force</em> the restart by stopping and starting (<em>-f/–force</em>).</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Restart the current configuration</span>
+docknv config restart
+
+<span class="c1"># Force restart the current configuration and put in foreground</span>
+docknv config restart --foreground -f <span class="c1"># or --force</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="config-stop">
 <h3>config stop<a class="headerlink" href="#config-stop" title="Permalink to this headline">¶</a></h3>
+<p>Stop the machines from the active configuration.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Stop the current configuration</span>
+docknv config stop
+</pre></div>
+</div>
 </div>
 <div class="section" id="config-ps">
 <h3>config ps<a class="headerlink" href="#config-ps" title="Permalink to this headline">¶</a></h3>
+<p>Get the machine statuses from the active configuration.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Get the machine statuses</span>
+docknv config ps
+</pre></div>
+</div>
 </div>
 <div class="section" id="config-unset">
 <h3>config unset<a class="headerlink" href="#config-unset" title="Permalink to this headline">¶</a></h3>
+<p>Unset the current configuration.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Unset the current configuration</span>
+docknv config <span class="nb">unset</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="config-build">
 <h3>config build<a class="headerlink" href="#config-build" title="Permalink to this headline">¶</a></h3>
+<p>Build the machines from the active configuration. As for the <cite>machine build</cite>, you can build without pushing to the local registry (<em>–do-not-push</em>), and rebuild without cache (<em>–no-cache</em>).</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Build the current configuration</span>
+docknv config build
+
+<span class="c1"># Build the current configuration without pushing to the local registry</span>
+docknv config build --do-not-push
+
+<span class="c1"># Rebuild the current configuration without cache</span>
+docknv config build --no-cache
+</pre></div>
+</div>
 </div>
 <div class="section" id="config-create">
 <h3>config create<a class="headerlink" href="#config-create" title="Permalink to this headline">¶</a></h3>
