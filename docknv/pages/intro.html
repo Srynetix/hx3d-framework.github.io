@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Overview: module code &mdash; docknv 4.0.0.alpha documentation</title>
+  <title>Introduction &mdash; docknv 4.0.0.alpha documentation</title>
   
 
   
@@ -35,7 +35,9 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="docknv 4.0.0.alpha documentation" href="../index.html"/> 
+    <link rel="top" title="docknv 4.0.0.alpha documentation" href="../index.html"/>
+        <link rel="next" title="Architecture" href="architecture.html"/>
+        <link rel="prev" title="Welcome to docknv’s documentation!" href="../index.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -89,12 +91,10 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../pages/01.intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pages/02.architecture.html">Architecture</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pages/02.architecture.html#project-structure">Project structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pages/03.environment.html">Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pages/10.command-line-reference.html">Command-line reference</a></li>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="environment.html">Environment files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">docknv</a></li>
 </ul>
 
@@ -140,12 +140,14 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Overview: module code</li>
+      <li>Introduction</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="../_sources/pages/intro.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -157,36 +159,29 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>All modules for which code is available</h1>
-<ul><li><a href="docknv/command_handler.html">docknv.command_handler</a></li>
-<li><a href="docknv/composefile_handler.html">docknv.composefile_handler</a></li>
-<li><a href="docknv/docker_api_wrapper.html">docknv.docker_api_wrapper</a></li>
-<li><a href="docknv/docker_wrapper.html">docknv.docker_wrapper</a></li>
-<li><a href="docknv/dockerfile_packer.html">docknv.dockerfile_packer</a></li>
-<li><a href="docknv/environment_handler.html">docknv.environment_handler</a></li>
-<li><a href="docknv/image_handler.html">docknv.image_handler</a></li>
-<li><a href="docknv/lifecycle_handler.html">docknv.lifecycle_handler</a></li>
-<li><a href="docknv/logger.html">docknv.logger</a></li>
-<li><a href="docknv/network_handler.html">docknv.network_handler</a></li>
-<li><a href="docknv/project_handler.html">docknv.project_handler</a></li>
-<li><a href="docknv/scaffolder.html">docknv.scaffolder</a></li>
-<li><a href="docknv/schema_handler.html">docknv.schema_handler</a></li>
-<li><a href="docknv/session_handler.html">docknv.session_handler</a></li>
-<li><a href="docknv/shell.html">docknv.shell</a></li>
-<ul><li><a href="docknv/shell/common.html">docknv.shell.common</a></li>
-<li><a href="docknv/shell/main.html">docknv.shell.main</a></li>
-</ul><li><a href="docknv/template_renderer.html">docknv.template_renderer</a></li>
-<li><a href="docknv/tests/mocking.html">docknv.tests.mocking</a></li>
-<li><a href="docknv/tests/utils.html">docknv.tests.utils</a></li>
-<li><a href="docknv/user_handler.html">docknv.user_handler</a></li>
-<li><a href="docknv/utils/diff_system.html">docknv.utils.diff_system</a></li>
-<li><a href="docknv/utils/ioutils.html">docknv.utils.ioutils</a></li>
-<li><a href="docknv/utils/paths.html">docknv.utils.paths</a></li>
-<li><a href="docknv/utils/prompt.html">docknv.utils.prompt</a></li>
-<li><a href="docknv/utils/serialization.html">docknv.utils.serialization</a></li>
-<li><a href="docknv/utils/words.html">docknv.utils.words</a></li>
-<li><a href="docknv/volume_handler.html">docknv.volume_handler</a></li>
+  <div class="section" id="introduction">
+<h1>Introduction<a class="headerlink" href="#introduction" title="Permalink to this headline">¶</a></h1>
+<p><strong>docknv</strong> (for <em>Docker with environments</em>) is a wrapper around
+<em>Docker</em>, <em>Docker Compose</em> and <em>Docker Swarm</em>.</p>
+<p>Here are the features:</p>
+<ul class="simple">
+<li><strong>Environment configuration management</strong>: you can define environment
+configuration files, to easily set and use values.</li>
+<li><strong>Templating system</strong>: you can insert your defined environment values
+in templates all over your volumes files, using the powerful Jinja2
+template engine.</li>
+<li><strong>Mixing Compose files</strong>: you can easily merge classic Docker Compose
+templates together.</li>
+<li><strong>Use schemas and namespaces to isolate</strong>: you can isolate portions
+of infrastructure to build and run services independently.</li>
+<li><strong>Concurrent executions</strong>: on a single host, and from the same entry
+point, you can deploy multiple schemas in different namespaces.</li>
+<li><strong>Custom commands</strong>: you can extend the docknv command system to
+include your own custom commands and execute any action within
+docknv.</li>
 </ul>
+</div>
+
 
            </div>
            <div class="articleComments">
@@ -194,6 +189,15 @@
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="architecture.html" class="btn btn-neutral float-right" title="Architecture" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="../index.html" class="btn btn-neutral" title="Welcome to docknv’s documentation!" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>

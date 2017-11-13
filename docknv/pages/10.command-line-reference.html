@@ -1,0 +1,443 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Command-line reference &mdash; docknv 4.0.0.alpha documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  
+  
+    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  
+
+  
+
+  
+        <link rel="index" title="Index"
+              href="../genindex.html"/>
+        <link rel="search" title="Search" href="../search.html"/>
+    <link rel="top" title="docknv 4.0.0.alpha documentation" href="../index.html"/> 
+
+  
+  <script src="../_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> docknv
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                4.0.0.alpha
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="01.intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02.architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="02.architecture.html#project-structure">Project structure</a></li>
+<li class="toctree-l1"><a class="reference internal" href="03.environment.html">Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../modules.html">docknv</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">docknv</a>
+        
+      </nav>
+
+
+      
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+      <li>Command-line reference</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/pages/10.command-line-reference.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="command-line-reference">
+<h1>Command-line reference<a class="headerlink" href="#command-line-reference" title="Permalink to this headline">¶</a></h1>
+<p>Here you can find the command-line reference.</p>
+<p>Each command is described with an example.</p>
+<p><strong>Subcommands</strong></p>
+<ul class="simple">
+<li><em>machine</em>: manage one machine at a time (machine mode)</li>
+<li><em>config</em>: manage groups of machines at once (config mode)</li>
+<li><em>bundle</em>: manage groups of configs at once (bundle mode)</li>
+<li><em>env</em>: manage environments</li>
+<li><em>schema</em>: manage schemas</li>
+<li><em>volume</em>: manage volumes</li>
+<li><em>user</em>: manage user config files</li>
+<li><em>scaffold</em>: scaffolding</li>
+<li><em>registry</em>: start and stop registry</li>
+</ul>
+<div class="section" id="machine-commands">
+<h2>Machine commands<a class="headerlink" href="#machine-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="machine-start">
+<h3>machine start<a class="headerlink" href="#machine-start" title="Permalink to this headline">¶</a></h3>
+<p>Start a single machine, in foreground or in background (<em>-d/–daemon</em>).</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Start the `test` machine in foreground</span>
+docknv machine start <span class="nb">test</span>
+<span class="c1"># Start the `test` machine in background</span>
+docknv machine start <span class="nb">test</span> -d <span class="c1"># or --daemon</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="machine-stop">
+<h3>machine stop<a class="headerlink" href="#machine-stop" title="Permalink to this headline">¶</a></h3>
+<p>Stop a single machine.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Stop the `test` machine</span>
+docknv machine stop <span class="nb">test</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="machine-restart">
+<h3>machine restart<a class="headerlink" href="#machine-restart" title="Permalink to this headline">¶</a></h3>
+<p>Restart a single machine. You can normally restart a machine, in foreground or in background (<em>-d/–daemon</em>), and you can force the restart (<em>-f/–force</em>).</p>
+<p>Force restart will cause a complete <cite>stop</cite> and a complete <cite>start</cite>.</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Restart the `test` machine in foreground</span>
+docknv machine restart <span class="nb">test</span>
+<span class="c1"># Restart the `test` machine in background</span>
+docknv machine restart <span class="nb">test</span> -d <span class="c1"># or --daemon</span>
+<span class="c1"># Force restart the `test` machine in background</span>
+docknv machine restart <span class="nb">test</span> -f -d <span class="c1"># or --force --daemon</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="machine-run">
+<h3>machine run<a class="headerlink" href="#machine-run" title="Permalink to this headline">¶</a></h3>
+<p>Run a custom command on a single machine by creating a new container. You can run this command in foreground or in background (<em>-d/–daemon</em>).</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Run a Python HTTP server on machine `test`</span>
+docknv machine run <span class="nb">test</span> <span class="s2">&quot;python -m http.server&quot;</span>
+<span class="c1"># Execute a ping command in background on machine `test`</span>
+docknv machine run <span class="nb">test</span> -d <span class="s2">&quot;ping www.google.fr&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="machine-exec">
+<h3>machine exec<a class="headerlink" href="#machine-exec" title="Permalink to this headline">¶</a></h3>
+<p>Execute a custom command on a <strong>running</strong> container. You can disable the TTY (<em>–no-tty</em>) and fetch the return code (<em>-r/–return-code</em>).</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># List the root folder content on running machine `test`</span>
+docknv machine <span class="nb">exec</span> <span class="nb">test</span> <span class="s2">&quot;bash -c &#39;ls /&#39;&quot;</span>
+
+<span class="c1"># Sum numbers on machine `test`, and get the return code</span>
+docknv machine <span class="nb">exec</span> <span class="nb">test</span> --return-code <span class="s2">&quot;python -c &#39;5+5&#39;&quot;</span>
+
+<span class="c1"># Execute a ping command on machine `test` and disable TTY</span>
+docknv machine <span class="nb">exec</span> <span class="nb">test</span> --no-tty <span class="s2">&quot;ping www.google.fr&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="machine-shell">
+<h3>machine shell<a class="headerlink" href="#machine-shell" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="machine-logs">
+<h3>machine logs<a class="headerlink" href="#machine-logs" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="machine-push">
+<h3>machine push<a class="headerlink" href="#machine-push" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="machine-pull">
+<h3>machine pull<a class="headerlink" href="#machine-pull" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="machine-build">
+<h3>machine build<a class="headerlink" href="#machine-build" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="machine-freeze-experimental">
+<h3>machine freeze [EXPERIMENTAL]<a class="headerlink" href="#machine-freeze-experimental" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="configuration-commands">
+<h2>Configuration commands<a class="headerlink" href="#configuration-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="config-status">
+<h3>config status<a class="headerlink" href="#config-status" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="config-ls">
+<h3>config ls<a class="headerlink" href="#config-ls" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="config-use">
+<h3>config use<a class="headerlink" href="#config-use" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="config-start">
+<h3>config start<a class="headerlink" href="#config-start" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="config-restart">
+<h3>config restart<a class="headerlink" href="#config-restart" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="config-stop">
+<h3>config stop<a class="headerlink" href="#config-stop" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="config-ps">
+<h3>config ps<a class="headerlink" href="#config-ps" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="config-unset">
+<h3>config unset<a class="headerlink" href="#config-unset" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="config-build">
+<h3>config build<a class="headerlink" href="#config-build" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="config-create">
+<h3>config create<a class="headerlink" href="#config-create" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="config-update">
+<h3>config update<a class="headerlink" href="#config-update" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="config-set-schema">
+<h3>config set-schema<a class="headerlink" href="#config-set-schema" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="config-set-env">
+<h3>config set-env<a class="headerlink" href="#config-set-env" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="config-rm">
+<h3>config rm<a class="headerlink" href="#config-rm" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="bundle-commands">
+<h2>Bundle commands<a class="headerlink" href="#bundle-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="bundle-start">
+<h3>bundle start<a class="headerlink" href="#bundle-start" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="bundle-restart">
+<h3>bundle restart<a class="headerlink" href="#bundle-restart" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="bundle-stop">
+<h3>bundle stop<a class="headerlink" href="#bundle-stop" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="bundle-ps">
+<h3>bundle ps<a class="headerlink" href="#bundle-ps" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="bundle-build">
+<h3>bundle build<a class="headerlink" href="#bundle-build" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="environment-commands">
+<h2>Environment commands<a class="headerlink" href="#environment-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="env-ls">
+<h3>env ls<a class="headerlink" href="#env-ls" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="env-show">
+<h3>env show<a class="headerlink" href="#env-show" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="env-use">
+<h3>env use<a class="headerlink" href="#env-use" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="schema-commands">
+<h2>Schema commands<a class="headerlink" href="#schema-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="schema-ls">
+<h3>schema ls<a class="headerlink" href="#schema-ls" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="volume-commands">
+<h2>Volume commands<a class="headerlink" href="#volume-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="volume-ls">
+<h3>volume ls<a class="headerlink" href="#volume-ls" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="volume-rm">
+<h3>volume rm<a class="headerlink" href="#volume-rm" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="user-commands">
+<h2>User commands<a class="headerlink" href="#user-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="user-clean">
+<h3>user clean<a class="headerlink" href="#user-clean" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="user-rm-lock">
+<h3>user rm-lock<a class="headerlink" href="#user-rm-lock" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="scaffold-commands">
+<h2>Scaffold commands<a class="headerlink" href="#scaffold-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="scaffold-project">
+<h3>scaffold project<a class="headerlink" href="#scaffold-project" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="scaffold-image">
+<h3>scaffold image<a class="headerlink" href="#scaffold-image" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="scaffold-env">
+<h3>scaffold env<a class="headerlink" href="#scaffold-env" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+<div class="section" id="registry-commands">
+<h2>Registry commands<a class="headerlink" href="#registry-commands" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="registry-start">
+<h3>registry start<a class="headerlink" href="#registry-start" title="Permalink to this headline">¶</a></h3>
+</div>
+<div class="section" id="registry-stop">
+<h3>registry stop<a class="headerlink" href="#registry-stop" title="Permalink to this headline">¶</a></h3>
+</div>
+</div>
+</div>
+
+
+           </div>
+           <div class="articleComments">
+            
+           </div>
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017, Denis BOURGE.
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    <script type="text/javascript">
+        var DOCUMENTATION_OPTIONS = {
+            URL_ROOT:'../',
+            VERSION:'4.0.0.alpha',
+            COLLAPSE_INDEX:false,
+            FILE_SUFFIX:'.html',
+            HAS_SOURCE:  true,
+            SOURCELINK_SUFFIX: '.txt'
+        };
+    </script>
+      <script type="text/javascript" src="../_static/jquery.js"></script>
+      <script type="text/javascript" src="../_static/underscore.js"></script>
+      <script type="text/javascript" src="../_static/doctools.js"></script>
+
+  
+
+  
+  
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+  
+
+  
+  
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.StickyNav.enable();
+      });
+  </script>
+   
+
+</body>
+</html>

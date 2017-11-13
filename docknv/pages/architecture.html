@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Overview: module code &mdash; docknv 4.0.0.alpha documentation</title>
+  <title>Architecture &mdash; docknv 4.0.0.alpha documentation</title>
   
 
   
@@ -35,7 +35,9 @@
         <link rel="index" title="Index"
               href="../genindex.html"/>
         <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="docknv 4.0.0.alpha documentation" href="../index.html"/> 
+    <link rel="top" title="docknv 4.0.0.alpha documentation" href="../index.html"/>
+        <link rel="next" title="Environment files" href="environment.html"/>
+        <link rel="prev" title="Introduction" href="intro.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -89,12 +91,13 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
-<li class="toctree-l1"><a class="reference internal" href="../pages/01.intro.html">Introduction</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pages/02.architecture.html">Architecture</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pages/02.architecture.html#project-structure">Project structure</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pages/03.environment.html">Environment</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../pages/10.command-line-reference.html">Command-line reference</a></li>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="intro.html">Introduction</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Architecture</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#project-structure">Project structure</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="environment.html">Environment files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">docknv</a></li>
 </ul>
 
@@ -140,12 +143,14 @@
     
       <li><a href="../index.html">Docs</a> &raquo;</li>
         
-      <li>Overview: module code</li>
+      <li>Architecture</li>
     
     
       <li class="wy-breadcrumbs-aside">
         
             
+            <a href="../_sources/pages/architecture.rst.txt" rel="nofollow"> View page source</a>
+          
         
       </li>
     
@@ -157,36 +162,33 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <h1>All modules for which code is available</h1>
-<ul><li><a href="docknv/command_handler.html">docknv.command_handler</a></li>
-<li><a href="docknv/composefile_handler.html">docknv.composefile_handler</a></li>
-<li><a href="docknv/docker_api_wrapper.html">docknv.docker_api_wrapper</a></li>
-<li><a href="docknv/docker_wrapper.html">docknv.docker_wrapper</a></li>
-<li><a href="docknv/dockerfile_packer.html">docknv.dockerfile_packer</a></li>
-<li><a href="docknv/environment_handler.html">docknv.environment_handler</a></li>
-<li><a href="docknv/image_handler.html">docknv.image_handler</a></li>
-<li><a href="docknv/lifecycle_handler.html">docknv.lifecycle_handler</a></li>
-<li><a href="docknv/logger.html">docknv.logger</a></li>
-<li><a href="docknv/network_handler.html">docknv.network_handler</a></li>
-<li><a href="docknv/project_handler.html">docknv.project_handler</a></li>
-<li><a href="docknv/scaffolder.html">docknv.scaffolder</a></li>
-<li><a href="docknv/schema_handler.html">docknv.schema_handler</a></li>
-<li><a href="docknv/session_handler.html">docknv.session_handler</a></li>
-<li><a href="docknv/shell.html">docknv.shell</a></li>
-<ul><li><a href="docknv/shell/common.html">docknv.shell.common</a></li>
-<li><a href="docknv/shell/main.html">docknv.shell.main</a></li>
-</ul><li><a href="docknv/template_renderer.html">docknv.template_renderer</a></li>
-<li><a href="docknv/tests/mocking.html">docknv.tests.mocking</a></li>
-<li><a href="docknv/tests/utils.html">docknv.tests.utils</a></li>
-<li><a href="docknv/user_handler.html">docknv.user_handler</a></li>
-<li><a href="docknv/utils/diff_system.html">docknv.utils.diff_system</a></li>
-<li><a href="docknv/utils/ioutils.html">docknv.utils.ioutils</a></li>
-<li><a href="docknv/utils/paths.html">docknv.utils.paths</a></li>
-<li><a href="docknv/utils/prompt.html">docknv.utils.prompt</a></li>
-<li><a href="docknv/utils/serialization.html">docknv.utils.serialization</a></li>
-<li><a href="docknv/utils/words.html">docknv.utils.words</a></li>
-<li><a href="docknv/volume_handler.html">docknv.volume_handler</a></li>
+  <div class="section" id="architecture">
+<h1>Architecture<a class="headerlink" href="#architecture" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="project-structure">
+<h2>Project structure<a class="headerlink" href="#project-structure" title="Permalink to this headline">¶</a></h2>
+<p>To use <strong>Docknv</strong>, you need to respect the following structure, all
+contained in a root folder:</p>
+<ul class="simple">
+<li><strong>commands</strong>: The location of your custom docknv commands. <em>(optional)</em></li>
+<li><strong>composefiles</strong>: The location of your Docker Compose files.</li>
+<li><strong>data</strong>: Your project data, organized in three different folders:<ul>
+<li><strong>files</strong>: Static files and Jinja2 templates imported via volumes
+should be stored here, with one folder per container</li>
+<li><strong>standard</strong>: Here you can put private files to be imported</li>
 </ul>
+</li>
+<li><strong>envs</strong>: The location of your environment configuration files,
+ending with <code class="docutils literal"><span class="pre">.env.py</span></code> (example for <em>debug</em>, the filename is
+<code class="docutils literal"><span class="pre">debug.env.py</span></code>). By default, there is always a <code class="docutils literal"><span class="pre">default.env.py</span></code>.</li>
+<li><strong>images</strong>: The location of your Docker images, one folder per
+container. You should always use the “building” way (instead of the
+direct fetching) when including new Docker images in your Compose
+files.</li>
+<li><strong>config.yml</strong>: The main Docknv configuration file for your project.</li>
+</ul>
+</div>
+</div>
+
 
            </div>
            <div class="articleComments">
@@ -194,6 +196,15 @@
            </div>
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="environment.html" class="btn btn-neutral float-right" title="Environment files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="intro.html" class="btn btn-neutral" title="Introduction" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
