@@ -138,7 +138,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#environment-commands">Environment commands</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#env-ls">env ls</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#env-show">env show</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#env-use">env use</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#schema-commands">Schema commands</a><ul>
@@ -252,7 +251,7 @@
 <h2>Machine commands<a class="headerlink" href="#machine-commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="machine-start">
 <h3>machine start<a class="headerlink" href="#machine-start" title="Permalink to this headline">¶</a></h3>
-<p>Start a single machine, in foreground or in background (<em>-d/–daemon</em>).</p>
+<p>Start a single machine, in foreground or in background (<code class="docutils literal"><span class="pre">-d/--daemon</span></code>).</p>
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Start the `test` machine in foreground</span>
 docknv machine start <span class="nb">test</span>
@@ -273,7 +272,7 @@ docknv machine stop <span class="nb">test</span>
 </div>
 <div class="section" id="machine-restart">
 <h3>machine restart<a class="headerlink" href="#machine-restart" title="Permalink to this headline">¶</a></h3>
-<p>Restart a single machine. You can normally restart a machine, in foreground or in background (<em>-d/–daemon</em>), and you can force the restart (<em>-f/–force</em>).</p>
+<p>Restart a single machine. You can normally restart a machine, in foreground or in background (<code class="docutils literal"><span class="pre">-d/--daemon</span></code>), and you can force the restart (<code class="docutils literal"><span class="pre">-f/--force</span></code>).</p>
 <p>Force restart will cause a complete <cite>stop</cite> and a complete <cite>start</cite>.</p>
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Restart the `test` machine in foreground</span>
@@ -289,7 +288,7 @@ docknv machine restart <span class="nb">test</span> -f -d <span class="c1"># or 
 </div>
 <div class="section" id="machine-run">
 <h3>machine run<a class="headerlink" href="#machine-run" title="Permalink to this headline">¶</a></h3>
-<p>Run a custom command on a single machine by creating a new container. You can run this command in foreground or in background (<em>-d/–daemon</em>).</p>
+<p>Run a custom command on a single machine by creating a new container. You can run this command in foreground or in background (<code class="docutils literal"><span class="pre">-d/--daemon</span></code>).</p>
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Run a Python HTTP server on machine `test`</span>
 docknv machine run <span class="nb">test</span> <span class="s2">&quot;python -m http.server&quot;</span>
@@ -301,7 +300,7 @@ docknv machine run <span class="nb">test</span> -d <span class="s2">&quot;ping w
 </div>
 <div class="section" id="machine-exec">
 <h3>machine exec<a class="headerlink" href="#machine-exec" title="Permalink to this headline">¶</a></h3>
-<p>Execute a custom command on a <strong>running</strong> container. You can disable the TTY (<em>–no-tty</em>) and fetch the return code (<em>-r/–return-code</em>).</p>
+<p>Execute a custom command on a <strong>running</strong> container. You can disable the TTY (<code class="docutils literal"><span class="pre">--no-tty</span></code>) and fetch the return code (<code class="docutils literal"><span class="pre">-r/--return-code</span></code>).</p>
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># List the root folder content on running machine `test`</span>
 docknv machine <span class="nb">exec</span> <span class="nb">test</span> <span class="s2">&quot;bash -c &#39;ls /&#39;&quot;</span>
@@ -316,7 +315,7 @@ docknv machine <span class="nb">exec</span> <span class="nb">test</span> --no-tt
 </div>
 <div class="section" id="machine-shell">
 <h3>machine shell<a class="headerlink" href="#machine-shell" title="Permalink to this headline">¶</a></h3>
-<p>Run a shell on a <strong>running</strong> container. You can change the shell executable as a second parameter, and if needed you can <em>create</em> the container before running the shell (<em>-c/–create</em>).</p>
+<p>Run a shell on a <strong>running</strong> container. You can change the shell executable as a second parameter, and if needed you can <em>create</em> the container before running the shell (<code class="docutils literal"><span class="pre">-c/--create</span></code>).</p>
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Run a shell (/bin/bash as default) on running machine `test`</span>
 docknv machine shell <span class="nb">test</span>
@@ -331,7 +330,7 @@ docknv machine shell <span class="nb">test</span> -c <span class="c1"># or --cre
 </div>
 <div class="section" id="machine-logs">
 <h3>machine logs<a class="headerlink" href="#machine-logs" title="Permalink to this headline">¶</a></h3>
-<p>View the logs of a <strong>running</strong> container. You can show everything, or get the last lines (<em>–tail with count parameter</em>), or even follow the logs (<em>-f/–follow</em>).</p>
+<p>View the logs of a <strong>running</strong> container. You can show everything, or get the last lines (<code class="docutils literal"><span class="pre">--tail</span></code>  with count parameter), or even follow the logs (<code class="docutils literal"><span class="pre">-f/--follow</span></code>).</p>
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Get complete logs from running machine `test`</span>
 docknv machine logs <span class="nb">test</span>
@@ -365,7 +364,7 @@ docknv machine pull <span class="nb">test</span> /tmp/sample.txt ./sample.txt
 <div class="section" id="machine-build">
 <h3>machine build<a class="headerlink" href="#machine-build" title="Permalink to this headline">¶</a></h3>
 <p>Build a machine image. If you have edited the Dockerfile of your image, run this command to rebuild.</p>
-<p>The image will automatically be pushed to the local registry, but you can prevent this (<em>with -d/–do-not-push</em>). You can also ignore the cache and rebuild everything (<em>-n/–no-cache</em>).</p>
+<p>The image will automatically be pushed to the local registry, but you can prevent this ( <code class="docutils literal"><span class="pre">-d/--do-not-push</span></code>). You can also ignore the cache and rebuild everything (<code class="docutils literal"><span class="pre">-n/--no-cache</span></code>).</p>
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Update the build of the `test` machine</span>
 docknv machine build <span class="nb">test</span>
@@ -420,7 +419,7 @@ docknv config use standard
 </div>
 <div class="section" id="config-start">
 <h3>config start<a class="headerlink" href="#config-start" title="Permalink to this headline">¶</a></h3>
-<p>Start the machines from the active configuration. You can start these machines in the foreground if needed (<em>–foreground</em>).</p>
+<p>Start the machines from the active configuration. You can start these machines in the foreground if needed (<code class="docutils literal"><span class="pre">--foreground</span></code>).</p>
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Start the current configuration in background (default)</span>
 docknv config start
@@ -432,7 +431,7 @@ docknv config start --foreground
 </div>
 <div class="section" id="config-restart">
 <h3>config restart<a class="headerlink" href="#config-restart" title="Permalink to this headline">¶</a></h3>
-<p>Restart the machines from the active configuration. You can restart these machines in the foreground if needed (<em>–foreground</em>), and you can <em>force</em> the restart by stopping and starting (<em>-f/–force</em>).</p>
+<p>Restart the machines from the active configuration. You can restart these machines in the foreground if needed (<code class="docutils literal"><span class="pre">--foreground</span></code>), and you can <em>force</em> the restart by stopping and starting (<code class="docutils literal"><span class="pre">-f/--force</span></code>).</p>
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Restart the current configuration</span>
 docknv config restart
@@ -471,7 +470,7 @@ docknv config <span class="nb">unset</span>
 </div>
 <div class="section" id="config-build">
 <h3>config build<a class="headerlink" href="#config-build" title="Permalink to this headline">¶</a></h3>
-<p>Build the machines from the active configuration. As for the <cite>machine build</cite>, you can build without pushing to the local registry (<em>–do-not-push</em>), and rebuild without cache (<em>–no-cache</em>).</p>
+<p>Build the machines from the active configuration. As for the <cite>machine build</cite>, you can build without pushing to the local registry (<code class="docutils literal"><span class="pre">--do-not-push</span></code>), and rebuild without cache (<code class="docutils literal"><span class="pre">--no-cache</span></code>).</p>
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Build the current configuration</span>
 docknv config build
@@ -486,93 +485,271 @@ docknv config build --no-cache
 </div>
 <div class="section" id="config-create">
 <h3>config create<a class="headerlink" href="#config-create" title="Permalink to this headline">¶</a></h3>
+<p>Create a configuration from a <em>configuration name</em>, a <em>schema name</em>, an <em>environment name</em>, and if needed, a <em>namespace</em> (<code class="docutils literal"><span class="pre">-n/--namespace</span></code>).</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Build a `test` configuration with the `test_schema` schema and the `test_env` environment.</span>
+docknv config create <span class="nb">test</span> test_schema test_env
+
+<span class="c1"># Build a `test2` configuration with the `test_schema` schema, the `test_env` environment, and the `test` namespace</span>
+docknv config create test2 test_schema test_env -n <span class="nb">test</span>
+</pre></div>
+</div>
 </div>
 <div class="section" id="config-update">
 <h3>config update<a class="headerlink" href="#config-update" title="Permalink to this headline">¶</a></h3>
+<p>Update a configuration by rerendering templates and re-copying static files. If you do not specify a configuration name, il will update the current configuration. If you do specify a configuration name, il will be updated and set as current.</p>
+<p>With the <code class="docutils literal"><span class="pre">-r/--restart</span></code> option, you can automatically stop the target configuration, update it, and restart it. It is more safe on Windows because it did not like updating mount points while the machines are on.</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Update the current configuration</span>
+docknv config update
+
+<span class="c1"># Update the `test` configuration and set it as current</span>
+docknv config update <span class="nb">test</span>
+
+<span class="c1"># Update the current configuration by stopping, updating and starting</span>
+docknv config update -r
+
+<span class="c1"># Update the `test` configuration by stopping, updating and starting</span>
+docknv config update <span class="nb">test</span> -r
+</pre></div>
+</div>
 </div>
 <div class="section" id="config-set-schema">
 <h3>config set-schema<a class="headerlink" href="#config-set-schema" title="Permalink to this headline">¶</a></h3>
+<p>Change the schema for a configuration name.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Change the schema of a `test` configuration to set the `test_schema2` schema</span>
+docknv config set-schema <span class="nb">test</span> test_schema2
+</pre></div>
+</div>
 </div>
 <div class="section" id="config-set-env">
 <h3>config set-env<a class="headerlink" href="#config-set-env" title="Permalink to this headline">¶</a></h3>
+<p>Change the environment for a configuration name.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Change the environment of a `test` configuration to set the `test_env2` environment</span>
+docknv config set-env <span class="nb">test</span> test_env2
+</pre></div>
+</div>
 </div>
 <div class="section" id="config-rm">
 <h3>config rm<a class="headerlink" href="#config-rm" title="Permalink to this headline">¶</a></h3>
+<p>Delete a configuration. If you delete your current configuration, il will be unset.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Remove the `test` configuration</span>
+docknv config rm <span class="nb">test</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="bundle-commands">
 <h2>Bundle commands<a class="headerlink" href="#bundle-commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="bundle-start">
 <h3>bundle start<a class="headerlink" href="#bundle-start" title="Permalink to this headline">¶</a></h3>
+<p>Start multiple configurations.</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Start the `test` configuration</span>
+docknv bundle start <span class="nb">test</span>
+<span class="c1"># same as &#39;docknv config use test; docknv config start&#39;</span>
+
+<span class="c1"># Start the `test` and `test2` configuration</span>
+docknv bundle start <span class="nb">test</span> test2
+</pre></div>
+</div>
 </div>
 <div class="section" id="bundle-restart">
 <h3>bundle restart<a class="headerlink" href="#bundle-restart" title="Permalink to this headline">¶</a></h3>
+<p>Restart multiple configurations. You can force the restart (<code class="docutils literal"><span class="pre">-f/--force</span></code>).</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Restart the `test` configuration</span>
+docknv bundle restart <span class="nb">test</span>
+<span class="c1"># same as &#39;docknv config use test; docknv config restart&#39;</span>
+
+<span class="c1"># Restart the `test` configuration with force</span>
+docknv bundle restart -f <span class="nb">test</span>
+<span class="c1"># same as &#39;docknv config use test; docknv config restart -f&#39;</span>
+
+<span class="c1"># Restart the `test` and `test2` configuration</span>
+docknv bundle restart <span class="nb">test</span> test2
+</pre></div>
+</div>
 </div>
 <div class="section" id="bundle-stop">
 <h3>bundle stop<a class="headerlink" href="#bundle-stop" title="Permalink to this headline">¶</a></h3>
+<p>Stop multiple configurations.</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Stop the `test` configuration</span>
+docknv bundle stop <span class="nb">test</span>
+<span class="c1"># same as &#39;docknv config use test; docknv config stop&#39;</span>
+
+<span class="c1"># Stop the `test` and `test2` configuration</span>
+docknv bundle stop <span class="nb">test</span> test2
+</pre></div>
+</div>
 </div>
 <div class="section" id="bundle-ps">
 <h3>bundle ps<a class="headerlink" href="#bundle-ps" title="Permalink to this headline">¶</a></h3>
+<p>Check the processes of multiple configurations.</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Check the processes of the `test` configuration</span>
+docknv bundle ps <span class="nb">test</span>
+<span class="c1"># same as &#39;docknv config use test; docknv config ps&#39;</span>
+
+<span class="c1"># Check the processes of the `test` and `test2` configurations</span>
+docknv bundle ps <span class="nb">test</span> test2
+</pre></div>
+</div>
 </div>
 <div class="section" id="bundle-build">
 <h3>bundle build<a class="headerlink" href="#bundle-build" title="Permalink to this headline">¶</a></h3>
+<p>Build the machines of multiple configurations. As for the <cite>config build</cite> command, you can build without cache (<code class="docutils literal"><span class="pre">--no-cache</span></code>), and without pushing to the local registry (<code class="docutils literal"><span class="pre">--do-not-push</span></code>).</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Build the machines of the `test` configuration without pushing</span>
+docknv bundle build --do-not-push <span class="nb">test</span>
+<span class="c1"># same as &#39;docknv config use test; docknv config build --do-not-push&#39;</span>
+
+<span class="c1"># Build the machines of the `test` and `test2` configurations without cache</span>
+docknv bundle build --no-cache <span class="nb">test</span> test2
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="environment-commands">
 <h2>Environment commands<a class="headerlink" href="#environment-commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="env-ls">
 <h3>env ls<a class="headerlink" href="#env-ls" title="Permalink to this headline">¶</a></h3>
+<p>List the available environments for the project.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># List the available environments</span>
+docknv env ls
+</pre></div>
+</div>
 </div>
 <div class="section" id="env-show">
 <h3>env show<a class="headerlink" href="#env-show" title="Permalink to this headline">¶</a></h3>
+<p>Show the contents of an environment file for the project.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Show the contents of the `test_env` environment file</span>
+docknv env show test_env
+</pre></div>
 </div>
-<div class="section" id="env-use">
-<h3>env use<a class="headerlink" href="#env-use" title="Permalink to this headline">¶</a></h3>
 </div>
 </div>
 <div class="section" id="schema-commands">
 <h2>Schema commands<a class="headerlink" href="#schema-commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="schema-ls">
 <h3>schema ls<a class="headerlink" href="#schema-ls" title="Permalink to this headline">¶</a></h3>
+<p>List the available schemas for the project.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># List the available schemas</span>
+docknv schema ls
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="volume-commands">
 <h2>Volume commands<a class="headerlink" href="#volume-commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="volume-ls">
 <h3>volume ls<a class="headerlink" href="#volume-ls" title="Permalink to this headline">¶</a></h3>
+<p>List the named volumes for the project.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># List the named volumes</span>
+docknv volume ls
+</pre></div>
+</div>
 </div>
 <div class="section" id="volume-rm">
 <h3>volume rm<a class="headerlink" href="#volume-rm" title="Permalink to this headline">¶</a></h3>
+<p>Remove a named volume.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Remove the `test` named volume</span>
+docknv volume rm <span class="nb">test</span>
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="user-commands">
 <h2>User commands<a class="headerlink" href="#user-commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="user-clean">
 <h3>user clean<a class="headerlink" href="#user-clean" title="Permalink to this headline">¶</a></h3>
+<p>Clean the user project files or config for the current project.
+If you do not specify a config name, il will remove all of the current user project configuration.</p>
+<p>The user project configuration is located at <code class="docutils literal"><span class="pre">$HOME/.docknv/$PROJECT_NAME</span></code>.</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Remove the `test` user configuration</span>
+docknv user clean <span class="nb">test</span>
+
+<span class="c1"># Remove all of the user project configuration</span>
+docknv user clean
+</pre></div>
+</div>
 </div>
 <div class="section" id="user-rm-lock">
 <h3>user rm-lock<a class="headerlink" href="#user-rm-lock" title="Permalink to this headline">¶</a></h3>
+<p>Remove the user lockfile. If something bad happened and the lockfile persisted, <strong>if you are sure of hat you are doing</strong>, you can safely remove it with this command.</p>
+<p>The lockfile is named <code class="docutils literal"><span class="pre">.$UID.lock</span></code>.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Remove the user lockfile</span>
+docknv user rm-lock
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="scaffold-commands">
 <h2>Scaffold commands<a class="headerlink" href="#scaffold-commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="scaffold-project">
 <h3>scaffold project<a class="headerlink" href="#scaffold-project" title="Permalink to this headline">¶</a></h3>
+<p>Create a whole docknv project from scratch, at a given path. The <strong>project name is the path basename</strong>.</p>
+<p>It will automatically generate the base folder structure, a <code class="docutils literal"><span class="pre">.gitignore</span></code> and a <code class="docutils literal"><span class="pre">config.yml</span></code>.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Generate an `example` project at /tmp/test/example.</span>
+docknv scaffold project /tmp/test/example
+</pre></div>
+</div>
 </div>
 <div class="section" id="scaffold-image">
 <h3>scaffold image<a class="headerlink" href="#scaffold-image" title="Permalink to this headline">¶</a></h3>
+<p>Create an image entry for the current project. You must specify the image name, the image URL (like <code class="docutils literal"><span class="pre">portainer/portainer</span></code> or <code class="docutils literal"><span class="pre">ubuntu</span></code>), and an image tag (by default <code class="docutils literal"><span class="pre">latest</span></code>).</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Create a &quot;portainer&quot; image entry with the &quot;portainer/portainer&quot; url and the &quot;latest&quot; tag</span>
+docknv scaffold image portainer portainer/portainer
+
+<span class="c1"># Create an &quot;ubuntu&quot; image entry with the &quot;ubuntu&quot; image and the &quot;16.04&quot; tag</span>
+docknv scaffold image ubuntu ubuntu <span class="m">16</span>.04
+</pre></div>
+</div>
 </div>
 <div class="section" id="scaffold-env">
 <h3>scaffold env<a class="headerlink" href="#scaffold-env" title="Permalink to this headline">¶</a></h3>
+<p>Create an environment file from scratch, or inherits from an existing environment file (<code class="docutils literal"><span class="pre">-i/--inherit</span></code>).</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Create a `test_env` environment from scratch</span>
+docknv scaffold env test_env
+<span class="c1"># Create a `test_env2` environment by inheriting from the `default` environment</span>
+docknv scaffold env test_env2 -i default
+</pre></div>
+</div>
 </div>
 </div>
 <div class="section" id="registry-commands">
 <h2>Registry commands<a class="headerlink" href="#registry-commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="registry-start">
 <h3>registry start<a class="headerlink" href="#registry-start" title="Permalink to this headline">¶</a></h3>
+<p>Start the local registry.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Start the local registry</span>
+docknv registry start
+</pre></div>
+</div>
 </div>
 <div class="section" id="registry-stop">
 <h3>registry stop<a class="headerlink" href="#registry-stop" title="Permalink to this headline">¶</a></h3>
+<p>Stop the local registry.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Stop the local registry</span>
+docknv registry stop
+</pre></div>
+</div>
 </div>
 </div>
 </div>

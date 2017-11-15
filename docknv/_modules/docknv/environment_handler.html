@@ -166,13 +166,13 @@
 
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">re</span>
-<span class="kn">import</span> <span class="nn">yaml</span>
 <span class="kn">import</span> <span class="nn">copy</span>
 
 <span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">OrderedDict</span>
 
 <span class="kn">from</span> <span class="nn">docknv.logger</span> <span class="k">import</span> <span class="n">Logger</span><span class="p">,</span> <span class="n">Fore</span>
 <span class="kn">from</span> <span class="nn">docknv.utils.ioutils</span> <span class="k">import</span> <span class="n">io_open</span>
+<span class="kn">from</span> <span class="nn">docknv.utils.serialization</span> <span class="k">import</span> <span class="n">yaml_ordered_dump</span><span class="p">,</span> <span class="n">yaml_ordered_load</span>
 
 <span class="n">IMPORT_DETECTION_RGX</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;-\*-\s*import:\s*([a-zA-Z0-9_-]*)\s*-\*-&#39;</span><span class="p">)</span>
 <span class="n">VARIABLE_DETECTION_RGX</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\${([a-zA-Z0-9_-]+)}&#39;</span><span class="p">)</span>
@@ -299,7 +299,7 @@
     <span class="n">Logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Writing YAML environment to file </span><span class="si">{0}</span><span class="s2">...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
 
     <span class="k">with</span> <span class="n">io_open</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;wt+&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
-        <span class="n">handle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">env</span><span class="p">))</span></div>
+        <span class="n">handle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">yaml_ordered_dump</span><span class="p">(</span><span class="n">env</span><span class="p">))</span></div>
 
 
 <div class="viewcode-block" id="env_get_yaml_path"><a class="viewcode-back" href="../../docknv.html#docknv.environment_handler.env_get_yaml_path">[docs]</a><span class="k">def</span> <span class="nf">env_get_yaml_path</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
@@ -327,7 +327,7 @@
 
 <span class="k">def</span> <span class="nf">_env_yaml_read_file_content</span><span class="p">(</span><span class="n">env_path</span><span class="p">):</span>
     <span class="k">with</span> <span class="n">io_open</span><span class="p">(</span><span class="n">env_path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
-        <span class="k">return</span> <span class="n">yaml</span><span class="o">.</span><span class="n">load</span><span class="p">(</span><span class="n">handle</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
+        <span class="k">return</span> <span class="n">yaml_ordered_load</span><span class="p">(</span><span class="n">handle</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
 
 
 <span class="k">def</span> <span class="nf">_env_yaml_apply_substitution</span><span class="p">(</span><span class="n">keys</span><span class="p">,</span> <span class="n">value</span><span class="p">,</span> <span class="n">resolved_env</span><span class="p">):</span>

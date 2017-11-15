@@ -162,6 +162,8 @@
   <h1>Source code for docknv.command_handler</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;Command handler.&quot;&quot;&quot;</span>
 
+<span class="kn">import</span> <span class="nn">os</span>
+
 
 <div class="viewcode-block" id="CommandContext"><a class="viewcode-back" href="../../docknv.html#docknv.command_handler.CommandContext">[docs]</a><span class="k">class</span> <span class="nc">CommandContext</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;Command context.&quot;&quot;&quot;</span>
@@ -249,12 +251,34 @@
 <span class="sd">    :param project_path: Project path (str)</span>
 <span class="sd">    :rtype: Context data (dict)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="n">project_read</span><span class="p">,</span> <span class="n">project_get_active_configuration</span>
+    <span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="n">project_read</span><span class="p">,</span> <span class="n">project_get_active_configuration</span><span class="p">,</span> <span class="n">project_is_valid</span>
     <span class="kn">from</span> <span class="nn">docknv.session_handler</span> <span class="k">import</span> <span class="n">session_get_configuration</span>
     <span class="kn">from</span> <span class="nn">docknv.schema_handler</span> <span class="k">import</span> <span class="n">schema_get_configuration</span>
     <span class="kn">from</span> <span class="nn">docknv.environment_handler</span> <span class="k">import</span> <span class="n">env_yaml_load_in_memory</span>
+    <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_read_docknv_config</span><span class="p">,</span> <span class="n">user_write_docknv_config</span>
+    <span class="kn">from</span> <span class="nn">docknv.utils.prompt</span> <span class="k">import</span> <span class="n">prompt_yes_no</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">project_is_valid</span><span class="p">(</span><span class="n">project_path</span><span class="p">):</span>
+        <span class="k">return</span> <span class="n">CommandContext</span><span class="p">()</span>
 
     <span class="n">project_data</span> <span class="o">=</span> <span class="n">project_read</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
+    <span class="n">project_name</span> <span class="o">=</span> <span class="n">project_data</span><span class="o">.</span><span class="n">project_name</span>
+
+    <span class="c1"># User project path</span>
+    <span class="n">docknv_config</span> <span class="o">=</span> <span class="n">user_read_docknv_config</span><span class="p">(</span><span class="n">project_name</span><span class="p">)</span>
+    <span class="n">user_project_path</span> <span class="o">=</span> <span class="n">docknv_config</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;project_path&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">user_project_path</span> <span class="ow">is</span> <span class="kc">None</span><span class="p">:</span>
+        <span class="n">docknv_config</span><span class="p">[</span><span class="s2">&quot;project_path&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
+        <span class="n">user_write_docknv_config</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="n">docknv_config</span><span class="p">)</span>
+    <span class="k">elif</span> <span class="n">user_project_path</span> <span class="o">!=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">project_path</span><span class="p">):</span>
+        <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Project named `</span><span class="si">{0}</span><span class="s2">` already exist at location `</span><span class="si">{1}</span><span class="s2">`.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="n">user_project_path</span><span class="p">))</span>
+        <span class="n">choice</span> <span class="o">=</span> <span class="n">prompt_yes_no</span><span class="p">(</span><span class="s2">&quot;/!</span><span class="se">\\</span><span class="s2"> Are you sure to overwrite the configuration ?&quot;</span><span class="p">)</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">choice</span><span class="p">:</span>
+            <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;No configuration overwrite.&quot;</span><span class="p">)</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">docknv_config</span><span class="p">[</span><span class="s2">&quot;project_path&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
+            <span class="n">user_write_docknv_config</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="n">docknv_config</span><span class="p">)</span>
+
     <span class="n">config_name</span> <span class="o">=</span> <span class="n">project_get_active_configuration</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">config_name</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">CommandContext</span><span class="p">()</span>

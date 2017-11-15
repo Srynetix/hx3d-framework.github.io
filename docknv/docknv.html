@@ -1623,6 +1623,22 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="docknv.project_handler.project_is_valid">
+<code class="descclassname">docknv.project_handler.</code><code class="descname">project_is_valid</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/project_handler.html#project_is_valid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.project_handler.project_is_valid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Check if a project is valid.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">True/False</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="docknv.project_handler.project_read">
 <code class="descclassname">docknv.project_handler.</code><code class="descname">project_read</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/project_handler.html#project_read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.project_handler.project_read" title="Permalink to this definition">¶</a></dt>
 <dd><p>Load a docknv config file from a project path.</p>
@@ -2418,6 +2434,22 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="docknv.user_handler.user_read_docknv_config">
+<code class="descclassname">docknv.user_handler.</code><code class="descname">user_read_docknv_config</code><span class="sig-paren">(</span><em>project_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_read_docknv_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_read_docknv_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Read the docknv.yml config file for a project.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_name</strong> – Project name (str)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">YAML content (dict)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="docknv.user_handler.user_temporary_copy_file">
 <code class="descclassname">docknv.user_handler.</code><code class="descname">user_temporary_copy_file</code><span class="sig-paren">(</span><em>project_name</em>, <em>path_to_file</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_temporary_copy_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_temporary_copy_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Make a temporary copy of a user config file.</p>
@@ -2449,6 +2481,24 @@
 </tbody>
 </table>
 <p><strong>Context manager</strong></p>
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.user_handler.user_write_docknv_config">
+<code class="descclassname">docknv.user_handler.</code><code class="descname">user_write_docknv_config</code><span class="sig-paren">(</span><em>project_name</em>, <em>docknv_config</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_write_docknv_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_write_docknv_config" title="Permalink to this definition">¶</a></dt>
+<dd><p>Write docknv.yml config content for a project.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>project_name</strong> – Project name (str)</li>
+<li><strong>docknv_config</strong> – docknv config (dict)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
 </dd></dl>
 
 </div>

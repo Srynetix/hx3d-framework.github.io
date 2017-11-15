@@ -227,6 +227,16 @@
     <span class="k">return</span> <span class="n">ProjectData</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_data</span><span class="p">)</span></div>
 
 
+<div class="viewcode-block" id="project_is_valid"><a class="viewcode-back" href="../../docknv.html#docknv.project_handler.project_is_valid">[docs]</a><span class="k">def</span> <span class="nf">project_is_valid</span><span class="p">(</span><span class="n">project_path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Check if a project is valid.</span>
+
+<span class="sd">    :param project_path:    Project path</span>
+<span class="sd">    :rtype: True/False</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">CONFIG_FILE_NAME</span><span class="p">))</span></div>
+
+
 <div class="viewcode-block" id="project_set_active_configuration"><a class="viewcode-back" href="../../docknv.html#docknv.project_handler.project_set_active_configuration">[docs]</a><span class="k">def</span> <span class="nf">project_set_active_configuration</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_name</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Set the active configuration.</span>
@@ -235,14 +245,15 @@
 <span class="sd">    :param config_name:      Config name (str)</span>
 <span class="sd">    :param quiet:            Be quiet (bool) (default: False)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_get_docknv_config_file</span>
+    <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="p">(</span>
+        <span class="n">user_read_docknv_config</span><span class="p">,</span> <span class="n">user_write_docknv_config</span>
+    <span class="p">)</span>
 
     <span class="n">config</span> <span class="o">=</span> <span class="n">project_read</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
-    <span class="n">config_path</span> <span class="o">=</span> <span class="n">user_get_docknv_config_file</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">project_name</span><span class="p">)</span>
+    <span class="n">docknv_config</span> <span class="o">=</span> <span class="n">user_read_docknv_config</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">project_name</span><span class="p">)</span>
+    <span class="n">docknv_config</span><span class="p">[</span><span class="s2">&quot;current&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">config_name</span>
 
-    <span class="n">config</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;current&quot;</span><span class="p">:</span> <span class="n">config_name</span><span class="p">}</span>
-    <span class="k">with</span> <span class="n">io_open</span><span class="p">(</span><span class="n">config_path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;wt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
-        <span class="n">handle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">yaml_ordered_dump</span><span class="p">(</span><span class="n">config</span><span class="p">))</span>
+    <span class="n">user_write_docknv_config</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">project_name</span><span class="p">,</span> <span class="n">docknv_config</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">quiet</span><span class="p">:</span>
         <span class="n">Logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Configuration `</span><span class="si">{0}</span><span class="s2">` set as current configuration.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">config_name</span><span class="p">))</span></div>
@@ -255,17 +266,12 @@
 <span class="sd">    :param project_path:     Project path (str)</span>
 <span class="sd">    :rtype: Active configuration (str?)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_get_docknv_config_file</span>
+    <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_read_docknv_config</span>
 
     <span class="n">config</span> <span class="o">=</span> <span class="n">project_read</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
-    <span class="n">config_path</span> <span class="o">=</span> <span class="n">user_get_docknv_config_file</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">project_name</span><span class="p">)</span>
-    <span class="n">content</span> <span class="o">=</span> <span class="kc">None</span>
+    <span class="n">content</span> <span class="o">=</span> <span class="n">user_read_docknv_config</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">project_name</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">config_path</span><span class="p">):</span>
-        <span class="k">with</span> <span class="n">io_open</span><span class="p">(</span><span class="n">config_path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;rt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
-            <span class="n">content</span> <span class="o">=</span> <span class="n">yaml_ordered_load</span><span class="p">(</span><span class="n">handle</span><span class="o">.</span><span class="n">read</span><span class="p">())</span>
-
-    <span class="k">return</span> <span class="n">content</span><span class="p">[</span><span class="s2">&quot;current&quot;</span><span class="p">]</span> <span class="k">if</span> <span class="n">content</span> <span class="k">else</span> <span class="kc">None</span></div>
+    <span class="k">return</span> <span class="n">content</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;current&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="project_update_configuration_schema"><a class="viewcode-back" href="../../docknv.html#docknv.project_handler.project_update_configuration_schema">[docs]</a><span class="k">def</span> <span class="nf">project_update_configuration_schema</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_name</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">):</span>
@@ -446,6 +452,8 @@
 
         <span class="n">new_session</span> <span class="o">=</span> <span class="n">session_insert_configuration</span><span class="p">(</span><span class="n">session</span><span class="p">,</span> <span class="n">config_name</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">,</span>
                                                    <span class="n">environment</span><span class="p">,</span> <span class="n">namespace</span><span class="p">,</span> <span class="n">user_get_id</span><span class="p">())</span>
+
+        <span class="c1"># Set project path</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">Logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Updating configuration: `</span><span class="si">{0}</span><span class="s2">`&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">config_name</span><span class="p">))</span>
 

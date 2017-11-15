@@ -169,6 +169,8 @@
 
 <span class="kn">from</span> <span class="nn">contextlib</span> <span class="k">import</span> <span class="n">contextmanager</span>
 
+<span class="kn">from</span> <span class="nn">docknv.utils.ioutils</span> <span class="k">import</span> <span class="n">io_open</span>
+<span class="kn">from</span> <span class="nn">docknv.utils.serialization</span> <span class="k">import</span> <span class="n">yaml_ordered_load</span><span class="p">,</span> <span class="n">yaml_ordered_dump</span>
 <span class="kn">from</span> <span class="nn">docknv.logger</span> <span class="k">import</span> <span class="n">Logger</span>
 
 
@@ -238,6 +240,36 @@
         <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">user_config_path</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">user_project_config_path</span><span class="p">):</span>
         <span class="n">os</span><span class="o">.</span><span class="n">makedirs</span><span class="p">(</span><span class="n">user_project_config_path</span><span class="p">)</span></div>
+
+
+<div class="viewcode-block" id="user_read_docknv_config"><a class="viewcode-back" href="../../docknv.html#docknv.user_handler.user_read_docknv_config">[docs]</a><span class="k">def</span> <span class="nf">user_read_docknv_config</span><span class="p">(</span><span class="n">project_name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Read the docknv.yml config file for a project.</span>
+
+<span class="sd">    :param project_name:    Project name (str)</span>
+<span class="sd">    :rtype: YAML content (dict)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">user_ensure_config_path_exists</span><span class="p">(</span><span class="n">project_name</span><span class="p">)</span>
+    <span class="n">docknv_config_path</span> <span class="o">=</span> <span class="n">user_get_docknv_config_file</span><span class="p">(</span><span class="n">project_name</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">docknv_config_path</span><span class="p">):</span>
+        <span class="k">return</span> <span class="p">{}</span>
+
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">with</span> <span class="n">io_open</span><span class="p">(</span><span class="n">docknv_config_path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;rt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">yaml_ordered_load</span><span class="p">(</span><span class="n">handle</span><span class="o">.</span><span class="n">read</span><span class="p">())</span></div>
+
+
+<div class="viewcode-block" id="user_write_docknv_config"><a class="viewcode-back" href="../../docknv.html#docknv.user_handler.user_write_docknv_config">[docs]</a><span class="k">def</span> <span class="nf">user_write_docknv_config</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="n">docknv_config</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Write docknv.yml config content for a project.</span>
+
+<span class="sd">    :param project_name:    Project name (str)</span>
+<span class="sd">    :param docknv_config:   docknv config (dict)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">user_ensure_config_path_exists</span><span class="p">(</span><span class="n">project_name</span><span class="p">)</span>
+    <span class="n">docknv_config_path</span> <span class="o">=</span> <span class="n">user_get_docknv_config_file</span><span class="p">(</span><span class="n">project_name</span><span class="p">)</span>
+    <span class="k">with</span> <span class="n">io_open</span><span class="p">(</span><span class="n">docknv_config_path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;wt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+        <span class="n">handle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">yaml_ordered_dump</span><span class="p">(</span><span class="n">docknv_config</span><span class="p">))</span></div>
 
 
 <div class="viewcode-block" id="user_copy_file_to_config"><a class="viewcode-back" href="../../docknv.html#docknv.user_handler.user_copy_file_to_config">[docs]</a><span class="k">def</span> <span class="nf">user_copy_file_to_config</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="n">path_to_file</span><span class="p">):</span>
