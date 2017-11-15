@@ -364,7 +364,7 @@ docknv machine pull <span class="nb">test</span> /tmp/sample.txt ./sample.txt
 <div class="section" id="machine-build">
 <h3>machine build<a class="headerlink" href="#machine-build" title="Permalink to this headline">¶</a></h3>
 <p>Build a machine image. If you have edited the Dockerfile of your image, run this command to rebuild.</p>
-<p>The image will automatically be pushed to the local registry, but you can prevent this ( <code class="docutils literal"><span class="pre">-d/--do-not-push</span></code>). You can also ignore the cache and rebuild everything (<code class="docutils literal"><span class="pre">-n/--no-cache</span></code>).</p>
+<p>The image will automatically be pushed to the local registry, but you can prevent this ( <code class="docutils literal"><span class="pre">--do-not-push</span></code>). You can also ignore the cache and rebuild everything (<code class="docutils literal"><span class="pre">--no-cache</span></code>).</p>
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Update the build of the `test` machine</span>
 docknv machine build <span class="nb">test</span>

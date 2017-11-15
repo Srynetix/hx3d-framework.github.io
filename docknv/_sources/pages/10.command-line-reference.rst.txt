@@ -172,7 +172,7 @@ machine build
 
 Build a machine image. If you have edited the Dockerfile of your image, run this command to rebuild.
 
-The image will automatically be pushed to the local registry, but you can prevent this ( ``-d/--do-not-push``). You can also ignore the cache and rebuild everything (``-n/--no-cache``).
+The image will automatically be pushed to the local registry, but you can prevent this ( ``--do-not-push``). You can also ignore the cache and rebuild everything (``--no-cache``).
 
 Examples:
 
