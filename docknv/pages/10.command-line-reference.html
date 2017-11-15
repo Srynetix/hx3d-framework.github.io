@@ -499,7 +499,7 @@ docknv config create test2 test_schema test_env -n <span class="nb">test</span>
 <div class="section" id="config-update">
 <h3>config update<a class="headerlink" href="#config-update" title="Permalink to this headline">¶</a></h3>
 <p>Update a configuration by rerendering templates and re-copying static files. If you do not specify a configuration name, il will update the current configuration. If you do specify a configuration name, il will be updated and set as current.</p>
-<p>With the <code class="docutils literal"><span class="pre">-r/--restart</span></code> option, you can automatically stop the target configuration, update it, and restart it. It is more safe on Windows because it did not like updating mount points while the machines are on.</p>
+<p>With the <code class="docutils literal"><span class="pre">-r/--restart</span></code> option, you can automatically stop the target configuration, update it, and restart it. It is safer on Windows because it did not like updating mount points while the machines are on.</p>
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Update the current configuration</span>
 docknv config update
