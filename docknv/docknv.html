@@ -874,7 +874,7 @@
 
 <dl class="function">
 <dt id="docknv.lifecycle_handler.lifecycle_bundle_restart">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_bundle_restart</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_names</em>, <em>foreground=False</em>, <em>force=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_bundle_restart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_bundle_restart" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_bundle_restart</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_names</em>, <em>force=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_bundle_restart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_bundle_restart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Restart multiple configurations.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -883,7 +883,6 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>project_path</strong> – Project path (str)</li>
 <li><strong>config_names</strong> – Config names (iterable)</li>
-<li><strong>foreground</strong> – Run in foreground (bool) (default: False)</li>
 <li><strong>force</strong> – Force restart (bool) (default: False)</li>
 </ul>
 </td>
@@ -972,7 +971,7 @@
 
 <dl class="function">
 <dt id="docknv.lifecycle_handler.lifecycle_machine_exec">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_exec</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>command=None</em>, <em>no_tty=False</em>, <em>return_code=False</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_exec"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_exec" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_exec</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>command=None</em>, <em>no_tty=False</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_exec"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_exec" title="Permalink to this definition">¶</a></dt>
 <dd><p>Execute a machine.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -983,7 +982,6 @@
 <li><strong>machine_name</strong> – Machine name (str)</li>
 <li><strong>command</strong> – Command (str?) (default: None)</li>
 <li><strong>no_tty</strong> – Do not use TTY (bool) (default: False)</li>
-<li><strong>return_code</strong> – Handle return code (bool) (default: False)</li>
 <li><strong>namespace_name</strong> – Namespace name (str?) (default: None)</li>
 </ul>
 </td>
@@ -994,7 +992,7 @@
 
 <dl class="function">
 <dt id="docknv.lifecycle_handler.lifecycle_machine_exec_multiple">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_exec_multiple</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>commands=None</em>, <em>no_tty=False</em>, <em>return_code=False</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_exec_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_exec_multiple" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_exec_multiple</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>commands</em>, <em>no_tty=False</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_exec_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_exec_multiple" title="Permalink to this definition">¶</a></dt>
 <dd><p>Execute multiple commands on a machine.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1003,9 +1001,8 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>project_path</strong> – Project path (str)</li>
 <li><strong>machine_name</strong> – Machine name (str)</li>
-<li><strong>commands</strong> – Commands (iterable) (default: None)</li>
+<li><strong>commands</strong> – Commands (iterable)</li>
 <li><strong>no_tty</strong> – Do not use TTY (bool) (default: False)</li>
-<li><strong>return_code</strong> – Handle return code (bool) (default: False)</li>
 <li><strong>namespace_name</strong> – Namespace name (str?) (default: None)</li>
 </ul>
 </td>
@@ -1079,7 +1076,7 @@
 
 <dl class="function">
 <dt id="docknv.lifecycle_handler.lifecycle_machine_restart">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_restart</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>force=False</em>, <em>daemon=False</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_restart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_restart" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_restart</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>force=False</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_restart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_restart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Restart a machine.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1141,7 +1138,7 @@
 
 <dl class="function">
 <dt id="docknv.lifecycle_handler.lifecycle_machine_start">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_start</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>daemon=False</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_start" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_start</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_start" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start a machine.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1150,7 +1147,6 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>project_path</strong> – Project path (str)</li>
 <li><strong>machine_name</strong> – Machine name (str)</li>
-<li><strong>daemon</strong> – Run in background? (bool) (default: False)</li>
 <li><strong>namespace_name</strong> – Namespace name (str?) (default: None)</li>
 </ul>
 </td>
@@ -1233,7 +1229,7 @@
 
 <dl class="function">
 <dt id="docknv.lifecycle_handler.lifecycle_schema_restart">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_schema_restart</code><span class="sig-paren">(</span><em>project_path</em>, <em>foreground=False</em>, <em>force=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_schema_restart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_schema_restart" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_schema_restart</code><span class="sig-paren">(</span><em>project_path</em>, <em>force=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_schema_restart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_schema_restart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Restart a schema.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -1241,7 +1237,6 @@
 <tbody valign="top">
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>foreground</strong> – Run in foreground (bool) (default: False)</li>
 <li><strong>force</strong> – Force restart (bool) (default: False)</li>
 </ul>
 </td>
@@ -1252,17 +1247,13 @@
 
 <dl class="function">
 <dt id="docknv.lifecycle_handler.lifecycle_schema_start">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_schema_start</code><span class="sig-paren">(</span><em>project_path</em>, <em>foreground=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_schema_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_schema_start" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_schema_start</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_schema_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_schema_start" title="Permalink to this definition">¶</a></dt>
 <dd><p>Start a schema.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>foreground</strong> – Start in foreground (bool) (default: False)</li>
-</ul>
-</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
 </tr>
 </tbody>
 </table>

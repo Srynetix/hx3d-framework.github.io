@@ -218,7 +218,7 @@
             <span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">(</span><span class="n">args</span> <span class="o">+</span> <span class="p">[</span><span class="s2">&quot;-h&quot;</span><span class="p">])</span>
             <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">parse_args</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">(</span><span class="n">args</span><span class="p">))</span></div>
+        <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">parse_args</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">parser</span><span class="o">.</span><span class="n">parse_args</span><span class="p">(</span><span class="n">args</span><span class="p">))</span></div>
 
 <div class="viewcode-block" id="Shell.init_parsers"><a class="viewcode-back" href="../../../docknv.shell.html#docknv.shell.main.Shell.init_parsers">[docs]</a>    <span class="k">def</span> <span class="nf">init_parsers</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Initialize each parsers.&quot;&quot;&quot;</span>
@@ -246,13 +246,53 @@
         <span class="k">else</span><span class="p">:</span>
             <span class="k">for</span> <span class="n">parser</span><span class="p">,</span> <span class="n">cfg</span><span class="p">,</span> <span class="n">ctx</span> <span class="ow">in</span> <span class="bp">self</span><span class="o">.</span><span class="n">post_parsers</span><span class="p">:</span>
                 <span class="k">try</span><span class="p">:</span>
+                    <span class="c1"># New args passing</span>
                     <span class="n">result</span> <span class="o">=</span> <span class="n">parser</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">,</span> <span class="n">cfg</span><span class="p">,</span> <span class="n">ctx</span><span class="p">)</span>
                 <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                    <span class="c1"># Old args passing</span>
                     <span class="n">result</span> <span class="o">=</span> <span class="n">parser</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">args</span><span class="p">)</span>
-                <span class="k">if</span> <span class="n">result</span><span class="p">:</span>
+
+                <span class="k">try</span><span class="p">:</span>
+                    <span class="n">ok</span><span class="p">,</span> <span class="n">exit_code</span> <span class="o">=</span> <span class="n">result</span>
+                <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                    <span class="n">ok</span><span class="p">,</span> <span class="n">exit_code</span> <span class="o">=</span> <span class="n">result</span><span class="p">,</span> <span class="mi">0</span>
+
+                <span class="k">if</span> <span class="n">ok</span><span class="p">:</span>
                     <span class="k">break</span>
 
-        <span class="n">sys</span><span class="o">.</span><span class="n">exit</span><span class="p">(</span><span class="n">exit_code</span><span class="p">)</span></div></div>
+        <span class="k">return</span> <span class="n">exit_code</span></div></div>
+
+
+<span class="k">def</span> <span class="nf">_register_handlers</span><span class="p">(</span><span class="n">shell</span><span class="p">,</span> <span class="n">current_dir</span><span class="p">,</span> <span class="n">commands_dir</span><span class="p">,</span> <span class="n">commands_context</span><span class="p">):</span>
+    <span class="kn">from</span> <span class="nn">docknv</span> <span class="k">import</span> <span class="n">command_handler</span>
+
+    <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">commands_dir</span><span class="p">):</span>
+        <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
+            <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.py&quot;</span><span class="p">):</span>
+                <span class="c1"># Ignore __init__.py</span>
+                <span class="k">if</span> <span class="n">filename</span> <span class="o">==</span> <span class="s2">&quot;__init__.py&quot;</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="n">base_filename</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
+                <span class="n">abs_f</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
+
+                <span class="c1"># Ignore __pycache__</span>
+                <span class="k">if</span> <span class="s2">&quot;__pycache__&quot;</span> <span class="ow">in</span> <span class="n">abs_f</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
+                <span class="n">src</span> <span class="o">=</span> <span class="n">imp</span><span class="o">.</span><span class="n">load_source</span><span class="p">(</span><span class="s2">&quot;commands&quot;</span><span class="p">,</span> <span class="n">abs_f</span><span class="p">)</span>
+                <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="s2">&quot;pre_parse&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="s2">&quot;post_parse&quot;</span><span class="p">):</span>
+                    <span class="n">pre_parse</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="s2">&quot;pre_parse&quot;</span><span class="p">)</span>
+                    <span class="n">post_parse</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="s2">&quot;post_parse&quot;</span><span class="p">)</span>
+
+                    <span class="n">command_config</span> <span class="o">=</span> <span class="n">command_handler</span><span class="o">.</span><span class="n">command_get_config</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="n">base_filename</span><span class="p">)</span>
+
+                    <span class="k">try</span><span class="p">:</span>
+                        <span class="n">pre_parse</span><span class="p">(</span><span class="n">shell</span><span class="p">,</span> <span class="n">command_config</span><span class="p">,</span> <span class="n">commands_context</span><span class="p">)</span>
+                    <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
+                        <span class="n">pre_parse</span><span class="p">(</span><span class="n">shell</span><span class="p">)</span>
+
+                    <span class="n">shell</span><span class="o">.</span><span class="n">register_post_parser</span><span class="p">(</span><span class="n">post_parse</span><span class="p">,</span> <span class="n">command_config</span><span class="p">,</span> <span class="n">commands_context</span><span class="p">)</span>
 
 
 <div class="viewcode-block" id="docknv_entry_point"><a class="viewcode-back" href="../../../docknv.shell.html#docknv.shell.main.docknv_entry_point">[docs]</a><span class="k">def</span> <span class="nf">docknv_entry_point</span><span class="p">():</span>
@@ -261,43 +301,17 @@
 
     <span class="n">current_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">getcwd</span><span class="p">()</span>
     <span class="n">commands_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="s2">&quot;commands&quot;</span><span class="p">)</span>
+    <span class="n">commands_context</span> <span class="o">=</span> <span class="n">command_handler</span><span class="o">.</span><span class="n">command_get_context</span><span class="p">(</span><span class="n">current_dir</span><span class="p">)</span>
     <span class="n">shell</span> <span class="o">=</span> <span class="n">Shell</span><span class="p">()</span>
-
-    <span class="n">command_context</span> <span class="o">=</span> <span class="n">command_handler</span><span class="o">.</span><span class="n">command_get_context</span><span class="p">(</span><span class="n">current_dir</span><span class="p">)</span>
 
     <span class="k">try</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">commands_dir</span><span class="p">):</span>
-            <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">files</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">commands_dir</span><span class="p">):</span>
-                <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">files</span><span class="p">:</span>
-                    <span class="k">if</span> <span class="n">filename</span><span class="o">.</span><span class="n">endswith</span><span class="p">(</span><span class="s2">&quot;.py&quot;</span><span class="p">):</span>
-                        <span class="c1"># Ignore __init__.py</span>
-                        <span class="k">if</span> <span class="n">filename</span> <span class="o">==</span> <span class="s2">&quot;__init__.py&quot;</span><span class="p">:</span>
-                            <span class="k">continue</span>
+            <span class="n">_register_handlers</span><span class="p">(</span><span class="n">shell</span><span class="p">,</span> <span class="n">current_dir</span><span class="p">,</span> <span class="n">commands_dir</span><span class="p">,</span> <span class="n">commands_context</span><span class="p">)</span>
 
-                        <span class="n">base_filename</span><span class="p">,</span> <span class="n">ext</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">splitext</span><span class="p">(</span><span class="n">filename</span><span class="p">)</span>
-                        <span class="n">abs_f</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
-
-                        <span class="c1"># Ignore __pycache__</span>
-                        <span class="k">if</span> <span class="s2">&quot;__pycache__&quot;</span> <span class="ow">in</span> <span class="n">abs_f</span><span class="p">:</span>
-                            <span class="k">continue</span>
-
-                        <span class="n">src</span> <span class="o">=</span> <span class="n">imp</span><span class="o">.</span><span class="n">load_source</span><span class="p">(</span><span class="s2">&quot;commands&quot;</span><span class="p">,</span> <span class="n">abs_f</span><span class="p">)</span>
-                        <span class="k">if</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="s2">&quot;pre_parse&quot;</span><span class="p">)</span> <span class="ow">and</span> <span class="nb">hasattr</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="s2">&quot;post_parse&quot;</span><span class="p">):</span>
-                            <span class="n">pre_parse</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="s2">&quot;pre_parse&quot;</span><span class="p">)</span>
-                            <span class="n">post_parse</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">src</span><span class="p">,</span> <span class="s2">&quot;post_parse&quot;</span><span class="p">)</span>
-
-                            <span class="n">command_config</span> <span class="o">=</span> <span class="n">command_handler</span><span class="o">.</span><span class="n">command_get_config</span><span class="p">(</span><span class="n">current_dir</span><span class="p">,</span> <span class="n">base_filename</span><span class="p">)</span>
-
-                            <span class="k">try</span><span class="p">:</span>
-                                <span class="n">pre_parse</span><span class="p">(</span><span class="n">shell</span><span class="p">,</span> <span class="n">command_config</span><span class="p">,</span> <span class="n">command_context</span><span class="p">)</span>
-                            <span class="k">except</span> <span class="ne">TypeError</span><span class="p">:</span>
-                                <span class="n">pre_parse</span><span class="p">(</span><span class="n">shell</span><span class="p">)</span>
-
-                            <span class="n">shell</span><span class="o">.</span><span class="n">register_post_parser</span><span class="p">(</span><span class="n">post_parse</span><span class="p">,</span> <span class="n">command_config</span><span class="p">,</span> <span class="n">command_context</span><span class="p">)</span>
-    <span class="k">except</span> <span class="ne">Exception</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+    <span class="k">except</span> <span class="ne">BaseException</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
         <span class="n">Logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="n">e</span><span class="p">,</span> <span class="n">crash</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 
-    <span class="n">shell</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span></div>
+    <span class="k">return</span> <span class="n">shell</span><span class="o">.</span><span class="n">run</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">1</span><span class="p">:])</span></div>
 </pre></div>
 
            </div>

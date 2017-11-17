@@ -252,13 +252,10 @@
 <h2>Machine commands<a class="headerlink" href="#machine-commands" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="machine-start">
 <h3>machine start<a class="headerlink" href="#machine-start" title="Permalink to this headline">¶</a></h3>
-<p>Start a single machine, in foreground or in background (<code class="docutils literal"><span class="pre">-d/--daemon</span></code>).</p>
-<p>Examples:</p>
+<p>Start a single machine.</p>
+<p>Example:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Start the `test` machine in foreground</span>
 docknv machine start <span class="nb">test</span>
-
-<span class="c1"># Start the `test` machine in background</span>
-docknv machine start <span class="nb">test</span> -d <span class="c1"># or --daemon</span>
 </pre></div>
 </div>
 </div>
@@ -273,17 +270,14 @@ docknv machine stop <span class="nb">test</span>
 </div>
 <div class="section" id="machine-restart">
 <h3>machine restart<a class="headerlink" href="#machine-restart" title="Permalink to this headline">¶</a></h3>
-<p>Restart a single machine. You can normally restart a machine, in foreground or in background (<code class="docutils literal"><span class="pre">-d/--daemon</span></code>), and you can force the restart (<code class="docutils literal"><span class="pre">-f/--force</span></code>).</p>
+<p>Restart a single machine. You can normally restart a machine, and you can force the restart (<code class="docutils literal"><span class="pre">-f/--force</span></code>).</p>
 <p>Force restart will cause a complete <cite>stop</cite> and a complete <cite>start</cite>.</p>
 <p>Examples:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Restart the `test` machine in foreground</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Restart the `test` machine</span>
 docknv machine restart <span class="nb">test</span>
 
-<span class="c1"># Restart the `test` machine in background</span>
-docknv machine restart <span class="nb">test</span> -d <span class="c1"># or --daemon</span>
-
-<span class="c1"># Force restart the `test` machine in background</span>
-docknv machine restart <span class="nb">test</span> -f -d <span class="c1"># or --force --daemon</span>
+<span class="c1"># Force restart the `test` machine</span>
+docknv machine restart <span class="nb">test</span> -f <span class="c1"># or --force</span>
 </pre></div>
 </div>
 </div>
@@ -421,25 +415,22 @@ docknv config use standard
 </div>
 <div class="section" id="config-start">
 <h3>config start<a class="headerlink" href="#config-start" title="Permalink to this headline">¶</a></h3>
-<p>Start the machines from the active configuration. You can start these machines in the foreground if needed (<code class="docutils literal"><span class="pre">--foreground</span></code>).</p>
-<p>Examples:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Start the current configuration in background (default)</span>
+<p>Start the machines from the active configuration.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Start the current configuration</span>
 docknv config start
-
-<span class="c1"># Start the current configuration in foreground</span>
-docknv config start --foreground
 </pre></div>
 </div>
 </div>
 <div class="section" id="config-restart">
 <h3>config restart<a class="headerlink" href="#config-restart" title="Permalink to this headline">¶</a></h3>
-<p>Restart the machines from the active configuration. You can restart these machines in the foreground if needed (<code class="docutils literal"><span class="pre">--foreground</span></code>), and you can <em>force</em> the restart by stopping and starting (<code class="docutils literal"><span class="pre">-f/--force</span></code>).</p>
+<p>Restart the machines from the active configuration. You can <em>force</em> the restart by stopping and starting (<code class="docutils literal"><span class="pre">-f/--force</span></code>).</p>
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Restart the current configuration</span>
 docknv config restart
 
-<span class="c1"># Force restart the current configuration and put in foreground</span>
-docknv config restart --foreground -f <span class="c1"># or --force</span>
+<span class="c1"># Force restart the current configuration</span>
+docknv config restart -f <span class="c1"># or --force</span>
 </pre></div>
 </div>
 </div>
@@ -562,15 +553,15 @@ docknv bundle start <span class="nb">test</span> test2
 </div>
 <div class="section" id="bundle-restart">
 <h3>bundle restart<a class="headerlink" href="#bundle-restart" title="Permalink to this headline">¶</a></h3>
-<p>Restart multiple configurations. You can force the restart (<code class="docutils literal"><span class="pre">-f/--force</span></code>), and restart in foreground (<code class="docutils literal"><span class="pre">--foreground</span></code>).</p>
+<p>Restart multiple configurations. You can force the restart (<code class="docutils literal"><span class="pre">-f/--force</span></code>).</p>
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Restart the `test` configuration</span>
 docknv bundle restart <span class="nb">test</span>
 <span class="c1"># same as &#39;docknv config use test; docknv config restart&#39;</span>
 
-<span class="c1"># Restart the `test` configuration with force and in foreground</span>
-docknv bundle restart -f --foreground <span class="nb">test</span>
-<span class="c1"># same as &#39;docknv config use test; docknv config restart -f --foreground&#39;</span>
+<span class="c1"># Restart the `test` configuration with force</span>
+docknv bundle restart -f <span class="nb">test</span>
+<span class="c1"># same as &#39;docknv config use test; docknv config restart -f&#39;</span>
 
 <span class="c1"># Restart the `test` and `test2` configuration</span>
 docknv bundle restart <span class="nb">test</span> test2
