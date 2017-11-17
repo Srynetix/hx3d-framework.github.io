@@ -163,6 +163,8 @@
   <h1>Source code for docknv.lifecycle_handler</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;docknv machines and schema lifecycle handling.&quot;&quot;&quot;</span>
 
+<span class="kn">import</span> <span class="nn">shlex</span>
+
 <span class="kn">from</span> <span class="nn">docknv.logger</span> <span class="k">import</span> <span class="n">Logger</span><span class="p">,</span> <span class="n">Fore</span><span class="p">,</span> <span class="n">Style</span>
 <span class="kn">from</span> <span class="nn">docknv.docker_wrapper</span> <span class="k">import</span> <span class="p">(</span>
     <span class="n">exec_compose</span><span class="p">,</span> <span class="n">exec_compose_pretty</span><span class="p">,</span> <span class="n">get_docker_container</span><span class="p">,</span>
@@ -483,7 +485,7 @@
 
     <span class="n">d_cmd</span> <span class="o">=</span> <span class="s2">&quot;-d&quot;</span> <span class="k">if</span> <span class="n">daemon</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
 
-    <span class="k">return</span> <span class="n">exec_compose</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">,</span> <span class="s2">&quot;--rm&quot;</span><span class="p">,</span> <span class="s2">&quot;--service-ports&quot;</span><span class="p">,</span> <span class="n">d_cmd</span><span class="p">,</span> <span class="n">machine_name</span><span class="p">,</span> <span class="n">command</span><span class="p">])</span></div>
+    <span class="k">return</span> <span class="n">exec_compose</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">,</span> <span class="s2">&quot;--rm&quot;</span><span class="p">,</span> <span class="s2">&quot;--service-ports&quot;</span><span class="p">,</span> <span class="n">d_cmd</span><span class="p">,</span> <span class="n">machine_name</span><span class="p">,</span> <span class="o">*</span><span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">command</span><span class="p">)])</span></div>
 
 
 <div class="viewcode-block" id="lifecycle_machine_push"><a class="viewcode-back" href="../../docknv.html#docknv.lifecycle_handler.lifecycle_machine_push">[docs]</a><span class="k">def</span> <span class="nf">lifecycle_machine_push</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">machine_name</span><span class="p">,</span> <span class="n">host_path</span><span class="p">,</span> <span class="n">container_path</span><span class="p">,</span> <span class="n">namespace_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -544,7 +546,7 @@
         <span class="n">Logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Machine `</span><span class="si">{0}</span><span class="s2">` is not running.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">machine_name</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">tty_cmd</span> <span class="o">=</span> <span class="s2">&quot;-ti&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">no_tty</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
-        <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;exec&quot;</span><span class="p">,</span> <span class="n">tty_cmd</span><span class="p">,</span> <span class="n">container</span><span class="p">,</span> <span class="n">command</span><span class="p">]</span>
+        <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;exec&quot;</span><span class="p">,</span> <span class="n">tty_cmd</span><span class="p">,</span> <span class="n">container</span><span class="p">,</span> <span class="o">*</span><span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">command</span><span class="p">)]</span>
         <span class="n">code</span> <span class="o">=</span> <span class="n">exec_docker</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
         <span class="k">if</span> <span class="n">code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">Logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Error while executing command </span><span class="si">{0}</span><span class="s2"> on machine </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
@@ -574,7 +576,7 @@
         <span class="n">code</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">command</span> <span class="ow">in</span> <span class="n">commands</span><span class="p">:</span>
             <span class="n">tty_cmd</span> <span class="o">=</span> <span class="s2">&quot;-ti&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">no_tty</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
-            <span class="n">code</span> <span class="o">=</span> <span class="n">exec_docker</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;exec&quot;</span><span class="p">,</span> <span class="n">tty_cmd</span><span class="p">,</span> <span class="n">container</span><span class="p">,</span> <span class="n">command</span><span class="p">])</span>
+            <span class="n">code</span> <span class="o">=</span> <span class="n">exec_docker</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;exec&quot;</span><span class="p">,</span> <span class="n">tty_cmd</span><span class="p">,</span> <span class="n">container</span><span class="p">,</span> <span class="o">*</span><span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">command</span><span class="p">)])</span>
             <span class="k">if</span> <span class="n">code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="k">break</span>
 

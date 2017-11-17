@@ -139,6 +139,7 @@
 <li class="toctree-l2"><a class="reference internal" href="#environment-commands">Environment commands</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#env-ls">env ls</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#env-show">env show</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#env-edit">env edit</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#schema-commands">Schema commands</a><ul>
@@ -626,6 +627,22 @@ docknv env ls
 <p>Example:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Show the contents of the `test_env` environment file</span>
 docknv env show test_env
+</pre></div>
+</div>
+</div>
+<div class="section" id="env-edit">
+<h3>env edit<a class="headerlink" href="#env-edit" title="Permalink to this headline">¶</a></h3>
+<p>Edit or create an environment file for the project.
+By default, it will open the <code class="docutils literal"><span class="pre">atom</span></code> editor. If you no not have <code class="docutils literal"><span class="pre">atom</span></code>, you can specify another editor (<code class="docutils literal"><span class="pre">-e/--editor</span></code>).</p>
+<p>Examples:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Edit an existing `test_env` environment file with `atom`</span>
+docknv env edit test_env
+
+<span class="c1"># Create a new `test_env2` environment file with `atom`</span>
+docknv env edit test_env2
+
+<span class="c1"># Edit an existing `test_env` environment file with `vim`</span>
+docknv env edit test_env -e vim <span class="c1"># or --editor vim</span>
 </pre></div>
 </div>
 </div>
