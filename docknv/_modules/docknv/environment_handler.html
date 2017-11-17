@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../pages/01.intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../pages/02.architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../pages/03.environment.html">Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pages/05.ipython.html">Practical example: IPython Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../pages/10.command-line-reference.html">Command-line reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modules.html">docknv</a></li>
 </ul>
@@ -208,6 +209,7 @@
 <span class="sd">    :param name:             Environment file name (str)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">loaded_env</span> <span class="o">=</span> <span class="n">env_yaml_load_in_memory</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+    <span class="n">loaded_env</span> <span class="o">=</span> <span class="n">env_yaml_resolve_variables</span><span class="p">(</span><span class="n">loaded_env</span><span class="p">)</span>
 
     <span class="n">Logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Showing environment file `</span><span class="si">{0}</span><span class="s2">`:&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
     <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">loaded_env</span><span class="p">:</span>

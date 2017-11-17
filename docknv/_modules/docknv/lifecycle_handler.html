@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../pages/01.intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../pages/02.architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../pages/03.environment.html">Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pages/05.ipython.html">Practical example: IPython Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../pages/10.command-line-reference.html">Command-line reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modules.html">docknv</a></li>
 </ul>
@@ -263,10 +264,11 @@
 <span class="sd">    Restart a schema.</span>
 
 <span class="sd">    :param project_path:     Project path (str)</span>
+<span class="sd">    :param foreground:       Run in foreground (bool) (default: False)</span>
+<span class="sd">    :param force:            Force restart (bool) (default: False)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">force</span><span class="p">:</span>
-        <span class="n">d_cmd</span> <span class="o">=</span> <span class="s2">&quot;-d&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">foreground</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
-        <span class="n">exec_compose_pretty</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;restart&quot;</span><span class="p">,</span> <span class="n">d_cmd</span><span class="p">])</span>
+        <span class="n">exec_compose_pretty</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;restart&quot;</span><span class="p">])</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">lifecycle_schema_stop</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
         <span class="n">lifecycle_schema_start</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">foreground</span><span class="p">)</span></div>
@@ -306,12 +308,13 @@
             <span class="n">lifecycle_schema_start</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="lifecycle_bundle_restart"><a class="viewcode-back" href="../../docknv.html#docknv.lifecycle_handler.lifecycle_bundle_restart">[docs]</a><span class="k">def</span> <span class="nf">lifecycle_bundle_restart</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_names</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
+<div class="viewcode-block" id="lifecycle_bundle_restart"><a class="viewcode-back" href="../../docknv.html#docknv.lifecycle_handler.lifecycle_bundle_restart">[docs]</a><span class="k">def</span> <span class="nf">lifecycle_bundle_restart</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_names</span><span class="p">,</span> <span class="n">foreground</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Restart multiple configurations.</span>
 
 <span class="sd">    :param project_path:     Project path (str)</span>
 <span class="sd">    :param config_names:     Config names (iterable)</span>
+<span class="sd">    :param foreground:       Run in foreground (bool) (default: False)</span>
 <span class="sd">    :param force:            Force restart (bool) (default: False)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">docknv.session_handler</span> <span class="k">import</span> <span class="n">session_check_bundle_configurations</span>
@@ -320,7 +323,7 @@
     <span class="n">session_check_bundle_configurations</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_names</span><span class="p">)</span>
     <span class="k">for</span> <span class="n">config_name</span> <span class="ow">in</span> <span class="n">config_names</span><span class="p">:</span>
         <span class="k">with</span> <span class="n">project_use_temporary_configuration</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_name</span><span class="p">):</span>
-            <span class="n">lifecycle_schema_restart</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">force</span><span class="p">)</span></div>
+            <span class="n">lifecycle_schema_restart</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">foreground</span><span class="o">=</span><span class="n">foreground</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="n">force</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="lifecycle_bundle_ps"><a class="viewcode-back" href="../../docknv.html#docknv.lifecycle_handler.lifecycle_bundle_ps">[docs]</a><span class="k">def</span> <span class="nf">lifecycle_bundle_ps</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_names</span><span class="p">):</span>
@@ -421,10 +424,8 @@
 <span class="sd">    :param namespace_name:       Namespace name (str?) (default: None)</span>
 <span class="sd">    :param create:               Create the container (bool) (default: False)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">machine_name</span> <span class="o">=</span> <span class="n">lifecycle_get_machine_name</span><span class="p">(</span><span class="n">machine_name</span><span class="p">,</span> <span class="n">namespace_name</span><span class="p">)</span>
-
     <span class="k">if</span> <span class="n">create</span><span class="p">:</span>
-        <span class="n">lifecycle_machine_run</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">machine_name</span><span class="p">,</span> <span class="n">shell_path</span><span class="p">,</span> <span class="n">namespace_name</span><span class="p">)</span>
+        <span class="n">lifecycle_machine_run</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">machine_name</span><span class="p">,</span> <span class="n">shell_path</span><span class="p">,</span> <span class="n">namespace_name</span><span class="o">=</span><span class="n">namespace_name</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">lifecycle_machine_exec</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">machine_name</span><span class="p">,</span> <span class="n">shell_path</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span> <span class="kc">False</span><span class="p">,</span>  <span class="n">namespace_name</span><span class="o">=</span><span class="n">namespace_name</span><span class="p">)</span></div>
 

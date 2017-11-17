@@ -37,7 +37,7 @@
         <link rel="search" title="Search" href="../search.html"/>
     <link rel="top" title="docknv 4.0.0.alpha documentation" href="../index.html"/>
         <link rel="next" title="docknv" href="../modules.html"/>
-        <link rel="prev" title="Environment" href="03.environment.html"/> 
+        <link rel="prev" title="Practical example: IPython Notebook" href="05.ipython.html"/> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
@@ -95,6 +95,7 @@
 <li class="toctree-l1"><a class="reference internal" href="01.intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="02.architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="03.environment.html">Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="05.ipython.html">Practical example: IPython Notebook</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Command-line reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#machine-commands">Machine commands</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#machine-start">machine start</a></li>
@@ -561,15 +562,15 @@ docknv bundle start <span class="nb">test</span> test2
 </div>
 <div class="section" id="bundle-restart">
 <h3>bundle restart<a class="headerlink" href="#bundle-restart" title="Permalink to this headline">¶</a></h3>
-<p>Restart multiple configurations. You can force the restart (<code class="docutils literal"><span class="pre">-f/--force</span></code>).</p>
+<p>Restart multiple configurations. You can force the restart (<code class="docutils literal"><span class="pre">-f/--force</span></code>), and restart in foreground (<code class="docutils literal"><span class="pre">--foreground</span></code>).</p>
 <p>Examples:</p>
 <div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Restart the `test` configuration</span>
 docknv bundle restart <span class="nb">test</span>
 <span class="c1"># same as &#39;docknv config use test; docknv config restart&#39;</span>
 
-<span class="c1"># Restart the `test` configuration with force</span>
-docknv bundle restart -f <span class="nb">test</span>
-<span class="c1"># same as &#39;docknv config use test; docknv config restart -f&#39;</span>
+<span class="c1"># Restart the `test` configuration with force and in foreground</span>
+docknv bundle restart -f --foreground <span class="nb">test</span>
+<span class="c1"># same as &#39;docknv config use test; docknv config restart -f --foreground&#39;</span>
 
 <span class="c1"># Restart the `test` and `test2` configuration</span>
 docknv bundle restart <span class="nb">test</span> test2
@@ -775,7 +776,7 @@ docknv registry stop
         <a href="../modules.html" class="btn btn-neutral float-right" title="docknv" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
-        <a href="03.environment.html" class="btn btn-neutral" title="Environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+        <a href="05.ipython.html" class="btn btn-neutral" title="Practical example: IPython Notebook" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
       
     </div>
   

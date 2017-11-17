@@ -94,6 +94,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../../pages/01.intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../pages/02.architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../pages/03.environment.html">Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../pages/05.ipython.html">Practical example: IPython Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../pages/10.command-line-reference.html">Command-line reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../modules.html">docknv</a></li>
 </ul>
@@ -430,7 +431,10 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">docknv.schema_handler</span> <span class="k">import</span> <span class="n">schema_get_configuration</span>
     <span class="kn">from</span> <span class="nn">docknv.template_renderer</span> <span class="k">import</span> <span class="n">renderer_render_compose_template</span>
-    <span class="kn">from</span> <span class="nn">docknv.environment_handler</span> <span class="k">import</span> <span class="n">env_yaml_check_file</span><span class="p">,</span> <span class="n">env_yaml_load_in_memory</span>
+    <span class="kn">from</span> <span class="nn">docknv.environment_handler</span> <span class="k">import</span> <span class="p">(</span>
+        <span class="n">env_yaml_check_file</span><span class="p">,</span> <span class="n">env_yaml_load_in_memory</span><span class="p">,</span>
+        <span class="n">env_yaml_resolve_variables</span>
+    <span class="p">)</span>
     <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_get_id</span>
 
     <span class="kn">from</span> <span class="nn">docknv.session_handler</span> <span class="k">import</span> <span class="p">(</span>
@@ -465,6 +469,7 @@
         <span class="n">Logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Environment file `</span><span class="si">{0}</span><span class="s2">` does not exist.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">environment</span><span class="p">))</span>
 
     <span class="n">env_content</span> <span class="o">=</span> <span class="n">env_yaml_load_in_memory</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">environment</span><span class="p">)</span>
+    <span class="n">env_content</span> <span class="o">=</span> <span class="n">env_yaml_resolve_variables</span><span class="p">(</span><span class="n">env_content</span><span class="p">)</span>
 
     <span class="c1"># Get schema configuration</span>
     <span class="n">schema_config</span> <span class="o">=</span> <span class="n">schema_get_configuration</span><span class="p">(</span><span class="n">config_data</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">)</span>
@@ -489,6 +494,7 @@
     <span class="n">output_compose_file</span> <span class="o">=</span> <span class="n">project_get_composefile</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_name</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">output_compose_file</span><span class="p">):</span>
         <span class="n">create_path_tree</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">output_compose_file</span><span class="p">))</span>
+
     <span class="n">composefile_write</span><span class="p">(</span><span class="n">namespaced_content</span><span class="p">,</span> <span class="n">output_compose_file</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">update</span><span class="p">:</span>

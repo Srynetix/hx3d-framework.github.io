@@ -96,6 +96,7 @@
 <li class="toctree-l1"><a class="reference internal" href="pages/01.intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pages/02.architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pages/03.environment.html">Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/05.ipython.html">Practical example: IPython Notebook</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pages/10.command-line-reference.html">Command-line reference</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">docknv</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">docknv package</a><ul>
@@ -873,7 +874,7 @@
 
 <dl class="function">
 <dt id="docknv.lifecycle_handler.lifecycle_bundle_restart">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_bundle_restart</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_names</em>, <em>force=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_bundle_restart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_bundle_restart" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_bundle_restart</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_names</em>, <em>foreground=False</em>, <em>force=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_bundle_restart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_bundle_restart" title="Permalink to this definition">¶</a></dt>
 <dd><p>Restart multiple configurations.</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
@@ -882,6 +883,7 @@
 <tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
 <li><strong>project_path</strong> – Project path (str)</li>
 <li><strong>config_names</strong> – Config names (iterable)</li>
+<li><strong>foreground</strong> – Run in foreground (bool) (default: False)</li>
 <li><strong>force</strong> – Force restart (bool) (default: False)</li>
 </ul>
 </td>
@@ -1237,7 +1239,12 @@
 <col class="field-name" />
 <col class="field-body" />
 <tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>project_path</strong> – Project path (str)</li>
+<li><strong>foreground</strong> – Run in foreground (bool) (default: False)</li>
+<li><strong>force</strong> – Force restart (bool) (default: False)</li>
+</ul>
+</td>
 </tr>
 </tbody>
 </table>
