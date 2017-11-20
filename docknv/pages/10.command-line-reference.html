@@ -140,6 +140,7 @@
 <li class="toctree-l3"><a class="reference internal" href="#env-ls">env ls</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#env-show">env show</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#env-edit">env edit</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#env-convert">env convert</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#schema-commands">Schema commands</a><ul>
@@ -643,6 +644,20 @@ docknv env edit test_env2
 
 <span class="c1"># Edit an existing `test_env` environment file with `vim`</span>
 docknv env edit test_env -e vim <span class="c1"># or --editor vim</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="env-convert">
+<h3>env convert<a class="headerlink" href="#env-convert" title="Permalink to this headline">¶</a></h3>
+<p>Convert an environment file from the old Python format to the new YAML format.
+If you convert a Python environment with an <strong>import directive</strong>, do not forget to also convert the imported Python environment.</p>
+<p>The new YAML file will be in the environment folder (<code class="docutils literal"><span class="pre">envs</span></code>), with the <code class="docutils literal"><span class="pre">.env.yml</span></code> extension.</p>
+<p>Example:</p>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Convert a `old_test` Python environment file to the YAML format</span>
+docknv env convert old_test
+
+<span class="c1"># Convert a `old_default` Python environment file to the YAML format</span>
+docknv env convert old_default
 </pre></div>
 </div>
 </div>

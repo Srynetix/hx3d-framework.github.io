@@ -173,6 +173,7 @@
 
 <span class="kn">from</span> <span class="nn">docknv.logger</span> <span class="k">import</span> <span class="n">Logger</span><span class="p">,</span> <span class="n">Fore</span>
 <span class="kn">from</span> <span class="nn">docknv.utils.ioutils</span> <span class="k">import</span> <span class="n">io_open</span>
+<span class="kn">from</span> <span class="nn">docknv.utils.prompt</span> <span class="k">import</span> <span class="n">prompt_yes_no</span>
 <span class="kn">from</span> <span class="nn">docknv.utils.serialization</span> <span class="k">import</span> <span class="n">yaml_ordered_dump</span><span class="p">,</span> <span class="n">yaml_ordered_load</span>
 
 <span class="n">IMPORT_DETECTION_RGX</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;-\*-\s*import:\s*([a-zA-Z0-9_-]*)\s*-\*-&#39;</span><span class="p">)</span>
@@ -314,6 +315,105 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="s2">&quot;envs&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;.env.yml&quot;</span><span class="p">)))</span></div>
 
+
+<div class="viewcode-block" id="env_yaml_convert"><a class="viewcode-back" href="../../docknv.html#docknv.environment_handler.env_yaml_convert">[docs]</a><span class="k">def</span> <span class="nf">env_yaml_convert</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Convert a Python environment file to a YAML environment file.</span>
+
+<span class="sd">    It will create a new [name].env.yml.</span>
+
+<span class="sd">    :param project_path:    Project path (str)</span>
+<span class="sd">    :param name:            Environment name (str)</span>
+<span class="sd">    :rtype: Absolute path to YAML environment file (str), YAML data (dict)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">imp</span>
+
+    <span class="c1"># Loading Python env</span>
+    <span class="n">py_env</span> <span class="o">=</span> <span class="p">{}</span>
+    <span class="n">py_env_path</span> <span class="o">=</span> <span class="n">env_get_py_path</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">py_env_path</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;File `</span><span class="si">{0}</span><span class="s2">` does not exist&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">py_env_path</span><span class="p">))</span>
+
+    <span class="n">yaml_env_path</span> <span class="o">=</span> <span class="n">env_get_yaml_path</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">yaml_env_path</span><span class="p">):</span>
+        <span class="n">choice</span> <span class="o">=</span> <span class="n">prompt_yes_no</span><span class="p">(</span><span class="s2">&quot;/!</span><span class="se">\\</span><span class="s2"> The environment file `</span><span class="si">{0}</span><span class="s2">` already exists. Your Python file might already have been converted. Are you sure to continue ?&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span> <span class="c1"># noqa</span>
+            <span class="n">yaml_env_path</span>
+        <span class="p">))</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">choice</span><span class="p">:</span>
+            <span class="k">return</span>
+
+    <span class="n">py_env_data</span> <span class="o">=</span> <span class="n">imp</span><span class="o">.</span><span class="n">load_source</span><span class="p">(</span><span class="s2">&quot;envs&quot;</span><span class="p">,</span> <span class="n">py_env_path</span><span class="p">)</span>
+    <span class="n">py_env_vars</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">py_env_data</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">e</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;__&quot;</span><span class="p">)]</span>
+    <span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">py_env_vars</span><span class="p">:</span>
+        <span class="n">py_env</span><span class="p">[</span><span class="n">variable</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">py_env_data</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span>
+
+    <span class="c1"># Imports</span>
+    <span class="n">py_env_content</span> <span class="o">=</span> <span class="n">_env_py_read_file_content</span><span class="p">(</span><span class="n">py_env_path</span><span class="p">)</span>
+    <span class="n">py_imported_environments</span> <span class="o">=</span> <span class="n">_env_py_detect_imports</span><span class="p">(</span><span class="n">py_env_content</span><span class="p">)</span>
+
+    <span class="n">yaml_data</span> <span class="o">=</span> <span class="p">{</span><span class="s2">&quot;imports&quot;</span><span class="p">:</span> <span class="n">py_imported_environments</span><span class="p">,</span> <span class="s2">&quot;environment&quot;</span><span class="p">:</span> <span class="n">py_env</span><span class="p">}</span>
+    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">py_imported_environments</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">del</span> <span class="n">yaml_data</span><span class="p">[</span><span class="s2">&quot;imports&quot;</span><span class="p">]</span>
+
+    <span class="k">with</span> <span class="n">io_open</span><span class="p">(</span><span class="n">yaml_env_path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;wt&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+        <span class="n">handle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">yaml_ordered_dump</span><span class="p">(</span><span class="n">yaml_data</span><span class="p">))</span>
+
+    <span class="n">Logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Python environment `</span><span class="si">{0}</span><span class="s2">.env.py` has been converted to `</span><span class="si">{0}</span><span class="s2">.env.yml`&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">name</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">yaml_env_path</span><span class="p">,</span> <span class="n">yaml_data</span></div>
+
+<span class="c1">##############</span>
+<span class="c1"># LEGACY</span>
+
+
+<div class="viewcode-block" id="env_py_load_in_memory"><a class="viewcode-back" href="../../docknv.html#docknv.environment_handler.env_py_load_in_memory">[docs]</a><span class="k">def</span> <span class="nf">env_py_load_in_memory</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Load Python environment file in memory.</span>
+
+<span class="sd">    :param project_path:     Project path (str)</span>
+<span class="sd">    :param name:             Environment file name (str)</span>
+<span class="sd">    :rtype: Environment data (dict)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="kn">import</span> <span class="nn">imp</span>
+
+    <span class="n">env_path</span> <span class="o">=</span> <span class="n">env_get_py_path</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">env_path</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">RuntimeError</span><span class="p">(</span><span class="s2">&quot;File `</span><span class="si">{0}</span><span class="s2">` does not exist&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">env_path</span><span class="p">))</span>
+
+    <span class="n">loaded_env</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
+
+    <span class="c1"># Detect imports</span>
+    <span class="n">env_content</span> <span class="o">=</span> <span class="n">_env_py_read_file_content</span><span class="p">(</span><span class="n">env_path</span><span class="p">)</span>
+    <span class="n">imported_environments</span> <span class="o">=</span> <span class="n">_env_py_detect_imports</span><span class="p">(</span><span class="n">env_content</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">imported_env</span> <span class="ow">in</span> <span class="n">imported_environments</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">imported_env</span> <span class="o">==</span> <span class="n">name</span><span class="p">:</span>
+            <span class="k">continue</span>
+
+        <span class="n">result</span> <span class="o">=</span> <span class="n">env_py_load_in_memory</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">imported_env</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">result</span><span class="p">:</span>
+            <span class="n">loaded_env</span><span class="p">[</span><span class="n">key</span><span class="p">]</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+
+    <span class="c1"># Loading variables</span>
+    <span class="n">env_data</span> <span class="o">=</span> <span class="n">imp</span><span class="o">.</span><span class="n">load_source</span><span class="p">(</span><span class="s2">&quot;envs&quot;</span><span class="p">,</span> <span class="n">env_path</span><span class="p">)</span>
+    <span class="n">env_vars</span> <span class="o">=</span> <span class="p">[</span><span class="n">e</span> <span class="k">for</span> <span class="n">e</span> <span class="ow">in</span> <span class="nb">dir</span><span class="p">(</span><span class="n">env_data</span><span class="p">)</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">e</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;__&quot;</span><span class="p">)]</span>
+    <span class="k">for</span> <span class="n">variable</span> <span class="ow">in</span> <span class="n">env_vars</span><span class="p">:</span>
+        <span class="n">loaded_env</span><span class="p">[</span><span class="n">variable</span><span class="p">]</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="n">env_data</span><span class="p">,</span> <span class="n">variable</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">loaded_env</span></div>
+
+
+<div class="viewcode-block" id="env_get_py_path"><a class="viewcode-back" href="../../docknv.html#docknv.environment_handler.env_get_py_path">[docs]</a><span class="k">def</span> <span class="nf">env_get_py_path</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">name</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get Python environment path.</span>
+
+<span class="sd">    :param project_path:    Project path (str)</span>
+<span class="sd">    :param name:            Environment name (str)</span>
+<span class="sd">    :rtype: Absolute path to environment file (str)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="s2">&quot;envs&quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">((</span><span class="n">name</span><span class="p">,</span> <span class="s2">&quot;.env.py&quot;</span><span class="p">)))</span></div>
+
 <span class="c1">##############</span>
 <span class="c1"># PRIVATE</span>
 
@@ -363,6 +463,31 @@
             <span class="k">return</span> <span class="n">resolved_env</span><span class="p">[</span><span class="n">var_name</span><span class="p">]</span>
 
     <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">VARIABLE_DETECTION_RGX</span><span class="p">,</span> <span class="n">_replace</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
+
+
+<span class="k">def</span> <span class="nf">_env_py_detect_imports</span><span class="p">(</span><span class="n">env_content</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Detect imports in an environment file.</span>
+
+<span class="sd">    :param env_content:  Environment file content (str)</span>
+<span class="sd">    :rtype: Detected imports (iterable)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">detected_imports</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">match</span> <span class="ow">in</span> <span class="n">IMPORT_DETECTION_RGX</span><span class="o">.</span><span class="n">finditer</span><span class="p">(</span><span class="n">env_content</span><span class="p">):</span>
+        <span class="n">detected_imports</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">match</span><span class="o">.</span><span class="n">groups</span><span class="p">()[</span><span class="mi">0</span><span class="p">])</span>
+
+    <span class="k">return</span> <span class="n">detected_imports</span>
+
+
+<span class="k">def</span> <span class="nf">_env_py_read_file_content</span><span class="p">(</span><span class="n">env_path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Open and read environment file content.</span>
+
+<span class="sd">    :param env_path:     Environment file path (str)</span>
+<span class="sd">    :rtype: Environment file content (str)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">with</span> <span class="n">io_open</span><span class="p">(</span><span class="n">env_path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">handle</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 </pre></div>
 
            </div>

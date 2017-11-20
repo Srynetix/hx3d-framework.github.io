@@ -236,6 +236,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="docknv.utils.html">docknv.utils package</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="docknv.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.utils.html#module-docknv.utils.deprecated">docknv.utils.deprecated module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="docknv.utils.html#module-docknv.utils.diff_system">docknv.utils.diff_system module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="docknv.utils.html#module-docknv.utils.ioutils">docknv.utils.ioutils module</a></li>
 <li class="toctree-l2"><a class="reference internal" href="docknv.utils.html#module-docknv.utils.paths">docknv.utils.paths module</a></li>
@@ -614,6 +615,27 @@
 <span id="docknv-environment-handler-module"></span><h2>docknv.environment_handler module<a class="headerlink" href="#module-docknv.environment_handler" title="Permalink to this headline">¶</a></h2>
 <p>Environment files handler.</p>
 <dl class="function">
+<dt id="docknv.environment_handler.env_get_py_path">
+<code class="descclassname">docknv.environment_handler.</code><code class="descname">env_get_py_path</code><span class="sig-paren">(</span><em>project_path</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/environment_handler.html#env_get_py_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.environment_handler.env_get_py_path" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get Python environment path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>project_path</strong> – Project path (str)</li>
+<li><strong>name</strong> – Environment name (str)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Absolute path to environment file (str)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="docknv.environment_handler.env_get_yaml_path">
 <code class="descclassname">docknv.environment_handler.</code><code class="descname">env_get_yaml_path</code><span class="sig-paren">(</span><em>project_path</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/environment_handler.html#env_get_yaml_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.environment_handler.env_get_yaml_path" title="Permalink to this definition">¶</a></dt>
 <dd><p>Get YAML environment path.</p>
@@ -635,6 +657,27 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="docknv.environment_handler.env_py_load_in_memory">
+<code class="descclassname">docknv.environment_handler.</code><code class="descname">env_py_load_in_memory</code><span class="sig-paren">(</span><em>project_path</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/environment_handler.html#env_py_load_in_memory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.environment_handler.env_py_load_in_memory" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load Python environment file in memory.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>project_path</strong> – Project path (str)</li>
+<li><strong>name</strong> – Environment file name (str)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Environment data (dict)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="docknv.environment_handler.env_yaml_check_file">
 <code class="descclassname">docknv.environment_handler.</code><code class="descname">env_yaml_check_file</code><span class="sig-paren">(</span><em>project_path</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/environment_handler.html#env_yaml_check_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.environment_handler.env_yaml_check_file" title="Permalink to this definition">¶</a></dt>
 <dd><p>Check if an environment file exist.</p>
@@ -649,6 +692,28 @@
 </td>
 </tr>
 <tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.environment_handler.env_yaml_convert">
+<code class="descclassname">docknv.environment_handler.</code><code class="descname">env_yaml_convert</code><span class="sig-paren">(</span><em>project_path</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/environment_handler.html#env_yaml_convert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.environment_handler.env_yaml_convert" title="Permalink to this definition">¶</a></dt>
+<dd><p>Convert a Python environment file to a YAML environment file.</p>
+<p>It will create a new [name].env.yml.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>project_path</strong> – Project path (str)</li>
+<li><strong>name</strong> – Environment name (str)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Absolute path to YAML environment file (str), YAML data (dict)</p>
 </td>
 </tr>
 </tbody>
