@@ -1,0 +1,26 @@
+InstantSuiteDocker Cheat Sheet
+==============================
+
+Useful paths
+------------
+
+- Environment files: ``./envs``
+- Jinja templates and static files: ``./data/files/<machine_name>``
+- InstantSuite source code: ``./data/files/shared/codes_<namespace_name>``
+- Filer: ``./data/files/shared/fs``
+- Dump/Misc. shared folder: ``./data/files/shared/dump``
+
+Useful commands
+---------------
+
+- List all configs: ``docknv config ls``
+- Use a config: ``docknv config use <config_name>``
+- Check current config: ``docknv config status``
+- Update the current config and restart: ``docknv config update -r``
+
+- Special commands:
+
+  - Start a Django shell (``ipython`` by default): ``docknv django shell``
+  - Update the Django schema: ``docknv django migrate``
+  - Start an editor for the InstantSuite source code: ``docknv code edit``
+  - ...and many more with the subcommands: ``code``, ``database``, ``dev``, ``django``, ``metabase``, ``queue`` and ``sentry`` !

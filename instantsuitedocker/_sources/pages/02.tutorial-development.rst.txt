@@ -1,0 +1,315 @@
+Tutorial: Simple Base/Client configuration
+==========================================
+
+In this tutorial, you will create a simple base and client configuration.
+
+The base configuration will contains shared services, as the ``database`` and the ``queue`` systems.
+The client configuration will contains client services, as the ``back``, ``front``, ``cache`` and the different workers services.
+
+**/!\\ The base folder name should be named `instantsuitedocker`!**
+
+1. Exploring what is available and set the environment
+------------------------------------------------------
+
+Without editing anything, you can list available environments, available schemas and available configurations using these three commands:
+
+.. code-block:: bash
+
+    # List environments, containing env. variables to use in templates.
+    docknv env ls
+
+    # List schemas, containing volumes, services and networks.
+    docknv schema ls
+
+    # List configurations, which link environments, schemas and namespaces together.
+    docknv config ls
+    
+
+Environments
+++++++++++++
+
+First, you need to edit/create the environment file you want in ``./envs`` to set your settings.  
+The default environment is ``base-default.env.py``.
+
+So, for your custom installation, you have to create an environment file ``base.env.py``, from the default environment file:
+
+.. code-block:: bash
+  
+    # Create a 'base' environment from the 'base-default'
+    docknv scaffold env base --from-env base-default
+
+The environment scaffolding will create a simple file:
+
+.. code-block:: yaml
+
+    imports:
+      - base-default
+      
+    environment: {}
+    
+It only imports the ``base-default`` environment and do not declare more environment variables.
+
+If you want, you can override environment variables in your new environment file (``./envs/base.env.yml``), based on the existing ``base-default.env.yml`` file.
+
+Schemas
++++++++
+
+Before creating a configuration, you need to select a schema.
+Using the schema listing command earlier (``docknv schema ls``), you can see the available schemas.
+
+
+*Base services, schemas, volumes and networks*
+
++-------------+-------------+----------------+-------------+-------------+
+| Service     | Software    | Description    | Network     | Volume?     |
++=============+=============+================+=============+=============+
+| database    | PostgreSQL  | Database       | *net*       | **Yes**     |
++-------------+-------------+----------------+-------------+-------------+
+| queue       | RabbitMQ    | Message        | *net*       | No          |
+|             |             | broker         |             |             |
++-------------+-------------+----------------+-------------+-------------+
+| cache       | Memcache    | Key-Value      | *net*       | No          |
+|             |             | storage        |             |             |
++-------------+-------------+----------------+-------------+-------------+
+| control     | Portainer   | Docker         | *net*       | **Yes**     |
+|             |             | management     |             |             |
+|             |             | interface      |             |             |
++-------------+-------------+----------------+-------------+-------------+
+| sentry      | Sentry      | Error          | *net*       | **Yes**     |
+|             |             | reporting      |             |             |
+|             |             | system         |             |             |
++-------------+-------------+----------------+-------------+-------------+
+| sentry_beat | Celery Beat | Task           | *net*       | No          |
+|             |             | handler for    |             |             |
+|             |             | Sentry         |             |             |
++-------------+-------------+----------------+-------------+-------------+
+| sentry_work | Celery      | Worker for     | *net*       | No          |
+| er          |             | Sentry         |             |             |
++-------------+-------------+----------------+-------------+-------------+
+| redis       | Redis       | Key-Value      | *net*       | **Yes**     |
+|             |             | storage        |             |             |
++-------------+-------------+----------------+-------------+-------------+
+| **Schema    |             |                |             |             |
+| groups**    |             |                |             |             |
++-------------+-------------+----------------+-------------+-------------+
+| base        |             | database,      |             |             |
+|             |             | queue,         |             |             |
+|             |             | control        |             |             |
++-------------+-------------+----------------+-------------+-------------+
+| base-debug  |             | base,          |             |             |
+|             |             | sentry,        |             |             |
+|             |             | sentry_beat,   |             |             |
+|             |             | sentry_worker, |             |             |
+|             |             | redis          |             |             |
++-------------+-------------+----------------+-------------+-------------+
+
+*Client services, schemas, volumes and networks*
+
++-------------+-------------+---------------+-------------+-------------+
+| Service     | Software    | Description   | Network     | Volume?     |
++=============+=============+===============+=============+=============+
+| front       | Nginx       | Reverse       | *net*       | No          |
+|             |             | proxy         |             |             |
++-------------+-------------+---------------+-------------+-------------+
+| back        | Django/Apac | Application   | *net*       | No          |
+|             | he          | server        |             |             |
++-------------+-------------+---------------+-------------+-------------+
+| cache       | Memcache    | Key-Value     | *net*       | No          |
+|             |             | storage       |             |             |
++-------------+-------------+---------------+-------------+-------------+
+| worker      | Celery      | Worker for    | *net*       | No          |
+|             |             | Django        |             |             |
++-------------+-------------+---------------+-------------+-------------+
+| worker_beat | Celery Beat | Task          | *net*       | No          |
+|             |             | handler for   |             |             |
+|             |             | Django        |             |             |
++-------------+-------------+---------------+-------------+-------------+
+| worker_ev   | Celery      | Celery        | *net*       | No          |
+|             | EvCam       | event         |             |             |
+|             |             | system        |             |             |
++-------------+-------------+---------------+-------------+-------------+
+| **Schema    |             |               |             |             |
+| groups**    |             |               |             |             |
++-------------+-------------+---------------+-------------+-------------+
+| workers     |             | worker,       |             |             |
+|             |             | worker_beat,  |             |             |
+|             |             | worker_ev     |             |             |
++-------------+-------------+---------------+-------------+-------------+
+| app         |             | workers,      |             |             |
+|             |             | front,        |             |             |
+|             |             | back,         |             |             |
+|             |             | cache         |             |             |
++-------------+-------------+---------------+-------------+-------------+
+
+For this tutorial, we can work with **2 configurations**, using **2 schemas**: one *base* schema for the **shared services**, and one *app* schema to represent **one client**.
+
+2. Create and start the configurations
+--------------------------------------
+
+a. Base configuration
++++++++++++++++++++++
+
+**1. Configuration creation**
+
+In this example, we will create one base configuration, using the common services (schema *base*).
+We will use the environment file ``base.env.py`` and name the configuration ``base``.
+
+.. code-block:: bash
+
+    # Syntax:
+    # docknv config create config_name schema_name environment_name [-n namespace_name]
+    docknv config create base base-debug base
+    # => base
+
+Configurations should be named to easily refer to them.
+Next, before building, you have to start a registry.
+
+.. code-block:: bash
+
+    # Start the registry
+    docknv registry start
+
+**2. Activation, building and starting**
+
+Now, you can **activate** the configuration, then **build** and **start** the config:
+
+.. code-block:: bash
+
+    # Set the 'base' config as active
+    docknv config use base
+    
+    # Build and start the configuration
+    docknv config build
+    docknv config start
+
+**3. Checks and installation**
+
+To check if your containers are up:
+
+.. code-block:: bash
+
+    docknv config ps
+    
+b. Client configuration
++++++++++++++++++++++++
+
+Before creating the configuration, you can create an environment file for **Client 1**,
+and edit it as you want.
+
+.. code-block:: bash
+
+    # Copy the client environment
+    docknv scaffold env client --from-env app-default
+
+You may need to edit the variable **ENVIRONMENT_NAME** and other
+settings in your new environment file. Here is a sample environment file
+that you can use (``app-example.env.yml``).
+
+.. code-block:: yaml
+
+    ###################################
+    # Example application configuration
+    #
+    # It inherits from 'app-default' and redefine some variables:
+    #
+    #   - It sets the environment, organisation and cloud name to: "client"
+    #   - It sets the server in "runserver" mode (instead of "apache"), and enables debug information
+    #   - It enables the IPython Notebook (port 8888)
+    #   - It changes the default email addresses (with a test@sharingcloud.com)
+    #   - You can set HTTPS certificate and key below, but if you want HTTPS do not forget to enable SC_USE_HTTPS
+
+    imports:
+      - app-default
+      
+    environment:
+      ENVIRONMENT_NAME: client
+      SC_CLOUD_NAME: client
+      SC_ORGANISATION_NAME: client
+      
+      SERVER_TYPE: runserver
+      DEBUG: True
+      
+      ENABLE_IPYTHON_NOTEBOOK: True
+      
+      SC_ADMINS: test@sharingcloud.com
+      SC_SUPPORT_ADMIN: test@sharingcloud.com
+      SC_EMAIL_ADMIN: test@sharingcloud.com
+      
+      ################
+      # Front
+
+      SC_USE_HTTPS: False
+      SC_NG_SSLCERTIFICATEFILE: ""
+      SC_NG_SSLCERTIFICATEKEYFILE: ""
+
+Once you have edited your client environment file, you can proceed to the next step.
+
+To create the client configuration, we will use the ``app`` schema, the ``client.env.py`` environment, a ``client`` namespace and name the configuration ``client``.
+
+.. code-block:: bash
+
+    # Create the client configuration
+    docknv config create client app client -n client
+
+You also need to fetch the InstantSuite. You can pull any branch.
+For example, to clone ``develop`` for ``client``:
+
+.. code-block:: bash
+
+    # Set the 'client' configuration as active
+    docknv config use client
+    # Clone the 'develop' branch
+    docknv code clone develop
+
+**2. Activation and building**
+
+Same thing as for the **base** configuration, activate and build the config:
+
+.. code:: bash
+
+    # The 'client' cofniguration should already set as active, else:
+    #   docknv config use client
+    
+    # Build the configuration
+    docknv config build
+
+**3. Installation and checks**
+
+Now you can initialize the InstantSuite data, using the included ``django`` subcommand.
+
+.. code:: bash
+
+    # Prepare Django
+    docknv django install
+    # Restart containers
+    docknv config restart
+
+To check if your containers are up:
+
+.. code:: bash
+
+    docknv config ps
+  
+3. Now what?
+------------
+
+By using ``docknv config ls``, you can list the configurations you just
+created.
+
+.. code:: bash
+
+    # Configuration example
+
+    [0.0807] [INFO] Known configurations:
+      - base [namespace: default, environment: base, schema: base]
+      - client [namespace: client, environment: client, schema: app]
+
+To switch between configurations, use ``docknv config use [configuration]``.
+Use ``docknv config status`` to check your current configuration.
+
+You can now open your browser and navigate to your installation.
+
+-  You can access to *Portainer* at port **9000**.
+-  You can access to *Instant Booking* at port **80**.
+-  You can access to the *IPython Notebook* at port **8888**.
+
