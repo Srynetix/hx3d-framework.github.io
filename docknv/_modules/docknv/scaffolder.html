@@ -163,8 +163,8 @@
   <h1>Source code for docknv.scaffolder</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;Scaffolder methods.&quot;&quot;&quot;</span>
 
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">print_function</span>
 <span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">unicode_literals</span>
+<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">print_function</span>
 
 <span class="kn">import</span> <span class="nn">os</span>
 
@@ -172,6 +172,12 @@
 <span class="kn">from</span> <span class="nn">docknv.utils.ioutils</span> <span class="k">import</span> <span class="n">io_open</span>
 
 <span class="kn">from</span> <span class="nn">docknv.logger</span> <span class="k">import</span> <span class="n">Logger</span>
+
+<span class="kn">from</span> <span class="nn">docknv.environment_handler</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">env_yaml_write_to_file</span><span class="p">,</span> <span class="n">env_yaml_inherits</span><span class="p">,</span>
+    <span class="n">env_yaml_load_in_memory</span><span class="p">,</span> <span class="n">env_get_yaml_path</span>
+<span class="p">)</span>
+
 
 <span class="n">IGNORE_FILE_CONTENT</span> <span class="o">=</span> <span class="s2">&quot;&quot;&quot;</span>
 <span class="s2">__pyc__/</span>
@@ -255,11 +261,6 @@
 <span class="sd">    :param env_name:         Environment name (str)</span>
 <span class="sd">    :param env_content:      Environment content (str?) (default: None)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.environment_handler</span> <span class="k">import</span> <span class="p">(</span>
-        <span class="n">env_yaml_write_to_file</span><span class="p">,</span>
-        <span class="n">env_get_yaml_path</span>
-    <span class="p">)</span>
-
     <span class="n">env_content</span> <span class="o">=</span> <span class="n">env_content</span> <span class="k">if</span> <span class="n">env_content</span> <span class="k">else</span> <span class="p">{}</span>
     <span class="n">env_path</span> <span class="o">=</span> <span class="n">env_get_yaml_path</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">env_name</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">env_path</span><span class="p">):</span>
@@ -290,11 +291,6 @@
 <span class="sd">    :param env_name_source:  Source environment name (str)</span>
 <span class="sd">    :param env_name_dest:    Destination environment name (str)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.environment_handler</span> <span class="k">import</span> <span class="p">(</span>
-        <span class="n">env_yaml_inherits</span><span class="p">,</span> <span class="n">env_yaml_load_in_memory</span><span class="p">,</span> <span class="n">env_get_yaml_path</span><span class="p">,</span>
-        <span class="n">env_yaml_write_to_file</span>
-    <span class="p">)</span>
-
     <span class="k">if</span> <span class="n">env_name_source</span> <span class="o">==</span> <span class="n">env_name_dest</span><span class="p">:</span>
         <span class="n">Logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s1">&#39;Source environment name and destination environment name cannot be the same.&#39;</span><span class="p">)</span>
 

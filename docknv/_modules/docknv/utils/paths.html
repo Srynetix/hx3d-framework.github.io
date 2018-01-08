@@ -167,6 +167,16 @@
 <span class="kn">import</span> <span class="nn">shutil</span>
 
 
+<div class="viewcode-block" id="get_lower_basename"><a class="viewcode-back" href="../../../docknv.utils.html#docknv.utils.paths.get_lower_basename">[docs]</a><span class="k">def</span> <span class="nf">get_lower_basename</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Get the basename of a path, lowercased.</span>
+
+<span class="sd">    :param path:    Path (str)</span>
+<span class="sd">    :rtype: Lowercase basename (str)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">path</span><span class="p">))</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span></div>
+
+
 <div class="viewcode-block" id="create_path_or_replace"><a class="viewcode-back" href="../../../docknv.utils.html#docknv.utils.paths.create_path_or_replace">[docs]</a><span class="k">def</span> <span class="nf">create_path_or_replace</span><span class="p">(</span><span class="n">path_to_create</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Create or replace path.</span>

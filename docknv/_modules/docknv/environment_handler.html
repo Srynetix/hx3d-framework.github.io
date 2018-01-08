@@ -163,11 +163,11 @@
   <h1>Source code for docknv.environment_handler</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;Environment files handler.&quot;&quot;&quot;</span>
 
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">unicode_literals</span>
-
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">re</span>
 <span class="kn">import</span> <span class="nn">copy</span>
+<span class="kn">import</span> <span class="nn">imp</span>
+<span class="kn">import</span> <span class="nn">json</span>
 
 <span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">OrderedDict</span>
 
@@ -265,6 +265,25 @@
     <span class="k">return</span> <span class="n">loaded_env</span></div>
 
 
+<div class="viewcode-block" id="env_yaml_key_value_export"><a class="viewcode-back" href="../../docknv.html#docknv.environment_handler.env_yaml_key_value_export">[docs]</a><span class="k">def</span> <span class="nf">env_yaml_key_value_export</span><span class="p">(</span><span class="n">env_data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Export YAML data as key/value.</span>
+
+<span class="sd">    :param env_data:    Environment data (dict)</span>
+<span class="sd">    :rtype: Key value string (str)</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">export_string</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+    <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">env_data</span><span class="p">:</span>
+        <span class="n">value</span> <span class="o">=</span> <span class="n">env_data</span><span class="p">[</span><span class="n">key</span><span class="p">]</span>
+        <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">value</span><span class="p">,</span> <span class="nb">str</span><span class="p">):</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">value</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">value</span> <span class="o">=</span> <span class="n">json</span><span class="o">.</span><span class="n">dumps</span><span class="p">(</span><span class="n">value</span><span class="p">)</span>
+        <span class="n">export_string</span> <span class="o">+=</span> <span class="n">key</span> <span class="o">+</span> <span class="s2">&quot;=&quot;</span> <span class="o">+</span> <span class="n">value</span> <span class="o">+</span> <span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span>
+
+    <span class="k">return</span> <span class="n">export_string</span></div>
+
+
 <div class="viewcode-block" id="env_yaml_resolve_variables"><a class="viewcode-back" href="../../docknv.html#docknv.environment_handler.env_yaml_resolve_variables">[docs]</a><span class="k">def</span> <span class="nf">env_yaml_resolve_variables</span><span class="p">(</span><span class="n">loaded_env</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Resolve environment.</span>
@@ -326,8 +345,6 @@
 <span class="sd">    :param name:            Environment name (str)</span>
 <span class="sd">    :rtype: Absolute path to YAML environment file (str), YAML data (dict)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">import</span> <span class="nn">imp</span>
-
     <span class="c1"># Loading Python env</span>
     <span class="n">py_env</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="n">py_env_path</span> <span class="o">=</span> <span class="n">env_get_py_path</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
@@ -375,8 +392,6 @@
 <span class="sd">    :param name:             Environment file name (str)</span>
 <span class="sd">    :rtype: Environment data (dict)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">import</span> <span class="nn">imp</span>
-
     <span class="n">env_path</span> <span class="o">=</span> <span class="n">env_get_py_path</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">isfile</span><span class="p">(</span><span class="n">env_path</span><span class="p">):</span>
@@ -460,7 +475,7 @@
         <span class="k">if</span> <span class="n">var_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">resolved_env</span><span class="p">:</span>
             <span class="n">Logger</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;[ENV] Unknown environment variable </span><span class="si">{0}</span><span class="s2">. It may not have been resolved yet.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">var_name</span><span class="p">))</span>
         <span class="k">else</span><span class="p">:</span>
-            <span class="k">return</span> <span class="n">resolved_env</span><span class="p">[</span><span class="n">var_name</span><span class="p">]</span>
+            <span class="k">return</span> <span class="nb">str</span><span class="p">(</span><span class="n">resolved_env</span><span class="p">[</span><span class="n">var_name</span><span class="p">])</span>
 
     <span class="k">return</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="n">VARIABLE_DETECTION_RGX</span><span class="p">,</span> <span class="n">_replace</span><span class="p">,</span> <span class="n">value</span><span class="p">)</span>
 

@@ -228,9 +228,16 @@
             <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
 
     <span class="n">OrderedDumper</span><span class="o">.</span><span class="n">add_representer</span><span class="p">(</span><span class="n">OrderedDict</span><span class="p">,</span> <span class="n">_dict_representer</span><span class="p">)</span>
-    <span class="n">out</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">stream</span><span class="p">,</span> <span class="n">OrderedDumper</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+    <span class="n">OrderedDumper</span><span class="o">.</span><span class="n">add_representer</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">yaml</span><span class="o">.</span><span class="n">representer</span><span class="o">.</span><span class="n">SafeRepresenter</span><span class="o">.</span><span class="n">represent_str</span><span class="p">)</span>
+
     <span class="k">if</span> <span class="n">six</span><span class="o">.</span><span class="n">PY2</span><span class="p">:</span>
-        <span class="n">out</span> <span class="o">=</span> <span class="n">unicode</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>  <span class="c1"># noqa</span>
+        <span class="n">OrderedDumper</span><span class="o">.</span><span class="n">add_representer</span><span class="p">(</span><span class="n">unicode</span><span class="p">,</span> <span class="n">yaml</span><span class="o">.</span><span class="n">representer</span><span class="o">.</span><span class="n">SafeRepresenter</span><span class="o">.</span><span class="n">represent_unicode</span><span class="p">)</span> <span class="c1"># noqa</span>
+
+    <span class="n">out</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">stream</span><span class="p">,</span> <span class="n">OrderedDumper</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="n">six</span><span class="o">.</span><span class="n">PY2</span><span class="p">:</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">unicode</span><span class="p">(</span><span class="n">out</span><span class="p">)</span> <span class="c1"># noqa</span>
+
     <span class="k">return</span> <span class="n">out</span></div>
 
 

@@ -168,8 +168,17 @@
 <span class="kn">from</span> <span class="nn">docknv.utils.serialization</span> <span class="k">import</span> <span class="n">yaml_ordered_load</span><span class="p">,</span> <span class="n">yaml_ordered_dump</span>
 <span class="kn">from</span> <span class="nn">docknv.utils.prompt</span> <span class="k">import</span> <span class="n">prompt_yes_no</span>
 <span class="kn">from</span> <span class="nn">docknv.utils.ioutils</span> <span class="k">import</span> <span class="n">io_open</span>
+<span class="kn">from</span> <span class="nn">docknv.utils.paths</span> <span class="k">import</span> <span class="n">get_lower_basename</span>
+<span class="kn">from</span> <span class="nn">docknv.utils.diff_system</span> <span class="k">import</span> <span class="n">read_last_modification_time</span><span class="p">,</span> <span class="n">save_last_modification_time</span>
 
 <span class="kn">from</span> <span class="nn">docknv.logger</span> <span class="k">import</span> <span class="n">Logger</span><span class="p">,</span> <span class="n">Fore</span>
+
+<span class="kn">from</span> <span class="nn">docknv.environment_handler</span> <span class="k">import</span> <span class="n">env_yaml_check_file</span>
+
+<span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_get_id</span><span class="p">,</span> <span class="n">user_clean_config_path</span><span class="p">,</span> <span class="n">user_get_file_from_project</span>
+
+<span class="kn">from</span> <span class="nn">docknv.schema_handler</span> <span class="k">import</span> <span class="n">schema_check</span>
+
 
 <span class="n">SESSION_FILE_NAME</span> <span class="o">=</span> <span class="s2">&quot;.docknv.yml&quot;</span>
 
@@ -244,8 +253,6 @@
 <span class="sd">    :param config_name:          Config name (str)</span>
 <span class="sd">    :param environment_name:     Environment name (str)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.environment_handler</span> <span class="k">import</span> <span class="n">env_yaml_check_file</span>
-
     <span class="k">if</span> <span class="n">env_yaml_check_file</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">environment_name</span><span class="p">):</span>
         <span class="n">docknv_config</span> <span class="o">=</span> <span class="n">session_read_configuration</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
 
@@ -265,14 +272,12 @@
 <span class="sd">    :param config_name:      Config name (str)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="p">(</span>
-        <span class="n">project_get_composefile</span><span class="p">,</span> <span class="n">project_get_name</span><span class="p">,</span> <span class="n">project_get_active_configuration</span><span class="p">,</span>
+        <span class="n">project_get_composefile</span><span class="p">,</span> <span class="n">project_get_active_configuration</span><span class="p">,</span>
         <span class="n">project_unset_configuration</span>
     <span class="p">)</span>
 
-    <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_get_id</span><span class="p">,</span> <span class="n">user_clean_config_path</span>
-
     <span class="n">config</span> <span class="o">=</span> <span class="n">session_read_configuration</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
-    <span class="n">project_name</span> <span class="o">=</span> <span class="n">project_get_name</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
+    <span class="n">project_name</span> <span class="o">=</span> <span class="n">get_lower_basename</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">config_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;values&quot;</span><span class="p">]:</span>
         <span class="n">Logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Missing configuration `</span><span class="si">{0}</span><span class="s2">`.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">config_name</span><span class="p">))</span>
 
@@ -312,8 +317,6 @@
 <span class="sd">    :param config_name:      Config name (str)</span>
 <span class="sd">    :param schema_name:      Schema name (str)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.schema_handler</span> <span class="k">import</span> <span class="n">schema_check</span>
-
     <span class="k">if</span> <span class="n">schema_check</span><span class="p">(</span><span class="n">project_config</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">):</span>
         <span class="n">docknv_config</span> <span class="o">=</span> <span class="n">session_read_configuration</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
 
@@ -403,9 +406,6 @@
 <span class="sd">    :param config_name:     Config name (str)</span>
 <span class="sd">    :rtype: Timestamp data (dict)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_get_file_from_project</span>
-    <span class="kn">from</span> <span class="nn">docknv.utils.diff_system</span> <span class="k">import</span> <span class="n">read_last_modification_time</span>
-
     <span class="n">timestamps_path</span> <span class="o">=</span> <span class="n">user_get_file_from_project</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="s2">&quot;timestamps.json&quot;</span><span class="p">,</span> <span class="n">config_name</span><span class="p">)</span>
     <span class="n">original_timestamps</span> <span class="o">=</span> <span class="p">{}</span>
     <span class="k">if</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">timestamps_path</span><span class="p">):</span>
@@ -423,9 +423,6 @@
 <span class="sd">    :param config_name:     Config name (str)</span>
 <span class="sd">    :param timestamps:      Timestamp data (dict)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_get_file_from_project</span>
-    <span class="kn">from</span> <span class="nn">docknv.utils.diff_system</span> <span class="k">import</span> <span class="n">save_last_modification_time</span>
-
     <span class="n">timestamps_path</span> <span class="o">=</span> <span class="n">user_get_file_from_project</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="s2">&quot;timestamps.json&quot;</span><span class="p">,</span> <span class="n">config_name</span><span class="p">)</span>
     <span class="k">with</span> <span class="n">io_open</span><span class="p">(</span><span class="n">timestamps_path</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">stream</span><span class="p">:</span>
         <span class="n">save_last_modification_time</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">timestamps</span><span class="p">)</span></div>

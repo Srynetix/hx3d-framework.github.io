@@ -170,7 +170,7 @@
 <span class="kn">from</span> <span class="nn">docknv.logger</span> <span class="k">import</span> <span class="n">Logger</span>
 <span class="kn">from</span> <span class="nn">docknv.utils.serialization</span> <span class="k">import</span> <span class="n">yaml_ordered_load</span><span class="p">,</span> <span class="n">yaml_ordered_dump</span><span class="p">,</span> <span class="n">yaml_merge</span>
 <span class="kn">from</span> <span class="nn">docknv.utils.words</span> <span class="k">import</span> <span class="n">generate_config_name</span>
-<span class="kn">from</span> <span class="nn">docknv.utils.paths</span> <span class="k">import</span> <span class="n">create_path_tree</span>
+<span class="kn">from</span> <span class="nn">docknv.utils.paths</span> <span class="k">import</span> <span class="n">create_path_tree</span><span class="p">,</span> <span class="n">get_lower_basename</span>
 <span class="kn">from</span> <span class="nn">docknv.utils.ioutils</span> <span class="k">import</span> <span class="n">io_open</span>
 
 <span class="n">CONFIG_FILE_NAME</span> <span class="o">=</span> <span class="s2">&quot;config.yml&quot;</span>
@@ -289,16 +289,6 @@
     <span class="n">session_update_schema</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">project_config</span><span class="p">,</span> <span class="n">config_name</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="project_get_name"><a class="viewcode-back" href="../../docknv.html#docknv.project_handler.project_get_name">[docs]</a><span class="k">def</span> <span class="nf">project_get_name</span><span class="p">(</span><span class="n">project_path</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;</span>
-<span class="sd">    Get project name from path.</span>
-
-<span class="sd">    :param project_path:     Project path (str)</span>
-<span class="sd">    :rtype: Project path (str)</span>
-<span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">project_path</span><span class="p">))</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span></div>
-
-
 <div class="viewcode-block" id="project_use_configuration"><a class="viewcode-back" href="../../docknv.html#docknv.project_handler.project_use_configuration">[docs]</a><span class="k">def</span> <span class="nf">project_use_configuration</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_name</span><span class="p">,</span> <span class="n">quiet</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Use a composefile from a known configuration.</span>
@@ -319,8 +309,7 @@
     <span class="k">if</span> <span class="n">config</span><span class="p">[</span><span class="s2">&quot;user&quot;</span><span class="p">]</span> <span class="o">!=</span> <span class="n">current_id</span><span class="p">:</span>
         <span class="n">Logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Can not access to `</span><span class="si">{0}</span><span class="s2">` configuration. Access denied.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">config_name</span><span class="p">))</span>
 
-    <span class="n">path</span> <span class="o">=</span> <span class="n">project_get_composefile</span><span class="p">(</span>
-        <span class="n">project_path</span><span class="p">,</span> <span class="n">config_name</span><span class="p">)</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">project_get_composefile</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_name</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">path</span><span class="p">):</span>
         <span class="n">Logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Missing composefile for configuration `</span><span class="si">{0}</span><span class="s2">`&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">config_name</span><span class="p">))</span>
@@ -372,12 +361,10 @@
 <span class="sd">    :param project_path:     Project path (str)</span>
 <span class="sd">    :param config_name:      Config name (str)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_get_project_path</span>
+    <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_get_file_from_project</span>
 
-    <span class="n">project_name</span> <span class="o">=</span> <span class="n">project_get_name</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
-    <span class="n">config_path</span> <span class="o">=</span> <span class="n">user_get_project_path</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="n">config_name</span><span class="p">)</span>
-
-    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">config_path</span><span class="p">,</span> <span class="s2">&quot;docker-compose.yml&quot;</span><span class="p">)</span></div>
+    <span class="n">project_name</span> <span class="o">=</span> <span class="n">get_lower_basename</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">user_get_file_from_project</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="s2">&quot;docker-compose.yml&quot;</span><span class="p">,</span> <span class="n">config_name</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="project_generate_compose_from_configuration"><a class="viewcode-back" href="../../docknv.html#docknv.project_handler.project_generate_compose_from_configuration">[docs]</a><span class="k">def</span> <span class="nf">project_generate_compose_from_configuration</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_name</span><span class="p">):</span>
@@ -433,9 +420,9 @@
     <span class="kn">from</span> <span class="nn">docknv.template_renderer</span> <span class="k">import</span> <span class="n">renderer_render_compose_template</span>
     <span class="kn">from</span> <span class="nn">docknv.environment_handler</span> <span class="k">import</span> <span class="p">(</span>
         <span class="n">env_yaml_check_file</span><span class="p">,</span> <span class="n">env_yaml_load_in_memory</span><span class="p">,</span>
-        <span class="n">env_yaml_resolve_variables</span>
+        <span class="n">env_yaml_resolve_variables</span><span class="p">,</span> <span class="n">env_yaml_key_value_export</span>
     <span class="p">)</span>
-    <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_get_id</span>
+    <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_get_id</span><span class="p">,</span> <span class="n">user_get_file_from_project</span>
 
     <span class="kn">from</span> <span class="nn">docknv.session_handler</span> <span class="k">import</span> <span class="p">(</span>
         <span class="n">session_read_configuration</span><span class="p">,</span> <span class="n">session_write_configuration</span><span class="p">,</span> <span class="n">session_insert_configuration</span>
@@ -443,7 +430,7 @@
 
     <span class="kn">from</span> <span class="nn">docknv.composefile_handler</span> <span class="k">import</span> <span class="p">(</span>
         <span class="n">composefile_multiple_read</span><span class="p">,</span> <span class="n">composefile_filter</span><span class="p">,</span> <span class="n">composefile_resolve_volumes</span><span class="p">,</span>
-        <span class="n">composefile_apply_namespace</span><span class="p">,</span> <span class="n">composefile_write</span>
+        <span class="n">composefile_apply_namespace</span><span class="p">,</span> <span class="n">composefile_write</span><span class="p">,</span> <span class="n">composefile_handle_service_tags</span>
     <span class="p">)</span>
 
     <span class="c1">####################</span>
@@ -464,12 +451,23 @@
     <span class="c1"># Load config file</span>
     <span class="n">config_data</span> <span class="o">=</span> <span class="n">project_read</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
 
+    <span class="k">try</span><span class="p">:</span>
+        <span class="n">registry_url</span> <span class="o">=</span> <span class="n">config_data</span><span class="o">.</span><span class="n">config_data</span><span class="p">[</span><span class="s2">&quot;registry&quot;</span><span class="p">][</span><span class="s2">&quot;url&quot;</span><span class="p">]</span>
+    <span class="k">except</span> <span class="ne">BaseException</span><span class="p">:</span>
+        <span class="n">registry_url</span> <span class="o">=</span> <span class="s2">&quot;localhost:5000&quot;</span>
+
     <span class="c1"># Load environment</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">env_yaml_check_file</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">environment</span><span class="p">):</span>
         <span class="n">Logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Environment file `</span><span class="si">{0}</span><span class="s2">` does not exist.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">environment</span><span class="p">))</span>
 
     <span class="n">env_content</span> <span class="o">=</span> <span class="n">env_yaml_load_in_memory</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">environment</span><span class="p">)</span>
     <span class="n">env_content</span> <span class="o">=</span> <span class="n">env_yaml_resolve_variables</span><span class="p">(</span><span class="n">env_content</span><span class="p">)</span>
+
+    <span class="c1"># Save environment</span>
+    <span class="k">with</span> <span class="n">io_open</span><span class="p">(</span>
+        <span class="n">user_get_file_from_project</span><span class="p">(</span><span class="n">config_data</span><span class="o">.</span><span class="n">project_name</span><span class="p">,</span> <span class="s1">&#39;environment.env&#39;</span><span class="p">,</span> <span class="n">config_name</span><span class="p">),</span> <span class="n">mode</span><span class="o">=</span><span class="s1">&#39;wt&#39;</span>
+    <span class="p">)</span> <span class="k">as</span> <span class="n">handle</span><span class="p">:</span>
+        <span class="n">handle</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">env_yaml_key_value_export</span><span class="p">(</span><span class="n">env_content</span><span class="p">))</span>
 
     <span class="c1"># Get schema configuration</span>
     <span class="n">schema_config</span> <span class="o">=</span> <span class="n">schema_get_configuration</span><span class="p">(</span><span class="n">config_data</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">)</span>
@@ -486,6 +484,9 @@
     <span class="c1"># Generate volumes declared in composefiles</span>
     <span class="n">rendered_content</span> <span class="o">=</span> <span class="n">composefile_resolve_volumes</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">resolved_content</span><span class="p">,</span> <span class="n">config_name</span><span class="p">,</span> <span class="n">namespace</span><span class="p">,</span>
                                                    <span class="n">environment</span><span class="p">,</span> <span class="n">env_content</span><span class="p">)</span>
+
+    <span class="c1"># Handle services tags</span>
+    <span class="n">rendered_content</span> <span class="o">=</span> <span class="n">composefile_handle_service_tags</span><span class="p">(</span><span class="n">rendered_content</span><span class="p">,</span> <span class="n">registry_url</span><span class="p">)</span>
 
     <span class="c1"># Apply namespace</span>
     <span class="n">namespaced_content</span> <span class="o">=</span> <span class="n">composefile_apply_namespace</span><span class="p">(</span><span class="n">rendered_content</span><span class="p">,</span> <span class="n">namespace</span><span class="p">,</span> <span class="n">environment</span><span class="p">)</span>
@@ -527,7 +528,7 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_clean_config_path</span>
 
-    <span class="n">project_name</span> <span class="o">=</span> <span class="n">project_get_name</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
+    <span class="n">project_name</span> <span class="o">=</span> <span class="n">get_lower_basename</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
     <span class="k">if</span> <span class="ow">not</span> <span class="n">config_name</span><span class="p">:</span>
         <span class="n">Logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Attempting to clean user configuration for project `</span><span class="si">{0}</span><span class="s2">`&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">project_name</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>

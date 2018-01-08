@@ -170,21 +170,18 @@
 <span class="kn">from</span> <span class="nn">docknv.utils.serialization</span> <span class="k">import</span> <span class="n">yaml_merge</span>
 
 
-<div class="viewcode-block" id="schema_list"><a class="viewcode-back" href="../../docknv.html#docknv.schema_handler.schema_list">[docs]</a><span class="k">def</span> <span class="nf">schema_list</span><span class="p">(</span><span class="n">project_path</span><span class="p">):</span>
+<div class="viewcode-block" id="schema_list"><a class="viewcode-back" href="../../docknv.html#docknv.schema_handler.schema_list">[docs]</a><span class="k">def</span> <span class="nf">schema_list</span><span class="p">(</span><span class="n">project_data</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    List available schemas for the project.</span>
 
-<span class="sd">    :param project_path:     Project path (str)</span>
+<span class="sd">    :param project_data:     Project data (str)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="n">project_read</span>
-
-    <span class="n">config_data</span> <span class="o">=</span> <span class="n">project_read</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
-    <span class="n">schemas_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">config_data</span><span class="o">.</span><span class="n">schemas</span><span class="p">)</span> <span class="k">if</span> <span class="n">config_data</span><span class="o">.</span><span class="n">schemas</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="mi">0</span>
+    <span class="n">schemas_count</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">project_data</span><span class="o">.</span><span class="n">schemas</span><span class="p">)</span> <span class="k">if</span> <span class="n">project_data</span><span class="o">.</span><span class="n">schemas</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span> <span class="k">else</span> <span class="mi">0</span>
     <span class="k">if</span> <span class="n">schemas_count</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
         <span class="n">Logger</span><span class="o">.</span><span class="n">warn</span><span class="p">(</span><span class="s2">&quot;No schema found.&quot;</span><span class="p">)</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">config_data</span><span class="o">.</span><span class="n">schemas</span><span class="p">:</span>
-            <span class="n">schema</span> <span class="o">=</span> <span class="n">schema_get_configuration</span><span class="p">(</span><span class="n">config_data</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">name</span> <span class="ow">in</span> <span class="n">project_data</span><span class="o">.</span><span class="n">schemas</span><span class="p">:</span>
+            <span class="n">schema</span> <span class="o">=</span> <span class="n">schema_get_configuration</span><span class="p">(</span><span class="n">project_data</span><span class="p">,</span> <span class="n">name</span><span class="p">)</span>
             <span class="n">Logger</span><span class="o">.</span><span class="n">raw</span><span class="p">(</span><span class="s2">&quot;Schema: &quot;</span> <span class="o">+</span> <span class="n">name</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">Fore</span><span class="o">.</span><span class="n">GREEN</span><span class="p">)</span>
             <span class="k">if</span> <span class="s2">&quot;volumes&quot;</span> <span class="ow">in</span> <span class="n">schema</span><span class="p">[</span><span class="s2">&quot;config&quot;</span><span class="p">]:</span>
                 <span class="n">Logger</span><span class="o">.</span><span class="n">raw</span><span class="p">(</span><span class="s2">&quot;  Volumes: &quot;</span><span class="p">,</span> <span class="n">color</span><span class="o">=</span><span class="n">Fore</span><span class="o">.</span><span class="n">BLUE</span><span class="p">)</span>
@@ -200,24 +197,24 @@
             <span class="n">Logger</span><span class="o">.</span><span class="n">raw</span><span class="p">(</span><span class="s2">&quot;&quot;</span><span class="p">)</span></div>
 
 
-<div class="viewcode-block" id="schema_get_configuration"><a class="viewcode-back" href="../../docknv.html#docknv.schema_handler.schema_get_configuration">[docs]</a><span class="k">def</span> <span class="nf">schema_get_configuration</span><span class="p">(</span><span class="n">config_data</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">):</span>
+<div class="viewcode-block" id="schema_get_configuration"><a class="viewcode-back" href="../../docknv.html#docknv.schema_handler.schema_get_configuration">[docs]</a><span class="k">def</span> <span class="nf">schema_get_configuration</span><span class="p">(</span><span class="n">project_data</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Get schema configuration.</span>
 
-<span class="sd">    :param config_data:  Config data (dict)</span>
+<span class="sd">    :param project_data:  Project data (dict)</span>
 <span class="sd">    :param schema_name:  Schema name (str)</span>
 <span class="sd">    :rtype: Schema configuration (dict)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">schema_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">config_data</span><span class="o">.</span><span class="n">schemas</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">schema_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">project_data</span><span class="o">.</span><span class="n">schemas</span><span class="p">:</span>
         <span class="n">Logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Schema `</span><span class="si">{0}</span><span class="s2">` does not exist.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">schema_name</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
-        <span class="n">schema_config</span> <span class="o">=</span> <span class="n">config_data</span><span class="o">.</span><span class="n">schemas</span><span class="p">[</span><span class="n">schema_name</span><span class="p">]</span>
+        <span class="n">schema_config</span> <span class="o">=</span> <span class="n">project_data</span><span class="o">.</span><span class="n">schemas</span><span class="p">[</span><span class="n">schema_name</span><span class="p">]</span>
 
         <span class="c1"># Inclusions</span>
         <span class="k">if</span> <span class="s2">&quot;includes&quot;</span> <span class="ow">in</span> <span class="n">schema_config</span><span class="p">:</span>
             <span class="n">includes</span> <span class="o">=</span> <span class="n">schema_config</span><span class="p">[</span><span class="s2">&quot;includes&quot;</span><span class="p">]</span>
             <span class="n">include_schemas</span> <span class="o">=</span> <span class="p">[</span><span class="n">schema_get_configuration</span><span class="p">(</span>
-                <span class="n">config_data</span><span class="p">,</span> <span class="n">include_name</span><span class="p">)[</span><span class="s2">&quot;config&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">include_name</span> <span class="ow">in</span> <span class="n">includes</span><span class="p">]</span>
+                <span class="n">project_data</span><span class="p">,</span> <span class="n">include_name</span><span class="p">)[</span><span class="s2">&quot;config&quot;</span><span class="p">]</span> <span class="k">for</span> <span class="n">include_name</span> <span class="ow">in</span> <span class="n">includes</span><span class="p">]</span>
 
             <span class="n">current_schema</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">schema_config</span><span class="p">)</span>
             <span class="k">del</span> <span class="n">current_schema</span><span class="p">[</span><span class="s2">&quot;includes&quot;</span><span class="p">]</span>
@@ -228,15 +225,15 @@
         <span class="k">return</span> <span class="p">{</span><span class="s2">&quot;name&quot;</span><span class="p">:</span> <span class="n">schema_name</span><span class="p">,</span> <span class="s2">&quot;config&quot;</span><span class="p">:</span> <span class="n">schema_config</span><span class="p">}</span></div>
 
 
-<div class="viewcode-block" id="schema_check"><a class="viewcode-back" href="../../docknv.html#docknv.schema_handler.schema_check">[docs]</a><span class="k">def</span> <span class="nf">schema_check</span><span class="p">(</span><span class="n">config_data</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">):</span>
+<div class="viewcode-block" id="schema_check"><a class="viewcode-back" href="../../docknv.html#docknv.schema_handler.schema_check">[docs]</a><span class="k">def</span> <span class="nf">schema_check</span><span class="p">(</span><span class="n">project_data</span><span class="p">,</span> <span class="n">schema_name</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Check if a schema exist.</span>
 
-<span class="sd">    :param config_data:      Config data (dict)</span>
+<span class="sd">    :param project_data:      Project data (dict)</span>
 <span class="sd">    :param schema_name:      Schema name (str)</span>
 <span class="sd">    :rtype: bool</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="n">schema_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">config_data</span><span class="o">.</span><span class="n">schemas</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">schema_name</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">project_data</span><span class="o">.</span><span class="n">schemas</span><span class="p">:</span>
         <span class="n">Logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Schema `</span><span class="si">{0}</span><span class="s2">` does not exist.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">schema_name</span><span class="p">))</span>
 
     <span class="k">return</span> <span class="kc">True</span></div>

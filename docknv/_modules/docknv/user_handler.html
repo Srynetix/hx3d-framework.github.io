@@ -163,13 +163,12 @@
   <h1>Source code for docknv.user_handler</h1><div class="highlight"><pre>
 <span></span><span class="sd">&quot;&quot;&quot;User handling.&quot;&quot;&quot;</span>
 
-<span class="kn">from</span> <span class="nn">__future__</span> <span class="k">import</span> <span class="n">unicode_literals</span>
-
 <span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">shutil</span>
 
 <span class="kn">from</span> <span class="nn">contextlib</span> <span class="k">import</span> <span class="n">contextmanager</span>
 
+<span class="kn">from</span> <span class="nn">docknv.utils.prompt</span> <span class="k">import</span> <span class="n">prompt_yes_no</span>
 <span class="kn">from</span> <span class="nn">docknv.utils.ioutils</span> <span class="k">import</span> <span class="n">io_open</span>
 <span class="kn">from</span> <span class="nn">docknv.utils.serialization</span> <span class="k">import</span> <span class="n">yaml_ordered_load</span><span class="p">,</span> <span class="n">yaml_ordered_dump</span>
 <span class="kn">from</span> <span class="nn">docknv.logger</span> <span class="k">import</span> <span class="n">Logger</span>
@@ -354,7 +353,7 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="k">try</span><span class="p">:</span>
             <span class="k">yield</span>
-        <span class="k">except</span> <span class="ne">Exception</span><span class="p">:</span>
+        <span class="k">except</span> <span class="ne">BaseException</span><span class="p">:</span>
             <span class="n">user_disable_lock</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
             <span class="k">raise</span>
 
@@ -362,16 +361,17 @@
 
 
 <div class="viewcode-block" id="user_temporary_copy_file"><a class="viewcode-back" href="../../docknv.html#docknv.user_handler.user_temporary_copy_file">[docs]</a><span class="nd">@contextmanager</span>
-<span class="k">def</span> <span class="nf">user_temporary_copy_file</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="n">path_to_file</span><span class="p">):</span>
+<span class="k">def</span> <span class="nf">user_temporary_copy_file</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="n">path_to_file</span><span class="p">,</span> <span class="n">config_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Make a temporary copy of a user config file.</span>
 
 <span class="sd">    :param project_name:     Project name (str)</span>
 <span class="sd">    :param path_to_file:     Path to file (str)</span>
+<span class="sd">    :param config_name:      Config name (str?) (default: None)</span>
 
 <span class="sd">    **Context manager**</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">path</span> <span class="o">=</span> <span class="n">user_get_file_from_project</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="n">path_to_file</span><span class="p">)</span>
+    <span class="n">path</span> <span class="o">=</span> <span class="n">user_get_file_from_project</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="n">path_to_file</span><span class="p">,</span> <span class="n">config_name</span><span class="p">)</span>
 
     <span class="n">generated_file_name</span> <span class="o">=</span> <span class="s2">&quot;.</span><span class="si">{0}</span><span class="s2">.</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">user_get_id</span><span class="p">(),</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
     <span class="n">shutil</span><span class="o">.</span><span class="n">copyfile</span><span class="p">(</span><span class="n">path</span><span class="p">,</span> <span class="n">generated_file_name</span><span class="p">)</span>
@@ -389,8 +389,6 @@
 <span class="sd">    :param project_name:     Project name (str)</span>
 <span class="sd">    :param config_name:      Config name (str?) (default: None)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.utils.prompt</span> <span class="k">import</span> <span class="n">prompt_yes_no</span>
-
     <span class="n">folder_path</span> <span class="o">=</span> <span class="n">user_get_project_path</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="n">config_name</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="ow">not</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">exists</span><span class="p">(</span><span class="n">folder_path</span><span class="p">):</span>
@@ -409,7 +407,7 @@
 
 <span class="sd">    :rtype: Config path (str)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s2">&quot;~/.docknv&quot;</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">expanduser</span><span class="p">(</span><span class="s2">&quot;~/.docknv&quot;</span><span class="p">))</span>
 </pre></div>
 
            </div>

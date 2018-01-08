@@ -167,6 +167,8 @@
 <span class="kn">import</span> <span class="nn">six</span>
 
 <span class="kn">from</span> <span class="nn">docknv.logger</span> <span class="k">import</span> <span class="n">Logger</span>
+<span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="n">project_read</span><span class="p">,</span> <span class="n">project_get_active_configuration</span>
+<span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_get_file_from_project</span>
 
 
 <div class="viewcode-block" id="get_docker_container"><a class="viewcode-back" href="../../docknv.html#docknv.docker_wrapper.get_docker_container">[docs]</a><span class="k">def</span> <span class="nf">get_docker_container</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">machine</span><span class="p">):</span>
@@ -177,23 +179,21 @@
 <span class="sd">    :param machine:          Machine name (str)</span>
 <span class="sd">    :rtype: Container name (str)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="n">project_read</span>
-    <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_temporary_copy_file</span>
-
     <span class="n">config</span> <span class="o">=</span> <span class="n">project_read</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
+    <span class="n">config_name</span> <span class="o">=</span> <span class="n">project_get_active_configuration</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
+    <span class="n">config_filename</span> <span class="o">=</span> <span class="n">user_get_file_from_project</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">project_name</span><span class="p">,</span> <span class="s2">&quot;docker-compose.yml&quot;</span><span class="p">,</span> <span class="n">config_name</span><span class="p">)</span>
 
-    <span class="k">with</span> <span class="n">user_temporary_copy_file</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">project_name</span><span class="p">,</span> <span class="s2">&quot;docker-compose.yml&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">user_file</span><span class="p">:</span>
-        <span class="n">cmd</span> <span class="o">=</span> <span class="s2">&quot;docker-compose -f </span><span class="si">{0}</span><span class="s2"> ps -q </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">user_file</span><span class="p">,</span> <span class="n">machine</span><span class="p">)</span>
-        <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">project_path</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-        <span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">proc</span><span class="o">.</span><span class="n">communicate</span><span class="p">()</span>
+    <span class="n">cmd</span> <span class="o">=</span> <span class="s2">&quot;docker-compose -f </span><span class="si">{0}</span><span class="s2"> --project-directory . ps -q </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">config_filename</span><span class="p">,</span> <span class="n">machine</span><span class="p">)</span>
+    <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">project_path</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="p">(</span><span class="n">out</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">proc</span><span class="o">.</span><span class="n">communicate</span><span class="p">()</span>
 
-        <span class="k">if</span> <span class="n">six</span><span class="o">.</span><span class="n">PY3</span><span class="p">:</span>
-            <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">six</span><span class="o">.</span><span class="n">PY3</span><span class="p">:</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">decode</span><span class="p">(</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
 
-        <span class="k">if</span> <span class="n">out</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
-            <span class="k">return</span> <span class="kc">None</span>
+    <span class="k">if</span> <span class="n">out</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">None</span>
 
-        <span class="k">return</span> <span class="n">out</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span></div>
+    <span class="k">return</span> <span class="n">out</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span></div>
 
 
 <div class="viewcode-block" id="exec_docker"><a class="viewcode-back" href="../../docknv.html#docknv.docker_wrapper.exec_docker">[docs]</a><span class="k">def</span> <span class="nf">exec_docker</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
@@ -203,7 +203,7 @@
 <span class="sd">    :param project_path:     Project path (str)</span>
 <span class="sd">    :param args:             Arguments (...)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;docker&quot;</span><span class="p">,</span> <span class="o">*</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span><span class="p">]]</span>
+    <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;docker&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span> <span class="k">if</span> <span class="n">a</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">]</span>
     <span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Executing docker command: </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmd</span><span class="p">))</span>
     <span class="k">return</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">project_path</span><span class="p">)</span></div>
 
@@ -215,15 +215,13 @@
 <span class="sd">    :param project_path:     Project path (str)</span>
 <span class="sd">    :param args:             Arguments (...)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="n">project_read</span>
-    <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_temporary_copy_file</span>
-
     <span class="n">config</span> <span class="o">=</span> <span class="n">project_read</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
+    <span class="n">config_name</span> <span class="o">=</span> <span class="n">project_get_active_configuration</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
+    <span class="n">config_filename</span> <span class="o">=</span> <span class="n">user_get_file_from_project</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">project_name</span><span class="p">,</span> <span class="s2">&quot;docker-compose.yml&quot;</span><span class="p">,</span> <span class="n">config_name</span><span class="p">)</span>
 
-    <span class="k">with</span> <span class="n">user_temporary_copy_file</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">project_name</span><span class="p">,</span> <span class="s2">&quot;docker-compose.yml&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">user_file</span><span class="p">:</span>
-        <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;docker-compose&quot;</span><span class="p">,</span> <span class="s2">&quot;-f&quot;</span><span class="p">,</span> <span class="n">user_file</span><span class="p">,</span> <span class="o">*</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span><span class="p">]]</span>
-        <span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Executing compose command: </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmd</span><span class="p">))</span>
-        <span class="k">return</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">project_path</span><span class="p">)</span></div>
+    <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;docker-compose&quot;</span><span class="p">,</span> <span class="s2">&quot;-f&quot;</span><span class="p">,</span> <span class="n">config_filename</span><span class="p">,</span> <span class="s2">&quot;--project-directory&quot;</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span> <span class="k">if</span> <span class="n">a</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">]</span>
+    <span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Executing compose command: </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmd</span><span class="p">))</span>
+    <span class="k">return</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">call</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">project_path</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="exec_compose_pretty"><a class="viewcode-back" href="../../docknv.html#docknv.docker_wrapper.exec_compose_pretty">[docs]</a><span class="k">def</span> <span class="nf">exec_compose_pretty</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">args</span><span class="p">):</span>
@@ -233,31 +231,27 @@
 <span class="sd">    :param project_path:     Project path (str)</span>
 <span class="sd">    :param args:             Arguments (...)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="n">project_read</span>
-    <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_temporary_copy_file</span>
-
-    <span class="c1">##################</span>
-
     <span class="n">config</span> <span class="o">=</span> <span class="n">project_read</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
+    <span class="n">config_name</span> <span class="o">=</span> <span class="n">project_get_active_configuration</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
+    <span class="n">config_filename</span> <span class="o">=</span> <span class="n">user_get_file_from_project</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">project_name</span><span class="p">,</span> <span class="s2">&quot;docker-compose.yml&quot;</span><span class="p">,</span> <span class="n">config_name</span><span class="p">)</span>
 
-    <span class="k">with</span> <span class="n">user_temporary_copy_file</span><span class="p">(</span><span class="n">config</span><span class="o">.</span><span class="n">project_name</span><span class="p">,</span> <span class="s2">&quot;docker-compose.yml&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">user_file</span><span class="p">:</span>
-        <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;docker-compose&quot;</span><span class="p">,</span> <span class="s2">&quot;-f&quot;</span><span class="p">,</span> <span class="n">user_file</span><span class="p">,</span> <span class="o">*</span><span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span><span class="p">]]</span>
+    <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;docker-compose&quot;</span><span class="p">,</span> <span class="s2">&quot;-f&quot;</span><span class="p">,</span> <span class="n">config_filename</span><span class="p">,</span> <span class="s2">&quot;--project-directory&quot;</span><span class="p">,</span> <span class="s2">&quot;.&quot;</span><span class="p">]</span> <span class="o">+</span> <span class="p">[</span><span class="nb">str</span><span class="p">(</span><span class="n">a</span><span class="p">)</span> <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">args</span> <span class="k">if</span> <span class="n">a</span> <span class="o">!=</span> <span class="s2">&quot;&quot;</span><span class="p">]</span>
 
-        <span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Executing (pretty) compose command: </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmd</span><span class="p">))</span>
-        <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="n">cmd</span><span class="p">,</span> <span class="n">cwd</span><span class="o">=</span><span class="n">project_path</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
-                                <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">STDOUT</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">universal_newlines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+    <span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Executing (pretty) compose command: </span><span class="si">{0}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">cmd</span><span class="p">))</span>
+    <span class="n">proc</span> <span class="o">=</span> <span class="n">subprocess</span><span class="o">.</span><span class="n">Popen</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">cmd</span><span class="p">),</span> <span class="n">cwd</span><span class="o">=</span><span class="n">project_path</span><span class="p">,</span> <span class="n">stdout</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">PIPE</span><span class="p">,</span>
+                            <span class="n">stderr</span><span class="o">=</span><span class="n">subprocess</span><span class="o">.</span><span class="n">STDOUT</span><span class="p">,</span> <span class="n">shell</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">universal_newlines</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 
-        <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-            <span class="n">out</span> <span class="o">=</span> <span class="n">proc</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
-            <span class="k">if</span> <span class="n">out</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="n">proc</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
-                <span class="k">break</span>
-            <span class="k">if</span> <span class="n">out</span><span class="p">:</span>
-                <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
-                <span class="k">if</span> <span class="n">_pretty_handler</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">out</span><span class="p">):</span>
-                    <span class="n">Logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="n">out</span> <span class="o">=</span> <span class="n">proc</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">readline</span><span class="p">()</span>
+        <span class="k">if</span> <span class="n">out</span> <span class="o">==</span> <span class="s1">&#39;&#39;</span> <span class="ow">and</span> <span class="n">proc</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+            <span class="k">break</span>
+        <span class="k">if</span> <span class="n">out</span><span class="p">:</span>
+            <span class="n">out</span> <span class="o">=</span> <span class="n">out</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="k">if</span> <span class="n">_pretty_handler</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">out</span><span class="p">):</span>
+                <span class="nb">print</span><span class="p">(</span><span class="n">out</span><span class="p">)</span>
 
-        <span class="n">rc</span> <span class="o">=</span> <span class="n">proc</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span>
-        <span class="k">return</span> <span class="n">rc</span></div>
+    <span class="n">rc</span> <span class="o">=</span> <span class="n">proc</span><span class="o">.</span><span class="n">poll</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">rc</span></div>
 
 
 <span class="k">def</span> <span class="nf">_pretty_handler</span><span class="p">(</span><span class="n">args</span><span class="p">,</span> <span class="n">line</span><span class="p">):</span>
@@ -281,9 +275,6 @@
         <span class="k">return</span> <span class="kc">False</span>
 
     <span class="k">elif</span> <span class="n">line</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
-        <span class="k">return</span> <span class="kc">False</span>
-
-    <span class="k">elif</span> <span class="n">line</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\x1b</span><span class="s2">&quot;</span><span class="p">):</span>
         <span class="k">return</span> <span class="kc">False</span>
 
     <span class="k">return</span> <span class="kc">True</span>

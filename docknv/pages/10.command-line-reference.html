@@ -634,12 +634,12 @@ docknv env show test_env
 <div class="section" id="env-edit">
 <h3>env edit<a class="headerlink" href="#env-edit" title="Permalink to this headline">¶</a></h3>
 <p>Edit or create an environment file for the project.
-By default, it will open the <code class="docutils literal"><span class="pre">atom</span></code> editor. If you no not have <code class="docutils literal"><span class="pre">atom</span></code>, you can specify another editor (<code class="docutils literal"><span class="pre">-e/--editor</span></code>).</p>
+By default, it will try to auto-detect your editor. If you want to use a specific editor, you can use the command: <code class="docutils literal"><span class="pre">-e/--editor</span></code>.</p>
 <p>Examples:</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Edit an existing `test_env` environment file with `atom`</span>
+<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Edit an existing `test_env` environment file with the default editor</span>
 docknv env edit test_env
 
-<span class="c1"># Create a new `test_env2` environment file with `atom`</span>
+<span class="c1"># Create a new `test_env2` environment file with the default editor</span>
 docknv env edit test_env2
 
 <span class="c1"># Edit an existing `test_env` environment file with `vim`</span>

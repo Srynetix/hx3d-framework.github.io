@@ -172,6 +172,9 @@
 
 <span class="kn">from</span> <span class="nn">docknv.utils.serialization</span> <span class="k">import</span> <span class="n">yaml_ordered_dump</span><span class="p">,</span> <span class="n">yaml_ordered_load</span>
 <span class="kn">from</span> <span class="nn">docknv.utils.ioutils</span> <span class="k">import</span> <span class="n">io_open</span>
+<span class="kn">from</span> <span class="nn">docknv.utils.paths</span> <span class="k">import</span> <span class="n">get_lower_basename</span>
+
+<span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_get_project_path</span>
 
 
 <div class="viewcode-block" id="renderer_render_compose_template"><a class="viewcode-back" href="../../docknv.html#docknv.template_renderer.renderer_render_compose_template">[docs]</a><span class="k">def</span> <span class="nf">renderer_render_compose_template</span><span class="p">(</span><span class="n">compose_content</span><span class="p">,</span> <span class="n">environment_data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -222,10 +225,7 @@
 <span class="sd">    :param environment_data:     Environment data (dict?) (default: None)</span>
 <span class="sd">    :rtype: File output name (str)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="n">project_get_name</span>
-    <span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="n">user_get_project_path</span>
-
-    <span class="n">project_name</span> <span class="o">=</span> <span class="n">project_get_name</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
+    <span class="n">project_name</span> <span class="o">=</span> <span class="n">get_lower_basename</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
     <span class="n">user_config_name</span> <span class="o">=</span> <span class="n">user_get_project_path</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="n">config_name</span><span class="p">)</span>
     <span class="n">environment_data</span> <span class="o">=</span> <span class="n">environment_data</span> <span class="k">if</span> <span class="n">environment_data</span> <span class="k">else</span> <span class="p">{}</span>
     <span class="n">templates_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;files&quot;</span><span class="p">)</span>

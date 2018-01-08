@@ -166,10 +166,26 @@
 <span class="kn">import</span> <span class="nn">shlex</span>
 
 <span class="kn">from</span> <span class="nn">docknv.logger</span> <span class="k">import</span> <span class="n">Logger</span><span class="p">,</span> <span class="n">Fore</span><span class="p">,</span> <span class="n">Style</span>
+<span class="kn">from</span> <span class="nn">docknv.utils.paths</span> <span class="k">import</span> <span class="n">get_lower_basename</span>
+
 <span class="kn">from</span> <span class="nn">docknv.docker_wrapper</span> <span class="k">import</span> <span class="p">(</span>
     <span class="n">exec_compose</span><span class="p">,</span> <span class="n">exec_compose_pretty</span><span class="p">,</span> <span class="n">get_docker_container</span><span class="p">,</span>
     <span class="n">exec_docker</span>
 <span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">docknv.session_handler</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">session_get_configuration</span><span class="p">,</span> <span class="n">session_check_bundle_configurations</span>
+<span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">docknv.schema_handler</span> <span class="k">import</span> <span class="n">schema_get_configuration</span>
+
+<span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">project_get_active_configuration</span><span class="p">,</span> <span class="n">project_read</span><span class="p">,</span>
+    <span class="n">project_use_temporary_configuration</span>
+<span class="p">)</span>
+
+<span class="kn">from</span> <span class="nn">docknv.docker_api_wrapper</span> <span class="k">import</span> <span class="n">docker_ps</span><span class="p">,</span> <span class="n">using_docker_client</span><span class="p">,</span> <span class="n">text_ellipse</span>
+<span class="kn">from</span> <span class="nn">docknv.command_handler</span> <span class="k">import</span> <span class="n">command_get_context</span>
 
 
 <div class="viewcode-block" id="lifecycle_get_machine_name"><a class="viewcode-back" href="../../docknv.html#docknv.lifecycle_handler.lifecycle_get_machine_name">[docs]</a><span class="k">def</span> <span class="nf">lifecycle_get_machine_name</span><span class="p">(</span><span class="n">machine_name</span><span class="p">,</span> <span class="n">namespace_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -193,10 +209,6 @@
 <span class="sd">    :param no_cache:             Do not use cache (bool) (default: False)</span>
 <span class="sd">    :param push_to_registry:     Push to registry (bool) (default: True)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.session_handler</span> <span class="k">import</span> <span class="n">session_get_configuration</span>
-    <span class="kn">from</span> <span class="nn">docknv.schema_handler</span> <span class="k">import</span> <span class="n">schema_get_configuration</span>
-    <span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="n">project_get_active_configuration</span><span class="p">,</span> <span class="n">project_read</span>
-
     <span class="n">current_config</span> <span class="o">=</span> <span class="n">project_get_active_configuration</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
     <span class="n">current_config_data</span> <span class="o">=</span> <span class="n">session_get_configuration</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">current_config</span><span class="p">)</span>
 
@@ -207,7 +219,6 @@
     <span class="n">rcode</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">service</span> <span class="ow">in</span> <span class="n">schema_config</span><span class="p">[</span><span class="s2">&quot;config&quot;</span><span class="p">][</span><span class="s2">&quot;services&quot;</span><span class="p">]:</span>
         <span class="n">service_name</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{0}</span><span class="s2">_</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">namespace</span><span class="p">,</span> <span class="n">service</span><span class="p">)</span> <span class="k">if</span> <span class="n">namespace</span> <span class="o">!=</span> <span class="s2">&quot;default&quot;</span> <span class="k">else</span> <span class="n">service</span>
-
         <span class="n">no_cache_cmd</span> <span class="o">=</span> <span class="s2">&quot;--no-cache&quot;</span> <span class="k">if</span> <span class="n">no_cache</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
         <span class="n">rcode</span> <span class="o">=</span> <span class="n">exec_compose_pretty</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;build&quot;</span><span class="p">,</span> <span class="n">service_name</span><span class="p">,</span> <span class="n">no_cache_cmd</span><span class="p">])</span>
         <span class="k">if</span> <span class="n">rcode</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
@@ -246,8 +257,6 @@
 
 <span class="sd">    :param project_path:     Project path (str)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.docker_api_wrapper</span> <span class="k">import</span> <span class="n">docker_ps</span><span class="p">,</span> <span class="n">using_docker_client</span><span class="p">,</span> <span class="n">text_ellipse</span>
-    <span class="kn">from</span> <span class="nn">docknv.command_handler</span> <span class="k">import</span> <span class="n">command_get_context</span>
     <span class="n">ctx</span> <span class="o">=</span> <span class="n">command_get_context</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
 
     <span class="k">with</span> <span class="n">using_docker_client</span><span class="p">()</span> <span class="k">as</span> <span class="n">client</span><span class="p">:</span>
@@ -287,9 +296,6 @@
 <span class="sd">    :param project_path:     Project path (str)</span>
 <span class="sd">    :param config_names:     Config names (iterable)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.session_handler</span> <span class="k">import</span> <span class="n">session_check_bundle_configurations</span>
-    <span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="n">project_use_temporary_configuration</span>
-
     <span class="n">session_check_bundle_configurations</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_names</span><span class="p">)</span>
     <span class="n">code</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">config_name</span> <span class="ow">in</span> <span class="n">config_names</span><span class="p">:</span>
@@ -306,9 +312,6 @@
 <span class="sd">    :param project_path:     Project path (str)</span>
 <span class="sd">    :param config_names:     Config names (iterable)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.session_handler</span> <span class="k">import</span> <span class="n">session_check_bundle_configurations</span>
-    <span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="n">project_use_temporary_configuration</span>
-
     <span class="n">session_check_bundle_configurations</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_names</span><span class="p">)</span>
     <span class="n">code</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">config_name</span> <span class="ow">in</span> <span class="n">config_names</span><span class="p">:</span>
@@ -326,9 +329,6 @@
 <span class="sd">    :param config_names:     Config names (iterable)</span>
 <span class="sd">    :param force:            Force restart (bool) (default: False)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.session_handler</span> <span class="k">import</span> <span class="n">session_check_bundle_configurations</span>
-    <span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="n">project_use_temporary_configuration</span>
-
     <span class="n">session_check_bundle_configurations</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_names</span><span class="p">)</span>
     <span class="n">code</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">config_name</span> <span class="ow">in</span> <span class="n">config_names</span><span class="p">:</span>
@@ -345,9 +345,6 @@
 <span class="sd">    :param project_path:     Project path (str)</span>
 <span class="sd">    :param config_names:     Config names (iterable)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.session_handler</span> <span class="k">import</span> <span class="n">session_check_bundle_configurations</span>
-    <span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="n">project_use_temporary_configuration</span>
-
     <span class="n">session_check_bundle_configurations</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_names</span><span class="p">)</span>
     <span class="n">code</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">config_name</span> <span class="ow">in</span> <span class="n">config_names</span><span class="p">:</span>
@@ -366,9 +363,6 @@
 <span class="sd">    :param no_cache:             Do not use cache (bool) (default: False)</span>
 <span class="sd">    :param push_to_registry:     Push to registry (bool) (default: True)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.session_handler</span> <span class="k">import</span> <span class="n">session_check_bundle_configurations</span>
-    <span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="n">project_use_temporary_configuration</span>
-
     <span class="n">session_check_bundle_configurations</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_names</span><span class="p">)</span>
     <span class="n">code</span> <span class="o">=</span> <span class="mi">0</span>
     <span class="k">for</span> <span class="n">config_name</span> <span class="ow">in</span> <span class="n">config_names</span><span class="p">:</span>
@@ -449,7 +443,7 @@
     <span class="k">else</span><span class="p">:</span>
         <span class="k">return</span> <span class="n">lifecycle_machine_exec</span><span class="p">(</span>
             <span class="n">project_path</span><span class="p">,</span> <span class="n">machine_name</span><span class="p">,</span> <span class="n">shell_path</span><span class="p">,</span>
-            <span class="n">no_tty</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">namespace_name</span><span class="o">=</span><span class="n">namespace_name</span><span class="p">)</span></div>
+            <span class="n">no_tty</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">namespace_name</span><span class="o">=</span><span class="n">namespace_name</span><span class="p">,</span> <span class="n">ignore_code</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="lifecycle_machine_restart"><a class="viewcode-back" href="../../docknv.html#docknv.lifecycle_handler.lifecycle_machine_restart">[docs]</a><span class="k">def</span> <span class="nf">lifecycle_machine_restart</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">machine_name</span><span class="p">,</span> <span class="n">force</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
@@ -485,7 +479,7 @@
 
     <span class="n">d_cmd</span> <span class="o">=</span> <span class="s2">&quot;-d&quot;</span> <span class="k">if</span> <span class="n">daemon</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
 
-    <span class="k">return</span> <span class="n">exec_compose</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">,</span> <span class="s2">&quot;--rm&quot;</span><span class="p">,</span> <span class="s2">&quot;--service-ports&quot;</span><span class="p">,</span> <span class="n">d_cmd</span><span class="p">,</span> <span class="n">machine_name</span><span class="p">,</span> <span class="o">*</span><span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">command</span><span class="p">)])</span></div>
+    <span class="k">return</span> <span class="n">exec_compose</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;run&quot;</span><span class="p">,</span> <span class="s2">&quot;--rm&quot;</span><span class="p">,</span> <span class="s2">&quot;--service-ports&quot;</span><span class="p">,</span> <span class="n">d_cmd</span><span class="p">,</span> <span class="n">machine_name</span><span class="p">]</span> <span class="o">+</span> <span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">command</span><span class="p">))</span></div>
 
 
 <div class="viewcode-block" id="lifecycle_machine_push"><a class="viewcode-back" href="../../docknv.html#docknv.lifecycle_handler.lifecycle_machine_push">[docs]</a><span class="k">def</span> <span class="nf">lifecycle_machine_push</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">machine_name</span><span class="p">,</span> <span class="n">host_path</span><span class="p">,</span> <span class="n">container_path</span><span class="p">,</span> <span class="n">namespace_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
@@ -529,7 +523,7 @@
 
 
 <div class="viewcode-block" id="lifecycle_machine_exec"><a class="viewcode-back" href="../../docknv.html#docknv.lifecycle_handler.lifecycle_machine_exec">[docs]</a><span class="k">def</span> <span class="nf">lifecycle_machine_exec</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">machine_name</span><span class="p">,</span> <span class="n">command</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">no_tty</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-                           <span class="n">namespace_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+                           <span class="n">namespace_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ignore_code</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Execute a machine.</span>
 
@@ -538,6 +532,7 @@
 <span class="sd">    :param command:              Command (str?) (default: None)</span>
 <span class="sd">    :param no_tty:               Do not use TTY (bool) (default: False)</span>
 <span class="sd">    :param namespace_name:       Namespace name (str?) (default: None)</span>
+<span class="sd">    :param ignore_code:          Ignore return code (bool) (default: False)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">machine_name</span> <span class="o">=</span> <span class="n">lifecycle_get_machine_name</span><span class="p">(</span><span class="n">machine_name</span><span class="p">,</span> <span class="n">namespace_name</span><span class="p">)</span>
     <span class="n">container</span> <span class="o">=</span> <span class="n">get_docker_container</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">machine_name</span><span class="p">)</span>
@@ -546,9 +541,9 @@
         <span class="n">Logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Machine `</span><span class="si">{0}</span><span class="s2">` is not running.&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">machine_name</span><span class="p">))</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="n">tty_cmd</span> <span class="o">=</span> <span class="s2">&quot;-ti&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">no_tty</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
-        <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;exec&quot;</span><span class="p">,</span> <span class="n">tty_cmd</span><span class="p">,</span> <span class="n">container</span><span class="p">,</span> <span class="o">*</span><span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">command</span><span class="p">)]</span>
+        <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;exec&quot;</span><span class="p">,</span> <span class="n">tty_cmd</span><span class="p">,</span> <span class="n">container</span><span class="p">]</span> <span class="o">+</span> <span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
         <span class="n">code</span> <span class="o">=</span> <span class="n">exec_docker</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
-        <span class="k">if</span> <span class="n">code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="ow">not</span> <span class="n">ignore_code</span> <span class="ow">and</span> <span class="n">code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
             <span class="n">Logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Error while executing command </span><span class="si">{0}</span><span class="s2"> on machine </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
                 <span class="n">cmd</span><span class="p">,</span> <span class="n">machine_name</span>
             <span class="p">))</span>
@@ -557,7 +552,7 @@
 
 
 <div class="viewcode-block" id="lifecycle_machine_exec_multiple"><a class="viewcode-back" href="../../docknv.html#docknv.lifecycle_handler.lifecycle_machine_exec_multiple">[docs]</a><span class="k">def</span> <span class="nf">lifecycle_machine_exec_multiple</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">machine_name</span><span class="p">,</span> <span class="n">commands</span><span class="p">,</span> <span class="n">no_tty</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
-                                    <span class="n">namespace_name</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
+                                    <span class="n">namespace_name</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">ignore_code</span><span class="o">=</span><span class="kc">False</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Execute multiple commands on a machine.</span>
 
@@ -566,6 +561,7 @@
 <span class="sd">    :param commands:             Commands (iterable)</span>
 <span class="sd">    :param no_tty:               Do not use TTY (bool) (default: False)</span>
 <span class="sd">    :param namespace_name:       Namespace name (str?) (default: None)</span>
+<span class="sd">    :param ignore_code:          Ignore return code (bool) (default: False)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">machine_name</span> <span class="o">=</span> <span class="n">lifecycle_get_machine_name</span><span class="p">(</span><span class="n">machine_name</span><span class="p">,</span> <span class="n">namespace_name</span><span class="p">)</span>
     <span class="n">container</span> <span class="o">=</span> <span class="n">get_docker_container</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">machine_name</span><span class="p">)</span>
@@ -576,8 +572,13 @@
         <span class="n">code</span> <span class="o">=</span> <span class="mi">0</span>
         <span class="k">for</span> <span class="n">command</span> <span class="ow">in</span> <span class="n">commands</span><span class="p">:</span>
             <span class="n">tty_cmd</span> <span class="o">=</span> <span class="s2">&quot;-ti&quot;</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">no_tty</span> <span class="k">else</span> <span class="s2">&quot;&quot;</span>
-            <span class="n">code</span> <span class="o">=</span> <span class="n">exec_docker</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;exec&quot;</span><span class="p">,</span> <span class="n">tty_cmd</span><span class="p">,</span> <span class="n">container</span><span class="p">,</span> <span class="o">*</span><span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">command</span><span class="p">)])</span>
+            <span class="n">cmd</span> <span class="o">=</span> <span class="p">[</span><span class="s2">&quot;exec&quot;</span><span class="p">,</span> <span class="n">tty_cmd</span><span class="p">,</span> <span class="n">container</span><span class="p">]</span> <span class="o">+</span> <span class="n">shlex</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="n">command</span><span class="p">)</span>
+            <span class="n">code</span> <span class="o">=</span> <span class="n">exec_docker</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span>
             <span class="k">if</span> <span class="n">code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+                <span class="k">if</span> <span class="ow">not</span> <span class="n">ignore_code</span><span class="p">:</span>
+                    <span class="n">Logger</span><span class="o">.</span><span class="n">error</span><span class="p">(</span><span class="s2">&quot;Error while executing command </span><span class="si">{0}</span><span class="s2"> on machine </span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span>
+                        <span class="n">cmd</span><span class="p">,</span> <span class="n">machine_name</span>
+                    <span class="p">))</span>
                 <span class="k">break</span>
 
         <span class="k">return</span> <span class="n">code</span></div>
@@ -625,11 +626,9 @@
 <span class="sd">    :param project_path:     Project path (str)</span>
 <span class="sd">    :param volume_name:      Volume name (str)</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="n">project_get_name</span>
-
     <span class="n">Logger</span><span class="o">.</span><span class="n">info</span><span class="p">(</span><span class="s2">&quot;Removing volume `</span><span class="si">{0}</span><span class="s2">`&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">volume_name</span><span class="p">))</span>
 
-    <span class="n">project_name</span> <span class="o">=</span> <span class="n">project_get_name</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
+    <span class="n">project_name</span> <span class="o">=</span> <span class="n">get_lower_basename</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
     <span class="n">volume_path</span> <span class="o">=</span> <span class="s2">&quot;</span><span class="si">{0}</span><span class="s2">_</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="n">volume_name</span><span class="p">)</span>
     <span class="n">code</span> <span class="o">=</span> <span class="n">exec_docker</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="p">[</span><span class="s2">&quot;volume&quot;</span><span class="p">,</span> <span class="s2">&quot;rm&quot;</span><span class="p">,</span> <span class="n">volume_path</span><span class="p">])</span>
     <span class="k">if</span> <span class="n">code</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
@@ -651,7 +650,7 @@
         <span class="n">cmd</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;-v&quot;</span><span class="p">,</span> <span class="s2">&quot;</span><span class="si">{0}</span><span class="s2">:/var/lib/registry&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">path</span><span class="p">)]</span>
     <span class="n">cmd</span> <span class="o">+=</span> <span class="p">[</span><span class="s2">&quot;--restart=always&quot;</span><span class="p">,</span> <span class="s2">&quot;--name&quot;</span><span class="p">,</span> <span class="s2">&quot;registry&quot;</span><span class="p">,</span> <span class="s2">&quot;registry:2&quot;</span><span class="p">]</span>
 
-    <span class="k">return</span> <span class="n">exec_docker</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">path</span><span class="p">)</span></div>
+    <span class="k">return</span> <span class="n">exec_docker</span><span class="p">(</span><span class="s2">&quot;.&quot;</span><span class="p">,</span> <span class="n">cmd</span><span class="p">)</span></div>
 
 
 <div class="viewcode-block" id="lifecycle_registry_stop"><a class="viewcode-back" href="../../docknv.html#docknv.lifecycle_handler.lifecycle_registry_stop">[docs]</a><span class="k">def</span> <span class="nf">lifecycle_registry_stop</span><span class="p">():</span>

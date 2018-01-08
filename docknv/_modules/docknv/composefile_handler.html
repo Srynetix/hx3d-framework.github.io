@@ -170,9 +170,17 @@
 <span class="kn">from</span> <span class="nn">collections</span> <span class="k">import</span> <span class="n">OrderedDict</span>
 
 <span class="kn">from</span> <span class="nn">docknv.logger</span> <span class="k">import</span> <span class="n">Logger</span>
-<span class="kn">from</span> <span class="nn">docknv.utils.paths</span> <span class="k">import</span> <span class="n">create_path_or_replace</span><span class="p">,</span> <span class="n">create_path_tree</span>
+<span class="kn">from</span> <span class="nn">docknv.utils.paths</span> <span class="k">import</span> <span class="n">create_path_or_replace</span><span class="p">,</span> <span class="n">create_path_tree</span><span class="p">,</span> <span class="n">get_lower_basename</span>
 <span class="kn">from</span> <span class="nn">docknv.utils.serialization</span> <span class="k">import</span> <span class="n">yaml_ordered_load</span><span class="p">,</span> <span class="n">yaml_ordered_dump</span>
 <span class="kn">from</span> <span class="nn">docknv.utils.ioutils</span> <span class="k">import</span> <span class="n">io_open</span>
+
+<span class="kn">from</span> <span class="nn">docknv.user_handler</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">user_get_file_from_project</span>
+<span class="p">)</span>
+<span class="kn">from</span> <span class="nn">docknv.template_renderer</span> <span class="k">import</span> <span class="n">renderer_render_template</span>
+<span class="kn">from</span> <span class="nn">docknv.volume_handler</span> <span class="k">import</span> <span class="p">(</span>
+    <span class="n">volume_extract_from_line</span><span class="p">,</span> <span class="n">volume_generate_namespaced_path</span>
+<span class="p">)</span>
 
 
 <div class="viewcode-block" id="composefile_read"><a class="viewcode-back" href="../../docknv.html#docknv.composefile_handler.composefile_read">[docs]</a><span class="k">def</span> <span class="nf">composefile_read</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">compose_file_path</span><span class="p">):</span>
@@ -340,8 +348,6 @@
 
 
 <span class="k">def</span> <span class="nf">_composefile_apply_namespace_replacement</span><span class="p">(</span><span class="n">output_content</span><span class="p">,</span> <span class="n">namespace</span><span class="p">,</span> <span class="n">environment</span><span class="p">,</span> <span class="n">shared_volumes</span><span class="p">):</span>
-    <span class="kn">from</span> <span class="nn">docknv.volume_handler</span> <span class="k">import</span> <span class="n">volume_extract_from_line</span>
-
     <span class="c1"># Service replacement</span>
     <span class="n">new_keys_repl</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
     <span class="k">for</span> <span class="n">key</span> <span class="ow">in</span> <span class="n">output_content</span><span class="p">[</span><span class="s2">&quot;services&quot;</span><span class="p">]:</span>
@@ -352,6 +358,10 @@
         <span class="n">new_volumes</span> <span class="o">=</span> <span class="n">OrderedDict</span><span class="p">()</span>
         <span class="k">if</span> <span class="s2">&quot;volumes&quot;</span> <span class="ow">in</span> <span class="n">output_content</span><span class="p">[</span><span class="s2">&quot;services&quot;</span><span class="p">][</span><span class="n">key</span><span class="p">]:</span>
             <span class="k">for</span> <span class="n">volume</span> <span class="ow">in</span> <span class="n">output_content</span><span class="p">[</span><span class="s2">&quot;services&quot;</span><span class="p">][</span><span class="n">key</span><span class="p">][</span><span class="s2">&quot;volumes&quot;</span><span class="p">]:</span>
+                <span class="c1"># Ignore empty volumes</span>
+                <span class="k">if</span> <span class="n">volume</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                    <span class="k">continue</span>
+
                 <span class="n">volume_object</span> <span class="o">=</span> <span class="n">volume_extract_from_line</span><span class="p">(</span><span class="n">volume</span><span class="p">)</span>
                 <span class="k">if</span> <span class="n">volume_object</span><span class="o">.</span><span class="n">is_named</span><span class="p">:</span>
                     <span class="k">if</span> <span class="n">volume_object</span><span class="o">.</span><span class="n">host_path</span> <span class="ow">in</span> <span class="n">shared_volumes</span><span class="p">:</span>
@@ -381,6 +391,31 @@
     <span class="k">return</span> <span class="n">output_content</span>
 
 
+<div class="viewcode-block" id="composefile_handle_service_tags"><a class="viewcode-back" href="../../docknv.html#docknv.composefile_handler.composefile_handle_service_tags">[docs]</a><span class="k">def</span> <span class="nf">composefile_handle_service_tags</span><span class="p">(</span><span class="n">compose_content</span><span class="p">,</span> <span class="n">registry_url</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">    Handle service tags.</span>
+
+<span class="sd">    :param project_path:        Project path (str)</span>
+<span class="sd">    :param compose_content:     Compose content (dict)</span>
+<span class="sd">    :param registry_url:        Registry URL (str)</span>
+<span class="sd">    :rtype dict</span>
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Handling service tags...&quot;</span><span class="p">)</span>
+    <span class="n">output_content</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">compose_content</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="s2">&quot;services&quot;</span> <span class="ow">in</span> <span class="n">output_content</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">service_name</span> <span class="ow">in</span> <span class="n">output_content</span><span class="p">[</span><span class="s2">&quot;services&quot;</span><span class="p">]:</span>
+            <span class="n">service_data</span> <span class="o">=</span> <span class="n">output_content</span><span class="p">[</span><span class="s2">&quot;services&quot;</span><span class="p">][</span><span class="n">service_name</span><span class="p">]</span>
+
+            <span class="k">if</span> <span class="s2">&quot;tag&quot;</span> <span class="ow">in</span> <span class="n">service_data</span><span class="p">:</span>
+                <span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Handling tag for service `</span><span class="si">{0}</span><span class="s2">`...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">service_name</span><span class="p">))</span>
+                <span class="n">service_tag</span> <span class="o">=</span> <span class="n">service_data</span><span class="p">[</span><span class="s2">&quot;tag&quot;</span><span class="p">]</span>
+                <span class="n">service_data</span><span class="p">[</span><span class="s2">&quot;image&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="s2">&quot;/&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">registry_url</span><span class="p">,</span> <span class="n">service_tag</span><span class="p">])</span>
+                <span class="k">del</span> <span class="n">service_data</span><span class="p">[</span><span class="s2">&quot;tag&quot;</span><span class="p">]</span>
+
+    <span class="k">return</span> <span class="n">output_content</span></div>
+
+
 <div class="viewcode-block" id="composefile_resolve_volumes"><a class="viewcode-back" href="../../docknv.html#docknv.composefile_handler.composefile_resolve_volumes">[docs]</a><span class="k">def</span> <span class="nf">composefile_resolve_volumes</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">compose_content</span><span class="p">,</span> <span class="n">config_name</span><span class="p">,</span> <span class="n">namespace</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span> <span class="n">environment</span><span class="o">=</span><span class="s2">&quot;default&quot;</span><span class="p">,</span>
                                 <span class="n">environment_data</span><span class="o">=</span><span class="kc">None</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
@@ -394,13 +429,10 @@
 <span class="sd">    :param environment_data: Environment data (str?) (default: None)</span>
 <span class="sd">    :rtype: dict</span>
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="kn">from</span> <span class="nn">docknv.project_handler</span> <span class="k">import</span> <span class="n">project_get_name</span>
-    <span class="kn">from</span> <span class="nn">docknv.volume_handler</span> <span class="k">import</span> <span class="n">volume_generate_namespaced_path</span>
-
     <span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span><span class="s2">&quot;Resolving volumes...&quot;</span><span class="p">)</span>
     <span class="n">output_content</span> <span class="o">=</span> <span class="n">copy</span><span class="o">.</span><span class="n">deepcopy</span><span class="p">(</span><span class="n">compose_content</span><span class="p">)</span>
 
-    <span class="n">project_name</span> <span class="o">=</span> <span class="n">project_get_name</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
+    <span class="n">project_name</span> <span class="o">=</span> <span class="n">get_lower_basename</span><span class="p">(</span><span class="n">project_path</span><span class="p">)</span>
 
     <span class="c1"># Cleaning static files</span>
     <span class="n">create_path_or_replace</span><span class="p">(</span>
@@ -411,12 +443,18 @@
     <span class="k">if</span> <span class="s2">&quot;services&quot;</span> <span class="ow">in</span> <span class="n">output_content</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">service_name</span> <span class="ow">in</span> <span class="n">output_content</span><span class="p">[</span><span class="s2">&quot;services&quot;</span><span class="p">]:</span>
 
+            <span class="n">service_data</span> <span class="o">=</span> <span class="n">output_content</span><span class="p">[</span><span class="s2">&quot;services&quot;</span><span class="p">][</span><span class="n">service_name</span><span class="p">]</span>
+
+            <span class="c1"># Set environment</span>
+            <span class="k">if</span> <span class="s2">&quot;env_file&quot;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">service_data</span><span class="p">:</span>
+                <span class="n">service_data</span><span class="p">[</span><span class="s2">&quot;env_file&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
+                    <span class="n">user_get_file_from_project</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="s1">&#39;environment.env&#39;</span><span class="p">,</span> <span class="n">config_name</span><span class="p">)</span>
+                <span class="p">]</span>
+
             <span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
                 <span class="s2">&quot;Resolving volumes for service `</span><span class="si">{0}</span><span class="s2">`...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">service_name</span><span class="p">))</span>
 
-            <span class="n">service_data</span> <span class="o">=</span> <span class="n">output_content</span><span class="p">[</span><span class="s2">&quot;services&quot;</span><span class="p">][</span><span class="n">service_name</span><span class="p">]</span>
             <span class="n">final_volumes</span> <span class="o">=</span> <span class="p">[]</span>
-
             <span class="k">if</span> <span class="s2">&quot;volumes&quot;</span> <span class="ow">in</span> <span class="n">service_data</span> <span class="ow">and</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">service_data</span><span class="p">[</span><span class="s2">&quot;volumes&quot;</span><span class="p">],</span> <span class="nb">dict</span><span class="p">):</span>
                 <span class="n">volumes_data</span> <span class="o">=</span> <span class="n">service_data</span><span class="p">[</span><span class="s2">&quot;volumes&quot;</span><span class="p">]</span>
 
@@ -442,26 +480,19 @@
 
 
 <span class="k">def</span> <span class="nf">_composefile_resolve_static_volumes</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">project_name</span><span class="p">,</span> <span class="n">config_name</span><span class="p">,</span> <span class="n">volumes_data</span><span class="p">,</span> <span class="n">final_volumes</span><span class="p">):</span>
-    <span class="kn">from</span> <span class="nn">docknv.volume_handler</span> <span class="k">import</span> <span class="n">volume_extract_from_line</span>
-    <span class="kn">from</span> <span class="nn">docknv.session_handler</span> <span class="k">import</span> <span class="n">session_read_timestamps</span><span class="p">,</span> <span class="n">session_save_timestamps</span>
-    <span class="kn">from</span> <span class="nn">docknv.utils.diff_system</span> <span class="k">import</span> <span class="p">(</span>
-        <span class="n">diff_modification_time</span><span class="p">,</span> <span class="n">get_files_last_modification_time</span><span class="p">,</span> <span class="n">save_last_modification_time</span><span class="p">,</span>
-        <span class="n">read_last_modification_time</span><span class="p">,</span> <span class="n">concat_diffs</span>
-    <span class="p">)</span>
-
-    <span class="c1"># Diff system</span>
-    <span class="n">original_timestamps</span> <span class="o">=</span> <span class="n">session_read_timestamps</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="n">config_name</span><span class="p">)</span>
-    <span class="n">new_timestamps</span> <span class="o">=</span> <span class="p">{}</span>
-
     <span class="k">if</span> <span class="s2">&quot;static&quot;</span> <span class="ow">in</span> <span class="n">volumes_data</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">static_def</span> <span class="ow">in</span> <span class="n">volumes_data</span><span class="p">[</span><span class="s2">&quot;static&quot;</span><span class="p">]:</span>
+            <span class="c1"># Ignore empty volumes</span>
+            <span class="k">if</span> <span class="n">static_def</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                <span class="k">continue</span>
+
             <span class="n">volume_object</span> <span class="o">=</span> <span class="n">volume_extract_from_line</span><span class="p">(</span><span class="n">static_def</span><span class="p">)</span>
 
             <span class="c1"># Create dirs &amp; copy</span>
             <span class="n">output_path</span> <span class="o">=</span> <span class="n">volume_object</span><span class="o">.</span><span class="n">generate_namespaced_volume_path</span><span class="p">(</span><span class="s2">&quot;static&quot;</span><span class="p">,</span> <span class="n">volume_object</span><span class="o">.</span><span class="n">host_path</span><span class="p">,</span>
                                                                         <span class="n">project_name</span><span class="p">,</span> <span class="n">config_name</span><span class="p">)</span>
 
-            <span class="n">data_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;files&quot;</span><span class="p">,</span> <span class="n">volume_object</span><span class="o">.</span><span class="n">host_path</span><span class="p">)</span>
+            <span class="n">data_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;files&quot;</span><span class="p">,</span> <span class="n">volume_object</span><span class="o">.</span><span class="n">host_path</span><span class="p">))</span>
 
             <span class="c1"># Get files to copy</span>
             <span class="n">files_to_copy</span> <span class="o">=</span> <span class="p">[]</span>
@@ -471,22 +502,16 @@
                 <span class="n">base_root</span> <span class="o">=</span> <span class="n">data_path</span>
                 <span class="k">for</span> <span class="n">root</span><span class="p">,</span> <span class="n">folders</span><span class="p">,</span> <span class="n">filenames</span> <span class="ow">in</span> <span class="n">os</span><span class="o">.</span><span class="n">walk</span><span class="p">(</span><span class="n">data_path</span><span class="p">):</span>
                     <span class="n">sub_part</span> <span class="o">=</span> <span class="n">root</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">base_root</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
-                    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
-                        <span class="n">full_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
-                        <span class="n">full_output_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="n">sub_part</span><span class="p">,</span> <span class="n">filename</span><span class="p">)</span>
-                        <span class="n">files_to_copy</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">full_path</span><span class="p">,</span> <span class="n">full_output_path</span><span class="p">))</span>
-                        <span class="n">new_timestamps</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">get_files_last_modification_time</span><span class="p">(</span><span class="n">full_path</span><span class="p">))</span>
+                    <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">sub_part</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+                        <span class="n">sub_part</span> <span class="o">=</span> <span class="n">sub_part</span><span class="p">[</span><span class="mi">1</span><span class="p">:]</span>
 
-            <span class="c1"># timestamp_diff = diff_modification_time(original_timestamps, new_timestamps)</span>
+                    <span class="k">for</span> <span class="n">filename</span> <span class="ow">in</span> <span class="n">filenames</span><span class="p">:</span>
+                        <span class="n">full_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">root</span><span class="p">,</span> <span class="n">filename</span><span class="p">))</span>
+                        <span class="n">full_output_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">normpath</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">output_path</span><span class="p">,</span> <span class="n">sub_part</span><span class="p">,</span> <span class="n">filename</span><span class="p">))</span>
+                        <span class="n">files_to_copy</span><span class="o">.</span><span class="n">append</span><span class="p">((</span><span class="n">full_path</span><span class="p">,</span> <span class="n">full_output_path</span><span class="p">))</span>
 
             <span class="c1"># Copy !</span>
             <span class="k">for</span> <span class="n">file_to_copy</span><span class="p">,</span> <span class="n">output_path_to_copy</span> <span class="ow">in</span> <span class="n">files_to_copy</span><span class="p">:</span>
-                <span class="c1"># if file_to_copy not in timestamp_diff:</span>
-                    <span class="c1"># print(&quot;NOT IN TIMESTAMP&quot;)</span>
-                <span class="c1"># if file_to_copy not in timestamp_diff and os.path.isfile(output_path_to_copy):</span>
-                    <span class="c1"># Logger.debug(</span>
-                        <span class="c1"># &quot;Static path `{0}` did not change. Nothing done.&quot;.format(file_to_copy))</span>
-                <span class="c1"># else:</span>
                 <span class="n">Logger</span><span class="o">.</span><span class="n">debug</span><span class="p">(</span>
                     <span class="s2">&quot;Copying static content from `</span><span class="si">{0}</span><span class="s2">` to `</span><span class="si">{1}</span><span class="s2">`...&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">file_to_copy</span><span class="p">,</span> <span class="n">output_path_to_copy</span><span class="p">))</span>
                 <span class="n">create_path_tree</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">output_path_to_copy</span><span class="p">))</span>
@@ -504,17 +529,16 @@
 
         <span class="k">del</span> <span class="n">volumes_data</span><span class="p">[</span><span class="s2">&quot;static&quot;</span><span class="p">]</span>
 
-    <span class="c1"># Save diff</span>
-    <span class="n">session_save_timestamps</span><span class="p">(</span><span class="n">project_name</span><span class="p">,</span> <span class="n">config_name</span><span class="p">,</span> <span class="n">concat_diffs</span><span class="p">(</span><span class="n">original_timestamps</span><span class="p">,</span> <span class="n">new_timestamps</span><span class="p">))</span>
-
     <span class="k">return</span> <span class="n">final_volumes</span>
 
 
 <span class="k">def</span> <span class="nf">_composefile_resolve_shared_volumes</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">volumes_data</span><span class="p">,</span> <span class="n">final_volumes</span><span class="p">):</span>
-    <span class="kn">from</span> <span class="nn">docknv.volume_handler</span> <span class="k">import</span> <span class="n">volume_extract_from_line</span>
-
     <span class="k">if</span> <span class="s2">&quot;shared&quot;</span> <span class="ow">in</span> <span class="n">volumes_data</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">shared_def</span> <span class="ow">in</span> <span class="n">volumes_data</span><span class="p">[</span><span class="s2">&quot;shared&quot;</span><span class="p">]:</span>
+            <span class="c1"># Ignore empty volumes</span>
+            <span class="k">if</span> <span class="n">shared_def</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                <span class="k">continue</span>
+
             <span class="n">volume_object</span> <span class="o">=</span> <span class="n">volume_extract_from_line</span><span class="p">(</span><span class="n">shared_def</span><span class="p">)</span>
 
             <span class="n">data_path</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="s2">&quot;data&quot;</span><span class="p">,</span> <span class="s2">&quot;files&quot;</span><span class="p">,</span> <span class="n">volume_object</span><span class="o">.</span><span class="n">host_path</span><span class="p">)</span>
@@ -529,12 +553,14 @@
 
 
 <span class="k">def</span> <span class="nf">_composefile_resolve_template_volumes</span><span class="p">(</span><span class="n">project_path</span><span class="p">,</span> <span class="n">config_name</span><span class="p">,</span> <span class="n">environment_data</span><span class="p">,</span> <span class="n">volumes_data</span><span class="p">,</span> <span class="n">final_volumes</span><span class="p">):</span>
-    <span class="kn">from</span> <span class="nn">docknv.volume_handler</span> <span class="k">import</span> <span class="n">volume_extract_from_line</span>
-    <span class="kn">from</span> <span class="nn">docknv.template_renderer</span> <span class="k">import</span> <span class="n">renderer_render_template</span>
 
     <span class="c1"># Jinja templates</span>
     <span class="k">if</span> <span class="s2">&quot;templates&quot;</span> <span class="ow">in</span> <span class="n">volumes_data</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">template_def</span> <span class="ow">in</span> <span class="n">volumes_data</span><span class="p">[</span><span class="s2">&quot;templates&quot;</span><span class="p">]:</span>
+            <span class="c1"># Ignore empty volumes</span>
+            <span class="k">if</span> <span class="n">template_def</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                <span class="k">continue</span>
+
             <span class="n">volume_object</span> <span class="o">=</span> <span class="n">volume_extract_from_line</span><span class="p">(</span><span class="n">template_def</span><span class="p">)</span>
             <span class="n">template_path</span> <span class="o">=</span> <span class="n">volume_object</span><span class="o">.</span><span class="n">host_path</span>
 
@@ -551,6 +577,10 @@
 <span class="k">def</span> <span class="nf">_composefile_resolve_standard_volumes</span><span class="p">(</span><span class="n">volumes_data</span><span class="p">,</span> <span class="n">final_volumes</span><span class="p">):</span>
     <span class="k">if</span> <span class="s2">&quot;standard&quot;</span> <span class="ow">in</span> <span class="n">volumes_data</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">standard_def</span> <span class="ow">in</span> <span class="n">volumes_data</span><span class="p">[</span><span class="s2">&quot;standard&quot;</span><span class="p">]:</span>
+            <span class="c1"># Ignore empty volumes</span>
+            <span class="k">if</span> <span class="n">standard_def</span> <span class="o">==</span> <span class="s2">&quot;&quot;</span><span class="p">:</span>
+                <span class="k">continue</span>
+
             <span class="n">final_volumes</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">standard_def</span><span class="p">)</span>
 
         <span class="k">del</span> <span class="n">volumes_data</span><span class="p">[</span><span class="s2">&quot;standard&quot;</span><span class="p">]</span>
@@ -565,7 +595,12 @@
             <span class="k">if</span> <span class="nb">isinstance</span><span class="p">(</span><span class="n">network</span><span class="p">,</span> <span class="nb">dict</span><span class="p">)</span> <span class="ow">and</span> <span class="s2">&quot;aliases&quot;</span> <span class="ow">in</span> <span class="n">network</span><span class="p">:</span>
                 <span class="n">new_aliases</span> <span class="o">=</span> <span class="p">[]</span>
                 <span class="k">for</span> <span class="n">alias</span> <span class="ow">in</span> <span class="n">network</span><span class="p">[</span><span class="s2">&quot;aliases&quot;</span><span class="p">]:</span>
-                    <span class="n">new_aliases</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="s2">&quot;</span><span class="si">{0}</span><span class="s2">_</span><span class="si">{1}</span><span class="s2">&quot;</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">namespace</span><span class="p">,</span> <span class="n">alias</span><span class="p">))</span>
+                    <span class="k">if</span> <span class="n">namespace</span> <span class="o">==</span> <span class="s2">&quot;default&quot;</span><span class="p">:</span>
+                        <span class="n">new_alias</span> <span class="o">=</span> <span class="n">alias</span>
+                    <span class="k">else</span><span class="p">:</span>
+                        <span class="n">new_alias</span> <span class="o">=</span> <span class="s2">&quot;_&quot;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">namespace</span><span class="p">,</span> <span class="n">alias</span><span class="p">])</span>
+
+                    <span class="n">new_aliases</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">new_alias</span><span class="p">)</span>
 
                 <span class="n">network</span><span class="p">[</span><span class="s2">&quot;aliases&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">new_aliases</span>
 </pre></div>
