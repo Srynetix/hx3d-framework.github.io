@@ -1,6 +1,0 @@
-Introduction
-============
-
-Welcome on the InstantSuiteDocker project.
-
-It is a `docknv <https://bitbucket.org/sharingcloud/docknv.git>`_ project, with commands for a ready-to-use system in development, testing and production environments. 
