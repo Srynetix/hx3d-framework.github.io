@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Environment &mdash; docknv 4.0.0.alpha documentation</title>
+  <title>Environment &mdash; docknv 5.0.0.alpha documentation</title>
   
 
   
@@ -24,27 +24,19 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="docknv 4.0.0.alpha documentation" href="../index.html"/>
-        <link rel="next" title="Practical example: IPython Notebook" href="05.ipython.html"/>
-        <link rel="prev" title="Architecture" href="02.architecture.html"/> 
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Practical example: IPython Notebook" href="05.ipython.html" />
+    <link rel="prev" title="Architecture" href="02.architecture.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -66,7 +58,7 @@
             
             
               <div class="version">
-                4.0.0.alpha
+                5.0.0.alpha
               </div>
             
           
@@ -104,7 +96,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="05.ipython.html">Practical example: IPython Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="10.command-line-reference.html">Command-line reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">docknv</a></li>
 </ul>
 
@@ -117,7 +108,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">docknv</a>
@@ -125,9 +116,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -173,7 +165,10 @@
 <h1>Environment<a class="headerlink" href="#environment" title="Permalink to this headline">¶</a></h1>
 <div class="section" id="what-is-it">
 <h2>What is it?<a class="headerlink" href="#what-is-it" title="Permalink to this headline">¶</a></h2>
-<p>Environment files allow you to <strong>parameterize your deployment</strong> as you want, by <strong>substituting values in Jinja template files</strong>, often used for configuration for your services, or to directly <strong>inject environment variables</strong> in your containers.</p>
+<p>Environment files allow you to <strong>parameterize your deployment</strong> as you want,
+by <strong>substituting values in Jinja template files</strong>, often used for
+configuration for your services,or to directly <strong>inject environment variables</strong>
+in your containers.</p>
 </div>
 <div class="section" id="how-does-it-work">
 <h2>How does it work?<a class="headerlink" href="#how-does-it-work" title="Permalink to this headline">¶</a></h2>
@@ -181,8 +176,9 @@
 <p>It allows some useful features.</p>
 <div class="section" id="environment-files-inheritance">
 <h3>Environment files <strong>inheritance</strong><a class="headerlink" href="#environment-files-inheritance" title="Permalink to this headline">¶</a></h3>
-<p>For example, you can make a <strong>default</strong> environment file for all your deployments and only override the required  variables.</p>
-<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="c1"># default.env.yml</span>
+<p>For example, you can make a <strong>default</strong> environment file for all your
+deployments and only override the required variables.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># default.env.yml</span>
 
 <span class="l l-Scalar l-Scalar-Plain">environment</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">my_value</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">1</span>
@@ -193,7 +189,7 @@
 <span class="c1">#   - my_second_value = Toto</span>
 </pre></div>
 </div>
-<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="c1"># inclusion.env.yml</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># inclusion.env.yml</span>
 
 <span class="l l-Scalar l-Scalar-Plain">imports</span><span class="p p-Indicator">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
@@ -210,10 +206,12 @@
 </div>
 <div class="section" id="variable-interpolation">
 <h3>Variable <strong>interpolation</strong><a class="headerlink" href="#variable-interpolation" title="Permalink to this headline">¶</a></h3>
-<p>Thanks to a simple string interpolation system, you can define variables containing other variables.
-But these variables <strong>can be overriden</strong> over the imported files, for easy reuse of the existing variables.</p>
+<p>Thanks to a simple string interpolation system, you can define variables
+containing other variables.
+But these variables <strong>can be overriden</strong> over the imported files,
+for easy reuse of the existing variables.</p>
 <p>Here is an example:</p>
-<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="c1"># default.env.yml</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># default.env.yml</span>
 
 <span class="l l-Scalar l-Scalar-Plain">environment</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">my_var</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">test</span>
@@ -226,7 +224,7 @@ But these variables <strong>can be overriden</strong> over the imported files, f
 <span class="c1">#   - my_var_double: test + test = testtest</span>
 </pre></div>
 </div>
-<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="c1"># inclusion.env.yml</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="c1"># inclusion.env.yml</span>
 
 <span class="l l-Scalar l-Scalar-Plain">imports</span><span class="p p-Indicator">:</span>
   <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">default</span>
@@ -245,9 +243,7 @@ But these variables <strong>can be overriden</strong> over the imported files, f
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -265,11 +261,11 @@ But these variables <strong>can be overriden</strong> over the imported files, f
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Denis BOURGE.
+        &copy; Copyright 2017-2018 Denis BOURGE
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -284,35 +280,23 @@ But these variables <strong>can be overriden</strong> over the imported files, f
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'4.0.0.alpha',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

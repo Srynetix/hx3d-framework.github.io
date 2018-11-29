@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>docknv.tests package &mdash; docknv 4.0.0.alpha documentation</title>
+  <title>docknv.tests package &mdash; docknv 5.0.0.alpha documentation</title>
   
 
   
@@ -24,25 +24,19 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="docknv 4.0.0.alpha documentation" href="index.html"/> 
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="docknv.user package" href="docknv.user.html" />
+    <link rel="prev" title="docknv.template package" href="docknv.template.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -64,7 +58,7 @@
             
             
               <div class="version">
-                4.0.0.alpha
+                5.0.0.alpha
               </div>
             
           
@@ -89,13 +83,38 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="pages/01.intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pages/02.architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pages/03.environment.html">Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pages/05.ipython.html">Practical example: IPython Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pages/10.command-line-reference.html">Command-line reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">docknv</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">docknv</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="docknv.html">docknv package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="docknv.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="docknv.compose.html">docknv.compose package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.database.html">docknv.database package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.environment.html">docknv.environment package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.image.html">docknv.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.lifecycle.html">docknv.lifecycle package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.logger.html">docknv.logger package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.project.html">docknv.project package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.scaffolder.html">docknv.scaffolder package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.schema.html">docknv.schema package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.shell.html">docknv.shell package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.template.html">docknv.template package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">docknv.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.user.html">docknv.user package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.utils.html">docknv.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.volume.html">docknv.volume package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.wrapper.html">docknv.wrapper package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.version">docknv.version module</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
@@ -107,7 +126,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">docknv</a>
@@ -115,9 +134,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -140,6 +160,10 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
+          <li><a href="modules.html">docknv</a> &raquo;</li>
+        
+          <li><a href="docknv.html">docknv package</a> &raquo;</li>
+        
       <li>docknv.tests package</li>
     
     
@@ -159,8 +183,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="docknv-tests-package">
-<h1>docknv.tests package<a class="headerlink" href="#docknv-tests-package" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-docknv.tests">
+<span id="docknv-tests-package"></span><h1>docknv.tests package<a class="headerlink" href="#module-docknv.tests" title="Permalink to this headline">¶</a></h1>
+<p>docknv tests init.</p>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
 </div>
@@ -183,6 +208,25 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="docknv.tests.mocking.patch">
+<code class="descclassname">docknv.tests.mocking.</code><code class="descname">patch</code><span class="sig-paren">(</span><em>attr</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/tests/mocking.html#patch"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.tests.mocking.patch" title="Permalink to this definition">¶</a></dt>
+<dd><p>Patch.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>attr</strong> – Attribute</li>
+<li><strong>value</strong> – Value</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Context manager</strong></p>
+</dd></dl>
+
+<dl class="function">
 <dt id="docknv.tests.mocking.using_temporary_stdout">
 <code class="descclassname">docknv.tests.mocking.</code><code class="descname">using_temporary_stdout</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/tests/mocking.html#using_temporary_stdout"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.tests.mocking.using_temporary_stdout" title="Permalink to this definition">¶</a></dt>
 <dd><p>Temporarily change the stdout.</p>
@@ -193,6 +237,27 @@
 <div class="section" id="module-docknv.tests.utils">
 <span id="docknv-tests-utils-module"></span><h2>docknv.tests.utils module<a class="headerlink" href="#module-docknv.tests.utils" title="Permalink to this headline">¶</a></h2>
 <p>Test utilities.</p>
+<dl class="function">
+<dt id="docknv.tests.utils.assert_cmd">
+<code class="descclassname">docknv.tests.utils.</code><code class="descname">assert_cmd</code><span class="sig-paren">(</span><em>cmd</em>, <em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/tests/utils.html#assert_cmd"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.tests.utils.assert_cmd" title="Permalink to this definition">¶</a></dt>
+<dd><p>Assert a command.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>cmd</strong> – Command (list)</li>
+<li><strong>value</strong> – Value (str)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">True/False</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
 <dl class="function">
 <dt id="docknv.tests.utils.copy_sample">
 <code class="descclassname">docknv.tests.utils.</code><code class="descname">copy_sample</code><span class="sig-paren">(</span><em>sample</em>, <em>destination</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/tests/utils.html#copy_sample"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.tests.utils.copy_sample" title="Permalink to this definition">¶</a></dt>
@@ -223,35 +288,39 @@
 
 <dl class="function">
 <dt id="docknv.tests.utils.using_temporary_directory">
-<code class="descclassname">docknv.tests.utils.</code><code class="descname">using_temporary_directory</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/tests/utils.html#using_temporary_directory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.tests.utils.using_temporary_directory" title="Permalink to this definition">¶</a></dt>
+<code class="descclassname">docknv.tests.utils.</code><code class="descname">using_temporary_directory</code><span class="sig-paren">(</span><em>preserve=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/tests/utils.html#using_temporary_directory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.tests.utils.using_temporary_directory" title="Permalink to this definition">¶</a></dt>
 <dd><p>Create a temporary directory.</p>
 <p><strong>Context manager</strong></p>
 </dd></dl>
 
 </div>
-<div class="section" id="module-docknv.tests">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-docknv.tests" title="Permalink to this headline">¶</a></h2>
-</div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="docknv.user.html" class="btn btn-neutral float-right" title="docknv.user package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="docknv.template.html" class="btn btn-neutral" title="docknv.template package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Denis BOURGE.
+        &copy; Copyright 2017-2018 Denis BOURGE
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -266,35 +335,23 @@
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'4.0.0.alpha',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

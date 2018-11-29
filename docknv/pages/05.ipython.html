@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Practical example: IPython Notebook &mdash; docknv 4.0.0.alpha documentation</title>
+  <title>Practical example: IPython Notebook &mdash; docknv 5.0.0.alpha documentation</title>
   
 
   
@@ -24,27 +24,19 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../genindex.html"/>
-        <link rel="search" title="Search" href="../search.html"/>
-    <link rel="top" title="docknv 4.0.0.alpha documentation" href="../index.html"/>
-        <link rel="next" title="Command-line reference" href="10.command-line-reference.html"/>
-        <link rel="prev" title="Environment" href="03.environment.html"/> 
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="docknv" href="../modules.html" />
+    <link rel="prev" title="Environment" href="03.environment.html" /> 
 
   
   <script src="../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -66,7 +58,7 @@
             
             
               <div class="version">
-                4.0.0.alpha
+                5.0.0.alpha
               </div>
             
           
@@ -108,7 +100,6 @@
 <li class="toctree-l2"><a class="reference internal" href="#execution">2. Execution</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="10.command-line-reference.html">Command-line reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../modules.html">docknv</a></li>
 </ul>
 
@@ -121,7 +112,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../index.html">docknv</a>
@@ -129,9 +120,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -175,11 +167,13 @@
             
   <div class="section" id="practical-example-ipython-notebook">
 <h1>Practical example: IPython Notebook<a class="headerlink" href="#practical-example-ipython-notebook" title="Permalink to this headline">¶</a></h1>
-<p>There is a practical example bundled with docknv, a project that starts a IPython Notebook, with persistent storage for
-the notebooks. It is located in the <code class="docutils literal"><span class="pre">samples/sample02</span></code> folder.</p>
-<p>It is quite simple and understandable enough to help you grasp the docknv fundamentals.</p>
+<p>There is a practical example bundled with docknv, a project that starts a
+IPython Notebook, with persistent storage for
+the notebooks. It is located in the <code class="docutils literal notranslate"><span class="pre">samples/sample02</span></code> folder.</p>
+<p>It is quite simple and understandable enough to help you grasp the docknv
+fundamentals.</p>
 <p>The project has the following structure:</p>
-<div class="highlight-default"><div class="highlight"><pre><span></span><span class="n">commands</span><span class="o">/</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">commands</span><span class="o">/</span>
   <span class="o">|</span> <span class="fm">__init__</span><span class="o">.</span><span class="n">py</span>
   <span class="o">|</span> <span class="n">notebook</span><span class="o">.</span><span class="n">py</span>                         <span class="c1"># Contains the &#39;notebook&#39; command</span>
 <span class="n">composefiles</span><span class="o">/</span>
@@ -188,9 +182,12 @@ the notebooks. It is located in the <code class="docutils literal"><span class="
   <span class="o">|</span> <span class="n">files</span><span class="o">/</span>
     <span class="o">|</span> <span class="n">ipython</span><span class="o">/</span>
       <span class="o">|</span> <span class="n">startup</span><span class="o">/</span>
-        <span class="o">|</span> <span class="mi">00</span><span class="o">-</span><span class="n">first</span><span class="o">.</span><span class="n">ipy</span>                  <span class="c1"># Contains the startup script of IPython</span>
-      <span class="o">|</span> <span class="n">ipython_config</span><span class="o">.</span><span class="n">py</span><span class="o">.</span><span class="n">j2</span>            <span class="c1"># Contains the main configuration of IPython</span>
-      <span class="o">|</span> <span class="n">ipython_notebook_config</span><span class="o">.</span><span class="n">py</span><span class="o">.</span><span class="n">j2</span>   <span class="c1"># Contains the main configuration of IPython Notebook</span>
+        <span class="o">|</span> <span class="mi">00</span><span class="o">-</span><span class="n">first</span><span class="o">.</span><span class="n">ipy</span>                  <span class="c1"># Contains the startup script of</span>
+                                        <span class="c1"># IPython</span>
+      <span class="o">|</span> <span class="n">ipython_config</span><span class="o">.</span><span class="n">py</span><span class="o">.</span><span class="n">j2</span>            <span class="c1"># Contains the main configuration</span>
+                                        <span class="c1"># of IPython</span>
+      <span class="o">|</span> <span class="n">ipython_notebook_config</span><span class="o">.</span><span class="n">py</span><span class="o">.</span><span class="n">j2</span>   <span class="c1"># Contains the main configuration</span>
+                                        <span class="c1"># of IPython Notebook</span>
     <span class="o">|</span> <span class="n">shared</span><span class="o">/</span>
       <span class="o">|</span> <span class="n">notebooks</span><span class="o">/</span>                      <span class="c1"># Notebooks folder</span>
         <span class="o">|</span> <span class="o">.</span><span class="n">gitkeep</span>
@@ -206,54 +203,69 @@ the notebooks. It is located in the <code class="docutils literal"><span class="
 <h2>1. Structure details<a class="headerlink" href="#structure-details" title="Permalink to this headline">¶</a></h2>
 <div class="section" id="a-environments">
 <h3>a. Environments<a class="headerlink" href="#a-environments" title="Permalink to this headline">¶</a></h3>
-<p>The <code class="docutils literal"><span class="pre">default.env.yml</span></code> environment is really simple, only composed of two environment variables:</p>
-<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">environment</span><span class="p p-Indicator">:</span>
+<p>The <code class="docutils literal notranslate"><span class="pre">default.env.yml</span></code> environment is really simple, only composed of two
+environment variables:</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">environment</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">IPYTHON_OUTPUT_PORT</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">8888</span>
   <span class="l l-Scalar l-Scalar-Plain">PASSWORD_HASH</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">sha1:6aa977056539:28a155481d26cb31c93f507f1423fe2c6f30a49e</span>
 </pre></div>
 </div>
-<p>These variables define the host output port (<code class="docutils literal"><span class="pre">IPYTHON_OUTPUT_PORT</span></code>) and the hashed password needed to connect to the IPython Notebook (<code class="docutils literal"><span class="pre">PASSWORD_HASH</span></code>).</p>
-<p>The <code class="docutils literal"><span class="pre">IPYTHON_OUTPUT_PORT</span></code> variable is used in the main <em>composefile</em> <code class="docutils literal"><span class="pre">main.yml</span></code>.
-The <code class="docutils literal"><span class="pre">PASSWORD_HASH</span></code> value is used in the <code class="docutils literal"><span class="pre">ipython_notebook_config.py.j2</span></code> configuration template.</p>
+<p>These variables define the host output port (<code class="docutils literal notranslate"><span class="pre">IPYTHON_OUTPUT_PORT</span></code>) and the
+hashed password needed to connect to the IPython Notebook (<code class="docutils literal notranslate"><span class="pre">PASSWORD_HASH</span></code>).</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">IPYTHON_OUTPUT_PORT</span></code> variable is used in the main <em>composefile</em>
+<code class="docutils literal notranslate"><span class="pre">main.yml</span></code>.
+The <code class="docutils literal notranslate"><span class="pre">PASSWORD_HASH</span></code> value is used in the <code class="docutils literal notranslate"><span class="pre">ipython_notebook_config.py.j2</span></code>
+configuration template.</p>
 </div>
 <div class="section" id="b-images">
 <h3>b. Images<a class="headerlink" href="#b-images" title="Permalink to this headline">¶</a></h3>
-<p>Only one image is included in the project: the <code class="docutils literal"><span class="pre">ipython</span></code> custom image.</p>
-<p>The <code class="docutils literal"><span class="pre">Dockerfile</span></code> is also quite simple:</p>
+<p>Only one image is included in the project: the <code class="docutils literal notranslate"><span class="pre">ipython</span></code> custom image.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">Dockerfile</span></code> is also quite simple:</p>
 <ul class="simple">
-<li>It starts from Ubuntu Trusty (<code class="docutils literal"><span class="pre">ubuntu:14.04</span></code>)</li>
-<li>Then, it updates the repositories (<code class="docutils literal"><span class="pre">apt-get</span> <span class="pre">update</span> <span class="pre">-y</span></code>)</li>
-<li>It fetches the needed <em>apt</em> packages (<code class="docutils literal"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python-dev</span> <span class="pre">python-pip</span> <span class="pre">ipython-notebook</span> <span class="pre">vim</span> <span class="pre">graphviz</span> <span class="pre">-y</span></code>)</li>
-<li>It fetches the needed <em>pip</em> packages (<code class="docutils literal"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">graphviz</span></code>)</li>
-<li>It sets the running command (<code class="docutils literal"><span class="pre">ipython</span> <span class="pre">notebook</span> <span class="pre">--profile=nbserver</span></code>)</li>
-<li>Then finally, it exposes the <code class="docutils literal"><span class="pre">8888</span></code> port.</li>
+<li>It starts from Ubuntu Trusty (<code class="docutils literal notranslate"><span class="pre">ubuntu:14.04</span></code>)</li>
+<li>Then, it updates the repositories (<code class="docutils literal notranslate"><span class="pre">apt-get</span> <span class="pre">update</span> <span class="pre">-y</span></code>)</li>
+<li>It fetches the needed <em>apt</em> packages (<code class="docutils literal notranslate"><span class="pre">apt-get</span> <span class="pre">install</span> <span class="pre">python-dev</span> <span class="pre">python-pip</span>
+<span class="pre">ipython-notebook</span> <span class="pre">vim</span> <span class="pre">graphviz</span> <span class="pre">-y</span></code>)</li>
+<li>It fetches the needed <em>pip</em> packages (<code class="docutils literal notranslate"><span class="pre">pip</span> <span class="pre">install</span> <span class="pre">graphviz</span></code>)</li>
+<li>It sets the running command (<code class="docutils literal notranslate"><span class="pre">ipython</span> <span class="pre">notebook</span> <span class="pre">--profile=nbserver</span></code>)</li>
+<li>Then finally, it exposes the <code class="docutils literal notranslate"><span class="pre">8888</span></code> port.</li>
 </ul>
 </div>
 <div class="section" id="c-data">
 <h3>c. Data<a class="headerlink" href="#c-data" title="Permalink to this headline">¶</a></h3>
-<p>The included data is split in two folders: the <code class="docutils literal"><span class="pre">ipython</span></code> folder, and the <code class="docutils literal"><span class="pre">shared</span></code> folder.</p>
-<p>The <code class="docutils literal"><span class="pre">ipython</span></code> folder contains the <strong>templates and static files</strong> to be used with the <code class="docutils literal"><span class="pre">ipython</span></code> service.
-The <code class="docutils literal"><span class="pre">shared</span></code> folder contains the <strong>shared files</strong> between the host and the containers of the project. In this case, it will contains the notebooks.</p>
+<p>The included data is split in two folders: the <code class="docutils literal notranslate"><span class="pre">ipython</span></code> folder, and the
+<code class="docutils literal notranslate"><span class="pre">shared</span></code> folder.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">ipython</span></code> folder contains the <strong>templates and static files</strong> to be used
+with the <code class="docutils literal notranslate"><span class="pre">ipython</span></code> service.
+The <code class="docutils literal notranslate"><span class="pre">shared</span></code> folder contains the <strong>shared files</strong> between the host and the
+containers of the project. In this case, it will contains the notebooks.</p>
 <p><strong>ipython/startup/00-first.ipy</strong></p>
-<p>This file contains the startup script for a IPython shell and a IPython Notebook.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">load_ext</span> <span class="n">autoreload</span>
+<p>This file contains the startup script for a IPython shell and a IPython
+Notebook.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">load_ext</span> <span class="n">autoreload</span>
 <span class="o">%</span><span class="n">autoreload</span> <span class="mi">2</span>
 </pre></div>
 </div>
-<p>It enables the autoreload functionality. If you are currently in a shell or notebook and if you changed Python files you have already imported, it will be autoreloaded without having to exit and re-enter the shell or notebook.</p>
+<p>It enables the autoreload functionality. If you are currently in a shell or
+notebook and if you changed Python files you have already imported, it will be
+autoreloaded without having to exit and re-enter the shell or notebook.</p>
 <p><strong>ipython/ipython_config.py.j2</strong></p>
-<p>This Jinja2 configuration template file contains the base configuration of IPython. If we want to parameterize features of IPython with environment variables, we can use them in this file.</p>
+<p>This Jinja2 configuration template file contains the base configuration of
+IPython. If we want to parameterize features of IPython with environment
+variables, we can use them in this file.</p>
 <p><strong>ipython/ipython_notebook_config.py.j2</strong></p>
-<p>Same as the previous file, but for the IPython Notebook. This template includes the <code class="docutils literal"><span class="pre">PASSWORD_HASH</span></code> environment variable for the <code class="docutils literal"><span class="pre">c.NotebookApp.password</span></code> key.</p>
-<div class="highlight-python"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">NotebookApp</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;{{ PASSWORD_HASH }}&#39;</span>
+<p>Same as the previous file, but for the IPython Notebook. This template includes
+the <code class="docutils literal notranslate"><span class="pre">PASSWORD_HASH</span></code> environment variable for the <code class="docutils literal notranslate"><span class="pre">c.NotebookApp.password</span></code>
+key.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">c</span><span class="o">.</span><span class="n">NotebookApp</span><span class="o">.</span><span class="n">password</span> <span class="o">=</span> <span class="sa">u</span><span class="s1">&#39;{{ PASSWORD_HASH }}&#39;</span>
 </pre></div>
 </div>
 </div>
 <div class="section" id="d-composefiles">
 <h3>d. Composefiles<a class="headerlink" href="#d-composefiles" title="Permalink to this headline">¶</a></h3>
-<p>This project only include a single Docker Compose YML file: <code class="docutils literal"><span class="pre">main.yml</span></code>.</p>
+<p>This project only include a single Docker Compose YML file: <code class="docutils literal notranslate"><span class="pre">main.yml</span></code>.</p>
 <p>Here is the content:</p>
-<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="s">&quot;3&quot;</span>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">version</span><span class="p p-Indicator">:</span> <span class="s">&quot;3&quot;</span>
 
 <span class="c1"># Services</span>
 <span class="l l-Scalar l-Scalar-Plain">services</span><span class="p p-Indicator">:</span>
@@ -262,7 +274,7 @@ The <code class="docutils literal"><span class="pre">shared</span></code> folder
   <span class="l l-Scalar l-Scalar-Plain">ipython</span><span class="p p-Indicator">:</span>
     <span class="l l-Scalar l-Scalar-Plain">build</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">images/ipython/</span>
     <span class="c1"># Image tag</span>
-    <span class="l l-Scalar l-Scalar-Plain">image</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">localhost:5000/sample02_ipython</span>
+    <span class="l l-Scalar l-Scalar-Plain">tag</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">sample02_ipython</span>
     <span class="l l-Scalar l-Scalar-Plain">volumes</span><span class="p p-Indicator">:</span>
       <span class="l l-Scalar l-Scalar-Plain">static</span><span class="p p-Indicator">:</span>
         <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">ipython/startup:/root/.ipython/profile_nbserver/startup</span>
@@ -282,17 +294,20 @@ The <code class="docutils literal"><span class="pre">shared</span></code> folder
   <span class="l l-Scalar l-Scalar-Plain">net</span><span class="p p-Indicator">:</span>
 </pre></div>
 </div>
-<p>This template defines a single service, named <code class="docutils literal"><span class="pre">ipython</span></code>, with an image linked at <code class="docutils literal"><span class="pre">images/ipython</span></code>, tagged as <code class="docutils literal"><span class="pre">localhost:5000/sample02_ipython</span></code>. This tag will allow the image to be send to a <em>local Docker registry</em>.</p>
-<p>It is linked to one <em>static folder volume</em>, two <em>template file volumes</em> and one <em>shared folder volume</em>, previously seen in the <strong>Data</strong> section.</p>
-<p>We redirect the host port using the <code class="docutils literal"><span class="pre">IPYTHON_OUTPUT_PORT</span></code> declared in the environment file, link the service to a <code class="docutils literal"><span class="pre">net</span></code> network, and activate the auto-restart on failure for the service.</p>
+<p>This template defines a single service, named <code class="docutils literal notranslate"><span class="pre">ipython</span></code>, with an image linked
+at <code class="docutils literal notranslate"><span class="pre">images/ipython</span></code>, tagged as <code class="docutils literal notranslate"><span class="pre">sample02_ipython</span></code>. This tag will allow the
+image to be send to a <em>local Docker registry</em> if needed.</p>
+<p>It is linked to one <em>static folder volume</em>, two <em>template file volumes</em> and one
+<em>shared folder volume</em>, previously seen in the <strong>Data</strong> section.</p>
+<p>We redirect the host port using the <code class="docutils literal notranslate"><span class="pre">IPYTHON_OUTPUT_PORT</span></code> declared in the
+environment file, link the service to a <code class="docutils literal notranslate"><span class="pre">net</span></code> network, and activate the
+auto-restart on failure for the service.</p>
 </div>
 <div class="section" id="e-configuration">
 <h3>e. Configuration<a class="headerlink" href="#e-configuration" title="Permalink to this headline">¶</a></h3>
-<p>Now that we have seen almost every components of the project, we can check the docknv configuration file: <code class="docutils literal"><span class="pre">config.yml</span></code>.</p>
-<div class="highlight-yaml"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">composefiles</span><span class="p p-Indicator">:</span>
-  <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">composefiles/main.yml</span>
-
-<span class="l l-Scalar l-Scalar-Plain">commands</span><span class="p p-Indicator">:</span>
+<p>Now that we have seen almost every components of the project, we can check the
+docknv configuration file: <code class="docutils literal notranslate"><span class="pre">config.yml</span></code>.</p>
+<div class="highlight-yaml notranslate"><div class="highlight"><pre><span></span><span class="l l-Scalar l-Scalar-Plain">commands</span><span class="p p-Indicator">:</span>
   <span class="l l-Scalar l-Scalar-Plain">notebook</span><span class="p p-Indicator">:</span>
     <span class="l l-Scalar l-Scalar-Plain">machine</span><span class="p p-Indicator">:</span> <span class="l l-Scalar l-Scalar-Plain">ipython</span>
 
@@ -304,56 +319,70 @@ The <code class="docutils literal"><span class="pre">shared</span></code> folder
       <span class="p p-Indicator">-</span> <span class="l l-Scalar l-Scalar-Plain">net</span>
 </pre></div>
 </div>
-<p>It uses the <code class="docutils literal"><span class="pre">main.yml</span></code> composefile, defines parameters for the <code class="docutils literal"><span class="pre">notebook</span></code> command (more info in the <a class="reference internal" href="#f-commands">f. Commands</a> section), and defines the <code class="docutils literal"><span class="pre">standard</span></code> schema, composed of the <code class="docutils literal"><span class="pre">ipython</span></code> service and the <code class="docutils literal"><span class="pre">net</span></code> network.</p>
+<p>It defines parameters for the <code class="docutils literal notranslate"><span class="pre">notebook</span></code> command (more info in the
+<a class="reference internal" href="#f-commands">f. Commands</a> section), and defines the <code class="docutils literal notranslate"><span class="pre">standard</span></code> schema, composed of the
+<code class="docutils literal notranslate"><span class="pre">ipython</span></code> service and the <code class="docutils literal notranslate"><span class="pre">net</span></code> network.</p>
 </div>
 <div class="section" id="f-commands">
 <h3>f. Commands<a class="headerlink" href="#f-commands" title="Permalink to this headline">¶</a></h3>
-<p>One custom command in included with the project: the <code class="docutils literal"><span class="pre">notebook</span></code> command.</p>
-<p>It adds the <code class="docutils literal"><span class="pre">notebook</span> <span class="pre">password</span></code> action, that can be used to generate a custom password hash for a known plain-text password, in an interactive shell.</p>
-<p>You can then use this hashed password to replace the <code class="docutils literal"><span class="pre">PASSWORD_HASH</span></code> value of the default environment file, or even better, override the <code class="docutils literal"><span class="pre">PASSWORD_HASH</span></code> in an inherited environment file. (see the <a class="reference external" href="03.environment.html">Environment</a> section in the documentation for more information about the environment inheritance).</p>
+<p>One custom command in included with the project: the <code class="docutils literal notranslate"><span class="pre">notebook</span></code> command.</p>
+<p>It adds the <code class="docutils literal notranslate"><span class="pre">notebook</span> <span class="pre">password</span></code> action, that can be used to generate a custom
+password hash for a known plain-text password, in an interactive shell.</p>
+<p>You can then use this hashed password to replace the <code class="docutils literal notranslate"><span class="pre">PASSWORD_HASH</span></code> value of
+the default environment file, or even better, override the <code class="docutils literal notranslate"><span class="pre">PASSWORD_HASH</span></code>
+in an inherited environment file. (see the <a class="reference external" href="03.environment.html">Environment</a>
+section in the documentation for more information about the environment
+inheritance).</p>
 </div>
 </div>
 <div class="section" id="execution">
 <h2>2. Execution<a class="headerlink" href="#execution" title="Permalink to this headline">¶</a></h2>
-<p>You should know everything about this project by now, so we can finally try to run the project.</p>
-<p>If we list the environments (<code class="docutils literal"><span class="pre">docknv</span> <span class="pre">env</span> <span class="pre">ls</span></code>), there only should be the <code class="docutils literal"><span class="pre">default</span></code> environment.
-If we list the schemas (<code class="docutils literal"><span class="pre">docknv</span> <span class="pre">schema</span> <span class="pre">ls</span></code>), there only should be the <code class="docutils literal"><span class="pre">standard</span></code> environment.
-Then if we list the configurations (<code class="docutils literal"><span class="pre">docknv</span> <span class="pre">config</span> <span class="pre">ls</span></code>), none should appear.</p>
-<p>If you do not have a local registry set up, begin with the <code class="docutils literal"><span class="pre">docknv</span> <span class="pre">registry</span> <span class="pre">start</span></code> command. You can check if the registry is up by executing <code class="docutils literal"><span class="pre">docker</span> <span class="pre">ps</span></code> and checking the <code class="docutils literal"><span class="pre">registry</span></code> entry.</p>
-<p>To start the project, we have to create a configuration, to link it to an environment, a schema, and optionally a namespace. In this case we will not use a namespace because we will not have concurrent executions.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Create a configuration named &#39;app&#39;, using the &#39;standard&#39; schema and the &#39;default&#39;</span>
-<span class="c1"># environment file</span>
-docknv config create app standard default
+<p>You should know everything about this project by now, so we can finally try to
+run the project.</p>
+<p>If we list the environments (<code class="docutils literal notranslate"><span class="pre">docknv</span> <span class="pre">env</span> <span class="pre">ls</span></code>), there only should be the
+<code class="docutils literal notranslate"><span class="pre">default</span></code> environment.
+If we list the schemas (<code class="docutils literal notranslate"><span class="pre">docknv</span> <span class="pre">schema</span> <span class="pre">ls</span></code>), there only should be the
+<code class="docutils literal notranslate"><span class="pre">standard</span></code> environment.
+Then if we list the configurations (<code class="docutils literal notranslate"><span class="pre">docknv</span> <span class="pre">config</span> <span class="pre">ls</span></code>), none should appear.</p>
+<p>To start the project, we have to create a configuration, to link it to an
+environment, a schema, and optionally a namespace. In this case we will not use
+a namespace because we will not have concurrent executions.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Create a configuration named &#39;app&#39;, using the &#39;standard&#39; schema and the</span>
+<span class="c1"># &#39;default&#39; environment file</span>
+docknv config create app -s standard -e default
 </pre></div>
 </div>
-<p>Now that the configuration is created, it should be set as <strong>active</strong>. You can check it with <code class="docutils literal"><span class="pre">docknv</span> <span class="pre">config</span> <span class="pre">status</span></code>. If it shows <code class="docutils literal"><span class="pre">app</span></code>, you can continue.</p>
-<p>The next step is the building, you have to execute the <code class="docutils literal"><span class="pre">docknv</span> <span class="pre">config</span> <span class="pre">build</span></code> command.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Build the images from the active configuration</span>
+<p>Now that the configuration is created, it should be set as <strong>active</strong>. You can
+check it with <code class="docutils literal notranslate"><span class="pre">docknv</span> <span class="pre">config</span> <span class="pre">status</span></code>. If it shows <code class="docutils literal notranslate"><span class="pre">app</span></code>, you can continue.</p>
+<p>The next step is the building, you have to execute the <code class="docutils literal notranslate"><span class="pre">docknv</span> <span class="pre">config</span> <span class="pre">build</span></code>
+command.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Build the images from the active configuration</span>
 docknv config build
 </pre></div>
 </div>
 <p>Finally, you can start the configuration.</p>
-<div class="highlight-bash"><div class="highlight"><pre><span></span><span class="c1"># Start everything!</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Start everything!</span>
 docknv config start
 </pre></div>
 </div>
-<p>Once the command is finished, check the processes with the <code class="docutils literal"><span class="pre">docknv</span> <span class="pre">config</span> <span class="pre">ps</span></code> command.
-If everything is okay, you should now be able to connect to <a class="reference external" href="http://localhost:8888">http://localhost:8888</a> and access the IPython Notebook!</p>
-<p>PS: The default IPython Notebook password is: <code class="docutils literal"><span class="pre">adminadmin</span></code></p>
+<p>Once the command is finished, check the processes with the <code class="docutils literal notranslate"><span class="pre">docknv</span> <span class="pre">config</span> <span class="pre">ps</span></code>
+command.
+If everything is okay, you should now be able to connect to
+<a class="reference external" href="http://localhost:8888">http://localhost:8888</a> and access the IPython
+Notebook!</p>
+<p>PS: The default IPython Notebook password is: <code class="docutils literal notranslate"><span class="pre">adminadmin</span></code></p>
 </div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="10.command-line-reference.html" class="btn btn-neutral float-right" title="Command-line reference" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+        <a href="../modules.html" class="btn btn-neutral float-right" title="docknv" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="03.environment.html" class="btn btn-neutral" title="Environment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -365,11 +394,11 @@ If everything is okay, you should now be able to connect to <a class="reference 
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Denis BOURGE.
+        &copy; Copyright 2017-2018 Denis BOURGE
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -384,35 +413,23 @@ If everything is okay, you should now be able to connect to <a class="reference 
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../',
-            VERSION:'4.0.0.alpha',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../_static/jquery.js"></script>
-      <script type="text/javascript" src="../_static/underscore.js"></script>
-      <script type="text/javascript" src="../_static/doctools.js"></script>
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../_static/jquery.js"></script>
+        <script type="text/javascript" src="../_static/underscore.js"></script>
+        <script type="text/javascript" src="../_static/doctools.js"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

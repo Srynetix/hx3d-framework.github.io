@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>docknv package &mdash; docknv 4.0.0.alpha documentation</title>
+  <title>docknv package &mdash; docknv 5.0.0.alpha documentation</title>
   
 
   
@@ -24,27 +24,19 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="docknv 4.0.0.alpha documentation" href="index.html"/>
-        <link rel="up" title="docknv" href="modules.html"/>
-        <link rel="prev" title="docknv" href="modules.html"/> 
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="docknv.compose package" href="docknv.compose.html" />
+    <link rel="prev" title="docknv" href="modules.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -66,7 +58,7 @@
             
             
               <div class="version">
-                4.0.0.alpha
+                5.0.0.alpha
               </div>
             
           
@@ -96,29 +88,29 @@
 <li class="toctree-l1"><a class="reference internal" href="pages/02.architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pages/03.environment.html">Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pages/05.ipython.html">Practical example: IPython Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pages/10.command-line-reference.html">Command-line reference</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="modules.html">docknv</a><ul class="current">
 <li class="toctree-l2 current"><a class="current reference internal" href="#">docknv package</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#subpackages">Subpackages</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="docknv.compose.html">docknv.compose package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.database.html">docknv.database package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.environment.html">docknv.environment package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.image.html">docknv.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.lifecycle.html">docknv.lifecycle package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.logger.html">docknv.logger package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.project.html">docknv.project package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.scaffolder.html">docknv.scaffolder package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.schema.html">docknv.schema package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.shell.html">docknv.shell package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.template.html">docknv.template package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.tests.html">docknv.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.user.html">docknv.user package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.utils.html">docknv.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.volume.html">docknv.volume package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.wrapper.html">docknv.wrapper package</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#submodules">Submodules</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv.command_handler">docknv.command_handler module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv.composefile_handler">docknv.composefile_handler module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv.docker_api_wrapper">docknv.docker_api_wrapper module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv.docker_wrapper">docknv.docker_wrapper module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv.dockerfile_packer">docknv.dockerfile_packer module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv.environment_handler">docknv.environment_handler module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv.image_handler">docknv.image_handler module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv.lifecycle_handler">docknv.lifecycle_handler module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv.logger">docknv.logger module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv.network_handler">docknv.network_handler module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv.project_handler">docknv.project_handler module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv.scaffolder">docknv.scaffolder module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv.schema_handler">docknv.schema_handler module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv.session_handler">docknv.session_handler module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv.template_renderer">docknv.template_renderer module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv.user_handler">docknv.user_handler module</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#module-docknv.version">docknv.version module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv.volume_handler">docknv.volume_handler module</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#module-docknv">Module contents</a></li>
 </ul>
 </li>
 </ul>
@@ -134,7 +126,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">docknv</a>
@@ -142,9 +134,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -188,2443 +181,156 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="docknv-package">
-<h1>docknv package<a class="headerlink" href="#docknv-package" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-docknv">
+<span id="docknv-package"></span><h1>docknv package<a class="headerlink" href="#module-docknv" title="Permalink to this headline">¶</a></h1>
+<p>docknv init.</p>
+<div class="section" id="subpackages">
+<h2>Subpackages<a class="headerlink" href="#subpackages" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="docknv.compose.html">docknv.compose package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docknv.compose.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.compose.html#module-docknv.compose.exceptions">docknv.compose.exceptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.compose.html#module-docknv.compose.filtering">docknv.compose.filtering module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.compose.html#module-docknv.compose.methods">docknv.compose.methods module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.compose.html#module-docknv.compose.models">docknv.compose.models module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.compose.html#module-docknv.compose.namespacing">docknv.compose.namespacing module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.compose.html#module-docknv.compose.resolution">docknv.compose.resolution module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docknv.database.html">docknv.database package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docknv.database.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.database.html#docknv-database-exceptions-module">docknv.database.exceptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.database.html#docknv-database-methods-module">docknv.database.methods module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.database.html#docknv-database-models-module">docknv.database.models module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docknv.environment.html">docknv.environment package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docknv.environment.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.environment.html#module-docknv.environment.exceptions">docknv.environment.exceptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.environment.html#module-docknv.environment.methods">docknv.environment.methods module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.environment.html#docknv-environment-models-module">docknv.environment.models module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docknv.image.html">docknv.image package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docknv.image.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.image.html#module-docknv.image.methods">docknv.image.methods module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docknv.lifecycle.html">docknv.lifecycle package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docknv.lifecycle.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.lifecycle.html#docknv-lifecycle-methods-module">docknv.lifecycle.methods module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.lifecycle.html#docknv-lifecycle-models-module">docknv.lifecycle.models module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docknv.logger.html">docknv.logger package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docknv.logger.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.logger.html#module-docknv.logger.exception">docknv.logger.exception module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.logger.html#module-docknv.logger.models">docknv.logger.models module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docknv.project.html">docknv.project package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docknv.project.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.project.html#module-docknv.project.exceptions">docknv.project.exceptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.project.html#module-docknv.project.methods">docknv.project.methods module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.project.html#module-docknv.project.models">docknv.project.models module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docknv.scaffolder.html">docknv.scaffolder package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docknv.scaffolder.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.scaffolder.html#module-docknv.scaffolder.methods">docknv.scaffolder.methods module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docknv.schema.html">docknv.schema package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docknv.schema.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.schema.html#module-docknv.schema.models">docknv.schema.models module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docknv.shell.html">docknv.shell package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.html#subpackages">Subpackages</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="docknv.shell.handlers.html">docknv.shell.handlers package</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="docknv.shell.handlers.html#submodules">Submodules</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.config">docknv.shell.handlers.config module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.custom">docknv.shell.handlers.custom module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.env">docknv.shell.handlers.env module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.scaffold">docknv.shell.handlers.scaffold module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.schema">docknv.shell.handlers.schema module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.service">docknv.shell.handlers.service module</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.shell.handlers.html#module-docknv.shell.handlers.user">docknv.shell.handlers.user module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.html#module-docknv.shell.common">docknv.shell.common module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.html#module-docknv.shell.custom">docknv.shell.custom module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.html#module-docknv.shell.main">docknv.shell.main module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.shell.html#module-docknv.shell.shell">docknv.shell.shell module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docknv.template.html">docknv.template package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docknv.template.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.template.html#module-docknv.template.exceptions">docknv.template.exceptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.template.html#module-docknv.template.methods">docknv.template.methods module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docknv.tests.html">docknv.tests package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docknv.tests.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.tests.html#module-docknv.tests.mocking">docknv.tests.mocking module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.tests.html#module-docknv.tests.utils">docknv.tests.utils module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docknv.user.html">docknv.user package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docknv.user.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.user.html#module-docknv.user.exceptions">docknv.user.exceptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.user.html#module-docknv.user.methods">docknv.user.methods module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.user.html#module-docknv.user.models">docknv.user.models module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docknv.utils.html">docknv.utils package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docknv.utils.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.utils.html#module-docknv.utils.ioutils">docknv.utils.ioutils module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.utils.html#module-docknv.utils.paths">docknv.utils.paths module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.utils.html#module-docknv.utils.prompt">docknv.utils.prompt module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.utils.html#module-docknv.utils.serialization">docknv.utils.serialization module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docknv.volume.html">docknv.volume package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docknv.volume.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.volume.html#module-docknv.volume.exceptions">docknv.volume.exceptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.volume.html#module-docknv.volume.methods">docknv.volume.methods module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.volume.html#module-docknv.volume.models">docknv.volume.models module</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="docknv.wrapper.html">docknv.wrapper package</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="docknv.wrapper.html#submodules">Submodules</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.wrapper.html#module-docknv.wrapper.docker_api_wrapper">docknv.wrapper.docker_api_wrapper module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.wrapper.html#module-docknv.wrapper.docker_wrapper">docknv.wrapper.docker_wrapper module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.wrapper.html#module-docknv.wrapper.exceptions">docknv.wrapper.exceptions module</a></li>
+<li class="toctree-l2"><a class="reference internal" href="docknv.wrapper.html#module-docknv.wrapper.methods">docknv.wrapper.methods module</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</div>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-docknv.command_handler">
-<span id="docknv-command-handler-module"></span><h2>docknv.command_handler module<a class="headerlink" href="#module-docknv.command_handler" title="Permalink to this headline">¶</a></h2>
-<p>Command handler.</p>
-<dl class="class">
-<dt id="docknv.command_handler.CommandContext">
-<em class="property">class </em><code class="descclassname">docknv.command_handler.</code><code class="descname">CommandContext</code><a class="reference internal" href="_modules/docknv/command_handler.html#CommandContext"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.command_handler.CommandContext" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p>Command context.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.command_handler.command_get_config">
-<code class="descclassname">docknv.command_handler.</code><code class="descname">command_get_config</code><span class="sig-paren">(</span><em>config_data</em>, <em>command</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/command_handler.html#command_get_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.command_handler.command_get_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get command configuration from config.yml.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>config_data</strong> – Config data (dict)</li>
-<li><strong>command</strong> – Command name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Command configuration (dict)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.command_handler.command_get_context">
-<code class="descclassname">docknv.command_handler.</code><code class="descname">command_get_context</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/command_handler.html#command_get_context"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.command_handler.command_get_context" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get current context from active configuration.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Context data (dict)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.command_handler.command_get_context_from">
-<code class="descclassname">docknv.command_handler.</code><code class="descname">command_get_context_from</code><span class="sig-paren">(</span><em>project_data</em>, <em>config_name</em>, <em>session_data</em>, <em>schema_data</em>, <em>env_data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/command_handler.html#command_get_context_from"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.command_handler.command_get_context_from" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get context from a configuration.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_data</strong> – Project data (dict)</li>
-<li><strong>config_name</strong> – Configuration name (str)</li>
-<li><strong>session_data</strong> – Session data (dict)</li>
-<li><strong>schema_data</strong> – Schema data (dict)</li>
-<li><strong>env_data</strong> – Environment data (dict)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Context data (dict)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv.composefile_handler">
-<span id="docknv-composefile-handler-module"></span><h2>docknv.composefile_handler module<a class="headerlink" href="#module-docknv.composefile_handler" title="Permalink to this headline">¶</a></h2>
-<p>Composefile preprocessor.</p>
-<dl class="function">
-<dt id="docknv.composefile_handler.composefile_apply_namespace">
-<code class="descclassname">docknv.composefile_handler.</code><code class="descname">composefile_apply_namespace</code><span class="sig-paren">(</span><em>compose_content</em>, <em>namespace='default'</em>, <em>environment='default'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/composefile_handler.html#composefile_apply_namespace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.composefile_handler.composefile_apply_namespace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Apply namespace to compose content.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>compose_content</strong> – Compose content (dict)</li>
-<li><strong>namespace</strong> – Namespace name (str) (default: default)</li>
-<li><strong>environment</strong> – Environment file name (str) (default: default)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">dict</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.composefile_handler.composefile_filter">
-<code class="descclassname">docknv.composefile_handler.</code><code class="descname">composefile_filter</code><span class="sig-paren">(</span><em>merged_content</em>, <em>schema_configuration</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/composefile_handler.html#composefile_filter"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.composefile_handler.composefile_filter" title="Permalink to this definition">¶</a></dt>
-<dd><p>Filter composefile content using a schema configuration.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>merged_content</strong> – Compose file content (dict)</li>
-<li><strong>schema_configuration</strong> – Schema configuration (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Filtered content (dict)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.composefile_handler.composefile_handle_service_tags">
-<code class="descclassname">docknv.composefile_handler.</code><code class="descname">composefile_handle_service_tags</code><span class="sig-paren">(</span><em>compose_content</em>, <em>registry_url</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/composefile_handler.html#composefile_handle_service_tags"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.composefile_handler.composefile_handle_service_tags" title="Permalink to this definition">¶</a></dt>
-<dd><p>Handle service tags.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>compose_content</strong> – Compose content (dict)</li>
-<li><strong>registry_url</strong> – Registry URL (str)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p>:rtype dict</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.composefile_handler.composefile_multiple_read">
-<code class="descclassname">docknv.composefile_handler.</code><code class="descname">composefile_multiple_read</code><span class="sig-paren">(</span><em>project_path</em>, <em>compose_file_paths</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/composefile_handler.html#composefile_multiple_read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.composefile_handler.composefile_multiple_read" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read multiple compose files.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>compose_file_paths</strong> – Compose file paths (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">List of file contents (iterable)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.composefile_handler.composefile_read">
-<code class="descclassname">docknv.composefile_handler.</code><code class="descname">composefile_read</code><span class="sig-paren">(</span><em>project_path</em>, <em>compose_file_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/composefile_handler.html#composefile_read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.composefile_handler.composefile_read" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read a compose file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>compose_file_path</strong> – Compose file path (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">File content (dict)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.composefile_handler.composefile_resolve_volumes">
-<code class="descclassname">docknv.composefile_handler.</code><code class="descname">composefile_resolve_volumes</code><span class="sig-paren">(</span><em>project_path</em>, <em>compose_content</em>, <em>config_name</em>, <em>namespace='default'</em>, <em>environment='default'</em>, <em>environment_data=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/composefile_handler.html#composefile_resolve_volumes"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.composefile_handler.composefile_resolve_volumes" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resolve volumes and Jinja templates path using namespacing.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>compose_content</strong> – Compose content (dict)</li>
-<li><strong>project_name</strong> – Project name (str)</li>
-<li><strong>namespace</strong> – Namespace name (str) (default: default)</li>
-<li><strong>environment</strong> – Environment file name (str) (default: default)</li>
-<li><strong>environment_data</strong> – Environment data (str?) (default: None)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">dict</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.composefile_handler.composefile_write">
-<code class="descclassname">docknv.composefile_handler.</code><code class="descname">composefile_write</code><span class="sig-paren">(</span><em>compose_content</em>, <em>output_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/composefile_handler.html#composefile_write"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.composefile_handler.composefile_write" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write compose content to a file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>compose_content</strong> – Compose content (dict)</li>
-<li><strong>output_path</strong> – Output path (str)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv.docker_api_wrapper">
-<span id="docknv-docker-api-wrapper-module"></span><h2>docknv.docker_api_wrapper module<a class="headerlink" href="#module-docknv.docker_api_wrapper" title="Permalink to this headline">¶</a></h2>
-<p>Docker API wrapper.</p>
-<dl class="function">
-<dt id="docknv.docker_api_wrapper.docker_ps">
-<code class="descclassname">docknv.docker_api_wrapper.</code><code class="descname">docker_ps</code><span class="sig-paren">(</span><em>client</em>, <em>project_name</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/docker_api_wrapper.html#docker_ps"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.docker_api_wrapper.docker_ps" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get running container infos.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>client</strong> – Client (Client)</li>
-<li><strong>namespace_name</strong> – Namespace name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Info list (iterable)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.docker_api_wrapper.text_ellipse">
-<code class="descclassname">docknv.docker_api_wrapper.</code><code class="descname">text_ellipse</code><span class="sig-paren">(</span><em>s</em>, <em>maxlen</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/docker_api_wrapper.html#text_ellipse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.docker_api_wrapper.text_ellipse" title="Permalink to this definition">¶</a></dt>
-<dd><p>Apply ellipse on text at <cite>maxlen</cite>.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>s</strong> – Text (str)</li>
-<li><strong>maxlen</strong> – Max length (int)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Text (str)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.docker_api_wrapper.using_docker_client">
-<code class="descclassname">docknv.docker_api_wrapper.</code><code class="descname">using_docker_client</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/docker_api_wrapper.html#using_docker_client"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.docker_api_wrapper.using_docker_client" title="Permalink to this definition">¶</a></dt>
-<dd><p>Open a Docker client.</p>
-<p><strong>Context manager</strong></p>
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv.docker_wrapper">
-<span id="docknv-docker-wrapper-module"></span><h2>docknv.docker_wrapper module<a class="headerlink" href="#module-docknv.docker_wrapper" title="Permalink to this headline">¶</a></h2>
-<p>Docker commands wrapper.</p>
-<dl class="function">
-<dt id="docknv.docker_wrapper.exec_compose">
-<code class="descclassname">docknv.docker_wrapper.</code><code class="descname">exec_compose</code><span class="sig-paren">(</span><em>project_path</em>, <em>args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/docker_wrapper.html#exec_compose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.docker_wrapper.exec_compose" title="Permalink to this definition">¶</a></dt>
-<dd><p>Execute a Docker Compose command.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>args</strong> – Arguments (…)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.docker_wrapper.exec_compose_pretty">
-<code class="descclassname">docknv.docker_wrapper.</code><code class="descname">exec_compose_pretty</code><span class="sig-paren">(</span><em>project_path</em>, <em>args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/docker_wrapper.html#exec_compose_pretty"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.docker_wrapper.exec_compose_pretty" title="Permalink to this definition">¶</a></dt>
-<dd><p>Execute a Docker Compose command, properly filtered.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>args</strong> – Arguments (…)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.docker_wrapper.exec_docker">
-<code class="descclassname">docknv.docker_wrapper.</code><code class="descname">exec_docker</code><span class="sig-paren">(</span><em>project_path</em>, <em>args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/docker_wrapper.html#exec_docker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.docker_wrapper.exec_docker" title="Permalink to this definition">¶</a></dt>
-<dd><p>Execute a Docker command.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>args</strong> – Arguments (…)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.docker_wrapper.get_docker_container">
-<code class="descclassname">docknv.docker_wrapper.</code><code class="descname">get_docker_container</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/docker_wrapper.html#get_docker_container"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.docker_wrapper.get_docker_container" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return a Docker container ID.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>machine</strong> – Machine name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Container name (str)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv.dockerfile_packer">
-<span id="docknv-dockerfile-packer-module"></span><h2>docknv.dockerfile_packer module<a class="headerlink" href="#module-docknv.dockerfile_packer" title="Permalink to this headline">¶</a></h2>
-<p>Dockerfile packer.</p>
-<dl class="function">
-<dt id="docknv.dockerfile_packer.dockerfile_packer">
-<code class="descclassname">docknv.dockerfile_packer.</code><code class="descname">dockerfile_packer</code><span class="sig-paren">(</span><em>project_path</em>, <em>service_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/dockerfile_packer.html#dockerfile_packer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.dockerfile_packer.dockerfile_packer" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pack a Dockerfile for a service with its associated content.</p>
-<p>Freeze template, static and shared content inside of a Dockerfile.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>service_name</strong> – Service name (str)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv.environment_handler">
-<span id="docknv-environment-handler-module"></span><h2>docknv.environment_handler module<a class="headerlink" href="#module-docknv.environment_handler" title="Permalink to this headline">¶</a></h2>
-<p>Environment files handler.</p>
-<dl class="function">
-<dt id="docknv.environment_handler.env_get_py_path">
-<code class="descclassname">docknv.environment_handler.</code><code class="descname">env_get_py_path</code><span class="sig-paren">(</span><em>project_path</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/environment_handler.html#env_get_py_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.environment_handler.env_get_py_path" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get Python environment path.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>name</strong> – Environment name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Absolute path to environment file (str)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.environment_handler.env_get_yaml_path">
-<code class="descclassname">docknv.environment_handler.</code><code class="descname">env_get_yaml_path</code><span class="sig-paren">(</span><em>project_path</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/environment_handler.html#env_get_yaml_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.environment_handler.env_get_yaml_path" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get YAML environment path.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>name</strong> – Environment name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Absolute path to environment file (str)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.environment_handler.env_py_load_in_memory">
-<code class="descclassname">docknv.environment_handler.</code><code class="descname">env_py_load_in_memory</code><span class="sig-paren">(</span><em>project_path</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/environment_handler.html#env_py_load_in_memory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.environment_handler.env_py_load_in_memory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load Python environment file in memory.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>name</strong> – Environment file name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Environment data (dict)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.environment_handler.env_yaml_check_file">
-<code class="descclassname">docknv.environment_handler.</code><code class="descname">env_yaml_check_file</code><span class="sig-paren">(</span><em>project_path</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/environment_handler.html#env_yaml_check_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.environment_handler.env_yaml_check_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check if an environment file exist.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>name</strong> – Environment file name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.environment_handler.env_yaml_convert">
-<code class="descclassname">docknv.environment_handler.</code><code class="descname">env_yaml_convert</code><span class="sig-paren">(</span><em>project_path</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/environment_handler.html#env_yaml_convert"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.environment_handler.env_yaml_convert" title="Permalink to this definition">¶</a></dt>
-<dd><p>Convert a Python environment file to a YAML environment file.</p>
-<p>It will create a new [name].env.yml.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>name</strong> – Environment name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Absolute path to YAML environment file (str), YAML data (dict)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.environment_handler.env_yaml_inherits">
-<code class="descclassname">docknv.environment_handler.</code><code class="descname">env_yaml_inherits</code><span class="sig-paren">(</span><em>source_data</em>, <em>source_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/environment_handler.html#env_yaml_inherits"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.environment_handler.env_yaml_inherits" title="Permalink to this definition">¶</a></dt>
-<dd><p>Inherit a YAML environment.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>source_data</strong> – Source data (dict)</li>
-<li><strong>source_name</strong> – Source name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">YAML data (dict)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.environment_handler.env_yaml_key_value_export">
-<code class="descclassname">docknv.environment_handler.</code><code class="descname">env_yaml_key_value_export</code><span class="sig-paren">(</span><em>env_data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/environment_handler.html#env_yaml_key_value_export"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.environment_handler.env_yaml_key_value_export" title="Permalink to this definition">¶</a></dt>
-<dd><p>Export YAML data as key/value.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>env_data</strong> – Environment data (dict)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Key value string (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.environment_handler.env_yaml_list">
-<code class="descclassname">docknv.environment_handler.</code><code class="descname">env_yaml_list</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/environment_handler.html#env_yaml_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.environment_handler.env_yaml_list" title="Permalink to this definition">¶</a></dt>
-<dd><p>List environment configurations.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.environment_handler.env_yaml_load_in_memory">
-<code class="descclassname">docknv.environment_handler.</code><code class="descname">env_yaml_load_in_memory</code><span class="sig-paren">(</span><em>project_path</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/environment_handler.html#env_yaml_load_in_memory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.environment_handler.env_yaml_load_in_memory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load YAML environment file in memory.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>name</strong> – Environment file name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Environment data (dict)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.environment_handler.env_yaml_resolve_variables">
-<code class="descclassname">docknv.environment_handler.</code><code class="descname">env_yaml_resolve_variables</code><span class="sig-paren">(</span><em>loaded_env</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/environment_handler.html#env_yaml_resolve_variables"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.environment_handler.env_yaml_resolve_variables" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resolve environment.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>loaded_env</strong> – Loaded env (dict)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Resolved environment (dict)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.environment_handler.env_yaml_show">
-<code class="descclassname">docknv.environment_handler.</code><code class="descname">env_yaml_show</code><span class="sig-paren">(</span><em>project_path</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/environment_handler.html#env_yaml_show"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.environment_handler.env_yaml_show" title="Permalink to this definition">¶</a></dt>
-<dd><p>Print an environment file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>name</strong> – Environment file name (str)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.environment_handler.env_yaml_write_to_file">
-<code class="descclassname">docknv.environment_handler.</code><code class="descname">env_yaml_write_to_file</code><span class="sig-paren">(</span><em>env</em>, <em>path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/environment_handler.html#env_yaml_write_to_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.environment_handler.env_yaml_write_to_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write YAML environment to a file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>env</strong> – Environment configuration data (dict)</li>
-<li><strong>path</strong> – Output file (str)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv.image_handler">
-<span id="docknv-image-handler-module"></span><h2>docknv.image_handler module<a class="headerlink" href="#module-docknv.image_handler" title="Permalink to this headline">¶</a></h2>
-<p>Image handler.</p>
-<dl class="function">
-<dt id="docknv.image_handler.image_check_dockerfile">
-<code class="descclassname">docknv.image_handler.</code><code class="descname">image_check_dockerfile</code><span class="sig-paren">(</span><em>project_path</em>, <em>image_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/image_handler.html#image_check_dockerfile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.image_handler.image_check_dockerfile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check if a Dockerfile image exist.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>image_name</strong> – Image name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">True/False</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.image_handler.image_get_dockerfile_path">
-<code class="descclassname">docknv.image_handler.</code><code class="descname">image_get_dockerfile_path</code><span class="sig-paren">(</span><em>project_path</em>, <em>image_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/image_handler.html#image_get_dockerfile_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.image_handler.image_get_dockerfile_path" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a Dockerfile image path.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>image_name</strong> – Image name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Dockerfile path (str)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.image_handler.image_load_in_memory">
-<code class="descclassname">docknv.image_handler.</code><code class="descname">image_load_in_memory</code><span class="sig-paren">(</span><em>project_path</em>, <em>image_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/image_handler.html#image_load_in_memory"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.image_handler.image_load_in_memory" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load a Dockerfile image in memory.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>image_name</strong> – Image name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">File content (str)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv.lifecycle_handler">
-<span id="docknv-lifecycle-handler-module"></span><h2>docknv.lifecycle_handler module<a class="headerlink" href="#module-docknv.lifecycle_handler" title="Permalink to this headline">¶</a></h2>
-<p>docknv machines and schema lifecycle handling.</p>
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_bundle_build">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_bundle_build</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_names</em>, <em>no_cache=False</em>, <em>push_to_registry=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_bundle_build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_bundle_build" title="Permalink to this definition">¶</a></dt>
-<dd><p>Build multiple configurations.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>config_names</strong> – Config names (iterable)</li>
-<li><strong>no_cache</strong> – Do not use cache (bool) (default: False)</li>
-<li><strong>push_to_registry</strong> – Push to registry (bool) (default: True)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_bundle_ps">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_bundle_ps</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_names</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_bundle_ps"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_bundle_ps" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check processes for multiple configurations.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>config_names</strong> – Config names (iterable)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_bundle_restart">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_bundle_restart</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_names</em>, <em>force=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_bundle_restart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_bundle_restart" title="Permalink to this definition">¶</a></dt>
-<dd><p>Restart multiple configurations.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>config_names</strong> – Config names (iterable)</li>
-<li><strong>force</strong> – Force restart (bool) (default: False)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_bundle_start">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_bundle_start</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_names</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_bundle_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_bundle_start" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start multiple configurations.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>config_names</strong> – Config names (iterable)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_bundle_stop">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_bundle_stop</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_names</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_bundle_stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_bundle_stop" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stop multiple configurations.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>config_names</strong> – Config names (iterable)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_get_machine_name">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_get_machine_name</code><span class="sig-paren">(</span><em>machine_name</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_get_machine_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_get_machine_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get docker container name.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>machine_name</strong> – Machine name (str)</li>
-<li><strong>namespace_name</strong> – Namespace name (str?) (default: None)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Machine name (str)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_machine_build">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_build</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>no_cache=False</em>, <em>push_to_registry=True</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_build" title="Permalink to this definition">¶</a></dt>
-<dd><p>Build a machine.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>machine_name</strong> – Machine name (str)</li>
-<li><strong>no_cache</strong> – Do not use cache (bool) (default: False)</li>
-<li><strong>push_to_registry</strong> – Push to registry (bool) (default: True)</li>
-<li><strong>namespace_name</strong> – Namespace name (str?) (default: None)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_machine_exec">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_exec</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>command=None</em>, <em>no_tty=False</em>, <em>namespace_name=None</em>, <em>ignore_code=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_exec"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_exec" title="Permalink to this definition">¶</a></dt>
-<dd><p>Execute a machine.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>machine_name</strong> – Machine name (str)</li>
-<li><strong>command</strong> – Command (str?) (default: None)</li>
-<li><strong>no_tty</strong> – Do not use TTY (bool) (default: False)</li>
-<li><strong>namespace_name</strong> – Namespace name (str?) (default: None)</li>
-<li><strong>ignore_code</strong> – Ignore return code (bool) (default: False)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_machine_exec_multiple">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_exec_multiple</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>commands</em>, <em>no_tty=False</em>, <em>namespace_name=None</em>, <em>ignore_code=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_exec_multiple"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_exec_multiple" title="Permalink to this definition">¶</a></dt>
-<dd><p>Execute multiple commands on a machine.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>machine_name</strong> – Machine name (str)</li>
-<li><strong>commands</strong> – Commands (iterable)</li>
-<li><strong>no_tty</strong> – Do not use TTY (bool) (default: False)</li>
-<li><strong>namespace_name</strong> – Namespace name (str?) (default: None)</li>
-<li><strong>ignore_code</strong> – Ignore return code (bool) (default: False)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_machine_logs">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_logs</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>tail=0</em>, <em>follow=False</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_logs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_logs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get logs from a machine.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>machine_name</strong> – Machine name (str)</li>
-<li><strong>tail</strong> – Tail lines (int) (default: 0)</li>
-<li><strong>follow</strong> – Follow logs (bool) (default: False)</li>
-<li><strong>namespace_name</strong> – Namespace name (str?) (default: None)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_machine_pull">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_pull</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>container_path</em>, <em>host_path</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_pull"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_pull" title="Permalink to this definition">¶</a></dt>
-<dd><p>Pull a file from a machine.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>machine_name</strong> – Machine name (str)</li>
-<li><strong>container_path</strong> – Container path (str)</li>
-<li><strong>host_path</strong> – Host path (str)</li>
-<li><strong>namespace_name</strong> – Namespace name (str?) (default: None)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_machine_push">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_push</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>host_path</em>, <em>container_path</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_push"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_push" title="Permalink to this definition">¶</a></dt>
-<dd><p>Push a file to a machine.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>machine_name</strong> – Machine name (str)</li>
-<li><strong>host_path</strong> – Host path (str)</li>
-<li><strong>container_path</strong> – Container path (str)</li>
-<li><strong>namespace_name</strong> – Namespace name (str?) (default: None)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_machine_restart">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_restart</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>force=False</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_restart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_restart" title="Permalink to this definition">¶</a></dt>
-<dd><p>Restart a machine.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>machine_name</strong> – Machine name (str)</li>
-<li><strong>force</strong> – Force restart (bool) (default: False)</li>
-<li><strong>namespace_name</strong> – Namespace name (str?) (default: None)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_machine_run">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_run</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>command</em>, <em>daemon=False</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_run"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_run" title="Permalink to this definition">¶</a></dt>
-<dd><p>Run a machine.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>machine_name</strong> – Machine name (str)</li>
-<li><strong>command</strong> – Command (str)</li>
-<li><strong>daemon</strong> – Run in background? (bool) (default: False)</li>
-<li><strong>namespace_name</strong> – Namespace name (str?) (default: None)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_machine_shell">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_shell</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>shell_path='/bin/bash'</em>, <em>namespace_name=None</em>, <em>create=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_shell"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_shell" title="Permalink to this definition">¶</a></dt>
-<dd><p>Execute a shell on a machine.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>machine_name</strong> – Machine name (str)</li>
-<li><strong>shell_path</strong> – Shell path (str) (default: /bin/bash)</li>
-<li><strong>namespace_name</strong> – Namespace name (str?) (default: None)</li>
-<li><strong>create</strong> – Create the container (bool) (default: False)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_machine_start">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_start</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_start" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start a machine.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>machine_name</strong> – Machine name (str)</li>
-<li><strong>namespace_name</strong> – Namespace name (str?) (default: None)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_machine_stop">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_machine_stop</code><span class="sig-paren">(</span><em>project_path</em>, <em>machine_name</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_machine_stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_machine_stop" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stop a machine.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>machine_name</strong> – Machine name (str)</li>
-<li><strong>namespace_name</strong> – Namespace name (str?) (default: None)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_registry_start">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_registry_start</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_registry_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_registry_start" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start a registry.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> – Registry path (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_registry_stop">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_registry_stop</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_registry_stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_registry_stop" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stop a registry.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_schema_build">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_schema_build</code><span class="sig-paren">(</span><em>project_path</em>, <em>no_cache=False</em>, <em>push_to_registry=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_schema_build"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_schema_build" title="Permalink to this definition">¶</a></dt>
-<dd><p>Build a schema.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>no_cache</strong> – Do not use cache (bool) (default: False)</li>
-<li><strong>push_to_registry</strong> – Push to registry (bool) (default: True)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_schema_ps">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_schema_ps</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_schema_ps"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_schema_ps" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check processes of a schema.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_schema_restart">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_schema_restart</code><span class="sig-paren">(</span><em>project_path</em>, <em>force=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_schema_restart"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_schema_restart" title="Permalink to this definition">¶</a></dt>
-<dd><p>Restart a schema.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>force</strong> – Force restart (bool) (default: False)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_schema_start">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_schema_start</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_schema_start"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_schema_start" title="Permalink to this definition">¶</a></dt>
-<dd><p>Start a schema.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_schema_stop">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_schema_stop</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_schema_stop"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_schema_stop" title="Permalink to this definition">¶</a></dt>
-<dd><p>Stop a schema.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_volume_list">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_volume_list</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_volume_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_volume_list" title="Permalink to this definition">¶</a></dt>
-<dd><p>List volumes.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.lifecycle_handler.lifecycle_volume_remove">
-<code class="descclassname">docknv.lifecycle_handler.</code><code class="descname">lifecycle_volume_remove</code><span class="sig-paren">(</span><em>project_path</em>, <em>volume_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/lifecycle_handler.html#lifecycle_volume_remove"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.lifecycle_handler.lifecycle_volume_remove" title="Permalink to this definition">¶</a></dt>
-<dd><p>Remove a volume.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>volume_name</strong> – Volume name (str)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv.logger">
-<span id="docknv-logger-module"></span><h2>docknv.logger module<a class="headerlink" href="#module-docknv.logger" title="Permalink to this headline">¶</a></h2>
-<p>Simple logger.</p>
-<dl class="class">
-<dt id="docknv.logger.Logger">
-<em class="property">class </em><code class="descclassname">docknv.logger.</code><code class="descname">Logger</code><a class="reference internal" href="_modules/docknv/logger.html#Logger"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.logger.Logger" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p>Simple logger.</p>
-<dl class="attribute">
-<dt id="docknv.logger.Logger.LOGGER_LEVELS">
-<code class="descname">LOGGER_LEVELS</code><em class="property"> = ['DEBUG', 'INFO', 'WARN', 'ERROR', 'NONE']</em><a class="headerlink" href="#docknv.logger.Logger.LOGGER_LEVELS" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="attribute">
-<dt id="docknv.logger.Logger.current_level">
-<code class="descname">current_level</code><em class="property"> = 'DEBUG'</em><a class="headerlink" href="#docknv.logger.Logger.current_level" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
-<dl class="staticmethod">
-<dt id="docknv.logger.Logger.debug">
-<em class="property">static </em><code class="descname">debug</code><span class="sig-paren">(</span><em>message</em>, <em>color='\x1b[36m'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/logger.html#Logger.debug"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.logger.Logger.debug" title="Permalink to this definition">¶</a></dt>
-<dd><p>Debug log.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>message</strong> – Message content (str)</li>
-<li><strong>color</strong> – Message color (color) (default: CYAN)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="staticmethod">
-<dt id="docknv.logger.Logger.error">
-<em class="property">static </em><code class="descname">error</code><span class="sig-paren">(</span><em>message</em>, <em>color='\x1b[31m'</em>, <em>crash=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/logger.html#Logger.error"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.logger.Logger.error" title="Permalink to this definition">¶</a></dt>
-<dd><p>Error log.</p>
-<p>If ‘crash’, exit program.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>message</strong> – Message content (str)</li>
-<li><strong>color</strong> – Message color (color) (default: RED)</li>
-<li><strong>crash</strong> – Crash the program (bool) (default: True)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="staticmethod">
-<dt id="docknv.logger.Logger.get_log_level">
-<em class="property">static </em><code class="descname">get_log_level</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/logger.html#Logger.get_log_level"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.logger.Logger.get_log_level" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the current log level.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Current log level (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="staticmethod">
-<dt id="docknv.logger.Logger.info">
-<em class="property">static </em><code class="descname">info</code><span class="sig-paren">(</span><em>message</em>, <em>color='\x1b[32m'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/logger.html#Logger.info"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.logger.Logger.info" title="Permalink to this definition">¶</a></dt>
-<dd><p>Info log.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>message</strong> – Message content (str)</li>
-<li><strong>color</strong> – Message color (color) (default: GREEN)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="staticmethod">
-<dt id="docknv.logger.Logger.log">
-<em class="property">static </em><code class="descname">log</code><span class="sig-paren">(</span><em>msg_type</em>, <em>message</em>, <em>color</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/logger.html#Logger.log"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.logger.Logger.log" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write a standard log entry.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>msg_type</strong> – Message type (str)</li>
-<li><strong>message</strong> – Message content (str)</li>
-<li><strong>color</strong> – Message color (color)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="staticmethod">
-<dt id="docknv.logger.Logger.raw">
-<em class="property">static </em><code class="descname">raw</code><span class="sig-paren">(</span><em>message</em>, <em>color=None</em>, <em>linebreak=True</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/logger.html#Logger.raw"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.logger.Logger.raw" title="Permalink to this definition">¶</a></dt>
-<dd><p>Raw log. No line break.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>message</strong> – Message content (str)</li>
-<li><strong>color</strong> – Message color (color?) (default: None)</li>
-<li><strong>linebreak</strong> – Insert linebreak (bool) (default: True)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="staticmethod">
-<dt id="docknv.logger.Logger.set_log_level">
-<em class="property">static </em><code class="descname">set_log_level</code><span class="sig-paren">(</span><em>value</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/logger.html#Logger.set_log_level"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.logger.Logger.set_log_level" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the current log level.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>value</strong> – Value (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="staticmethod">
-<dt id="docknv.logger.Logger.warn">
-<em class="property">static </em><code class="descname">warn</code><span class="sig-paren">(</span><em>message</em>, <em>color='\x1b[33m'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/logger.html#Logger.warn"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.logger.Logger.warn" title="Permalink to this definition">¶</a></dt>
-<dd><p>Warn log.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>message</strong> – Message content (str)</li>
-<li><strong>color</strong> – Message color (color) (default: YELLOW)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv.network_handler">
-<span id="docknv-network-handler-module"></span><h2>docknv.network_handler module<a class="headerlink" href="#module-docknv.network_handler" title="Permalink to this headline">¶</a></h2>
-<p>Network handler.</p>
-<dl class="class">
-<dt id="docknv.network_handler.NetworkHandler">
-<em class="property">class </em><code class="descclassname">docknv.network_handler.</code><code class="descname">NetworkHandler</code><a class="reference internal" href="_modules/docknv/network_handler.html#NetworkHandler"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.network_handler.NetworkHandler" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p>Network handler.</p>
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv.project_handler">
-<span id="docknv-project-handler-module"></span><h2>docknv.project_handler module<a class="headerlink" href="#module-docknv.project_handler" title="Permalink to this headline">¶</a></h2>
-<p>Project handler.</p>
-<dl class="class">
-<dt id="docknv.project_handler.ProjectData">
-<em class="property">class </em><code class="descclassname">docknv.project_handler.</code><code class="descname">ProjectData</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/project_handler.html#ProjectData"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.project_handler.ProjectData" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p>docknv config data object.</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.project_handler.project_check_config_name">
-<code class="descclassname">docknv.project_handler.</code><code class="descname">project_check_config_name</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/project_handler.html#project_check_config_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.project_handler.project_check_config_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check config name, generate a new one if not valid.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>config_name</strong> – Config name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Valid config name (str)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.project_handler.project_clean_user_config_path">
-<code class="descclassname">docknv.project_handler.</code><code class="descname">project_clean_user_config_path</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/project_handler.html#project_clean_user_config_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.project_handler.project_clean_user_config_path" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clean the user config path.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>config_name</strong> – Config name (str?) (default: None)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.project_handler.project_generate_compose">
-<code class="descclassname">docknv.project_handler.</code><code class="descname">project_generate_compose</code><span class="sig-paren">(</span><em>project_path</em>, <em>schema_name='all'</em>, <em>namespace='default'</em>, <em>environment='default'</em>, <em>config_name=None</em>, <em>update=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/project_handler.html#project_generate_compose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.project_handler.project_generate_compose" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate a valid Docker Compose file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>schema_name</strong> – Schema name (str) (default: all)</li>
-<li><strong>namespace</strong> – Namespace name (str) (default: default)</li>
-<li><strong>environment</strong> – Environment config (str) (default: default)</li>
-<li><strong>config_name</strong> – Config name (str?) (default: None)</li>
-<li><strong>update</strong> – Update configuration (bool) (default: False)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Config name (str)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.project_handler.project_generate_compose_from_configuration">
-<code class="descclassname">docknv.project_handler.</code><code class="descname">project_generate_compose_from_configuration</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/project_handler.html#project_generate_compose_from_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.project_handler.project_generate_compose_from_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate a valid Docker Compose file from a known configuration name.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>config_name</strong> – Config name (str)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.project_handler.project_get_active_configuration">
-<code class="descclassname">docknv.project_handler.</code><code class="descname">project_get_active_configuration</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/project_handler.html#project_get_active_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.project_handler.project_get_active_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the active configuration.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Active configuration (str?)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.project_handler.project_get_composefile">
-<code class="descclassname">docknv.project_handler.</code><code class="descname">project_get_composefile</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/project_handler.html#project_get_composefile"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.project_handler.project_get_composefile" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate a composefile path.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>config_name</strong> – Config name (str)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.project_handler.project_is_valid">
-<code class="descclassname">docknv.project_handler.</code><code class="descname">project_is_valid</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/project_handler.html#project_is_valid"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.project_handler.project_is_valid" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check if a project is valid.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">True/False</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.project_handler.project_read">
-<code class="descclassname">docknv.project_handler.</code><code class="descname">project_read</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/project_handler.html#project_read"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.project_handler.project_read" title="Permalink to this definition">¶</a></dt>
-<dd><p>Load a docknv config file from a project path.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Project data (<a class="reference internal" href="#docknv.project_handler.ProjectData" title="docknv.project_handler.ProjectData">ProjectData</a>)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.project_handler.project_set_active_configuration">
-<code class="descclassname">docknv.project_handler.</code><code class="descname">project_set_active_configuration</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_name</em>, <em>quiet=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/project_handler.html#project_set_active_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.project_handler.project_set_active_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Set the active configuration.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>config_name</strong> – Config name (str)</li>
-<li><strong>quiet</strong> – Be quiet (bool) (default: False)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.project_handler.project_unset_configuration">
-<code class="descclassname">docknv.project_handler.</code><code class="descname">project_unset_configuration</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/project_handler.html#project_unset_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.project_handler.project_unset_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Unset the configuration.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.project_handler.project_update_configuration_schema">
-<code class="descclassname">docknv.project_handler.</code><code class="descname">project_update_configuration_schema</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_name</em>, <em>schema_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/project_handler.html#project_update_configuration_schema"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.project_handler.project_update_configuration_schema" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update a configuration schema.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>config_name</strong> – Config name (str)</li>
-<li><strong>schema_name</strong> – Schema name (str)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.project_handler.project_use_configuration">
-<code class="descclassname">docknv.project_handler.</code><code class="descname">project_use_configuration</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_name</em>, <em>quiet=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/project_handler.html#project_use_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.project_handler.project_use_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use a composefile from a known configuration.</p>
-<p>Set it at .docker-compose.yml.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>config_name</strong> – Config name (str)</li>
-<li><strong>quiet</strong> – Be quiet (bool) (default: False)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.project_handler.project_use_temporary_configuration">
-<code class="descclassname">docknv.project_handler.</code><code class="descname">project_use_temporary_configuration</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/project_handler.html#project_use_temporary_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.project_handler.project_use_temporary_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Use a temporary configuration.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>config_name</strong> – Config name (str)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Context manager</strong></p>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.project_handler.project_validate">
-<code class="descclassname">docknv.project_handler.</code><code class="descname">project_validate</code><span class="sig-paren">(</span><em>project_file_path</em>, <em>config_data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/project_handler.html#project_validate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.project_handler.project_validate" title="Permalink to this definition">¶</a></dt>
-<dd><p>Validate project file structure.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_file_path</strong> – Project path (str)</li>
-<li><strong>config_data</strong> – Config data (dict)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv.scaffolder">
-<span id="docknv-scaffolder-module"></span><h2>docknv.scaffolder module<a class="headerlink" href="#module-docknv.scaffolder" title="Permalink to this headline">¶</a></h2>
-<p>Scaffolder methods.</p>
-<dl class="function">
-<dt id="docknv.scaffolder.scaffold_config">
-<code class="descclassname">docknv.scaffolder.</code><code class="descname">scaffold_config</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/scaffolder.html#scaffold_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.scaffolder.scaffold_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Scaffold a basic config file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.scaffolder.scaffold_environment">
-<code class="descclassname">docknv.scaffolder.</code><code class="descname">scaffold_environment</code><span class="sig-paren">(</span><em>project_path</em>, <em>env_name</em>, <em>env_content=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/scaffolder.html#scaffold_environment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.scaffolder.scaffold_environment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Scaffold an environment.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>env_name</strong> – Environment name (str)</li>
-<li><strong>env_content</strong> – Environment content (str?) (default: None)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.scaffolder.scaffold_environment_copy">
-<code class="descclassname">docknv.scaffolder.</code><code class="descname">scaffold_environment_copy</code><span class="sig-paren">(</span><em>project_path</em>, <em>env_name_source</em>, <em>env_name_dest</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/scaffolder.html#scaffold_environment_copy"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.scaffolder.scaffold_environment_copy" title="Permalink to this definition">¶</a></dt>
-<dd><p>Copy an environment.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>env_name_source</strong> – Source environment name (str)</li>
-<li><strong>env_name_dest</strong> – Destination environment name (str)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.scaffolder.scaffold_ignore">
-<code class="descclassname">docknv.scaffolder.</code><code class="descname">scaffold_ignore</code><span class="sig-paren">(</span><em>project_path</em>, <em>force=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/scaffolder.html#scaffold_ignore"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.scaffolder.scaffold_ignore" title="Permalink to this definition">¶</a></dt>
-<dd><p>Scaffold an ignore file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>force</strong> – No prompt user (bool) (default: False)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.scaffolder.scaffold_image">
-<code class="descclassname">docknv.scaffolder.</code><code class="descname">scaffold_image</code><span class="sig-paren">(</span><em>project_path</em>, <em>image_name</em>, <em>image_url</em>, <em>image_tag='latest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/scaffolder.html#scaffold_image"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.scaffolder.scaffold_image" title="Permalink to this definition">¶</a></dt>
-<dd><p>Scaffold an image Dockerfile.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>image_name</strong> – Image name (str)</li>
-<li><strong>image_url</strong> – Image URL (str)</li>
-<li><strong>image_tag</strong> – Image tag (str) (default: latest)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.scaffolder.scaffold_project">
-<code class="descclassname">docknv.scaffolder.</code><code class="descname">scaffold_project</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/scaffolder.html#scaffold_project"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.scaffolder.scaffold_project" title="Permalink to this definition">¶</a></dt>
-<dd><p>Scaffold a Docknv project.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv.schema_handler">
-<span id="docknv-schema-handler-module"></span><h2>docknv.schema_handler module<a class="headerlink" href="#module-docknv.schema_handler" title="Permalink to this headline">¶</a></h2>
-<p>Schema handler.</p>
-<dl class="function">
-<dt id="docknv.schema_handler.schema_check">
-<code class="descclassname">docknv.schema_handler.</code><code class="descname">schema_check</code><span class="sig-paren">(</span><em>project_data</em>, <em>schema_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/schema_handler.html#schema_check"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.schema_handler.schema_check" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check if a schema exist.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_data</strong> – Project data (dict)</li>
-<li><strong>schema_name</strong> – Schema name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.schema_handler.schema_get_configuration">
-<code class="descclassname">docknv.schema_handler.</code><code class="descname">schema_get_configuration</code><span class="sig-paren">(</span><em>project_data</em>, <em>schema_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/schema_handler.html#schema_get_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.schema_handler.schema_get_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get schema configuration.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_data</strong> – Project data (dict)</li>
-<li><strong>schema_name</strong> – Schema name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Schema configuration (dict)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.schema_handler.schema_list">
-<code class="descclassname">docknv.schema_handler.</code><code class="descname">schema_list</code><span class="sig-paren">(</span><em>project_data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/schema_handler.html#schema_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.schema_handler.schema_list" title="Permalink to this definition">¶</a></dt>
-<dd><p>List available schemas for the project.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_data</strong> – Project data (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv.session_handler">
-<span id="docknv-session-handler-module"></span><h2>docknv.session_handler module<a class="headerlink" href="#module-docknv.session_handler" title="Permalink to this headline">¶</a></h2>
-<p>Session config handler.</p>
-<dl class="function">
-<dt id="docknv.session_handler.session_check_bundle_configurations">
-<code class="descclassname">docknv.session_handler.</code><code class="descname">session_check_bundle_configurations</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_names</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/session_handler.html#session_check_bundle_configurations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.session_handler.session_check_bundle_configurations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check multiple configurations.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>config_names</strong> – Config names (iterable)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.session_handler.session_check_configuration">
-<code class="descclassname">docknv.session_handler.</code><code class="descname">session_check_configuration</code><span class="sig-paren">(</span><em>config_data</em>, <em>config_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/session_handler.html#session_check_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.session_handler.session_check_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check configuration.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>config_data</strong> – Config data (dict)</li>
-<li><strong>config_name</strong> – Config name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">bool</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.session_handler.session_get_configuration">
-<code class="descclassname">docknv.session_handler.</code><code class="descname">session_get_configuration</code><span class="sig-paren">(</span><em>project_path</em>, <em>name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/session_handler.html#session_get_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.session_handler.session_get_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a known configuration by name.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>name</strong> – Config name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Configuration data (dict)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.session_handler.session_insert_configuration">
-<code class="descclassname">docknv.session_handler.</code><code class="descname">session_insert_configuration</code><span class="sig-paren">(</span><em>session_data</em>, <em>config_name</em>, <em>schema_name</em>, <em>environment_name</em>, <em>namespace_name</em>, <em>user_id</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/session_handler.html#session_insert_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.session_handler.session_insert_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Insert a new configuration in the session data.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>session_data</strong> – Session data (dict)</li>
-<li><strong>config_name</strong> – Configuration name (str)</li>
-<li><strong>schema_name</strong> – Schema name (str)</li>
-<li><strong>environment_name</strong> – Environment name (str)</li>
-<li><strong>namespace_name</strong> – Namespace name (str)</li>
-<li><strong>user_id</strong> – User ID (str/int)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.session_handler.session_list_configurations">
-<code class="descclassname">docknv.session_handler.</code><code class="descname">session_list_configurations</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/session_handler.html#session_list_configurations"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.session_handler.session_list_configurations" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get configuration list.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str):</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Configuration data dict (dict)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.session_handler.session_read_configuration">
-<code class="descclassname">docknv.session_handler.</code><code class="descname">session_read_configuration</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/session_handler.html#session_read_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.session_handler.session_read_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read a session config file.</p>
-<p>Contains available namespaces.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Session configuration (dict)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.session_handler.session_read_timestamps">
-<code class="descclassname">docknv.session_handler.</code><code class="descname">session_read_timestamps</code><span class="sig-paren">(</span><em>project_name</em>, <em>config_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/session_handler.html#session_read_timestamps"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.session_handler.session_read_timestamps" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read timestamps for a project name and a config name.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_name</strong> – Project name (str)</li>
-<li><strong>config_name</strong> – Config name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Timestamp data (dict)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.session_handler.session_remove_configuration">
-<code class="descclassname">docknv.session_handler.</code><code class="descname">session_remove_configuration</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/session_handler.html#session_remove_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.session_handler.session_remove_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Remove a configuration.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>config_name</strong> – Config name (str)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.session_handler.session_save_timestamps">
-<code class="descclassname">docknv.session_handler.</code><code class="descname">session_save_timestamps</code><span class="sig-paren">(</span><em>project_name</em>, <em>config_name</em>, <em>timestamps</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/session_handler.html#session_save_timestamps"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.session_handler.session_save_timestamps" title="Permalink to this definition">¶</a></dt>
-<dd><p>Save timestamps for a project name and a config name.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_name</strong> – Project name (str)</li>
-<li><strong>config_name</strong> – Config name (str)</li>
-<li><strong>timestamps</strong> – Timestamp data (dict)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.session_handler.session_show_configuration_list">
-<code class="descclassname">docknv.session_handler.</code><code class="descname">session_show_configuration_list</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/session_handler.html#session_show_configuration_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.session_handler.session_show_configuration_list" title="Permalink to this definition">¶</a></dt>
-<dd><p>Show known configurations.</p>
-<p>:param project_path     Project path (str)</p>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.session_handler.session_update_environment">
-<code class="descclassname">docknv.session_handler.</code><code class="descname">session_update_environment</code><span class="sig-paren">(</span><em>project_path</em>, <em>config_name</em>, <em>environment_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/session_handler.html#session_update_environment"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.session_handler.session_update_environment" title="Permalink to this definition">¶</a></dt>
-<dd><p>Change a configuration environment.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>config_name</strong> – Config name (str)</li>
-<li><strong>environment_name</strong> – Environment name (str)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.session_handler.session_update_schema">
-<code class="descclassname">docknv.session_handler.</code><code class="descname">session_update_schema</code><span class="sig-paren">(</span><em>project_path</em>, <em>project_config</em>, <em>config_name</em>, <em>schema_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/session_handler.html#session_update_schema"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.session_handler.session_update_schema" title="Permalink to this definition">¶</a></dt>
-<dd><p>Change a configuration schema.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>project_config</strong> – Project config (dict)</li>
-<li><strong>config_name</strong> – Config name (str)</li>
-<li><strong>schema_name</strong> – Schema name (str)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.session_handler.session_write_configuration">
-<code class="descclassname">docknv.session_handler.</code><code class="descname">session_write_configuration</code><span class="sig-paren">(</span><em>project_path</em>, <em>content</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/session_handler.html#session_write_configuration"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.session_handler.session_write_configuration" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write a temporary config file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>content</strong> – Content (dict)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv.template_renderer">
-<span id="docknv-template-renderer-module"></span><h2>docknv.template_renderer module<a class="headerlink" href="#module-docknv.template_renderer" title="Permalink to this headline">¶</a></h2>
-<p>Jinja template renderer.</p>
-<dl class="function">
-<dt id="docknv.template_renderer.renderer_render_compose_template">
-<code class="descclassname">docknv.template_renderer.</code><code class="descname">renderer_render_compose_template</code><span class="sig-paren">(</span><em>compose_content</em>, <em>environment_data=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/template_renderer.html#renderer_render_compose_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.template_renderer.renderer_render_compose_template" title="Permalink to this definition">¶</a></dt>
-<dd><p>Resolve compose content.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>compose_content</strong> – Compose content (dict)</li>
-<li><strong>environment_data</strong> – Environment data (dict?) (default: None)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Template data (dict)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.template_renderer.renderer_render_template">
-<code class="descclassname">docknv.template_renderer.</code><code class="descname">renderer_render_template</code><span class="sig-paren">(</span><em>project_path</em>, <em>template_path</em>, <em>config_name</em>, <em>environment_data=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/template_renderer.html#renderer_render_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.template_renderer.renderer_render_template" title="Permalink to this definition">¶</a></dt>
-<dd><p>Render a Jinja template, using a namespace and environment.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_path</strong> – Project path (str)</li>
-<li><strong>template_path</strong> – Template path (str)</li>
-<li><strong>config_name</strong> – Config name (str)</li>
-<li><strong>environment_data</strong> – Environment data (dict?) (default: None)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">File output name (str)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.template_renderer.renderer_render_template_inplace">
-<code class="descclassname">docknv.template_renderer.</code><code class="descname">renderer_render_template_inplace</code><span class="sig-paren">(</span><em>content</em>, <em>environment_data=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/template_renderer.html#renderer_render_template_inplace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.template_renderer.renderer_render_template_inplace" title="Permalink to this definition">¶</a></dt>
-<dd><p>Render a Jinja template in-place, using environment data.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>content</strong> – Template content (dict)</li>
-<li><strong>environment_data</strong> – Environment data (dict?) (default: None)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Template data (str)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv.user_handler">
-<span id="docknv-user-handler-module"></span><h2>docknv.user_handler module<a class="headerlink" href="#module-docknv.user_handler" title="Permalink to this headline">¶</a></h2>
-<p>User handling.</p>
-<dl class="function">
-<dt id="docknv.user_handler.user_check_lock">
-<code class="descclassname">docknv.user_handler.</code><code class="descname">user_check_lock</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_check_lock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_check_lock" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check the user lock file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">bool</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.user_handler.user_clean_config_path">
-<code class="descclassname">docknv.user_handler.</code><code class="descname">user_clean_config_path</code><span class="sig-paren">(</span><em>project_name</em>, <em>config_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_clean_config_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_clean_config_path" title="Permalink to this definition">¶</a></dt>
-<dd><p>Clean a user config path, with an optional config name.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_name</strong> – Project name (str)</li>
-<li><strong>config_name</strong> – Config name (str?) (default: None)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.user_handler.user_copy_file_to_config">
-<code class="descclassname">docknv.user_handler.</code><code class="descname">user_copy_file_to_config</code><span class="sig-paren">(</span><em>project_name</em>, <em>path_to_file</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_copy_file_to_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_copy_file_to_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Copy file to the user config path.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_name</strong> – Project name (str)</li>
-<li><strong>path_to_file</strong> – Path to file (str)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.user_handler.user_disable_lock">
-<code class="descclassname">docknv.user_handler.</code><code class="descname">user_disable_lock</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_disable_lock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_disable_lock" title="Permalink to this definition">¶</a></dt>
-<dd><p>Disable user lock file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.user_handler.user_enable_lock">
-<code class="descclassname">docknv.user_handler.</code><code class="descname">user_enable_lock</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_enable_lock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_enable_lock" title="Permalink to this definition">¶</a></dt>
-<dd><p>Enable user lock file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Success ? (bool)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.user_handler.user_ensure_config_path_exists">
-<code class="descclassname">docknv.user_handler.</code><code class="descname">user_ensure_config_path_exists</code><span class="sig-paren">(</span><em>project_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_ensure_config_path_exists"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_ensure_config_path_exists" title="Permalink to this definition">¶</a></dt>
-<dd><p>Ensure the config path existence.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_name</strong> – Project name (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.user_handler.user_get_docknv_config_file">
-<code class="descclassname">docknv.user_handler.</code><code class="descname">user_get_docknv_config_file</code><span class="sig-paren">(</span><em>project_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_get_docknv_config_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_get_docknv_config_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get project config file from user path.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_name</strong> – Project name (str)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Config path (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.user_handler.user_get_file_from_project">
-<code class="descclassname">docknv.user_handler.</code><code class="descname">user_get_file_from_project</code><span class="sig-paren">(</span><em>project_name</em>, <em>path_to_file</em>, <em>config_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_get_file_from_project"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_get_file_from_project" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get file from user project path.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_name</strong> – Project name (str)</li>
-<li><strong>path_to_file</strong> – Path to file (str)</li>
-<li><strong>config_name</strong> – Config name (str?) (default: None)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">File path (str)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.user_handler.user_get_id">
-<code class="descclassname">docknv.user_handler.</code><code class="descname">user_get_id</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_get_id"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_get_id" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the user ID.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">User ID (int/str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.user_handler.user_get_lock_file">
-<code class="descclassname">docknv.user_handler.</code><code class="descname">user_get_lock_file</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_get_lock_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_get_lock_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get the user lock file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Lock file path (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.user_handler.user_get_project_path">
-<code class="descclassname">docknv.user_handler.</code><code class="descname">user_get_project_path</code><span class="sig-paren">(</span><em>project_name</em>, <em>config_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_get_project_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_get_project_path" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a user project path.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>project_name</strong> – Project name (str)</li>
-<li><strong>config_name</strong> – Config name (str?) (default: None)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Config path (str)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.user_handler.user_read_docknv_config">
-<code class="descclassname">docknv.user_handler.</code><code class="descname">user_read_docknv_config</code><span class="sig-paren">(</span><em>project_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_read_docknv_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_read_docknv_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read the docknv.yml config file for a project.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_name</strong> – Project name (str)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">YAML content (dict)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.user_handler.user_temporary_copy_file">
-<code class="descclassname">docknv.user_handler.</code><code class="descname">user_temporary_copy_file</code><span class="sig-paren">(</span><em>project_name</em>, <em>path_to_file</em>, <em>config_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_temporary_copy_file"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_temporary_copy_file" title="Permalink to this definition">¶</a></dt>
-<dd><p>Make a temporary copy of a user config file.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_name</strong> – Project name (str)</li>
-<li><strong>path_to_file</strong> – Path to file (str)</li>
-<li><strong>config_name</strong> – Config name (str?) (default: None)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Context manager</strong></p>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.user_handler.user_try_lock">
-<code class="descclassname">docknv.user_handler.</code><code class="descname">user_try_lock</code><span class="sig-paren">(</span><em>project_path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_try_lock"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_try_lock" title="Permalink to this definition">¶</a></dt>
-<dd><p>Try to set the user lock.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>project_path</strong> – Project path (str)</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Context manager</strong></p>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.user_handler.user_write_docknv_config">
-<code class="descclassname">docknv.user_handler.</code><code class="descname">user_write_docknv_config</code><span class="sig-paren">(</span><em>project_name</em>, <em>docknv_config</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/user_handler.html#user_write_docknv_config"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.user_handler.user_write_docknv_config" title="Permalink to this definition">¶</a></dt>
-<dd><p>Write docknv.yml config content for a project.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>project_name</strong> – Project name (str)</li>
-<li><strong>docknv_config</strong> – docknv config (dict)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 </div>
 <div class="section" id="module-docknv.version">
 <span id="docknv-version-module"></span><h2>docknv.version module<a class="headerlink" href="#module-docknv.version" title="Permalink to this headline">¶</a></h2>
 <p>Version number.</p>
 </div>
-<div class="section" id="module-docknv.volume_handler">
-<span id="docknv-volume-handler-module"></span><h2>docknv.volume_handler module<a class="headerlink" href="#module-docknv.volume_handler" title="Permalink to this headline">¶</a></h2>
-<p>Volume handler.</p>
-<dl class="class">
-<dt id="docknv.volume_handler.VolumeObject">
-<em class="property">class </em><code class="descclassname">docknv.volume_handler.</code><code class="descname">VolumeObject</code><span class="sig-paren">(</span><em>host_path</em>, <em>container_path</em>, <em>mode='rw'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/volume_handler.html#VolumeObject"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.volume_handler.VolumeObject" title="Permalink to this definition">¶</a></dt>
-<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">object</span></code></p>
-<p>Volume object entry.</p>
-<dl class="method">
-<dt id="docknv.volume_handler.VolumeObject.generate_namespaced_volume_path">
-<code class="descname">generate_namespaced_volume_path</code><span class="sig-paren">(</span><em>file_type</em>, <em>path</em>, <em>project_name</em>, <em>config_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/volume_handler.html#VolumeObject.generate_namespaced_volume_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.volume_handler.VolumeObject.generate_namespaced_volume_path" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate a namespaced volume path.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>file_type</strong> – Type of file (str) (static/shared)</li>
-<li><strong>path</strong> – File path (str)</li>
-<li><strong>project_name</strong> – Project name (str)</li>
-<li><strong>config_name</strong> – Config name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Volume path (str)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="method">
-<dt id="docknv.volume_handler.VolumeObject.update_filters">
-<code class="descname">update_filters</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/volume_handler.html#VolumeObject.update_filters"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.volume_handler.VolumeObject.update_filters" title="Permalink to this definition">¶</a></dt>
-<dd><p>Update filter values from host path, container path and mode.</p>
-</dd></dl>
-
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.volume_handler.volume_extract_from_line">
-<code class="descclassname">docknv.volume_handler.</code><code class="descname">volume_extract_from_line</code><span class="sig-paren">(</span><em>line</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/volume_handler.html#volume_extract_from_line"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.volume_handler.volume_extract_from_line" title="Permalink to this definition">¶</a></dt>
-<dd><p>Extract a VolumeObject from a line string.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>line</strong> – Line string (str)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Volume object data (<a class="reference internal" href="#docknv.volume_handler.VolumeObject" title="docknv.volume_handler.VolumeObject">VolumeObject</a>)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.volume_handler.volume_generate_namespaced_path">
-<code class="descclassname">docknv.volume_handler.</code><code class="descname">volume_generate_namespaced_path</code><span class="sig-paren">(</span><em>file_type</em>, <em>project_name</em>, <em>config_name</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/volume_handler.html#volume_generate_namespaced_path"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.volume_handler.volume_generate_namespaced_path" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate a namespaced volume path.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>file_type</strong> – Type of file (str) (static/shared)</li>
-<li><strong>project_name</strong> – Project name (str)</li>
-<li><strong>config_name</strong> – Config name (str)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Volume path (str)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-docknv" title="Permalink to this headline">¶</a></h2>
-</div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="docknv.compose.html" class="btn btn-neutral float-right" title="docknv.compose package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
       
       
         <a href="modules.html" class="btn btn-neutral" title="docknv" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
@@ -2636,11 +342,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Denis BOURGE.
+        &copy; Copyright 2017-2018 Denis BOURGE
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -2655,35 +361,23 @@
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'4.0.0.alpha',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

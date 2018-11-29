@@ -1,0 +1,407 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>docknv.wrapper package &mdash; docknv 5.0.0.alpha documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="docknv.volume package" href="docknv.volume.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> docknv
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                5.0.0.alpha
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pages/01.intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/02.architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/03.environment.html">Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/05.ipython.html">Practical example: IPython Notebook</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">docknv</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="docknv.html">docknv package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="docknv.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="docknv.compose.html">docknv.compose package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.database.html">docknv.database package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.environment.html">docknv.environment package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.image.html">docknv.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.lifecycle.html">docknv.lifecycle package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.logger.html">docknv.logger package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.project.html">docknv.project package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.scaffolder.html">docknv.scaffolder package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.schema.html">docknv.schema package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.shell.html">docknv.shell package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.template.html">docknv.template package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.tests.html">docknv.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.user.html">docknv.user package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.utils.html">docknv.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.volume.html">docknv.volume package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">docknv.wrapper package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.version">docknv.version module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">docknv</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">docknv</a> &raquo;</li>
+        
+          <li><a href="docknv.html">docknv package</a> &raquo;</li>
+        
+      <li>docknv.wrapper package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/docknv.wrapper.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-docknv.wrapper">
+<span id="docknv-wrapper-package"></span><h1>docknv.wrapper package<a class="headerlink" href="#module-docknv.wrapper" title="Permalink to this headline">¶</a></h1>
+<p>Wrappers.</p>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-docknv.wrapper.docker_api_wrapper">
+<span id="docknv-wrapper-docker-api-wrapper-module"></span><h2>docknv.wrapper.docker_api_wrapper module<a class="headerlink" href="#module-docknv.wrapper.docker_api_wrapper" title="Permalink to this headline">¶</a></h2>
+<p>Docker API wrapper.</p>
+<dl class="function">
+<dt id="docknv.wrapper.docker_api_wrapper.docker_ps">
+<code class="descclassname">docknv.wrapper.docker_api_wrapper.</code><code class="descname">docker_ps</code><span class="sig-paren">(</span><em>client</em>, <em>project_name</em>, <em>namespace_name=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/wrapper/docker_api_wrapper.html#docker_ps"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.wrapper.docker_api_wrapper.docker_ps" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get running container infos.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>client</strong> – Client (Client)</li>
+<li><strong>namespace_name</strong> – Namespace name (str)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Info list (iterable)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.wrapper.docker_api_wrapper.text_ellipse">
+<code class="descclassname">docknv.wrapper.docker_api_wrapper.</code><code class="descname">text_ellipse</code><span class="sig-paren">(</span><em>s</em>, <em>maxlen</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/wrapper/docker_api_wrapper.html#text_ellipse"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.wrapper.docker_api_wrapper.text_ellipse" title="Permalink to this definition">¶</a></dt>
+<dd><p>Apply ellipse on text at <cite>maxlen</cite>.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>s</strong> – Text (str)</li>
+<li><strong>maxlen</strong> – Max length (int)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Text (str)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.wrapper.docker_api_wrapper.using_docker_client">
+<code class="descclassname">docknv.wrapper.docker_api_wrapper.</code><code class="descname">using_docker_client</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/wrapper/docker_api_wrapper.html#using_docker_client"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.wrapper.docker_api_wrapper.using_docker_client" title="Permalink to this definition">¶</a></dt>
+<dd><p>Open a Docker client.</p>
+<p><strong>Context manager</strong></p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-docknv.wrapper.docker_wrapper">
+<span id="docknv-wrapper-docker-wrapper-module"></span><h2>docknv.wrapper.docker_wrapper module<a class="headerlink" href="#module-docknv.wrapper.docker_wrapper" title="Permalink to this headline">¶</a></h2>
+<p>Docker commands wrapper.</p>
+<dl class="function">
+<dt id="docknv.wrapper.docker_wrapper.exec_compose">
+<code class="descclassname">docknv.wrapper.docker_wrapper.</code><code class="descname">exec_compose</code><span class="sig-paren">(</span><em>project_path</em>, <em>composefile_path</em>, <em>args</em>, <em>pretty=False</em>, <em>dry_run=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/wrapper/docker_wrapper.html#exec_compose"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.wrapper.docker_wrapper.exec_compose" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute a Docker Compose command.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>project_path</strong> – Project path (str)</li>
+<li><strong>composefile_path</strong> – Composefile path (str)</li>
+<li><strong>args</strong> – Arguments (…)</li>
+<li><strong>pretty</strong> – Pretty filtering ? (default: False) (bool)</li>
+<li><strong>dry_run</strong> – Dry run? (bool) (default: False)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.wrapper.docker_wrapper.exec_docker">
+<code class="descclassname">docknv.wrapper.docker_wrapper.</code><code class="descname">exec_docker</code><span class="sig-paren">(</span><em>project_path</em>, <em>args</em>, <em>dry_run=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/wrapper/docker_wrapper.html#exec_docker"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.wrapper.docker_wrapper.exec_docker" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute a Docker command.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
+<li><strong>project_path</strong> – Project path (str)</li>
+<li><strong>args</strong> – Arguments (…)</li>
+<li><strong>dry_run</strong> – Dry run? (bool) (default: False)</li>
+</ul>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+<div class="section" id="module-docknv.wrapper.exceptions">
+<span id="docknv-wrapper-exceptions-module"></span><h2>docknv.wrapper.exceptions module<a class="headerlink" href="#module-docknv.wrapper.exceptions" title="Permalink to this headline">¶</a></h2>
+<p>Wrapper exceptions.</p>
+<dl class="exception">
+<dt id="docknv.wrapper.exceptions.FailedCommandExecution">
+<em class="property">exception </em><code class="descclassname">docknv.wrapper.exceptions.</code><code class="descname">FailedCommandExecution</code><span class="sig-paren">(</span><em>cause</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/wrapper/exceptions.html#FailedCommandExecution"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.wrapper.exceptions.FailedCommandExecution" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Failed command execution.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-docknv.wrapper.methods">
+<span id="docknv-wrapper-methods-module"></span><h2>docknv.wrapper.methods module<a class="headerlink" href="#module-docknv.wrapper.methods" title="Permalink to this headline">¶</a></h2>
+<p>Wrapper methods.</p>
+<dl class="function">
+<dt id="docknv.wrapper.methods.exec_process">
+<code class="descclassname">docknv.wrapper.methods.</code><code class="descname">exec_process</code><span class="sig-paren">(</span><em>args</em>, <em>cwd=None</em>, <em>shell=False</em>, <em>dry_run=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/wrapper/methods.html#exec_process"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.wrapper.methods.exec_process" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute a process.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>args</strong> – Arguments (list)</li>
+<li><strong>cwd</strong> – Working directory (str?)</li>
+<li><strong>shell</strong> – Shell? (bool) (default: False)</li>
+<li><strong>dry_run</strong> – Dry run? (bool) (default: False)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Arguments or return code</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.wrapper.methods.exec_process_with_output">
+<code class="descclassname">docknv.wrapper.methods.</code><code class="descname">exec_process_with_output</code><span class="sig-paren">(</span><em>args</em>, <em>cwd=None</em>, <em>outfilter=None</em>, <em>dry_run=False</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/wrapper/methods.html#exec_process_with_output"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.wrapper.methods.exec_process_with_output" title="Permalink to this definition">¶</a></dt>
+<dd><p>Execute a process with output.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>args</strong> – Arguments (list)</li>
+<li><strong>cwd</strong> – Working directory (str?)</li>
+<li><strong>outfilter</strong> – Output filter func (fn?)</li>
+<li><strong>dry_run</strong> – Dry run? (bool) (default: False)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Arguments or return code and output</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="docknv.volume.html" class="btn btn-neutral" title="docknv.volume package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2018 Denis BOURGE
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

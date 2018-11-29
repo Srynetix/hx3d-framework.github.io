@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>docknv.utils package &mdash; docknv 4.0.0.alpha documentation</title>
+  <title>docknv.utils package &mdash; docknv 5.0.0.alpha documentation</title>
   
 
   
@@ -24,25 +24,19 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="genindex.html"/>
-        <link rel="search" title="Search" href="search.html"/>
-    <link rel="top" title="docknv 4.0.0.alpha documentation" href="index.html"/> 
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="docknv.volume package" href="docknv.volume.html" />
+    <link rel="prev" title="docknv.user package" href="docknv.user.html" /> 
 
   
   <script src="_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -64,7 +58,7 @@
             
             
               <div class="version">
-                4.0.0.alpha
+                5.0.0.alpha
               </div>
             
           
@@ -89,13 +83,38 @@
             
             
               <p class="caption"><span class="caption-text">Contents:</span></p>
-<ul>
+<ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="pages/01.intro.html">Introduction</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pages/02.architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pages/03.environment.html">Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pages/05.ipython.html">Practical example: IPython Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="pages/10.command-line-reference.html">Command-line reference</a></li>
-<li class="toctree-l1"><a class="reference internal" href="modules.html">docknv</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">docknv</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="docknv.html">docknv package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="docknv.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="docknv.compose.html">docknv.compose package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.database.html">docknv.database package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.environment.html">docknv.environment package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.image.html">docknv.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.lifecycle.html">docknv.lifecycle package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.logger.html">docknv.logger package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.project.html">docknv.project package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.scaffolder.html">docknv.scaffolder package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.schema.html">docknv.schema package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.shell.html">docknv.shell package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.template.html">docknv.template package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.tests.html">docknv.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.user.html">docknv.user package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">docknv.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.volume.html">docknv.volume package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.wrapper.html">docknv.wrapper package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.version">docknv.version module</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             
@@ -107,7 +126,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="index.html">docknv</a>
@@ -115,9 +134,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -140,6 +160,10 @@
     
       <li><a href="index.html">Docs</a> &raquo;</li>
         
+          <li><a href="modules.html">docknv</a> &raquo;</li>
+        
+          <li><a href="docknv.html">docknv package</a> &raquo;</li>
+        
       <li>docknv.utils package</li>
     
     
@@ -159,118 +183,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="docknv-utils-package">
-<h1>docknv.utils package<a class="headerlink" href="#docknv-utils-package" title="Permalink to this headline">¶</a></h1>
+  <div class="section" id="module-docknv.utils">
+<span id="docknv-utils-package"></span><h1>docknv.utils package<a class="headerlink" href="#module-docknv.utils" title="Permalink to this headline">¶</a></h1>
+<p>docknv utils.</p>
 <div class="section" id="submodules">
 <h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
-</div>
-<div class="section" id="module-docknv.utils.deprecated">
-<span id="docknv-utils-deprecated-module"></span><h2>docknv.utils.deprecated module<a class="headerlink" href="#module-docknv.utils.deprecated" title="Permalink to this headline">¶</a></h2>
-<p>Deprecated.</p>
-<dl class="function">
-<dt id="docknv.utils.deprecated.deprecated">
-<code class="descclassname">docknv.utils.deprecated.</code><code class="descname">deprecated</code><span class="sig-paren">(</span><em>func</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/deprecated.html#deprecated"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.deprecated.deprecated" title="Permalink to this definition">¶</a></dt>
-<dd><p>Decorate functions which can be used to mark functions as deprecated.</p>
-<p>It will result in a warning being emmitted
-when the function is used.</p>
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv.utils.diff_system">
-<span id="docknv-utils-diff-system-module"></span><h2>docknv.utils.diff_system module<a class="headerlink" href="#module-docknv.utils.diff_system" title="Permalink to this headline">¶</a></h2>
-<p>Diff system.</p>
-<dl class="function">
-<dt id="docknv.utils.diff_system.concat_diffs">
-<code class="descclassname">docknv.utils.diff_system.</code><code class="descname">concat_diffs</code><span class="sig-paren">(</span><em>old_time_data</em>, <em>new_time_data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/diff_system.html#concat_diffs"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.diff_system.concat_diffs" title="Permalink to this definition">¶</a></dt>
-<dd><p>Concat diffs.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>old_time_data</strong> – Old time data (dict)</li>
-<li><strong>new_time_data</strong> – New time data (dict)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Time diff concat (dict)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.utils.diff_system.diff_modification_time">
-<code class="descclassname">docknv.utils.diff_system.</code><code class="descname">diff_modification_time</code><span class="sig-paren">(</span><em>old_time_data</em>, <em>new_time_data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/diff_system.html#diff_modification_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.diff_system.diff_modification_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>Check diff between two time datas.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
-<li><strong>old_time_data</strong> – Old time data (dict)</li>
-<li><strong>new_time_data</strong> – New time data (dict)</li>
-</ul>
-</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Time diff dict (dict)</p>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.utils.diff_system.get_files_last_modification_time">
-<code class="descclassname">docknv.utils.diff_system.</code><code class="descname">get_files_last_modification_time</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/diff_system.html#get_files_last_modification_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.diff_system.get_files_last_modification_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>For each file in path, recursively, get its last modification time as a timestamp.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>path</strong> – Path (str)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Time dict (dict)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.utils.diff_system.read_last_modification_time">
-<code class="descclassname">docknv.utils.diff_system.</code><code class="descname">read_last_modification_time</code><span class="sig-paren">(</span><em>stream</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/diff_system.html#read_last_modification_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.diff_system.read_last_modification_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>Read last modification time.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>stream</strong> – Stream (io)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Time dict (dict)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.utils.diff_system.save_last_modification_time">
-<code class="descclassname">docknv.utils.diff_system.</code><code class="descname">save_last_modification_time</code><span class="sig-paren">(</span><em>stream</em>, <em>results</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/diff_system.html#save_last_modification_time"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.diff_system.save_last_modification_time" title="Permalink to this definition">¶</a></dt>
-<dd><p>Save last modification time.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first last simple">
-<li><strong>stream</strong> – Stream (io)</li>
-<li><strong>results</strong> – Time dict (dict)</li>
-</ul>
-</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
 </div>
 <div class="section" id="module-docknv.utils.ioutils">
 <span id="docknv-utils-ioutils-module"></span><h2>docknv.utils.ioutils module<a class="headerlink" href="#module-docknv.utils.ioutils" title="Permalink to this headline">¶</a></h2>
@@ -472,63 +389,33 @@ when the function is used.</p>
 </dd></dl>
 
 </div>
-<div class="section" id="module-docknv.utils.words">
-<span id="docknv-utils-words-module"></span><h2>docknv.utils.words module<a class="headerlink" href="#module-docknv.utils.words" title="Permalink to this headline">¶</a></h2>
-<p>Words utilities.</p>
-<dl class="function">
-<dt id="docknv.utils.words.generate_config_name">
-<code class="descclassname">docknv.utils.words.</code><code class="descname">generate_config_name</code><span class="sig-paren">(</span><em>config_list</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/words.html#generate_config_name"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.words.generate_config_name" title="Permalink to this definition">¶</a></dt>
-<dd><p>Generate a unique config name.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>config_list</strong> – Config list (iterable)</td>
-</tr>
-<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Config name (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-<dl class="function">
-<dt id="docknv.utils.words.get_random_word_from_dictionary">
-<code class="descclassname">docknv.utils.words.</code><code class="descname">get_random_word_from_dictionary</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/utils/words.html#get_random_word_from_dictionary"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.utils.words.get_random_word_from_dictionary" title="Permalink to this definition">¶</a></dt>
-<dd><p>Get a random word from a dictionary.</p>
-<table class="docutils field-list" frame="void" rules="none">
-<col class="field-name" />
-<col class="field-body" />
-<tbody valign="top">
-<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body">Random word (str)</td>
-</tr>
-</tbody>
-</table>
-</dd></dl>
-
-</div>
-<div class="section" id="module-docknv.utils">
-<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-docknv.utils" title="Permalink to this headline">¶</a></h2>
-</div>
 </div>
 
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="docknv.volume.html" class="btn btn-neutral float-right" title="docknv.volume package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="docknv.user.html" class="btn btn-neutral" title="docknv.user package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
   
 
   <hr/>
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Denis BOURGE.
+        &copy; Copyright 2017-2018 Denis BOURGE
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -543,35 +430,23 @@ when the function is used.</p>
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'./',
-            VERSION:'4.0.0.alpha',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="_static/jquery.js"></script>
-      <script type="text/javascript" src="_static/underscore.js"></script>
-      <script type="text/javascript" src="_static/doctools.js"></script>
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

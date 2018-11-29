@@ -1,0 +1,342 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>docknv.schema package &mdash; docknv 5.0.0.alpha documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="docknv.shell package" href="docknv.shell.html" />
+    <link rel="prev" title="docknv.scaffolder package" href="docknv.scaffolder.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> docknv
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                5.0.0.alpha
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pages/01.intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/02.architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/03.environment.html">Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/05.ipython.html">Practical example: IPython Notebook</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">docknv</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="docknv.html">docknv package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="docknv.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="docknv.compose.html">docknv.compose package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.database.html">docknv.database package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.environment.html">docknv.environment package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.image.html">docknv.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.lifecycle.html">docknv.lifecycle package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.logger.html">docknv.logger package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.project.html">docknv.project package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.scaffolder.html">docknv.scaffolder package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">docknv.schema package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.shell.html">docknv.shell package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.template.html">docknv.template package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.tests.html">docknv.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.user.html">docknv.user package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.utils.html">docknv.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.volume.html">docknv.volume package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.wrapper.html">docknv.wrapper package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.version">docknv.version module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">docknv</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">docknv</a> &raquo;</li>
+        
+          <li><a href="docknv.html">docknv package</a> &raquo;</li>
+        
+      <li>docknv.schema package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/docknv.schema.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-docknv.schema">
+<span id="docknv-schema-package"></span><h1>docknv.schema package<a class="headerlink" href="#module-docknv.schema" title="Permalink to this headline">¶</a></h1>
+<p>Schema module.</p>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-docknv.schema.models">
+<span id="docknv-schema-models-module"></span><h2>docknv.schema.models module<a class="headerlink" href="#module-docknv.schema.models" title="Permalink to this headline">¶</a></h2>
+<p>Schema models.</p>
+<dl class="exception">
+<dt id="docknv.schema.models.MalformedSchema">
+<em class="property">exception </em><code class="descclassname">docknv.schema.models.</code><code class="descname">MalformedSchema</code><span class="sig-paren">(</span><em>schema</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/schema/models.html#MalformedSchema"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.schema.models.MalformedSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Malformed schema.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="docknv.schema.models.MissingSchema">
+<em class="property">exception </em><code class="descclassname">docknv.schema.models.</code><code class="descname">MissingSchema</code><span class="sig-paren">(</span><em>schema</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/schema/models.html#MissingSchema"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.schema.models.MissingSchema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Missing schema.</p>
+</dd></dl>
+
+<dl class="class">
+<dt id="docknv.schema.models.Schema">
+<em class="property">class </em><code class="descclassname">docknv.schema.models.</code><code class="descname">Schema</code><span class="sig-paren">(</span><em>name</em>, <em>services=None</em>, <em>volumes=None</em>, <em>networks=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/schema/models.html#Schema"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.schema.models.Schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Schema.</p>
+<dl class="method">
+<dt id="docknv.schema.models.Schema.show">
+<code class="descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/schema/models.html#Schema.show"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.schema.models.Schema.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show schema.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="docknv.schema.models.SchemaCollection">
+<em class="property">class </em><code class="descclassname">docknv.schema.models.</code><code class="descname">SchemaCollection</code><span class="sig-paren">(</span><em>schemas</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/schema/models.html#SchemaCollection"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.schema.models.SchemaCollection" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Schema collection.</p>
+<dl class="method">
+<dt id="docknv.schema.models.SchemaCollection.get_schema">
+<code class="descname">get_schema</code><span class="sig-paren">(</span><em>schema</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/schema/models.html#SchemaCollection.get_schema"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.schema.models.SchemaCollection.get_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Get schema by name.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>schema</strong> – Schema name (str)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference internal" href="#docknv.schema.models.Schema" title="docknv.schema.models.Schema">Schema</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="docknv.schema.models.SchemaCollection.includes_schema">
+<code class="descname">includes_schema</code><span class="sig-paren">(</span><em>schema</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/schema/models.html#SchemaCollection.includes_schema"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.schema.models.SchemaCollection.includes_schema" title="Permalink to this definition">¶</a></dt>
+<dd><p>Is schema included.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>schema</strong> – Schema name (str)</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="classmethod">
+<dt id="docknv.schema.models.SchemaCollection.load_from_data">
+<em class="property">classmethod </em><code class="descname">load_from_data</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/schema/models.html#SchemaCollection.load_from_data"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.schema.models.SchemaCollection.load_from_data" title="Permalink to this definition">¶</a></dt>
+<dd><p>Load from path.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>data</strong> – Schema data (dict)</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body">Schema collection</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="method">
+<dt id="docknv.schema.models.SchemaCollection.show">
+<code class="descname">show</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/schema/models.html#SchemaCollection.show"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.schema.models.SchemaCollection.show" title="Permalink to this definition">¶</a></dt>
+<dd><p>Show collection.</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="docknv.shell.html" class="btn btn-neutral float-right" title="docknv.shell package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="docknv.scaffolder.html" class="btn btn-neutral" title="docknv.scaffolder package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2018 Denis BOURGE
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -8,7 +8,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>docknv.utils.serialization &mdash; docknv 4.0.0.alpha documentation</title>
+  <title>docknv.utils.serialization &mdash; docknv 5.0.0.alpha documentation</title>
   
 
   
@@ -24,26 +24,17 @@
 
   
 
-  
-  
-    <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
-  
-
-  
-
-  
-        <link rel="index" title="Index"
-              href="../../../genindex.html"/>
-        <link rel="search" title="Search" href="../../../search.html"/>
-    <link rel="top" title="docknv 4.0.0.alpha documentation" href="../../../index.html"/>
-        <link rel="up" title="Module code" href="../../index.html"/> 
+  <link rel="stylesheet" href="../../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../../../genindex.html" />
+    <link rel="search" title="Search" href="../../../search.html" /> 
 
   
   <script src="../../../_static/js/modernizr.min.js"></script>
 
 </head>
 
-<body class="wy-body-for-nav" role="document">
+<body class="wy-body-for-nav">
 
    
   <div class="wy-grid-for-nav">
@@ -65,7 +56,7 @@
             
             
               <div class="version">
-                4.0.0.alpha
+                5.0.0.alpha
               </div>
             
           
@@ -95,7 +86,6 @@
 <li class="toctree-l1"><a class="reference internal" href="../../../pages/02.architecture.html">Architecture</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../pages/03.environment.html">Environment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../pages/05.ipython.html">Practical example: IPython Notebook</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../../pages/10.command-line-reference.html">Command-line reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../../modules.html">docknv</a></li>
 </ul>
 
@@ -108,7 +98,7 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
 
       
-      <nav class="wy-nav-top" role="navigation" aria-label="top navigation">
+      <nav class="wy-nav-top" aria-label="top navigation">
         
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../../index.html">docknv</a>
@@ -116,9 +106,10 @@
       </nav>
 
 
-      
       <div class="wy-nav-content">
+        
         <div class="rst-content">
+        
           
 
 
@@ -147,8 +138,6 @@
     
     
       <li class="wy-breadcrumbs-aside">
-        
-            
         
       </li>
     
@@ -189,7 +178,8 @@
         <span class="k">return</span> <span class="n">src1</span></div>
 
 
-<div class="viewcode-block" id="yaml_ordered_load"><a class="viewcode-back" href="../../../docknv.utils.html#docknv.utils.serialization.yaml_ordered_load">[docs]</a><span class="k">def</span> <span class="nf">yaml_ordered_load</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">loader_class</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">Loader</span><span class="p">,</span> <span class="n">object_pairs_hook</span><span class="o">=</span><span class="n">OrderedDict</span><span class="p">):</span>
+<div class="viewcode-block" id="yaml_ordered_load"><a class="viewcode-back" href="../../../docknv.utils.html#docknv.utils.serialization.yaml_ordered_load">[docs]</a><span class="k">def</span> <span class="nf">yaml_ordered_load</span><span class="p">(</span><span class="n">stream</span><span class="p">,</span> <span class="n">loader_class</span><span class="o">=</span><span class="n">yaml</span><span class="o">.</span><span class="n">Loader</span><span class="p">,</span>
+                      <span class="n">object_pairs_hook</span><span class="o">=</span><span class="n">OrderedDict</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;</span>
 <span class="sd">    Load ordered YAML content.</span>
 
@@ -228,10 +218,12 @@
             <span class="n">data</span><span class="o">.</span><span class="n">items</span><span class="p">())</span>
 
     <span class="n">OrderedDumper</span><span class="o">.</span><span class="n">add_representer</span><span class="p">(</span><span class="n">OrderedDict</span><span class="p">,</span> <span class="n">_dict_representer</span><span class="p">)</span>
-    <span class="n">OrderedDumper</span><span class="o">.</span><span class="n">add_representer</span><span class="p">(</span><span class="nb">str</span><span class="p">,</span> <span class="n">yaml</span><span class="o">.</span><span class="n">representer</span><span class="o">.</span><span class="n">SafeRepresenter</span><span class="o">.</span><span class="n">represent_str</span><span class="p">)</span>
+    <span class="n">OrderedDumper</span><span class="o">.</span><span class="n">add_representer</span><span class="p">(</span>
+        <span class="nb">str</span><span class="p">,</span> <span class="n">yaml</span><span class="o">.</span><span class="n">representer</span><span class="o">.</span><span class="n">SafeRepresenter</span><span class="o">.</span><span class="n">represent_str</span><span class="p">)</span>
 
     <span class="k">if</span> <span class="n">six</span><span class="o">.</span><span class="n">PY2</span><span class="p">:</span>
-        <span class="n">OrderedDumper</span><span class="o">.</span><span class="n">add_representer</span><span class="p">(</span><span class="n">unicode</span><span class="p">,</span> <span class="n">yaml</span><span class="o">.</span><span class="n">representer</span><span class="o">.</span><span class="n">SafeRepresenter</span><span class="o">.</span><span class="n">represent_unicode</span><span class="p">)</span> <span class="c1"># noqa</span>
+        <span class="n">OrderedDumper</span><span class="o">.</span><span class="n">add_representer</span><span class="p">(</span>
+            <span class="n">unicode</span><span class="p">,</span> <span class="n">yaml</span><span class="o">.</span><span class="n">representer</span><span class="o">.</span><span class="n">SafeRepresenter</span><span class="o">.</span><span class="n">represent_unicode</span><span class="p">)</span> <span class="c1"># noqa</span>
 
     <span class="n">out</span> <span class="o">=</span> <span class="n">yaml</span><span class="o">.</span><span class="n">dump</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">stream</span><span class="p">,</span> <span class="n">OrderedDumper</span><span class="p">,</span> <span class="o">**</span><span class="n">kwds</span><span class="p">)</span>
 
@@ -263,9 +255,7 @@
 </pre></div>
 
            </div>
-           <div class="articleComments">
-            
-           </div>
+           
           </div>
           <footer>
   
@@ -274,11 +264,11 @@
 
   <div role="contentinfo">
     <p>
-        &copy; Copyright 2017, Denis BOURGE.
+        &copy; Copyright 2017-2018 Denis BOURGE
 
     </p>
   </div>
-  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/snide/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
 
 </footer>
 
@@ -293,35 +283,23 @@
 
   
 
-    <script type="text/javascript">
-        var DOCUMENTATION_OPTIONS = {
-            URL_ROOT:'../../../',
-            VERSION:'4.0.0.alpha',
-            COLLAPSE_INDEX:false,
-            FILE_SUFFIX:'.html',
-            HAS_SOURCE:  true,
-            SOURCELINK_SUFFIX: '.txt'
-        };
-    </script>
-      <script type="text/javascript" src="../../../_static/jquery.js"></script>
-      <script type="text/javascript" src="../../../_static/underscore.js"></script>
-      <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../../" src="../../../_static/documentation_options.js"></script>
+        <script type="text/javascript" src="../../../_static/jquery.js"></script>
+        <script type="text/javascript" src="../../../_static/underscore.js"></script>
+        <script type="text/javascript" src="../../../_static/doctools.js"></script>
+    
 
   
 
-  
-  
-    <script type="text/javascript" src="../../../_static/js/theme.js"></script>
-  
+  <script type="text/javascript" src="../../../_static/js/theme.js"></script>
 
-  
-  
   <script type="text/javascript">
       jQuery(function () {
-          SphinxRtdTheme.StickyNav.enable();
+          SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-   
+  </script> 
 
 </body>
 </html>

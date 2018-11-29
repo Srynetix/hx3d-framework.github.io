@@ -1,0 +1,337 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="en" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="en" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>docknv.template package &mdash; docknv 5.0.0.alpha documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+
+  
+  
+    
+
+  
+
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="docknv.tests package" href="docknv.tests.html" />
+    <link rel="prev" title="docknv.shell.handlers package" href="docknv.shell.handlers.html" /> 
+
+  
+  <script src="_static/js/modernizr.min.js"></script>
+
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search">
+          
+
+          
+            <a href="index.html" class="icon icon-home"> docknv
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                5.0.0.alpha
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="pages/01.intro.html">Introduction</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/02.architecture.html">Architecture</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/03.environment.html">Environment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pages/05.ipython.html">Practical example: IPython Notebook</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="modules.html">docknv</a><ul class="current">
+<li class="toctree-l2 current"><a class="reference internal" href="docknv.html">docknv package</a><ul class="current">
+<li class="toctree-l3 current"><a class="reference internal" href="docknv.html#subpackages">Subpackages</a><ul class="current">
+<li class="toctree-l4"><a class="reference internal" href="docknv.compose.html">docknv.compose package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.database.html">docknv.database package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.environment.html">docknv.environment package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.image.html">docknv.image package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.lifecycle.html">docknv.lifecycle package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.logger.html">docknv.logger package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.project.html">docknv.project package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.scaffolder.html">docknv.scaffolder package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.schema.html">docknv.schema package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.shell.html">docknv.shell package</a></li>
+<li class="toctree-l4 current"><a class="current reference internal" href="#">docknv.template package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.tests.html">docknv.tests package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.user.html">docknv.user package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.utils.html">docknv.utils package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.volume.html">docknv.volume package</a></li>
+<li class="toctree-l4"><a class="reference internal" href="docknv.wrapper.html">docknv.wrapper package</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#submodules">Submodules</a></li>
+<li class="toctree-l3"><a class="reference internal" href="docknv.html#module-docknv.version">docknv.version module</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">docknv</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="modules.html">docknv</a> &raquo;</li>
+        
+          <li><a href="docknv.html">docknv package</a> &raquo;</li>
+        
+      <li>docknv.template package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/docknv.template.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-docknv.template">
+<span id="docknv-template-package"></span><h1>docknv.template package<a class="headerlink" href="#module-docknv.template" title="Permalink to this headline">¶</a></h1>
+<p>Template renderer.</p>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+</div>
+<div class="section" id="module-docknv.template.exceptions">
+<span id="docknv-template-exceptions-module"></span><h2>docknv.template.exceptions module<a class="headerlink" href="#module-docknv.template.exceptions" title="Permalink to this headline">¶</a></h2>
+<p>Template exceptions.</p>
+<dl class="exception">
+<dt id="docknv.template.exceptions.MalformedTemplate">
+<em class="property">exception </em><code class="descclassname">docknv.template.exceptions.</code><code class="descname">MalformedTemplate</code><span class="sig-paren">(</span><em>cause</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/template/exceptions.html#MalformedTemplate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.template.exceptions.MalformedTemplate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Malformed template.</p>
+</dd></dl>
+
+<dl class="exception">
+<dt id="docknv.template.exceptions.MissingTemplate">
+<em class="property">exception </em><code class="descclassname">docknv.template.exceptions.</code><code class="descname">MissingTemplate</code><span class="sig-paren">(</span><em>path</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/template/exceptions.html#MissingTemplate"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.template.exceptions.MissingTemplate" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">Exception</span></code></p>
+<p>Missing template.</p>
+</dd></dl>
+
+</div>
+<div class="section" id="module-docknv.template.methods">
+<span id="docknv-template-methods-module"></span><h2>docknv.template.methods module<a class="headerlink" href="#module-docknv.template.methods" title="Permalink to this headline">¶</a></h2>
+<p>Jinja template renderer.</p>
+<dl class="function">
+<dt id="docknv.template.methods.renderer_render_compose_template">
+<code class="descclassname">docknv.template.methods.</code><code class="descname">renderer_render_compose_template</code><span class="sig-paren">(</span><em>compose_content</em>, <em>environment_data=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/template/methods.html#renderer_render_compose_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.template.methods.renderer_render_compose_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>Resolve compose content.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>compose_content</strong> – Compose content (dict)</li>
+<li><strong>environment_data</strong> – Environment data (dict?) (default: None)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Template data (dict)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.template.methods.renderer_render_template">
+<code class="descclassname">docknv.template.methods.</code><code class="descname">renderer_render_template</code><span class="sig-paren">(</span><em>template_path</em>, <em>config</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/template/methods.html#renderer_render_template"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.template.methods.renderer_render_template" title="Permalink to this definition">¶</a></dt>
+<dd><p>Render a Jinja template, using a namespace and environment.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>template_path</strong> – Template path (str)</li>
+<li><strong>config</strong> – Configuration</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">File output name (str)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
+<dt id="docknv.template.methods.renderer_render_template_inplace">
+<code class="descclassname">docknv.template.methods.</code><code class="descname">renderer_render_template_inplace</code><span class="sig-paren">(</span><em>content</em>, <em>environment_data=None</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/docknv/template/methods.html#renderer_render_template_inplace"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#docknv.template.methods.renderer_render_template_inplace" title="Permalink to this definition">¶</a></dt>
+<dd><p>Render a Jinja template in-place, using environment data.</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><ul class="first simple">
+<li><strong>content</strong> – Template content (dict)</li>
+<li><strong>environment_data</strong> – Environment data (dict?) (default: None)</li>
+</ul>
+</td>
+</tr>
+<tr class="field-even field"><th class="field-name">Return type:</th><td class="field-body"><p class="first last">Template data (str)</p>
+</td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="docknv.tests.html" class="btn btn-neutral float-right" title="docknv.tests package" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="docknv.shell.handlers.html" class="btn btn-neutral" title="docknv.shell.handlers package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2017-2018 Denis BOURGE
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+
+    
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script type="text/javascript" src="_static/jquery.js"></script>
+        <script type="text/javascript" src="_static/underscore.js"></script>
+        <script type="text/javascript" src="_static/doctools.js"></script>
+    
+
+  
+
+  <script type="text/javascript" src="_static/js/theme.js"></script>
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
