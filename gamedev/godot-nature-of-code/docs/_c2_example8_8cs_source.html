@@ -72,47 +72,54 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> System.Linq;</div>
-<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> Godot;</div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_forces.html">Forces</a>;</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">public</span> <span class="keyword">class </span>C2Example8 : Node2D, <a class="code" href="interface_i_example.html">IExample</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="interface_i_example.html#afbf0b027e8a8c23ff109b9c07100d390">_Summary</a>()</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  {</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 2.8:\n&quot;</span></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;      + <span class="stringliteral">&quot;Mutual Attraction&quot;</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  }</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    var size = GetViewportRect().Size;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">foreach</span> (var x <span class="keywordflow">in</span> Enumerable.Range(0, 20))</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      var mover = <span class="keyword">new</span> <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a>(<a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a>.<a class="code" href="class_forces_1_1_simple_mover.html#ae8cb967d177fef6f7ee66ab40aae12f5">WrapModeEnum</a>.Bounce);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      var bodySize = (float)GD.RandRange(20, 40);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      var xPos = (float)GD.RandRange(bodySize, size.x - bodySize);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      var yPos = (float)GD.RandRange(bodySize, size.y - bodySize);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      mover.MeshSize = <span class="keyword">new</span> Vector2(bodySize, bodySize);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      mover.Mass = bodySize;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      mover.Position = <span class="keyword">new</span> Vector2(xPos, yPos);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      <span class="comment">// Add attractor on mover</span></div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      var attractor = <span class="keyword">new</span> <a class="code" href="class_forces_1_1_simple_attractor.html">SimpleAttractor</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      attractor.Visible = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      mover.AddChild(attractor);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      AddChild(mover);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;  }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;}</div>
+<div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> Godot;</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_forces.html">Forces</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples.html">Examples</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keyword">namespace </span>Chapter2</div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter2_1_1_c2_example8.html">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter2_1_1_c2_example8.html">C2Example8</a> : Node2D, <a class="code" href="interface_i_example.html">IExample</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter2_1_1_c2_example8.html#a42d35e4b9a74034c32591a973dc8eeea">   15</a></span>&#160;      <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter2_1_1_c2_example8.html#a42d35e4b9a74034c32591a973dc8eeea">_Summary</a>()</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 2.8:\n&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;          + <span class="stringliteral">&quot;Mutual Attraction&quot;</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        var size = GetViewportRect().Size;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordflow">foreach</span> (var x <span class="keywordflow">in</span> Enumerable.Range(0, 20))</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;          var mover = <span class="keyword">new</span> <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a>(<a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a>.<a class="code" href="class_forces_1_1_simple_mover.html#ae8cb967d177fef6f7ee66ab40aae12f5">WrapModeEnum</a>.Bounce);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;          var bodySize = (float)GD.RandRange(20, 40);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;          var xPos = (float)GD.RandRange(bodySize, size.x - bodySize);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;          var yPos = (float)GD.RandRange(bodySize, size.y - bodySize);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;          mover.MeshSize = <span class="keyword">new</span> Vector2(bodySize, bodySize);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          mover.Mass = bodySize;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;          mover.Position = <span class="keyword">new</span> Vector2(xPos, yPos);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;          <span class="comment">// Add attractor on mover</span></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;          var attractor = <span class="keyword">new</span> <a class="code" href="class_forces_1_1_simple_attractor.html">SimpleAttractor</a>();</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;          attractor.Visible = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;          mover.AddChild(attractor);</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;          AddChild(mover);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_forces_1_1_simple_mover_html"><div class="ttname"><a href="class_forces_1_1_simple_mover.html">Forces.SimpleMover</a></div><div class="ttdoc">Generic force-driven object.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00009">SimpleMover.cs:10</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter2_1_1_c2_example8_html"><div class="ttname"><a href="class_examples_1_1_chapter2_1_1_c2_example8.html">Examples.Chapter2.C2Example8</a></div><div class="ttdoc">Example 2.8 - Mutual Attraction.</div><div class="ttdef"><b>Definition:</b> <a href="_c2_example8_8cs_source.html#l00013">C2Example8.cs:14</a></div></div>
 <div class="ttc" id="aclass_forces_1_1_simple_mover_html_ae8cb967d177fef6f7ee66ab40aae12f5"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#ae8cb967d177fef6f7ee66ab40aae12f5">Forces.SimpleMover.WrapModeEnum</a></div><div class="ttdeci">WrapModeEnum</div><div class="ttdoc">Wrapping mode enum.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00014">SimpleMover.cs:15</a></div></div>
 <div class="ttc" id="aclass_forces_1_1_simple_attractor_html"><div class="ttname"><a href="class_forces_1_1_simple_attractor.html">Forces.SimpleAttractor</a></div><div class="ttdoc">Simple mover attractor.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_attractor_8cs_source.html#l00012">SimpleAttractor.cs:13</a></div></div>
 <div class="ttc" id="ainterface_i_example_html"><div class="ttname"><a href="interface_i_example.html">IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00004">Example.cs:5</a></div></div>
-<div class="ttc" id="ainterface_i_example_html_afbf0b027e8a8c23ff109b9c07100d390"><div class="ttname"><a href="interface_i_example.html#afbf0b027e8a8c23ff109b9c07100d390">IExample._Summary</a></div><div class="ttdeci">string _Summary()</div><div class="ttdoc">Output a summary text</div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter2_1_1_c2_example8_html_a42d35e4b9a74034c32591a973dc8eeea"><div class="ttname"><a href="class_examples_1_1_chapter2_1_1_c2_example8.html#a42d35e4b9a74034c32591a973dc8eeea">Examples.Chapter2.C2Example8._Summary</a></div><div class="ttdeci">string _Summary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c2_example8_8cs_source.html#l00015">C2Example8.cs:15</a></div></div>
+<div class="ttc" id="anamespace_examples_html"><div class="ttname"><a href="namespace_examples.html">Examples</a></div><div class="ttdoc">Nature of Code examples and exercises.</div><div class="ttdef"><b>Definition:</b> <a href="_c0_example1_8cs_source.html#l00007">C0Example1.cs:8</a></div></div>
 <div class="ttc" id="anamespace_forces_html"><div class="ttname"><a href="namespace_forces.html">Forces</a></div><div class="ttdoc">Force-related primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_constant_acceleration_mover_8cs_source.html#l00003">ConstantAccelerationMover.cs:4</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

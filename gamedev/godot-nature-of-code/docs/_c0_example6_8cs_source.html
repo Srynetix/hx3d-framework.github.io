@@ -74,27 +74,35 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> Godot;</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_drawing.html">Drawing</a>;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">public</span> <span class="keyword">class </span>C0Example6 : Node2D, <a class="code" href="interface_i_example.html">IExample</a></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples.html">Examples</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="interface_i_example.html#afbf0b027e8a8c23ff109b9c07100d390">_Summary</a>()</div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keyword">namespace </span>Chapter0</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example I.6:\n&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      + <span class="stringliteral">&quot;2D Perlin noise&quot;</span>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  }</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    var noiseTexture = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_noise_texture.html">SimpleNoiseTexture</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    noiseTexture.Factor = 3;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    noiseTexture.Octaves = 8;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    AddChild(noiseTexture);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;}</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter0_1_1_c0_example6.html">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter0_1_1_c0_example6.html">C0Example6</a> : Node2D, <a class="code" href="interface_i_example.html">IExample</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter0_1_1_c0_example6.html#a6c17019b1786ec805a19a39a25186ce1">   14</a></span>&#160;      <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter0_1_1_c0_example6.html#a6c17019b1786ec805a19a39a25186ce1">_Summary</a>()</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example I.6:\n&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;          + <span class="stringliteral">&quot;2D Perlin noise&quot;</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        var noiseTexture = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_noise_texture.html">SimpleNoiseTexture</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        noiseTexture.Factor = 3;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        noiseTexture.Octaves = 8;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        AddChild(noiseTexture);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;  }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_drawing_html"><div class="ttname"><a href="namespace_drawing.html">Drawing</a></div><div class="ttdoc">Draw primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00006">DrawCanvas.cs:7</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_noise_texture_html"><div class="ttname"><a href="class_drawing_1_1_simple_noise_texture.html">Drawing.SimpleNoiseTexture</a></div><div class="ttdoc">Simple noise texture.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_noise_texture_8cs_source.html#l00008">SimpleNoiseTexture.cs:9</a></div></div>
 <div class="ttc" id="ainterface_i_example_html"><div class="ttname"><a href="interface_i_example.html">IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00004">Example.cs:5</a></div></div>
-<div class="ttc" id="ainterface_i_example_html_afbf0b027e8a8c23ff109b9c07100d390"><div class="ttname"><a href="interface_i_example.html#afbf0b027e8a8c23ff109b9c07100d390">IExample._Summary</a></div><div class="ttdeci">string _Summary()</div><div class="ttdoc">Output a summary text</div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter0_1_1_c0_example6_html_a6c17019b1786ec805a19a39a25186ce1"><div class="ttname"><a href="class_examples_1_1_chapter0_1_1_c0_example6.html#a6c17019b1786ec805a19a39a25186ce1">Examples.Chapter0.C0Example6._Summary</a></div><div class="ttdeci">string _Summary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c0_example6_8cs_source.html#l00014">C0Example6.cs:14</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter0_1_1_c0_example6_html"><div class="ttname"><a href="class_examples_1_1_chapter0_1_1_c0_example6.html">Examples.Chapter0.C0Example6</a></div><div class="ttdoc">Example 0.6 - 2D perlin noise.</div><div class="ttdef"><b>Definition:</b> <a href="_c0_example6_8cs_source.html#l00012">C0Example6.cs:13</a></div></div>
+<div class="ttc" id="anamespace_examples_html"><div class="ttname"><a href="namespace_examples.html">Examples</a></div><div class="ttdoc">Nature of Code examples and exercises.</div><div class="ttdef"><b>Definition:</b> <a href="_c0_example1_8cs_source.html#l00007">C0Example1.cs:8</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

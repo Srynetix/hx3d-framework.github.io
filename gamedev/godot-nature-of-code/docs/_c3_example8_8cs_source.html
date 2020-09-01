@@ -73,44 +73,52 @@ $(function() {
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> Godot;</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">public</span> <span class="keyword">class </span>C3Example8 : Node2D, <a class="code" href="interface_i_example.html">IExample</a></div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples.html">Examples</a></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="interface_i_example.html#afbf0b027e8a8c23ff109b9c07100d390">_Summary</a>()</div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;  <span class="keyword">namespace </span>Chapter3</div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  {</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 3.8:\n&quot;</span></div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;      + <span class="stringliteral">&quot;Static line wave&quot;</span>;</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  }</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  <span class="keyword">private</span> <span class="keywordtype">float</span> angle = 0;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keyword">private</span> <span class="keywordtype">float</span> angularVelocity = 0.2f;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;  <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Draw()</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    var size = GetViewportRect().Size;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">float</span> prevY = 0;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">float</span> prevX = 0;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt;= size.x; x += 5)</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      <span class="keywordtype">float</span> y = <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a34a01167f3ae45f790e51c287f874f99">Map</a>(Mathf.Sin(angle), -1, 1, size.y / 4, size.y / 2 + size.y / 4);</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      <span class="comment">// Ignore first point</span></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <span class="keywordflow">if</span> (x != 0)</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        DrawLine(<span class="keyword">new</span> Vector2(prevX, prevY), <span class="keyword">new</span> Vector2(x, y), Colors.LightBlue, 2);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        angle += angularVelocity;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      }</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      prevX = x;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      prevY = y;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter3_1_1_c3_example8.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter3_1_1_c3_example8.html">C3Example8</a> : Node2D, <a class="code" href="interface_i_example.html">IExample</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter3_1_1_c3_example8.html#a195566e4125f58bed0da0163d1c141bf">   13</a></span>&#160;      <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter3_1_1_c3_example8.html#a195566e4125f58bed0da0163d1c141bf">_Summary</a>()</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 3.8:\n&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;          + <span class="stringliteral">&quot;Static line wave&quot;</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <span class="keyword">private</span> <span class="keywordtype">float</span> angle = 0;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <span class="keyword">private</span> <span class="keywordtype">float</span> angularVelocity = 0.2f;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Draw()</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        var size = GetViewportRect().Size;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keywordtype">float</span> prevY = 0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        <span class="keywordtype">float</span> prevX = 0;</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt;= size.x; x += 5)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;          <span class="keywordtype">float</span> y = <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a34a01167f3ae45f790e51c287f874f99">Map</a>(Mathf.Sin(angle), -1, 1, size.y / 4, size.y / 2 + size.y / 4);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          <span class="comment">// Ignore first point</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;          <span class="keywordflow">if</span> (x != 0)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;          {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            DrawLine(<span class="keyword">new</span> Vector2(prevX, prevY), <span class="keyword">new</span> Vector2(x, y), Colors.LightBlue, 2);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            angle += angularVelocity;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;          }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;          prevX = x;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;          prevY = y;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        }</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_math_utils_html"><div class="ttname"><a href="class_math_utils.html">MathUtils</a></div><div class="ttdoc">Math utility functions</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00006">MathUtils.cs:7</a></div></div>
 <div class="ttc" id="ainterface_i_example_html"><div class="ttname"><a href="interface_i_example.html">IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00004">Example.cs:5</a></div></div>
 <div class="ttc" id="aclass_math_utils_html_a34a01167f3ae45f790e51c287f874f99"><div class="ttname"><a href="class_math_utils.html#a34a01167f3ae45f790e51c287f874f99">MathUtils.Map</a></div><div class="ttdeci">static float Map(float value, float istart, float istop, float ostart, float ostop)</div><div class="ttdoc">Map a value from one bound to another.</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00017">MathUtils.cs:17</a></div></div>
-<div class="ttc" id="ainterface_i_example_html_afbf0b027e8a8c23ff109b9c07100d390"><div class="ttname"><a href="interface_i_example.html#afbf0b027e8a8c23ff109b9c07100d390">IExample._Summary</a></div><div class="ttdeci">string _Summary()</div><div class="ttdoc">Output a summary text</div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter3_1_1_c3_example8_html"><div class="ttname"><a href="class_examples_1_1_chapter3_1_1_c3_example8.html">Examples.Chapter3.C3Example8</a></div><div class="ttdoc">Example 3.8 - Static line wave.</div><div class="ttdef"><b>Definition:</b> <a href="_c3_example8_8cs_source.html#l00011">C3Example8.cs:12</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter3_1_1_c3_example8_html_a195566e4125f58bed0da0163d1c141bf"><div class="ttname"><a href="class_examples_1_1_chapter3_1_1_c3_example8.html#a195566e4125f58bed0da0163d1c141bf">Examples.Chapter3.C3Example8._Summary</a></div><div class="ttdeci">string _Summary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c3_example8_8cs_source.html#l00013">C3Example8.cs:13</a></div></div>
+<div class="ttc" id="anamespace_examples_html"><div class="ttname"><a href="namespace_examples.html">Examples</a></div><div class="ttdoc">Nature of Code examples and exercises.</div><div class="ttdef"><b>Definition:</b> <a href="_c0_example1_8cs_source.html#l00007">C0Example1.cs:8</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

@@ -74,36 +74,43 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> Godot;</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_particles.html">Particles</a>;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">public</span> <span class="keyword">class </span>C4Example1 : Node2D, <a class="code" href="interface_i_example.html">IExample</a></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples.html">Examples</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="interface_i_example.html#afbf0b027e8a8c23ff109b9c07100d390">_Summary</a>()</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  {</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 4.1:\n&quot;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;      + <span class="stringliteral">&quot;Simple Particle&quot;</span>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  }</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span>EParticle : <a class="code" href="class_particles_1_1_simple_particle.html">SimpleParticle</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> UpdateAcceleration()</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      <a class="code" href="class_forces_1_1_simple_mover.html#a9cf54f76dad9b55d52e9c89d2ee00997">Acceleration</a> = <span class="keyword">new</span> Vector2(0, 0.01f);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  }</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;  {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    var size = GetViewportRect().Size;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    var particle = <span class="keyword">new</span> EParticle();</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    particle.Position = size / 2;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    AddChild(particle);</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;  }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;}</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="namespace_examples_1_1_chapter4.html">    9</a></span>&#160;  <span class="keyword">namespace </span>Chapter4</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  {</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter4_1_1_c4_example1.html">   15</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter4_1_1_c4_example1.html">C4Example1</a> : Node2D, <a class="code" href="interface_i_example.html">IExample</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter4_1_1_c4_example1.html#a1187df9e2ad92ef64195f92b01772cf9">   17</a></span>&#160;      <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter4_1_1_c4_example1.html#a1187df9e2ad92ef64195f92b01772cf9">_Summary</a>()</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 4.1:\n&quot;</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;          + <span class="stringliteral">&quot;Simple Particle&quot;</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      <span class="keyword">private</span> <span class="keyword">class </span>EParticle : <a class="code" href="class_particles_1_1_simple_particle.html">SimpleParticle</a></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> UpdateAcceleration()</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;          Acceleration = <span class="keyword">new</span> Vector2(0, 0.01f);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        }</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        var size = GetViewportRect().Size;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        var particle = <span class="keyword">new</span> EParticle();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        particle.Position = size / 2;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        AddChild(particle);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_particles_html"><div class="ttname"><a href="namespace_particles.html">Particles</a></div><div class="ttdoc">Particle-related primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_falling_particle_8cs_source.html#l00003">SimpleFallingParticle.cs:4</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter4_1_1_c4_example1_html"><div class="ttname"><a href="class_examples_1_1_chapter4_1_1_c4_example1.html">Examples.Chapter4.C4Example1</a></div><div class="ttdoc">Example 4.1 - Simple Particle.</div><div class="ttdef"><b>Definition:</b> <a href="_c4_example1_8cs_source.html#l00015">C4Example1.cs:16</a></div></div>
 <div class="ttc" id="aclass_particles_1_1_simple_particle_html"><div class="ttname"><a href="class_particles_1_1_simple_particle.html">Particles.SimpleParticle</a></div><div class="ttdoc">Simple particle, based on mover.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_particle_8cs_source.html#l00012">SimpleParticle.cs:13</a></div></div>
 <div class="ttc" id="ainterface_i_example_html"><div class="ttname"><a href="interface_i_example.html">IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00004">Example.cs:5</a></div></div>
-<div class="ttc" id="aclass_forces_1_1_simple_mover_html_a9cf54f76dad9b55d52e9c89d2ee00997"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a9cf54f76dad9b55d52e9c89d2ee00997">Forces.SimpleMover.Acceleration</a></div><div class="ttdeci">Vector2 Acceleration</div><div class="ttdoc">Current acceleration</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00027">SimpleMover.cs:27</a></div></div>
-<div class="ttc" id="ainterface_i_example_html_afbf0b027e8a8c23ff109b9c07100d390"><div class="ttname"><a href="interface_i_example.html#afbf0b027e8a8c23ff109b9c07100d390">IExample._Summary</a></div><div class="ttdeci">string _Summary()</div><div class="ttdoc">Output a summary text</div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter4_1_1_c4_example1_html_a1187df9e2ad92ef64195f92b01772cf9"><div class="ttname"><a href="class_examples_1_1_chapter4_1_1_c4_example1.html#a1187df9e2ad92ef64195f92b01772cf9">Examples.Chapter4.C4Example1._Summary</a></div><div class="ttdeci">string _Summary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c4_example1_8cs_source.html#l00017">C4Example1.cs:17</a></div></div>
+<div class="ttc" id="anamespace_examples_html"><div class="ttname"><a href="namespace_examples.html">Examples</a></div><div class="ttdoc">Nature of Code examples and exercises.</div><div class="ttdef"><b>Definition:</b> <a href="_c0_example1_8cs_source.html#l00007">C0Example1.cs:8</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20
