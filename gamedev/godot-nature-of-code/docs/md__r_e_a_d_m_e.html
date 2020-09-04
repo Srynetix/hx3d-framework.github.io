@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.20"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>Godot Nature of Code: Nature of Code in Godot</title>
+<title>Godot Nature of Code: The Nature of Code in Godot</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -64,36 +64,37 @@ $(function() {
 </div><!-- top -->
 <div class="PageDoc"><div class="header">
   <div class="headertitle">
-<div class="title">Nature of Code in Godot </div>  </div>
+<div class="title">The Nature of Code in Godot </div>  </div>
 </div><!--header-->
 <div class="contents">
-<div class="textblock"><p>Official book: <a href="https://natureofcode.com/book/">https://natureofcode.com/book/</a></p>
-<p>Godot Engine: <a href="https://godotengine.org">https://godotengine.org</a></p>
+<div class="textblock"><p><b>Official book website</b>: <a href="https://natureofcode.com/book/">https://natureofcode.com/book/</a></p>
+<p><b>Godot Engine website</b>: <a href="https://godotengine.org">https://godotengine.org</a></p>
 <h1><a class="anchor" id="autotoc_md1"></a>
-Summary</h1>
-<p>Each interactive example and interactive exercise will be implemented with Godot Engine 3.2.3-rc3, using C# for the scripting.</p>
-<p>The project contain a launcher, with a <b>scene explorer</b> to navigate examples and exercises, and the <b>ecosystem simulation</b> scene.</p>
+:page_facing_up: Summary</h1>
+<p>Each interactive example and interactive exercise will be implemented with <b>Godot Engine 3.2.2 stable</b>, using <b>C#</b> for the scripting.</p>
+<p>The project contain a <b>launcher</b>, with a <b>scene explorer</b> to navigate examples and exercises, and the <b>ecosystem simulation</b> scene.</p>
 <p>Almost everything is created from scripts.</p>
 <p><img src="./docs/screen.gif" alt="screen" class="inline"/></p>
 <h1><a class="anchor" id="autotoc_md2"></a>
-Try it online</h1>
-<p>You can access the HTML5 version on my <code>github.io</code> here: <a href="https://srynetix.github.io/gamedev/godot-nature-of-code/index.html">Godot Nature of Code</a></p>
-<p>You can also access the generated C# documentation here: <a href="https://srynetix.github.io/gamedev/godot-nature-of-code/docs/annotated.html">C# Documentation</a></p>
+:joystick: Try it online</h1>
+<p>You can access the HTML5 version on my <code>github.io</code> here: <a href="https://srynetix.github.io/gamedev/godot-nature-of-code/index.html">Godot Nature of Code</a> <br  />
+</p>
 <h1><a class="anchor" id="autotoc_md3"></a>
-Features</h1>
+:sparkles: Features</h1>
 <ul>
-<li>Dynamic scene loader to explore examples and exercises</li>
-<li>Simple reusable primitives are available in the <code>scripts</code> folder<ul>
-<li><a class="el" href="namespace_examples.html" title="Nature of Code examples and exercises.">Examples</a>: Canvas, Attractors, Zones, Springs, <a class="el" href="namespace_particles.html" title="Particle-related primitives.">Particles</a>, Waves, etc.</li>
-</ul>
-</li>
-<li>The <code><a class="el" href="namespace_physics.html" title="Physics-related primitives.">Physics</a> Libraries</code> chapter is using the Godot internal physics engine instead of <code>Box2D</code></li>
-<li>A simple Verlet physics implementation based on <code>toxiclibs</code> can be found in <code>scripts/verletphysics</code></li>
-<li>Most C# code is documented with Doxygen, you can use the included Doxyfile to generate documentation</li>
-<li><a class="el" href="namespace_drawing.html" title="Draw primitives.">Drawing</a> is often batched (using GLES2 batching) to ensure correct performance on mobile and web targets</li>
+<li>:joystick: Dynamic scene loader to explore examples and exercises</li>
+<li>:art: Simple reusable primitives are available in the <code>scripts</code> folder</li>
+<li>:alembic: A simple custom Verlet physics implementation based on <code>toxiclibs</code> can be found in <code>scripts/verletphysics</code></li>
+<li>:zap: <a class="el" href="namespace_drawing.html" title="Draw primitives.">Drawing</a> is often batched (using GLES2 batching) to ensure correct performance on mobile and web targets</li>
+<li>:book: Most C# code is documented with Doxygen, you can use the included Doxyfile to generate documentation</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md4"></a>
-Roadmap</h1>
+:book: Documentation</h1>
+<p>Documentation is generated with Doxygen from C# XML comments. <br  />
+ Use the included Doxyfile to generate HTML documentation in the <code>../gnoc-html</code> folder. <br  />
+ You can also access the generated C# documentation here: <a href="https://srynetix.github.io/gamedev/godot-nature-of-code/docs/annotated.html">C# Documentation</a></p>
+<h1><a class="anchor" id="autotoc_md5"></a>
+:date: Roadmap</h1>
 <ul>
 <li>[ ] Implement missing examples and exercises.<ul>
 <li>[x] 00. Introduction</li>
@@ -111,10 +112,15 @@ Roadmap</h1>
 </li>
 <li>[ ] Implement the full <a class="el" href="class_ecosystem.html" title="The Ecosystem project.">Ecosystem</a> project</li>
 </ul>
-<h1><a class="anchor" id="autotoc_md5"></a>
-Generate documentation</h1>
-<p>Documentation is generated with Doxygen from C# XML comments. <br  />
- Use the included Doxyfile to generate HTML documentation in the ../gnoc-html folder. </p>
+<h1><a class="anchor" id="autotoc_md6"></a>
+:mage: Contributing</h1>
+<ul>
+<li><em>File rules</em>: An .editorconfig file is provided. <br  />
+</li>
+<li><em>Formatting</em>: This project use <code>dotnet-format</code> to automatically format the C# code, without specific configuration.</li>
+<li><em>Lint</em>: I am still looking for a command-line utility to lint the code (like <code>flake8</code> in the Python world or <code>clippy</code> in the Rust world).</li>
+</ul>
+<p>If you want to contribute, do not hesitate to create Pull Requests or file Issues on GitHub :wink:. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->
 <!-- start footer part -->

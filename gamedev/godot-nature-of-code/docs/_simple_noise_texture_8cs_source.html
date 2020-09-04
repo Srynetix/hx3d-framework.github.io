@@ -107,36 +107,32 @@ $(function() {
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      image.Unlock();</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">    #region Lifecycle methods</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      sprite = <span class="keyword">new</span> Sprite();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      image = <span class="keyword">new</span> Image();</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      texture = <span class="keyword">new</span> ImageTexture();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      noise = <span class="keyword">new</span> OpenSimplexNoise();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      noise.Octaves = <a class="code" href="class_drawing_1_1_simple_noise_texture.html#a98d70ba5e5ad6be23df8ed85100d8dfc">Octaves</a>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      var viewportSize = GetViewportRect().Size;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      var imageSize = viewportSize / <a class="code" href="class_drawing_1_1_simple_noise_texture.html#a49edb45d4708caf1ba0579973d375db2">Factor</a>;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      image.Create((<span class="keywordtype">int</span>)imageSize.x, (<span class="keywordtype">int</span>)imageSize.y, <span class="keyword">false</span>, Image.Format.Rgba8);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="comment">// Generate</span></div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <a class="code" href="class_drawing_1_1_simple_noise_texture.html#a033bf74d36a8cf604087a7b5c120e144">GenerateNoiseTexture</a>();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="comment">// Create texture</span></div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      texture.CreateFromImage(image);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <span class="comment">// Prepare sprite</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      sprite.Texture = texture;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      sprite.Position = viewportSize / 2;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      sprite.Scale = <span class="keyword">new</span> Vector2(<a class="code" href="class_drawing_1_1_simple_noise_texture.html#a49edb45d4708caf1ba0579973d375db2">Factor</a>, <a class="code" href="class_drawing_1_1_simple_noise_texture.html#a49edb45d4708caf1ba0579973d375db2">Factor</a>);</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      AddChild(sprite);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">    #endregion</span></div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;  }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;}</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      sprite = <span class="keyword">new</span> Sprite();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      image = <span class="keyword">new</span> Image();</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      texture = <span class="keyword">new</span> ImageTexture();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      noise = <span class="keyword">new</span> OpenSimplexNoise();</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      noise.Octaves = <a class="code" href="class_drawing_1_1_simple_noise_texture.html#a98d70ba5e5ad6be23df8ed85100d8dfc">Octaves</a>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      var viewportSize = GetViewportRect().Size;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      var imageSize = viewportSize / <a class="code" href="class_drawing_1_1_simple_noise_texture.html#a49edb45d4708caf1ba0579973d375db2">Factor</a>;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      image.Create((<span class="keywordtype">int</span>)imageSize.x, (<span class="keywordtype">int</span>)imageSize.y, <span class="keyword">false</span>, Image.Format.Rgba8);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="comment">// Generate</span></div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <a class="code" href="class_drawing_1_1_simple_noise_texture.html#a033bf74d36a8cf604087a7b5c120e144">GenerateNoiseTexture</a>();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="comment">// Create texture</span></div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      texture.CreateFromImage(image);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="comment">// Prepare sprite</span></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      sprite.Texture = texture;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      sprite.Position = viewportSize / 2;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      sprite.Scale = <span class="keyword">new</span> Vector2(<a class="code" href="class_drawing_1_1_simple_noise_texture.html#a49edb45d4708caf1ba0579973d375db2">Factor</a>, <a class="code" href="class_drawing_1_1_simple_noise_texture.html#a49edb45d4708caf1ba0579973d375db2">Factor</a>);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      AddChild(sprite);</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;  }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_drawing_html"><div class="ttname"><a href="namespace_drawing.html">Drawing</a></div><div class="ttdoc">Draw primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00006">DrawCanvas.cs:7</a></div></div>
 <div class="ttc" id="aclass_math_utils_html"><div class="ttname"><a href="class_math_utils.html">MathUtils</a></div><div class="ttdoc">Math utility functions</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00006">MathUtils.cs:7</a></div></div>

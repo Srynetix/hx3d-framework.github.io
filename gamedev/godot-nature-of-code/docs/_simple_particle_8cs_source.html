@@ -98,35 +98,31 @@ $(function() {
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keywordflow">return</span> (<span class="keywordtype">byte</span>)Mathf.Clamp(((<a class="code" href="class_particles_1_1_simple_particle.html#ae558c0668830ebf648809e50f958c3d5">Lifespan</a> / initialLifespan) * 255), 0, 255);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;<span class="preprocessor">    #region Lifecycle methods</span></div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    {</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      base._Ready();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      initialLifespan = <a class="code" href="class_particles_1_1_simple_particle.html#ae558c0668830ebf648809e50f958c3d5">Lifespan</a>;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_particles_1_1_simple_particle.html#afaad5f68f670320a8afd5084d0312bf6">IsDead</a>())</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      {</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      base._Ready();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      initialLifespan = <a class="code" href="class_particles_1_1_simple_particle.html#ae558c0668830ebf648809e50f958c3d5">Lifespan</a>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_particles_1_1_simple_particle.html#afaad5f68f670320a8afd5084d0312bf6">IsDead</a>())</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordflow">return</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      base._Process(delta);</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      base._Process(delta);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <a class="code" href="class_particles_1_1_simple_particle.html#ae558c0668830ebf648809e50f958c3d5">Lifespan</a> -= delta;</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <a class="code" href="class_particles_1_1_simple_particle.html#ae558c0668830ebf648809e50f958c3d5">Lifespan</a> -= delta;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_particles_1_1_simple_particle.html#a55fb0ba9b1b079059a37d624a1e751de">LifespanAsAlpha</a>)</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        var alpha = <a class="code" href="class_particles_1_1_simple_particle.html#a97953147aa826af09dbf1e1d798b52a4">GetLifespanAlphaValue</a>();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        <a class="code" href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">Mesh</a>.Modulate = <a class="code" href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">Mesh</a>.Modulate.WithAlpha(alpha);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      }</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">    #endregion</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_particles_1_1_simple_particle.html#a55fb0ba9b1b079059a37d624a1e751de">LifespanAsAlpha</a>)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        var alpha = <a class="code" href="class_particles_1_1_simple_particle.html#a97953147aa826af09dbf1e1d798b52a4">GetLifespanAlphaValue</a>();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        <a class="code" href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">Mesh</a>.Modulate = <a class="code" href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">Mesh</a>.Modulate.WithAlpha(alpha);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_particles_html"><div class="ttname"><a href="namespace_particles.html">Particles</a></div><div class="ttdoc">Particle-related primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_falling_particle_8cs_source.html#l00003">SimpleFallingParticle.cs:4</a></div></div>
 <div class="ttc" id="aclass_forces_1_1_simple_mover_html_a6815945e85383d57ba9ee54ce25ffc6b"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a6815945e85383d57ba9ee54ce25ffc6b">Forces.SimpleMover.WrapMode</a></div><div class="ttdeci">WrapModeEnum WrapMode</div><div class="ttdoc">Wrapping mode</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00039">SimpleMover.cs:39</a></div></div>
@@ -135,7 +131,7 @@ $(function() {
 <div class="ttc" id="aclass_particles_1_1_simple_particle_html_afaad5f68f670320a8afd5084d0312bf6"><div class="ttname"><a href="class_particles_1_1_simple_particle.html#afaad5f68f670320a8afd5084d0312bf6">Particles.SimpleParticle.IsDead</a></div><div class="ttdeci">bool IsDead()</div><div class="ttdoc">Check if the particle is dead.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_particle_8cs_source.html#l00033">SimpleParticle.cs:33</a></div></div>
 <div class="ttc" id="aclass_particles_1_1_simple_particle_html_a55fb0ba9b1b079059a37d624a1e751de"><div class="ttname"><a href="class_particles_1_1_simple_particle.html#a55fb0ba9b1b079059a37d624a1e751de">Particles.SimpleParticle.LifespanAsAlpha</a></div><div class="ttdeci">bool LifespanAsAlpha</div><div class="ttdoc">Lifespan as alpha</div><div class="ttdef"><b>Definition:</b> <a href="_simple_particle_8cs_source.html#l00017">SimpleParticle.cs:17</a></div></div>
 <div class="ttc" id="aclass_particles_1_1_simple_particle_html"><div class="ttname"><a href="class_particles_1_1_simple_particle.html">Particles.SimpleParticle</a></div><div class="ttdoc">Simple particle, based on mover.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_particle_8cs_source.html#l00012">SimpleParticle.cs:13</a></div></div>
-<div class="ttc" id="aclass_forces_1_1_simple_mover_html_a8428ebcb251141c1b4a84b4c869d5e09"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">Forces.SimpleMover.Mesh</a></div><div class="ttdeci">SimpleMesh Mesh</div><div class="ttdoc">Mesh</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00043">SimpleMover.cs:43</a></div></div>
+<div class="ttc" id="aclass_forces_1_1_simple_mover_html_a8428ebcb251141c1b4a84b4c869d5e09"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">Forces.SimpleMover.Mesh</a></div><div class="ttdeci">SimpleMesh Mesh</div><div class="ttdoc">Mesh</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00045">SimpleMover.cs:45</a></div></div>
 <div class="ttc" id="aclass_particles_1_1_simple_particle_html_af41072d207e123392cd813e18e8de88a"><div class="ttname"><a href="class_particles_1_1_simple_particle.html#af41072d207e123392cd813e18e8de88a">Particles.SimpleParticle.SimpleParticle</a></div><div class="ttdeci">SimpleParticle()</div><div class="ttdoc">Create a default non-wrapping particle.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_particle_8cs_source.html#l00024">SimpleParticle.cs:24</a></div></div>
 <div class="ttc" id="aclass_particles_1_1_simple_particle_html_a97953147aa826af09dbf1e1d798b52a4"><div class="ttname"><a href="class_particles_1_1_simple_particle.html#a97953147aa826af09dbf1e1d798b52a4">Particles.SimpleParticle.GetLifespanAlphaValue</a></div><div class="ttdeci">byte GetLifespanAlphaValue()</div><div class="ttdoc">Get lifespan alpha value.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_particle_8cs_source.html#l00042">SimpleParticle.cs:42</a></div></div>
 <div class="ttc" id="aclass_particles_1_1_simple_particle_html_ae558c0668830ebf648809e50f958c3d5"><div class="ttname"><a href="class_particles_1_1_simple_particle.html#ae558c0668830ebf648809e50f958c3d5">Particles.SimpleParticle.Lifespan</a></div><div class="ttdeci">float Lifespan</div><div class="ttdoc">Lifespan</div><div class="ttdef"><b>Definition:</b> <a href="_simple_particle_8cs_source.html#l00015">SimpleParticle.cs:15</a></div></div>

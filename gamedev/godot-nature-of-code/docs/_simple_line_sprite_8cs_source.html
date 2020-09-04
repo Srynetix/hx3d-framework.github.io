@@ -117,40 +117,32 @@ $(function() {
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      Modulate = Colors.LightGray;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
 <div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="preprocessor">    #region Lifecycle methods</span></div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      Texture = <a class="code" href="class_assets_1_1_simple_default_texture.html">SimpleDefaultTexture</a>.<a class="code" href="class_assets_1_1_simple_default_texture.html#a35881ff79818544eeef09cfbb10b6828">FromEnum</a>(<a class="code" href="class_assets_1_1_simple_default_texture.html">SimpleDefaultTexture</a>.<a class="code" href="class_assets_1_1_simple_default_texture.html#aea0415656d29fff069a6b7446fd536d2">Enum</a>.Line);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      UpdateTransform();</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="preprocessor">    #endregion</span></div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;<span class="preprocessor">    #region Private methods</span></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> UpdateTransform()</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      var dir = positionB - positionA;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      Rotation = dir.Angle() + Mathf.Pi / 2;</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordflow">if</span> (Texture != <span class="keyword">null</span>)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        <span class="comment">// Adapt scale depending on vector length</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        Scale = <span class="keyword">new</span> Vector2(Scale.x, dir.Length() / Texture.GetSize().y);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="comment">// Fix position</span></div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      GlobalPosition = positionA + dir / 2;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;<span class="preprocessor">    #endregion</span></div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;  }</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;}</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      Texture = <a class="code" href="class_assets_1_1_simple_default_texture.html">SimpleDefaultTexture</a>.<a class="code" href="class_assets_1_1_simple_default_texture.html#a35881ff79818544eeef09cfbb10b6828">FromEnum</a>(<a class="code" href="class_assets_1_1_simple_default_texture.html">SimpleDefaultTexture</a>.<a class="code" href="class_assets_1_1_simple_default_texture.html#aea0415656d29fff069a6b7446fd536d2">Enum</a>.Line);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      UpdateTransform();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> UpdateTransform()</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      var dir = positionB - positionA;</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      Rotation = dir.Angle() + Mathf.Pi / 2;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordflow">if</span> (Texture != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="comment">// Adapt scale depending on vector length</span></div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        Scale = <span class="keyword">new</span> Vector2(Scale.x, dir.Length() / Texture.GetSize().y);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="comment">// Fix position</span></div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      GlobalPosition = positionA + dir / 2;</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  }</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_drawing_html"><div class="ttname"><a href="namespace_drawing.html">Drawing</a></div><div class="ttdoc">Draw primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00006">DrawCanvas.cs:7</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_line_sprite_html"><div class="ttname"><a href="class_drawing_1_1_simple_line_sprite.html">Drawing.SimpleLineSprite</a></div><div class="ttdoc">Use this to draw a line between two points. Instead of DrawLine and Line2D, it can be batched.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_line_sprite_8cs_source.html#l00010">SimpleLineSprite.cs:11</a></div></div>
 <div class="ttc" id="anamespace_assets_html"><div class="ttname"><a href="namespace_assets.html">Assets</a></div><div class="ttdoc">Lazy-loaded assets.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_default_font_8cs_source.html#l00006">SimpleDefaultFont.cs:7</a></div></div>
-<div class="ttc" id="aclass_assets_1_1_simple_default_texture_html_a35881ff79818544eeef09cfbb10b6828"><div class="ttname"><a href="class_assets_1_1_simple_default_texture.html#a35881ff79818544eeef09cfbb10b6828">Assets.SimpleDefaultTexture.FromEnum</a></div><div class="ttdeci">static Texture FromEnum(Enum value)</div><div class="ttdoc">Get or create a default texture from an enum value.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_default_texture_8cs_source.html#l00041">SimpleDefaultTexture.cs:41</a></div></div>
+<div class="ttc" id="aclass_assets_1_1_simple_default_texture_html_a35881ff79818544eeef09cfbb10b6828"><div class="ttname"><a href="class_assets_1_1_simple_default_texture.html#a35881ff79818544eeef09cfbb10b6828">Assets.SimpleDefaultTexture.FromEnum</a></div><div class="ttdeci">static Texture FromEnum(Enum value)</div><div class="ttdoc">Get or create a default texture from an enum value.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_default_texture_8cs_source.html#l00044">SimpleDefaultTexture.cs:44</a></div></div>
 <div class="ttc" id="aclass_assets_1_1_simple_default_texture_html_aea0415656d29fff069a6b7446fd536d2"><div class="ttname"><a href="class_assets_1_1_simple_default_texture.html#aea0415656d29fff069a6b7446fd536d2">Assets.SimpleDefaultTexture.Enum</a></div><div class="ttdeci">Enum</div><div class="ttdoc">Texture types.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_default_texture_8cs_source.html#l00013">SimpleDefaultTexture.cs:14</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_line_sprite_html_aaf456b8175ee20314846f97bc87bacf8"><div class="ttname"><a href="class_drawing_1_1_simple_line_sprite.html#aaf456b8175ee20314846f97bc87bacf8">Drawing.SimpleLineSprite.PositionA</a></div><div class="ttdeci">Vector2 PositionA</div><div class="ttdoc">Point Position A.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_line_sprite_8cs_source.html#l00015">SimpleLineSprite.cs:16</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_line_sprite_html_a22e860e04bce76e7d96486620bdd1aaa"><div class="ttname"><a href="class_drawing_1_1_simple_line_sprite.html#a22e860e04bce76e7d96486620bdd1aaa">Drawing.SimpleLineSprite.PositionB</a></div><div class="ttdeci">Vector2 PositionB</div><div class="ttdoc">Point Position B.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_line_sprite_8cs_source.html#l00028">SimpleLineSprite.cs:29</a></div></div>

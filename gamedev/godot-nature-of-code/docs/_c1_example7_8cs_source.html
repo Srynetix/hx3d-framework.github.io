@@ -88,18 +88,17 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        GD.Randomize();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        var size = GetViewportRect().Size;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        var mover = <span class="keyword">new</span> <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a>();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        mover.Position = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)GD.RandRange(0, size.x), (<span class="keywordtype">float</span>)GD.RandRange(0, size.y));</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        mover.Velocity = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)GD.RandRange(-2.0f, 2.0f), (<span class="keywordtype">float</span>)GD.RandRange(-2.0f, 2.0f));</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        AddChild(mover);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      }</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        var size = GetViewportRect().Size;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        var mover = <span class="keyword">new</span> <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a>();</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        mover.Position = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)GD.RandRange(0, size.x), (<span class="keywordtype">float</span>)GD.RandRange(0, size.y));</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        mover.Velocity = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)GD.RandRange(-2.0f, 2.0f), (<span class="keywordtype">float</span>)GD.RandRange(-2.0f, 2.0f));</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        AddChild(mover);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      }</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    }</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;  }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_forces_1_1_simple_mover_html"><div class="ttname"><a href="class_forces_1_1_simple_mover.html">Forces.SimpleMover</a></div><div class="ttdoc">Generic force-driven object.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00009">SimpleMover.cs:10</a></div></div>
 <div class="ttc" id="aclass_examples_1_1_chapter1_1_1_c1_example7_html"><div class="ttname"><a href="class_examples_1_1_chapter1_1_1_c1_example7.html">Examples.Chapter1.C1Example7</a></div><div class="ttdoc">Example 1.7 - Velocity.</div><div class="ttdef"><b>Definition:</b> <a href="_c1_example7_8cs_source.html#l00012">C1Example7.cs:13</a></div></div>

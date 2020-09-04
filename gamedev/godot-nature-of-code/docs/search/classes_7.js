@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['ibehavior_524',['IBehavior',['../interface_verlet_physics_1_1_i_behavior.html',1,'VerletPhysics']]],
-  ['iexample_525',['IExample',['../interface_i_example.html',1,'']]]
+  ['hoppingbunny_625',['HoppingBunny',['../class_ecosystem_1_1_hopping_bunny.html',1,'Ecosystem']]]
 ];

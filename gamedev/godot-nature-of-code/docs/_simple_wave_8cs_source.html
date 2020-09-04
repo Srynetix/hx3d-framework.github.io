@@ -108,48 +108,40 @@ $(function() {
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordflow">return</span> <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a34a01167f3ae45f790e51c287f874f99">Map</a>(Mathf.Sin(angle), -1, 1, -<a class="code" href="class_oscillation_1_1_simple_wave.html#a9b3be663696b4008a49d3692b46e056b">Amplitude</a>, <a class="code" href="class_oscillation_1_1_simple_wave.html#a9b3be663696b4008a49d3692b46e056b">Amplitude</a>);</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="preprocessor">    #region Lifecycle methods</span></div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;    {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="keywordtype">float</span> angle = <a class="code" href="class_oscillation_1_1_simple_wave.html#ad1eea99191fc73b88bbfadf4e071803a">StartAngle</a>;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="comment">// Create components</span></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">float</span> x = -<a class="code" href="class_oscillation_1_1_simple_wave.html#abce5fca3a61505b2ac938d80b9238bed">Length</a> / 2; x &lt;= <a class="code" href="class_oscillation_1_1_simple_wave.html#abce5fca3a61505b2ac938d80b9238bed">Length</a> / 2; x += <a class="code" href="class_oscillation_1_1_simple_wave.html#a4f3ed4db3ee0250a0ae9631f856c9ecd">Separation</a>)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        var target = <span class="keyword">new</span> Vector2(x, <a class="code" href="class_oscillation_1_1_simple_wave.html#a44e5a6bac6592d33ac955452fa9f4648">ComputeY</a>(angle));</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        var node = <span class="keyword">new</span> WaveComponent();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        AddChild(node);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        node.GlobalPosition = GlobalPosition + target;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        angle += <a class="code" href="class_oscillation_1_1_simple_wave.html#ae6f7a911f738121fa3122c6d33bfdc67">AngularVelocity</a>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        components.Add(node);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    {</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      <a class="code" href="class_oscillation_1_1_simple_wave.html#ad1eea99191fc73b88bbfadf4e071803a">StartAngle</a> += delta * <a class="code" href="class_oscillation_1_1_simple_wave.html#a7881025d02444e95450903943557b52e">StartAngleFactor</a>;</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      UpdatePositions();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    }</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;<span class="preprocessor">    #endregion</span></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;<span class="preprocessor">    #region Private methods</span></div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> UpdatePositions()</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordtype">float</span> angle = <a class="code" href="class_oscillation_1_1_simple_wave.html#ad1eea99191fc73b88bbfadf4e071803a">StartAngle</a>;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordflow">foreach</span> (WaveComponent component <span class="keywordflow">in</span> components)</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        component.GlobalPosition = <span class="keyword">new</span> Vector2(component.GlobalPosition.x, GlobalPosition.y + <a class="code" href="class_oscillation_1_1_simple_wave.html#a44e5a6bac6592d33ac955452fa9f4648">ComputeY</a>(angle));</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        angle += <a class="code" href="class_oscillation_1_1_simple_wave.html#ae6f7a911f738121fa3122c6d33bfdc67">AngularVelocity</a>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;<span class="preprocessor">    #endregion</span></div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;  }</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    {</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordtype">float</span> angle = <a class="code" href="class_oscillation_1_1_simple_wave.html#ad1eea99191fc73b88bbfadf4e071803a">StartAngle</a>;</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="comment">// Create components</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">float</span> x = -<a class="code" href="class_oscillation_1_1_simple_wave.html#abce5fca3a61505b2ac938d80b9238bed">Length</a> / 2; x &lt;= <a class="code" href="class_oscillation_1_1_simple_wave.html#abce5fca3a61505b2ac938d80b9238bed">Length</a> / 2; x += <a class="code" href="class_oscillation_1_1_simple_wave.html#a4f3ed4db3ee0250a0ae9631f856c9ecd">Separation</a>)</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      {</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        var target = <span class="keyword">new</span> Vector2(x, <a class="code" href="class_oscillation_1_1_simple_wave.html#a44e5a6bac6592d33ac955452fa9f4648">ComputeY</a>(angle));</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        var node = <span class="keyword">new</span> WaveComponent();</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        AddChild(node);</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        node.GlobalPosition = GlobalPosition + target;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        angle += <a class="code" href="class_oscillation_1_1_simple_wave.html#ae6f7a911f738121fa3122c6d33bfdc67">AngularVelocity</a>;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        components.Add(node);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    }</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      <a class="code" href="class_oscillation_1_1_simple_wave.html#ad1eea99191fc73b88bbfadf4e071803a">StartAngle</a> += delta * <a class="code" href="class_oscillation_1_1_simple_wave.html#a7881025d02444e95450903943557b52e">StartAngleFactor</a>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      UpdatePositions();</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> UpdatePositions()</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    {</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      <span class="keywordtype">float</span> angle = <a class="code" href="class_oscillation_1_1_simple_wave.html#ad1eea99191fc73b88bbfadf4e071803a">StartAngle</a>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <span class="keywordflow">foreach</span> (WaveComponent component <span class="keywordflow">in</span> components)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        component.GlobalPosition = <span class="keyword">new</span> Vector2(component.GlobalPosition.x, GlobalPosition.y + <a class="code" href="class_oscillation_1_1_simple_wave.html#a44e5a6bac6592d33ac955452fa9f4648">ComputeY</a>(angle));</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        angle += <a class="code" href="class_oscillation_1_1_simple_wave.html#ae6f7a911f738121fa3122c6d33bfdc67">AngularVelocity</a>;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      }</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;  }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_drawing_html"><div class="ttname"><a href="namespace_drawing.html">Drawing</a></div><div class="ttdoc">Draw primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00006">DrawCanvas.cs:7</a></div></div>
 <div class="ttc" id="aclass_oscillation_1_1_simple_wave_html_abce5fca3a61505b2ac938d80b9238bed"><div class="ttname"><a href="class_oscillation_1_1_simple_wave.html#abce5fca3a61505b2ac938d80b9238bed">Oscillation.SimpleWave.Length</a></div><div class="ttdeci">float Length</div><div class="ttdoc">Wave length</div><div class="ttdef"><b>Definition:</b> <a href="_simple_wave_8cs_source.html#l00032">SimpleWave.cs:32</a></div></div>

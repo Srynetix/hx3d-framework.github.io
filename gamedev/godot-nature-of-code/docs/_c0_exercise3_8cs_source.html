@@ -147,22 +147,20 @@ $(function() {
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        GD.Randomize();</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        walker = <span class="keyword">new</span> Walker();</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        walker.SetXY(GetViewportRect().Size / 2);</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        AddChild(walker);</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        var canvas = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_draw_canvas.html">DrawCanvas</a>((pen) =&gt;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        {</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;          pen.DrawRect(walker.GetStepRect(), Colors.LightCyan, <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        });</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        canvas.<a class="code" href="class_drawing_1_1_draw_canvas.html#ac8a0b4039eb63771a5c9a723c1d1f23b">QueueClearDrawing</a>(Color.Color8(45, 45, 45));</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        AddChild(canvas);</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;}</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        walker = <span class="keyword">new</span> Walker();</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        walker.SetXY(GetViewportRect().Size / 2);</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        AddChild(walker);</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        var canvas = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_draw_canvas.html">DrawCanvas</a>((pen) =&gt;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;          pen.DrawRect(walker.GetStepRect(), Colors.LightCyan, <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        });</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        canvas.<a class="code" href="class_drawing_1_1_draw_canvas.html#ac8a0b4039eb63771a5c9a723c1d1f23b">QueueClearDrawing</a>(Color.Color8(45, 45, 45));</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        AddChild(canvas);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;  }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_drawing_html"><div class="ttname"><a href="namespace_drawing.html">Drawing</a></div><div class="ttdoc">Draw primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00006">DrawCanvas.cs:7</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_draw_canvas_html_ac8a0b4039eb63771a5c9a723c1d1f23b"><div class="ttname"><a href="class_drawing_1_1_draw_canvas.html#ac8a0b4039eb63771a5c9a723c1d1f23b">Drawing.DrawCanvas.QueueClearDrawing</a></div><div class="ttdeci">void QueueClearDrawing(Color color)</div><div class="ttdoc">Queue a clear draw action with a specific color.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00039">DrawCanvas.cs:39</a></div></div>

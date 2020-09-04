@@ -160,6 +160,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a5e4f250d50dc58284f2550846e446e67 inherit pub_attribs_class_forces_1_1_simple_mover"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_forces_1_1_simple_mover.html#a5e4f250d50dc58284f2550846e446e67">DisableForces</a> = false</td></tr>
 <tr class="memdesc:a5e4f250d50dc58284f2550846e446e67 inherit pub_attribs_class_forces_1_1_simple_mover"><td class="mdescLeft">&#160;</td><td class="mdescRight">Disable forces  <a href="class_forces_1_1_simple_mover.html#a5e4f250d50dc58284f2550846e446e67">More...</a><br /></td></tr>
 <tr class="separator:a5e4f250d50dc58284f2550846e446e67 inherit pub_attribs_class_forces_1_1_simple_mover"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a10bb7f290bfb74ce307d84e1622e6d27 inherit pub_attribs_class_forces_1_1_simple_mover"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_forces_1_1_simple_mover.html#a10bb7f290bfb74ce307d84e1622e6d27">SyncRotationOnVelocity</a> = false</td></tr>
+<tr class="memdesc:a10bb7f290bfb74ce307d84e1622e6d27 inherit pub_attribs_class_forces_1_1_simple_mover"><td class="mdescLeft">&#160;</td><td class="mdescRight">Synchronize rotation on velocity  <a href="class_forces_1_1_simple_mover.html#a10bb7f290bfb74ce307d84e1622e6d27">More...</a><br /></td></tr>
+<tr class="separator:a10bb7f290bfb74ce307d84e1622e6d27 inherit pub_attribs_class_forces_1_1_simple_mover"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8428ebcb251141c1b4a84b4c869d5e09 inherit pub_attribs_class_forces_1_1_simple_mover"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_drawing_1_1_simple_mesh.html">SimpleMesh</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">Mesh</a></td></tr>
 <tr class="memdesc:a8428ebcb251141c1b4a84b4c869d5e09 inherit pub_attribs_class_forces_1_1_simple_mover"><td class="mdescLeft">&#160;</td><td class="mdescRight">Mesh  <a href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">More...</a><br /></td></tr>
 <tr class="separator:a8428ebcb251141c1b4a84b4c869d5e09 inherit pub_attribs_class_forces_1_1_simple_mover"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -193,7 +196,7 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Swimming fish. </p>
 
-<p class="definition">Definition at line <a class="el" href="_ecosystem_8cs_source.html#l00288">288</a> of file <a class="el" href="_ecosystem_8cs_source.html">Ecosystem.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_ecosystem_8cs_source.html#l00264">264</a> of file <a class="el" href="_ecosystem_8cs_source.html">Ecosystem.cs</a>.</p>
 </div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9cc58d1ebb28ea1dfdf12674e12e510c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9cc58d1ebb28ea1dfdf12674e12e510c">&#9670;&nbsp;</a></span>SwimmingFish()</h2>
@@ -220,44 +223,44 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Create a swimming fish. </p>
 
-<p class="definition">Definition at line <a class="el" href="_ecosystem_8cs_source.html#l00313">313</a> of file <a class="el" href="_ecosystem_8cs_source.html">Ecosystem.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;    {</div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;      <a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a> = 1f;</div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160; </div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;      tail1 = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;      tail2 = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;      tail3 = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      body1 = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;      body2 = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;      body3 = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
-<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;      body4 = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      leftWing = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      rightWing = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160; </div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;      Color colorToUse = <a class="code" href="class_ecosystem_1_1_swimming_fish.html#a20d7d3bf1981c16242b120b62546a824">BaseColor</a>;</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      Color lightenedColor = colorToUse.Lightened(0.25f);</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;      Color lowDarkenedColor = colorToUse.Darkened(0.1f);</div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      Color midDarkenedColor = colorToUse.Darkened(0.25f);</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      Color highDarkenedColor = colorToUse.Darkened(0.5f);</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      tail1.Modulate = highDarkenedColor;</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;      tail2.Modulate = midDarkenedColor;</div>
-<div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160;      tail3.Modulate = lowDarkenedColor;</div>
-<div class="line"><a name="l00335"></a><span class="lineno">  335</span>&#160;      tail1.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 2;</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;      tail2.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 2;</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;      tail3.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 2;</div>
-<div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160;      body1.Modulate = colorToUse;</div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;      body2.Modulate = colorToUse;</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;      body3.Modulate = colorToUse;</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;      body4.Modulate = colorToUse;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;      body1.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 3;</div>
-<div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160;      body2.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 4;</div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;      body3.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 5;</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;      body4.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 4;</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;      leftWing.Modulate = lightenedColor;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      rightWing.Modulate = lightenedColor;</div>
-<div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160;      leftWing.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 1.5f;</div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;      rightWing.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 1.5f;</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="_ecosystem_8cs_source.html#l00289">289</a> of file <a class="el" href="_ecosystem_8cs_source.html">Ecosystem.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;    {</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      <a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a> = 1f;</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160; </div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      tail1 = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;      tail2 = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      tail3 = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;      body1 = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
+<div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160;      body2 = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
+<div class="line"><a name="l00298"></a><span class="lineno">  298</span>&#160;      body3 = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
+<div class="line"><a name="l00299"></a><span class="lineno">  299</span>&#160;      body4 = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
+<div class="line"><a name="l00300"></a><span class="lineno">  300</span>&#160;      leftWing = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
+<div class="line"><a name="l00301"></a><span class="lineno">  301</span>&#160;      rightWing = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
+<div class="line"><a name="l00302"></a><span class="lineno">  302</span>&#160; </div>
+<div class="line"><a name="l00303"></a><span class="lineno">  303</span>&#160;      Color colorToUse = <a class="code" href="class_ecosystem_1_1_swimming_fish.html#a20d7d3bf1981c16242b120b62546a824">BaseColor</a>;</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;      Color lightenedColor = colorToUse.Lightened(0.25f);</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;      Color lowDarkenedColor = colorToUse.Darkened(0.1f);</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;      Color midDarkenedColor = colorToUse.Darkened(0.25f);</div>
+<div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160;      Color highDarkenedColor = colorToUse.Darkened(0.5f);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      tail1.Modulate = highDarkenedColor;</div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      tail2.Modulate = midDarkenedColor;</div>
+<div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160;      tail3.Modulate = lowDarkenedColor;</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;      tail1.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 2;</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;      tail2.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 2;</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;      tail3.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 2;</div>
+<div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160;      body1.Modulate = colorToUse;</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;      body2.Modulate = colorToUse;</div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;      body3.Modulate = colorToUse;</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;      body4.Modulate = colorToUse;</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;      body1.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 3;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;      body2.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 4;</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;      body3.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 5;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;      body4.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 4;</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;      leftWing.Modulate = lightenedColor;</div>
+<div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160;      rightWing.Modulate = lightenedColor;</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      leftWing.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 1.5f;</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      rightWing.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 1.5f;</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -289,12 +292,12 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Reimplemented from <a class="el" href="class_forces_1_1_simple_mover.html#ab9b08bdd220eb627dc3eb040ddb29e3f">Forces.SimpleMover</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_ecosystem_8cs_source.html#l00352">352</a> of file <a class="el" href="_ecosystem_8cs_source.html">Ecosystem.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160;    {</div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      var forward = Vector2.Right.Rotated(Rotation).Normalized() * <a class="code" href="class_ecosystem_1_1_swimming_fish.html#aaac210b4f13103925b950eb06d492aad">ForwardAcceleration</a>;</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;      var offset = <span class="keyword">new</span> Vector2(<a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a26d35f478845659a49fe7ec08bc6616b">SignedRandf</a>(), <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a26d35f478845659a49fe7ec08bc6616b">SignedRandf</a>()) * <a class="code" href="class_ecosystem_1_1_swimming_fish.html#a40f5be0358d8ad034247fb65d9cc3dbd">SideOffsetAcceleration</a>;</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;      <a class="code" href="class_forces_1_1_simple_mover.html#a9cf54f76dad9b55d52e9c89d2ee00997">Acceleration</a> = forward + offset;</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="_ecosystem_8cs_source.html#l00328">328</a> of file <a class="el" href="_ecosystem_8cs_source.html">Ecosystem.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;    {</div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      var forward = Vector2.Right.Rotated(Rotation).Normalized() * <a class="code" href="class_ecosystem_1_1_swimming_fish.html#aaac210b4f13103925b950eb06d492aad">ForwardAcceleration</a>;</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;      var offset = <span class="keyword">new</span> Vector2(<a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a26d35f478845659a49fe7ec08bc6616b">SignedRandf</a>(), <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a26d35f478845659a49fe7ec08bc6616b">SignedRandf</a>()) * <a class="code" href="class_ecosystem_1_1_swimming_fish.html#a40f5be0358d8ad034247fb65d9cc3dbd">SideOffsetAcceleration</a>;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      <a class="code" href="class_forces_1_1_simple_mover.html#a9cf54f76dad9b55d52e9c89d2ee00997">Acceleration</a> = forward + offset;</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -313,7 +316,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Base color </p>
 
-<p class="definition">Definition at line <a class="el" href="_ecosystem_8cs_source.html#l00293">293</a> of file <a class="el" href="_ecosystem_8cs_source.html">Ecosystem.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_ecosystem_8cs_source.html#l00269">269</a> of file <a class="el" href="_ecosystem_8cs_source.html">Ecosystem.cs</a>.</p>
 
 </div>
 </div>
@@ -331,7 +334,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Forward acceleration </p>
 
-<p class="definition">Definition at line <a class="el" href="_ecosystem_8cs_source.html#l00295">295</a> of file <a class="el" href="_ecosystem_8cs_source.html">Ecosystem.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_ecosystem_8cs_source.html#l00271">271</a> of file <a class="el" href="_ecosystem_8cs_source.html">Ecosystem.cs</a>.</p>
 
 </div>
 </div>
@@ -349,7 +352,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Side offset acceleration </p>
 
-<p class="definition">Definition at line <a class="el" href="_ecosystem_8cs_source.html#l00297">297</a> of file <a class="el" href="_ecosystem_8cs_source.html">Ecosystem.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_ecosystem_8cs_source.html#l00273">273</a> of file <a class="el" href="_ecosystem_8cs_source.html">Ecosystem.cs</a>.</p>
 
 </div>
 </div>
@@ -367,7 +370,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Tail speed </p>
 
-<p class="definition">Definition at line <a class="el" href="_ecosystem_8cs_source.html#l00291">291</a> of file <a class="el" href="_ecosystem_8cs_source.html">Ecosystem.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_ecosystem_8cs_source.html#l00267">267</a> of file <a class="el" href="_ecosystem_8cs_source.html">Ecosystem.cs</a>.</p>
 
 </div>
 </div>
@@ -375,15 +378,15 @@ Additional Inherited Members</h2></td></tr>
 <li>ecosystem/<a class="el" href="_ecosystem_8cs_source.html">Ecosystem.cs</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclass_ecosystem_1_1_swimming_fish_html_a40f5be0358d8ad034247fb65d9cc3dbd"><div class="ttname"><a href="class_ecosystem_1_1_swimming_fish.html#a40f5be0358d8ad034247fb65d9cc3dbd">Ecosystem.SwimmingFish.SideOffsetAcceleration</a></div><div class="ttdeci">float SideOffsetAcceleration</div><div class="ttdoc">Side offset acceleration</div><div class="ttdef"><b>Definition:</b> <a href="_ecosystem_8cs_source.html#l00297">Ecosystem.cs:297</a></div></div>
+<div class="ttc" id="aclass_ecosystem_1_1_swimming_fish_html_a40f5be0358d8ad034247fb65d9cc3dbd"><div class="ttname"><a href="class_ecosystem_1_1_swimming_fish.html#a40f5be0358d8ad034247fb65d9cc3dbd">Ecosystem.SwimmingFish.SideOffsetAcceleration</a></div><div class="ttdeci">float SideOffsetAcceleration</div><div class="ttdoc">Side offset acceleration</div><div class="ttdef"><b>Definition:</b> <a href="_ecosystem_8cs_source.html#l00273">Ecosystem.cs:273</a></div></div>
 <div class="ttc" id="aclass_math_utils_html"><div class="ttname"><a href="class_math_utils.html">MathUtils</a></div><div class="ttdoc">Math utility functions</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00006">MathUtils.cs:7</a></div></div>
-<div class="ttc" id="aclass_ecosystem_1_1_swimming_fish_html_a20d7d3bf1981c16242b120b62546a824"><div class="ttname"><a href="class_ecosystem_1_1_swimming_fish.html#a20d7d3bf1981c16242b120b62546a824">Ecosystem.SwimmingFish.BaseColor</a></div><div class="ttdeci">Color BaseColor</div><div class="ttdoc">Base color</div><div class="ttdef"><b>Definition:</b> <a href="_ecosystem_8cs_source.html#l00293">Ecosystem.cs:293</a></div></div>
+<div class="ttc" id="aclass_ecosystem_1_1_swimming_fish_html_a20d7d3bf1981c16242b120b62546a824"><div class="ttname"><a href="class_ecosystem_1_1_swimming_fish.html#a20d7d3bf1981c16242b120b62546a824">Ecosystem.SwimmingFish.BaseColor</a></div><div class="ttdeci">Color BaseColor</div><div class="ttdoc">Base color</div><div class="ttdef"><b>Definition:</b> <a href="_ecosystem_8cs_source.html#l00269">Ecosystem.cs:269</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_circle_sprite_html_a4284dbd1de9c1182719f8401afb272ad"><div class="ttname"><a href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Drawing.SimpleCircleSprite.Radius</a></div><div class="ttdeci">float Radius</div><div class="ttdoc">Circle radius.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_circle_sprite_8cs_source.html#l00015">SimpleCircleSprite.cs:16</a></div></div>
 <div class="ttc" id="aclass_math_utils_html_a26d35f478845659a49fe7ec08bc6616b"><div class="ttname"><a href="class_math_utils.html#a26d35f478845659a49fe7ec08bc6616b">MathUtils.SignedRandf</a></div><div class="ttdeci">static float SignedRandf()</div><div class="ttdoc">Return a signed Randf, between -1 and 1.</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00035">MathUtils.cs:35</a></div></div>
 <div class="ttc" id="aclass_forces_1_1_simple_mover_html_abfecba6e384693e1f648eb85caf5fb38"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">Forces.SimpleMover.MaxVelocity</a></div><div class="ttdeci">float MaxVelocity</div><div class="ttdoc">Max velocity</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00033">SimpleMover.cs:33</a></div></div>
 <div class="ttc" id="aclass_forces_1_1_simple_mover_html_a9cf54f76dad9b55d52e9c89d2ee00997"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a9cf54f76dad9b55d52e9c89d2ee00997">Forces.SimpleMover.Acceleration</a></div><div class="ttdeci">Vector2 Acceleration</div><div class="ttdoc">Current acceleration</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00027">SimpleMover.cs:27</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_circle_sprite_html"><div class="ttname"><a href="class_drawing_1_1_simple_circle_sprite.html">Drawing.SimpleCircleSprite</a></div><div class="ttdoc">Use this to draw a circle. Instead of DrawCircle, it can be batched.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_circle_sprite_8cs_source.html#l00010">SimpleCircleSprite.cs:11</a></div></div>
-<div class="ttc" id="aclass_ecosystem_1_1_swimming_fish_html_aaac210b4f13103925b950eb06d492aad"><div class="ttname"><a href="class_ecosystem_1_1_swimming_fish.html#aaac210b4f13103925b950eb06d492aad">Ecosystem.SwimmingFish.ForwardAcceleration</a></div><div class="ttdeci">float ForwardAcceleration</div><div class="ttdoc">Forward acceleration</div><div class="ttdef"><b>Definition:</b> <a href="_ecosystem_8cs_source.html#l00295">Ecosystem.cs:295</a></div></div>
+<div class="ttc" id="aclass_ecosystem_1_1_swimming_fish_html_aaac210b4f13103925b950eb06d492aad"><div class="ttname"><a href="class_ecosystem_1_1_swimming_fish.html#aaac210b4f13103925b950eb06d492aad">Ecosystem.SwimmingFish.ForwardAcceleration</a></div><div class="ttdeci">float ForwardAcceleration</div><div class="ttdoc">Forward acceleration</div><div class="ttdef"><b>Definition:</b> <a href="_ecosystem_8cs_source.html#l00271">Ecosystem.cs:271</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

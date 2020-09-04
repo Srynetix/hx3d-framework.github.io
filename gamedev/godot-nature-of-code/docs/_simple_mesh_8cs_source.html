@@ -91,102 +91,93 @@ $(function() {
 <div class="line"><a name="l00031"></a><span class="lineno"><a class="line" href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">   31</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">TypeEnum</a> <a class="code" href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">MeshType</a> = <a class="code" href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">TypeEnum</a>.Circle;</div>
 <div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_drawing_1_1_simple_mesh.html#a577fabdfc0a891fda4a77edf017ffc01">   33</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_drawing_1_1_simple_mesh.html#a22d52ad4241f09a3084b47291230f6cf">CustomDrawFunc</a> <a class="code" href="class_drawing_1_1_simple_mesh.html#a577fabdfc0a891fda4a77edf017ffc01">CustomDrawMethod</a> = <span class="keyword">null</span>;</div>
 <div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_drawing_1_1_simple_mesh.html#a0ffa493d5f5014de6f0d3f677b7a103c">   35</a></span>&#160;    <span class="keyword">public</span> Texture <a class="code" href="class_drawing_1_1_simple_mesh.html#a0ffa493d5f5014de6f0d3f677b7a103c">CustomTexture</a> = <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_drawing_1_1_simple_mesh.html#addd050156406dcf5d6a91bc368bfa8b9">   37</a></span>&#160;    <span class="keyword">public</span> CanvasItemMaterial.BlendModeEnum <a class="code" href="class_drawing_1_1_simple_mesh.html#addd050156406dcf5d6a91bc368bfa8b9">CustomTextureBlendMode</a> = CanvasItemMaterial.BlendModeEnum.Mix;</div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="class_drawing_1_1_simple_mesh.html#a514de68321b8c310e841232a1c342e27">   37</a></span>&#160;    <span class="keyword">public</span> Material <a class="code" href="class_drawing_1_1_simple_mesh.html#a514de68321b8c310e841232a1c342e27">CustomMaterial</a> = <span class="keyword">null</span>;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">private</span> CanvasItemMaterial material;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">private</span> Sprite sprite;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">private</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a> circleSprite;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno"><a class="line" href="class_drawing_1_1_simple_mesh.html#a25480f61c7dec1f9fe3088575d030f0c">   46</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_drawing_1_1_simple_mesh.html#a25480f61c7dec1f9fe3088575d030f0c">SimpleMesh</a>()</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      Modulate = Colors.LightCyan;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">private</span> Sprite sprite;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">private</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a> circleSprite;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_drawing_1_1_simple_mesh.html#a25480f61c7dec1f9fe3088575d030f0c">   45</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_drawing_1_1_simple_mesh.html#a25480f61c7dec1f9fe3088575d030f0c">SimpleMesh</a>()</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      Modulate = Colors.LightCyan;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      Name = <span class="stringliteral">&quot;SimpleMesh&quot;</span>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="preprocessor">    #region Lifecycle methods</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      material = <span class="keyword">new</span> CanvasItemMaterial();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      material.BlendMode = <a class="code" href="class_drawing_1_1_simple_mesh.html#addd050156406dcf5d6a91bc368bfa8b9">CustomTextureBlendMode</a>;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      sprite = <span class="keyword">new</span> Sprite();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      sprite.Material = material;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      sprite.Modulate = Modulate;</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      sprite.Visible = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      AddChild(sprite);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      circleSprite = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      circleSprite.Modulate = Modulate;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      circleSprite.Visible = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      AddChild(circleSprite);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">MeshType</a> == <a class="code" href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">TypeEnum</a>.Texture)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_drawing_1_1_simple_mesh.html#a0ffa493d5f5014de6f0d3f677b7a103c">CustomTexture</a> != <span class="keyword">null</span>)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;          sprite.Texture = <a class="code" href="class_drawing_1_1_simple_mesh.html#a0ffa493d5f5014de6f0d3f677b7a103c">CustomTexture</a>;</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;          sprite.Scale = <a class="code" href="class_drawing_1_1_simple_mesh.html#aebffb18c70e76e16c11b3ec9d6712b60">MeshSize</a> / sprite.Texture.GetSize();</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;          sprite.Visible = Visible;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160; </div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">MeshType</a> == <a class="code" href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">TypeEnum</a>.Circle)</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      {</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        circleSprite.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = <a class="code" href="class_drawing_1_1_simple_mesh.html#aebffb18c70e76e16c11b3ec9d6712b60">MeshSize</a>.x / 2;</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        circleSprite.Visible = Visible;</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Draw()</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;    {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">MeshType</a> == <a class="code" href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">TypeEnum</a>.Square)</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        DrawRect(<span class="keyword">new</span> Rect2(-<a class="code" href="class_drawing_1_1_simple_mesh.html#aebffb18c70e76e16c11b3ec9d6712b60">MeshSize</a> / 2, <a class="code" href="class_drawing_1_1_simple_mesh.html#aebffb18c70e76e16c11b3ec9d6712b60">MeshSize</a> / 2), Modulate);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">MeshType</a> == <a class="code" href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">TypeEnum</a>.Custom)</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_drawing_1_1_simple_mesh.html#a577fabdfc0a891fda4a77edf017ffc01">CustomDrawMethod</a> != <span class="keyword">null</span>)</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        {</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;          <a class="code" href="class_drawing_1_1_simple_mesh.html#a577fabdfc0a891fda4a77edf017ffc01">CustomDrawMethod</a>(<span class="keyword">this</span>);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    {</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      Update();</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;<span class="preprocessor">    #endregion</span></div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160; </div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;<span class="preprocessor">    #region Private methods</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      sprite = <span class="keyword">new</span> Sprite();</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      sprite.Name = <span class="stringliteral">&quot;CustomSprite&quot;</span>;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      sprite.Material = <a class="code" href="class_drawing_1_1_simple_mesh.html#a514de68321b8c310e841232a1c342e27">CustomMaterial</a>;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      sprite.Modulate = Modulate;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      sprite.Visible = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      AddChild(sprite);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      circleSprite = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      circleSprite.Name = <span class="stringliteral">&quot;CircleSprite&quot;</span>;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      circleSprite.Modulate = Modulate;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      circleSprite.Visible = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      AddChild(circleSprite);</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">MeshType</a> == <a class="code" href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">TypeEnum</a>.Texture)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_drawing_1_1_simple_mesh.html#a0ffa493d5f5014de6f0d3f677b7a103c">CustomTexture</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;          sprite.Texture = <a class="code" href="class_drawing_1_1_simple_mesh.html#a0ffa493d5f5014de6f0d3f677b7a103c">CustomTexture</a>;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;          sprite.Scale = <a class="code" href="class_drawing_1_1_simple_mesh.html#aebffb18c70e76e16c11b3ec9d6712b60">MeshSize</a> / sprite.Texture.GetSize();</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;          sprite.Visible = Visible;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">MeshType</a> == <a class="code" href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">TypeEnum</a>.Circle)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        circleSprite.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = <a class="code" href="class_drawing_1_1_simple_mesh.html#aebffb18c70e76e16c11b3ec9d6712b60">MeshSize</a>.x / 2;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        circleSprite.Visible = Visible;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      }</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Draw()</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">MeshType</a> == <a class="code" href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">TypeEnum</a>.Square)</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        DrawRect(<span class="keyword">new</span> Rect2(-<a class="code" href="class_drawing_1_1_simple_mesh.html#aebffb18c70e76e16c11b3ec9d6712b60">MeshSize</a> / 2, <a class="code" href="class_drawing_1_1_simple_mesh.html#aebffb18c70e76e16c11b3ec9d6712b60">MeshSize</a> / 2), Modulate);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      }</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (<a class="code" href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">MeshType</a> == <a class="code" href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">TypeEnum</a>.Custom)</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_drawing_1_1_simple_mesh.html#a577fabdfc0a891fda4a77edf017ffc01">CustomDrawMethod</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;          <a class="code" href="class_drawing_1_1_simple_mesh.html#a577fabdfc0a891fda4a77edf017ffc01">CustomDrawMethod</a>(<span class="keyword">this</span>);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    {</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      Update();</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160; </div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> UpdateColor()</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keywordflow">if</span> (sprite != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        sprite.Modulate = Modulate;</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      }</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> UpdateColor()</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    {</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      <span class="keywordflow">if</span> (sprite != <span class="keyword">null</span>)</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      {</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;        sprite.Modulate = Modulate;</div>
-<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;      }</div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      <span class="keywordflow">if</span> (sprite != <span class="keyword">null</span>)</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;      {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        circleSprite.Modulate = Modulate;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;<span class="preprocessor">    #endregion</span></div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;  }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;}</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      <span class="keywordflow">if</span> (sprite != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      {</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;        circleSprite.Modulate = Modulate;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160;  }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_drawing_html"><div class="ttname"><a href="namespace_drawing.html">Drawing</a></div><div class="ttdoc">Draw primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00006">DrawCanvas.cs:7</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_mesh_html_a22d52ad4241f09a3084b47291230f6cf"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html#a22d52ad4241f09a3084b47291230f6cf">Drawing.SimpleMesh.CustomDrawFunc</a></div><div class="ttdeci">delegate void CustomDrawFunc(SimpleMesh pen)</div><div class="ttdoc">Custom draw function definition</div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_mesh_html"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html">Drawing.SimpleMesh</a></div><div class="ttdoc">Simple &quot;mesh&quot; drawing. Can be a circle, square, custom drawing or custom texture.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00008">SimpleMesh.cs:9</a></div></div>
-<div class="ttc" id="aclass_drawing_1_1_simple_mesh_html_a25480f61c7dec1f9fe3088575d030f0c"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html#a25480f61c7dec1f9fe3088575d030f0c">Drawing.SimpleMesh.SimpleMesh</a></div><div class="ttdeci">SimpleMesh()</div><div class="ttdoc">Create a default light-cyan circle mesh.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00046">SimpleMesh.cs:46</a></div></div>
+<div class="ttc" id="aclass_drawing_1_1_simple_mesh_html_a25480f61c7dec1f9fe3088575d030f0c"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html#a25480f61c7dec1f9fe3088575d030f0c">Drawing.SimpleMesh.SimpleMesh</a></div><div class="ttdeci">SimpleMesh()</div><div class="ttdoc">Create a default light-cyan circle mesh.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00045">SimpleMesh.cs:45</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_circle_sprite_html_a4284dbd1de9c1182719f8401afb272ad"><div class="ttname"><a href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Drawing.SimpleCircleSprite.Radius</a></div><div class="ttdeci">float Radius</div><div class="ttdoc">Circle radius.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_circle_sprite_8cs_source.html#l00015">SimpleCircleSprite.cs:16</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_mesh_html_ad10e2f115377206bf91b904f0e0944b3"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">Drawing.SimpleMesh.MeshType</a></div><div class="ttdeci">TypeEnum MeshType</div><div class="ttdoc">Mesh type</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00031">SimpleMesh.cs:31</a></div></div>
+<div class="ttc" id="aclass_drawing_1_1_simple_mesh_html_a514de68321b8c310e841232a1c342e27"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html#a514de68321b8c310e841232a1c342e27">Drawing.SimpleMesh.CustomMaterial</a></div><div class="ttdeci">Material CustomMaterial</div><div class="ttdoc">Custom material</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00037">SimpleMesh.cs:37</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_mesh_html_aebffb18c70e76e16c11b3ec9d6712b60"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html#aebffb18c70e76e16c11b3ec9d6712b60">Drawing.SimpleMesh.MeshSize</a></div><div class="ttdeci">Vector2 MeshSize</div><div class="ttdoc">Mesh size</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00029">SimpleMesh.cs:29</a></div></div>
-<div class="ttc" id="aclass_drawing_1_1_simple_mesh_html_addd050156406dcf5d6a91bc368bfa8b9"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html#addd050156406dcf5d6a91bc368bfa8b9">Drawing.SimpleMesh.CustomTextureBlendMode</a></div><div class="ttdeci">CanvasItemMaterial.BlendModeEnum CustomTextureBlendMode</div><div class="ttdoc">Custom texture blend mode</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00037">SimpleMesh.cs:37</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_mesh_html_a577fabdfc0a891fda4a77edf017ffc01"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html#a577fabdfc0a891fda4a77edf017ffc01">Drawing.SimpleMesh.CustomDrawMethod</a></div><div class="ttdeci">CustomDrawFunc CustomDrawMethod</div><div class="ttdoc">Custom draw method</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00033">SimpleMesh.cs:33</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_mesh_html_afc384e69567055ac7638794913b50d3f"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">Drawing.SimpleMesh.TypeEnum</a></div><div class="ttdeci">TypeEnum</div><div class="ttdoc">Mesh type enum value.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00013">SimpleMesh.cs:14</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_mesh_html_a0ffa493d5f5014de6f0d3f677b7a103c"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html#a0ffa493d5f5014de6f0d3f677b7a103c">Drawing.SimpleMesh.CustomTexture</a></div><div class="ttdeci">Texture CustomTexture</div><div class="ttdoc">Custom texture</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00035">SimpleMesh.cs:35</a></div></div>

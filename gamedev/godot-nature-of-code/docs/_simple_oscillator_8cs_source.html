@@ -126,32 +126,28 @@ $(function() {
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      lineSprite.Modulate = Colors.LightGray;</div>
 <div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="preprocessor">    #region Lifecycle methods</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      AddChild(lineSprite);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      AddChild(circleSprite);</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160; </div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a13a97d2f89820e9e7507697dfa29fbcb">Velocity</a> += <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a629f38c72c1ebbc61c7518757a2b4779">AngularAcceleration</a>;</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a5405b073f08f92bb63d6155a3e680e5e">Angle</a> += <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a13a97d2f89820e9e7507697dfa29fbcb">Velocity</a>;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a629f38c72c1ebbc61c7518757a2b4779">AngularAcceleration</a> = Vector2.Zero;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordtype">float</span> x = <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a1f5570384c45180ed60df337b5cbb400">PositionOffset</a>.x + Mathf.Sin(<a class="code" href="class_oscillation_1_1_simple_oscillator.html#a5405b073f08f92bb63d6155a3e680e5e">Angle</a>.x) * <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a6f791d827356f70fed578f264108214d">Amplitude</a>.x;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      <span class="keywordtype">float</span> y = <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a1f5570384c45180ed60df337b5cbb400">PositionOffset</a>.y + Mathf.Sin(<a class="code" href="class_oscillation_1_1_simple_oscillator.html#a5405b073f08f92bb63d6155a3e680e5e">Angle</a>.y) * <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a6f791d827356f70fed578f264108214d">Amplitude</a>.y;</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      var target = <span class="keyword">new</span> Vector2(x, y);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      lineSprite.<a class="code" href="class_drawing_1_1_simple_line_sprite.html#aaf456b8175ee20314846f97bc87bacf8">PositionA</a> = GlobalPosition;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      lineSprite.<a class="code" href="class_drawing_1_1_simple_line_sprite.html#a22e860e04bce76e7d96486620bdd1aaa">PositionB</a> = GlobalPosition + target;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      circleSprite.Position = target;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;<span class="preprocessor">    #endregion</span></div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;  }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;}</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      AddChild(lineSprite);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      AddChild(circleSprite);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a13a97d2f89820e9e7507697dfa29fbcb">Velocity</a> += <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a629f38c72c1ebbc61c7518757a2b4779">AngularAcceleration</a>;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a5405b073f08f92bb63d6155a3e680e5e">Angle</a> += <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a13a97d2f89820e9e7507697dfa29fbcb">Velocity</a>;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a629f38c72c1ebbc61c7518757a2b4779">AngularAcceleration</a> = Vector2.Zero;</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keywordtype">float</span> x = <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a1f5570384c45180ed60df337b5cbb400">PositionOffset</a>.x + Mathf.Sin(<a class="code" href="class_oscillation_1_1_simple_oscillator.html#a5405b073f08f92bb63d6155a3e680e5e">Angle</a>.x) * <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a6f791d827356f70fed578f264108214d">Amplitude</a>.x;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordtype">float</span> y = <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a1f5570384c45180ed60df337b5cbb400">PositionOffset</a>.y + Mathf.Sin(<a class="code" href="class_oscillation_1_1_simple_oscillator.html#a5405b073f08f92bb63d6155a3e680e5e">Angle</a>.y) * <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a6f791d827356f70fed578f264108214d">Amplitude</a>.y;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      var target = <span class="keyword">new</span> Vector2(x, y);</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      lineSprite.<a class="code" href="class_drawing_1_1_simple_line_sprite.html#aaf456b8175ee20314846f97bc87bacf8">PositionA</a> = GlobalPosition;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      lineSprite.<a class="code" href="class_drawing_1_1_simple_line_sprite.html#a22e860e04bce76e7d96486620bdd1aaa">PositionB</a> = GlobalPosition + target;</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      circleSprite.Position = target;</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;  }</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_drawing_html"><div class="ttname"><a href="namespace_drawing.html">Drawing</a></div><div class="ttdoc">Draw primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00006">DrawCanvas.cs:7</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_line_sprite_html"><div class="ttname"><a href="class_drawing_1_1_simple_line_sprite.html">Drawing.SimpleLineSprite</a></div><div class="ttdoc">Use this to draw a line between two points. Instead of DrawLine and Line2D, it can be batched.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_line_sprite_8cs_source.html#l00010">SimpleLineSprite.cs:11</a></div></div>

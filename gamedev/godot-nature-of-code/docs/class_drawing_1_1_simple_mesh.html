@@ -115,9 +115,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a0ffa493d5f5014de6f0d3f677b7a103c"><td class="memItemLeft" align="right" valign="top">Texture&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_1_1_simple_mesh.html#a0ffa493d5f5014de6f0d3f677b7a103c">CustomTexture</a> = null</td></tr>
 <tr class="memdesc:a0ffa493d5f5014de6f0d3f677b7a103c"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom texture  <a href="class_drawing_1_1_simple_mesh.html#a0ffa493d5f5014de6f0d3f677b7a103c">More...</a><br /></td></tr>
 <tr class="separator:a0ffa493d5f5014de6f0d3f677b7a103c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:addd050156406dcf5d6a91bc368bfa8b9"><td class="memItemLeft" align="right" valign="top">CanvasItemMaterial.BlendModeEnum&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_1_1_simple_mesh.html#addd050156406dcf5d6a91bc368bfa8b9">CustomTextureBlendMode</a> = CanvasItemMaterial.BlendModeEnum.Mix</td></tr>
-<tr class="memdesc:addd050156406dcf5d6a91bc368bfa8b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom texture blend mode  <a href="class_drawing_1_1_simple_mesh.html#addd050156406dcf5d6a91bc368bfa8b9">More...</a><br /></td></tr>
-<tr class="separator:addd050156406dcf5d6a91bc368bfa8b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a514de68321b8c310e841232a1c342e27"><td class="memItemLeft" align="right" valign="top">Material&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_drawing_1_1_simple_mesh.html#a514de68321b8c310e841232a1c342e27">CustomMaterial</a> = null</td></tr>
+<tr class="memdesc:a514de68321b8c310e841232a1c342e27"><td class="mdescLeft">&#160;</td><td class="mdescRight">Custom material  <a href="class_drawing_1_1_simple_mesh.html#a514de68321b8c310e841232a1c342e27">More...</a><br /></td></tr>
+<tr class="separator:a514de68321b8c310e841232a1c342e27"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Simple "mesh" drawing. Can be a circle, square, custom drawing or custom texture. </p>
@@ -192,9 +192,10 @@ Public Attributes</h2></td></tr>
 
 <p>Create a default light-cyan circle mesh. </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_mesh_8cs_source.html#l00046">46</a> of file <a class="el" href="_simple_mesh_8cs_source.html">SimpleMesh.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      Modulate = Colors.LightCyan;</div>
+<p class="definition">Definition at line <a class="el" href="_simple_mesh_8cs_source.html#l00045">45</a> of file <a class="el" href="_simple_mesh_8cs_source.html">SimpleMesh.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    {</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      Modulate = Colors.LightCyan;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      Name = <span class="stringliteral">&quot;SimpleMesh&quot;</span>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
@@ -239,6 +240,24 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a514de68321b8c310e841232a1c342e27"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a514de68321b8c310e841232a1c342e27">&#9670;&nbsp;</a></span>CustomMaterial</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">Material Drawing.SimpleMesh.CustomMaterial = null</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Custom material </p>
+
+<p class="definition">Definition at line <a class="el" href="_simple_mesh_8cs_source.html#l00037">37</a> of file <a class="el" href="_simple_mesh_8cs_source.html">SimpleMesh.cs</a>.</p>
+
+</div>
+</div>
 <a id="a0ffa493d5f5014de6f0d3f677b7a103c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0ffa493d5f5014de6f0d3f677b7a103c">&#9670;&nbsp;</a></span>CustomTexture</h2>
 
@@ -254,24 +273,6 @@ Public Attributes</h2></td></tr>
 <p>Custom texture </p>
 
 <p class="definition">Definition at line <a class="el" href="_simple_mesh_8cs_source.html#l00035">35</a> of file <a class="el" href="_simple_mesh_8cs_source.html">SimpleMesh.cs</a>.</p>
-
-</div>
-</div>
-<a id="addd050156406dcf5d6a91bc368bfa8b9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#addd050156406dcf5d6a91bc368bfa8b9">&#9670;&nbsp;</a></span>CustomTextureBlendMode</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">CanvasItemMaterial.BlendModeEnum Drawing.SimpleMesh.CustomTextureBlendMode = CanvasItemMaterial.BlendModeEnum.Mix</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Custom texture blend mode </p>
-
-<p class="definition">Definition at line <a class="el" href="_simple_mesh_8cs_source.html#l00037">37</a> of file <a class="el" href="_simple_mesh_8cs_source.html">SimpleMesh.cs</a>.</p>
 
 </div>
 </div>
