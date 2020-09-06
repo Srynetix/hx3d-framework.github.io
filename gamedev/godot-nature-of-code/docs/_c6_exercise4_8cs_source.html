@@ -74,90 +74,89 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> Godot;</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_agents.html">Agents</a>;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples.html">Examples</a></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples_1_1_chapter6.html">Examples.Chapter6</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keyword">namespace </span>Chapter6</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  {</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_exercise4.html">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter6_1_1_c6_exercise4.html">C6Exercise4</a> : Node2D, <a class="code" href="interface_i_example.html">IExample</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_exercise4.html">   10</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter6_1_1_c6_exercise4.html">C6Exercise4</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_exercise4.html#afd2cbaae3ce7fa4156007a34149f3106">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter6_1_1_c6_exercise4.html#afd2cbaae3ce7fa4156007a34149f3106">GetSummary</a>()</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_exercise4.html#ab3d4b5da9c144adbde3b9b4f65165457">   14</a></span>&#160;      <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter6_1_1_c6_exercise4.html#ab3d4b5da9c144adbde3b9b4f65165457">_Summary</a>()</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Exercise 6.4:\nReynolds&#39; Wandering Behavior&quot;</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <span class="keyword">private</span> <span class="keyword">class </span>ReynoldsVehicle : <a class="code" href="class_agents_1_1_simple_vehicle.html">SimpleVehicle</a></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">private</span> RandomCircle randomCircle;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">private</span> <span class="keyword">class </span>RandomCircle : Node2D</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;          <span class="keyword">public</span> <span class="keywordtype">float</span> Distance = 60;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;          <span class="keyword">public</span> <span class="keywordtype">float</span> Radius = 25;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;          <span class="keyword">public</span> <span class="keywordtype">float</span> Theta = 0;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;          <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Draw()</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;          {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            var circlePos = Vector2.Right * Distance;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            <span class="comment">// Draw circle and line</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            DrawLine(Vector2.Zero, circlePos, Colors.Black, 1);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            DrawCircle(circlePos, Radius, Colors.White.WithAlpha(32));</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            DrawLine(circlePos, circlePos + Radius * <span class="keyword">new</span> Vector2(Mathf.Cos(Theta), Mathf.Sin(Theta)), Colors.Black);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;          }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;          <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;          {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            Theta += <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a493dfce1b52671313b5b9917ad393aff">RandRangef</a>(-10, 10) * delta;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            Update();</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;          }</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;          <span class="keyword">public</span> Vector2 GetTarget()</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;          {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            <span class="keywordflow">return</span> Distance * <span class="keyword">new</span> Vector2(Mathf.Cos(Theta), Mathf.Sin(Theta));</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;          }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keyword">public</span> ReynoldsVehicle()</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;          randomCircle = <span class="keyword">new</span> RandomCircle();</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;          base._Ready();</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          <span class="comment">// Reset offset</span></div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;          randomCircle.Position = <span class="keyword">new</span> Vector2(0, -<a class="code" href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">Mesh</a>.MeshSize.y / 4);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;          AddChild(randomCircle);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> UpdateAcceleration()</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;          <a class="code" href="class_forces_1_1_simple_mover.html#a71433d4d62961ee0e4833e4e19737d89">ApplyForce</a>(<a class="code" href="class_agents_1_1_simple_vehicle.html#ad879b10e3ed2194a13a6aaf352238fe4">Seek</a>(GlobalPosition + randomCircle.GetTarget()));</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      }</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        var size = GetViewportRect().Size;</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        var vehicle = <span class="keyword">new</span> ReynoldsVehicle();</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        vehicle.Position = size / 2;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        AddChild(vehicle);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Exercise 6.4:\nReynolds&#39; Wandering Behavior&quot;</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span> <span class="keyword">class </span>ReynoldsVehicle : <a class="code" href="class_agents_1_1_simple_vehicle.html">SimpleVehicle</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <span class="keyword">private</span> readonly RandomCircle randomCircle;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <span class="keyword">private</span> <span class="keyword">class </span>RandomCircle : Node2D</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> Distance = 60;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> Radius = 25;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> Theta = 0;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Draw()</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;          var circlePos = Vector2.Right * Distance;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;          <span class="comment">// Draw circle and line</span></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;          DrawLine(Vector2.Zero, circlePos, Colors.Black, 1);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          DrawCircle(circlePos, Radius, Colors.White.WithAlpha(32));</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;          DrawLine(circlePos, circlePos + (Radius * <span class="keyword">new</span> Vector2(Mathf.Cos(Theta), Mathf.Sin(Theta))), Colors.Black);</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        {</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;          Theta += <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a493dfce1b52671313b5b9917ad393aff">RandRangef</a>(-10, 10) * delta;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;          Update();</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        <span class="keyword">public</span> Vector2 GetTarget()</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;          <span class="keywordflow">return</span> Distance * <span class="keyword">new</span> Vector2(Mathf.Cos(Theta), Mathf.Sin(Theta));</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keyword">public</span> ReynoldsVehicle()</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        randomCircle = <span class="keyword">new</span> RandomCircle();</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        base._Ready();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="comment">// Reset offset</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        randomCircle.Position = <span class="keyword">new</span> Vector2(0, -<a class="code" href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">Mesh</a>.MeshSize.y / 4);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        AddChild(randomCircle);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> UpdateAcceleration()</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <a class="code" href="class_forces_1_1_simple_mover.html#a71433d4d62961ee0e4833e4e19737d89">ApplyForce</a>(<a class="code" href="class_agents_1_1_simple_vehicle.html#ad879b10e3ed2194a13a6aaf352238fe4">Seek</a>(GlobalPosition + randomCircle.GetTarget()));</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    {</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      var size = GetViewportRect().Size;</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      var vehicle = <span class="keyword">new</span> ReynoldsVehicle</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      {</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        Position = size / 2</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      };</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      AddChild(vehicle);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;  }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_forces_1_1_simple_mover_html_a71433d4d62961ee0e4833e4e19737d89"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a71433d4d62961ee0e4833e4e19737d89">Forces.SimpleMover.ApplyForce</a></div><div class="ttdeci">virtual void ApplyForce(Vector2 force)</div><div class="ttdoc">Apply force on mover.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00096">SimpleMover.cs:96</a></div></div>
-<div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_exercise4_html"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_exercise4.html">Examples.Chapter6.C6Exercise4</a></div><div class="ttdoc">Exercise 6.4: Reynolds' Wandering Behavior.</div><div class="ttdef"><b>Definition:</b> <a href="_c6_exercise4_8cs_source.html#l00012">C6Exercise4.cs:13</a></div></div>
+<div class="ttc" id="aclass_forces_1_1_simple_mover_html_a71433d4d62961ee0e4833e4e19737d89"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a71433d4d62961ee0e4833e4e19737d89">Forces.SimpleMover.ApplyForce</a></div><div class="ttdeci">virtual void ApplyForce(Vector2 force)</div><div class="ttdoc">Apply force on mover.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00107">SimpleMover.cs:107</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_exercise4_html"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_exercise4.html">Examples.Chapter6.C6Exercise4</a></div><div class="ttdoc">Exercise 6.4: Reynolds' Wandering Behavior.</div><div class="ttdef"><b>Definition:</b> <a href="_c6_exercise4_8cs_source.html#l00010">C6Exercise4.cs:11</a></div></div>
 <div class="ttc" id="aclass_math_utils_html"><div class="ttname"><a href="class_math_utils.html">MathUtils</a></div><div class="ttdoc">Math utility functions</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00006">MathUtils.cs:7</a></div></div>
 <div class="ttc" id="aclass_math_utils_html_a493dfce1b52671313b5b9917ad393aff"><div class="ttname"><a href="class_math_utils.html#a493dfce1b52671313b5b9917ad393aff">MathUtils.RandRangef</a></div><div class="ttdeci">static float RandRangef(float min, float max)</div><div class="ttdoc">Return a float RandRange.</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00046">MathUtils.cs:46</a></div></div>
-<div class="ttc" id="aclass_forces_1_1_simple_mover_html_a8428ebcb251141c1b4a84b4c869d5e09"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">Forces.SimpleMover.Mesh</a></div><div class="ttdeci">SimpleMesh Mesh</div><div class="ttdoc">Mesh</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00045">SimpleMover.cs:45</a></div></div>
-<div class="ttc" id="ainterface_i_example_html"><div class="ttname"><a href="interface_i_example.html">IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00004">Example.cs:5</a></div></div>
-<div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_exercise4_html_ab3d4b5da9c144adbde3b9b4f65165457"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_exercise4.html#ab3d4b5da9c144adbde3b9b4f65165457">Examples.Chapter6.C6Exercise4._Summary</a></div><div class="ttdeci">string _Summary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c6_exercise4_8cs_source.html#l00014">C6Exercise4.cs:14</a></div></div>
-<div class="ttc" id="aclass_agents_1_1_simple_vehicle_html_ad879b10e3ed2194a13a6aaf352238fe4"><div class="ttname"><a href="class_agents_1_1_simple_vehicle.html#ad879b10e3ed2194a13a6aaf352238fe4">Agents.SimpleVehicle.Seek</a></div><div class="ttdeci">virtual Vector2 Seek(Vector2 position)</div><div class="ttdoc">Drive and steer towards target position.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_vehicle_8cs_source.html#l00148">SimpleVehicle.cs:148</a></div></div>
+<div class="ttc" id="anamespace_examples_1_1_chapter6_html"><div class="ttname"><a href="namespace_examples_1_1_chapter6.html">Examples.Chapter6</a></div><div class="ttdoc">Chapter 6 - Autonomous Agents.</div><div class="ttdef"><b>Definition:</b> <a href="_c6_example1_8cs_source.html#l00010">C6Example1.cs:11</a></div></div>
+<div class="ttc" id="aclass_forces_1_1_simple_mover_html_a8428ebcb251141c1b4a84b4c869d5e09"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">Forces.SimpleMover.Mesh</a></div><div class="ttdeci">SimpleMesh Mesh</div><div class="ttdoc">Mesh</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00057">SimpleMover.cs:57</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_exercise4_html_afd2cbaae3ce7fa4156007a34149f3106"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_exercise4.html#afd2cbaae3ce7fa4156007a34149f3106">Examples.Chapter6.C6Exercise4.GetSummary</a></div><div class="ttdeci">string GetSummary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c6_exercise4_8cs_source.html#l00012">C6Exercise4.cs:12</a></div></div>
+<div class="ttc" id="aclass_agents_1_1_simple_vehicle_html_ad879b10e3ed2194a13a6aaf352238fe4"><div class="ttname"><a href="class_agents_1_1_simple_vehicle.html#ad879b10e3ed2194a13a6aaf352238fe4">Agents.SimpleVehicle.Seek</a></div><div class="ttdeci">virtual Vector2 Seek(Vector2 position)</div><div class="ttdoc">Drive and steer towards target position.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_vehicle_8cs_source.html#l00165">SimpleVehicle.cs:165</a></div></div>
+<div class="ttc" id="ainterface_examples_1_1_i_example_html"><div class="ttname"><a href="interface_examples_1_1_i_example.html">Examples.IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00006">Example.cs:7</a></div></div>
 <div class="ttc" id="anamespace_agents_html"><div class="ttname"><a href="namespace_agents.html">Agents</a></div><div class="ttdoc">Autonomous agents related primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_image_flow_field_8cs_source.html#l00003">ImageFlowField.cs:4</a></div></div>
 <div class="ttc" id="aclass_agents_1_1_simple_vehicle_html"><div class="ttname"><a href="class_agents_1_1_simple_vehicle.html">Agents.SimpleVehicle</a></div><div class="ttdoc">Vehicle with force and steering. Tracks a target.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_vehicle_8cs_source.html#l00015">SimpleVehicle.cs:16</a></div></div>
-<div class="ttc" id="anamespace_examples_html"><div class="ttname"><a href="namespace_examples.html">Examples</a></div><div class="ttdoc">Nature of Code examples and exercises.</div><div class="ttdef"><b>Definition:</b> <a href="_c0_example1_8cs_source.html#l00007">C0Example1.cs:8</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

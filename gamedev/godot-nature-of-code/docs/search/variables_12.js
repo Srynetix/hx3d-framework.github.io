@@ -1,8 +1,8 @@
 var searchData=
 [
-  ['wingcoloralpha_949',['WingColorAlpha',['../class_ecosystem_1_1_base_fly.html#af3c7590ba2b8531522b7a4e72cc87f4f',1,'Ecosystem::BaseFly']]],
-  ['wingrotationfactor_950',['WingRotationFactor',['../class_ecosystem_1_1_base_fly.html#ab6cc9ba6bbb55f76adbb84b1e9460074',1,'Ecosystem::BaseFly']]],
-  ['wingsize_951',['WingSize',['../class_ecosystem_1_1_base_fly.html#a5be96ea3be9824dca5df8c66dbcce006',1,'Ecosystem::BaseFly']]],
-  ['wingspeed_952',['WingSpeed',['../class_ecosystem_1_1_base_fly.html#ad66b784fe03f22d9bedcaa2ba258b5ec',1,'Ecosystem::BaseFly']]],
-  ['wrapmode_953',['WrapMode',['../class_forces_1_1_simple_mover.html#a6815945e85383d57ba9ee54ce25ffc6b',1,'Forces::SimpleMover']]]
+  ['vectormode_949',['VectorMode',['../class_virtual_controls.html#a9adf007a6064135a88bf34b13f6c9a15',1,'VirtualControls']]],
+  ['vehiclegrouplist_950',['VehicleGroupList',['../class_agents_1_1_simple_vehicle.html#ae34ade5c0db21077681c1a0a3ef4d2c5',1,'Agents::SimpleVehicle']]],
+  ['velocity_951',['Velocity',['../class_forces_1_1_simple_mover.html#a9c6b56340b094c2ead9671b9f840661f',1,'Forces.SimpleMover.Velocity()'],['../class_oscillation_1_1_simple_oscillator.html#a13a97d2f89820e9e7507697dfa29fbcb',1,'Oscillation.SimpleOscillator.Velocity()']]],
+  ['version_952',['VERSION',['../class_launcher.html#acc1a02dc3fc9bddf571cb068eca528fe',1,'Launcher']]],
+  ['visibilitymode_953',['VisibilityMode',['../class_virtual_controls.html#a478adaf3ef2b09e0da36a02055549b8a',1,'VirtualControls']]]
 ];

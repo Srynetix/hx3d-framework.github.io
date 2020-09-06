@@ -147,13 +147,19 @@ Static Public Member Functions</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_simple_default_texture_8cs_source.html#l00013">13</a> of file <a class="el" href="_simple_default_texture_8cs_source.html">SimpleDefaultTexture.cs</a>.</p>
 <div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      WhiteDot,</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      WhiteDotAlpha,</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      WhiteDotAlphaWithOutline,</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      WhiteDotOutlineOnly,</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      WhiteDotBlur,</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      RightArrow,</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      Line</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      WhiteDotAlpha,</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      WhiteDotAlphaWithOutline,</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      WhiteDotOutlineOnly,</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      WhiteDotBlur,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      RightArrow,</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      Line</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -191,40 +197,34 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Generated texture</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_simple_default_texture_8cs_source.html#l00044">44</a> of file <a class="el" href="_simple_default_texture_8cs_source.html">SimpleDefaultTexture.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      Initialize();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keywordflow">if</span> (value == <a class="code" href="class_assets_1_1_simple_default_texture.html#aea0415656d29fff069a6b7446fd536d2">Enum</a>.WhiteDot)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="keywordflow">return</span> WhiteDotTexture;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (value == <a class="code" href="class_assets_1_1_simple_default_texture.html#aea0415656d29fff069a6b7446fd536d2">Enum</a>.WhiteDotBlur)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">return</span> WhiteDotBlurTexture;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (value == <a class="code" href="class_assets_1_1_simple_default_texture.html#aea0415656d29fff069a6b7446fd536d2">Enum</a>.WhiteDotOutlineOnly)</div>
+<p class="definition">Definition at line <a class="el" href="_simple_default_texture_8cs_source.html#l00050">50</a> of file <a class="el" href="_simple_default_texture_8cs_source.html">SimpleDefaultTexture.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      Initialize();</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <span class="keywordflow">if</span> (value == <a class="code" href="class_assets_1_1_simple_default_texture.html#aea0415656d29fff069a6b7446fd536d2">Enum</a>.WhiteDot)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keywordflow">return</span> WhiteDotTexture;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (value == <a class="code" href="class_assets_1_1_simple_default_texture.html#aea0415656d29fff069a6b7446fd536d2">Enum</a>.WhiteDotBlur)</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> WhiteDotOutlineOnlyTexture;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">return</span> WhiteDotBlurTexture;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (value == <a class="code" href="class_assets_1_1_simple_default_texture.html#aea0415656d29fff069a6b7446fd536d2">Enum</a>.WhiteDotAlphaWithOutline)</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> WhiteDotAlphaWithOutlineTexture;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (value == <a class="code" href="class_assets_1_1_simple_default_texture.html#aea0415656d29fff069a6b7446fd536d2">Enum</a>.WhiteDotAlpha)</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      {</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        <span class="keywordflow">return</span> WhiteDotAlphaTexture;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      }</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (value == <a class="code" href="class_assets_1_1_simple_default_texture.html#aea0415656d29fff069a6b7446fd536d2">Enum</a>.RightArrow)</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keywordflow">return</span> RightArrowTexture;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      }</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (value == <a class="code" href="class_assets_1_1_simple_default_texture.html#aea0415656d29fff069a6b7446fd536d2">Enum</a>.WhiteDotOutlineOnly)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keywordflow">return</span> WhiteDotOutlineOnlyTexture;</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (value == <a class="code" href="class_assets_1_1_simple_default_texture.html#aea0415656d29fff069a6b7446fd536d2">Enum</a>.WhiteDotAlphaWithOutline)</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        <span class="keywordflow">return</span> WhiteDotAlphaWithOutlineTexture;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (value == <a class="code" href="class_assets_1_1_simple_default_texture.html#aea0415656d29fff069a6b7446fd536d2">Enum</a>.WhiteDotAlpha)</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        <span class="keywordflow">return</span> WhiteDotAlphaTexture;</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (value == <a class="code" href="class_assets_1_1_simple_default_texture.html#aea0415656d29fff069a6b7446fd536d2">Enum</a>.RightArrow)</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      {</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keywordflow">return</span> RightArrowTexture;</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      }</div>
 <div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (value == <a class="code" href="class_assets_1_1_simple_default_texture.html#aea0415656d29fff069a6b7446fd536d2">Enum</a>.Line)</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      {</div>
 <div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        <span class="keywordflow">return</span> LineTexture;</div>

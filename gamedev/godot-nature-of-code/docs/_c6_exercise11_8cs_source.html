@@ -76,15 +76,15 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples_1_1_chapter6.html">Examples.Chapter6</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_exercise11.html">   10</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter6_1_1_c6_exercise11.html">C6Exercise11</a> : Node2D, <a class="code" href="interface_i_example.html">IExample</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_exercise11.html">   10</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter6_1_1_c6_exercise11.html">C6Exercise11</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  {</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_exercise11.html#a7db14411b07f956d664ae173f14a43c3">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter6_1_1_c6_exercise11.html#a7db14411b07f956d664ae173f14a43c3">_Summary</a>()</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_exercise11.html#a5166c5268291ac0426109d912fe8d130">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter6_1_1_c6_exercise11.html#a5166c5268291ac0426109d912fe8d130">GetSummary</a>()</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Exercise 6.11:\nAnimated Path\n\nVehicle at the right will turn right and follow the path from left to right&quot;</span>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">float</span> t = 0;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">private</span> <a class="code" href="class_agents_1_1_simple_path.html">SimplePath</a> path;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span> <a class="code" href="class_agents_1_1_simple_path.html">SimplePath</a> path;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">float</span> t;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
@@ -92,52 +92,58 @@ $(function() {
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      path = <span class="keyword">new</span> <a class="code" href="class_agents_1_1_simple_path.html">SimplePath</a>();</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      path.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>.Add(<span class="keyword">new</span> Vector2(0, size.y / 2));</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      path.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>.Add(<span class="keyword">new</span> Vector2(size.x / 8, size.y * 3 / 4));</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      path.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>.Add(<span class="keyword">new</span> Vector2(size.x / 2, size.y / 2 - 50));</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      path.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>.Add(<span class="keyword">new</span> Vector2(size.x / 2, (size.y / 2) - 50));</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      path.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>.Add(<span class="keyword">new</span> Vector2(size.x, size.y / 2));</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      AddChild(path);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      var vehicle1 = <span class="keyword">new</span> <a class="code" href="class_agents_1_1_simple_vehicle.html">SimpleVehicle</a>();</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      vehicle1.Position = <span class="keyword">new</span> Vector2(100, 100);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      vehicle1.TargetPath = path;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      AddChild(vehicle1);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      var vehicle2 = <span class="keyword">new</span> <a class="code" href="class_agents_1_1_simple_vehicle.html">SimpleVehicle</a>();</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      vehicle2.Position = <span class="keyword">new</span> Vector2(100, size.y - 100);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      vehicle2.TargetPath = path;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      AddChild(vehicle2);</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      var vehicle3 = <span class="keyword">new</span> <a class="code" href="class_agents_1_1_simple_vehicle.html">SimpleVehicle</a>();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      vehicle3.Velocity = <span class="keyword">new</span> Vector2(-vehicle3.MaxVelocity, 0);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      vehicle3.Position = <span class="keyword">new</span> Vector2(size.x - 100, size.y - 100);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      vehicle3.TargetPath = path;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      AddChild(vehicle3);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      t += delta;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="comment">// Sine</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; path.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>.Count; ++i)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        var point = path.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>[i];</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        point.y += Mathf.Sin(point.x + t);</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        path.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>[i] = point;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordflow">while</span> (t &gt; Mathf.Pi * 2)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        t -= Mathf.Pi * 2;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      }</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;  }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;}</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      var vehicle1 = <span class="keyword">new</span> <a class="code" href="class_agents_1_1_simple_vehicle.html">SimpleVehicle</a></div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        Position = <span class="keyword">new</span> Vector2(100, 100),</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        TargetPath = path</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      };</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      AddChild(vehicle1);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      var vehicle2 = <span class="keyword">new</span> <a class="code" href="class_agents_1_1_simple_vehicle.html">SimpleVehicle</a></div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        Position = <span class="keyword">new</span> Vector2(100, size.y - 100),</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        TargetPath = path</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      };</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      AddChild(vehicle2);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      var vehicle3 = <span class="keyword">new</span> <a class="code" href="class_agents_1_1_simple_vehicle.html">SimpleVehicle</a></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        Velocity = <span class="keyword">new</span> Vector2(-vehicle1.MaxVelocity, 0),</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        Position = <span class="keyword">new</span> Vector2(size.x - 100, size.y - 100),</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        TargetPath = path</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      };</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      AddChild(vehicle3);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      t += delta;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="comment">// Sine</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; path.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>.Count; ++i)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        var point = path.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>[i];</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        point.y += Mathf.Sin(point.x + t);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        path.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>[i] = point;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <span class="keywordflow">while</span> (t &gt; Mathf.Pi * 2)</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        t -= Mathf.Pi * 2;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      }</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;  }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_agents_1_1_simple_path_html"><div class="ttname"><a href="class_agents_1_1_simple_path.html">Agents.SimplePath</a></div><div class="ttdoc">Simple path for SimpleVehicle to follow.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_path_8cs_source.html#l00009">SimplePath.cs:10</a></div></div>
 <div class="ttc" id="aclass_agents_1_1_simple_path_html_a394de8d88b63e371aa27ddc43fedd0f1"><div class="ttname"><a href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Agents.SimplePath.Points</a></div><div class="ttdeci">List&lt; Vector2 &gt; Points</div><div class="ttdoc">Points</div><div class="ttdef"><b>Definition:</b> <a href="_simple_path_8cs_source.html#l00012">SimplePath.cs:12</a></div></div>
 <div class="ttc" id="anamespace_examples_1_1_chapter6_html"><div class="ttname"><a href="namespace_examples_1_1_chapter6.html">Examples.Chapter6</a></div><div class="ttdoc">Chapter 6 - Autonomous Agents.</div><div class="ttdef"><b>Definition:</b> <a href="_c6_example1_8cs_source.html#l00010">C6Example1.cs:11</a></div></div>
-<div class="ttc" id="ainterface_i_example_html"><div class="ttname"><a href="interface_i_example.html">IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00004">Example.cs:5</a></div></div>
-<div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_exercise11_html_a7db14411b07f956d664ae173f14a43c3"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_exercise11.html#a7db14411b07f956d664ae173f14a43c3">Examples.Chapter6.C6Exercise11._Summary</a></div><div class="ttdeci">string _Summary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c6_exercise11_8cs_source.html#l00012">C6Exercise11.cs:12</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_exercise11_html_a5166c5268291ac0426109d912fe8d130"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_exercise11.html#a5166c5268291ac0426109d912fe8d130">Examples.Chapter6.C6Exercise11.GetSummary</a></div><div class="ttdeci">string GetSummary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c6_exercise11_8cs_source.html#l00012">C6Exercise11.cs:12</a></div></div>
+<div class="ttc" id="ainterface_examples_1_1_i_example_html"><div class="ttname"><a href="interface_examples_1_1_i_example.html">Examples.IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00006">Example.cs:7</a></div></div>
 <div class="ttc" id="anamespace_agents_html"><div class="ttname"><a href="namespace_agents.html">Agents</a></div><div class="ttdoc">Autonomous agents related primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_image_flow_field_8cs_source.html#l00003">ImageFlowField.cs:4</a></div></div>
 <div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_exercise11_html"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_exercise11.html">Examples.Chapter6.C6Exercise11</a></div><div class="ttdoc">Exercise 6.11: Animated Path.</div><div class="ttdef"><b>Definition:</b> <a href="_c6_exercise11_8cs_source.html#l00010">C6Exercise11.cs:11</a></div></div>
 <div class="ttc" id="aclass_agents_1_1_simple_vehicle_html"><div class="ttname"><a href="class_agents_1_1_simple_vehicle.html">Agents.SimpleVehicle</a></div><div class="ttdoc">Vehicle with force and steering. Tracks a target.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_vehicle_8cs_source.html#l00015">SimpleVehicle.cs:16</a></div></div>

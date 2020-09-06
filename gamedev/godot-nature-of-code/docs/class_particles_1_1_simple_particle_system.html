@@ -133,6 +133,9 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a4d04bee0cbd3bae2fc0c8ed6392efe7b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_particles_1_1_simple_particle_system.html#a4d04bee0cbd3bae2fc0c8ed6392efe7b">ParticleSpawnFrameDelay</a> = 4</td></tr>
 <tr class="memdesc:a4d04bee0cbd3bae2fc0c8ed6392efe7b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Particle spawn frame delay  <a href="class_particles_1_1_simple_particle_system.html#a4d04bee0cbd3bae2fc0c8ed6392efe7b">More...</a><br /></td></tr>
 <tr class="separator:a4d04bee0cbd3bae2fc0c8ed6392efe7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae18e965115072ae8850701a188c031ed"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_particles_1_1_simple_particle_system.html#ae18e965115072ae8850701a188c031ed">ParticleCountPerWave</a> = 1</td></tr>
+<tr class="memdesc:ae18e965115072ae8850701a188c031ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">Particle count per wave  <a href="class_particles_1_1_simple_particle_system.html#ae18e965115072ae8850701a188c031ed">More...</a><br /></td></tr>
+<tr class="separator:ae18e965115072ae8850701a188c031ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a983c399f1d895947cb1dd8b1c64f403b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_particles_1_1_simple_particle_system.html#a983c399f1d895947cb1dd8b1c64f403b">LocalCoords</a> = true</td></tr>
 <tr class="memdesc:a983c399f1d895947cb1dd8b1c64f403b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw in local coords  <a href="class_particles_1_1_simple_particle_system.html#a983c399f1d895947cb1dd8b1c64f403b">More...</a><br /></td></tr>
 <tr class="separator:a983c399f1d895947cb1dd8b1c64f403b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -239,13 +242,13 @@ Additional Inherited Members</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_simple_particle_system_8cs_source.html#l00037">37</a> of file <a class="el" href="_simple_particle_system_8cs_source.html">SimpleParticleSystem.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                                                                           : base(wrapMode)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      particles = <span class="keyword">new</span> List&lt;SimpleParticle&gt;();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <a class="code" href="class_forces_1_1_simple_mover.html#a5e4f250d50dc58284f2550846e446e67">DisableForces</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <a class="code" href="namespace_drawing.html">Drawing</a> = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="_simple_particle_system_8cs_source.html#l00046">46</a> of file <a class="el" href="_simple_particle_system_8cs_source.html">SimpleParticleSystem.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                                                                           : base(wrapMode)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      particles = <span class="keyword">new</span> List&lt;SimpleParticle&gt;();</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <a class="code" href="class_forces_1_1_simple_mover.html#a5e4f250d50dc58284f2550846e446e67">DisableForces</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <a class="code" href="namespace_drawing.html">Drawing</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -302,7 +305,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Draw in local coords </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_particle_system_8cs_source.html#l00024">24</a> of file <a class="el" href="_simple_particle_system_8cs_source.html">SimpleParticleSystem.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_simple_particle_system_8cs_source.html#l00031">31</a> of file <a class="el" href="_simple_particle_system_8cs_source.html">SimpleParticleSystem.cs</a>.</p>
 
 </div>
 </div>
@@ -320,7 +323,25 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Particle count. Use -1 for "unlimited" particles </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_particle_system_8cs_source.html#l00020">20</a> of file <a class="el" href="_simple_particle_system_8cs_source.html">SimpleParticleSystem.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_simple_particle_system_8cs_source.html#l00022">22</a> of file <a class="el" href="_simple_particle_system_8cs_source.html">SimpleParticleSystem.cs</a>.</p>
+
+</div>
+</div>
+<a id="ae18e965115072ae8850701a188c031ed"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae18e965115072ae8850701a188c031ed">&#9670;&nbsp;</a></span>ParticleCountPerWave</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">int Particles.SimpleParticleSystem.ParticleCountPerWave = 1</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>Particle count per wave </p>
+
+<p class="definition">Definition at line <a class="el" href="_simple_particle_system_8cs_source.html#l00028">28</a> of file <a class="el" href="_simple_particle_system_8cs_source.html">SimpleParticleSystem.cs</a>.</p>
 
 </div>
 </div>
@@ -338,7 +359,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p><a class="el" href="namespace_particles.html" title="Particle-related primitives.">Particles</a> creation function </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_particle_system_8cs_source.html#l00028">28</a> of file <a class="el" href="_simple_particle_system_8cs_source.html">SimpleParticleSystem.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_simple_particle_system_8cs_source.html#l00037">37</a> of file <a class="el" href="_simple_particle_system_8cs_source.html">SimpleParticleSystem.cs</a>.</p>
 
 </div>
 </div>
@@ -356,7 +377,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Particle spawn frame delay </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_particle_system_8cs_source.html#l00022">22</a> of file <a class="el" href="_simple_particle_system_8cs_source.html">SimpleParticleSystem.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_simple_particle_system_8cs_source.html#l00025">25</a> of file <a class="el" href="_simple_particle_system_8cs_source.html">SimpleParticleSystem.cs</a>.</p>
 
 </div>
 </div>
@@ -374,7 +395,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Remove system when particle list is empty </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_particle_system_8cs_source.html#l00018">18</a> of file <a class="el" href="_simple_particle_system_8cs_source.html">SimpleParticleSystem.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_simple_particle_system_8cs_source.html#l00019">19</a> of file <a class="el" href="_simple_particle_system_8cs_source.html">SimpleParticleSystem.cs</a>.</p>
 
 </div>
 </div>
@@ -383,7 +404,7 @@ Additional Inherited Members</h2></td></tr>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="anamespace_drawing_html"><div class="ttname"><a href="namespace_drawing.html">Drawing</a></div><div class="ttdoc">Draw primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00006">DrawCanvas.cs:7</a></div></div>
-<div class="ttc" id="aclass_forces_1_1_simple_mover_html_a5e4f250d50dc58284f2550846e446e67"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a5e4f250d50dc58284f2550846e446e67">Forces.SimpleMover.DisableForces</a></div><div class="ttdeci">bool DisableForces</div><div class="ttdoc">Disable forces</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00041">SimpleMover.cs:41</a></div></div>
+<div class="ttc" id="aclass_forces_1_1_simple_mover_html_a5e4f250d50dc58284f2550846e446e67"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a5e4f250d50dc58284f2550846e446e67">Forces.SimpleMover.DisableForces</a></div><div class="ttdeci">bool DisableForces</div><div class="ttdoc">Disable forces</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00051">SimpleMover.cs:51</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

@@ -131,14 +131,14 @@ Properties</h2></td></tr>
 <p class="definition">Definition at line <a class="el" href="_simple_ball_8cs_source.html#l00042">42</a> of file <a class="el" href="_simple_ball_8cs_source.html">SimpleBall.cs</a>.</p>
 <div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      Mass = 0.25f;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      circleShape2D = <span class="keyword">new</span> CircleShape2D();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      circleShape2D.Radius = 10;</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      collisionShape2D = <span class="keyword">new</span> CollisionShape2D();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      collisionShape2D.Shape = circleShape2D;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      sprite = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      sprite.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 10;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      sprite.Modulate = <a class="code" href="class_physics_1_1_simple_ball.html#ac7e224228f9c9ea7b576e8587b70b89b">BaseColor</a>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      circleShape2D = <span class="keyword">new</span> CircleShape2D { <a class="code" href="class_physics_1_1_simple_ball.html#ae3acd0381863e5d60dc56b7e3ed16f96">Radius</a> = 10 };</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      collisionShape2D = <span class="keyword">new</span> CollisionShape2D { Shape = circleShape2D };</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      sprite = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <a class="code" href="class_physics_1_1_simple_ball.html#ae3acd0381863e5d60dc56b7e3ed16f96">Radius</a> = 10,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        Modulate = Colors.LightBlue</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      };</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
@@ -216,7 +216,7 @@ Properties</h2></td></tr>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="aclass_drawing_1_1_simple_circle_sprite_html_a4284dbd1de9c1182719f8401afb272ad"><div class="ttname"><a href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Drawing.SimpleCircleSprite.Radius</a></div><div class="ttdeci">float Radius</div><div class="ttdoc">Circle radius.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_circle_sprite_8cs_source.html#l00015">SimpleCircleSprite.cs:16</a></div></div>
-<div class="ttc" id="aclass_physics_1_1_simple_ball_html_ac7e224228f9c9ea7b576e8587b70b89b"><div class="ttname"><a href="class_physics_1_1_simple_ball.html#ac7e224228f9c9ea7b576e8587b70b89b">Physics.SimpleBall.BaseColor</a></div><div class="ttdeci">Color BaseColor</div><div class="ttdoc">Base color</div><div class="ttdef"><b>Definition:</b> <a href="_simple_ball_8cs_source.html#l00015">SimpleBall.cs:16</a></div></div>
+<div class="ttc" id="aclass_physics_1_1_simple_ball_html_ae3acd0381863e5d60dc56b7e3ed16f96"><div class="ttname"><a href="class_physics_1_1_simple_ball.html#ae3acd0381863e5d60dc56b7e3ed16f96">Physics.SimpleBall.Radius</a></div><div class="ttdeci">float Radius</div><div class="ttdoc">Ball radius</div><div class="ttdef"><b>Definition:</b> <a href="_simple_ball_8cs_source.html#l00025">SimpleBall.cs:26</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_circle_sprite_html"><div class="ttname"><a href="class_drawing_1_1_simple_circle_sprite.html">Drawing.SimpleCircleSprite</a></div><div class="ttdoc">Use this to draw a circle. Instead of DrawCircle, it can be batched.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_circle_sprite_8cs_source.html#l00010">SimpleCircleSprite.cs:11</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

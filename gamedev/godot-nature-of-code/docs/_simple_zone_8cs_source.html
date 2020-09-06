@@ -84,7 +84,7 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_forces_1_1_simple_zone.html#ab788cd4aaf73b94f92d7682bb5845e7f">   20</a></span>&#160;    <span class="keyword">protected</span> <span class="keywordtype">void</span> <a class="code" href="class_forces_1_1_simple_zone.html#ab788cd4aaf73b94f92d7682bb5845e7f">DrawZone</a>(Color color)</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      DrawRect(<span class="keyword">new</span> Rect2(Vector2.Zero - <a class="code" href="class_forces_1_1_simple_zone.html#ac96f5ade1efb6b4f49b4ac5d5c5d8454">Size</a> / 2, <a class="code" href="class_forces_1_1_simple_zone.html#ac96f5ade1efb6b4f49b4ac5d5c5d8454">Size</a>), color.WithAlpha(200));</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      DrawRect(<span class="keyword">new</span> Rect2(Vector2.Zero - (<a class="code" href="class_forces_1_1_simple_zone.html#ac96f5ade1efb6b4f49b4ac5d5c5d8454">Size</a> / 2), <a class="code" href="class_forces_1_1_simple_zone.html#ac96f5ade1efb6b4f49b4ac5d5c5d8454">Size</a>), color.WithAlpha(200));</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
@@ -100,10 +100,10 @@ $(function() {
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> CreateCollisionShape()</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      var collisionShape = <span class="keyword">new</span> CollisionShape2D();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      var shape = <span class="keyword">new</span> RectangleShape2D();</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      shape.Extents = <a class="code" href="class_forces_1_1_simple_zone.html#ac96f5ade1efb6b4f49b4ac5d5c5d8454">Size</a> / 2;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      collisionShape.Shape = shape;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      var collisionShape = <span class="keyword">new</span> CollisionShape2D</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        Shape = <span class="keyword">new</span> RectangleShape2D { Extents = <a class="code" href="class_forces_1_1_simple_zone.html#ac96f5ade1efb6b4f49b4ac5d5c5d8454">Size</a> / 2 }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      };</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      AddChild(collisionShape);</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    }</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>

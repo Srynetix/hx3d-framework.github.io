@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['map_754',['Map',['../class_math_utils.html#a34a01167f3ae45f790e51c287f874f99',1,'MathUtils']]],
-  ['movelaterally_755',['MoveLaterally',['../class_agents_1_1_simple_vehicle.html#a8314f617c84146bd9dd8fd6a97ceff21',1,'Agents::SimpleVehicle']]],
-  ['movetoposition_756',['MoveToPosition',['../class_verlet_physics_1_1_verlet_point.html#a67d7482b76e3244b82c2558996f0a83d',1,'VerletPhysics::VerletPoint']]]
+  ['nervousbutterfly_760',['NervousButterfly',['../class_ecosystem_1_1_ecosystem_1_1_nervous_butterfly.html#a677b5354e85848488aae2f1004b3e5b4',1,'Ecosystem::Ecosystem::NervousButterfly']]],
+  ['nervousfly_761',['NervousFly',['../class_ecosystem_1_1_ecosystem_1_1_nervous_fly.html#add6f73405c6e87539fd64ec155e14f3e',1,'Ecosystem::Ecosystem::NervousFly']]],
+  ['normalizeto_762',['NormalizeTo',['../class_vector_extensions.html#aabfcede3f836da515bda031dadafae9b',1,'VectorExtensions']]]
 ];

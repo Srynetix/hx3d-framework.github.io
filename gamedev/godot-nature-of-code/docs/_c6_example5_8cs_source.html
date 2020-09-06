@@ -76,9 +76,9 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples_1_1_chapter6.html">Examples.Chapter6</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_example5.html">   10</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter6_1_1_c6_example5.html">C6Example5</a> : Node2D, <a class="code" href="interface_i_example.html">IExample</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_example5.html">   10</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter6_1_1_c6_example5.html">C6Example5</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  {</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_example5.html#a745c10f0c36574424a0dd988f8c6d9f8">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter6_1_1_c6_example5.html#a745c10f0c36574424a0dd988f8c6d9f8">_Summary</a>()</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_example5.html#a4f4a8f6d52ec448c83fa992c763fe650">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter6_1_1_c6_example5.html#a4f4a8f6d52ec448c83fa992c763fe650">GetSummary</a>()</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 6.5:\nSimple Path Following&quot;</span>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
@@ -92,19 +92,21 @@ $(function() {
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      path.Points.Add(<span class="keyword">new</span> Vector2(size.x, 2 * size.y / 3));</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      AddChild(path);</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      var vehicle = <span class="keyword">new</span> <a class="code" href="class_agents_1_1_simple_vehicle.html">SimpleVehicle</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      vehicle.TargetPath = path;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      vehicle.Velocity = <span class="keyword">new</span> Vector2(10, 0);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      vehicle.Position = <span class="keyword">new</span> Vector2(100, 100);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      AddChild(vehicle);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      var vehicle = <span class="keyword">new</span> <a class="code" href="class_agents_1_1_simple_vehicle.html">SimpleVehicle</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        TargetPath = path,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        Velocity = <span class="keyword">new</span> Vector2(10, 0),</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        Position = <span class="keyword">new</span> Vector2(100, 100)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      };</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      AddChild(vehicle);</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_example5_html_a745c10f0c36574424a0dd988f8c6d9f8"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_example5.html#a745c10f0c36574424a0dd988f8c6d9f8">Examples.Chapter6.C6Example5._Summary</a></div><div class="ttdeci">string _Summary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c6_example5_8cs_source.html#l00012">C6Example5.cs:12</a></div></div>
 <div class="ttc" id="aclass_agents_1_1_simple_path_html"><div class="ttname"><a href="class_agents_1_1_simple_path.html">Agents.SimplePath</a></div><div class="ttdoc">Simple path for SimpleVehicle to follow.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_path_8cs_source.html#l00009">SimplePath.cs:10</a></div></div>
 <div class="ttc" id="anamespace_examples_1_1_chapter6_html"><div class="ttname"><a href="namespace_examples_1_1_chapter6.html">Examples.Chapter6</a></div><div class="ttdoc">Chapter 6 - Autonomous Agents.</div><div class="ttdef"><b>Definition:</b> <a href="_c6_example1_8cs_source.html#l00010">C6Example1.cs:11</a></div></div>
-<div class="ttc" id="ainterface_i_example_html"><div class="ttname"><a href="interface_i_example.html">IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00004">Example.cs:5</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_example5_html_a4f4a8f6d52ec448c83fa992c763fe650"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_example5.html#a4f4a8f6d52ec448c83fa992c763fe650">Examples.Chapter6.C6Example5.GetSummary</a></div><div class="ttdeci">string GetSummary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c6_example5_8cs_source.html#l00012">C6Example5.cs:12</a></div></div>
+<div class="ttc" id="ainterface_examples_1_1_i_example_html"><div class="ttname"><a href="interface_examples_1_1_i_example.html">Examples.IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00006">Example.cs:7</a></div></div>
 <div class="ttc" id="anamespace_agents_html"><div class="ttname"><a href="namespace_agents.html">Agents</a></div><div class="ttdoc">Autonomous agents related primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_image_flow_field_8cs_source.html#l00003">ImageFlowField.cs:4</a></div></div>
 <div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_example5_html"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_example5.html">Examples.Chapter6.C6Example5</a></div><div class="ttdoc">Example 6.5: Simple Path Following.</div><div class="ttdef"><b>Definition:</b> <a href="_c6_example5_8cs_source.html#l00010">C6Example5.cs:11</a></div></div>
 <div class="ttc" id="aclass_agents_1_1_simple_vehicle_html"><div class="ttname"><a href="class_agents_1_1_simple_vehicle.html">Agents.SimpleVehicle</a></div><div class="ttdoc">Vehicle with force and steering. Tracks a target.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_vehicle_8cs_source.html#l00015">SimpleVehicle.cs:16</a></div></div>

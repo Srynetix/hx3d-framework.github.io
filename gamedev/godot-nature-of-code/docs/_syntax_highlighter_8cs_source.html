@@ -82,17 +82,17 @@ $(function() {
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">string</span> outputCode = code;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="comment">// getting keywords/functions</span></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">string</span> keywords = <span class="stringliteral">@&quot;\b(public|private|protected|partial|static|namespace|class|using|void|float|Vector2|int|bool|string|foreach|in|var|override|if|for|else|new|true|false)\b&quot;</span>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> keywords = <span class="stringliteral">@&quot;\b(public|private|protected|partial|static|namespace|class|using|void|float|Vector2|int|bool|string|foreach|in|var|override|if|for|else|new|true|false)\b&quot;</span>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    MatchCollection keywordMatches = Regex.Matches(outputCode, keywords);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    outputCode = ColorizeMatches(outputCode, keywordMatches, Colors.Cyan);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">// getting types/classes from the text </span></div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">string</span> types = <span class="stringliteral">@&quot;\b(GD|OS|Engine)\b&quot;</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="comment">// getting types/classes from the text</span></div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> types = <span class="stringliteral">@&quot;\b(GD|OS|Engine)\b&quot;</span>;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    MatchCollection typeMatches = Regex.Matches(outputCode, types);</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    outputCode = ColorizeMatches(outputCode, typeMatches, Colors.DarkCyan);</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="comment">// getting strings</span></div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keywordtype">string</span> strings = <span class="stringliteral">&quot;\&quot;.+?\&quot;&quot;</span>;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">const</span> <span class="keywordtype">string</span> strings = <span class="stringliteral">&quot;\&quot;.+?\&quot;&quot;</span>;</div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    MatchCollection stringMatches = Regex.Matches(outputCode, strings);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    outputCode = ColorizeMatches(outputCode, stringMatches, Colors.Brown);</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
@@ -104,34 +104,32 @@ $(function() {
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="comment">// multiline comments</span></div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    comments = <span class="stringliteral">@&quot;(\/\*.+?\*\/)&quot;</span>;</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    commentMatches = Regex.Matches(outputCode, comments, RegexOptions.Multiline | RegexOptions.Singleline);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    outputCode = ColorizeMatches(outputCode, commentMatches, Colors.Green);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    <span class="keywordflow">return</span> outputCode;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  <span class="keyword">private</span> <span class="keywordtype">string</span> ColorizeMatches(<span class="keywordtype">string</span> source, MatchCollection collection, Color color)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keywordtype">int</span> currentOffset = 0;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    var outputCode = source;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">foreach</span> (Match m <span class="keywordflow">in</span> collection)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keywordtype">int</span> startIndex = m.Index + currentOffset;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keywordtype">int</span> endIndex = m.Index + m.Length + currentOffset;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordtype">string</span> stringTag = <span class="stringliteral">&quot;[color=#&quot;</span> + color.ToHtml(<span class="keyword">false</span>) + <span class="stringliteral">&quot;]&quot;</span>;</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keywordtype">string</span> endTag = <span class="stringliteral">&quot;[/color]&quot;</span>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      var newOutputCode = outputCode.Insert(startIndex, stringTag);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      newOutputCode = newOutputCode.Insert(endIndex + stringTag.Length, endTag);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      outputCode = newOutputCode;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      currentOffset += stringTag.Length + endTag.Length;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keywordflow">return</span> outputCode;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;  }</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;}</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordflow">return</span> ColorizeMatches(outputCode, commentMatches, Colors.Green);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;  }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;  <span class="keyword">private</span> <span class="keywordtype">string</span> ColorizeMatches(<span class="keywordtype">string</span> source, MatchCollection collection, Color color)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordtype">int</span> currentOffset = 0;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    var outputCode = source;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    <span class="keywordflow">foreach</span> (Match m <span class="keywordflow">in</span> collection)</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    {</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="keywordtype">int</span> startIndex = m.Index + currentOffset;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <span class="keywordtype">int</span> endIndex = m.Index + m.Length + currentOffset;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">string</span> endTag = <span class="stringliteral">&quot;[/color]&quot;</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keywordtype">string</span> stringTag = <span class="stringliteral">&quot;[color=#&quot;</span> + color.ToHtml(<span class="keyword">false</span>) + <span class="stringliteral">&quot;]&quot;</span>;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      var newOutputCode = outputCode.Insert(startIndex, stringTag);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      newOutputCode = newOutputCode.Insert(endIndex + stringTag.Length, endTag);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      outputCode = newOutputCode;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      currentOffset += stringTag.Length + endTag.Length;</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keywordflow">return</span> outputCode;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;  }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_syntax_highlighter_html_afc00550ab315aebd0d30c5d92997fa72"><div class="ttname"><a href="class_syntax_highlighter.html#afc00550ab315aebd0d30c5d92997fa72">SyntaxHighlighter.HighlightWithBBCode</a></div><div class="ttdeci">string HighlightWithBBCode(string code)</div><div class="ttdoc">Highlight C# code with BBCode tags.</div><div class="ttdef"><b>Definition:</b> <a href="_syntax_highlighter_8cs_source.html#l00016">SyntaxHighlighter.cs:16</a></div></div>
 <div class="ttc" id="aclass_syntax_highlighter_html"><div class="ttname"><a href="class_syntax_highlighter.html">SyntaxHighlighter</a></div><div class="ttdoc">Super simple C# syntax highlighter. Adapted from https://codingvision.net/interface/c-simple-syntax-h...</div><div class="ttdef"><b>Definition:</b> <a href="_syntax_highlighter_8cs_source.html#l00009">SyntaxHighlighter.cs:10</a></div></div>

@@ -75,118 +75,117 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_drawing.html">Drawing</a>;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_forces.html">Forces</a>;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples.html">Examples</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples_1_1_chapter3.html">Examples.Chapter3</a></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keyword">namespace </span>Chapter3</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  {</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter3_1_1_c3_exercise5.html">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter3_1_1_c3_exercise5.html">C3Exercise5</a> : Control, <a class="code" href="interface_i_example.html">IExample</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter3_1_1_c3_exercise5.html">   11</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter3_1_1_c3_exercise5.html">C3Exercise5</a> : Control, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter3_1_1_c3_exercise5.html#adc2613069fc1c6ed49800a211d932adc">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter3_1_1_c3_exercise5.html#adc2613069fc1c6ed49800a211d932adc">GetSummary</a>()</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter3_1_1_c3_exercise5.html#a26abbeecd3ddc44cb67854d699e6a650">   15</a></span>&#160;      <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter3_1_1_c3_exercise5.html#a26abbeecd3ddc44cb67854d699e6a650">_Summary</a>()</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Exercise 3.5:\n&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;          + <span class="stringliteral">&quot;Asteroids\n\n&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;          + <span class="stringliteral">&quot;On desktop, use left and right arrow keys to turn, then up arrow key to thrust.\n&quot;</span></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;          + <span class="stringliteral">&quot;On mobile, you can use the virtual controls.&quot;</span>;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      }</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      <span class="keyword">public</span> <span class="keyword">class </span>Spaceship : <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">protected</span> <span class="keywordtype">bool</span> thrusting = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        <span class="keyword">public</span> Spaceship() : base(WrapModeEnum.Wrap)</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;          MeshSize = <span class="keyword">new</span> Vector2(20, 20);</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;          Mesh.<a class="code" href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">MeshType</a> = <a class="code" href="class_drawing_1_1_simple_mesh.html">SimpleMesh</a>.<a class="code" href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">TypeEnum</a>.Custom;</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;          Mesh.<a class="code" href="class_drawing_1_1_simple_mesh.html#a577fabdfc0a891fda4a77edf017ffc01">CustomDrawMethod</a> = (pen) =&gt;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            <span class="comment">// Body</span></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            Vector2[] points = { <span class="keyword">new</span> Vector2(-1, 1) * MeshSize, <span class="keyword">new</span> Vector2(1, 1) * MeshSize, <span class="keyword">new</span> Vector2(0, -1) * MeshSize };</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            Color[] colors = { pen.Modulate, pen.Modulate, pen.Modulate };</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            pen.DrawPolygon(points, colors);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="comment">// Thrusters</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            var thrusterColor = !thrusting ? Colors.White : Colors.Red;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            var thrusterSize = MeshSize / 3;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            pen.DrawRect(<span class="keyword">new</span> Rect2(-MeshSize.x / 2 - thrusterSize.x / 2, MeshSize.y, thrusterSize.x, thrusterSize.y), thrusterColor);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            pen.DrawRect(<span class="keyword">new</span> Rect2(MeshSize.x / 2 - thrusterSize.x / 2, MeshSize.y, thrusterSize.x, thrusterSize.y), thrusterColor);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;          };</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> Accelerate(<span class="keywordtype">float</span> amount)</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;          <a class="code" href="class_forces_1_1_simple_mover.html#a9cf54f76dad9b55d52e9c89d2ee00997">Acceleration</a> += Vector2.Right.Rotated(Rotation - Mathf.Pi / 2) * amount;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        <span class="keyword">public</span> <span class="keywordtype">void</span> Turn(<span class="keywordtype">float</span> amount)</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;          Rotation += amount;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> UpdateAcceleration()</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        {</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;          <a class="code" href="class_forces_1_1_simple_mover.html#ac813062f87c1df5ce9362791ac1c095d">ApplyFriction</a>(0.05f);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;          thrusting = (<a class="code" href="class_forces_1_1_simple_mover.html#a9cf54f76dad9b55d52e9c89d2ee00997">Acceleration</a>.LengthSquared() &gt; 0.01);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;          base._Process(delta);</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keyword">protected</span> <a class="code" href="class_virtual_controls.html">VirtualControls</a> controls;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keyword">protected</span> Spaceship spaceship;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      {</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="comment">// Add virtual controls</span></div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        controls = <span class="keyword">new</span> <a class="code" href="class_virtual_controls.html">VirtualControls</a>();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        AddChild(controls);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        spaceship = <span class="keyword">new</span> Spaceship();</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        spaceship.Position = GetViewportRect().Size / 2;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        AddChild(spaceship);</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      }</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Exercise 3.5:\n&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        + <span class="stringliteral">&quot;Asteroids\n\n&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        + <span class="stringliteral">&quot;On desktop, use left and right arrow keys to turn, then up arrow key to thrust.\n&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        + <span class="stringliteral">&quot;On mobile, you can use the virtual controls.&quot;</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span>Spaceship : <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      <span class="keyword">protected</span> <span class="keywordtype">bool</span> thrusting = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <span class="keyword">public</span> Spaceship() : base(WrapModeEnum.Wrap)</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        MeshSize = <span class="keyword">new</span> Vector2(20, 20);</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        Mesh.<a class="code" href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">MeshType</a> = <a class="code" href="class_drawing_1_1_simple_mesh.html">SimpleMesh</a>.<a class="code" href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">TypeEnum</a>.Custom;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        Mesh.<a class="code" href="class_drawing_1_1_simple_mesh.html#a577fabdfc0a891fda4a77edf017ffc01">CustomDrawMethod</a> = (pen) =&gt;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;          <span class="comment">// Body</span></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          Vector2[] points = { <span class="keyword">new</span> Vector2(-1, 1) * MeshSize, <span class="keyword">new</span> Vector2(1, 1) * MeshSize, <span class="keyword">new</span> Vector2(0, -1) * MeshSize };</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;          Color[] colors = { pen.Modulate, pen.Modulate, pen.Modulate };</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;          pen.DrawPolygon(points, colors);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;          <span class="comment">// Thrusters</span></div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;          var thrusterColor = !thrusting ? Colors.White : Colors.Red;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;          var thrusterSize = MeshSize / 3;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;          pen.DrawRect(<span class="keyword">new</span> Rect2((-MeshSize.x / 2) - (thrusterSize.x / 2), MeshSize.y, thrusterSize.x, thrusterSize.y), thrusterColor);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;          pen.DrawRect(<span class="keyword">new</span> Rect2((MeshSize.x / 2) - (thrusterSize.x / 2), MeshSize.y, thrusterSize.x, thrusterSize.y), thrusterColor);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        };</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      }</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keyword">public</span> <span class="keywordtype">void</span> Accelerate(<span class="keywordtype">float</span> amount)</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="class_forces_1_1_simple_mover.html#a9cf54f76dad9b55d52e9c89d2ee00997">Acceleration</a> += Vector2.Right.Rotated(Rotation - (Mathf.Pi / 2)) * amount;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="keyword">public</span> <span class="keywordtype">void</span> Turn(<span class="keywordtype">float</span> amount)</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      {</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        Rotation += amount;</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> UpdateAcceleration()</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        <a class="code" href="class_forces_1_1_simple_mover.html#ac813062f87c1df5ce9362791ac1c095d">ApplyFriction</a>(0.05f);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      {</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        thrusting = (<a class="code" href="class_forces_1_1_simple_mover.html#a9cf54f76dad9b55d52e9c89d2ee00997">Acceleration</a>.LengthSquared() &gt; 0.01);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        base._Process(delta);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      }</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    <span class="keyword">protected</span> <a class="code" href="class_virtual_controls.html">VirtualControls</a> controls;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    <span class="keyword">protected</span> Spaceship spaceship;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;    {</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="comment">// Add virtual controls</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      controls = <span class="keyword">new</span> <a class="code" href="class_virtual_controls.html">VirtualControls</a>();</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      AddChild(controls);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      spaceship = <span class="keyword">new</span> Spaceship</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        Position = GetViewportRect().Size / 2</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      };</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      AddChild(spaceship);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
 <div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160; </div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      {</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;        var accelFactor = 0.25f;</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        var turnFactor = 0.05f;</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    {</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">float</span> accelFactor = 0.25f;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">float</span> turnFactor = 0.05f;</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;        <span class="keywordflow">if</span> (controls.<a class="code" href="class_virtual_controls.html#ac388919f3576331af40533dd3545402b">JoystickOutput</a>.y &lt; -0.5f || Input.IsActionPressed(<span class="stringliteral">&quot;ui_up&quot;</span>))</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;          spaceship.Accelerate(accelFactor);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        }</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <span class="keywordflow">if</span> (controls.<a class="code" href="class_virtual_controls.html#ac388919f3576331af40533dd3545402b">JoystickOutput</a>.y &lt; -0.5f || Input.IsActionPressed(<span class="stringliteral">&quot;ui_up&quot;</span>))</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        spaceship.Accelerate(accelFactor);</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      }</div>
 <div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;        <span class="keywordflow">if</span> (controls.<a class="code" href="class_virtual_controls.html#ac388919f3576331af40533dd3545402b">JoystickOutput</a>.x &lt; -0.5f || Input.IsActionPressed(<span class="stringliteral">&quot;ui_left&quot;</span>))</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        {</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;          spaceship.Turn(-turnFactor);</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        }</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      <span class="keywordflow">if</span> (controls.<a class="code" href="class_virtual_controls.html#ac388919f3576331af40533dd3545402b">JoystickOutput</a>.x &lt; -0.5f || Input.IsActionPressed(<span class="stringliteral">&quot;ui_left&quot;</span>))</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      {</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        spaceship.Turn(-turnFactor);</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      }</div>
 <div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordflow">if</span> (controls.<a class="code" href="class_virtual_controls.html#ac388919f3576331af40533dd3545402b">JoystickOutput</a>.x &gt; 0.5f || Input.IsActionPressed(<span class="stringliteral">&quot;ui_right&quot;</span>))</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        {</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;          spaceship.Turn(turnFactor);</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;        }</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;    }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;  }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;}</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      <span class="keywordflow">if</span> (controls.<a class="code" href="class_virtual_controls.html#ac388919f3576331af40533dd3545402b">JoystickOutput</a>.x &gt; 0.5f || Input.IsActionPressed(<span class="stringliteral">&quot;ui_right&quot;</span>))</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      {</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        spaceship.Turn(turnFactor);</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      }</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;  }</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_drawing_html"><div class="ttname"><a href="namespace_drawing.html">Drawing</a></div><div class="ttdoc">Draw primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00006">DrawCanvas.cs:7</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_mesh_html"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html">Drawing.SimpleMesh</a></div><div class="ttdoc">Simple &quot;mesh&quot; drawing. Can be a circle, square, custom drawing or custom texture.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00008">SimpleMesh.cs:9</a></div></div>
 <div class="ttc" id="aclass_forces_1_1_simple_mover_html"><div class="ttname"><a href="class_forces_1_1_simple_mover.html">Forces.SimpleMover</a></div><div class="ttdoc">Generic force-driven object.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00009">SimpleMover.cs:10</a></div></div>
-<div class="ttc" id="aclass_examples_1_1_chapter3_1_1_c3_exercise5_html_a26abbeecd3ddc44cb67854d699e6a650"><div class="ttname"><a href="class_examples_1_1_chapter3_1_1_c3_exercise5.html#a26abbeecd3ddc44cb67854d699e6a650">Examples.Chapter3.C3Exercise5._Summary</a></div><div class="ttdeci">string _Summary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c3_exercise5_8cs_source.html#l00015">C3Exercise5.cs:15</a></div></div>
-<div class="ttc" id="aclass_examples_1_1_chapter3_1_1_c3_exercise5_html"><div class="ttname"><a href="class_examples_1_1_chapter3_1_1_c3_exercise5.html">Examples.Chapter3.C3Exercise5</a></div><div class="ttdoc">Exercise 3.5 - Asteroids.</div><div class="ttdef"><b>Definition:</b> <a href="_c3_exercise5_8cs_source.html#l00013">C3Exercise5.cs:14</a></div></div>
-<div class="ttc" id="aclass_drawing_1_1_simple_mesh_html_ad10e2f115377206bf91b904f0e0944b3"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">Drawing.SimpleMesh.MeshType</a></div><div class="ttdeci">TypeEnum MeshType</div><div class="ttdoc">Mesh type</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00031">SimpleMesh.cs:31</a></div></div>
-<div class="ttc" id="ainterface_i_example_html"><div class="ttname"><a href="interface_i_example.html">IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00004">Example.cs:5</a></div></div>
-<div class="ttc" id="aclass_forces_1_1_simple_mover_html_ac813062f87c1df5ce9362791ac1c095d"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#ac813062f87c1df5ce9362791ac1c095d">Forces.SimpleMover.ApplyFriction</a></div><div class="ttdeci">virtual void ApplyFriction(float coef)</div><div class="ttdoc">Apply friction on mover.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00114">SimpleMover.cs:114</a></div></div>
-<div class="ttc" id="aclass_drawing_1_1_simple_mesh_html_a577fabdfc0a891fda4a77edf017ffc01"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html#a577fabdfc0a891fda4a77edf017ffc01">Drawing.SimpleMesh.CustomDrawMethod</a></div><div class="ttdeci">CustomDrawFunc CustomDrawMethod</div><div class="ttdoc">Custom draw method</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00033">SimpleMesh.cs:33</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter3_1_1_c3_exercise5_html"><div class="ttname"><a href="class_examples_1_1_chapter3_1_1_c3_exercise5.html">Examples.Chapter3.C3Exercise5</a></div><div class="ttdoc">Exercise 3.5 - Asteroids.</div><div class="ttdef"><b>Definition:</b> <a href="_c3_exercise5_8cs_source.html#l00011">C3Exercise5.cs:12</a></div></div>
+<div class="ttc" id="aclass_drawing_1_1_simple_mesh_html_ad10e2f115377206bf91b904f0e0944b3"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">Drawing.SimpleMesh.MeshType</a></div><div class="ttdeci">TypeEnum MeshType</div><div class="ttdoc">Mesh type</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00035">SimpleMesh.cs:35</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter3_1_1_c3_exercise5_html_adc2613069fc1c6ed49800a211d932adc"><div class="ttname"><a href="class_examples_1_1_chapter3_1_1_c3_exercise5.html#adc2613069fc1c6ed49800a211d932adc">Examples.Chapter3.C3Exercise5.GetSummary</a></div><div class="ttdeci">string GetSummary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c3_exercise5_8cs_source.html#l00013">C3Exercise5.cs:13</a></div></div>
+<div class="ttc" id="anamespace_examples_1_1_chapter3_html"><div class="ttname"><a href="namespace_examples_1_1_chapter3.html">Examples.Chapter3</a></div><div class="ttdoc">Chapter 3 - Oscillation.</div><div class="ttdef"><b>Definition:</b> <a href="_c3_example1_8cs_source.html#l00008">C3Example1.cs:9</a></div></div>
+<div class="ttc" id="aclass_forces_1_1_simple_mover_html_ac813062f87c1df5ce9362791ac1c095d"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#ac813062f87c1df5ce9362791ac1c095d">Forces.SimpleMover.ApplyFriction</a></div><div class="ttdeci">virtual void ApplyFriction(float coef)</div><div class="ttdoc">Apply friction on mover.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00125">SimpleMover.cs:125</a></div></div>
+<div class="ttc" id="aclass_drawing_1_1_simple_mesh_html_a577fabdfc0a891fda4a77edf017ffc01"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html#a577fabdfc0a891fda4a77edf017ffc01">Drawing.SimpleMesh.CustomDrawMethod</a></div><div class="ttdeci">CustomDrawFunc CustomDrawMethod</div><div class="ttdoc">Custom draw method</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00038">SimpleMesh.cs:38</a></div></div>
 <div class="ttc" id="aclass_virtual_controls_html"><div class="ttname"><a href="class_virtual_controls.html">VirtualControls</a></div><div class="ttdoc">Embedded virtual controls. Adapted from https://github.com/MarcoFazioRandom/Virtual-Joystick-Godot</div><div class="ttdef"><b>Definition:</b> <a href="_virtual_controls_8cs_source.html#l00008">VirtualControls.cs:9</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_mesh_html_afc384e69567055ac7638794913b50d3f"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">Drawing.SimpleMesh.TypeEnum</a></div><div class="ttdeci">TypeEnum</div><div class="ttdoc">Mesh type enum value.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00013">SimpleMesh.cs:14</a></div></div>
-<div class="ttc" id="aclass_forces_1_1_simple_mover_html_a9cf54f76dad9b55d52e9c89d2ee00997"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a9cf54f76dad9b55d52e9c89d2ee00997">Forces.SimpleMover.Acceleration</a></div><div class="ttdeci">Vector2 Acceleration</div><div class="ttdoc">Current acceleration</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00027">SimpleMover.cs:27</a></div></div>
-<div class="ttc" id="aclass_virtual_controls_html_ac388919f3576331af40533dd3545402b"><div class="ttname"><a href="class_virtual_controls.html#ac388919f3576331af40533dd3545402b">VirtualControls.JoystickOutput</a></div><div class="ttdeci">Vector2 JoystickOutput</div><div class="ttdoc">Joystick output</div><div class="ttdef"><b>Definition:</b> <a href="_virtual_controls_8cs_source.html#l00071">VirtualControls.cs:71</a></div></div>
-<div class="ttc" id="anamespace_examples_html"><div class="ttname"><a href="namespace_examples.html">Examples</a></div><div class="ttdoc">Nature of Code examples and exercises.</div><div class="ttdef"><b>Definition:</b> <a href="_c0_example1_8cs_source.html#l00007">C0Example1.cs:8</a></div></div>
+<div class="ttc" id="ainterface_examples_1_1_i_example_html"><div class="ttname"><a href="interface_examples_1_1_i_example.html">Examples.IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00006">Example.cs:7</a></div></div>
+<div class="ttc" id="aclass_forces_1_1_simple_mover_html_a9cf54f76dad9b55d52e9c89d2ee00997"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a9cf54f76dad9b55d52e9c89d2ee00997">Forces.SimpleMover.Acceleration</a></div><div class="ttdeci">Vector2 Acceleration</div><div class="ttdoc">Current acceleration</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00030">SimpleMover.cs:30</a></div></div>
+<div class="ttc" id="aclass_virtual_controls_html_ac388919f3576331af40533dd3545402b"><div class="ttname"><a href="class_virtual_controls.html#ac388919f3576331af40533dd3545402b">VirtualControls.JoystickOutput</a></div><div class="ttdeci">Vector2 JoystickOutput</div><div class="ttdoc">Joystick output</div><div class="ttdef"><b>Definition:</b> <a href="_virtual_controls_8cs_source.html#l00086">VirtualControls.cs:86</a></div></div>
 <div class="ttc" id="anamespace_forces_html"><div class="ttname"><a href="namespace_forces.html">Forces</a></div><div class="ttdoc">Force-related primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_constant_acceleration_mover_8cs_source.html#l00003">ConstantAccelerationMover.cs:4</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

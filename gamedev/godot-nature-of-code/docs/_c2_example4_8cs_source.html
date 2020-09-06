@@ -75,58 +75,55 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> Godot;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_forces.html">Forces</a>;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples.html">Examples</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples_1_1_chapter2.html">Examples.Chapter2</a></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keyword">namespace </span>Chapter2</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  {</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter2_1_1_c2_example4.html">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter2_1_1_c2_example4.html">C2Example4</a> : Node2D, <a class="code" href="interface_i_example.html">IExample</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter2_1_1_c2_example4.html">   11</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter2_1_1_c2_example4.html">C2Example4</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter2_1_1_c2_example4.html#a16a4ea029541a30ad76174803572adde">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter2_1_1_c2_example4.html#a16a4ea029541a30ad76174803572adde">GetSummary</a>()</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter2_1_1_c2_example4.html#a8d656e890e429c9156652195063d9a57">   15</a></span>&#160;      <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter2_1_1_c2_example4.html#a8d656e890e429c9156652195063d9a57">_Summary</a>()</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 2.4:\n&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;          + <span class="stringliteral">&quot;Friction&quot;</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <span class="keyword">private</span> <span class="keyword">class </span>Mover : <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">public</span> Mover() : base(WrapModeEnum.Bounce) { }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> UpdateAcceleration()</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;          var wind = <span class="keyword">new</span> Vector2(0.01f, 0);</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;          var gravity = <span class="keyword">new</span> Vector2(0, 0.09f * Mass);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;          ApplyForce(wind);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;          ApplyForce(gravity);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          ApplyFriction(0.1f);</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 2.4:\n&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        + <span class="stringliteral">&quot;Friction&quot;</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">private</span> <span class="keyword">class </span>Mover : <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <span class="keyword">public</span> Mover() : base(WrapModeEnum.Bounce) { }</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> UpdateAcceleration()</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        var wind = <span class="keyword">new</span> Vector2(0.01f, 0);</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        var gravity = <span class="keyword">new</span> Vector2(0, 0.09f * Mass);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        ApplyForce(wind);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        ApplyForce(gravity);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        ApplyFriction(0.1f);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keywordflow">foreach</span> (var _ <span class="keywordflow">in</span> Enumerable.Range(0, 20))</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">foreach</span> (var x <span class="keywordflow">in</span> Enumerable.Range(0, 20))</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;          var mover = <span class="keyword">new</span> Mover();</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;          var bodySize = (float)GD.RandRange(20, 40);</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;          mover.MeshSize = <span class="keyword">new</span> Vector2(bodySize, bodySize);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;          mover.Mass = (float)GD.RandRange(5, 10);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;          var size = GetViewportRect().Size;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;          var xPos = (float)GD.RandRange(bodySize, size.x - bodySize);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;          mover.Position = <span class="keyword">new</span> Vector2(xPos, size.y / 2);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;          AddChild(mover);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;  }</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        var mover = <span class="keyword">new</span> Mover();</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        var bodySize = (float)GD.RandRange(20, 40);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        mover.MeshSize = <span class="keyword">new</span> Vector2(bodySize, bodySize);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        mover.Mass = (float)GD.RandRange(5, 10);</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        var size = GetViewportRect().Size;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        var xPos = (float)GD.RandRange(bodySize, size.x - bodySize);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        mover.Position = <span class="keyword">new</span> Vector2(xPos, size.y / 2);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        AddChild(mover);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;  }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_examples_1_1_chapter2_1_1_c2_example4_html"><div class="ttname"><a href="class_examples_1_1_chapter2_1_1_c2_example4.html">Examples.Chapter2.C2Example4</a></div><div class="ttdoc">Example 2.4 - Friction.</div><div class="ttdef"><b>Definition:</b> <a href="_c2_example4_8cs_source.html#l00013">C2Example4.cs:14</a></div></div>
-<div class="ttc" id="aclass_examples_1_1_chapter2_1_1_c2_example4_html_a8d656e890e429c9156652195063d9a57"><div class="ttname"><a href="class_examples_1_1_chapter2_1_1_c2_example4.html#a8d656e890e429c9156652195063d9a57">Examples.Chapter2.C2Example4._Summary</a></div><div class="ttdeci">string _Summary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c2_example4_8cs_source.html#l00015">C2Example4.cs:15</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter2_1_1_c2_example4_html"><div class="ttname"><a href="class_examples_1_1_chapter2_1_1_c2_example4.html">Examples.Chapter2.C2Example4</a></div><div class="ttdoc">Example 2.4 - Friction.</div><div class="ttdef"><b>Definition:</b> <a href="_c2_example4_8cs_source.html#l00011">C2Example4.cs:12</a></div></div>
 <div class="ttc" id="aclass_forces_1_1_simple_mover_html"><div class="ttname"><a href="class_forces_1_1_simple_mover.html">Forces.SimpleMover</a></div><div class="ttdoc">Generic force-driven object.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00009">SimpleMover.cs:10</a></div></div>
-<div class="ttc" id="ainterface_i_example_html"><div class="ttname"><a href="interface_i_example.html">IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00004">Example.cs:5</a></div></div>
-<div class="ttc" id="anamespace_examples_html"><div class="ttname"><a href="namespace_examples.html">Examples</a></div><div class="ttdoc">Nature of Code examples and exercises.</div><div class="ttdef"><b>Definition:</b> <a href="_c0_example1_8cs_source.html#l00007">C0Example1.cs:8</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter2_1_1_c2_example4_html_a16a4ea029541a30ad76174803572adde"><div class="ttname"><a href="class_examples_1_1_chapter2_1_1_c2_example4.html#a16a4ea029541a30ad76174803572adde">Examples.Chapter2.C2Example4.GetSummary</a></div><div class="ttdeci">string GetSummary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c2_example4_8cs_source.html#l00013">C2Example4.cs:13</a></div></div>
+<div class="ttc" id="anamespace_examples_1_1_chapter2_html"><div class="ttname"><a href="namespace_examples_1_1_chapter2.html">Examples.Chapter2</a></div><div class="ttdoc">Chapter 2 - Forces.</div><div class="ttdef"><b>Definition:</b> <a href="_c2_example1_8cs_source.html#l00009">C2Example1.cs:10</a></div></div>
+<div class="ttc" id="ainterface_examples_1_1_i_example_html"><div class="ttname"><a href="interface_examples_1_1_i_example.html">Examples.IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00006">Example.cs:7</a></div></div>
 <div class="ttc" id="anamespace_forces_html"><div class="ttname"><a href="namespace_forces.html">Forces</a></div><div class="ttdoc">Force-related primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_constant_acceleration_mover_8cs_source.html#l00003">ConstantAccelerationMover.cs:4</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

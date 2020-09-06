@@ -148,10 +148,10 @@ Protected Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Noise value</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_simple_noise_texture_8cs_source.html#l00026">26</a> of file <a class="el" href="_simple_noise_texture_8cs_source.html">SimpleNoiseTexture.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      <span class="keywordflow">return</span> noise.GetNoise2d(x, y);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="_simple_noise_texture_8cs_source.html#l00028">28</a> of file <a class="el" href="_simple_noise_texture_8cs_source.html">SimpleNoiseTexture.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      <span class="keywordflow">return</span> noise.GetNoise2d(x, y);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -180,10 +180,8 @@ Protected Member Functions</h2></td></tr>
 
 <p>Generate noise texture. </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_noise_texture_8cs_source.html#l00034">34</a> of file <a class="el" href="_simple_noise_texture_8cs_source.html">SimpleNoiseTexture.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      var imageSize = GetViewportRect().Size / <a class="code" href="class_drawing_1_1_simple_noise_texture.html#a49edb45d4708caf1ba0579973d375db2">Factor</a>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
+<p class="definition">Definition at line <a class="el" href="_simple_noise_texture_8cs_source.html#l00036">36</a> of file <a class="el" href="_simple_noise_texture_8cs_source.html">SimpleNoiseTexture.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    {</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      image.Lock();</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; imageSize.x; ++x)</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      {</div>
@@ -232,7 +230,7 @@ Protected Member Functions</h2></td></tr>
 
 <p>Noise octaves </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_noise_texture_8cs_source.html#l00013">13</a> of file <a class="el" href="_simple_noise_texture_8cs_source.html">SimpleNoiseTexture.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_simple_noise_texture_8cs_source.html#l00014">14</a> of file <a class="el" href="_simple_noise_texture_8cs_source.html">SimpleNoiseTexture.cs</a>.</p>
 
 </div>
 </div>
@@ -242,8 +240,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <div class="ttc" id="aclass_math_utils_html"><div class="ttname"><a href="class_math_utils.html">MathUtils</a></div><div class="ttdoc">Math utility functions</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00006">MathUtils.cs:7</a></div></div>
 <div class="ttc" id="aclass_math_utils_html_a34a01167f3ae45f790e51c287f874f99"><div class="ttname"><a href="class_math_utils.html#a34a01167f3ae45f790e51c287f874f99">MathUtils.Map</a></div><div class="ttdeci">static float Map(float value, float istart, float istop, float ostart, float ostop)</div><div class="ttdoc">Map a value from one bound to another.</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00017">MathUtils.cs:17</a></div></div>
-<div class="ttc" id="aclass_drawing_1_1_simple_noise_texture_html_a49edb45d4708caf1ba0579973d375db2"><div class="ttname"><a href="class_drawing_1_1_simple_noise_texture.html#a49edb45d4708caf1ba0579973d375db2">Drawing.SimpleNoiseTexture.Factor</a></div><div class="ttdeci">float Factor</div><div class="ttdoc">Noise factor</div><div class="ttdef"><b>Definition:</b> <a href="_simple_noise_texture_8cs_source.html#l00011">SimpleNoiseTexture.cs:11</a></div></div>
-<div class="ttc" id="aclass_drawing_1_1_simple_noise_texture_html_a6a444432f2ac62cd921f83f4457eef9c"><div class="ttname"><a href="class_drawing_1_1_simple_noise_texture.html#a6a444432f2ac62cd921f83f4457eef9c">Drawing.SimpleNoiseTexture.ComputeNoise</a></div><div class="ttdeci">virtual float ComputeNoise(float x, float y)</div><div class="ttdoc">Compute noise for X and Y coordinates.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_noise_texture_8cs_source.html#l00026">SimpleNoiseTexture.cs:26</a></div></div>
+<div class="ttc" id="aclass_drawing_1_1_simple_noise_texture_html_a6a444432f2ac62cd921f83f4457eef9c"><div class="ttname"><a href="class_drawing_1_1_simple_noise_texture.html#a6a444432f2ac62cd921f83f4457eef9c">Drawing.SimpleNoiseTexture.ComputeNoise</a></div><div class="ttdeci">virtual float ComputeNoise(float x, float y)</div><div class="ttdoc">Compute noise for X and Y coordinates.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_noise_texture_8cs_source.html#l00028">SimpleNoiseTexture.cs:28</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

@@ -75,71 +75,74 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_drawing.html">Drawing</a>;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_particles.html">Particles</a>;</div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples.html">Examples</a></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples_1_1_chapter4.html">Examples.Chapter4</a></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  <span class="keyword">namespace </span>Chapter4</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;  {</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter4_1_1_c4_example4.html">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter4_1_1_c4_example4.html">C4Example4</a> : Node2D, <a class="code" href="interface_i_example.html">IExample</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter4_1_1_c4_example4.html">   11</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter4_1_1_c4_example4.html">C4Example4</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter4_1_1_c4_example4.html#ac45d7f8e1b2296d809151729dd38da7e">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter4_1_1_c4_example4.html#ac45d7f8e1b2296d809151729dd38da7e">GetSummary</a>()</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter4_1_1_c4_example4.html#a8ce40c07830617666cb68d17b889e2ba">   15</a></span>&#160;      <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter4_1_1_c4_example4.html#a8ce40c07830617666cb68d17b889e2ba">_Summary</a>()</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 4.4:\n&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;          + <span class="stringliteral">&quot;Multiple Particle Systems\n\n&quot;</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;          + <span class="stringliteral">&quot;Touch screen to spawn particle system&quot;</span>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      }</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      <span class="keyword">private</span> <span class="keywordtype">void</span> AddParticleSystem(Vector2 position)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 4.4:\n&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        + <span class="stringliteral">&quot;Multiple Particle Systems\n\n&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        + <span class="stringliteral">&quot;Touch screen to spawn particle system&quot;</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> AddParticleSystem(Vector2 position)</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      var ps = <span class="keyword">new</span> <a class="code" href="class_particles_1_1_simple_particle_system.html">SimpleParticleSystem</a></div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        var ps = <span class="keyword">new</span> <a class="code" href="class_particles_1_1_simple_particle_system.html">SimpleParticleSystem</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        ps.ParticleCreationFunction = () =&gt;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;          var particle = <span class="keyword">new</span> <a class="code" href="class_particles_1_1_simple_falling_particle.html">SimpleFallingParticle</a>();</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;          particle.Lifespan = 2;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;          particle.Mesh.MeshType = <a class="code" href="class_drawing_1_1_simple_mesh.html">SimpleMesh</a>.<a class="code" href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">TypeEnum</a>.Square;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;          particle.MeshSize = <span class="keyword">new</span> Vector2(10, 10);</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;          <span class="keywordflow">return</span> particle;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        };</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        ps.GlobalPosition = position;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        AddChild(ps);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _UnhandledInput(InputEvent @event)</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      {</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">if</span> (@event is InputEventScreenTouch eventScreenTouch)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;          <span class="keywordflow">if</span> (eventScreenTouch.Pressed)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;          {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            AddParticleSystem(eventScreenTouch.Position);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;          }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        <span class="comment">// Initial systems</span></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        var size = GetViewportRect().Size;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        <span class="keywordtype">int</span> initialCount = 2;</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordtype">float</span> splitSize = size.x / initialCount;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; initialCount; ++i)</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;          AddParticleSystem(<span class="keyword">new</span> Vector2(splitSize / 2 + splitSize * i, size.y / 4));</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        }</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      }</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;}</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        ParticleCreationFunction = () =&gt;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;          var particle = <span class="keyword">new</span> <a class="code" href="class_particles_1_1_simple_falling_particle.html">SimpleFallingParticle</a></div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;          {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            Lifespan = 2,</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            MeshSize = <span class="keyword">new</span> Vector2(10, 10)</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;          };</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;          particle.<a class="code" href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">Mesh</a>.<a class="code" href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">MeshType</a> = <a class="code" href="class_drawing_1_1_simple_mesh.html">SimpleMesh</a>.<a class="code" href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">TypeEnum</a>.Square;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          <span class="keywordflow">return</span> particle;</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        },</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        GlobalPosition = position</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      };</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      AddChild(ps);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _UnhandledInput(InputEvent @event)</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keywordflow">if</span> (@event is InputEventScreenTouch eventScreenTouch)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        <span class="keywordflow">if</span> (eventScreenTouch.Pressed)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        {</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;          AddParticleSystem(eventScreenTouch.Position);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="comment">// Initial systems</span></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      var size = GetViewportRect().Size;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> initialCount = 2;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keywordtype">float</span> splitSize = size.x / initialCount;</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; initialCount; ++i)</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        AddParticleSystem(<span class="keyword">new</span> Vector2((splitSize / 2) + (splitSize * i), size.y / 4));</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;  }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_drawing_html"><div class="ttname"><a href="namespace_drawing.html">Drawing</a></div><div class="ttdoc">Draw primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00006">DrawCanvas.cs:7</a></div></div>
 <div class="ttc" id="anamespace_particles_html"><div class="ttname"><a href="namespace_particles.html">Particles</a></div><div class="ttdoc">Particle-related primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_falling_particle_8cs_source.html#l00003">SimpleFallingParticle.cs:4</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_mesh_html"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html">Drawing.SimpleMesh</a></div><div class="ttdoc">Simple &quot;mesh&quot; drawing. Can be a circle, square, custom drawing or custom texture.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00008">SimpleMesh.cs:9</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter4_1_1_c4_example4_html_ac45d7f8e1b2296d809151729dd38da7e"><div class="ttname"><a href="class_examples_1_1_chapter4_1_1_c4_example4.html#ac45d7f8e1b2296d809151729dd38da7e">Examples.Chapter4.C4Example4.GetSummary</a></div><div class="ttdeci">string GetSummary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c4_example4_8cs_source.html#l00013">C4Example4.cs:13</a></div></div>
+<div class="ttc" id="aclass_forces_1_1_simple_mover_html_a8428ebcb251141c1b4a84b4c869d5e09"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">Forces.SimpleMover.Mesh</a></div><div class="ttdeci">SimpleMesh Mesh</div><div class="ttdoc">Mesh</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00057">SimpleMover.cs:57</a></div></div>
 <div class="ttc" id="aclass_particles_1_1_simple_particle_system_html"><div class="ttname"><a href="class_particles_1_1_simple_particle_system.html">Particles.SimpleParticleSystem</a></div><div class="ttdoc">Simple particle system.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_particle_system_8cs_source.html#l00010">SimpleParticleSystem.cs:11</a></div></div>
+<div class="ttc" id="aclass_drawing_1_1_simple_mesh_html_ad10e2f115377206bf91b904f0e0944b3"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">Drawing.SimpleMesh.MeshType</a></div><div class="ttdeci">TypeEnum MeshType</div><div class="ttdoc">Mesh type</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00035">SimpleMesh.cs:35</a></div></div>
 <div class="ttc" id="aclass_particles_1_1_simple_falling_particle_html"><div class="ttname"><a href="class_particles_1_1_simple_falling_particle.html">Particles.SimpleFallingParticle</a></div><div class="ttdoc">Simple falling particle.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_falling_particle_8cs_source.html#l00008">SimpleFallingParticle.cs:9</a></div></div>
-<div class="ttc" id="ainterface_i_example_html"><div class="ttname"><a href="interface_i_example.html">IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00004">Example.cs:5</a></div></div>
+<div class="ttc" id="anamespace_examples_1_1_chapter4_html"><div class="ttname"><a href="namespace_examples_1_1_chapter4.html">Examples.Chapter4</a></div><div class="ttdoc">Chapter 4 - Particle Systems.</div><div class="ttdef"><b>Definition:</b> <a href="_c4_example1_8cs_source.html#l00009">C4Example1.cs:10</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_mesh_html_afc384e69567055ac7638794913b50d3f"><div class="ttname"><a href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">Drawing.SimpleMesh.TypeEnum</a></div><div class="ttdeci">TypeEnum</div><div class="ttdoc">Mesh type enum value.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mesh_8cs_source.html#l00013">SimpleMesh.cs:14</a></div></div>
-<div class="ttc" id="aclass_examples_1_1_chapter4_1_1_c4_example4_html_a8ce40c07830617666cb68d17b889e2ba"><div class="ttname"><a href="class_examples_1_1_chapter4_1_1_c4_example4.html#a8ce40c07830617666cb68d17b889e2ba">Examples.Chapter4.C4Example4._Summary</a></div><div class="ttdeci">string _Summary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c4_example4_8cs_source.html#l00015">C4Example4.cs:15</a></div></div>
-<div class="ttc" id="aclass_examples_1_1_chapter4_1_1_c4_example4_html"><div class="ttname"><a href="class_examples_1_1_chapter4_1_1_c4_example4.html">Examples.Chapter4.C4Example4</a></div><div class="ttdoc">Example 4.4 - Multiple Particle Systems.</div><div class="ttdef"><b>Definition:</b> <a href="_c4_example4_8cs_source.html#l00013">C4Example4.cs:14</a></div></div>
-<div class="ttc" id="anamespace_examples_html"><div class="ttname"><a href="namespace_examples.html">Examples</a></div><div class="ttdoc">Nature of Code examples and exercises.</div><div class="ttdef"><b>Definition:</b> <a href="_c0_example1_8cs_source.html#l00007">C0Example1.cs:8</a></div></div>
+<div class="ttc" id="ainterface_examples_1_1_i_example_html"><div class="ttname"><a href="interface_examples_1_1_i_example.html">Examples.IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00006">Example.cs:7</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter4_1_1_c4_example4_html"><div class="ttname"><a href="class_examples_1_1_chapter4_1_1_c4_example4.html">Examples.Chapter4.C4Example4</a></div><div class="ttdoc">Example 4.4 - Multiple Particle Systems.</div><div class="ttdef"><b>Definition:</b> <a href="_c4_example4_8cs_source.html#l00011">C4Example4.cs:12</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

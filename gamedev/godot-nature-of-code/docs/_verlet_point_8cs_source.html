@@ -80,117 +80,117 @@ $(function() {
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html">   10</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_verlet_physics_1_1_verlet_point.html">VerletPoint</a> : <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a></div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  {</div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#a071f2f6796cdeba68baccb6881e319be">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a071f2f6796cdeba68baccb6881e319be">Mass</a> = 1;</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#a6f24df06d72f4d4c1531bcb4ccefcbbd">   15</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a6f24df06d72f4d4c1531bcb4ccefcbbd">Bounce</a> = 0.9f;</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#a55297948808493bddc6b6a885b954c05">   17</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a55297948808493bddc6b6a885b954c05">Friction</a> = 0.99f;</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#ab3b71fbf02a2ac511714dbbb969b025e">   19</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#ab3b71fbf02a2ac511714dbbb969b025e">GravityScale</a> = 1;</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#abbd1bb80d8736d82f1b76716fcc36f7b">   21</a></span>&#160;    <span class="keyword">public</span> Vector2 <a class="code" href="class_verlet_physics_1_1_verlet_point.html#abbd1bb80d8736d82f1b76716fcc36f7b">Acceleration</a>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#a758fd6dfead9a99ad1a773128f3f6935">   24</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a758fd6dfead9a99ad1a773128f3f6935">Touched</a></div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keyword">get</span> =&gt; touched;</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">int</span> mouseDetectionRadiusThreshold = 10;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">bool</span> pinned = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keyword">private</span> Vector2 pinPosition;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">private</span> Vector2 prevPosition;</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    <span class="keyword">private</span> <a class="code" href="class_verlet_physics_1_1_verlet_world.html">VerletWorld</a> world;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">private</span> List&lt;VerletLink&gt; links;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">bool</span> touched = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span> touchIndex = -1;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">public</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html">VerletPoint</a>(<a class="code" href="class_verlet_physics_1_1_verlet_world.html">VerletWorld</a> world)</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    {</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 15f;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      Modulate = Colors.LightBlue;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      this.world = world;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      links = <span class="keyword">new</span> List&lt;VerletLink&gt;();</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#a67d7482b76e3244b82c2558996f0a83d">   52</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a67d7482b76e3244b82c2558996f0a83d">MoveToPosition</a>(Vector2 position)</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      GlobalPosition = position;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      prevPosition = GlobalPosition;</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#aa8f03bd2de98e5d26b0a3b45a09a0c36">   62</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#aa8f03bd2de98e5d26b0a3b45a09a0c36">ApplyForce</a>(Vector2 force)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <a class="code" href="class_verlet_physics_1_1_verlet_point.html#abbd1bb80d8736d82f1b76716fcc36f7b">Acceleration</a> += force / <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a071f2f6796cdeba68baccb6881e319be">Mass</a>;</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#a803d057bf2c94c4947bec6b0b2d8af2e">   71</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a803d057bf2c94c4947bec6b0b2d8af2e">AddLink</a>(<a class="code" href="class_verlet_physics_1_1_verlet_link.html">VerletLink</a> link)</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    {</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      links.Add(link);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#adc4508bdc0a565fbc389a08bd56a07e4">   80</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#adc4508bdc0a565fbc389a08bd56a07e4">RemoveLink</a>(<a class="code" href="class_verlet_physics_1_1_verlet_link.html">VerletLink</a> link)</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      links.Remove(link);</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160; </div>
-<div class="line"><a name="l00089"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#af08e528119f855611bedb4fcb6660cd1">   89</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#af08e528119f855611bedb4fcb6660cd1">UpdateMovement</a>(<span class="keywordtype">float</span> delta)</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;    {</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;      var velocity = ComputeVelocity() * <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a55297948808493bddc6b6a885b954c05">Friction</a>;</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      var nextPosition = GlobalPosition + velocity + <a class="code" href="class_verlet_physics_1_1_verlet_point.html#abbd1bb80d8736d82f1b76716fcc36f7b">Acceleration</a> * delta;</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160; </div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      prevPosition = GlobalPosition;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;      GlobalPosition = nextPosition;</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160; </div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      <a class="code" href="class_verlet_physics_1_1_verlet_point.html#abbd1bb80d8736d82f1b76716fcc36f7b">Acceleration</a> = Vector2.Zero;</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    }</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00104"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#a63a2df898c990c81bbda77952f24d804">  104</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a63a2df898c990c81bbda77952f24d804">Constraint</a>(Vector2 worldSize)</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;    {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;      <span class="keywordflow">foreach</span> (<a class="code" href="class_verlet_physics_1_1_verlet_link.html">VerletLink</a> link <span class="keywordflow">in</span> links)</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      {</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        link.<a class="code" href="class_verlet_physics_1_1_verlet_link.html#a3acec1117a5599f1e79f4c121a002d95">Constraint</a>();</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      }</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      ConstraintPositionInSize(worldSize);</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;      ConstraintPinning();</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;    }</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160; </div>
-<div class="line"><a name="l00118"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#a8503fb3916fe0b010e2fe47f9db68f93">  118</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a8503fb3916fe0b010e2fe47f9db68f93">PinToCurrentPosition</a>()</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;      pinned = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      pinPosition = GlobalPosition;</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;    }</div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160; </div>
-<div class="line"><a name="l00128"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#ad55407dc9cb70f498754f3188cac2022">  128</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#ad55407dc9cb70f498754f3188cac2022">PinToPosition</a>(Vector2 position)</div>
-<div class="line"><a name="l00129"></a><span class="lineno">  129</span>&#160;    {</div>
-<div class="line"><a name="l00130"></a><span class="lineno">  130</span>&#160;      pinned = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;      pinPosition = position;</div>
-<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;    }</div>
-<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160; </div>
-<div class="line"><a name="l00137"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#ad4d5868b6f630185a82597f09c69344a">  137</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#ad4d5868b6f630185a82597f09c69344a">Unpin</a>()</div>
-<div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160;    {</div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      pinned = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    }</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160; </div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _UnhandledInput(InputEvent @event)</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;    {</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;      <span class="keywordflow">if</span> (@event is InputEventScreenTouch eventScreenTouch)</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;      {</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        <span class="keywordflow">if</span> (eventScreenTouch.Pressed &amp;&amp; touchIndex == -1)</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;        {</div>
-<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;          <span class="keywordflow">if</span> (GlobalPosition.DistanceTo(eventScreenTouch.Position) &lt; <a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> + mouseDetectionRadiusThreshold)</div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;          {</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            touchIndex = eventScreenTouch.Index;</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;            touched = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            Update();</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;          }</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;        }</div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160; </div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!eventScreenTouch.Pressed &amp;&amp; eventScreenTouch.Index == touchIndex)</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        {</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;          touchIndex = -1;</div>
-<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;          touched = <span class="keyword">false</span>;</div>
-<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;          Update();</div>
-<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;        }</div>
-<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;      }</div>
-<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#a6f24df06d72f4d4c1531bcb4ccefcbbd">   16</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a6f24df06d72f4d4c1531bcb4ccefcbbd">Bounce</a> = 0.9f;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#a55297948808493bddc6b6a885b954c05">   19</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a55297948808493bddc6b6a885b954c05">Friction</a> = 0.99f;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#ab3b71fbf02a2ac511714dbbb969b025e">   22</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#ab3b71fbf02a2ac511714dbbb969b025e">GravityScale</a> = 1;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#abbd1bb80d8736d82f1b76716fcc36f7b">   25</a></span>&#160;    <span class="keyword">public</span> Vector2 <a class="code" href="class_verlet_physics_1_1_verlet_point.html#abbd1bb80d8736d82f1b76716fcc36f7b">Acceleration</a>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#a758fd6dfead9a99ad1a773128f3f6935">   28</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a758fd6dfead9a99ad1a773128f3f6935">Touched</a></div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      <span class="keyword">get</span> =&gt; touched;</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160; </div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">int</span> mouseDetectionRadiusThreshold = 10;</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">bool</span> pinned = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">private</span> Vector2 pinPosition;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">private</span> Vector2 prevPosition;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">private</span> readonly List&lt;VerletLink&gt; links;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">bool</span> touched = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">int</span> touchIndex = -1;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    <span class="keyword">public</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html">VerletPoint</a>(<a class="code" href="class_verlet_physics_1_1_verlet_world.html">VerletWorld</a> world)</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 15f;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      Modulate = Colors.LightBlue;</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      links = <span class="keyword">new</span> List&lt;VerletLink&gt;();</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#a67d7482b76e3244b82c2558996f0a83d">   54</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a67d7482b76e3244b82c2558996f0a83d">MoveToPosition</a>(Vector2 position)</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      GlobalPosition = position;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      prevPosition = GlobalPosition;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    }</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
+<div class="line"><a name="l00064"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#aa8f03bd2de98e5d26b0a3b45a09a0c36">   64</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#aa8f03bd2de98e5d26b0a3b45a09a0c36">ApplyForce</a>(Vector2 force)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <a class="code" href="class_verlet_physics_1_1_verlet_point.html#abbd1bb80d8736d82f1b76716fcc36f7b">Acceleration</a> += force / <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a071f2f6796cdeba68baccb6881e319be">Mass</a>;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#a803d057bf2c94c4947bec6b0b2d8af2e">   73</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a803d057bf2c94c4947bec6b0b2d8af2e">AddLink</a>(<a class="code" href="class_verlet_physics_1_1_verlet_link.html">VerletLink</a> link)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      links.Add(link);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00082"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#adc4508bdc0a565fbc389a08bd56a07e4">   82</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#adc4508bdc0a565fbc389a08bd56a07e4">RemoveLink</a>(<a class="code" href="class_verlet_physics_1_1_verlet_link.html">VerletLink</a> link)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      links.Remove(link);</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;    }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160; </div>
+<div class="line"><a name="l00091"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#af08e528119f855611bedb4fcb6660cd1">   91</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#af08e528119f855611bedb4fcb6660cd1">UpdateMovement</a>(<span class="keywordtype">float</span> delta)</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;    {</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      var velocity = ComputeVelocity() * <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a55297948808493bddc6b6a885b954c05">Friction</a>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;      var nextPosition = GlobalPosition + velocity + (<a class="code" href="class_verlet_physics_1_1_verlet_point.html#abbd1bb80d8736d82f1b76716fcc36f7b">Acceleration</a> * delta);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      prevPosition = GlobalPosition;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;      GlobalPosition = nextPosition;</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160; </div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      <a class="code" href="class_verlet_physics_1_1_verlet_point.html#abbd1bb80d8736d82f1b76716fcc36f7b">Acceleration</a> = Vector2.Zero;</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    }</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160; </div>
+<div class="line"><a name="l00106"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#a63a2df898c990c81bbda77952f24d804">  106</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a63a2df898c990c81bbda77952f24d804">Constraint</a>(Vector2 worldSize)</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;    {</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      <span class="keywordflow">foreach</span> (<a class="code" href="class_verlet_physics_1_1_verlet_link.html">VerletLink</a> link <span class="keywordflow">in</span> links)</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;      {</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        link.<a class="code" href="class_verlet_physics_1_1_verlet_link.html#a3acec1117a5599f1e79f4c121a002d95">Constraint</a>();</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;      }</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160; </div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;      ConstraintPositionInSize(worldSize);</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;      ConstraintPinning();</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;    }</div>
+<div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
+<div class="line"><a name="l00120"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#a8503fb3916fe0b010e2fe47f9db68f93">  120</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a8503fb3916fe0b010e2fe47f9db68f93">PinToCurrentPosition</a>()</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    {</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      pinned = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      pinPosition = GlobalPosition;</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;    }</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160; </div>
+<div class="line"><a name="l00130"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#ad55407dc9cb70f498754f3188cac2022">  130</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#ad55407dc9cb70f498754f3188cac2022">PinToPosition</a>(Vector2 position)</div>
+<div class="line"><a name="l00131"></a><span class="lineno">  131</span>&#160;    {</div>
+<div class="line"><a name="l00132"></a><span class="lineno">  132</span>&#160;      pinned = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00133"></a><span class="lineno">  133</span>&#160;      pinPosition = position;</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    }</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160; </div>
+<div class="line"><a name="l00139"></a><span class="lineno"><a class="line" href="class_verlet_physics_1_1_verlet_point.html#ad4d5868b6f630185a82597f09c69344a">  139</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">void</span> <a class="code" href="class_verlet_physics_1_1_verlet_point.html#ad4d5868b6f630185a82597f09c69344a">Unpin</a>()</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;    {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;      pinned = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;    }</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160; </div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _UnhandledInput(InputEvent @event)</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;    {</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;      <span class="keywordflow">if</span> (@event is InputEventScreenTouch eventScreenTouch)</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      {</div>
+<div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160;        <span class="keywordflow">if</span> (eventScreenTouch.Pressed &amp;&amp; touchIndex == -1)</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;        {</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;          <span class="keywordflow">if</span> (GlobalPosition.DistanceTo(eventScreenTouch.Position) &lt; <a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> + mouseDetectionRadiusThreshold)</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;          {</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;            touchIndex = eventScreenTouch.Index;</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            touched = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            Update();</div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;          }</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        }</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;        <span class="keywordflow">else</span> <span class="keywordflow">if</span> (!eventScreenTouch.Pressed &amp;&amp; eventScreenTouch.Index == touchIndex)</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        {</div>
+<div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160;          touchIndex = -1;</div>
+<div class="line"><a name="l00160"></a><span class="lineno">  160</span>&#160;          touched = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00161"></a><span class="lineno">  161</span>&#160;          Update();</div>
+<div class="line"><a name="l00162"></a><span class="lineno">  162</span>&#160;        }</div>
+<div class="line"><a name="l00163"></a><span class="lineno">  163</span>&#160;      }</div>
 <div class="line"><a name="l00164"></a><span class="lineno">  164</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (@event is InputEventScreenDrag eventScreenDrag)</div>
 <div class="line"><a name="l00165"></a><span class="lineno">  165</span>&#160;      {</div>
 <div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        <span class="keywordflow">if</span> (eventScreenDrag.Index == touchIndex &amp;&amp; touched)</div>
@@ -207,7 +207,7 @@ $(function() {
 <div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160; </div>
 <div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;    <span class="keyword">private</span> Vector2 ComputeVelocity()</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160;    {</div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      <span class="keywordflow">return</span> (GlobalPosition - prevPosition);</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      <span class="keywordflow">return</span> GlobalPosition - prevPosition;</div>
 <div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
 <div class="line"><a name="l00183"></a><span class="lineno">  183</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> ConstraintPinning()</div>
@@ -221,62 +221,61 @@ $(function() {
 <div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">void</span> ConstraintPositionInSize(Vector2 worldSize)</div>
 <div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;    {</div>
 <div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;      var size = worldSize;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      var newPos = GlobalPosition;</div>
-<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      var velocity = ComputeVelocity() * <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a6f24df06d72f4d4c1531bcb4ccefcbbd">Bounce</a>;</div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      var bodySize = <span class="keyword">new</span> Vector2(<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> / 2, <a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> / 2);</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160; </div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      <span class="keywordflow">if</span> (GlobalPosition.y &lt; bodySize.y / 2)</div>
-<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;      {</div>
-<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        GlobalPosition = <span class="keyword">new</span> Vector2(GlobalPosition.x, bodySize.y / 2);</div>
-<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        velocity.x *= -1;</div>
-<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;        FixVelocity(velocity);</div>
-<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      }</div>
-<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (GlobalPosition.y &gt; size.y - bodySize.y / 2)</div>
-<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;      {</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        GlobalPosition = <span class="keyword">new</span> Vector2(GlobalPosition.x, size.y - bodySize.y / 2);</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        velocity.x *= -1;</div>
-<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;        FixVelocity(velocity);</div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;      }</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160; </div>
-<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      <span class="keywordflow">if</span> (GlobalPosition.x &lt; bodySize.x / 2)</div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      {</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        GlobalPosition = <span class="keyword">new</span> Vector2(bodySize.x / 2, GlobalPosition.y);</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        velocity.y *= -1;</div>
-<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;        FixVelocity(velocity);</div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      }</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (GlobalPosition.x &gt; size.x - bodySize.x / 2)</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;      {</div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        GlobalPosition = <span class="keyword">new</span> Vector2(size.x - bodySize.x / 2, GlobalPosition.y);</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        velocity.y *= -1;</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;        FixVelocity(velocity);</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;      }</div>
-<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;    }</div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;  }</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;}</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      var velocity = ComputeVelocity() * <a class="code" href="class_verlet_physics_1_1_verlet_point.html#a6f24df06d72f4d4c1531bcb4ccefcbbd">Bounce</a>;</div>
+<div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160;      var bodySize = <span class="keyword">new</span> Vector2(<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> / 2, <a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> / 2);</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160; </div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      <span class="keywordflow">if</span> (GlobalPosition.y &lt; bodySize.y / 2)</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;      {</div>
+<div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160;        GlobalPosition = <span class="keyword">new</span> Vector2(GlobalPosition.x, bodySize.y / 2);</div>
+<div class="line"><a name="l00200"></a><span class="lineno">  200</span>&#160;        velocity.x *= -1;</div>
+<div class="line"><a name="l00201"></a><span class="lineno">  201</span>&#160;        FixVelocity(velocity);</div>
+<div class="line"><a name="l00202"></a><span class="lineno">  202</span>&#160;      }</div>
+<div class="line"><a name="l00203"></a><span class="lineno">  203</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (GlobalPosition.y &gt; size.y - (bodySize.y / 2))</div>
+<div class="line"><a name="l00204"></a><span class="lineno">  204</span>&#160;      {</div>
+<div class="line"><a name="l00205"></a><span class="lineno">  205</span>&#160;        GlobalPosition = <span class="keyword">new</span> Vector2(GlobalPosition.x, size.y - (bodySize.y / 2));</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        velocity.x *= -1;</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;        FixVelocity(velocity);</div>
+<div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160;      }</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160; </div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      <span class="keywordflow">if</span> (GlobalPosition.x &lt; bodySize.x / 2)</div>
+<div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160;      {</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;        GlobalPosition = <span class="keyword">new</span> Vector2(bodySize.x / 2, GlobalPosition.y);</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;        velocity.y *= -1;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;        FixVelocity(velocity);</div>
+<div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160;      }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      <span class="keywordflow">else</span> <span class="keywordflow">if</span> (GlobalPosition.x &gt; size.x - (bodySize.x / 2))</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        GlobalPosition = <span class="keyword">new</span> Vector2(size.x - (bodySize.x / 2), GlobalPosition.y);</div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        velocity.y *= -1;</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        FixVelocity(velocity);</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;      }</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;    }</div>
+<div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160;  }</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_drawing_html"><div class="ttname"><a href="namespace_drawing.html">Drawing</a></div><div class="ttdoc">Draw primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00006">DrawCanvas.cs:7</a></div></div>
-<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_a6f24df06d72f4d4c1531bcb4ccefcbbd"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#a6f24df06d72f4d4c1531bcb4ccefcbbd">VerletPhysics.VerletPoint.Bounce</a></div><div class="ttdeci">float Bounce</div><div class="ttdoc">Bounce coefficient</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00015">VerletPoint.cs:15</a></div></div>
-<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_aa8f03bd2de98e5d26b0a3b45a09a0c36"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#aa8f03bd2de98e5d26b0a3b45a09a0c36">VerletPhysics.VerletPoint.ApplyForce</a></div><div class="ttdeci">void ApplyForce(Vector2 force)</div><div class="ttdoc">Apply force on point.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00062">VerletPoint.cs:62</a></div></div>
-<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_a803d057bf2c94c4947bec6b0b2d8af2e"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#a803d057bf2c94c4947bec6b0b2d8af2e">VerletPhysics.VerletPoint.AddLink</a></div><div class="ttdeci">void AddLink(VerletLink link)</div><div class="ttdoc">Associate verlet link with current point.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00071">VerletPoint.cs:71</a></div></div>
-<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_adc4508bdc0a565fbc389a08bd56a07e4"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#adc4508bdc0a565fbc389a08bd56a07e4">VerletPhysics.VerletPoint.RemoveLink</a></div><div class="ttdeci">void RemoveLink(VerletLink link)</div><div class="ttdoc">Deassociate verlet link from current point.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00080">VerletPoint.cs:80</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_a6f24df06d72f4d4c1531bcb4ccefcbbd"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#a6f24df06d72f4d4c1531bcb4ccefcbbd">VerletPhysics.VerletPoint.Bounce</a></div><div class="ttdeci">float Bounce</div><div class="ttdoc">Bounce coefficient</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00016">VerletPoint.cs:16</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_aa8f03bd2de98e5d26b0a3b45a09a0c36"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#aa8f03bd2de98e5d26b0a3b45a09a0c36">VerletPhysics.VerletPoint.ApplyForce</a></div><div class="ttdeci">void ApplyForce(Vector2 force)</div><div class="ttdoc">Apply force on point.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00064">VerletPoint.cs:64</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_a803d057bf2c94c4947bec6b0b2d8af2e"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#a803d057bf2c94c4947bec6b0b2d8af2e">VerletPhysics.VerletPoint.AddLink</a></div><div class="ttdeci">void AddLink(VerletLink link)</div><div class="ttdoc">Associate verlet link with current point.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00073">VerletPoint.cs:73</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_adc4508bdc0a565fbc389a08bd56a07e4"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#adc4508bdc0a565fbc389a08bd56a07e4">VerletPhysics.VerletPoint.RemoveLink</a></div><div class="ttdeci">void RemoveLink(VerletLink link)</div><div class="ttdoc">Deassociate verlet link from current point.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00082">VerletPoint.cs:82</a></div></div>
 <div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_a071f2f6796cdeba68baccb6881e319be"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#a071f2f6796cdeba68baccb6881e319be">VerletPhysics.VerletPoint.Mass</a></div><div class="ttdeci">float Mass</div><div class="ttdoc">Point mass</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00013">VerletPoint.cs:13</a></div></div>
-<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_a758fd6dfead9a99ad1a773128f3f6935"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#a758fd6dfead9a99ad1a773128f3f6935">VerletPhysics.VerletPoint.Touched</a></div><div class="ttdeci">bool Touched</div><div class="ttdoc">Point touched?</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00024">VerletPoint.cs:25</a></div></div>
-<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_af08e528119f855611bedb4fcb6660cd1"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#af08e528119f855611bedb4fcb6660cd1">VerletPhysics.VerletPoint.UpdateMovement</a></div><div class="ttdeci">void UpdateMovement(float delta)</div><div class="ttdoc">Update movement using current forces and gravity.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00089">VerletPoint.cs:89</a></div></div>
-<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_ab3b71fbf02a2ac511714dbbb969b025e"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#ab3b71fbf02a2ac511714dbbb969b025e">VerletPhysics.VerletPoint.GravityScale</a></div><div class="ttdeci">float GravityScale</div><div class="ttdoc">Gravity scale</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00019">VerletPoint.cs:19</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_a758fd6dfead9a99ad1a773128f3f6935"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#a758fd6dfead9a99ad1a773128f3f6935">VerletPhysics.VerletPoint.Touched</a></div><div class="ttdeci">bool Touched</div><div class="ttdoc">Point touched?</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00028">VerletPoint.cs:29</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_af08e528119f855611bedb4fcb6660cd1"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#af08e528119f855611bedb4fcb6660cd1">VerletPhysics.VerletPoint.UpdateMovement</a></div><div class="ttdeci">void UpdateMovement(float delta)</div><div class="ttdoc">Update movement using current forces and gravity.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00091">VerletPoint.cs:91</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_ab3b71fbf02a2ac511714dbbb969b025e"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#ab3b71fbf02a2ac511714dbbb969b025e">VerletPhysics.VerletPoint.GravityScale</a></div><div class="ttdeci">float GravityScale</div><div class="ttdoc">Gravity scale</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00022">VerletPoint.cs:22</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_circle_sprite_html_a4284dbd1de9c1182719f8401afb272ad"><div class="ttname"><a href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Drawing.SimpleCircleSprite.Radius</a></div><div class="ttdeci">float Radius</div><div class="ttdoc">Circle radius.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_circle_sprite_8cs_source.html#l00015">SimpleCircleSprite.cs:16</a></div></div>
 <div class="ttc" id="anamespace_verlet_physics_html"><div class="ttname"><a href="namespace_verlet_physics.html">VerletPhysics</a></div><div class="ttdoc">Verlet physics implementation. Inspired from toxiclibs and https://gamedevelopment....</div><div class="ttdef"><b>Definition:</b> <a href="_attraction_behavior_8cs_source.html#l00001">AttractionBehavior.cs:2</a></div></div>
-<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_a55297948808493bddc6b6a885b954c05"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#a55297948808493bddc6b6a885b954c05">VerletPhysics.VerletPoint.Friction</a></div><div class="ttdeci">float Friction</div><div class="ttdoc">Friction coefficient</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00017">VerletPoint.cs:17</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_a55297948808493bddc6b6a885b954c05"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#a55297948808493bddc6b6a885b954c05">VerletPhysics.VerletPoint.Friction</a></div><div class="ttdeci">float Friction</div><div class="ttdoc">Friction coefficient</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00019">VerletPoint.cs:19</a></div></div>
 <div class="ttc" id="aclass_verlet_physics_1_1_verlet_link_html"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_link.html">VerletPhysics.VerletLink</a></div><div class="ttdoc">Verlet breakable link.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_link_8cs_source.html#l00009">VerletLink.cs:10</a></div></div>
 <div class="ttc" id="aclass_verlet_physics_1_1_verlet_world_html"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_world.html">VerletPhysics.VerletWorld</a></div><div class="ttdoc">Simple verlet world which handle simulation book-keeping.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_world_8cs_source.html#l00009">VerletWorld.cs:10</a></div></div>
-<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_a63a2df898c990c81bbda77952f24d804"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#a63a2df898c990c81bbda77952f24d804">VerletPhysics.VerletPoint.Constraint</a></div><div class="ttdeci">void Constraint(Vector2 worldSize)</div><div class="ttdoc">Apply constraints on point.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00104">VerletPoint.cs:104</a></div></div>
-<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_a8503fb3916fe0b010e2fe47f9db68f93"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#a8503fb3916fe0b010e2fe47f9db68f93">VerletPhysics.VerletPoint.PinToCurrentPosition</a></div><div class="ttdeci">void PinToCurrentPosition()</div><div class="ttdoc">Pin point to its current position.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00118">VerletPoint.cs:118</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_a63a2df898c990c81bbda77952f24d804"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#a63a2df898c990c81bbda77952f24d804">VerletPhysics.VerletPoint.Constraint</a></div><div class="ttdeci">void Constraint(Vector2 worldSize)</div><div class="ttdoc">Apply constraints on point.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00106">VerletPoint.cs:106</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_a8503fb3916fe0b010e2fe47f9db68f93"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#a8503fb3916fe0b010e2fe47f9db68f93">VerletPhysics.VerletPoint.PinToCurrentPosition</a></div><div class="ttdeci">void PinToCurrentPosition()</div><div class="ttdoc">Pin point to its current position.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00120">VerletPoint.cs:120</a></div></div>
 <div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html">VerletPhysics.VerletPoint</a></div><div class="ttdoc">Verlet point.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00010">VerletPoint.cs:11</a></div></div>
-<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_ad4d5868b6f630185a82597f09c69344a"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#ad4d5868b6f630185a82597f09c69344a">VerletPhysics.VerletPoint.Unpin</a></div><div class="ttdeci">void Unpin()</div><div class="ttdoc">Unpin point from its position.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00137">VerletPoint.cs:137</a></div></div>
-<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_a67d7482b76e3244b82c2558996f0a83d"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#a67d7482b76e3244b82c2558996f0a83d">VerletPhysics.VerletPoint.MoveToPosition</a></div><div class="ttdeci">void MoveToPosition(Vector2 position)</div><div class="ttdoc">Move point to position.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00052">VerletPoint.cs:52</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_ad4d5868b6f630185a82597f09c69344a"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#ad4d5868b6f630185a82597f09c69344a">VerletPhysics.VerletPoint.Unpin</a></div><div class="ttdeci">void Unpin()</div><div class="ttdoc">Unpin point from its position.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00139">VerletPoint.cs:139</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_a67d7482b76e3244b82c2558996f0a83d"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#a67d7482b76e3244b82c2558996f0a83d">VerletPhysics.VerletPoint.MoveToPosition</a></div><div class="ttdeci">void MoveToPosition(Vector2 position)</div><div class="ttdoc">Move point to position.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00054">VerletPoint.cs:54</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_circle_sprite_html"><div class="ttname"><a href="class_drawing_1_1_simple_circle_sprite.html">Drawing.SimpleCircleSprite</a></div><div class="ttdoc">Use this to draw a circle. Instead of DrawCircle, it can be batched.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_circle_sprite_8cs_source.html#l00010">SimpleCircleSprite.cs:11</a></div></div>
-<div class="ttc" id="aclass_verlet_physics_1_1_verlet_link_html_a3acec1117a5599f1e79f4c121a002d95"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_link.html#a3acec1117a5599f1e79f4c121a002d95">VerletPhysics.VerletLink.Constraint</a></div><div class="ttdeci">void Constraint()</div><div class="ttdoc">Apply link constraint on the two verlet points.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_link_8cs_source.html#l00047">VerletLink.cs:47</a></div></div>
-<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_abbd1bb80d8736d82f1b76716fcc36f7b"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#abbd1bb80d8736d82f1b76716fcc36f7b">VerletPhysics.VerletPoint.Acceleration</a></div><div class="ttdeci">Vector2 Acceleration</div><div class="ttdoc">Current acceleration</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00021">VerletPoint.cs:21</a></div></div>
-<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_ad55407dc9cb70f498754f3188cac2022"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#ad55407dc9cb70f498754f3188cac2022">VerletPhysics.VerletPoint.PinToPosition</a></div><div class="ttdeci">void PinToPosition(Vector2 position)</div><div class="ttdoc">Pin point to a target position.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00128">VerletPoint.cs:128</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_verlet_link_html_a3acec1117a5599f1e79f4c121a002d95"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_link.html#a3acec1117a5599f1e79f4c121a002d95">VerletPhysics.VerletLink.Constraint</a></div><div class="ttdeci">void Constraint()</div><div class="ttdoc">Apply link constraint on the two verlet points.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_link_8cs_source.html#l00053">VerletLink.cs:53</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_abbd1bb80d8736d82f1b76716fcc36f7b"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#abbd1bb80d8736d82f1b76716fcc36f7b">VerletPhysics.VerletPoint.Acceleration</a></div><div class="ttdeci">Vector2 Acceleration</div><div class="ttdoc">Current acceleration</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00025">VerletPoint.cs:25</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_verlet_point_html_ad55407dc9cb70f498754f3188cac2022"><div class="ttname"><a href="class_verlet_physics_1_1_verlet_point.html#ad55407dc9cb70f498754f3188cac2022">VerletPhysics.VerletPoint.PinToPosition</a></div><div class="ttdeci">void PinToPosition(Vector2 position)</div><div class="ttdoc">Pin point to a target position.</div><div class="ttdef"><b>Definition:</b> <a href="_verlet_point_8cs_source.html#l00130">VerletPoint.cs:130</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

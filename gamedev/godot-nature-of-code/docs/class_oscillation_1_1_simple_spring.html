@@ -135,11 +135,10 @@ Public Attributes</h2></td></tr>
 
 <p>Create a default spring. </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_spring_8cs_source.html#l00031">31</a> of file <a class="el" href="_simple_spring_8cs_source.html">SimpleSpring.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      lineSprite = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_line_sprite.html">SimpleLineSprite</a>();</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      lineSprite.<a class="code" href="class_drawing_1_1_simple_line_sprite.html#ade536b9308abe21c7bbbf485a2d4bfd8">Width</a> = 2;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="_simple_spring_8cs_source.html#l00034">34</a> of file <a class="el" href="_simple_spring_8cs_source.html">SimpleSpring.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      lineSprite = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_line_sprite.html">SimpleLineSprite</a> { Width = 2 };</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -187,20 +186,20 @@ Public Attributes</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_simple_spring_8cs_source.html#l00042">42</a> of file <a class="el" href="_simple_spring_8cs_source.html">SimpleSpring.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      <span class="keywordflow">if</span> (currentMover != <span class="keyword">null</span>)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      {</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        RemoveChild(currentMover);</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        currentMover.QueueFree();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      currentMover = mover;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      AddChild(currentMover);</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      <span class="comment">// Set position</span></div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      currentMover.Position = initialPosition;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="_simple_spring_8cs_source.html#l00044">44</a> of file <a class="el" href="_simple_spring_8cs_source.html">SimpleSpring.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="keywordflow">if</span> (currentMover != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        RemoveChild(currentMover);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        currentMover.QueueFree();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      currentMover = mover;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      AddChild(currentMover);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="comment">// Set position</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      currentMover.Position = initialPosition;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -219,7 +218,7 @@ Public Attributes</h2></td></tr>
 
 <p>K coefficient </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_spring_8cs_source.html#l00017">17</a> of file <a class="el" href="_simple_spring_8cs_source.html">SimpleSpring.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_simple_spring_8cs_source.html#l00018">18</a> of file <a class="el" href="_simple_spring_8cs_source.html">SimpleSpring.cs</a>.</p>
 
 </div>
 </div>
@@ -255,7 +254,7 @@ Public Attributes</h2></td></tr>
 
 <p>Maximal length </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_spring_8cs_source.html#l00021">21</a> of file <a class="el" href="_simple_spring_8cs_source.html">SimpleSpring.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_simple_spring_8cs_source.html#l00024">24</a> of file <a class="el" href="_simple_spring_8cs_source.html">SimpleSpring.cs</a>.</p>
 
 </div>
 </div>
@@ -273,7 +272,7 @@ Public Attributes</h2></td></tr>
 
 <p>Minimal length </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_spring_8cs_source.html#l00019">19</a> of file <a class="el" href="_simple_spring_8cs_source.html">SimpleSpring.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_simple_spring_8cs_source.html#l00021">21</a> of file <a class="el" href="_simple_spring_8cs_source.html">SimpleSpring.cs</a>.</p>
 
 </div>
 </div>
@@ -282,7 +281,6 @@ Public Attributes</h2></td></tr>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="aclass_drawing_1_1_simple_line_sprite_html"><div class="ttname"><a href="class_drawing_1_1_simple_line_sprite.html">Drawing.SimpleLineSprite</a></div><div class="ttdoc">Use this to draw a line between two points. Instead of DrawLine and Line2D, it can be batched.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_line_sprite_8cs_source.html#l00010">SimpleLineSprite.cs:11</a></div></div>
-<div class="ttc" id="aclass_drawing_1_1_simple_line_sprite_html_ade536b9308abe21c7bbbf485a2d4bfd8"><div class="ttname"><a href="class_drawing_1_1_simple_line_sprite.html#ade536b9308abe21c7bbbf485a2d4bfd8">Drawing.SimpleLineSprite.Width</a></div><div class="ttdeci">float Width</div><div class="ttdoc">Line Width.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_line_sprite_8cs_source.html#l00041">SimpleLineSprite.cs:42</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

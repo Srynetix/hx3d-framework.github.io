@@ -73,122 +73,123 @@ $(function() {
 <div class="contents">
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> Godot;</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_utils.html">Utils</a>;</div>
-<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples.html">Examples</a></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keyword">namespace </span>Chapter5</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  {</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter5_1_1_c5_exercise4.html">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter5_1_1_c5_exercise4.html">C5Exercise4</a> : Node2D, <a class="code" href="interface_i_example.html">IExample</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter5_1_1_c5_exercise4.html#a2e1c9434e02c3103dff4317bf4e2bb14">   14</a></span>&#160;      <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter5_1_1_c5_exercise4.html#a2e1c9434e02c3103dff4317bf4e2bb14">_Summary</a>()</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Exercise 5.4:\n&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;          + <span class="stringliteral">&quot;Polygon Designs\n\n&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;          + <span class="stringliteral">&quot;Touch screen to spawn random polygons&quot;</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      }</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <span class="keyword">public</span> <span class="keyword">class </span>Polygon1 : <a class="code" href="namespace_physics.html">Physics</a>.SimplePolygon</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">public</span> Polygon1()</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;          Points = <span class="keyword">new</span> Vector2[] {</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keyword">new</span> Vector2(-10, 10),</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keyword">new</span> Vector2(10, 10),</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keyword">new</span> Vector2(5, 5),</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keyword">new</span> Vector2(-10, 5)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;          };</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          BaseColor = Colors.Aqua;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      <span class="keyword">public</span> <span class="keyword">class </span>Polygon2 : <a class="code" href="namespace_physics.html">Physics</a>.SimplePolygon</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      {</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">public</span> Polygon2()</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;          <a class="code" href="class_physics_1_1_simple_polygon.html#afb2626e8817d36c8941a0e7d2d24211a">Points</a> = <span class="keyword">new</span> Vector2[] {</div>
+<div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_physics.html">Physics</a>;</div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples_1_1_chapter5.html">Examples.Chapter5</a></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter5_1_1_c5_exercise4.html">   11</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter5_1_1_c5_exercise4.html">C5Exercise4</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter5_1_1_c5_exercise4.html#abfd8533c015c93074790dcb55f1443bb">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter5_1_1_c5_exercise4.html#abfd8533c015c93074790dcb55f1443bb">GetSummary</a>()</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Exercise 5.4:\n&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        + <span class="stringliteral">&quot;Polygon Designs\n\n&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        + <span class="stringliteral">&quot;Touch screen to spawn random polygons&quot;</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span>Polygon1 : <a class="code" href="class_physics_1_1_simple_polygon.html">SimplePolygon</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      <span class="keyword">public</span> Polygon1()</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        Points = <span class="keyword">new</span> Vector2[] {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">new</span> Vector2(-10, 10),</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keyword">new</span> Vector2(10, 10),</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keyword">new</span> Vector2(5, 5),</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keyword">new</span> Vector2(-10, 5)</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;          };</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        BaseColor = Colors.Aqua;</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span>Polygon2 : <a class="code" href="class_physics_1_1_simple_polygon.html">SimplePolygon</a></div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <span class="keyword">public</span> Polygon2()</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <a class="code" href="class_physics_1_1_simple_polygon.html#afb2626e8817d36c8941a0e7d2d24211a">Points</a> = <span class="keyword">new</span> Vector2[] {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            <span class="keyword">new</span> Vector2(-10, 10),</div>
 <div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keyword">new</span> Vector2(-10, 10),</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keyword">new</span> Vector2(-10, 10),</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keyword">new</span> Vector2(5, -5),</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            <span class="keyword">new</span> Vector2(-10, 5)</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;          };</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;          <a class="code" href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">BaseColor</a> = Colors.BlueViolet;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      }</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keyword">public</span> <span class="keyword">class </span>Polygon3 : <a class="code" href="namespace_physics.html">Physics</a>.SimplePolygon</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">public</span> Polygon3()</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;          <a class="code" href="class_physics_1_1_simple_polygon.html#afb2626e8817d36c8941a0e7d2d24211a">Points</a> = <span class="keyword">new</span> Vector2[] {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keyword">new</span> Vector2(-10, 10),</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keyword">new</span> Vector2(10, 10),</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keyword">new</span> Vector2(5, -5),</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            <span class="keyword">new</span> Vector2(10, 5)</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;          };</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;          <a class="code" href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">BaseColor</a> = Colors.IndianRed;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;        var size = GetViewportRect().Size;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;        var wall = <span class="keyword">new</span> <a class="code" href="namespace_physics.html">Physics</a>.<a class="code" href="class_physics_1_1_simple_wall.html">SimpleWall</a>();</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        wall.<a class="code" href="class_physics_1_1_simple_wall.html#acdc5b660d7ebb061be9260a5fdc4d207">BodySize</a> = <span class="keyword">new</span> Vector2(size.x, 50);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        wall.Position = <span class="keyword">new</span> Vector2(size.x / 2, size.y);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        AddChild(wall);</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        var spawner = <span class="keyword">new</span> <a class="code" href="class_utils_1_1_simple_touch_spawner.html">SimpleTouchSpawner</a>();</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        spawner.SpawnFunction = (position) =&gt;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;        {</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;          var chance = <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a493dfce1b52671313b5b9917ad393aff">RandRangef</a>(0, 3);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;          <a class="code" href="namespace_physics.html">Physics</a>.<a class="code" href="class_physics_1_1_simple_polygon.html">SimplePolygon</a> polygon = <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;          <span class="keywordflow">if</span> (chance &lt; 1)</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;          {</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            polygon = <span class="keyword">new</span> Polygon1();</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;          }</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (chance &lt; 2)</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;          {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            polygon = <span class="keyword">new</span> Polygon2();</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;          }</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;          <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;          {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            polygon = <span class="keyword">new</span> Polygon3();</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;          }</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160; </div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          polygon.GlobalPosition = position;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;          <span class="keywordflow">return</span> polygon;</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        };</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;        AddChild(spawner);</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160; </div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;        <span class="keywordtype">int</span> polygonCount = 10;</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; polygonCount; ++i)</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;        {</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;          spawner.SpawnBody(<a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">RandVector2</a>(0, size.x, 0, size.y));</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        }</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      }</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;    }</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;  }</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;}</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            <span class="keyword">new</span> Vector2(5, -5),</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            <span class="keyword">new</span> Vector2(-10, 5)</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;          };</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <a class="code" href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">BaseColor</a> = Colors.BlueViolet;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      }</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span>Polygon3 : <a class="code" href="class_physics_1_1_simple_polygon.html">SimplePolygon</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      <span class="keyword">public</span> Polygon3()</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        <a class="code" href="class_physics_1_1_simple_polygon.html#afb2626e8817d36c8941a0e7d2d24211a">Points</a> = <span class="keyword">new</span> Vector2[] {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keyword">new</span> Vector2(-10, 10),</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            <span class="keyword">new</span> Vector2(10, 10),</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="keyword">new</span> Vector2(5, -5),</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keyword">new</span> Vector2(10, 5)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;          };</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <a class="code" href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">BaseColor</a> = Colors.IndianRed;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      }</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;    }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    {</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      var size = GetViewportRect().Size;</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      var wall = <span class="keyword">new</span> <a class="code" href="class_physics_1_1_simple_wall.html">SimpleWall</a></div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        BodySize = <span class="keyword">new</span> Vector2(size.x, 50),</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;        Position = <span class="keyword">new</span> Vector2(size.x / 2, size.y)</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      };</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      AddChild(wall);</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160; </div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      var spawner = <span class="keyword">new</span> <a class="code" href="class_utils_1_1_simple_touch_spawner.html">SimpleTouchSpawner</a></div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      {</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;        SpawnFunction = (position) =&gt;</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        {</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;          var chance = <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a493dfce1b52671313b5b9917ad393aff">RandRangef</a>(0, 3);</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;          <a class="code" href="class_physics_1_1_simple_polygon.html">SimplePolygon</a> polygon = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;          <span class="keywordflow">if</span> (chance &lt; 1)</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;          {</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            polygon = <span class="keyword">new</span> Polygon1();</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;          }</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;          <span class="keywordflow">else</span> <span class="keywordflow">if</span> (chance &lt; 2)</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;          {</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            polygon = <span class="keyword">new</span> Polygon2();</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;          }</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;          <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;          {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            polygon = <span class="keyword">new</span> Polygon3();</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          }</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160; </div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;          polygon.GlobalPosition = position;</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;          <span class="keywordflow">return</span> polygon;</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;        }</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;      };</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;      AddChild(spawner);</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160; </div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> polygonCount = 10;</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; polygonCount; ++i)</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      {</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;        spawner.SpawnBody(<a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">RandVector2</a>(0, size.x, 0, size.y));</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      }</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;  }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_physics_1_1_simple_wall_html_acdc5b660d7ebb061be9260a5fdc4d207"><div class="ttname"><a href="class_physics_1_1_simple_wall.html#acdc5b660d7ebb061be9260a5fdc4d207">Physics.SimpleWall.BodySize</a></div><div class="ttdeci">Vector2 BodySize</div><div class="ttdoc">Wall size</div><div class="ttdef"><b>Definition:</b> <a href="_simple_wall_8cs_source.html#l00014">SimpleWall.cs:15</a></div></div>
+<div class="ttc" id="anamespace_examples_1_1_chapter5_html"><div class="ttname"><a href="namespace_examples_1_1_chapter5.html">Examples.Chapter5</a></div><div class="ttdoc">Chapter 5 - Physics Libraries.</div><div class="ttdef"><b>Definition:</b> <a href="_c5_example10_8cs_source.html#l00004">C5Example10.cs:5</a></div></div>
 <div class="ttc" id="aclass_math_utils_html"><div class="ttname"><a href="class_math_utils.html">MathUtils</a></div><div class="ttdoc">Math utility functions</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00006">MathUtils.cs:7</a></div></div>
 <div class="ttc" id="anamespace_physics_html"><div class="ttname"><a href="namespace_physics.html">Physics</a></div><div class="ttdoc">Physics-related primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_ball_8cs_source.html#l00007">SimpleBall.cs:8</a></div></div>
 <div class="ttc" id="anamespace_utils_html"><div class="ttname"><a href="namespace_utils.html">Utils</a></div><div class="ttdoc">Utilities.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_touch_spawner_8cs_source.html#l00006">SimpleTouchSpawner.cs:7</a></div></div>
 <div class="ttc" id="aclass_math_utils_html_a493dfce1b52671313b5b9917ad393aff"><div class="ttname"><a href="class_math_utils.html#a493dfce1b52671313b5b9917ad393aff">MathUtils.RandRangef</a></div><div class="ttdeci">static float RandRangef(float min, float max)</div><div class="ttdoc">Return a float RandRange.</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00046">MathUtils.cs:46</a></div></div>
 <div class="ttc" id="aclass_physics_1_1_simple_wall_html"><div class="ttname"><a href="class_physics_1_1_simple_wall.html">Physics.SimpleWall</a></div><div class="ttdoc">Simple static wall.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_wall_8cs_source.html#l00008">SimpleWall.cs:9</a></div></div>
 <div class="ttc" id="aclass_utils_1_1_simple_touch_spawner_html"><div class="ttname"><a href="class_utils_1_1_simple_touch_spawner.html">Utils.SimpleTouchSpawner</a></div><div class="ttdoc">Touch spawner. Touch anywhere and spawn something. Can also spawn on demand using SpawnBody.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_touch_spawner_8cs_source.html#l00013">SimpleTouchSpawner.cs:14</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter5_1_1_c5_exercise4_html_abfd8533c015c93074790dcb55f1443bb"><div class="ttname"><a href="class_examples_1_1_chapter5_1_1_c5_exercise4.html#abfd8533c015c93074790dcb55f1443bb">Examples.Chapter5.C5Exercise4.GetSummary</a></div><div class="ttdeci">string GetSummary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c5_exercise4_8cs_source.html#l00013">C5Exercise4.cs:13</a></div></div>
 <div class="ttc" id="aclass_physics_1_1_simple_polygon_html_afb2626e8817d36c8941a0e7d2d24211a"><div class="ttname"><a href="class_physics_1_1_simple_polygon.html#afb2626e8817d36c8941a0e7d2d24211a">Physics.SimplePolygon.Points</a></div><div class="ttdeci">Vector2[] Points</div><div class="ttdoc">Polygon points</div><div class="ttdef"><b>Definition:</b> <a href="_simple_polygon_8cs_source.html#l00011">SimplePolygon.cs:11</a></div></div>
 <div class="ttc" id="aclass_math_utils_html_a930682fc1b0e30eb85d7cc9d33849e5e"><div class="ttname"><a href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">MathUtils.RandVector2</a></div><div class="ttdeci">static Vector2 RandVector2(Vector2 rangeX, Vector2 rangeY)</div><div class="ttdoc">Return a Vector with coordinates in a random range (vector limits).</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00081">MathUtils.cs:81</a></div></div>
-<div class="ttc" id="ainterface_i_example_html"><div class="ttname"><a href="interface_i_example.html">IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00004">Example.cs:5</a></div></div>
-<div class="ttc" id="aclass_examples_1_1_chapter5_1_1_c5_exercise4_html_a2e1c9434e02c3103dff4317bf4e2bb14"><div class="ttname"><a href="class_examples_1_1_chapter5_1_1_c5_exercise4.html#a2e1c9434e02c3103dff4317bf4e2bb14">Examples.Chapter5.C5Exercise4._Summary</a></div><div class="ttdeci">string _Summary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c5_exercise4_8cs_source.html#l00014">C5Exercise4.cs:14</a></div></div>
-<div class="ttc" id="aclass_physics_1_1_simple_polygon_html_a4b2c395c8e0a0721d8c1bf1f4f05d1d9"><div class="ttname"><a href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">Physics.SimplePolygon.BaseColor</a></div><div class="ttdeci">Color BaseColor</div><div class="ttdoc">Color</div><div class="ttdef"><b>Definition:</b> <a href="_simple_polygon_8cs_source.html#l00013">SimplePolygon.cs:13</a></div></div>
-<div class="ttc" id="aclass_examples_1_1_chapter5_1_1_c5_exercise4_html"><div class="ttname"><a href="class_examples_1_1_chapter5_1_1_c5_exercise4.html">Examples.Chapter5.C5Exercise4</a></div><div class="ttdoc">Exercise 5.4 - Polygon Designs.</div><div class="ttdef"><b>Definition:</b> <a href="_c5_exercise4_8cs_source.html#l00012">C5Exercise4.cs:13</a></div></div>
+<div class="ttc" id="ainterface_examples_1_1_i_example_html"><div class="ttname"><a href="interface_examples_1_1_i_example.html">Examples.IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00006">Example.cs:7</a></div></div>
+<div class="ttc" id="aclass_physics_1_1_simple_polygon_html_a4b2c395c8e0a0721d8c1bf1f4f05d1d9"><div class="ttname"><a href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">Physics.SimplePolygon.BaseColor</a></div><div class="ttdeci">Color BaseColor</div><div class="ttdoc">Color</div><div class="ttdef"><b>Definition:</b> <a href="_simple_polygon_8cs_source.html#l00014">SimplePolygon.cs:14</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter5_1_1_c5_exercise4_html"><div class="ttname"><a href="class_examples_1_1_chapter5_1_1_c5_exercise4.html">Examples.Chapter5.C5Exercise4</a></div><div class="ttdoc">Exercise 5.4 - Polygon Designs.</div><div class="ttdef"><b>Definition:</b> <a href="_c5_exercise4_8cs_source.html#l00011">C5Exercise4.cs:12</a></div></div>
 <div class="ttc" id="aclass_physics_1_1_simple_polygon_html"><div class="ttname"><a href="class_physics_1_1_simple_polygon.html">Physics.SimplePolygon</a></div><div class="ttdoc">Simple physics polygon.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_polygon_8cs_source.html#l00008">SimplePolygon.cs:9</a></div></div>
-<div class="ttc" id="anamespace_examples_html"><div class="ttname"><a href="namespace_examples.html">Examples</a></div><div class="ttdoc">Nature of Code examples and exercises.</div><div class="ttdef"><b>Definition:</b> <a href="_c0_example1_8cs_source.html#l00007">C0Example1.cs:8</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

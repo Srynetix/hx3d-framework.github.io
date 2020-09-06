@@ -1,10 +1,6 @@
 var searchData=
 [
-  ['particlecount_903',['ParticleCount',['../class_particles_1_1_simple_particle_system.html#aef93e428d7e0fac9f8e27f4ea10dcab9',1,'Particles::SimpleParticleSystem']]],
-  ['particlecreationfunction_904',['ParticleCreationFunction',['../class_particles_1_1_simple_particle_system.html#a3537bc57cb0a99785af8ab2044c45263',1,'Particles::SimpleParticleSystem']]],
-  ['particlescontainer_905',['ParticlesContainer',['../class_particles_1_1_simple_particle_system.html#a86b6ae345793dc51c955457e2e1bc47c',1,'Particles::SimpleParticleSystem']]],
-  ['particlespawnframedelay_906',['ParticleSpawnFrameDelay',['../class_particles_1_1_simple_particle_system.html#a4d04bee0cbd3bae2fc0c8ed6392efe7b',1,'Particles::SimpleParticleSystem']]],
-  ['pointcount_907',['PointCount',['../class_drawing_1_1_simple_trail.html#a06a73809d236f72214a7ad50ae7be044',1,'Drawing::SimpleTrail']]],
-  ['points_908',['Points',['../class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1',1,'Agents.SimplePath.Points()'],['../class_physics_1_1_simple_polygon.html#afb2626e8817d36c8941a0e7d2d24211a',1,'Physics.SimplePolygon.Points()'],['../class_verlet_physics_1_1_verlet_cluster.html#a917b51f253a2d0797c9fa3d7aedc9768',1,'VerletPhysics.VerletCluster.Points()']]],
-  ['positionoffset_909',['PositionOffset',['../class_oscillation_1_1_simple_oscillator.html#a1f5570384c45180ed60df337b5cbb400',1,'Oscillation::SimpleOscillator']]]
+  ['octaves_904',['Octaves',['../class_drawing_1_1_simple_noise_texture.html#a98d70ba5e5ad6be23df8ed85100d8dfc',1,'Drawing::SimpleNoiseTexture']]],
+  ['outlinecolor_905',['OutlineColor',['../class_physics_1_1_simple_box.html#ac1ca81d61b8f5428cd64f13d2409ebfe',1,'Physics::SimpleBox']]],
+  ['outlinewidth_906',['OutlineWidth',['../class_physics_1_1_simple_box.html#a90190a075c67d302efa0f33baf7c6d54',1,'Physics::SimpleBox']]]
 ];

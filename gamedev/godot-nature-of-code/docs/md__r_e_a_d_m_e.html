@@ -91,7 +91,7 @@ $(function() {
 <h1><a class="anchor" id="autotoc_md4"></a>
 :book: Documentation</h1>
 <p>Documentation is generated with Doxygen from C# XML comments. <br  />
- Use the included Doxyfile to generate HTML documentation in the <code>../gnoc-html</code> folder. <br  />
+ Use the included Doxyfile to generate HTML documentation in the <code>exports/docs</code> folder. <br  />
  You can also access the generated C# documentation here: <a href="https://srynetix.github.io/gamedev/godot-nature-of-code/docs/annotated.html">C# Documentation</a></p>
 <h1><a class="anchor" id="autotoc_md5"></a>
 :date: Roadmap</h1>
@@ -110,16 +110,18 @@ $(function() {
 <li>[ ] 10. Neural networks</li>
 </ul>
 </li>
-<li>[ ] Implement the full <a class="el" href="class_ecosystem.html" title="The Ecosystem project.">Ecosystem</a> project</li>
+<li>[ ] Implement the full <a class="el" href="namespace_ecosystem.html">Ecosystem</a> project</li>
 </ul>
 <h1><a class="anchor" id="autotoc_md6"></a>
 :mage: Contributing</h1>
 <ul>
 <li><em>File rules</em>: An .editorconfig file is provided. <br  />
 </li>
-<li><em>Formatting</em>: This project use <code>dotnet-format</code> to automatically format the C# code, without specific configuration.</li>
-<li><em>Lint</em>: I am still looking for a command-line utility to lint the code (like <code>flake8</code> in the Python world or <code>clippy</code> in the Rust world).</li>
+<li><em>Formatting</em>: This project use <code>roslynator</code> to automatically format the C# code, without specific configuration.</li>
+<li><em>Lint</em>: I am using the Roslynator VSCode extension. I am still looking for a command-line version with the same hints.</li>
 </ul>
+<p>You can use <code><a class="el" href="_makefile_8py_source.html">Makefile.py</a></code> to format or export the project and its documentation. <br  />
+ It needs <code>doxygen</code> and <code>godot</code> in <code>PATH</code>, or you can use <code>DOXYGEN_EXE</code> and <code>GODOT_EXE</code> environment variables.</p>
 <p>If you want to contribute, do not hesitate to create Pull Requests or file Issues on GitHub :wink:. </p>
 </div></div><!-- contents -->
 </div><!-- PageDoc -->

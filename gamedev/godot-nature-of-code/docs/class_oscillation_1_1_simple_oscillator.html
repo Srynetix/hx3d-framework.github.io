@@ -151,16 +151,20 @@ Properties</h2></td></tr>
 
 <p>Create a default oscillator. </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00063">63</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    {</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a13a97d2f89820e9e7507697dfa29fbcb">Velocity</a> = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)GD.RandRange(-0.05f, 0.05f), (<span class="keywordtype">float</span>)GD.RandRange(-0.05f, 0.05f));</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      circleSprite = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a>();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      circleSprite.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = 30;</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      circleSprite.Modulate = Colors.LightCyan;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      lineSprite = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_line_sprite.html">SimpleLineSprite</a>();</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      lineSprite.Visible = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      lineSprite.Modulate = Colors.LightGray;</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00069">69</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      <a class="code" href="class_oscillation_1_1_simple_oscillator.html#a13a97d2f89820e9e7507697dfa29fbcb">Velocity</a> = <span class="keyword">new</span> Vector2((<span class="keywordtype">float</span>)GD.RandRange(-0.05f, 0.05f), (<span class="keywordtype">float</span>)GD.RandRange(-0.05f, 0.05f));</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      circleSprite = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_circle_sprite.html">SimpleCircleSprite</a></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      {</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <a class="code" href="class_oscillation_1_1_simple_oscillator.html#ad5b8b00919e5956c2af491f6ae557e5f">Radius</a> = 30,</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        Modulate = Colors.LightCyan</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      };</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      lineSprite = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_line_sprite.html">SimpleLineSprite</a></div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;        Visible = <span class="keyword">true</span>,</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;        Modulate = Colors.LightGray</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      };</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -179,7 +183,7 @@ Properties</h2></td></tr>
 
 <p>Oscillator amplitude </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00033">33</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00038">38</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
 
 </div>
 </div>
@@ -197,7 +201,7 @@ Properties</h2></td></tr>
 
 <p>Oscillator angle </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00027">27</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00029">29</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
 
 </div>
 </div>
@@ -215,7 +219,7 @@ Properties</h2></td></tr>
 
 <p>Oscillator angular acceleration </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00035">35</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00041">41</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
 
 </div>
 </div>
@@ -233,7 +237,7 @@ Properties</h2></td></tr>
 
 <p>Position offset </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00029">29</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00032">32</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
 
 </div>
 </div>
@@ -251,7 +255,7 @@ Properties</h2></td></tr>
 
 <p>Oscillator velocity </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00031">31</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00035">35</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
 
 </div>
 </div>
@@ -278,14 +282,14 @@ Properties</h2></td></tr>
 
 <p>Ball color </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00048">48</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keyword">get</span> =&gt; circleSprite.Modulate;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      <span class="keyword">set</span></div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      {</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        circleSprite.Modulate = value;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      }</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00054">54</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keyword">get</span> =&gt; circleSprite.Modulate;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="keyword">set</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        circleSprite.Modulate = value;</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -311,14 +315,14 @@ Properties</h2></td></tr>
 
 <p>Line color </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00038">38</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keyword">get</span> =&gt; lineSprite.Modulate;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keyword">set</span></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        lineSprite.Modulate = value;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00044">44</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    {</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      <span class="keyword">get</span> =&gt; lineSprite.Modulate;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keyword">set</span></div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        lineSprite.Modulate = value;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -344,11 +348,11 @@ Properties</h2></td></tr>
 
 <p>Oscillator radius </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00021">21</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      <span class="keyword">get</span> =&gt; circleSprite.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      <span class="keyword">set</span> =&gt; circleSprite.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = value;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="_simple_oscillator_8cs_source.html#l00022">22</a> of file <a class="el" href="_simple_oscillator_8cs_source.html">SimpleOscillator.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      <span class="keyword">get</span> =&gt; circleSprite.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <span class="keyword">set</span> =&gt; circleSprite.<a class="code" href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Radius</a> = value;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -388,7 +392,8 @@ Properties</h2></td></tr>
 </div><!-- contents -->
 <div class="ttc" id="aclass_drawing_1_1_simple_line_sprite_html"><div class="ttname"><a href="class_drawing_1_1_simple_line_sprite.html">Drawing.SimpleLineSprite</a></div><div class="ttdoc">Use this to draw a line between two points. Instead of DrawLine and Line2D, it can be batched.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_line_sprite_8cs_source.html#l00010">SimpleLineSprite.cs:11</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_circle_sprite_html_a4284dbd1de9c1182719f8401afb272ad"><div class="ttname"><a href="class_drawing_1_1_simple_circle_sprite.html#a4284dbd1de9c1182719f8401afb272ad">Drawing.SimpleCircleSprite.Radius</a></div><div class="ttdeci">float Radius</div><div class="ttdoc">Circle radius.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_circle_sprite_8cs_source.html#l00015">SimpleCircleSprite.cs:16</a></div></div>
-<div class="ttc" id="aclass_oscillation_1_1_simple_oscillator_html_a13a97d2f89820e9e7507697dfa29fbcb"><div class="ttname"><a href="class_oscillation_1_1_simple_oscillator.html#a13a97d2f89820e9e7507697dfa29fbcb">Oscillation.SimpleOscillator.Velocity</a></div><div class="ttdeci">Vector2 Velocity</div><div class="ttdoc">Oscillator velocity</div><div class="ttdef"><b>Definition:</b> <a href="_simple_oscillator_8cs_source.html#l00031">SimpleOscillator.cs:31</a></div></div>
+<div class="ttc" id="aclass_oscillation_1_1_simple_oscillator_html_ad5b8b00919e5956c2af491f6ae557e5f"><div class="ttname"><a href="class_oscillation_1_1_simple_oscillator.html#ad5b8b00919e5956c2af491f6ae557e5f">Oscillation.SimpleOscillator.Radius</a></div><div class="ttdeci">float Radius</div><div class="ttdoc">Oscillator radius</div><div class="ttdef"><b>Definition:</b> <a href="_simple_oscillator_8cs_source.html#l00022">SimpleOscillator.cs:23</a></div></div>
+<div class="ttc" id="aclass_oscillation_1_1_simple_oscillator_html_a13a97d2f89820e9e7507697dfa29fbcb"><div class="ttname"><a href="class_oscillation_1_1_simple_oscillator.html#a13a97d2f89820e9e7507697dfa29fbcb">Oscillation.SimpleOscillator.Velocity</a></div><div class="ttdeci">Vector2 Velocity</div><div class="ttdoc">Oscillator velocity</div><div class="ttdef"><b>Definition:</b> <a href="_simple_oscillator_8cs_source.html#l00035">SimpleOscillator.cs:35</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_simple_circle_sprite_html"><div class="ttname"><a href="class_drawing_1_1_simple_circle_sprite.html">Drawing.SimpleCircleSprite</a></div><div class="ttdoc">Use this to draw a circle. Instead of DrawCircle, it can be batched.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_circle_sprite_8cs_source.html#l00010">SimpleCircleSprite.cs:11</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

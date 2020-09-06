@@ -74,43 +74,39 @@ $(function() {
 <div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="keyword">using</span> Godot;</div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="keyword">using</span> <a class="code" href="namespace_agents.html">Agents</a>;</div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples.html">Examples</a></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples_1_1_chapter6.html">Examples.Chapter6</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;  <span class="keyword">namespace </span>Chapter6</div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;  {</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_exercise6.html">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter6_1_1_c6_exercise6.html">C6Exercise6</a> : Node2D, <a class="code" href="interface_i_example.html">IExample</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_exercise6.html">   10</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter6_1_1_c6_exercise6.html">C6Exercise6</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_exercise6.html#af4909cd7afca5af091231206032ceefe">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter6_1_1_c6_exercise6.html#af4909cd7afca5af091231206032ceefe">GetSummary</a>()</div>
 <div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_exercise6.html#a98caff78895d22c21f9d6ebb75ffd5aa">   14</a></span>&#160;      <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter6_1_1_c6_exercise6.html#a98caff78895d22c21f9d6ebb75ffd5aa">_Summary</a>()</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Exercise 6.6:\nRadial Flow Field&quot;</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <span class="keyword">private</span> <span class="keyword">class </span>RadialFlowField : <a class="code" href="class_agents_1_1_simple_flow_field.html">SimpleFlowField</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Exercise 6.6:\nRadial Flow Field&quot;</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span> <span class="keyword">class </span>RadialFlowField : <a class="code" href="class_agents_1_1_simple_flow_field.html">SimpleFlowField</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      <span class="keyword">protected</span> <span class="keyword">override</span> Vector2 ComputeDirectionFromPosition(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> Vector2 ComputeDirectionFromPosition(<span class="keywordtype">int</span> x, <span class="keywordtype">int</span> y)</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;          var center = GetViewportRect().Size / 2;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;          var pos = <span class="keyword">new</span> Vector2(x, y) * Resolution;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;          <span class="keywordflow">return</span> (center - pos).Normalized();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      }</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        var flowField = <span class="keyword">new</span> RadialFlowField();</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        flowField.Resolution = 30;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        AddChild(flowField);</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      }</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    }</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;}</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        var center = GetViewportRect().Size / 2;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        var pos = <span class="keyword">new</span> Vector2(x, y) * Resolution;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">return</span> (center - pos).Normalized();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      }</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      var flowField = <span class="keyword">new</span> RadialFlowField { Resolution = 30 };</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      AddChild(flowField);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;    }</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;  }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_exercise6_html_a98caff78895d22c21f9d6ebb75ffd5aa"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_exercise6.html#a98caff78895d22c21f9d6ebb75ffd5aa">Examples.Chapter6.C6Exercise6._Summary</a></div><div class="ttdeci">string _Summary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c6_exercise6_8cs_source.html#l00014">C6Exercise6.cs:14</a></div></div>
-<div class="ttc" id="ainterface_i_example_html"><div class="ttname"><a href="interface_i_example.html">IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00004">Example.cs:5</a></div></div>
-<div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_exercise6_html"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_exercise6.html">Examples.Chapter6.C6Exercise6</a></div><div class="ttdoc">Exercise 6.6: Radial Flow Field.</div><div class="ttdef"><b>Definition:</b> <a href="_c6_exercise6_8cs_source.html#l00012">C6Exercise6.cs:13</a></div></div>
+<div class="ttc" id="anamespace_examples_1_1_chapter6_html"><div class="ttname"><a href="namespace_examples_1_1_chapter6.html">Examples.Chapter6</a></div><div class="ttdoc">Chapter 6 - Autonomous Agents.</div><div class="ttdef"><b>Definition:</b> <a href="_c6_example1_8cs_source.html#l00010">C6Example1.cs:11</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_exercise6_html_af4909cd7afca5af091231206032ceefe"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_exercise6.html#af4909cd7afca5af091231206032ceefe">Examples.Chapter6.C6Exercise6.GetSummary</a></div><div class="ttdeci">string GetSummary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c6_exercise6_8cs_source.html#l00012">C6Exercise6.cs:12</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_exercise6_html"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_exercise6.html">Examples.Chapter6.C6Exercise6</a></div><div class="ttdoc">Exercise 6.6: Radial Flow Field.</div><div class="ttdef"><b>Definition:</b> <a href="_c6_exercise6_8cs_source.html#l00010">C6Exercise6.cs:11</a></div></div>
+<div class="ttc" id="ainterface_examples_1_1_i_example_html"><div class="ttname"><a href="interface_examples_1_1_i_example.html">Examples.IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00006">Example.cs:7</a></div></div>
 <div class="ttc" id="aclass_agents_1_1_simple_flow_field_html"><div class="ttname"><a href="class_agents_1_1_simple_flow_field.html">Agents.SimpleFlowField</a></div><div class="ttdoc">Simple flow field.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_flow_field_8cs_source.html#l00008">SimpleFlowField.cs:9</a></div></div>
 <div class="ttc" id="anamespace_agents_html"><div class="ttname"><a href="namespace_agents.html">Agents</a></div><div class="ttdoc">Autonomous agents related primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_image_flow_field_8cs_source.html#l00003">ImageFlowField.cs:4</a></div></div>
-<div class="ttc" id="anamespace_examples_html"><div class="ttname"><a href="namespace_examples.html">Examples</a></div><div class="ttdoc">Nature of Code examples and exercises.</div><div class="ttdef"><b>Definition:</b> <a href="_c0_example1_8cs_source.html#l00007">C0Example1.cs:8</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

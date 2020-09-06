@@ -78,9 +78,9 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples_1_1_chapter6.html">Examples.Chapter6</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_exercise15.html">   11</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter6_1_1_c6_exercise15.html">C6Exercise15</a> : Node2D, <a class="code" href="interface_i_example.html">IExample</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_exercise15.html">   11</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter6_1_1_c6_exercise15.html">C6Exercise15</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  {</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_exercise15.html#ab89fdb7589b78e09506b5629222b1944">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter6_1_1_c6_exercise15.html#ab89fdb7589b78e09506b5629222b1944">_Summary</a>()</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_exercise15.html#a6424eb0bcba213374858216d01d14fc5">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter6_1_1_c6_exercise15.html#a6424eb0bcba213374858216d01d14fc5">GetSummary</a>()</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Exercise 6.15:\nBoids with peripheral vision\n\nTouch screen to spawn boids&quot;</span>;</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
@@ -119,41 +119,45 @@ $(function() {
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    }</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">private</span> List&lt;SimpleVehicle&gt; boids = <span class="keyword">new</span> List&lt;SimpleVehicle&gt;();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    <span class="keyword">private</span> readonly List&lt;SimpleVehicle&gt; boids = <span class="keyword">new</span> List&lt;SimpleVehicle&gt;();</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160; </div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    {</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      var size = GetViewportRect().Size;</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      var boidsCount = 50;</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      var spawner = <span class="keyword">new</span> <a class="code" href="class_utils_1_1_simple_touch_spawner.html">SimpleTouchSpawner</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      spawner.SpawnFunction = (pos) =&gt;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      {</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        var boid = <span class="keyword">new</span> PeripheralVisionBoid();</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        boid.VehicleGroupList = boids;</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        boid.Position = pos;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        boids.Add(boid);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        <span class="keywordflow">return</span> boid;</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      };</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      AddChild(spawner);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; boidsCount; ++i)</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      {</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        spawner.SpawnBody(<a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">RandVector2</a>(0, size.x, 0, size.y));</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      }</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;    }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;  }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;}</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> boidsCount = 50;</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      var size = GetViewportRect().Size;</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      var spawner = <span class="keyword">new</span> <a class="code" href="class_utils_1_1_simple_touch_spawner.html">SimpleTouchSpawner</a></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        SpawnFunction = (pos) =&gt;</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;          var boid = <span class="keyword">new</span> PeripheralVisionBoid</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;          {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            VehicleGroupList = boids,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            Position = pos</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;          };</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;          boids.Add(boid);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;          <span class="keywordflow">return</span> boid;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;        }</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      };</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      AddChild(spawner);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160; </div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; boidsCount; ++i)</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        spawner.SpawnBody(<a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">RandVector2</a>(0, size.x, 0, size.y));</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      }</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;  }</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_forces_1_1_simple_mover_html_a9c6b56340b094c2ead9671b9f840661f"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a9c6b56340b094c2ead9671b9f840661f">Forces.SimpleMover.Velocity</a></div><div class="ttdeci">Vector2 Velocity</div><div class="ttdoc">Current velocity</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00025">SimpleMover.cs:25</a></div></div>
+<div class="ttc" id="aclass_forces_1_1_simple_mover_html_a9c6b56340b094c2ead9671b9f840661f"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a9c6b56340b094c2ead9671b9f840661f">Forces.SimpleMover.Velocity</a></div><div class="ttdeci">Vector2 Velocity</div><div class="ttdoc">Current velocity</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00027">SimpleMover.cs:27</a></div></div>
 <div class="ttc" id="aclass_agents_1_1_simple_boid_html"><div class="ttname"><a href="class_agents_1_1_simple_boid.html">Agents.SimpleBoid</a></div><div class="ttdoc">Simple vehicle configured as a boid.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_boid_8cs_source.html#l00010">SimpleBoid.cs:11</a></div></div>
-<div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_exercise15_html_ab89fdb7589b78e09506b5629222b1944"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_exercise15.html#ab89fdb7589b78e09506b5629222b1944">Examples.Chapter6.C6Exercise15._Summary</a></div><div class="ttdeci">string _Summary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c6_exercise15_8cs_source.html#l00013">C6Exercise15.cs:13</a></div></div>
 <div class="ttc" id="aclass_math_utils_html"><div class="ttname"><a href="class_math_utils.html">MathUtils</a></div><div class="ttdoc">Math utility functions</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00006">MathUtils.cs:7</a></div></div>
 <div class="ttc" id="anamespace_utils_html"><div class="ttname"><a href="namespace_utils.html">Utils</a></div><div class="ttdoc">Utilities.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_touch_spawner_8cs_source.html#l00006">SimpleTouchSpawner.cs:7</a></div></div>
 <div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_exercise15_html"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_exercise15.html">Examples.Chapter6.C6Exercise15</a></div><div class="ttdoc">Exercise 6.15: Boids with peripheral vision.</div><div class="ttdef"><b>Definition:</b> <a href="_c6_exercise15_8cs_source.html#l00011">C6Exercise15.cs:12</a></div></div>
 <div class="ttc" id="aclass_utils_1_1_simple_touch_spawner_html"><div class="ttname"><a href="class_utils_1_1_simple_touch_spawner.html">Utils.SimpleTouchSpawner</a></div><div class="ttdoc">Touch spawner. Touch anywhere and spawn something. Can also spawn on demand using SpawnBody.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_touch_spawner_8cs_source.html#l00013">SimpleTouchSpawner.cs:14</a></div></div>
 <div class="ttc" id="anamespace_examples_1_1_chapter6_html"><div class="ttname"><a href="namespace_examples_1_1_chapter6.html">Examples.Chapter6</a></div><div class="ttdoc">Chapter 6 - Autonomous Agents.</div><div class="ttdef"><b>Definition:</b> <a href="_c6_example1_8cs_source.html#l00010">C6Example1.cs:11</a></div></div>
+<div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_exercise15_html_a6424eb0bcba213374858216d01d14fc5"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_exercise15.html#a6424eb0bcba213374858216d01d14fc5">Examples.Chapter6.C6Exercise15.GetSummary</a></div><div class="ttdeci">string GetSummary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c6_exercise15_8cs_source.html#l00013">C6Exercise15.cs:13</a></div></div>
 <div class="ttc" id="aclass_math_utils_html_a930682fc1b0e30eb85d7cc9d33849e5e"><div class="ttname"><a href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">MathUtils.RandVector2</a></div><div class="ttdeci">static Vector2 RandVector2(Vector2 rangeX, Vector2 rangeY)</div><div class="ttdoc">Return a Vector with coordinates in a random range (vector limits).</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00081">MathUtils.cs:81</a></div></div>
-<div class="ttc" id="ainterface_i_example_html"><div class="ttname"><a href="interface_i_example.html">IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00004">Example.cs:5</a></div></div>
+<div class="ttc" id="ainterface_examples_1_1_i_example_html"><div class="ttname"><a href="interface_examples_1_1_i_example.html">Examples.IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00006">Example.cs:7</a></div></div>
 <div class="ttc" id="anamespace_agents_html"><div class="ttname"><a href="namespace_agents.html">Agents</a></div><div class="ttdoc">Autonomous agents related primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_image_flow_field_8cs_source.html#l00003">ImageFlowField.cs:4</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

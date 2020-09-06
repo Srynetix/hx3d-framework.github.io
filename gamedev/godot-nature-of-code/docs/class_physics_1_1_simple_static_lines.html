@@ -183,24 +183,27 @@ Public Attributes</h2></td></tr>
 
 <p class="definition">Definition at line <a class="el" href="_simple_static_chain_8cs_source.html#l00035">35</a> of file <a class="el" href="_simple_static_chain_8cs_source.html">SimpleStaticChain.cs</a>.</p>
 <div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      var shape = <span class="keyword">new</span> CollisionShape2D();</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      var segment = <span class="keyword">new</span> SegmentShape2D();</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      segment.A = start;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      segment.B = end;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      shape.Shape = segment;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      segments.Add(segment);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      shapes.Add(shape);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      AddChild(shape);</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      var lineSprite = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_line_sprite.html">SimpleLineSprite</a>();</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      lineSprite.PositionA = GlobalPosition + segment.A;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      lineSprite.PositionB = GlobalPosition + segment.B;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      lineSprite.Modulate = <a class="code" href="class_physics_1_1_simple_static_lines.html#a5d0dbd6c82a0d9a15eac04a49ab69074">BaseColor</a>;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      lineSprite.Width = 2;</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      lineSprites.Add(lineSprite);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      AddChild(lineSprite);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      var segment = <span class="keyword">new</span> SegmentShape2D</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        A = start,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        B = end</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      };</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      var shape = <span class="keyword">new</span> CollisionShape2D { Shape = segment };</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      segments.Add(segment);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      shapes.Add(shape);</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      AddChild(shape);</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      var lineSprite = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_simple_line_sprite.html">SimpleLineSprite</a></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        PositionA = GlobalPosition + segment.A,</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        PositionB = GlobalPosition + segment.B,</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        Modulate = <a class="code" href="class_physics_1_1_simple_static_lines.html#a5d0dbd6c82a0d9a15eac04a49ab69074">BaseColor</a>,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        Width = 2</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      lineSprites.Add(lineSprite);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      AddChild(lineSprite);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>

@@ -178,13 +178,13 @@ Properties</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_attraction_behavior_8cs_source.html#l00035">35</a> of file <a class="el" href="_attraction_behavior_8cs_source.html">AttractionBehavior.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      <a class="code" href="class_verlet_physics_1_1_attraction_behavior.html#afe8ea8da4b47fac913d0869b762d6853">Attractor</a> = attractor;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      <a class="code" href="class_verlet_physics_1_1_attraction_behavior.html#a39b7d7c8e183df7f6c7bde6560cf5c90">Strength</a> = strength;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <a class="code" href="class_verlet_physics_1_1_attraction_behavior.html#a7af69c3d5411e55577cffa39781dfe5e">Radius</a> = radius;</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <a class="code" href="class_verlet_physics_1_1_attraction_behavior.html#a5a33e39c0e7ba83911a5da9ab48d0ecd">Jitter</a> = jitter;</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="_attraction_behavior_8cs_source.html#l00038">38</a> of file <a class="el" href="_attraction_behavior_8cs_source.html">AttractionBehavior.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <a class="code" href="class_verlet_physics_1_1_attraction_behavior.html#afe8ea8da4b47fac913d0869b762d6853">Attractor</a> = attractor;</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <a class="code" href="class_verlet_physics_1_1_attraction_behavior.html#a39b7d7c8e183df7f6c7bde6560cf5c90">Strength</a> = strength;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      <a class="code" href="class_verlet_physics_1_1_attraction_behavior.html#a7af69c3d5411e55577cffa39781dfe5e">Radius</a> = radius;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      <a class="code" href="class_verlet_physics_1_1_attraction_behavior.html#a5a33e39c0e7ba83911a5da9ab48d0ecd">Jitter</a> = jitter;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -234,16 +234,16 @@ Properties</h2></td></tr>
 
 <p>Implements <a class="el" href="interface_verlet_physics_1_1_i_behavior.html#a4b7b41ba9b5213a0840c7478d55f51fc">VerletPhysics.IBehavior</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_attraction_behavior_8cs_source.html#l00043">43</a> of file <a class="el" href="_attraction_behavior_8cs_source.html">AttractionBehavior.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    {</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      var diff = <a class="code" href="class_verlet_physics_1_1_attraction_behavior.html#afe8ea8da4b47fac913d0869b762d6853">Attractor</a>.GlobalPosition - point.GlobalPosition;</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      var dist = diff.LengthSquared();</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordflow">if</span> (dist &lt; radiusSquared)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        var f = diff.NormalizeTo((1.0f - dist / radiusSquared)).Jitter(<a class="code" href="class_verlet_physics_1_1_attraction_behavior.html#a5a33e39c0e7ba83911a5da9ab48d0ecd">Jitter</a>) * <a class="code" href="class_verlet_physics_1_1_attraction_behavior.html#a39b7d7c8e183df7f6c7bde6560cf5c90">Strength</a> * delta;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        point.ApplyForce(f);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="_attraction_behavior_8cs_source.html#l00046">46</a> of file <a class="el" href="_attraction_behavior_8cs_source.html">AttractionBehavior.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      var diff = <a class="code" href="class_verlet_physics_1_1_attraction_behavior.html#afe8ea8da4b47fac913d0869b762d6853">Attractor</a>.GlobalPosition - point.GlobalPosition;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      var dist = diff.LengthSquared();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      <span class="keywordflow">if</span> (dist &lt; radiusSquared)</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        var f = diff.NormalizeTo(1.0f - (dist / radiusSquared)).Jitter(<a class="code" href="class_verlet_physics_1_1_attraction_behavior.html#a5a33e39c0e7ba83911a5da9ab48d0ecd">Jitter</a>) * <a class="code" href="class_verlet_physics_1_1_attraction_behavior.html#a39b7d7c8e183df7f6c7bde6560cf5c90">Strength</a> * delta;</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        point.ApplyForce(f);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -280,7 +280,7 @@ Properties</h2></td></tr>
 
 <p>Jitter value (random coefficient) </p>
 
-<p class="definition">Definition at line <a class="el" href="_attraction_behavior_8cs_source.html#l00011">11</a> of file <a class="el" href="_attraction_behavior_8cs_source.html">AttractionBehavior.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_attraction_behavior_8cs_source.html#l00012">12</a> of file <a class="el" href="_attraction_behavior_8cs_source.html">AttractionBehavior.cs</a>.</p>
 
 </div>
 </div>
@@ -298,7 +298,7 @@ Properties</h2></td></tr>
 
 <p>Attraction strength </p>
 
-<p class="definition">Definition at line <a class="el" href="_attraction_behavior_8cs_source.html#l00013">13</a> of file <a class="el" href="_attraction_behavior_8cs_source.html">AttractionBehavior.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_attraction_behavior_8cs_source.html#l00015">15</a> of file <a class="el" href="_attraction_behavior_8cs_source.html">AttractionBehavior.cs</a>.</p>
 
 </div>
 </div>
@@ -325,15 +325,15 @@ Properties</h2></td></tr>
 
 <p>Attraction radius </p>
 
-<p class="definition">Definition at line <a class="el" href="_attraction_behavior_8cs_source.html#l00015">15</a> of file <a class="el" href="_attraction_behavior_8cs_source.html">AttractionBehavior.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;      <span class="keyword">get</span> =&gt; radius;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;      <span class="keyword">set</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        radius = value;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        radiusSquared = value * value;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      }</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="_attraction_behavior_8cs_source.html#l00018">18</a> of file <a class="el" href="_attraction_behavior_8cs_source.html">AttractionBehavior.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      <span class="keyword">get</span> =&gt; radius;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      <span class="keyword">set</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        radius = value;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        radiusSquared = value * value;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      }</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -341,9 +341,9 @@ Properties</h2></td></tr>
 <li>scripts/verletphysics/<a class="el" href="_attraction_behavior_8cs_source.html">AttractionBehavior.cs</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclass_verlet_physics_1_1_attraction_behavior_html_a7af69c3d5411e55577cffa39781dfe5e"><div class="ttname"><a href="class_verlet_physics_1_1_attraction_behavior.html#a7af69c3d5411e55577cffa39781dfe5e">VerletPhysics.AttractionBehavior.Radius</a></div><div class="ttdeci">float Radius</div><div class="ttdoc">Attraction radius</div><div class="ttdef"><b>Definition:</b> <a href="_attraction_behavior_8cs_source.html#l00015">AttractionBehavior.cs:16</a></div></div>
-<div class="ttc" id="aclass_verlet_physics_1_1_attraction_behavior_html_a39b7d7c8e183df7f6c7bde6560cf5c90"><div class="ttname"><a href="class_verlet_physics_1_1_attraction_behavior.html#a39b7d7c8e183df7f6c7bde6560cf5c90">VerletPhysics.AttractionBehavior.Strength</a></div><div class="ttdeci">float Strength</div><div class="ttdoc">Attraction strength</div><div class="ttdef"><b>Definition:</b> <a href="_attraction_behavior_8cs_source.html#l00013">AttractionBehavior.cs:13</a></div></div>
-<div class="ttc" id="aclass_verlet_physics_1_1_attraction_behavior_html_a5a33e39c0e7ba83911a5da9ab48d0ecd"><div class="ttname"><a href="class_verlet_physics_1_1_attraction_behavior.html#a5a33e39c0e7ba83911a5da9ab48d0ecd">VerletPhysics.AttractionBehavior.Jitter</a></div><div class="ttdeci">float Jitter</div><div class="ttdoc">Jitter value (random coefficient)</div><div class="ttdef"><b>Definition:</b> <a href="_attraction_behavior_8cs_source.html#l00011">AttractionBehavior.cs:11</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_attraction_behavior_html_a7af69c3d5411e55577cffa39781dfe5e"><div class="ttname"><a href="class_verlet_physics_1_1_attraction_behavior.html#a7af69c3d5411e55577cffa39781dfe5e">VerletPhysics.AttractionBehavior.Radius</a></div><div class="ttdeci">float Radius</div><div class="ttdoc">Attraction radius</div><div class="ttdef"><b>Definition:</b> <a href="_attraction_behavior_8cs_source.html#l00018">AttractionBehavior.cs:19</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_attraction_behavior_html_a39b7d7c8e183df7f6c7bde6560cf5c90"><div class="ttname"><a href="class_verlet_physics_1_1_attraction_behavior.html#a39b7d7c8e183df7f6c7bde6560cf5c90">VerletPhysics.AttractionBehavior.Strength</a></div><div class="ttdeci">float Strength</div><div class="ttdoc">Attraction strength</div><div class="ttdef"><b>Definition:</b> <a href="_attraction_behavior_8cs_source.html#l00015">AttractionBehavior.cs:15</a></div></div>
+<div class="ttc" id="aclass_verlet_physics_1_1_attraction_behavior_html_a5a33e39c0e7ba83911a5da9ab48d0ecd"><div class="ttname"><a href="class_verlet_physics_1_1_attraction_behavior.html#a5a33e39c0e7ba83911a5da9ab48d0ecd">VerletPhysics.AttractionBehavior.Jitter</a></div><div class="ttdeci">float Jitter</div><div class="ttdoc">Jitter value (random coefficient)</div><div class="ttdef"><b>Definition:</b> <a href="_attraction_behavior_8cs_source.html#l00012">AttractionBehavior.cs:12</a></div></div>
 <div class="ttc" id="aclass_verlet_physics_1_1_attraction_behavior_html_afe8ea8da4b47fac913d0869b762d6853"><div class="ttname"><a href="class_verlet_physics_1_1_attraction_behavior.html#afe8ea8da4b47fac913d0869b762d6853">VerletPhysics.AttractionBehavior.Attractor</a></div><div class="ttdeci">VerletPoint Attractor</div><div class="ttdoc">Attraction point</div><div class="ttdef"><b>Definition:</b> <a href="_attraction_behavior_8cs_source.html#l00009">AttractionBehavior.cs:9</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

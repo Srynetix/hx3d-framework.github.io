@@ -184,10 +184,10 @@ Protected Attributes</h2></td></tr>
 
 <p>Reimplemented in <a class="el" href="class_agents_1_1_image_flow_field.html#a8eebc60dff67bdac73c6237cc9b2d8df">Agents.ImageFlowField</a>.</p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_flow_field_8cs_source.html#l00074">74</a> of file <a class="el" href="_simple_flow_field_8cs_source.html">SimpleFlowField.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    {</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      <span class="keywordflow">return</span> Vector2.Right;</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="_simple_flow_field_8cs_source.html#l00077">77</a> of file <a class="el" href="_simple_flow_field_8cs_source.html">SimpleFlowField.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;    {</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      <span class="keywordflow">return</span> Vector2.Right;</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -224,20 +224,20 @@ Protected Attributes</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Direction vector</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_simple_flow_field_8cs_source.html#l00052">52</a> of file <a class="el" href="_simple_flow_field_8cs_source.html">SimpleFlowField.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      var rect = <span class="keyword">new</span> Rect2(GlobalPosition, <a class="code" href="class_agents_1_1_simple_flow_field.html#ae1a69c1a1bbaa28179390801950ff97e">size</a>);</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keywordflow">if</span> (rect.HasPoint(position))</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        <span class="keywordtype">int</span> x = (int)Mathf.Clamp((position.x - GlobalPosition.x) / <a class="code" href="class_agents_1_1_simple_flow_field.html#a392ad92185158f13870e42d2655e6843">Resolution</a>, 0, <a class="code" href="class_agents_1_1_simple_flow_field.html#a55ffac235622d0be10a83ae7b59587b2">cols</a> - 1);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        <span class="keywordtype">int</span> y = (int)Mathf.Clamp((position.y - GlobalPosition.y) / <a class="code" href="class_agents_1_1_simple_flow_field.html#a392ad92185158f13870e42d2655e6843">Resolution</a>, 0, <a class="code" href="class_agents_1_1_simple_flow_field.html#a722951049033a4b012a450c40300ffbd">rows</a> - 1);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_agents_1_1_simple_flow_field.html#a2547c3539b82420cda3af2358f743990">field</a>[x + y * <a class="code" href="class_agents_1_1_simple_flow_field.html#a55ffac235622d0be10a83ae7b59587b2">cols</a>].<a class="code" href="class_agents_1_1_simple_flow_field_1_1_flow_direction.html#aafef58fb679dea417996eb3ba113ed37">Direction</a>;</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      }</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      {</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        <span class="keywordflow">return</span> Vector2.Zero;</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      }</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="_simple_flow_field_8cs_source.html#l00055">55</a> of file <a class="el" href="_simple_flow_field_8cs_source.html">SimpleFlowField.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      var rect = <span class="keyword">new</span> Rect2(GlobalPosition, <a class="code" href="class_agents_1_1_simple_flow_field.html#ae1a69c1a1bbaa28179390801950ff97e">size</a>);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordflow">if</span> (rect.HasPoint(position))</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordtype">int</span> x = (int)Mathf.Clamp((position.x - GlobalPosition.x) / <a class="code" href="class_agents_1_1_simple_flow_field.html#a392ad92185158f13870e42d2655e6843">Resolution</a>, 0, <a class="code" href="class_agents_1_1_simple_flow_field.html#a55ffac235622d0be10a83ae7b59587b2">cols</a> - 1);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keywordtype">int</span> y = (int)Mathf.Clamp((position.y - GlobalPosition.y) / <a class="code" href="class_agents_1_1_simple_flow_field.html#a392ad92185158f13870e42d2655e6843">Resolution</a>, 0, <a class="code" href="class_agents_1_1_simple_flow_field.html#a722951049033a4b012a450c40300ffbd">rows</a> - 1);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_agents_1_1_simple_flow_field.html#a2547c3539b82420cda3af2358f743990">field</a>[x + (y * <a class="code" href="class_agents_1_1_simple_flow_field.html#a55ffac235622d0be10a83ae7b59587b2">cols</a>)].Direction;</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;      {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keywordflow">return</span> Vector2.Zero;</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -266,19 +266,19 @@ Protected Attributes</h2></td></tr>
 
 <p>Refresh flow directions. </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_flow_field_8cs_source.html#l00082">82</a> of file <a class="el" href="_simple_flow_field_8cs_source.html">SimpleFlowField.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    {</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="class_agents_1_1_simple_flow_field.html#a722951049033a4b012a450c40300ffbd">rows</a>; ++j)</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      {</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_agents_1_1_simple_flow_field.html#a55ffac235622d0be10a83ae7b59587b2">cols</a>; ++i)</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;        {</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;          var idx = i + j * <a class="code" href="class_agents_1_1_simple_flow_field.html#a55ffac235622d0be10a83ae7b59587b2">cols</a>;</div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;          var direction = <a class="code" href="class_agents_1_1_simple_flow_field.html#a2547c3539b82420cda3af2358f743990">field</a>[idx];</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;          direction.<a class="code" href="class_agents_1_1_simple_flow_field_1_1_flow_direction.html#aafef58fb679dea417996eb3ba113ed37">Direction</a> = <a class="code" href="class_agents_1_1_simple_flow_field.html#ab4b8099efaade881f4b2690866671d91">ComputeDirectionFromPosition</a>(i, j);</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;          direction.RectRotation = Mathf.Rad2Deg(direction.Direction.Angle());</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;        }</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      }</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="_simple_flow_field_8cs_source.html#l00085">85</a> of file <a class="el" href="_simple_flow_field_8cs_source.html">SimpleFlowField.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;    {</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> j = 0; j &lt; <a class="code" href="class_agents_1_1_simple_flow_field.html#a722951049033a4b012a450c40300ffbd">rows</a>; ++j)</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      {</div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; <a class="code" href="class_agents_1_1_simple_flow_field.html#a55ffac235622d0be10a83ae7b59587b2">cols</a>; ++i)</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        {</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;          var idx = i + (j * <a class="code" href="class_agents_1_1_simple_flow_field.html#a55ffac235622d0be10a83ae7b59587b2">cols</a>);</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;          var direction = <a class="code" href="class_agents_1_1_simple_flow_field.html#a2547c3539b82420cda3af2358f743990">field</a>[idx];</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          direction.<a class="code" href="class_agents_1_1_simple_flow_field_1_1_flow_direction.html#aafef58fb679dea417996eb3ba113ed37">Direction</a> = <a class="code" href="class_agents_1_1_simple_flow_field.html#ab4b8099efaade881f4b2690866671d91">ComputeDirectionFromPosition</a>(i, j);</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;          direction.RectRotation = Mathf.Rad2Deg(direction.Direction.Angle());</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;        }</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;      }</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -331,7 +331,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Flow field </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_flow_field_8cs_source.html#l00018">18</a> of file <a class="el" href="_simple_flow_field_8cs_source.html">SimpleFlowField.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_simple_flow_field_8cs_source.html#l00020">20</a> of file <a class="el" href="_simple_flow_field_8cs_source.html">SimpleFlowField.cs</a>.</p>
 
 </div>
 </div>
@@ -375,7 +375,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Row count </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_flow_field_8cs_source.html#l00016">16</a> of file <a class="el" href="_simple_flow_field_8cs_source.html">SimpleFlowField.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_simple_flow_field_8cs_source.html#l00017">17</a> of file <a class="el" href="_simple_flow_field_8cs_source.html">SimpleFlowField.cs</a>.</p>
 
 </div>
 </div>
@@ -401,7 +401,7 @@ Protected Attributes</h2></td></tr>
 
 <p>Size </p>
 
-<p class="definition">Definition at line <a class="el" href="_simple_flow_field_8cs_source.html#l00020">20</a> of file <a class="el" href="_simple_flow_field_8cs_source.html">SimpleFlowField.cs</a>.</p>
+<p class="definition">Definition at line <a class="el" href="_simple_flow_field_8cs_source.html#l00023">23</a> of file <a class="el" href="_simple_flow_field_8cs_source.html">SimpleFlowField.cs</a>.</p>
 
 </div>
 </div>
@@ -409,11 +409,11 @@ Protected Attributes</h2></td></tr>
 <li>scripts/agents/<a class="el" href="_simple_flow_field_8cs_source.html">SimpleFlowField.cs</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclass_agents_1_1_simple_flow_field_html_a2547c3539b82420cda3af2358f743990"><div class="ttname"><a href="class_agents_1_1_simple_flow_field.html#a2547c3539b82420cda3af2358f743990">Agents.SimpleFlowField.field</a></div><div class="ttdeci">FlowDirection[] field</div><div class="ttdoc">Flow field</div><div class="ttdef"><b>Definition:</b> <a href="_simple_flow_field_8cs_source.html#l00018">SimpleFlowField.cs:18</a></div></div>
-<div class="ttc" id="aclass_agents_1_1_simple_flow_field_html_ab4b8099efaade881f4b2690866671d91"><div class="ttname"><a href="class_agents_1_1_simple_flow_field.html#ab4b8099efaade881f4b2690866671d91">Agents.SimpleFlowField.ComputeDirectionFromPosition</a></div><div class="ttdeci">virtual Vector2 ComputeDirectionFromPosition(int x, int y)</div><div class="ttdoc">Compute flow direction from a given position. Defaults with a right vector.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_flow_field_8cs_source.html#l00074">SimpleFlowField.cs:74</a></div></div>
-<div class="ttc" id="aclass_agents_1_1_simple_flow_field_html_ae1a69c1a1bbaa28179390801950ff97e"><div class="ttname"><a href="class_agents_1_1_simple_flow_field.html#ae1a69c1a1bbaa28179390801950ff97e">Agents.SimpleFlowField.size</a></div><div class="ttdeci">Vector2 size</div><div class="ttdoc">Size</div><div class="ttdef"><b>Definition:</b> <a href="_simple_flow_field_8cs_source.html#l00020">SimpleFlowField.cs:20</a></div></div>
-<div class="ttc" id="aclass_agents_1_1_simple_flow_field_1_1_flow_direction_html_aafef58fb679dea417996eb3ba113ed37"><div class="ttname"><a href="class_agents_1_1_simple_flow_field_1_1_flow_direction.html#aafef58fb679dea417996eb3ba113ed37">Agents.SimpleFlowField.FlowDirection.Direction</a></div><div class="ttdeci">Vector2 Direction</div><div class="ttdoc">Direction vector</div><div class="ttdef"><b>Definition:</b> <a href="_simple_flow_field_8cs_source.html#l00028">SimpleFlowField.cs:28</a></div></div>
-<div class="ttc" id="aclass_agents_1_1_simple_flow_field_html_a722951049033a4b012a450c40300ffbd"><div class="ttname"><a href="class_agents_1_1_simple_flow_field.html#a722951049033a4b012a450c40300ffbd">Agents.SimpleFlowField.rows</a></div><div class="ttdeci">int rows</div><div class="ttdoc">Row count</div><div class="ttdef"><b>Definition:</b> <a href="_simple_flow_field_8cs_source.html#l00016">SimpleFlowField.cs:16</a></div></div>
+<div class="ttc" id="aclass_agents_1_1_simple_flow_field_html_a2547c3539b82420cda3af2358f743990"><div class="ttname"><a href="class_agents_1_1_simple_flow_field.html#a2547c3539b82420cda3af2358f743990">Agents.SimpleFlowField.field</a></div><div class="ttdeci">FlowDirection[] field</div><div class="ttdoc">Flow field</div><div class="ttdef"><b>Definition:</b> <a href="_simple_flow_field_8cs_source.html#l00020">SimpleFlowField.cs:20</a></div></div>
+<div class="ttc" id="aclass_agents_1_1_simple_flow_field_html_ab4b8099efaade881f4b2690866671d91"><div class="ttname"><a href="class_agents_1_1_simple_flow_field.html#ab4b8099efaade881f4b2690866671d91">Agents.SimpleFlowField.ComputeDirectionFromPosition</a></div><div class="ttdeci">virtual Vector2 ComputeDirectionFromPosition(int x, int y)</div><div class="ttdoc">Compute flow direction from a given position. Defaults with a right vector.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_flow_field_8cs_source.html#l00077">SimpleFlowField.cs:77</a></div></div>
+<div class="ttc" id="aclass_agents_1_1_simple_flow_field_html_ae1a69c1a1bbaa28179390801950ff97e"><div class="ttname"><a href="class_agents_1_1_simple_flow_field.html#ae1a69c1a1bbaa28179390801950ff97e">Agents.SimpleFlowField.size</a></div><div class="ttdeci">Vector2 size</div><div class="ttdoc">Size</div><div class="ttdef"><b>Definition:</b> <a href="_simple_flow_field_8cs_source.html#l00023">SimpleFlowField.cs:23</a></div></div>
+<div class="ttc" id="aclass_agents_1_1_simple_flow_field_1_1_flow_direction_html_aafef58fb679dea417996eb3ba113ed37"><div class="ttname"><a href="class_agents_1_1_simple_flow_field_1_1_flow_direction.html#aafef58fb679dea417996eb3ba113ed37">Agents.SimpleFlowField.FlowDirection.Direction</a></div><div class="ttdeci">Vector2 Direction</div><div class="ttdoc">Direction vector</div><div class="ttdef"><b>Definition:</b> <a href="_simple_flow_field_8cs_source.html#l00031">SimpleFlowField.cs:31</a></div></div>
+<div class="ttc" id="aclass_agents_1_1_simple_flow_field_html_a722951049033a4b012a450c40300ffbd"><div class="ttname"><a href="class_agents_1_1_simple_flow_field.html#a722951049033a4b012a450c40300ffbd">Agents.SimpleFlowField.rows</a></div><div class="ttdeci">int rows</div><div class="ttdoc">Row count</div><div class="ttdef"><b>Definition:</b> <a href="_simple_flow_field_8cs_source.html#l00017">SimpleFlowField.cs:17</a></div></div>
 <div class="ttc" id="aclass_agents_1_1_simple_flow_field_html_a392ad92185158f13870e42d2655e6843"><div class="ttname"><a href="class_agents_1_1_simple_flow_field.html#a392ad92185158f13870e42d2655e6843">Agents.SimpleFlowField.Resolution</a></div><div class="ttdeci">int Resolution</div><div class="ttdoc">Grid resolution</div><div class="ttdef"><b>Definition:</b> <a href="_simple_flow_field_8cs_source.html#l00011">SimpleFlowField.cs:11</a></div></div>
 <div class="ttc" id="aclass_agents_1_1_simple_flow_field_html_a55ffac235622d0be10a83ae7b59587b2"><div class="ttname"><a href="class_agents_1_1_simple_flow_field.html#a55ffac235622d0be10a83ae7b59587b2">Agents.SimpleFlowField.cols</a></div><div class="ttdeci">int cols</div><div class="ttdoc">Column count</div><div class="ttdef"><b>Definition:</b> <a href="_simple_flow_field_8cs_source.html#l00014">SimpleFlowField.cs:14</a></div></div>
 <!-- start footer part -->

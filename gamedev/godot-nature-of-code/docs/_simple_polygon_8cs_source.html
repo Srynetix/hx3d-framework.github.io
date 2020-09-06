@@ -78,17 +78,17 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_polygon.html">    8</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_physics_1_1_simple_polygon.html">SimplePolygon</a> : RigidBody2D</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  {</div>
 <div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_polygon.html#afb2626e8817d36c8941a0e7d2d24211a">   11</a></span>&#160;    <span class="keyword">public</span> Vector2[] <a class="code" href="class_physics_1_1_simple_polygon.html#afb2626e8817d36c8941a0e7d2d24211a">Points</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">   13</a></span>&#160;    <span class="keyword">public</span> Color <a class="code" href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">BaseColor</a>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">private</span> CollisionShape2D collisionShape2D;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">private</span> ConvexPolygonShape2D polygonShape2D;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span> Color[] colors;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_polygon.html#ac9927442da5b3d231d840fc91a0af99e">   22</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_physics_1_1_simple_polygon.html#ac9927442da5b3d231d840fc91a0af99e">SimplePolygon</a>()</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      polygonShape2D = <span class="keyword">new</span> ConvexPolygonShape2D();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      collisionShape2D = <span class="keyword">new</span> CollisionShape2D();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      collisionShape2D.Shape = polygonShape2D;</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">   14</a></span>&#160;    <span class="keyword">public</span> Color <a class="code" href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">BaseColor</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">private</span> readonly CollisionShape2D collisionShape2D;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span> readonly ConvexPolygonShape2D polygonShape2D;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">private</span> Color[] colors;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_polygon.html#ac9927442da5b3d231d840fc91a0af99e">   23</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_physics_1_1_simple_polygon.html#ac9927442da5b3d231d840fc91a0af99e">SimplePolygon</a>()</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      polygonShape2D = <span class="keyword">new</span> ConvexPolygonShape2D();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      collisionShape2D = <span class="keyword">new</span> CollisionShape2D { Shape = polygonShape2D };</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
@@ -112,8 +112,8 @@ $(function() {
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_physics_html"><div class="ttname"><a href="namespace_physics.html">Physics</a></div><div class="ttdoc">Physics-related primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_ball_8cs_source.html#l00007">SimpleBall.cs:8</a></div></div>
 <div class="ttc" id="aclass_physics_1_1_simple_polygon_html_afb2626e8817d36c8941a0e7d2d24211a"><div class="ttname"><a href="class_physics_1_1_simple_polygon.html#afb2626e8817d36c8941a0e7d2d24211a">Physics.SimplePolygon.Points</a></div><div class="ttdeci">Vector2[] Points</div><div class="ttdoc">Polygon points</div><div class="ttdef"><b>Definition:</b> <a href="_simple_polygon_8cs_source.html#l00011">SimplePolygon.cs:11</a></div></div>
-<div class="ttc" id="aclass_physics_1_1_simple_polygon_html_ac9927442da5b3d231d840fc91a0af99e"><div class="ttname"><a href="class_physics_1_1_simple_polygon.html#ac9927442da5b3d231d840fc91a0af99e">Physics.SimplePolygon.SimplePolygon</a></div><div class="ttdeci">SimplePolygon()</div><div class="ttdoc">Create a default polygon.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_polygon_8cs_source.html#l00022">SimplePolygon.cs:22</a></div></div>
-<div class="ttc" id="aclass_physics_1_1_simple_polygon_html_a4b2c395c8e0a0721d8c1bf1f4f05d1d9"><div class="ttname"><a href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">Physics.SimplePolygon.BaseColor</a></div><div class="ttdeci">Color BaseColor</div><div class="ttdoc">Color</div><div class="ttdef"><b>Definition:</b> <a href="_simple_polygon_8cs_source.html#l00013">SimplePolygon.cs:13</a></div></div>
+<div class="ttc" id="aclass_physics_1_1_simple_polygon_html_ac9927442da5b3d231d840fc91a0af99e"><div class="ttname"><a href="class_physics_1_1_simple_polygon.html#ac9927442da5b3d231d840fc91a0af99e">Physics.SimplePolygon.SimplePolygon</a></div><div class="ttdeci">SimplePolygon()</div><div class="ttdoc">Create a default polygon.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_polygon_8cs_source.html#l00023">SimplePolygon.cs:23</a></div></div>
+<div class="ttc" id="aclass_physics_1_1_simple_polygon_html_a4b2c395c8e0a0721d8c1bf1f4f05d1d9"><div class="ttname"><a href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">Physics.SimplePolygon.BaseColor</a></div><div class="ttdeci">Color BaseColor</div><div class="ttdoc">Color</div><div class="ttdef"><b>Definition:</b> <a href="_simple_polygon_8cs_source.html#l00014">SimplePolygon.cs:14</a></div></div>
 <div class="ttc" id="aclass_physics_1_1_simple_polygon_html"><div class="ttname"><a href="class_physics_1_1_simple_polygon.html">Physics.SimplePolygon</a></div><div class="ttdoc">Simple physics polygon.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_polygon_8cs_source.html#l00008">SimplePolygon.cs:9</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
