@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -77,105 +77,105 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples_1_1_chapter5.html">Examples.Chapter5</a></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter5_1_1_c5_example6.html">   11</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter5_1_1_c5_example6.html">C5Example6</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  {</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter5_1_1_c5_example6.html#a8e341770c32cc2493aa19b8d792d38bb">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter5_1_1_c5_example6.html#a8e341770c32cc2493aa19b8d792d38bb">GetSummary</a>()</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 5.6:\n&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        + <span class="stringliteral">&quot;Distance Joint\n\n&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        + <span class="stringliteral">&quot;Using PinJoint2D to simulate distance joints.&quot;</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter5_1_1_c5_example6.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter5_1_1_c5_example6.html">C5Example6</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter5_1_1_c5_example6.html#a8e341770c32cc2493aa19b8d792d38bb">   13</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter5_1_1_c5_example6.html#a8e341770c32cc2493aa19b8d792d38bb">GetSummary</a>()</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 5.6:\n&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;              + <span class="stringliteral">&quot;Distance Joint\n\n&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;              + <span class="stringliteral">&quot;Using PinJoint2D to simulate distance joints.&quot;</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">private</span> <span class="keyword">class </span>DoubleBall : Node2D</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      <span class="keyword">public</span> <span class="keywordtype">float</span> OutlineWidth = 2;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      <span class="keyword">public</span> Color OutlineColor = Colors.LightBlue;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      <span class="keyword">public</span> Color BaseColor = Colors.White;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      <span class="keyword">public</span> <span class="keywordtype">float</span> Distance = 10;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keyword">public</span> <span class="keywordtype">float</span> Radius = 20;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">private</span> <span class="keyword">class </span>DoubleBall : Node2D</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">float</span> OutlineWidth = 2;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keyword">public</span> Color OutlineColor = Colors.LightBlue;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            <span class="keyword">public</span> Color BaseColor = Colors.White;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">float</span> Distance = 10;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keyword">public</span> <span class="keywordtype">float</span> Radius = 20;</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      <span class="keyword">private</span> <a class="code" href="class_physics_1_1_simple_ball.html">SimpleBall</a> ball1;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;      <span class="keyword">private</span> <a class="code" href="class_physics_1_1_simple_ball.html">SimpleBall</a> ball2;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            <span class="keyword">private</span> <a class="code" href="class_physics_1_1_simple_ball.html">SimpleBall</a> ball1;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;            <span class="keyword">private</span> <a class="code" href="class_physics_1_1_simple_ball.html">SimpleBall</a> ball2;</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        ball1 = <span class="keyword">new</span> <a class="code" href="class_physics_1_1_simple_ball.html">SimpleBall</a></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;          Radius = Radius,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;          Position = <span class="keyword">new</span> Vector2(-Distance, -Distance)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        };</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        ball2 = <span class="keyword">new</span> <a class="code" href="class_physics_1_1_simple_ball.html">SimpleBall</a></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;          Radius = Radius,</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;          Position = <span class="keyword">new</span> Vector2(Distance, Distance)</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        };</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        AddChild(ball1);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        AddChild(ball2);</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                ball1 = <span class="keyword">new</span> <a class="code" href="class_physics_1_1_simple_ball.html">SimpleBall</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    Radius = Radius,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    Position = <span class="keyword">new</span> Vector2(-Distance, -Distance)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                };</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                ball2 = <span class="keyword">new</span> <a class="code" href="class_physics_1_1_simple_ball.html">SimpleBall</a></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                {</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                    Radius = Radius,</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    Position = <span class="keyword">new</span> Vector2(Distance, Distance)</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                };</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                AddChild(ball1);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                AddChild(ball2);</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        var join = <span class="keyword">new</span> PinJoint2D</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;          NodeA = ball1.GetPath(),</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;          NodeB = ball2.GetPath(),</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;          Softness = 0.1f</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        };</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        ball1.AddChild(join);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                var join = <span class="keyword">new</span> PinJoint2D</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                    NodeA = ball1.GetPath(),</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                    NodeB = ball2.GetPath(),</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    Softness = 0.1f</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                };</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                ball1.AddChild(join);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            }</div>
 <div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Draw()</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      {</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        DrawLine(ball1.Position, ball2.Position, Colors.White, 2);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      }</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Draw()</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            {</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                DrawLine(ball1.Position, ball2.Position, Colors.White, 2);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            }</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        Update();</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      }</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    }</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;            <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                Update();</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        }</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    {</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      var size = GetViewportRect().Size;</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> floorHeight = 25;</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> offset = 50;</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        {</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            var size = GetViewportRect().Size;</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">int</span> floorHeight = 25;</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">int</span> offset = 50;</div>
 <div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      <span class="comment">// Add left floor</span></div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      var leftFloor = <span class="keyword">new</span> <a class="code" href="class_physics_1_1_simple_wall.html">SimpleWall</a></div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      {</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        BodySize = <span class="keyword">new</span> Vector2(size.x / 2.5f, floorHeight),</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        Position = <span class="keyword">new</span> Vector2((size.x / 2.5f / 2) + offset, size.y)</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      };</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      AddChild(leftFloor);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            <span class="comment">// Add left floor</span></div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            var leftFloor = <span class="keyword">new</span> <a class="code" href="class_physics_1_1_simple_wall.html">SimpleWall</a></div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            {</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;                BodySize = <span class="keyword">new</span> Vector2(size.x / 2.5f, floorHeight),</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;                Position = <span class="keyword">new</span> Vector2((size.x / 2.5f / 2) + offset, size.y)</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            };</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            AddChild(leftFloor);</div>
 <div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160; </div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      <span class="comment">// Add right floor</span></div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;      var rightFloor = <span class="keyword">new</span> <a class="code" href="class_physics_1_1_simple_wall.html">SimpleWall</a></div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;      {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        BodySize = <span class="keyword">new</span> Vector2(size.x / 2.5f, floorHeight),</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;        Position = <span class="keyword">new</span> Vector2(size.x - (size.x / 2.5f / 2) - offset, size.y - (offset * 2))</div>
-<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;      };</div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      AddChild(rightFloor);</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            <span class="comment">// Add right floor</span></div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;            var rightFloor = <span class="keyword">new</span> <a class="code" href="class_physics_1_1_simple_wall.html">SimpleWall</a></div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;            {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;                BodySize = <span class="keyword">new</span> Vector2(size.x / 2.5f, floorHeight),</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;                Position = <span class="keyword">new</span> Vector2(size.x - (size.x / 2.5f / 2) - offset, size.y - (offset * 2))</div>
+<div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160;            };</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            AddChild(rightFloor);</div>
 <div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160; </div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      var spawner = <span class="keyword">new</span> <a class="code" href="class_utils_1_1_simple_touch_spawner.html">SimpleTouchSpawner</a></div>
-<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;      {</div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;        SpawnFunction = (position) =&gt;</div>
-<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;        {</div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;          <span class="keywordflow">return</span> <span class="keyword">new</span> DoubleBall</div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;          {</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;            Distance = 20,</div>
-<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;            Radius = 10,</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;            RotationDegrees = <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a493dfce1b52671313b5b9917ad393aff">RandRangef</a>(0, 360),</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;            GlobalPosition = position</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;          };</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;        }</div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;      };</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;      AddChild(spawner);</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            var spawner = <span class="keyword">new</span> <a class="code" href="class_utils_1_1_simple_touch_spawner.html">SimpleTouchSpawner</a></div>
+<div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160;            {</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;                SpawnFunction = (position) =&gt;</div>
+<div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160;                {</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;                    <span class="keywordflow">return</span> <span class="keyword">new</span> DoubleBall</div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;                    {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;                        Distance = 20,</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;                        Radius = 10,</div>
+<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;                        RotationDegrees = <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a493dfce1b52671313b5b9917ad393aff">RandRangef</a>(0, 360),</div>
+<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;                        GlobalPosition = position</div>
+<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;                    };</div>
+<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160;                }</div>
+<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;            };</div>
+<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;            AddChild(spawner);</div>
 <div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160; </div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="keyword">const</span> <span class="keywordtype">int</span> bodyCount = 10;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; bodyCount; ++i)</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      {</div>
-<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;        spawner.SpawnBody(<a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">RandVector2</a>(offset * 2, size.x - (offset * 2), offset * 2, size.y - (offset * 2)));</div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      }</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;    }</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;  }</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keyword">const</span> <span class="keywordtype">int</span> bodyCount = 10;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; bodyCount; ++i)</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            {</div>
+<div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;                spawner.SpawnBody(<a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">RandVector2</a>(offset * 2, size.x - (offset * 2), offset * 2, size.y - (offset * 2)));</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            }</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        }</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    }</div>
 <div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_examples_1_1_chapter5_1_1_c5_example6_html_a8e341770c32cc2493aa19b8d792d38bb"><div class="ttname"><a href="class_examples_1_1_chapter5_1_1_c5_example6.html#a8e341770c32cc2493aa19b8d792d38bb">Examples.Chapter5.C5Example6.GetSummary</a></div><div class="ttdeci">string GetSummary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c5_example6_8cs_source.html#l00013">C5Example6.cs:13</a></div></div>
@@ -184,10 +184,10 @@ $(function() {
 <div class="ttc" id="aclass_math_utils_html"><div class="ttname"><a href="class_math_utils.html">MathUtils</a></div><div class="ttdoc">Math utility functions</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00006">MathUtils.cs:7</a></div></div>
 <div class="ttc" id="anamespace_physics_html"><div class="ttname"><a href="namespace_physics.html">Physics</a></div><div class="ttdoc">Physics-related primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_ball_8cs_source.html#l00007">SimpleBall.cs:8</a></div></div>
 <div class="ttc" id="anamespace_utils_html"><div class="ttname"><a href="namespace_utils.html">Utils</a></div><div class="ttdoc">Utilities.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_touch_spawner_8cs_source.html#l00006">SimpleTouchSpawner.cs:7</a></div></div>
-<div class="ttc" id="aclass_math_utils_html_a493dfce1b52671313b5b9917ad393aff"><div class="ttname"><a href="class_math_utils.html#a493dfce1b52671313b5b9917ad393aff">MathUtils.RandRangef</a></div><div class="ttdeci">static float RandRangef(float min, float max)</div><div class="ttdoc">Return a float RandRange.</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00046">MathUtils.cs:46</a></div></div>
+<div class="ttc" id="aclass_math_utils_html_a493dfce1b52671313b5b9917ad393aff"><div class="ttname"><a href="class_math_utils.html#a493dfce1b52671313b5b9917ad393aff">MathUtils.RandRangef</a></div><div class="ttdeci">static float RandRangef(float min, float max)</div><div class="ttdoc">Return a float RandRange.</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00057">MathUtils.cs:57</a></div></div>
 <div class="ttc" id="aclass_physics_1_1_simple_wall_html"><div class="ttname"><a href="class_physics_1_1_simple_wall.html">Physics.SimpleWall</a></div><div class="ttdoc">Simple static wall.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_wall_8cs_source.html#l00008">SimpleWall.cs:9</a></div></div>
 <div class="ttc" id="aclass_utils_1_1_simple_touch_spawner_html"><div class="ttname"><a href="class_utils_1_1_simple_touch_spawner.html">Utils.SimpleTouchSpawner</a></div><div class="ttdoc">Touch spawner. Touch anywhere and spawn something. Can also spawn on demand using SpawnBody.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_touch_spawner_8cs_source.html#l00013">SimpleTouchSpawner.cs:14</a></div></div>
-<div class="ttc" id="aclass_math_utils_html_a930682fc1b0e30eb85d7cc9d33849e5e"><div class="ttname"><a href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">MathUtils.RandVector2</a></div><div class="ttdeci">static Vector2 RandVector2(Vector2 rangeX, Vector2 rangeY)</div><div class="ttdoc">Return a Vector with coordinates in a random range (vector limits).</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00081">MathUtils.cs:81</a></div></div>
+<div class="ttc" id="aclass_math_utils_html_a930682fc1b0e30eb85d7cc9d33849e5e"><div class="ttname"><a href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">MathUtils.RandVector2</a></div><div class="ttdeci">static Vector2 RandVector2(Vector2 rangeX, Vector2 rangeY)</div><div class="ttdoc">Return a Vector with coordinates in a random range (vector limits).</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00092">MathUtils.cs:92</a></div></div>
 <div class="ttc" id="aclass_physics_1_1_simple_ball_html"><div class="ttname"><a href="class_physics_1_1_simple_ball.html">Physics.SimpleBall</a></div><div class="ttdoc">Simple physics ball.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_ball_8cs_source.html#l00012">SimpleBall.cs:13</a></div></div>
 <div class="ttc" id="ainterface_examples_1_1_i_example_html"><div class="ttname"><a href="interface_examples_1_1_i_example.html">Examples.IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00006">Example.cs:7</a></div></div>
 <!-- start footer part -->

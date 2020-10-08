@@ -1,4 +1,21 @@
 var searchData=
 [
-  ['x_480',['x',['../class_drawing_1_1_simple_walker.html#afa07cd808024eaa5d5fe1959fd2499b2',1,'Drawing::SimpleWalker']]]
+  ['waittime_552',['WaitTime',['../class_automata_1_1_cellular_automata1_d.html#a83e8f210fa4b89ff21214948f32a6e90',1,'Automata.CellularAutomata1D.WaitTime()'],['../class_automata_1_1_cellular_automata2_d.html#aebc33adf56fa87994d035b11b5aec3eb',1,'Automata.CellularAutomata2D.WaitTime()']]],
+  ['wasalive_553',['WasAlive',['../class_automata_1_1_cell.html#a2c93dd6904a961cbcaf71144dbde7a52',1,'Automata::Cell']]],
+  ['whitedotalphatexture_554',['WhiteDotAlphaTexture',['../class_assets_1_1_simple_default_texture.html#adb2b9d7d8c659a189c20b0f32170784d',1,'Assets::SimpleDefaultTexture']]],
+  ['whitedotalphawithoutlinetexture_555',['WhiteDotAlphaWithOutlineTexture',['../class_assets_1_1_simple_default_texture.html#ae1ea2f164754b0a99d551553ce3ddd53',1,'Assets::SimpleDefaultTexture']]],
+  ['whitedotblurtexture_556',['WhiteDotBlurTexture',['../class_assets_1_1_simple_default_texture.html#a636969ce17a40fc01566b0d05b83400e',1,'Assets::SimpleDefaultTexture']]],
+  ['whitedotoutlineonlytexture_557',['WhiteDotOutlineOnlyTexture',['../class_assets_1_1_simple_default_texture.html#adebfba67ba18080fcef9a8147f9fa0de',1,'Assets::SimpleDefaultTexture']]],
+  ['whitedottexture_558',['WhiteDotTexture',['../class_assets_1_1_simple_default_texture.html#a9802d4bb80600df18429aad25cc64246',1,'Assets::SimpleDefaultTexture']]],
+  ['width_559',['Width',['../class_drawing_1_1_simple_line_sprite.html#ade536b9308abe21c7bbbf485a2d4bfd8',1,'Drawing::SimpleLineSprite']]],
+  ['wingcoloralpha_560',['WingColorAlpha',['../class_ecosystem_1_1_ecosystem_1_1_base_fly.html#a24d419e90f2da140dcc61b7b7ce47773',1,'Ecosystem::Ecosystem::BaseFly']]],
+  ['wingrotationfactor_561',['WingRotationFactor',['../class_ecosystem_1_1_ecosystem_1_1_base_fly.html#a30ab1d6d6e3fedafe7a7c9e96a6a9f16',1,'Ecosystem::Ecosystem::BaseFly']]],
+  ['wingsize_562',['WingSize',['../class_ecosystem_1_1_ecosystem_1_1_base_fly.html#ab261efab809044a2ad7becb40cacdc78',1,'Ecosystem::Ecosystem::BaseFly']]],
+  ['wingspeed_563',['WingSpeed',['../class_ecosystem_1_1_ecosystem_1_1_base_fly.html#aa9c05e03f37276da0b8384e7fad3561d',1,'Ecosystem::Ecosystem::BaseFly']]],
+  ['withalpha_564',['WithAlpha',['../class_color_extensions.html#a9f66b03ebc913a3a2d605fe0ceabcea6',1,'ColorExtensions']]],
+  ['wrap_565',['Wrap',['../class_forces_1_1_simple_mover.html#ae8cb967d177fef6f7ee66ab40aae12f5aa212b19ef5f2fb30acf92e6cbccc1f2d',1,'Forces.SimpleMover.Wrap()'],['../namespace_automata.html#a79e93f2c9e1adc15156b8a30dbb3f97aaa212b19ef5f2fb30acf92e6cbccc1f2d',1,'Automata.Wrap()']]],
+  ['wrapbehavior_566',['WrapBehavior',['../class_automata_1_1_cellular_automata2_d.html#a68bb54e1fc5c65cad66ca90cebf25cd7',1,'Automata::CellularAutomata2D']]],
+  ['wrapbehaviorenum_567',['WrapBehaviorEnum',['../namespace_automata.html#a79e93f2c9e1adc15156b8a30dbb3f97a',1,'Automata']]],
+  ['wrapmode_568',['WrapMode',['../class_forces_1_1_simple_mover.html#a6815945e85383d57ba9ee54ce25ffc6b',1,'Forces::SimpleMover']]],
+  ['wrapmodeenum_569',['WrapModeEnum',['../class_forces_1_1_simple_mover.html#ae8cb967d177fef6f7ee66ab40aae12f5',1,'Forces::SimpleMover']]]
 ];

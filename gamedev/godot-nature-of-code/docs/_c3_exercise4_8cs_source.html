@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -76,51 +76,51 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples_1_1_chapter3.html">Examples.Chapter3</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter3_1_1_c3_exercise4.html">   10</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter3_1_1_c3_exercise4.html">C3Exercise4</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  {</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter3_1_1_c3_exercise4.html#af59d08f65c6ef8f479ab33492ee67d4b">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter3_1_1_c3_exercise4.html#af59d08f65c6ef8f479ab33492ee67d4b">GetSummary</a>()</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Exercise 3.4:\n&quot;</span></div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        + <span class="stringliteral">&quot;Spiral Path&quot;</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    }</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter3_1_1_c3_exercise4.html">   10</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter3_1_1_c3_exercise4.html">C3Exercise4</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter3_1_1_c3_exercise4.html#af59d08f65c6ef8f479ab33492ee67d4b">   12</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter3_1_1_c3_exercise4.html#af59d08f65c6ef8f479ab33492ee67d4b">GetSummary</a>()</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Exercise 3.4:\n&quot;</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;              + <span class="stringliteral">&quot;Spiral Path&quot;</span>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        }</div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> Width = 10;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> Iterations = 20;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> MaxTheta = 200;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">float</span> Width = 10;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">float</span> Iterations = 20;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">float</span> MaxTheta = 200;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">float</span> theta = 0;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">private</span> <span class="keywordtype">float</span> margin = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">float</span> theta = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">private</span> <span class="keywordtype">float</span> margin = 0;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    {</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      var canvas = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_draw_canvas.html">DrawCanvas</a>((pen) =&gt;</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">// Stop when theta &gt; MaxTheta</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keywordflow">if</span> (theta &lt; MaxTheta)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; Iterations; ++i)</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;          {</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            <span class="keywordtype">float</span> x = (Width + margin) * Mathf.Cos(theta);</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordtype">float</span> y = (Width + margin) * Mathf.Sin(theta);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            var target = <span class="keyword">new</span> Vector2(x, y);</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            var size = GetViewportRect().Size;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;        {</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            var canvas = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_draw_canvas.html">DrawCanvas</a>((pen) =&gt;</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="comment">// Stop when theta &gt; MaxTheta</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keywordflow">if</span> (theta &lt; MaxTheta)</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                {</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; Iterations; ++i)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                    {</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                        <span class="keywordtype">float</span> x = (Width + margin) * Mathf.Cos(theta);</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                        <span class="keywordtype">float</span> y = (Width + margin) * Mathf.Sin(theta);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                        var target = <span class="keyword">new</span> Vector2(x, y);</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                        var size = GetViewportRect().Size;</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            pen.DrawCircle((size / 2) + target, Width / 2, <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#ae1a53609ecddb851c0c0cbb93e1b3ecb">RandColor</a>());</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                        pen.DrawCircle((size / 2) + target, Width / 2, <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#ae1a53609ecddb851c0c0cbb93e1b3ecb">RandColor</a>());</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            theta += 0.016f;</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            margin += 0.016f * 3;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;          }</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      });</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      canvas.<a class="code" href="class_drawing_1_1_draw_canvas.html#ac8a0b4039eb63771a5c9a723c1d1f23b">QueueClearDrawing</a>(Color.Color8(45, 45, 45));</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      AddChild(canvas);</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                        theta += 0.016f;</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                        margin += 0.016f * 3;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    }</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            });</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            canvas.<a class="code" href="class_drawing_1_1_draw_canvas.html#ac8a0b4039eb63771a5c9a723c1d1f23b">QueueClearDrawing</a>(Color.Color8(45, 45, 45));</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            AddChild(canvas);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        }</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
 <div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_drawing_html"><div class="ttname"><a href="namespace_drawing.html">Drawing</a></div><div class="ttdoc">Draw primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00006">DrawCanvas.cs:7</a></div></div>
-<div class="ttc" id="aclass_drawing_1_1_draw_canvas_html_ac8a0b4039eb63771a5c9a723c1d1f23b"><div class="ttname"><a href="class_drawing_1_1_draw_canvas.html#ac8a0b4039eb63771a5c9a723c1d1f23b">Drawing.DrawCanvas.QueueClearDrawing</a></div><div class="ttdeci">void QueueClearDrawing(Color color)</div><div class="ttdoc">Queue a clear draw action with a specific color.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00039">DrawCanvas.cs:39</a></div></div>
-<div class="ttc" id="aclass_math_utils_html_ae1a53609ecddb851c0c0cbb93e1b3ecb"><div class="ttname"><a href="class_math_utils.html#ae1a53609ecddb851c0c0cbb93e1b3ecb">MathUtils.RandColor</a></div><div class="ttdeci">static Color RandColor()</div><div class="ttdoc">Return a random color.</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00107">MathUtils.cs:107</a></div></div>
+<div class="ttc" id="aclass_drawing_1_1_draw_canvas_html_ac8a0b4039eb63771a5c9a723c1d1f23b"><div class="ttname"><a href="class_drawing_1_1_draw_canvas.html#ac8a0b4039eb63771a5c9a723c1d1f23b">Drawing.DrawCanvas.QueueClearDrawing</a></div><div class="ttdeci">void QueueClearDrawing(Color color)</div><div class="ttdoc">Queue a clear draw action with a specific color.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00044">DrawCanvas.cs:44</a></div></div>
+<div class="ttc" id="aclass_math_utils_html_ae1a53609ecddb851c0c0cbb93e1b3ecb"><div class="ttname"><a href="class_math_utils.html#ae1a53609ecddb851c0c0cbb93e1b3ecb">MathUtils.RandColor</a></div><div class="ttdeci">static Color RandColor()</div><div class="ttdoc">Return a random color.</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00118">MathUtils.cs:118</a></div></div>
 <div class="ttc" id="aclass_examples_1_1_chapter3_1_1_c3_exercise4_html"><div class="ttname"><a href="class_examples_1_1_chapter3_1_1_c3_exercise4.html">Examples.Chapter3.C3Exercise4</a></div><div class="ttdoc">Exercise 3.4 - Spiral Path.</div><div class="ttdef"><b>Definition:</b> <a href="_c3_exercise4_8cs_source.html#l00010">C3Exercise4.cs:11</a></div></div>
 <div class="ttc" id="aclass_math_utils_html"><div class="ttname"><a href="class_math_utils.html">MathUtils</a></div><div class="ttdoc">Math utility functions</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00006">MathUtils.cs:7</a></div></div>
 <div class="ttc" id="aclass_drawing_1_1_draw_canvas_html"><div class="ttname"><a href="class_drawing_1_1_draw_canvas.html">Drawing.DrawCanvas</a></div><div class="ttdoc">Canvas used to draw shapes without viewport auto-clear.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00011">DrawCanvas.cs:12</a></div></div>

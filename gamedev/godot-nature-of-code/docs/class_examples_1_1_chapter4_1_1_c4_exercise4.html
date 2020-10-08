@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -98,6 +98,16 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adc2613069fc1c6ed49800a211d932adc inherit pub_methods_class_examples_1_1_chapter3_1_1_c3_exercise5"><td class="memItemLeft" align="right" valign="top">string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_examples_1_1_chapter3_1_1_c3_exercise5.html#adc2613069fc1c6ed49800a211d932adc">GetSummary</a> ()</td></tr>
 <tr class="memdesc:adc2613069fc1c6ed49800a211d932adc inherit pub_methods_class_examples_1_1_chapter3_1_1_c3_exercise5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Output a summary text  <a href="class_examples_1_1_chapter3_1_1_c3_exercise5.html#adc2613069fc1c6ed49800a211d932adc">More...</a><br /></td></tr>
 <tr class="separator:adc2613069fc1c6ed49800a211d932adc inherit pub_methods_class_examples_1_1_chapter3_1_1_c3_exercise5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
+Additional Inherited Members</h2></td></tr>
+<tr class="inherit_header pro_attribs_class_examples_1_1_chapter3_1_1_c3_exercise5"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_examples_1_1_chapter3_1_1_c3_exercise5')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_examples_1_1_chapter3_1_1_c3_exercise5.html">Examples.Chapter3.C3Exercise5</a></td></tr>
+<tr class="memitem:a8212ffeb299164a58a584ae6845c4dc4 inherit pro_attribs_class_examples_1_1_chapter3_1_1_c3_exercise5"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_virtual_controls.html">VirtualControls</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_examples_1_1_chapter3_1_1_c3_exercise5.html#a8212ffeb299164a58a584ae6845c4dc4">controls</a></td></tr>
+<tr class="memdesc:a8212ffeb299164a58a584ae6845c4dc4 inherit pro_attribs_class_examples_1_1_chapter3_1_1_c3_exercise5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Virtual controls  <a href="class_examples_1_1_chapter3_1_1_c3_exercise5.html#a8212ffeb299164a58a584ae6845c4dc4">More...</a><br /></td></tr>
+<tr class="separator:a8212ffeb299164a58a584ae6845c4dc4 inherit pro_attribs_class_examples_1_1_chapter3_1_1_c3_exercise5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:acca8ecc84bf36049d4e339ac6b74e6f7 inherit pro_attribs_class_examples_1_1_chapter3_1_1_c3_exercise5"><td class="memItemLeft" align="right" valign="top">Spaceship&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_examples_1_1_chapter3_1_1_c3_exercise5.html#acca8ecc84bf36049d4e339ac6b74e6f7">spaceship</a></td></tr>
+<tr class="memdesc:acca8ecc84bf36049d4e339ac6b74e6f7 inherit pro_attribs_class_examples_1_1_chapter3_1_1_c3_exercise5"><td class="mdescLeft">&#160;</td><td class="mdescRight">Spaceship  <a href="class_examples_1_1_chapter3_1_1_c3_exercise5.html#acca8ecc84bf36049d4e339ac6b74e6f7">More...</a><br /></td></tr>
+<tr class="separator:acca8ecc84bf36049d4e339ac6b74e6f7 inherit pro_attribs_class_examples_1_1_chapter3_1_1_c3_exercise5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Exercise 4.4 - Asteroids with <a class="el" href="namespace_particles.html" title="Particle-related primitives.">Particles</a>. </p>
@@ -134,12 +144,12 @@ Public Member Functions</h2></td></tr>
 <p>Implements <a class="el" href="interface_examples_1_1_i_example.html#a9e3f677dd4d9e2a5723ec68cb717da2b">Examples.IExample</a>.</p>
 
 <p class="definition">Definition at line <a class="el" href="_c4_exercise4_8cs_source.html#l00013">13</a> of file <a class="el" href="_c4_exercise4_8cs_source.html">C4Exercise4.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Exercise 4.4:\n&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        + <span class="stringliteral">&quot;Asteroids with Particles\n\n&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        + <span class="stringliteral">&quot;On desktop, use left and right arrow keys to turn, then up arrow key to thrust.\n&quot;</span></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        + <span class="stringliteral">&quot;On mobile, you can use the virtual controls.&quot;</span>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    }</div>
+<div class="fragment"><div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Exercise 4.4:\n&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;              + <span class="stringliteral">&quot;Asteroids with Particles\n\n&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;              + <span class="stringliteral">&quot;On desktop, use left and right arrow keys to turn, then up arrow key to thrust.\n&quot;</span></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;              + <span class="stringliteral">&quot;On mobile, you can use the virtual controls.&quot;</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>

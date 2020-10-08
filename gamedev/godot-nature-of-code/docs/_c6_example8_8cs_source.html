@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -79,63 +79,63 @@ $(function() {
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples_1_1_chapter6.html">Examples.Chapter6</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_example8.html">   12</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter6_1_1_c6_example8.html">C6Example8</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  {</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_example8.html#ac81faa458552ce5ff6882fa4fd2f28f7">   14</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter6_1_1_c6_example8.html#ac81faa458552ce5ff6882fa4fd2f28f7">GetSummary</a>()</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 6.8:\nSeek and Separate&quot;</span>;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_example8.html">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter6_1_1_c6_example8.html">C6Example8</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_example8.html#ac81faa458552ce5ff6882fa4fd2f28f7">   14</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter6_1_1_c6_example8.html#ac81faa458552ce5ff6882fa4fd2f28f7">GetSummary</a>()</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 6.8:\nSeek and Separate&quot;</span>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        }</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">private</span> <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a> targetMover;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">int</span> vehicleCount = 50;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">private</span> readonly List&lt;SimpleVehicle&gt; vehicles = <span class="keyword">new</span> List&lt;SimpleVehicle&gt;();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keyword">private</span> <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a> targetMover;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">int</span> vehicleCount = 50;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keyword">private</span> readonly List&lt;SimpleVehicle&gt; vehicles = <span class="keyword">new</span> List&lt;SimpleVehicle&gt;();</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      var size = GetViewportRect().Size;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            var size = GetViewportRect().Size;</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      var spawner = <span class="keyword">new</span> <a class="code" href="class_utils_1_1_simple_touch_spawner.html">SimpleTouchSpawner</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        SpawnFunction = (pos) =&gt;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;          var vehicle = <span class="keyword">new</span> <a class="code" href="class_agents_1_1_round_vehicle.html">RoundVehicle</a></div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          {</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;            VehicleGroupList = vehicles,</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            SeparationEnabled = <span class="keyword">true</span>,</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            Target = targetMover,</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            Position = pos,</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            var spawner = <span class="keyword">new</span> <a class="code" href="class_utils_1_1_simple_touch_spawner.html">SimpleTouchSpawner</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                SpawnFunction = (pos) =&gt;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                    var vehicle = <span class="keyword">new</span> <a class="code" href="class_agents_1_1_round_vehicle.html">RoundVehicle</a></div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    {</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                        VehicleGroupList = vehicles,</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                        SeparationEnabled = <span class="keyword">true</span>,</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                        Target = targetMover,</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                        Position = pos,</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            <span class="comment">// Scale forces</span></div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            SeparationForceFactor = 1.5f,</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            SeekForceFactor = 0.5f</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;          };</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                        <span class="comment">// Scale forces</span></div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;                        SeparationForceFactor = 1.5f,</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                        SeekForceFactor = 0.5f</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                    };</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;          vehicles.Add(vehicle);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;          <span class="keywordflow">return</span> vehicle;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        }</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      };</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      AddChild(spawner);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    vehicles.Add(vehicle);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    <span class="keywordflow">return</span> vehicle;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;            };</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            AddChild(spawner);</div>
 <div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160; </div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      <span class="comment">// Create target</span></div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      targetMover = <span class="keyword">new</span> <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a></div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;      {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        Position = size / 2,</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        Modulate = Colors.LightBlue.WithAlpha(128)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      };</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      AddChild(targetMover);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            <span class="comment">// Create target</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            targetMover = <span class="keyword">new</span> <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;            {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                Position = size / 2,</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                Modulate = Colors.LightBlue.WithAlpha(128)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            };</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            AddChild(targetMover);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      <span class="comment">// Create initial bodies</span></div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; vehicleCount; ++i)</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        spawner.SpawnBody(<a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">RandVector2</a>(0, size.x, 0, size.y));</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      }</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;    }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            <span class="comment">// Create initial bodies</span></div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; vehicleCount; ++i)</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            {</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                spawner.SpawnBody(<a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">RandVector2</a>(0, size.x, 0, size.y));</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            }</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        }</div>
 <div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160; </div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;    {</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      targetMover.GlobalPosition = GetViewport().GetMousePosition();</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        {</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            targetMover.GlobalPosition = GetViewport().GetMousePosition();</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_example8_html_ac81faa458552ce5ff6882fa4fd2f28f7"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_example8.html#ac81faa458552ce5ff6882fa4fd2f28f7">Examples.Chapter6.C6Example8.GetSummary</a></div><div class="ttdeci">string GetSummary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c6_example8_8cs_source.html#l00014">C6Example8.cs:14</a></div></div>
@@ -145,7 +145,7 @@ $(function() {
 <div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_example8_html"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_example8.html">Examples.Chapter6.C6Example8</a></div><div class="ttdoc">Example 6.8: Seek and Separate.</div><div class="ttdef"><b>Definition:</b> <a href="_c6_example8_8cs_source.html#l00012">C6Example8.cs:13</a></div></div>
 <div class="ttc" id="aclass_utils_1_1_simple_touch_spawner_html"><div class="ttname"><a href="class_utils_1_1_simple_touch_spawner.html">Utils.SimpleTouchSpawner</a></div><div class="ttdoc">Touch spawner. Touch anywhere and spawn something. Can also spawn on demand using SpawnBody.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_touch_spawner_8cs_source.html#l00013">SimpleTouchSpawner.cs:14</a></div></div>
 <div class="ttc" id="anamespace_examples_1_1_chapter6_html"><div class="ttname"><a href="namespace_examples_1_1_chapter6.html">Examples.Chapter6</a></div><div class="ttdoc">Chapter 6 - Autonomous Agents.</div><div class="ttdef"><b>Definition:</b> <a href="_c6_example1_8cs_source.html#l00010">C6Example1.cs:11</a></div></div>
-<div class="ttc" id="aclass_math_utils_html_a930682fc1b0e30eb85d7cc9d33849e5e"><div class="ttname"><a href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">MathUtils.RandVector2</a></div><div class="ttdeci">static Vector2 RandVector2(Vector2 rangeX, Vector2 rangeY)</div><div class="ttdoc">Return a Vector with coordinates in a random range (vector limits).</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00081">MathUtils.cs:81</a></div></div>
+<div class="ttc" id="aclass_math_utils_html_a930682fc1b0e30eb85d7cc9d33849e5e"><div class="ttname"><a href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">MathUtils.RandVector2</a></div><div class="ttdeci">static Vector2 RandVector2(Vector2 rangeX, Vector2 rangeY)</div><div class="ttdoc">Return a Vector with coordinates in a random range (vector limits).</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00092">MathUtils.cs:92</a></div></div>
 <div class="ttc" id="ainterface_examples_1_1_i_example_html"><div class="ttname"><a href="interface_examples_1_1_i_example.html">Examples.IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00006">Example.cs:7</a></div></div>
 <div class="ttc" id="anamespace_agents_html"><div class="ttname"><a href="namespace_agents.html">Agents</a></div><div class="ttdoc">Autonomous agents related primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_image_flow_field_8cs_source.html#l00003">ImageFlowField.cs:4</a></div></div>
 <div class="ttc" id="aclass_agents_1_1_round_vehicle_html"><div class="ttname"><a href="class_agents_1_1_round_vehicle.html">Agents.RoundVehicle</a></div><div class="ttdoc">Vehicle with a round shape.</div><div class="ttdef"><b>Definition:</b> <a href="_round_vehicle_8cs_source.html#l00009">RoundVehicle.cs:10</a></div></div>

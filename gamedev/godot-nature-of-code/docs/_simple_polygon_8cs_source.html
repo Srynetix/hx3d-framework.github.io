@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -75,39 +75,39 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_physics.html">Physics</a></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_polygon.html">    8</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_physics_1_1_simple_polygon.html">SimplePolygon</a> : RigidBody2D</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  {</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_polygon.html#afb2626e8817d36c8941a0e7d2d24211a">   11</a></span>&#160;    <span class="keyword">public</span> Vector2[] <a class="code" href="class_physics_1_1_simple_polygon.html#afb2626e8817d36c8941a0e7d2d24211a">Points</a>;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_polygon.html">    8</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_physics_1_1_simple_polygon.html">SimplePolygon</a> : RigidBody2D</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_polygon.html#afb2626e8817d36c8941a0e7d2d24211a">   11</a></span>&#160;        <span class="keyword">public</span> Vector2[] <a class="code" href="class_physics_1_1_simple_polygon.html#afb2626e8817d36c8941a0e7d2d24211a">Points</a>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">   14</a></span>&#160;    <span class="keyword">public</span> Color <a class="code" href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">BaseColor</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">   14</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">BaseColor</a>;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">private</span> readonly CollisionShape2D collisionShape2D;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">private</span> readonly ConvexPolygonShape2D polygonShape2D;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">private</span> Color[] colors;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        <span class="keyword">private</span> readonly CollisionShape2D collisionShape2D;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">private</span> readonly ConvexPolygonShape2D polygonShape2D;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keyword">private</span> Color[] colors;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_polygon.html#ac9927442da5b3d231d840fc91a0af99e">   23</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_physics_1_1_simple_polygon.html#ac9927442da5b3d231d840fc91a0af99e">SimplePolygon</a>()</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      polygonShape2D = <span class="keyword">new</span> ConvexPolygonShape2D();</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      collisionShape2D = <span class="keyword">new</span> CollisionShape2D { Shape = polygonShape2D };</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
+<div class="line"><a name="l00023"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_polygon.html#ac9927442da5b3d231d840fc91a0af99e">   23</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_physics_1_1_simple_polygon.html#ac9927442da5b3d231d840fc91a0af99e">SimplePolygon</a>()</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            polygonShape2D = <span class="keyword">new</span> ConvexPolygonShape2D();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            collisionShape2D = <span class="keyword">new</span> CollisionShape2D { Shape = polygonShape2D };</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      polygonShape2D.SetPointCloud(<a class="code" href="class_physics_1_1_simple_polygon.html#afb2626e8817d36c8941a0e7d2d24211a">Points</a>);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      AddChild(collisionShape2D);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            polygonShape2D.SetPointCloud(<a class="code" href="class_physics_1_1_simple_polygon.html#afb2626e8817d36c8941a0e7d2d24211a">Points</a>);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            AddChild(collisionShape2D);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      colors = <span class="keyword">new</span> Color[polygonShape2D.Points.Length];</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; polygonShape2D.Points.Length; ++i)</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        colors[i] = <a class="code" href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">BaseColor</a>;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      }</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            colors = <span class="keyword">new</span> Color[polygonShape2D.Points.Length];</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; polygonShape2D.Points.Length; ++i)</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                colors[i] = <a class="code" href="class_physics_1_1_simple_polygon.html#a4b2c395c8e0a0721d8c1bf1f4f05d1d9">BaseColor</a>;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            }</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Draw()</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      DrawPolygon(polygonShape2D.Points, colors);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;  }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Draw()</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            DrawPolygon(polygonShape2D.Points, colors);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;    }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_physics_html"><div class="ttname"><a href="namespace_physics.html">Physics</a></div><div class="ttdoc">Physics-related primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_ball_8cs_source.html#l00007">SimpleBall.cs:8</a></div></div>

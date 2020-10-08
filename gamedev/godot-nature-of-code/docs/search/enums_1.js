@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['joystickmodeenum_962',['JoystickModeEnum',['../class_virtual_controls.html#a284dbf8eddf0f1bc8e48aff4d70d8fd3',1,'VirtualControls']]]
+  ['pinmodeenum_1130',['PinModeEnum',['../class_verlet_physics_1_1_verlet_cloth.html#a73f39cc5abcb64cf98b95c14c195b6ce',1,'VerletPhysics::VerletCloth']]]
 ];

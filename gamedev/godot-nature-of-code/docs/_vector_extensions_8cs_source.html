@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -75,34 +75,34 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="class_vector_extensions.html">    6</a></span>&#160;<span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_vector_extensions.html">VectorExtensions</a></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_vector_extensions.html#aabfcede3f836da515bda031dadafae9b">   14</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">static</span> Vector2 <a class="code" href="class_vector_extensions.html#aabfcede3f836da515bda031dadafae9b">NormalizeTo</a>(<span class="keyword">this</span> Vector2 vector, <span class="keywordtype">float</span> length)</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    var vec = <span class="keyword">new</span> Vector2(vector.x, vector.y);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    var len = vec.Length();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span> (len &gt; 0)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      len /= length;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      vec.x *= len;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      vec.y *= len;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> vec;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  }</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_vector_extensions.html#aabfcede3f836da515bda031dadafae9b">   14</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> Vector2 <a class="code" href="class_vector_extensions.html#aabfcede3f836da515bda031dadafae9b">NormalizeTo</a>(<span class="keyword">this</span> Vector2 vector, <span class="keywordtype">float</span> length)</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        var vec = <span class="keyword">new</span> Vector2(vector.x, vector.y);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        var len = vec.Length();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">if</span> (len &gt; 0)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            len /= length;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            vec.x *= len;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            vec.y *= len;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">return</span> vec;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_vector_extensions.html#a95604616bf6057901cfd246c78269cc0">   33</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">static</span> Vector2 <a class="code" href="class_vector_extensions.html#a95604616bf6057901cfd246c78269cc0">Jitter</a>(<span class="keyword">this</span> Vector2 vector, <span class="keywordtype">float</span> coef)</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    var vec = <span class="keyword">new</span> Vector2(vector.x, vector.y);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    vec.x += <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#aafdf5a209e44dbad1c32d83be09e85dd">Randf</a>() * coef;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    vec.y += <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#aafdf5a209e44dbad1c32d83be09e85dd">Randf</a>() * coef;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> vec;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_vector_extensions.html#a95604616bf6057901cfd246c78269cc0">   33</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> Vector2 <a class="code" href="class_vector_extensions.html#a95604616bf6057901cfd246c78269cc0">Jitter</a>(<span class="keyword">this</span> Vector2 vector, <span class="keywordtype">float</span> coef)</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        var vec = <span class="keyword">new</span> Vector2(vector.x, vector.y);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        vec.x += <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#aafdf5a209e44dbad1c32d83be09e85dd">Randf</a>() * coef;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        vec.y += <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#aafdf5a209e44dbad1c32d83be09e85dd">Randf</a>() * coef;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> vec;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_vector_extensions.html#a47568e632a01bf7fa1f3ddf250cc2ebe">   48</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">static</span> Vector2 <a class="code" href="class_vector_extensions.html#a47568e632a01bf7fa1f3ddf250cc2ebe">GetNormalPoint</a>(<span class="keyword">this</span> Vector2 p, Vector2 a, Vector2 b)</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    var ap = p - a;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    var ab = (b - a).Normalized();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    var dot = ap.Dot(ab);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> a + (ab * dot);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_vector_extensions.html#a47568e632a01bf7fa1f3ddf250cc2ebe">   48</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> Vector2 <a class="code" href="class_vector_extensions.html#a47568e632a01bf7fa1f3ddf250cc2ebe">GetNormalPoint</a>(<span class="keyword">this</span> Vector2 p, Vector2 a, Vector2 b)</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        var ap = p - a;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        var ab = (b - a).Normalized();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        var dot = ap.Dot(ab);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> a + (ab * dot);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_vector_extensions_html"><div class="ttname"><a href="class_vector_extensions.html">VectorExtensions</a></div><div class="ttdoc">Vector extension methods</div><div class="ttdef"><b>Definition:</b> <a href="_vector_extensions_8cs_source.html#l00006">VectorExtensions.cs:7</a></div></div>

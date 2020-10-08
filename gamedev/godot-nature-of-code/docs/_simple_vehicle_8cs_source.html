@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -78,342 +78,342 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_agents.html">Agents</a></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html">   15</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_agents_1_1_simple_vehicle.html">SimpleVehicle</a> : <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;  {</div>
-<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a39772c01f3d50579ffcff815e58cd448">   18</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a> <a class="code" href="class_agents_1_1_simple_vehicle.html#a39772c01f3d50579ffcff815e58cd448">Target</a>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html">   15</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_agents_1_1_simple_vehicle.html">SimpleVehicle</a> : <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    {</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a39772c01f3d50579ffcff815e58cd448">   18</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a> <a class="code" href="class_agents_1_1_simple_vehicle.html#a39772c01f3d50579ffcff815e58cd448">Target</a>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#abc7d98174f7e27726f0eaa54d00a7a0d">   21</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_agents_1_1_simple_flow_field.html">SimpleFlowField</a> <a class="code" href="class_agents_1_1_simple_vehicle.html#abc7d98174f7e27726f0eaa54d00a7a0d">TargetFlow</a>;</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#abc7d98174f7e27726f0eaa54d00a7a0d">   21</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_agents_1_1_simple_flow_field.html">SimpleFlowField</a> <a class="code" href="class_agents_1_1_simple_vehicle.html#abc7d98174f7e27726f0eaa54d00a7a0d">TargetFlow</a>;</div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">   24</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_agents_1_1_simple_path.html">SimplePath</a> <a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">   24</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_agents_1_1_simple_path.html">SimplePath</a> <a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a>;</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">   27</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">MaxForce</a> = 0.1f;</div>
+<div class="line"><a name="l00027"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">   27</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">MaxForce</a> = 0.1f;</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a8c70c7f0f24cbcb13e5d56a32afaccf6">   30</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a8c70c7f0f24cbcb13e5d56a32afaccf6">ArriveDistance</a> = -1;</div>
+<div class="line"><a name="l00030"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a8c70c7f0f24cbcb13e5d56a32afaccf6">   30</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a8c70c7f0f24cbcb13e5d56a32afaccf6">ArriveDistance</a> = -1;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#ab97d028786b55a1438ce59e08e298847">   33</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#ab97d028786b55a1438ce59e08e298847">DetectionScanLength</a> = 25;</div>
+<div class="line"><a name="l00033"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#ab97d028786b55a1438ce59e08e298847">   33</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#ab97d028786b55a1438ce59e08e298847">DetectionScanLength</a> = 25;</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#aa6211c695675706b4c0770463ba48a90">   36</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#aa6211c695675706b4c0770463ba48a90">DetectionTargetOffset</a> = 25;</div>
+<div class="line"><a name="l00036"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#aa6211c695675706b4c0770463ba48a90">   36</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#aa6211c695675706b4c0770463ba48a90">DetectionTargetOffset</a> = 25;</div>
 <div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#aba2259dcf8ed48a072b2bf46b822775a">   39</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#aba2259dcf8ed48a072b2bf46b822775a">DetectionAlignmentRadius</a> = 50;</div>
+<div class="line"><a name="l00039"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#aba2259dcf8ed48a072b2bf46b822775a">   39</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#aba2259dcf8ed48a072b2bf46b822775a">DetectionAlignmentRadius</a> = 50;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a05e9855d1109e76dc484e30cff342614">   42</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a05e9855d1109e76dc484e30cff342614">DebugDraw</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00042"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a05e9855d1109e76dc484e30cff342614">   42</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a05e9855d1109e76dc484e30cff342614">DebugDraw</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
-<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a7a21eb7671399de9b100622410bdd282">   45</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a7a21eb7671399de9b100622410bdd282">SeparationEnabled</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00045"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a7a21eb7671399de9b100622410bdd282">   45</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a7a21eb7671399de9b100622410bdd282">SeparationEnabled</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#aa03fb503625e8d176cbc88662d89516f">   48</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#aa03fb503625e8d176cbc88662d89516f">CohesionEnabled</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00048"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#aa03fb503625e8d176cbc88662d89516f">   48</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#aa03fb503625e8d176cbc88662d89516f">CohesionEnabled</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#aae4fa62e1da891bb076f019b830e54d1">   51</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#aae4fa62e1da891bb076f019b830e54d1">AlignmentEnabled</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00051"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#aae4fa62e1da891bb076f019b830e54d1">   51</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#aae4fa62e1da891bb076f019b830e54d1">AlignmentEnabled</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#acf81e1ae1ab47e54f98beb947651cea9">   54</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#acf81e1ae1ab47e54f98beb947651cea9">LateralMoveEnabled</a> = <span class="keyword">false</span>;</div>
+<div class="line"><a name="l00054"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#acf81e1ae1ab47e54f98beb947651cea9">   54</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">bool</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#acf81e1ae1ab47e54f98beb947651cea9">LateralMoveEnabled</a> = <span class="keyword">false</span>;</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#ae34ade5c0db21077681c1a0a3ef4d2c5">   57</a></span>&#160;    <span class="keyword">public</span> List&lt;SimpleVehicle&gt; <a class="code" href="class_agents_1_1_simple_vehicle.html#ae34ade5c0db21077681c1a0a3ef4d2c5">VehicleGroupList</a> = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00057"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#ae34ade5c0db21077681c1a0a3ef4d2c5">   57</a></span>&#160;        <span class="keyword">public</span> List&lt;SimpleVehicle&gt; <a class="code" href="class_agents_1_1_simple_vehicle.html#ae34ade5c0db21077681c1a0a3ef4d2c5">VehicleGroupList</a> = <span class="keyword">null</span>;</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a4d0a68acff6d0908d015d25af74f6f1e">   60</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a4d0a68acff6d0908d015d25af74f6f1e">SeekForceFactor</a> = 1;</div>
+<div class="line"><a name="l00060"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a4d0a68acff6d0908d015d25af74f6f1e">   60</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a4d0a68acff6d0908d015d25af74f6f1e">SeekForceFactor</a> = 1;</div>
 <div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160; </div>
-<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#aa84e3acfa67b809b3d166ec0c3acbc1b">   63</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#aa84e3acfa67b809b3d166ec0c3acbc1b">SeparationForceFactor</a> = 1;</div>
+<div class="line"><a name="l00063"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#aa84e3acfa67b809b3d166ec0c3acbc1b">   63</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#aa84e3acfa67b809b3d166ec0c3acbc1b">SeparationForceFactor</a> = 1;</div>
 <div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a6fbb9ad5fc68dd2a069336f79992b87a">   66</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a6fbb9ad5fc68dd2a069336f79992b87a">CohesionForceFactor</a> = 1;</div>
+<div class="line"><a name="l00066"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a6fbb9ad5fc68dd2a069336f79992b87a">   66</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a6fbb9ad5fc68dd2a069336f79992b87a">CohesionForceFactor</a> = 1;</div>
 <div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a0b6c816854fc560539f6b77b0e9774fb">   69</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a0b6c816854fc560539f6b77b0e9774fb">AlignmentForceFactor</a> = 1;</div>
+<div class="line"><a name="l00069"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a0b6c816854fc560539f6b77b0e9774fb">   69</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a0b6c816854fc560539f6b77b0e9774fb">AlignmentForceFactor</a> = 1;</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a77a4350ebe2a001a977a9108b8f49946">   72</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a77a4350ebe2a001a977a9108b8f49946">LateralMoveForceFactor</a> = 1;</div>
+<div class="line"><a name="l00072"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a77a4350ebe2a001a977a9108b8f49946">   72</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a77a4350ebe2a001a977a9108b8f49946">LateralMoveForceFactor</a> = 1;</div>
 <div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;    <span class="keyword">private</span> Vector2? debugPredictPos = <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keyword">private</span> Vector2? debugNormalPoint = <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    <span class="keyword">private</span> Vector2? debugTargetPoint = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;        <span class="keyword">private</span> Vector2? debugPredictPos = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        <span class="keyword">private</span> Vector2? debugNormalPoint = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;        <span class="keyword">private</span> Vector2? debugTargetPoint = <span class="keyword">null</span>;</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
-<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a94c278e5de2e6808a8d6ac61d65d196f">   81</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a94c278e5de2e6808a8d6ac61d65d196f">SimpleVehicle</a>()</div>
-<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;      <a class="code" href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">Mesh</a>.<a class="code" href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">MeshType</a> = <a class="code" href="class_drawing_1_1_simple_mesh.html">SimpleMesh</a>.<a class="code" href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">TypeEnum</a>.Square;</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;      <a class="code" href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">Mesh</a>.<a class="code" href="class_drawing_1_1_simple_mesh.html#aebffb18c70e76e16c11b3ec9d6712b60">MeshSize</a> = <span class="keyword">new</span> Vector2(40, 20);</div>
+<div class="line"><a name="l00081"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a94c278e5de2e6808a8d6ac61d65d196f">   81</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a94c278e5de2e6808a8d6ac61d65d196f">SimpleVehicle</a>()</div>
+<div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;        {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;            <a class="code" href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">Mesh</a>.<a class="code" href="class_drawing_1_1_simple_mesh.html#ad10e2f115377206bf91b904f0e0944b3">MeshType</a> = <a class="code" href="class_drawing_1_1_simple_mesh.html">SimpleMesh</a>.<a class="code" href="class_drawing_1_1_simple_mesh.html#afc384e69567055ac7638794913b50d3f">TypeEnum</a>.Square;</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;            <a class="code" href="class_forces_1_1_simple_mover.html#a8428ebcb251141c1b4a84b4c869d5e09">Mesh</a>.<a class="code" href="class_drawing_1_1_simple_mesh.html#aebffb18c70e76e16c11b3ec9d6712b60">MeshSize</a> = <span class="keyword">new</span> Vector2(40, 20);</div>
 <div class="line"><a name="l00085"></a><span class="lineno">   85</span>&#160; </div>
-<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;      <a class="code" href="class_forces_1_1_simple_mover.html#a10bb7f290bfb74ce307d84e1622e6d27">SyncRotationOnVelocity</a> = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;      <a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a> = 4;</div>
-<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;      <a class="code" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">MaxForce</a> = 0.4f;</div>
+<div class="line"><a name="l00086"></a><span class="lineno">   86</span>&#160;            <a class="code" href="class_forces_1_1_simple_mover.html#a10bb7f290bfb74ce307d84e1622e6d27">SyncRotationOnVelocity</a> = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00087"></a><span class="lineno">   87</span>&#160;            <a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a> = 4;</div>
+<div class="line"><a name="l00088"></a><span class="lineno">   88</span>&#160;            <a class="code" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">MaxForce</a> = 0.4f;</div>
 <div class="line"><a name="l00089"></a><span class="lineno">   89</span>&#160; </div>
-<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;      Name = <span class="stringliteral">&quot;SimpleVehicle&quot;</span>;</div>
+<div class="line"><a name="l00090"></a><span class="lineno">   90</span>&#160;            Name = <span class="stringliteral">&quot;SimpleVehicle&quot;</span>;</div>
 <div class="line"><a name="l00091"></a><span class="lineno">   91</span>&#160; </div>
-<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;      <span class="comment">// Disable physics logic</span></div>
-<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;      collisionShape2D.Disabled = <span class="keyword">true</span>;</div>
-<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;    }</div>
+<div class="line"><a name="l00092"></a><span class="lineno">   92</span>&#160;            <span class="comment">// Disable physics logic</span></div>
+<div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;            <a class="code" href="class_forces_1_1_simple_mover.html#a92120ffc92b9e60f58d28ea0aef6623f">collisionShape2D</a>.Disabled = <span class="keyword">true</span>;</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        }</div>
 <div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160; </div>
-<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a1fe0b218ee367666dee468c6b7e2d606">  101</a></span>&#160;    <span class="keyword">protected</span> Vector2 <a class="code" href="class_agents_1_1_simple_vehicle.html#a1fe0b218ee367666dee468c6b7e2d606">Separate</a>(List&lt;SimpleVehicle&gt; vehicles)</div>
-<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;    {</div>
-<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;      <span class="keywordtype">float</span> desiredSeparation = <a class="code" href="class_forces_1_1_simple_mover.html#ab51b3160c41dca00e2a7b9be09d98303">Radius</a> * 4;</div>
-<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;      var sum = Vector2.Zero;</div>
-<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;      <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a name="l00101"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a1fe0b218ee367666dee468c6b7e2d606">  101</a></span>&#160;        <span class="keyword">protected</span> Vector2 <a class="code" href="class_agents_1_1_simple_vehicle.html#a1fe0b218ee367666dee468c6b7e2d606">Separate</a>(List&lt;SimpleVehicle&gt; vehicles)</div>
+<div class="line"><a name="l00102"></a><span class="lineno">  102</span>&#160;        {</div>
+<div class="line"><a name="l00103"></a><span class="lineno">  103</span>&#160;            <span class="keywordtype">float</span> desiredSeparation = <a class="code" href="class_forces_1_1_simple_mover.html#ab51b3160c41dca00e2a7b9be09d98303">Radius</a> * 4;</div>
+<div class="line"><a name="l00104"></a><span class="lineno">  104</span>&#160;            var sum = Vector2.Zero;</div>
+<div class="line"><a name="l00105"></a><span class="lineno">  105</span>&#160;            <span class="keywordtype">int</span> count = 0;</div>
 <div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160; </div>
-<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;      <span class="keywordflow">foreach</span> (var vehicle <span class="keywordflow">in</span> vehicles)</div>
-<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;      {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        <span class="keywordtype">float</span> d = GlobalPosition.DistanceSquaredTo(vehicle.GlobalPosition);</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;        <span class="keywordflow">if</span> (d &gt; 0 &amp;&amp; d &lt; desiredSeparation * desiredSeparation)</div>
-<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        {</div>
-<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;          sum += (GlobalPosition - vehicle.GlobalPosition).Normalized() / Mathf.Sqrt(d);</div>
-<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;          count++;</div>
-<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;        }</div>
-<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;      }</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;            <span class="keywordflow">foreach</span> (var vehicle <span class="keywordflow">in</span> vehicles)</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;            {</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;                <span class="keywordtype">float</span> d = GlobalPosition.DistanceSquaredTo(vehicle.GlobalPosition);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;                <span class="keywordflow">if</span> (d &gt; 0 &amp;&amp; d &lt; desiredSeparation * desiredSeparation)</div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;                {</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;                    sum += (GlobalPosition - vehicle.GlobalPosition).Normalized() / Mathf.Sqrt(d);</div>
+<div class="line"><a name="l00113"></a><span class="lineno">  113</span>&#160;                    count++;</div>
+<div class="line"><a name="l00114"></a><span class="lineno">  114</span>&#160;                }</div>
+<div class="line"><a name="l00115"></a><span class="lineno">  115</span>&#160;            }</div>
 <div class="line"><a name="l00116"></a><span class="lineno">  116</span>&#160; </div>
-<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;      <span class="keywordflow">if</span> (count &gt; 0)</div>
-<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;      {</div>
-<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;        sum = (sum / count).Normalized() * <a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a>;</div>
-<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">return</span> (sum - <a class="code" href="class_forces_1_1_simple_mover.html#a9c6b56340b094c2ead9671b9f840661f">Velocity</a>).Clamped(<a class="code" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">MaxForce</a>);</div>
-<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;      }</div>
-<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;      {</div>
-<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;        <span class="keywordflow">return</span> Vector2.Zero;</div>
-<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;      }</div>
-<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;    }</div>
+<div class="line"><a name="l00117"></a><span class="lineno">  117</span>&#160;            <span class="keywordflow">if</span> (count &gt; 0)</div>
+<div class="line"><a name="l00118"></a><span class="lineno">  118</span>&#160;            {</div>
+<div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;                sum = (sum / count).Normalized() * <a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a>;</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;                <span class="keywordflow">return</span> (sum - <a class="code" href="class_forces_1_1_simple_mover.html#a9c6b56340b094c2ead9671b9f840661f">Velocity</a>).Clamped(<a class="code" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">MaxForce</a>);</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;            }</div>
+<div class="line"><a name="l00122"></a><span class="lineno">  122</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00123"></a><span class="lineno">  123</span>&#160;            {</div>
+<div class="line"><a name="l00124"></a><span class="lineno">  124</span>&#160;                <span class="keywordflow">return</span> Vector2.Zero;</div>
+<div class="line"><a name="l00125"></a><span class="lineno">  125</span>&#160;            }</div>
+<div class="line"><a name="l00126"></a><span class="lineno">  126</span>&#160;        }</div>
 <div class="line"><a name="l00127"></a><span class="lineno">  127</span>&#160; </div>
-<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a3a0aba6dfd0a06abaf319303d4a4859b">  133</a></span>&#160;    <span class="keyword">protected</span> Vector2 <a class="code" href="class_agents_1_1_simple_vehicle.html#a3a0aba6dfd0a06abaf319303d4a4859b">Regroup</a>(List&lt;SimpleVehicle&gt; vehicles)</div>
-<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;    {</div>
-<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;      <span class="keywordtype">float</span> separationLimit = <a class="code" href="class_forces_1_1_simple_mover.html#ab51b3160c41dca00e2a7b9be09d98303">Radius</a> * 2;</div>
-<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;      var sum = Vector2.Zero;</div>
-<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;      <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a name="l00133"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a3a0aba6dfd0a06abaf319303d4a4859b">  133</a></span>&#160;        <span class="keyword">protected</span> Vector2 <a class="code" href="class_agents_1_1_simple_vehicle.html#a3a0aba6dfd0a06abaf319303d4a4859b">Regroup</a>(List&lt;SimpleVehicle&gt; vehicles)</div>
+<div class="line"><a name="l00134"></a><span class="lineno">  134</span>&#160;        {</div>
+<div class="line"><a name="l00135"></a><span class="lineno">  135</span>&#160;            <span class="keywordtype">float</span> separationLimit = <a class="code" href="class_forces_1_1_simple_mover.html#ab51b3160c41dca00e2a7b9be09d98303">Radius</a> * 2;</div>
+<div class="line"><a name="l00136"></a><span class="lineno">  136</span>&#160;            var sum = Vector2.Zero;</div>
+<div class="line"><a name="l00137"></a><span class="lineno">  137</span>&#160;            <span class="keywordtype">int</span> count = 0;</div>
 <div class="line"><a name="l00138"></a><span class="lineno">  138</span>&#160; </div>
-<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;      <span class="keywordflow">foreach</span> (var vehicle <span class="keywordflow">in</span> vehicles)</div>
-<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;      {</div>
-<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;        <span class="keywordtype">float</span> d = GlobalPosition.DistanceSquaredTo(vehicle.GlobalPosition);</div>
-<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;        <span class="keywordflow">if</span> (d &gt; 0 &amp;&amp; d &gt; separationLimit * separationLimit)</div>
-<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;        {</div>
-<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;          sum += (GlobalPosition - vehicle.GlobalPosition).Normalized() / Mathf.Sqrt(d);</div>
-<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;          count++;</div>
-<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;        }</div>
-<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;      }</div>
+<div class="line"><a name="l00139"></a><span class="lineno">  139</span>&#160;            <span class="keywordflow">foreach</span> (var vehicle <span class="keywordflow">in</span> vehicles)</div>
+<div class="line"><a name="l00140"></a><span class="lineno">  140</span>&#160;            {</div>
+<div class="line"><a name="l00141"></a><span class="lineno">  141</span>&#160;                <span class="keywordtype">float</span> d = GlobalPosition.DistanceSquaredTo(vehicle.GlobalPosition);</div>
+<div class="line"><a name="l00142"></a><span class="lineno">  142</span>&#160;                <span class="keywordflow">if</span> (d &gt; 0 &amp;&amp; d &gt; separationLimit * separationLimit)</div>
+<div class="line"><a name="l00143"></a><span class="lineno">  143</span>&#160;                {</div>
+<div class="line"><a name="l00144"></a><span class="lineno">  144</span>&#160;                    sum += (GlobalPosition - vehicle.GlobalPosition).Normalized() / Mathf.Sqrt(d);</div>
+<div class="line"><a name="l00145"></a><span class="lineno">  145</span>&#160;                    count++;</div>
+<div class="line"><a name="l00146"></a><span class="lineno">  146</span>&#160;                }</div>
+<div class="line"><a name="l00147"></a><span class="lineno">  147</span>&#160;            }</div>
 <div class="line"><a name="l00148"></a><span class="lineno">  148</span>&#160; </div>
-<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;      <span class="keywordflow">if</span> (count &gt; 0)</div>
-<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;      {</div>
-<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;        sum = (sum / count).Normalized() * -<a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a>;</div>
-<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;        <span class="keywordflow">return</span> (sum - <a class="code" href="class_forces_1_1_simple_mover.html#a9c6b56340b094c2ead9671b9f840661f">Velocity</a>).Clamped(<a class="code" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">MaxForce</a>);</div>
-<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;      }</div>
-<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;      {</div>
-<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;        <span class="keywordflow">return</span> Vector2.Zero;</div>
-<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;      }</div>
-<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;    }</div>
+<div class="line"><a name="l00149"></a><span class="lineno">  149</span>&#160;            <span class="keywordflow">if</span> (count &gt; 0)</div>
+<div class="line"><a name="l00150"></a><span class="lineno">  150</span>&#160;            {</div>
+<div class="line"><a name="l00151"></a><span class="lineno">  151</span>&#160;                sum = (sum / count).Normalized() * -<a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a>;</div>
+<div class="line"><a name="l00152"></a><span class="lineno">  152</span>&#160;                <span class="keywordflow">return</span> (sum - <a class="code" href="class_forces_1_1_simple_mover.html#a9c6b56340b094c2ead9671b9f840661f">Velocity</a>).Clamped(<a class="code" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">MaxForce</a>);</div>
+<div class="line"><a name="l00153"></a><span class="lineno">  153</span>&#160;            }</div>
+<div class="line"><a name="l00154"></a><span class="lineno">  154</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00155"></a><span class="lineno">  155</span>&#160;            {</div>
+<div class="line"><a name="l00156"></a><span class="lineno">  156</span>&#160;                <span class="keywordflow">return</span> Vector2.Zero;</div>
+<div class="line"><a name="l00157"></a><span class="lineno">  157</span>&#160;            }</div>
+<div class="line"><a name="l00158"></a><span class="lineno">  158</span>&#160;        }</div>
 <div class="line"><a name="l00159"></a><span class="lineno">  159</span>&#160; </div>
-<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#ad879b10e3ed2194a13a6aaf352238fe4">  165</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">virtual</span> Vector2 <a class="code" href="class_agents_1_1_simple_vehicle.html#ad879b10e3ed2194a13a6aaf352238fe4">Seek</a>(Vector2 position)</div>
-<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;    {</div>
-<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;      var targetDiff = position - GlobalPosition;</div>
-<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;      var targetDist = targetDiff.Length();</div>
-<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;      targetDiff = targetDiff.Normalized();</div>
+<div class="line"><a name="l00165"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#ad879b10e3ed2194a13a6aaf352238fe4">  165</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> Vector2 <a class="code" href="class_agents_1_1_simple_vehicle.html#ad879b10e3ed2194a13a6aaf352238fe4">Seek</a>(Vector2 position)</div>
+<div class="line"><a name="l00166"></a><span class="lineno">  166</span>&#160;        {</div>
+<div class="line"><a name="l00167"></a><span class="lineno">  167</span>&#160;            var targetDiff = position - GlobalPosition;</div>
+<div class="line"><a name="l00168"></a><span class="lineno">  168</span>&#160;            var targetDist = targetDiff.Length();</div>
+<div class="line"><a name="l00169"></a><span class="lineno">  169</span>&#160;            targetDiff = targetDiff.Normalized();</div>
 <div class="line"><a name="l00170"></a><span class="lineno">  170</span>&#160; </div>
-<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#a8c70c7f0f24cbcb13e5d56a32afaccf6">ArriveDistance</a> &gt; 0 &amp;&amp; targetDist &lt; <a class="code" href="class_agents_1_1_simple_vehicle.html#a8c70c7f0f24cbcb13e5d56a32afaccf6">ArriveDistance</a>)</div>
-<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;      {</div>
-<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;        targetDiff *= <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a34a01167f3ae45f790e51c287f874f99">Map</a>(targetDist, 0, <a class="code" href="class_agents_1_1_simple_vehicle.html#a8c70c7f0f24cbcb13e5d56a32afaccf6">ArriveDistance</a>, 0, <a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a>);</div>
-<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;      }</div>
-<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;      {</div>
-<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;        targetDiff *= <a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a>;</div>
-<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;      }</div>
+<div class="line"><a name="l00171"></a><span class="lineno">  171</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#a8c70c7f0f24cbcb13e5d56a32afaccf6">ArriveDistance</a> &gt; 0 &amp;&amp; targetDist &lt; <a class="code" href="class_agents_1_1_simple_vehicle.html#a8c70c7f0f24cbcb13e5d56a32afaccf6">ArriveDistance</a>)</div>
+<div class="line"><a name="l00172"></a><span class="lineno">  172</span>&#160;            {</div>
+<div class="line"><a name="l00173"></a><span class="lineno">  173</span>&#160;                targetDiff *= <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a34a01167f3ae45f790e51c287f874f99">Map</a>(targetDist, 0, <a class="code" href="class_agents_1_1_simple_vehicle.html#a8c70c7f0f24cbcb13e5d56a32afaccf6">ArriveDistance</a>, 0, <a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a>);</div>
+<div class="line"><a name="l00174"></a><span class="lineno">  174</span>&#160;            }</div>
+<div class="line"><a name="l00175"></a><span class="lineno">  175</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00176"></a><span class="lineno">  176</span>&#160;            {</div>
+<div class="line"><a name="l00177"></a><span class="lineno">  177</span>&#160;                targetDiff *= <a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a>;</div>
+<div class="line"><a name="l00178"></a><span class="lineno">  178</span>&#160;            }</div>
 <div class="line"><a name="l00179"></a><span class="lineno">  179</span>&#160; </div>
-<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;      <span class="keywordflow">return</span> (targetDiff - <a class="code" href="class_forces_1_1_simple_mover.html#a9c6b56340b094c2ead9671b9f840661f">Velocity</a>).Clamped(<a class="code" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">MaxForce</a>);</div>
-<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;    }</div>
+<div class="line"><a name="l00180"></a><span class="lineno">  180</span>&#160;            <span class="keywordflow">return</span> (targetDiff - <a class="code" href="class_forces_1_1_simple_mover.html#a9c6b56340b094c2ead9671b9f840661f">Velocity</a>).Clamped(<a class="code" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">MaxForce</a>);</div>
+<div class="line"><a name="l00181"></a><span class="lineno">  181</span>&#160;        }</div>
 <div class="line"><a name="l00182"></a><span class="lineno">  182</span>&#160; </div>
-<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#af1916e3ea68858fe065208f1dfea19d6">  187</a></span>&#160;    <span class="keyword">protected</span> Vector2 <a class="code" href="class_agents_1_1_simple_vehicle.html#af1916e3ea68858fe065208f1dfea19d6">FollowFlow</a>()</div>
-<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;    {</div>
-<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;      var tgtDirection = <a class="code" href="class_agents_1_1_simple_vehicle.html#abc7d98174f7e27726f0eaa54d00a7a0d">TargetFlow</a>.<a class="code" href="class_agents_1_1_simple_flow_field.html#a4d58df44550846f9032fdbdecf3d7238">Lookup</a>(GlobalPosition);</div>
-<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;      <span class="keywordflow">if</span> (tgtDirection == Vector2.Zero)</div>
-<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;      {</div>
-<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;        <span class="comment">// Ignore empty lookup</span></div>
-<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;        <span class="keywordflow">return</span> Vector2.Zero;</div>
-<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;      }</div>
+<div class="line"><a name="l00187"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#af1916e3ea68858fe065208f1dfea19d6">  187</a></span>&#160;        <span class="keyword">protected</span> Vector2 <a class="code" href="class_agents_1_1_simple_vehicle.html#af1916e3ea68858fe065208f1dfea19d6">FollowFlow</a>()</div>
+<div class="line"><a name="l00188"></a><span class="lineno">  188</span>&#160;        {</div>
+<div class="line"><a name="l00189"></a><span class="lineno">  189</span>&#160;            var tgtDirection = <a class="code" href="class_agents_1_1_simple_vehicle.html#abc7d98174f7e27726f0eaa54d00a7a0d">TargetFlow</a>.<a class="code" href="class_agents_1_1_simple_flow_field.html#a4d58df44550846f9032fdbdecf3d7238">Lookup</a>(GlobalPosition);</div>
+<div class="line"><a name="l00190"></a><span class="lineno">  190</span>&#160;            <span class="keywordflow">if</span> (tgtDirection == Vector2.Zero)</div>
+<div class="line"><a name="l00191"></a><span class="lineno">  191</span>&#160;            {</div>
+<div class="line"><a name="l00192"></a><span class="lineno">  192</span>&#160;                <span class="comment">// Ignore empty lookup</span></div>
+<div class="line"><a name="l00193"></a><span class="lineno">  193</span>&#160;                <span class="keywordflow">return</span> Vector2.Zero;</div>
+<div class="line"><a name="l00194"></a><span class="lineno">  194</span>&#160;            }</div>
 <div class="line"><a name="l00195"></a><span class="lineno">  195</span>&#160; </div>
-<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;      var target = tgtDirection * <a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a>;</div>
-<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;      <span class="keywordflow">return</span> (target - <a class="code" href="class_forces_1_1_simple_mover.html#a9c6b56340b094c2ead9671b9f840661f">Velocity</a>).Clamped(<a class="code" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">MaxForce</a>);</div>
-<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;    }</div>
+<div class="line"><a name="l00196"></a><span class="lineno">  196</span>&#160;            var target = tgtDirection * <a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a>;</div>
+<div class="line"><a name="l00197"></a><span class="lineno">  197</span>&#160;            <span class="keywordflow">return</span> (target - <a class="code" href="class_forces_1_1_simple_mover.html#a9c6b56340b094c2ead9671b9f840661f">Velocity</a>).Clamped(<a class="code" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">MaxForce</a>);</div>
+<div class="line"><a name="l00198"></a><span class="lineno">  198</span>&#160;        }</div>
 <div class="line"><a name="l00199"></a><span class="lineno">  199</span>&#160; </div>
-<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#af3bcbafbf4fb5f9aa616f71012f17d58">  205</a></span>&#160;    <span class="keyword">protected</span> Vector2 <a class="code" href="class_agents_1_1_simple_vehicle.html#af3bcbafbf4fb5f9aa616f71012f17d58">FollowPath</a>()</div>
-<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;    {</div>
-<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;      var minDist = <span class="keywordtype">float</span>.MaxValue;</div>
+<div class="line"><a name="l00205"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#af3bcbafbf4fb5f9aa616f71012f17d58">  205</a></span>&#160;        <span class="keyword">protected</span> Vector2 <a class="code" href="class_agents_1_1_simple_vehicle.html#af3bcbafbf4fb5f9aa616f71012f17d58">FollowPath</a>()</div>
+<div class="line"><a name="l00206"></a><span class="lineno">  206</span>&#160;        {</div>
+<div class="line"><a name="l00207"></a><span class="lineno">  207</span>&#160;            var minDist = <span class="keywordtype">float</span>.MaxValue;</div>
 <div class="line"><a name="l00208"></a><span class="lineno">  208</span>&#160; </div>
-<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;      var predict = <a class="code" href="class_forces_1_1_simple_mover.html#a9c6b56340b094c2ead9671b9f840661f">Velocity</a>.Normalized() * <a class="code" href="class_agents_1_1_simple_vehicle.html#ab97d028786b55a1438ce59e08e298847">DetectionScanLength</a>;</div>
-<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;      var predictPos = GlobalPosition + predict;</div>
+<div class="line"><a name="l00209"></a><span class="lineno">  209</span>&#160;            var predict = <a class="code" href="class_forces_1_1_simple_mover.html#a9c6b56340b094c2ead9671b9f840661f">Velocity</a>.Normalized() * <a class="code" href="class_agents_1_1_simple_vehicle.html#ab97d028786b55a1438ce59e08e298847">DetectionScanLength</a>;</div>
+<div class="line"><a name="l00210"></a><span class="lineno">  210</span>&#160;            var predictPos = GlobalPosition + predict;</div>
 <div class="line"><a name="l00211"></a><span class="lineno">  211</span>&#160; </div>
-<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;      Vector2? target = <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;      Vector2? targetNormalPoint = <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;      var pointCount = <a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a>.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>.Count;</div>
+<div class="line"><a name="l00212"></a><span class="lineno">  212</span>&#160;            Vector2? target = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00213"></a><span class="lineno">  213</span>&#160;            Vector2? targetNormalPoint = <span class="keyword">null</span>;</div>
+<div class="line"><a name="l00214"></a><span class="lineno">  214</span>&#160;            var pointCount = <a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a>.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>.Count;</div>
 <div class="line"><a name="l00215"></a><span class="lineno">  215</span>&#160; </div>
-<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; pointCount; ++i)</div>
-<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;      {</div>
-<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;        <span class="comment">// Ignore last iteration if not looping</span></div>
-<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;        <span class="keywordflow">if</span> (!<a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a>.<a class="code" href="class_agents_1_1_simple_path.html#aff59737c6f248eb17e4e4bcd464fec91">Looping</a> &amp;&amp; i == pointCount - 1)</div>
-<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;        {</div>
-<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;          <span class="keywordflow">break</span>;</div>
-<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;        }</div>
+<div class="line"><a name="l00216"></a><span class="lineno">  216</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; pointCount; ++i)</div>
+<div class="line"><a name="l00217"></a><span class="lineno">  217</span>&#160;            {</div>
+<div class="line"><a name="l00218"></a><span class="lineno">  218</span>&#160;                <span class="comment">// Ignore last iteration if not looping</span></div>
+<div class="line"><a name="l00219"></a><span class="lineno">  219</span>&#160;                <span class="keywordflow">if</span> (!<a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a>.<a class="code" href="class_agents_1_1_simple_path.html#aff59737c6f248eb17e4e4bcd464fec91">Looping</a> &amp;&amp; i == pointCount - 1)</div>
+<div class="line"><a name="l00220"></a><span class="lineno">  220</span>&#160;                {</div>
+<div class="line"><a name="l00221"></a><span class="lineno">  221</span>&#160;                    <span class="keywordflow">break</span>;</div>
+<div class="line"><a name="l00222"></a><span class="lineno">  222</span>&#160;                }</div>
 <div class="line"><a name="l00223"></a><span class="lineno">  223</span>&#160; </div>
-<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;        var a = <a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a>.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>[i];</div>
-<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;        var b = <a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a>.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>[(i + 1) % pointCount];</div>
-<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;        var normalPoint = predictPos.GetNormalPoint(a, b);</div>
-<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;        var dir = b - a;</div>
+<div class="line"><a name="l00224"></a><span class="lineno">  224</span>&#160;                var a = <a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a>.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>[i];</div>
+<div class="line"><a name="l00225"></a><span class="lineno">  225</span>&#160;                var b = <a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a>.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>[(i + 1) % pointCount];</div>
+<div class="line"><a name="l00226"></a><span class="lineno">  226</span>&#160;                var normalPoint = predictPos.GetNormalPoint(a, b);</div>
+<div class="line"><a name="l00227"></a><span class="lineno">  227</span>&#160;                var dir = b - a;</div>
 <div class="line"><a name="l00228"></a><span class="lineno">  228</span>&#160; </div>
-<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;        <span class="comment">// Out of bounds</span></div>
-<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;        <span class="keywordflow">if</span> (normalPoint.x &lt; Mathf.Min(a.x, b.x) || normalPoint.x &gt; Mathf.Max(a.x, b.x)</div>
-<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;          || normalPoint.y &lt; Mathf.Min(a.y, b.y) || normalPoint.y &gt; Mathf.Max(a.y, b.y))</div>
-<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;        {</div>
-<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;          normalPoint = b;</div>
+<div class="line"><a name="l00229"></a><span class="lineno">  229</span>&#160;                <span class="comment">// Out of bounds</span></div>
+<div class="line"><a name="l00230"></a><span class="lineno">  230</span>&#160;                <span class="keywordflow">if</span> (normalPoint.x &lt; Mathf.Min(a.x, b.x) || normalPoint.x &gt; Mathf.Max(a.x, b.x)</div>
+<div class="line"><a name="l00231"></a><span class="lineno">  231</span>&#160;                  || normalPoint.y &lt; Mathf.Min(a.y, b.y) || normalPoint.y &gt; Mathf.Max(a.y, b.y))</div>
+<div class="line"><a name="l00232"></a><span class="lineno">  232</span>&#160;                {</div>
+<div class="line"><a name="l00233"></a><span class="lineno">  233</span>&#160;                    normalPoint = b;</div>
 <div class="line"><a name="l00234"></a><span class="lineno">  234</span>&#160; </div>
-<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;          <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a>.<a class="code" href="class_agents_1_1_simple_path.html#aff59737c6f248eb17e4e4bcd464fec91">Looping</a> || i != pointCount - 2)</div>
-<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;          {</div>
-<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;            <span class="comment">// Get two next points</span></div>
-<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;            var a2 = b;</div>
-<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;            var b2 = <a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a>.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>[(i + 2) % pointCount];</div>
-<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;            dir = b2 - a2;</div>
-<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;          }</div>
-<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;        }</div>
+<div class="line"><a name="l00235"></a><span class="lineno">  235</span>&#160;                    <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a>.<a class="code" href="class_agents_1_1_simple_path.html#aff59737c6f248eb17e4e4bcd464fec91">Looping</a> || i != pointCount - 2)</div>
+<div class="line"><a name="l00236"></a><span class="lineno">  236</span>&#160;                    {</div>
+<div class="line"><a name="l00237"></a><span class="lineno">  237</span>&#160;                        <span class="comment">// Get two next points</span></div>
+<div class="line"><a name="l00238"></a><span class="lineno">  238</span>&#160;                        var a2 = b;</div>
+<div class="line"><a name="l00239"></a><span class="lineno">  239</span>&#160;                        var b2 = <a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a>.<a class="code" href="class_agents_1_1_simple_path.html#a394de8d88b63e371aa27ddc43fedd0f1">Points</a>[(i + 2) % pointCount];</div>
+<div class="line"><a name="l00240"></a><span class="lineno">  240</span>&#160;                        dir = b2 - a2;</div>
+<div class="line"><a name="l00241"></a><span class="lineno">  241</span>&#160;                    }</div>
+<div class="line"><a name="l00242"></a><span class="lineno">  242</span>&#160;                }</div>
 <div class="line"><a name="l00243"></a><span class="lineno">  243</span>&#160; </div>
-<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;        var dist = normalPoint.DistanceTo(predictPos);</div>
-<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;        <span class="keywordflow">if</span> (dist &lt; minDist)</div>
-<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;        {</div>
-<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;          minDist = dist;</div>
-<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;          targetNormalPoint = normalPoint;</div>
-<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;          target = targetNormalPoint + (dir.Normalized() * <a class="code" href="class_agents_1_1_simple_vehicle.html#aa6211c695675706b4c0770463ba48a90">DetectionTargetOffset</a>);</div>
-<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;        }</div>
-<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;      }</div>
+<div class="line"><a name="l00244"></a><span class="lineno">  244</span>&#160;                var dist = normalPoint.DistanceTo(predictPos);</div>
+<div class="line"><a name="l00245"></a><span class="lineno">  245</span>&#160;                <span class="keywordflow">if</span> (dist &lt; minDist)</div>
+<div class="line"><a name="l00246"></a><span class="lineno">  246</span>&#160;                {</div>
+<div class="line"><a name="l00247"></a><span class="lineno">  247</span>&#160;                    minDist = dist;</div>
+<div class="line"><a name="l00248"></a><span class="lineno">  248</span>&#160;                    targetNormalPoint = normalPoint;</div>
+<div class="line"><a name="l00249"></a><span class="lineno">  249</span>&#160;                    target = targetNormalPoint + (dir.Normalized() * <a class="code" href="class_agents_1_1_simple_vehicle.html#aa6211c695675706b4c0770463ba48a90">DetectionTargetOffset</a>);</div>
+<div class="line"><a name="l00250"></a><span class="lineno">  250</span>&#160;                }</div>
+<div class="line"><a name="l00251"></a><span class="lineno">  251</span>&#160;            }</div>
 <div class="line"><a name="l00252"></a><span class="lineno">  252</span>&#160; </div>
-<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;      <span class="comment">// Set debug values</span></div>
-<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;      debugNormalPoint = targetNormalPoint;</div>
-<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;      debugPredictPos = predictPos;</div>
-<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;      debugTargetPoint = target;</div>
+<div class="line"><a name="l00253"></a><span class="lineno">  253</span>&#160;            <span class="comment">// Set debug values</span></div>
+<div class="line"><a name="l00254"></a><span class="lineno">  254</span>&#160;            debugNormalPoint = targetNormalPoint;</div>
+<div class="line"><a name="l00255"></a><span class="lineno">  255</span>&#160;            debugPredictPos = predictPos;</div>
+<div class="line"><a name="l00256"></a><span class="lineno">  256</span>&#160;            debugTargetPoint = target;</div>
 <div class="line"><a name="l00257"></a><span class="lineno">  257</span>&#160; </div>
-<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;      <span class="keywordflow">if</span> (target.HasValue)</div>
-<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;      {</div>
-<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#ad879b10e3ed2194a13a6aaf352238fe4">Seek</a>(target.Value);</div>
-<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;      }</div>
-<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;      {</div>
-<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;        <span class="keywordflow">return</span> Vector2.Zero;</div>
-<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;      }</div>
-<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;    }</div>
+<div class="line"><a name="l00258"></a><span class="lineno">  258</span>&#160;            <span class="keywordflow">if</span> (target.HasValue)</div>
+<div class="line"><a name="l00259"></a><span class="lineno">  259</span>&#160;            {</div>
+<div class="line"><a name="l00260"></a><span class="lineno">  260</span>&#160;                <span class="keywordflow">return</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#ad879b10e3ed2194a13a6aaf352238fe4">Seek</a>(target.Value);</div>
+<div class="line"><a name="l00261"></a><span class="lineno">  261</span>&#160;            }</div>
+<div class="line"><a name="l00262"></a><span class="lineno">  262</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00263"></a><span class="lineno">  263</span>&#160;            {</div>
+<div class="line"><a name="l00264"></a><span class="lineno">  264</span>&#160;                <span class="keywordflow">return</span> Vector2.Zero;</div>
+<div class="line"><a name="l00265"></a><span class="lineno">  265</span>&#160;            }</div>
+<div class="line"><a name="l00266"></a><span class="lineno">  266</span>&#160;        }</div>
 <div class="line"><a name="l00267"></a><span class="lineno">  267</span>&#160; </div>
-<div class="line"><a name="l00273"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#ae640f4cdbd53d3f5f84cdaa0478b505e">  273</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">virtual</span> Vector2 <a class="code" href="class_agents_1_1_simple_vehicle.html#ae640f4cdbd53d3f5f84cdaa0478b505e">Align</a>(List&lt;SimpleVehicle&gt; vehicles)</div>
-<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;    {</div>
-<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;      var sum = Vector2.Zero;</div>
-<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;      <span class="keywordtype">int</span> count = 0;</div>
-<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;      <span class="keywordflow">foreach</span> (var vehicle <span class="keywordflow">in</span> vehicles)</div>
-<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;      {</div>
-<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;        var d = GlobalPosition.DistanceSquaredTo(vehicle.GlobalPosition);</div>
-<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;        <span class="keywordflow">if</span> (d &gt; 0 &amp;&amp; d &lt; <a class="code" href="class_agents_1_1_simple_vehicle.html#aba2259dcf8ed48a072b2bf46b822775a">DetectionAlignmentRadius</a> * <a class="code" href="class_agents_1_1_simple_vehicle.html#aba2259dcf8ed48a072b2bf46b822775a">DetectionAlignmentRadius</a>)</div>
-<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;        {</div>
-<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;          sum += vehicle.Velocity;</div>
-<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;          count++;</div>
-<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;        }</div>
-<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;      }</div>
+<div class="line"><a name="l00273"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#ae640f4cdbd53d3f5f84cdaa0478b505e">  273</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> Vector2 <a class="code" href="class_agents_1_1_simple_vehicle.html#ae640f4cdbd53d3f5f84cdaa0478b505e">Align</a>(List&lt;SimpleVehicle&gt; vehicles)</div>
+<div class="line"><a name="l00274"></a><span class="lineno">  274</span>&#160;        {</div>
+<div class="line"><a name="l00275"></a><span class="lineno">  275</span>&#160;            var sum = Vector2.Zero;</div>
+<div class="line"><a name="l00276"></a><span class="lineno">  276</span>&#160;            <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a name="l00277"></a><span class="lineno">  277</span>&#160;            <span class="keywordflow">foreach</span> (var vehicle <span class="keywordflow">in</span> vehicles)</div>
+<div class="line"><a name="l00278"></a><span class="lineno">  278</span>&#160;            {</div>
+<div class="line"><a name="l00279"></a><span class="lineno">  279</span>&#160;                var d = GlobalPosition.DistanceSquaredTo(vehicle.GlobalPosition);</div>
+<div class="line"><a name="l00280"></a><span class="lineno">  280</span>&#160;                <span class="keywordflow">if</span> (d &gt; 0 &amp;&amp; d &lt; <a class="code" href="class_agents_1_1_simple_vehicle.html#aba2259dcf8ed48a072b2bf46b822775a">DetectionAlignmentRadius</a> * <a class="code" href="class_agents_1_1_simple_vehicle.html#aba2259dcf8ed48a072b2bf46b822775a">DetectionAlignmentRadius</a>)</div>
+<div class="line"><a name="l00281"></a><span class="lineno">  281</span>&#160;                {</div>
+<div class="line"><a name="l00282"></a><span class="lineno">  282</span>&#160;                    sum += vehicle.Velocity;</div>
+<div class="line"><a name="l00283"></a><span class="lineno">  283</span>&#160;                    count++;</div>
+<div class="line"><a name="l00284"></a><span class="lineno">  284</span>&#160;                }</div>
+<div class="line"><a name="l00285"></a><span class="lineno">  285</span>&#160;            }</div>
 <div class="line"><a name="l00286"></a><span class="lineno">  286</span>&#160; </div>
-<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;      <span class="keywordflow">if</span> (count &gt; 0)</div>
-<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;      {</div>
-<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;        sum = (sum / count).Normalized() * <a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a>;</div>
-<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;        <span class="keywordflow">return</span> (sum - <a class="code" href="class_forces_1_1_simple_mover.html#a9c6b56340b094c2ead9671b9f840661f">Velocity</a>).Clamped(<a class="code" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">MaxForce</a>);</div>
-<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;      }</div>
-<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;      {</div>
-<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;        <span class="keywordflow">return</span> Vector2.Zero;</div>
-<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;      }</div>
-<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;    }</div>
+<div class="line"><a name="l00287"></a><span class="lineno">  287</span>&#160;            <span class="keywordflow">if</span> (count &gt; 0)</div>
+<div class="line"><a name="l00288"></a><span class="lineno">  288</span>&#160;            {</div>
+<div class="line"><a name="l00289"></a><span class="lineno">  289</span>&#160;                sum = (sum / count).Normalized() * <a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a>;</div>
+<div class="line"><a name="l00290"></a><span class="lineno">  290</span>&#160;                <span class="keywordflow">return</span> (sum - <a class="code" href="class_forces_1_1_simple_mover.html#a9c6b56340b094c2ead9671b9f840661f">Velocity</a>).Clamped(<a class="code" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">MaxForce</a>);</div>
+<div class="line"><a name="l00291"></a><span class="lineno">  291</span>&#160;            }</div>
+<div class="line"><a name="l00292"></a><span class="lineno">  292</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00293"></a><span class="lineno">  293</span>&#160;            {</div>
+<div class="line"><a name="l00294"></a><span class="lineno">  294</span>&#160;                <span class="keywordflow">return</span> Vector2.Zero;</div>
+<div class="line"><a name="l00295"></a><span class="lineno">  295</span>&#160;            }</div>
+<div class="line"><a name="l00296"></a><span class="lineno">  296</span>&#160;        }</div>
 <div class="line"><a name="l00297"></a><span class="lineno">  297</span>&#160; </div>
-<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a8314f617c84146bd9dd8fd6a97ceff21">  303</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">virtual</span> Vector2 <a class="code" href="class_agents_1_1_simple_vehicle.html#a8314f617c84146bd9dd8fd6a97ceff21">MoveLaterally</a>(List&lt;SimpleVehicle&gt; vehicles)</div>
-<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;    {</div>
-<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;      var sum = Vector2.Zero;</div>
-<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;      <span class="keywordtype">int</span> count = 0;</div>
+<div class="line"><a name="l00303"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a8314f617c84146bd9dd8fd6a97ceff21">  303</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">virtual</span> Vector2 <a class="code" href="class_agents_1_1_simple_vehicle.html#a8314f617c84146bd9dd8fd6a97ceff21">MoveLaterally</a>(List&lt;SimpleVehicle&gt; vehicles)</div>
+<div class="line"><a name="l00304"></a><span class="lineno">  304</span>&#160;        {</div>
+<div class="line"><a name="l00305"></a><span class="lineno">  305</span>&#160;            var sum = Vector2.Zero;</div>
+<div class="line"><a name="l00306"></a><span class="lineno">  306</span>&#160;            <span class="keywordtype">int</span> count = 0;</div>
 <div class="line"><a name="l00307"></a><span class="lineno">  307</span>&#160; </div>
-<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;      <span class="comment">// Use an arbitrary target position on the radius circle</span></div>
-<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;      var detectedPos = GlobalPosition + <span class="keyword">new</span> Vector2(<a class="code" href="class_agents_1_1_simple_vehicle.html#aba2259dcf8ed48a072b2bf46b822775a">DetectionAlignmentRadius</a>, 0).Rotated(GlobalRotation);</div>
+<div class="line"><a name="l00308"></a><span class="lineno">  308</span>&#160;            <span class="comment">// Use an arbitrary target position on the radius circle</span></div>
+<div class="line"><a name="l00309"></a><span class="lineno">  309</span>&#160;            var detectedPos = GlobalPosition + <span class="keyword">new</span> Vector2(<a class="code" href="class_agents_1_1_simple_vehicle.html#aba2259dcf8ed48a072b2bf46b822775a">DetectionAlignmentRadius</a>, 0).Rotated(GlobalRotation);</div>
 <div class="line"><a name="l00310"></a><span class="lineno">  310</span>&#160; </div>
-<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;      <span class="keywordflow">foreach</span> (var vehicle <span class="keywordflow">in</span> vehicles)</div>
-<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;      {</div>
-<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;        var dp = detectedPos.DistanceSquaredTo(vehicle.GlobalPosition);</div>
+<div class="line"><a name="l00311"></a><span class="lineno">  311</span>&#160;            <span class="keywordflow">foreach</span> (var vehicle <span class="keywordflow">in</span> vehicles)</div>
+<div class="line"><a name="l00312"></a><span class="lineno">  312</span>&#160;            {</div>
+<div class="line"><a name="l00313"></a><span class="lineno">  313</span>&#160;                var dp = detectedPos.DistanceSquaredTo(vehicle.GlobalPosition);</div>
 <div class="line"><a name="l00314"></a><span class="lineno">  314</span>&#160; </div>
-<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;        <span class="comment">// Compare the distance between the target position and the neighbor</span></div>
-<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;        <span class="keywordflow">if</span> (dp &gt; 0 &amp;&amp; dp &lt; (<a class="code" href="class_agents_1_1_simple_vehicle.html#aba2259dcf8ed48a072b2bf46b822775a">DetectionAlignmentRadius</a> * <a class="code" href="class_agents_1_1_simple_vehicle.html#aba2259dcf8ed48a072b2bf46b822775a">DetectionAlignmentRadius</a>) / 2)</div>
-<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;        {</div>
-<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;          var diff = vehicle.GlobalPosition - GlobalPosition;</div>
-<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;          sum += diff.Rotated(Mathf.Pi / 2);</div>
-<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;          count++;</div>
-<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;        }</div>
-<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;      }</div>
+<div class="line"><a name="l00315"></a><span class="lineno">  315</span>&#160;                <span class="comment">// Compare the distance between the target position and the neighbor</span></div>
+<div class="line"><a name="l00316"></a><span class="lineno">  316</span>&#160;                <span class="keywordflow">if</span> (dp &gt; 0 &amp;&amp; dp &lt; (<a class="code" href="class_agents_1_1_simple_vehicle.html#aba2259dcf8ed48a072b2bf46b822775a">DetectionAlignmentRadius</a> * <a class="code" href="class_agents_1_1_simple_vehicle.html#aba2259dcf8ed48a072b2bf46b822775a">DetectionAlignmentRadius</a>) / 2)</div>
+<div class="line"><a name="l00317"></a><span class="lineno">  317</span>&#160;                {</div>
+<div class="line"><a name="l00318"></a><span class="lineno">  318</span>&#160;                    var diff = vehicle.GlobalPosition - GlobalPosition;</div>
+<div class="line"><a name="l00319"></a><span class="lineno">  319</span>&#160;                    sum += diff.Rotated(Mathf.Pi / 2);</div>
+<div class="line"><a name="l00320"></a><span class="lineno">  320</span>&#160;                    count++;</div>
+<div class="line"><a name="l00321"></a><span class="lineno">  321</span>&#160;                }</div>
+<div class="line"><a name="l00322"></a><span class="lineno">  322</span>&#160;            }</div>
 <div class="line"><a name="l00323"></a><span class="lineno">  323</span>&#160; </div>
-<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;      <span class="keywordflow">if</span> (count &gt; 0)</div>
-<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;      {</div>
-<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;        sum = (sum / count).Normalized() * <a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a>;</div>
-<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;        <span class="keywordflow">return</span> (sum - <a class="code" href="class_forces_1_1_simple_mover.html#a9c6b56340b094c2ead9671b9f840661f">Velocity</a>).Clamped(<a class="code" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">MaxForce</a>);</div>
-<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;      }</div>
-<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;      <span class="keywordflow">else</span></div>
-<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;      {</div>
-<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;        <span class="keywordflow">return</span> Vector2.Zero;</div>
-<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;      }</div>
-<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;    }</div>
+<div class="line"><a name="l00324"></a><span class="lineno">  324</span>&#160;            <span class="keywordflow">if</span> (count &gt; 0)</div>
+<div class="line"><a name="l00325"></a><span class="lineno">  325</span>&#160;            {</div>
+<div class="line"><a name="l00326"></a><span class="lineno">  326</span>&#160;                sum = (sum / count).Normalized() * <a class="code" href="class_forces_1_1_simple_mover.html#abfecba6e384693e1f648eb85caf5fb38">MaxVelocity</a>;</div>
+<div class="line"><a name="l00327"></a><span class="lineno">  327</span>&#160;                <span class="keywordflow">return</span> (sum - <a class="code" href="class_forces_1_1_simple_mover.html#a9c6b56340b094c2ead9671b9f840661f">Velocity</a>).Clamped(<a class="code" href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">MaxForce</a>);</div>
+<div class="line"><a name="l00328"></a><span class="lineno">  328</span>&#160;            }</div>
+<div class="line"><a name="l00329"></a><span class="lineno">  329</span>&#160;            <span class="keywordflow">else</span></div>
+<div class="line"><a name="l00330"></a><span class="lineno">  330</span>&#160;            {</div>
+<div class="line"><a name="l00331"></a><span class="lineno">  331</span>&#160;                <span class="keywordflow">return</span> Vector2.Zero;</div>
+<div class="line"><a name="l00332"></a><span class="lineno">  332</span>&#160;            }</div>
+<div class="line"><a name="l00333"></a><span class="lineno">  333</span>&#160;        }</div>
 <div class="line"><a name="l00334"></a><span class="lineno">  334</span>&#160; </div>
-<div class="line"><a name="l00335"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a107cd92b7961fdcba853f387abadc393">  335</a></span>&#160;    <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a107cd92b7961fdcba853f387abadc393">UpdateAcceleration</a>()</div>
-<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;    {</div>
-<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;      var forces = Vector2.Zero;</div>
+<div class="line"><a name="l00335"></a><span class="lineno"><a class="line" href="class_agents_1_1_simple_vehicle.html#a107cd92b7961fdcba853f387abadc393">  335</a></span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> <a class="code" href="class_agents_1_1_simple_vehicle.html#a107cd92b7961fdcba853f387abadc393">UpdateAcceleration</a>()</div>
+<div class="line"><a name="l00336"></a><span class="lineno">  336</span>&#160;        {</div>
+<div class="line"><a name="l00337"></a><span class="lineno">  337</span>&#160;            var forces = Vector2.Zero;</div>
 <div class="line"><a name="l00338"></a><span class="lineno">  338</span>&#160; </div>
-<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#a39772c01f3d50579ffcff815e58cd448">Target</a> != <span class="keyword">null</span>)</div>
-<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;      {</div>
-<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;        forces += <a class="code" href="class_agents_1_1_simple_vehicle.html#ad879b10e3ed2194a13a6aaf352238fe4">Seek</a>(<a class="code" href="class_agents_1_1_simple_vehicle.html#a39772c01f3d50579ffcff815e58cd448">Target</a>.GlobalPosition) * <a class="code" href="class_agents_1_1_simple_vehicle.html#a4d0a68acff6d0908d015d25af74f6f1e">SeekForceFactor</a>;</div>
-<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;      }</div>
+<div class="line"><a name="l00339"></a><span class="lineno">  339</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#a39772c01f3d50579ffcff815e58cd448">Target</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00340"></a><span class="lineno">  340</span>&#160;            {</div>
+<div class="line"><a name="l00341"></a><span class="lineno">  341</span>&#160;                forces += <a class="code" href="class_agents_1_1_simple_vehicle.html#ad879b10e3ed2194a13a6aaf352238fe4">Seek</a>(<a class="code" href="class_agents_1_1_simple_vehicle.html#a39772c01f3d50579ffcff815e58cd448">Target</a>.GlobalPosition) * <a class="code" href="class_agents_1_1_simple_vehicle.html#a4d0a68acff6d0908d015d25af74f6f1e">SeekForceFactor</a>;</div>
+<div class="line"><a name="l00342"></a><span class="lineno">  342</span>&#160;            }</div>
 <div class="line"><a name="l00343"></a><span class="lineno">  343</span>&#160; </div>
-<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#abc7d98174f7e27726f0eaa54d00a7a0d">TargetFlow</a> != <span class="keyword">null</span>)</div>
-<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;      {</div>
-<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;        forces += <a class="code" href="class_agents_1_1_simple_vehicle.html#af1916e3ea68858fe065208f1dfea19d6">FollowFlow</a>() * <a class="code" href="class_agents_1_1_simple_vehicle.html#a4d0a68acff6d0908d015d25af74f6f1e">SeekForceFactor</a>;</div>
-<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;      }</div>
+<div class="line"><a name="l00344"></a><span class="lineno">  344</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#abc7d98174f7e27726f0eaa54d00a7a0d">TargetFlow</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00345"></a><span class="lineno">  345</span>&#160;            {</div>
+<div class="line"><a name="l00346"></a><span class="lineno">  346</span>&#160;                forces += <a class="code" href="class_agents_1_1_simple_vehicle.html#af1916e3ea68858fe065208f1dfea19d6">FollowFlow</a>() * <a class="code" href="class_agents_1_1_simple_vehicle.html#a4d0a68acff6d0908d015d25af74f6f1e">SeekForceFactor</a>;</div>
+<div class="line"><a name="l00347"></a><span class="lineno">  347</span>&#160;            }</div>
 <div class="line"><a name="l00348"></a><span class="lineno">  348</span>&#160; </div>
-<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a> != <span class="keyword">null</span>)</div>
-<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;      {</div>
-<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;        forces += <a class="code" href="class_agents_1_1_simple_vehicle.html#af3bcbafbf4fb5f9aa616f71012f17d58">FollowPath</a>() * <a class="code" href="class_agents_1_1_simple_vehicle.html#a4d0a68acff6d0908d015d25af74f6f1e">SeekForceFactor</a>;</div>
-<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;      }</div>
+<div class="line"><a name="l00349"></a><span class="lineno">  349</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00350"></a><span class="lineno">  350</span>&#160;            {</div>
+<div class="line"><a name="l00351"></a><span class="lineno">  351</span>&#160;                forces += <a class="code" href="class_agents_1_1_simple_vehicle.html#af3bcbafbf4fb5f9aa616f71012f17d58">FollowPath</a>() * <a class="code" href="class_agents_1_1_simple_vehicle.html#a4d0a68acff6d0908d015d25af74f6f1e">SeekForceFactor</a>;</div>
+<div class="line"><a name="l00352"></a><span class="lineno">  352</span>&#160;            }</div>
 <div class="line"><a name="l00353"></a><span class="lineno">  353</span>&#160; </div>
-<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#ae34ade5c0db21077681c1a0a3ef4d2c5">VehicleGroupList</a>?.Count &gt; 0)</div>
-<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;      {</div>
-<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#a7a21eb7671399de9b100622410bdd282">SeparationEnabled</a>)</div>
-<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;        {</div>
-<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;          forces += <a class="code" href="class_agents_1_1_simple_vehicle.html#a1fe0b218ee367666dee468c6b7e2d606">Separate</a>(<a class="code" href="class_agents_1_1_simple_vehicle.html#ae34ade5c0db21077681c1a0a3ef4d2c5">VehicleGroupList</a>) * <a class="code" href="class_agents_1_1_simple_vehicle.html#aa84e3acfa67b809b3d166ec0c3acbc1b">SeparationForceFactor</a>;</div>
-<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;        }</div>
+<div class="line"><a name="l00354"></a><span class="lineno">  354</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#ae34ade5c0db21077681c1a0a3ef4d2c5">VehicleGroupList</a>?.Count &gt; 0)</div>
+<div class="line"><a name="l00355"></a><span class="lineno">  355</span>&#160;            {</div>
+<div class="line"><a name="l00356"></a><span class="lineno">  356</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#a7a21eb7671399de9b100622410bdd282">SeparationEnabled</a>)</div>
+<div class="line"><a name="l00357"></a><span class="lineno">  357</span>&#160;                {</div>
+<div class="line"><a name="l00358"></a><span class="lineno">  358</span>&#160;                    forces += <a class="code" href="class_agents_1_1_simple_vehicle.html#a1fe0b218ee367666dee468c6b7e2d606">Separate</a>(<a class="code" href="class_agents_1_1_simple_vehicle.html#ae34ade5c0db21077681c1a0a3ef4d2c5">VehicleGroupList</a>) * <a class="code" href="class_agents_1_1_simple_vehicle.html#aa84e3acfa67b809b3d166ec0c3acbc1b">SeparationForceFactor</a>;</div>
+<div class="line"><a name="l00359"></a><span class="lineno">  359</span>&#160;                }</div>
 <div class="line"><a name="l00360"></a><span class="lineno">  360</span>&#160; </div>
-<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#aae4fa62e1da891bb076f019b830e54d1">AlignmentEnabled</a>)</div>
-<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;        {</div>
-<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;          forces += <a class="code" href="class_agents_1_1_simple_vehicle.html#ae640f4cdbd53d3f5f84cdaa0478b505e">Align</a>(<a class="code" href="class_agents_1_1_simple_vehicle.html#ae34ade5c0db21077681c1a0a3ef4d2c5">VehicleGroupList</a>) * <a class="code" href="class_agents_1_1_simple_vehicle.html#a0b6c816854fc560539f6b77b0e9774fb">AlignmentForceFactor</a>;</div>
-<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;        }</div>
+<div class="line"><a name="l00361"></a><span class="lineno">  361</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#aae4fa62e1da891bb076f019b830e54d1">AlignmentEnabled</a>)</div>
+<div class="line"><a name="l00362"></a><span class="lineno">  362</span>&#160;                {</div>
+<div class="line"><a name="l00363"></a><span class="lineno">  363</span>&#160;                    forces += <a class="code" href="class_agents_1_1_simple_vehicle.html#ae640f4cdbd53d3f5f84cdaa0478b505e">Align</a>(<a class="code" href="class_agents_1_1_simple_vehicle.html#ae34ade5c0db21077681c1a0a3ef4d2c5">VehicleGroupList</a>) * <a class="code" href="class_agents_1_1_simple_vehicle.html#a0b6c816854fc560539f6b77b0e9774fb">AlignmentForceFactor</a>;</div>
+<div class="line"><a name="l00364"></a><span class="lineno">  364</span>&#160;                }</div>
 <div class="line"><a name="l00365"></a><span class="lineno">  365</span>&#160; </div>
-<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#aa03fb503625e8d176cbc88662d89516f">CohesionEnabled</a>)</div>
-<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;        {</div>
-<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;          forces += <a class="code" href="class_agents_1_1_simple_vehicle.html#a3a0aba6dfd0a06abaf319303d4a4859b">Regroup</a>(<a class="code" href="class_agents_1_1_simple_vehicle.html#ae34ade5c0db21077681c1a0a3ef4d2c5">VehicleGroupList</a>) * <a class="code" href="class_agents_1_1_simple_vehicle.html#a6fbb9ad5fc68dd2a069336f79992b87a">CohesionForceFactor</a>;</div>
-<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;        }</div>
+<div class="line"><a name="l00366"></a><span class="lineno">  366</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#aa03fb503625e8d176cbc88662d89516f">CohesionEnabled</a>)</div>
+<div class="line"><a name="l00367"></a><span class="lineno">  367</span>&#160;                {</div>
+<div class="line"><a name="l00368"></a><span class="lineno">  368</span>&#160;                    forces += <a class="code" href="class_agents_1_1_simple_vehicle.html#a3a0aba6dfd0a06abaf319303d4a4859b">Regroup</a>(<a class="code" href="class_agents_1_1_simple_vehicle.html#ae34ade5c0db21077681c1a0a3ef4d2c5">VehicleGroupList</a>) * <a class="code" href="class_agents_1_1_simple_vehicle.html#a6fbb9ad5fc68dd2a069336f79992b87a">CohesionForceFactor</a>;</div>
+<div class="line"><a name="l00369"></a><span class="lineno">  369</span>&#160;                }</div>
 <div class="line"><a name="l00370"></a><span class="lineno">  370</span>&#160; </div>
-<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;        <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#acf81e1ae1ab47e54f98beb947651cea9">LateralMoveEnabled</a>)</div>
-<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;        {</div>
-<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;          forces += <a class="code" href="class_agents_1_1_simple_vehicle.html#a8314f617c84146bd9dd8fd6a97ceff21">MoveLaterally</a>(<a class="code" href="class_agents_1_1_simple_vehicle.html#ae34ade5c0db21077681c1a0a3ef4d2c5">VehicleGroupList</a>) * <a class="code" href="class_agents_1_1_simple_vehicle.html#a77a4350ebe2a001a977a9108b8f49946">LateralMoveForceFactor</a>;</div>
-<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;        }</div>
-<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;      }</div>
+<div class="line"><a name="l00371"></a><span class="lineno">  371</span>&#160;                <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#acf81e1ae1ab47e54f98beb947651cea9">LateralMoveEnabled</a>)</div>
+<div class="line"><a name="l00372"></a><span class="lineno">  372</span>&#160;                {</div>
+<div class="line"><a name="l00373"></a><span class="lineno">  373</span>&#160;                    forces += <a class="code" href="class_agents_1_1_simple_vehicle.html#a8314f617c84146bd9dd8fd6a97ceff21">MoveLaterally</a>(<a class="code" href="class_agents_1_1_simple_vehicle.html#ae34ade5c0db21077681c1a0a3ef4d2c5">VehicleGroupList</a>) * <a class="code" href="class_agents_1_1_simple_vehicle.html#a77a4350ebe2a001a977a9108b8f49946">LateralMoveForceFactor</a>;</div>
+<div class="line"><a name="l00374"></a><span class="lineno">  374</span>&#160;                }</div>
+<div class="line"><a name="l00375"></a><span class="lineno">  375</span>&#160;            }</div>
 <div class="line"><a name="l00376"></a><span class="lineno">  376</span>&#160; </div>
-<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;      <a class="code" href="class_forces_1_1_simple_mover.html#a71433d4d62961ee0e4833e4e19737d89">ApplyForce</a>(forces);</div>
-<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;    }</div>
+<div class="line"><a name="l00377"></a><span class="lineno">  377</span>&#160;            <a class="code" href="class_forces_1_1_simple_mover.html#a71433d4d62961ee0e4833e4e19737d89">ApplyForce</a>(forces);</div>
+<div class="line"><a name="l00378"></a><span class="lineno">  378</span>&#160;        }</div>
 <div class="line"><a name="l00379"></a><span class="lineno">  379</span>&#160; </div>
-<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Draw()</div>
-<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;    {</div>
-<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#a05e9855d1109e76dc484e30cff342614">DebugDraw</a> &amp;&amp; <a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a> != <span class="keyword">null</span>)</div>
-<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;      {</div>
-<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;        <span class="keywordflow">if</span> (debugNormalPoint.HasValue &amp;&amp; debugPredictPos.HasValue &amp;&amp; debugTargetPoint.HasValue)</div>
-<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;        {</div>
-<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;          var predictPos = (debugPredictPos.Value - GlobalPosition).Rotated(-GlobalRotation);</div>
-<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;          var normalPos = (debugNormalPoint.Value - GlobalPosition).Rotated(-GlobalRotation);</div>
-<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;          var targetPos = (debugTargetPoint.Value - GlobalPosition).Rotated(-GlobalRotation);</div>
+<div class="line"><a name="l00380"></a><span class="lineno">  380</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Draw()</div>
+<div class="line"><a name="l00381"></a><span class="lineno">  381</span>&#160;        {</div>
+<div class="line"><a name="l00382"></a><span class="lineno">  382</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#a05e9855d1109e76dc484e30cff342614">DebugDraw</a> &amp;&amp; <a class="code" href="class_agents_1_1_simple_vehicle.html#a1977aa9807253704892f010ffe348de0">TargetPath</a> != <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00383"></a><span class="lineno">  383</span>&#160;            {</div>
+<div class="line"><a name="l00384"></a><span class="lineno">  384</span>&#160;                <span class="keywordflow">if</span> (debugNormalPoint.HasValue &amp;&amp; debugPredictPos.HasValue &amp;&amp; debugTargetPoint.HasValue)</div>
+<div class="line"><a name="l00385"></a><span class="lineno">  385</span>&#160;                {</div>
+<div class="line"><a name="l00386"></a><span class="lineno">  386</span>&#160;                    var predictPos = (debugPredictPos.Value - GlobalPosition).Rotated(-GlobalRotation);</div>
+<div class="line"><a name="l00387"></a><span class="lineno">  387</span>&#160;                    var normalPos = (debugNormalPoint.Value - GlobalPosition).Rotated(-GlobalRotation);</div>
+<div class="line"><a name="l00388"></a><span class="lineno">  388</span>&#160;                    var targetPos = (debugTargetPoint.Value - GlobalPosition).Rotated(-GlobalRotation);</div>
 <div class="line"><a name="l00389"></a><span class="lineno">  389</span>&#160; </div>
-<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;          DrawLine(Vector2.Zero, predictPos, Colors.OrangeRed);</div>
-<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;          DrawLine(predictPos, normalPos, Colors.BlueViolet);</div>
-<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;          DrawLine(normalPos, targetPos, Colors.Orange);</div>
-<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;          DrawCircle(targetPos, 5, Colors.OrangeRed);</div>
-<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;        }</div>
-<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;      }</div>
+<div class="line"><a name="l00390"></a><span class="lineno">  390</span>&#160;                    DrawLine(Vector2.Zero, predictPos, Colors.OrangeRed);</div>
+<div class="line"><a name="l00391"></a><span class="lineno">  391</span>&#160;                    DrawLine(predictPos, normalPos, Colors.BlueViolet);</div>
+<div class="line"><a name="l00392"></a><span class="lineno">  392</span>&#160;                    DrawLine(normalPos, targetPos, Colors.Orange);</div>
+<div class="line"><a name="l00393"></a><span class="lineno">  393</span>&#160;                    DrawCircle(targetPos, 5, Colors.OrangeRed);</div>
+<div class="line"><a name="l00394"></a><span class="lineno">  394</span>&#160;                }</div>
+<div class="line"><a name="l00395"></a><span class="lineno">  395</span>&#160;            }</div>
 <div class="line"><a name="l00396"></a><span class="lineno">  396</span>&#160; </div>
-<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;      <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#a05e9855d1109e76dc484e30cff342614">DebugDraw</a> &amp;&amp; (<a class="code" href="class_agents_1_1_simple_vehicle.html#aae4fa62e1da891bb076f019b830e54d1">AlignmentEnabled</a> || <a class="code" href="class_agents_1_1_simple_vehicle.html#acf81e1ae1ab47e54f98beb947651cea9">LateralMoveEnabled</a>))</div>
-<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;      {</div>
-<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;        DrawCircle(Vector2.Zero, <a class="code" href="class_agents_1_1_simple_vehicle.html#aba2259dcf8ed48a072b2bf46b822775a">DetectionAlignmentRadius</a>, Colors.Azure.WithAlpha(64));</div>
-<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;      }</div>
-<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;    }</div>
-<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;  }</div>
+<div class="line"><a name="l00397"></a><span class="lineno">  397</span>&#160;            <span class="keywordflow">if</span> (<a class="code" href="class_agents_1_1_simple_vehicle.html#a05e9855d1109e76dc484e30cff342614">DebugDraw</a> &amp;&amp; (<a class="code" href="class_agents_1_1_simple_vehicle.html#aae4fa62e1da891bb076f019b830e54d1">AlignmentEnabled</a> || <a class="code" href="class_agents_1_1_simple_vehicle.html#acf81e1ae1ab47e54f98beb947651cea9">LateralMoveEnabled</a>))</div>
+<div class="line"><a name="l00398"></a><span class="lineno">  398</span>&#160;            {</div>
+<div class="line"><a name="l00399"></a><span class="lineno">  399</span>&#160;                DrawCircle(Vector2.Zero, <a class="code" href="class_agents_1_1_simple_vehicle.html#aba2259dcf8ed48a072b2bf46b822775a">DetectionAlignmentRadius</a>, Colors.Azure.WithAlpha(64));</div>
+<div class="line"><a name="l00400"></a><span class="lineno">  400</span>&#160;            }</div>
+<div class="line"><a name="l00401"></a><span class="lineno">  401</span>&#160;        }</div>
+<div class="line"><a name="l00402"></a><span class="lineno">  402</span>&#160;    }</div>
 <div class="line"><a name="l00403"></a><span class="lineno">  403</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_forces_1_1_simple_mover_html_a10bb7f290bfb74ce307d84e1622e6d27"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a10bb7f290bfb74ce307d84e1622e6d27">Forces.SimpleMover.SyncRotationOnVelocity</a></div><div class="ttdeci">bool SyncRotationOnVelocity</div><div class="ttdoc">Synchronize rotation on velocity</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00054">SimpleMover.cs:54</a></div></div>
-<div class="ttc" id="aclass_forces_1_1_simple_mover_html_a71433d4d62961ee0e4833e4e19737d89"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a71433d4d62961ee0e4833e4e19737d89">Forces.SimpleMover.ApplyForce</a></div><div class="ttdeci">virtual void ApplyForce(Vector2 force)</div><div class="ttdoc">Apply force on mover.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00107">SimpleMover.cs:107</a></div></div>
+<div class="ttc" id="aclass_forces_1_1_simple_mover_html_a71433d4d62961ee0e4833e4e19737d89"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a71433d4d62961ee0e4833e4e19737d89">Forces.SimpleMover.ApplyForce</a></div><div class="ttdeci">virtual void ApplyForce(Vector2 force)</div><div class="ttdoc">Apply force on mover.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00114">SimpleMover.cs:114</a></div></div>
 <div class="ttc" id="anamespace_drawing_html"><div class="ttname"><a href="namespace_drawing.html">Drawing</a></div><div class="ttdoc">Draw primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00006">DrawCanvas.cs:7</a></div></div>
 <div class="ttc" id="aclass_agents_1_1_simple_vehicle_html_aa84e3acfa67b809b3d166ec0c3acbc1b"><div class="ttname"><a href="class_agents_1_1_simple_vehicle.html#aa84e3acfa67b809b3d166ec0c3acbc1b">Agents.SimpleVehicle.SeparationForceFactor</a></div><div class="ttdeci">float SeparationForceFactor</div><div class="ttdoc">Separation force factor</div><div class="ttdef"><b>Definition:</b> <a href="_simple_vehicle_8cs_source.html#l00063">SimpleVehicle.cs:63</a></div></div>
 <div class="ttc" id="aclass_agents_1_1_simple_vehicle_html_aa03fb503625e8d176cbc88662d89516f"><div class="ttname"><a href="class_agents_1_1_simple_vehicle.html#aa03fb503625e8d176cbc88662d89516f">Agents.SimpleVehicle.CohesionEnabled</a></div><div class="ttdeci">bool CohesionEnabled</div><div class="ttdoc">Enable cohesion group behavior</div><div class="ttdef"><b>Definition:</b> <a href="_simple_vehicle_8cs_source.html#l00048">SimpleVehicle.cs:48</a></div></div>
@@ -457,6 +457,7 @@ $(function() {
 <div class="ttc" id="aclass_agents_1_1_simple_flow_field_html"><div class="ttname"><a href="class_agents_1_1_simple_flow_field.html">Agents.SimpleFlowField</a></div><div class="ttdoc">Simple flow field.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_flow_field_8cs_source.html#l00008">SimpleFlowField.cs:9</a></div></div>
 <div class="ttc" id="anamespace_agents_html"><div class="ttname"><a href="namespace_agents.html">Agents</a></div><div class="ttdoc">Autonomous agents related primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_image_flow_field_8cs_source.html#l00003">ImageFlowField.cs:4</a></div></div>
 <div class="ttc" id="aclass_agents_1_1_simple_vehicle_html_ab97d028786b55a1438ce59e08e298847"><div class="ttname"><a href="class_agents_1_1_simple_vehicle.html#ab97d028786b55a1438ce59e08e298847">Agents.SimpleVehicle.DetectionScanLength</a></div><div class="ttdeci">float DetectionScanLength</div><div class="ttdoc">Detection scan length</div><div class="ttdef"><b>Definition:</b> <a href="_simple_vehicle_8cs_source.html#l00033">SimpleVehicle.cs:33</a></div></div>
+<div class="ttc" id="aclass_forces_1_1_simple_mover_html_a92120ffc92b9e60f58d28ea0aef6623f"><div class="ttname"><a href="class_forces_1_1_simple_mover.html#a92120ffc92b9e60f58d28ea0aef6623f">Forces.SimpleMover.collisionShape2D</a></div><div class="ttdeci">CollisionShape2D collisionShape2D</div><div class="ttdoc">Collision shape</div><div class="ttdef"><b>Definition:</b> <a href="_simple_mover_8cs_source.html#l00090">SimpleMover.cs:90</a></div></div>
 <div class="ttc" id="aclass_agents_1_1_simple_vehicle_html"><div class="ttname"><a href="class_agents_1_1_simple_vehicle.html">Agents.SimpleVehicle</a></div><div class="ttdoc">Vehicle with force and steering. Tracks a target.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_vehicle_8cs_source.html#l00015">SimpleVehicle.cs:16</a></div></div>
 <div class="ttc" id="aclass_agents_1_1_simple_vehicle_html_a6fbb9ad5fc68dd2a069336f79992b87a"><div class="ttname"><a href="class_agents_1_1_simple_vehicle.html#a6fbb9ad5fc68dd2a069336f79992b87a">Agents.SimpleVehicle.CohesionForceFactor</a></div><div class="ttdeci">float CohesionForceFactor</div><div class="ttdoc">Cohesion force factor</div><div class="ttdef"><b>Definition:</b> <a href="_simple_vehicle_8cs_source.html#l00066">SimpleVehicle.cs:66</a></div></div>
 <div class="ttc" id="aclass_agents_1_1_simple_vehicle_html_ad1e5614a7ced9f578ed4c5f487295328"><div class="ttname"><a href="class_agents_1_1_simple_vehicle.html#ad1e5614a7ced9f578ed4c5f487295328">Agents.SimpleVehicle.MaxForce</a></div><div class="ttdeci">float MaxForce</div><div class="ttdoc">Max force</div><div class="ttdef"><b>Definition:</b> <a href="_simple_vehicle_8cs_source.html#l00027">SimpleVehicle.cs:27</a></div></div>

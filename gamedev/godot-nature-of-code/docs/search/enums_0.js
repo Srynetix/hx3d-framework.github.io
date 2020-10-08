@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['enum_961',['Enum',['../class_assets_1_1_simple_default_material.html#adeae62285d45575a55b88819121468c5',1,'Assets.SimpleDefaultMaterial.Enum()'],['../class_assets_1_1_simple_default_texture.html#aea0415656d29fff069a6b7446fd536d2',1,'Assets.SimpleDefaultTexture.Enum()']]]
+  ['joystickmodeenum_1129',['JoystickModeEnum',['../class_virtual_controls.html#a284dbf8eddf0f1bc8e48aff4d70d8fd3',1,'VirtualControls']]]
 ];

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -76,42 +76,42 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno"><a class="line" href="namespace_examples.html">    7</a></span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples.html">Examples</a></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="namespace_examples_1_1_chapter0.html">   12</a></span>&#160;  <span class="keyword">namespace </span>Chapter0</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;  {</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter0_1_1_c0_example1.html">   19</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter0_1_1_c0_example1.html">C0Example1</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    {</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter0_1_1_c0_example1.html#ab0254c10a69ffc852a900b3f94fe8ad3">   21</a></span>&#160;      <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter0_1_1_c0_example1.html#ab0254c10a69ffc852a900b3f94fe8ad3">GetSummary</a>()</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      {</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example I.1:\n&quot;</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;          + <span class="stringliteral">&quot;Traditional random walk&quot;</span>;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      }</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="namespace_examples_1_1_chapter0.html">   12</a></span>&#160;    <span class="keyword">namespace </span>Chapter0</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter0_1_1_c0_example1.html">   19</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter0_1_1_c0_example1.html">C0Example1</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        {</div>
+<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter0_1_1_c0_example1.html#ab0254c10a69ffc852a900b3f94fe8ad3">   21</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter0_1_1_c0_example1.html#ab0254c10a69ffc852a900b3f94fe8ad3">GetSummary</a>()</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example I.1:\n&quot;</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                  + <span class="stringliteral">&quot;Traditional random walk&quot;</span>;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            }</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <span class="keyword">private</span> <span class="keyword">class </span>Walker : <a class="code" href="class_drawing_1_1_simple_walker.html">SimpleWalker</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Step()</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        {</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;          var stepX = (float)GD.RandRange(-1.0, 1.0);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;          var stepY = (float)GD.RandRange(-1.0, 1.0);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keyword">private</span> <span class="keyword">class </span>Walker : <a class="code" href="class_drawing_1_1_simple_walker.html">SimpleWalker</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> Step()</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                {</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                    var stepX = (float)GD.RandRange(-1.0, 1.0);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                    var stepY = (float)GD.RandRange(-1.0, 1.0);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;          x += stepX * StepSize;</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;          y += stepY * StepSize;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                    x += stepX * StepSize;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    y += stepY * StepSize;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                }</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            }</div>
 <div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      <span class="keyword">private</span> Walker walker;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            <span class="keyword">private</span> Walker walker;</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        walker = <span class="keyword">new</span> Walker();</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        walker.SetXY(GetViewportRect().Size / 2);</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        AddChild(walker);</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                walker = <span class="keyword">new</span> Walker();</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                walker.SetXY(GetViewportRect().Size / 2);</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                AddChild(walker);</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        var canvas = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_draw_canvas.html">DrawCanvas</a>((pen) =&gt; pen.DrawRect(walker.GetStepRect(), Colors.LightCyan, <span class="keyword">true</span>));</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        canvas.QueueClearDrawing(Color.Color8(45, 45, 45));</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        AddChild(canvas);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      }</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;  }</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;                var canvas = <span class="keyword">new</span> <a class="code" href="class_drawing_1_1_draw_canvas.html">DrawCanvas</a>((pen) =&gt; pen.DrawRect(walker.GetStepRect(), Colors.LightCyan, <span class="keyword">true</span>));</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                canvas.QueueClearDrawing(Color.Color8(45, 45, 45));</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                AddChild(canvas);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            }</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    }</div>
 <div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="anamespace_drawing_html"><div class="ttname"><a href="namespace_drawing.html">Drawing</a></div><div class="ttdoc">Draw primitives.</div><div class="ttdef"><b>Definition:</b> <a href="_draw_canvas_8cs_source.html#l00006">DrawCanvas.cs:7</a></div></div>

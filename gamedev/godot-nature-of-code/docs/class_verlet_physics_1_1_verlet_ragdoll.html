@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -175,54 +175,54 @@ Public Member Functions</h2></td></tr>
 </dl>
 
 <p class="definition">Definition at line <a class="el" href="_verlet_ragdoll_8cs_source.html#l00033">33</a> of file <a class="el" href="_verlet_ragdoll_8cs_source.html">VerletRagdoll.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      Vector2 genPos()</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;      {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keywordflow">return</span> centerPosition + <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">RandVector2</a>(-5, 5, -5, 5);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      }</div>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            Vector2 genPos()</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;            {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                <span class="keywordflow">return</span> centerPosition + <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">RandVector2</a>(-5, 5, -5, 5);</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            }</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      VerletPoint createPoint(<span class="keywordtype">float</span> mass, <span class="keywordtype">float</span>? radius = <span class="keyword">null</span>, <span class="keywordtype">bool</span>? visible = <span class="keyword">null</span>)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        var point = world.CreatePoint(genPos(), mass: mass, radius: radius ?? pointRadius, visible: visible ?? drawIntermediatePoints);</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        point.GravityScale = gravityScale;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        <span class="keywordflow">return</span> point;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      }</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;            VerletPoint createPoint(<span class="keywordtype">float</span> mass, <span class="keywordtype">float</span>? radius = <span class="keyword">null</span>, <span class="keywordtype">bool</span>? visible = <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;            {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                var point = world.CreatePoint(genPos(), mass: mass, radius: radius ?? pointRadius, visible: visible ?? drawIntermediatePoints);</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                point.GravityScale = gravityScale;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                <span class="keywordflow">return</span> point;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            }</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      var headSize = pointRadius * 3;</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      var handSize = pointRadius * 2;</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      var footSize = pointRadius * 1.5f;</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      var headLength = height / 7.5f;</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            var headSize = pointRadius * 3;</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            var handSize = pointRadius * 2;</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            var footSize = pointRadius * 1.5f;</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            var headLength = height / 7.5f;</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;      head = createPoint(4, radius: headSize, visible: <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;      shoulder = createPoint(26);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;      world.CreateLink(head, shoulder, restingDistance: 5 / 4 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            head = createPoint(4, radius: headSize, visible: <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            shoulder = createPoint(26);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;            world.CreateLink(head, shoulder, restingDistance: 5 / 4 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
 <div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160; </div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;      elbowLeft = createPoint(2);</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;      elbowRight = createPoint(2);</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;      world.CreateLink(elbowLeft, shoulder, restingDistance: 3 / 2 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;      world.CreateLink(elbowRight, shoulder, restingDistance: 3 / 2 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            elbowLeft = createPoint(2);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;            elbowRight = createPoint(2);</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;            world.CreateLink(elbowLeft, shoulder, restingDistance: 3 / 2 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;            world.CreateLink(elbowRight, shoulder, restingDistance: 3 / 2 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;      handLeft = createPoint(2, radius: handSize, visible: <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;      handRight = createPoint(2, radius: handSize, visible: <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;      world.CreateLink(handLeft, elbowLeft, restingDistance: 2 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;      world.CreateLink(handRight, elbowRight, restingDistance: 2 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;            handLeft = createPoint(2, radius: handSize, visible: <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;            handRight = createPoint(2, radius: handSize, visible: <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;            world.CreateLink(handLeft, elbowLeft, restingDistance: 2 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            world.CreateLink(handRight, elbowRight, restingDistance: 2 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
 <div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      pelvis = createPoint(15);</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;      world.CreateLink(pelvis, shoulder, restingDistance: 3.5f * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 0.8f);</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;      world.CreateLink(pelvis, head, restingDistance: 4.75f * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 0.02f, visible: drawSupportLinks, color: Colors.LightBlue.WithAlpha(64));</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            pelvis = createPoint(15);</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            world.CreateLink(pelvis, shoulder, restingDistance: 3.5f * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 0.8f);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            world.CreateLink(pelvis, head, restingDistance: 4.75f * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 0.02f, visible: drawSupportLinks, color: Colors.LightBlue.WithAlpha(64));</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160; </div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;      kneeLeft = createPoint(10);</div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;      kneeRight = createPoint(10);</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;      world.CreateLink(kneeLeft, pelvis, restingDistance: 2 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;      world.CreateLink(kneeRight, pelvis, restingDistance: 2 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
+<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;            kneeLeft = createPoint(10);</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;            kneeRight = createPoint(10);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;            world.CreateLink(kneeLeft, pelvis, restingDistance: 2 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;            world.CreateLink(kneeRight, pelvis, restingDistance: 2 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
 <div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;      footLeft = createPoint(20, radius: footSize, visible: <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;      footRight = createPoint(20, radius: footSize, visible: <span class="keyword">true</span>);</div>
-<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;      world.CreateLink(footLeft, kneeLeft, restingDistance: 2 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
-<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;      world.CreateLink(footRight, kneeRight, restingDistance: 2 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
-<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;      world.CreateLink(footLeft, shoulder, restingDistance: 7.5f * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 0.001f, visible: drawSupportLinks, color: Colors.LightBlue.WithAlpha(64));</div>
-<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;      world.CreateLink(footRight, shoulder, restingDistance: 7.5f * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 0.001f, visible: drawSupportLinks, color: Colors.LightBlue.WithAlpha(64));</div>
-<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;    }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;            footLeft = createPoint(20, radius: footSize, visible: <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;            footRight = createPoint(20, radius: footSize, visible: <span class="keyword">true</span>);</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;            world.CreateLink(footLeft, kneeLeft, restingDistance: 2 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;            world.CreateLink(footRight, kneeRight, restingDistance: 2 * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 1);</div>
+<div class="line"><a name="l00079"></a><span class="lineno">   79</span>&#160;            world.CreateLink(footLeft, shoulder, restingDistance: 7.5f * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 0.001f, visible: drawSupportLinks, color: Colors.LightBlue.WithAlpha(64));</div>
+<div class="line"><a name="l00080"></a><span class="lineno">   80</span>&#160;            world.CreateLink(footRight, shoulder, restingDistance: 7.5f * headLength, tearSensitivityFactor: tearSensitivityFactor, stiffness: 0.001f, visible: drawSupportLinks, color: Colors.LightBlue.WithAlpha(64));</div>
+<div class="line"><a name="l00081"></a><span class="lineno">   81</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -231,7 +231,7 @@ Public Member Functions</h2></td></tr>
 </ul>
 </div><!-- contents -->
 <div class="ttc" id="aclass_math_utils_html"><div class="ttname"><a href="class_math_utils.html">MathUtils</a></div><div class="ttdoc">Math utility functions</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00006">MathUtils.cs:7</a></div></div>
-<div class="ttc" id="aclass_math_utils_html_a930682fc1b0e30eb85d7cc9d33849e5e"><div class="ttname"><a href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">MathUtils.RandVector2</a></div><div class="ttdeci">static Vector2 RandVector2(Vector2 rangeX, Vector2 rangeY)</div><div class="ttdoc">Return a Vector with coordinates in a random range (vector limits).</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00081">MathUtils.cs:81</a></div></div>
+<div class="ttc" id="aclass_math_utils_html_a930682fc1b0e30eb85d7cc9d33849e5e"><div class="ttname"><a href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">MathUtils.RandVector2</a></div><div class="ttdeci">static Vector2 RandVector2(Vector2 rangeX, Vector2 rangeY)</div><div class="ttdoc">Return a Vector with coordinates in a random range (vector limits).</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00092">MathUtils.cs:92</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by&#160;<a href="http://www.doxygen.org/index.html"><img class="footer" src="doxygen.svg" width="104" height="31" alt="doxygen"/></a> 1.8.20

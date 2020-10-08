@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -77,72 +77,72 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples_1_1_chapter3.html">Examples.Chapter3</a></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter3_1_1_c3_exercise16.html">   11</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter3_1_1_c3_exercise16.html">C3Exercise16</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;  {</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter3_1_1_c3_exercise16.html#a1b71ac9c13e2f08d139001bb45380731">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter3_1_1_c3_exercise16.html#a1b71ac9c13e2f08d139001bb45380731">GetSummary</a>()</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Exercise 3.16:\n&quot;</span></div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        + <span class="stringliteral">&quot;Multiple Springs\n\n&quot;</span></div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        + <span class="stringliteral">&quot;You can move the balls by touching them.&quot;</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    }</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter3_1_1_c3_exercise16.html">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter3_1_1_c3_exercise16.html">C3Exercise16</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter3_1_1_c3_exercise16.html#a1b71ac9c13e2f08d139001bb45380731">   13</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter3_1_1_c3_exercise16.html#a1b71ac9c13e2f08d139001bb45380731">GetSummary</a>()</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Exercise 3.16:\n&quot;</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;              + <span class="stringliteral">&quot;Multiple Springs\n\n&quot;</span></div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;              + <span class="stringliteral">&quot;You can move the balls by touching them.&quot;</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        }</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">private</span> <span class="keyword">class </span>Mover : <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      <span class="keyword">public</span> Mover() : base(WrapModeEnum.None)</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      {</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        Mass = 24;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        <span class="keyword">private</span> <span class="keyword">class </span>Mover : <a class="code" href="class_forces_1_1_simple_mover.html">SimpleMover</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">public</span> Mover() : base(WrapModeEnum.None)</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            {</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;                Mass = 24;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            }</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> UpdateAcceleration()</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="comment">// Gravity</span></div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        ApplyForce(<span class="keyword">new</span> Vector2(0, 0.9f));</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;        ApplyDamping(0.98f);</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      }</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;    }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            <span class="keyword">protected</span> <span class="keyword">override</span> <span class="keywordtype">void</span> UpdateAcceleration()</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="comment">// Gravity</span></div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                ApplyForce(<span class="keyword">new</span> Vector2(0, 0.9f));</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                ApplyDamping(0.98f);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> SpringCount = 4;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> SpringPerSpring = 3;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">int</span> SpringSeparation = 30;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> SprintChildSurfaceRatio = 8;</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">int</span> SpringCount = 4;</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">int</span> SpringPerSpring = 3;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">int</span> SpringSeparation = 30;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keyword">private</span> <span class="keyword">const</span> <span class="keywordtype">float</span> SprintChildSurfaceRatio = 8;</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;      var size = GetViewportRect().Size;</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      var springStep = size.x / SpringCount;</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;      var springPerSpringSurface = size.x / SprintChildSurfaceRatio;</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;      var springPerSpringOffset = springPerSpringSurface / SpringPerSpring;</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        {</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;            var size = GetViewportRect().Size;</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            var springStep = size.x / SpringCount;</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;            var springPerSpringSurface = size.x / SprintChildSurfaceRatio;</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;            var springPerSpringOffset = springPerSpringSurface / SpringPerSpring;</div>
 <div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;      <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; SpringCount; ++x)</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      {</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        var spring = <span class="keyword">new</span> <a class="code" href="class_oscillation_1_1_simple_spring.html">SimpleSpring</a>();</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        var mover = <span class="keyword">new</span> Mover();</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;            <span class="keywordflow">for</span> (<span class="keywordtype">int</span> x = 0; x &lt; SpringCount; ++x)</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            {</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                var spring = <span class="keyword">new</span> <a class="code" href="class_oscillation_1_1_simple_spring.html">SimpleSpring</a>();</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                var mover = <span class="keyword">new</span> Mover();</div>
 <div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160; </div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        spring.Length = (size.y / 4) + (x * SpringSeparation);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        spring.MaxLength = size.y / 2;</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        spring.MinLength = size.y / 8;</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;        spring.Position = <span class="keyword">new</span> Vector2((springStep / 2) + (springStep * x), 0);</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                spring.Length = (size.y / 4) + (x * SpringSeparation);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                spring.MaxLength = size.y / 2;</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                spring.MinLength = size.y / 8;</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                spring.Position = <span class="keyword">new</span> Vector2((springStep / 2) + (springStep * x), 0);</div>
 <div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160; </div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;        spring.SetMover(mover, <span class="keyword">new</span> Vector2(0, size.y / 4));</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        AddChild(spring);</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                spring.SetMover(mover, <span class="keyword">new</span> Vector2(0, size.y / 4));</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                AddChild(spring);</div>
 <div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> s = 0; s &lt; SpringPerSpring; ++s)</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        {</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;          var cSpring = <span class="keyword">new</span> <a class="code" href="class_oscillation_1_1_simple_spring.html">SimpleSpring</a></div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;          {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;            ShowBehindParent = <span class="keyword">true</span>,</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;            Length = (size.y / 4) + (s * SpringSeparation),</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            MaxLength = size.y / 2,</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;            MinLength = size.y / 8,</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;            Position = Vector2.Zero</div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;          };</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> s = 0; s &lt; SpringPerSpring; ++s)</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                {</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                    var cSpring = <span class="keyword">new</span> <a class="code" href="class_oscillation_1_1_simple_spring.html">SimpleSpring</a></div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                    {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                        ShowBehindParent = <span class="keyword">true</span>,</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                        Length = (size.y / 4) + (s * SpringSeparation),</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;                        MaxLength = size.y / 2,</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;                        MinLength = size.y / 8,</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;                        Position = Vector2.Zero</div>
+<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;                    };</div>
 <div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;          cSpring.<a class="code" href="class_oscillation_1_1_simple_spring.html#acf7cb63bf40e4cd8a00fb620990374fd">SetMover</a>(<span class="keyword">new</span> Mover(), <span class="keyword">new</span> Vector2((springPerSpringOffset * s) - (springPerSpringSurface / 2) + (springPerSpringOffset / 2), size.y / 4));</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;          mover.AddChild(cSpring);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;        }</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;      }</div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    }</div>
-<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;  }</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;                    cSpring.<a class="code" href="class_oscillation_1_1_simple_spring.html#acf7cb63bf40e4cd8a00fb620990374fd">SetMover</a>(<span class="keyword">new</span> Mover(), <span class="keyword">new</span> Vector2((springPerSpringOffset * s) - (springPerSpringSurface / 2) + (springPerSpringOffset / 2), size.y / 4));</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;                    mover.AddChild(cSpring);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;                }</div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;            }</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;        }</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;    }</div>
 <div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_examples_1_1_chapter3_1_1_c3_exercise16_html_a1b71ac9c13e2f08d139001bb45380731"><div class="ttname"><a href="class_examples_1_1_chapter3_1_1_c3_exercise16.html#a1b71ac9c13e2f08d139001bb45380731">Examples.Chapter3.C3Exercise16.GetSummary</a></div><div class="ttdeci">string GetSummary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c3_exercise16_8cs_source.html#l00013">C3Exercise16.cs:13</a></div></div>

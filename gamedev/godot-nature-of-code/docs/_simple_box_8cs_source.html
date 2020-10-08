@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -75,49 +75,49 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_physics.html">Physics</a></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_box.html">    8</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_physics_1_1_simple_box.html">SimpleBox</a> : RigidBody2D</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  {</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_box.html#a90190a075c67d302efa0f33baf7c6d54">   11</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_physics_1_1_simple_box.html#a90190a075c67d302efa0f33baf7c6d54">OutlineWidth</a> = 2;</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_box.html">    8</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_physics_1_1_simple_box.html">SimpleBox</a> : RigidBody2D</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_box.html#a90190a075c67d302efa0f33baf7c6d54">   11</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">float</span> <a class="code" href="class_physics_1_1_simple_box.html#a90190a075c67d302efa0f33baf7c6d54">OutlineWidth</a> = 2;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_box.html#ac1ca81d61b8f5428cd64f13d2409ebfe">   14</a></span>&#160;    <span class="keyword">public</span> Color <a class="code" href="class_physics_1_1_simple_box.html#ac1ca81d61b8f5428cd64f13d2409ebfe">OutlineColor</a> = Colors.LightBlue;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_box.html#ac1ca81d61b8f5428cd64f13d2409ebfe">   14</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_physics_1_1_simple_box.html#ac1ca81d61b8f5428cd64f13d2409ebfe">OutlineColor</a> = Colors.LightBlue;</div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_box.html#a9c32b7d99db89daef96551271826a09c">   17</a></span>&#160;    <span class="keyword">public</span> Color <a class="code" href="class_physics_1_1_simple_box.html#a9c32b7d99db89daef96551271826a09c">BaseColor</a> = Colors.White;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_box.html#a9c32b7d99db89daef96551271826a09c">   17</a></span>&#160;        <span class="keyword">public</span> Color <a class="code" href="class_physics_1_1_simple_box.html#a9c32b7d99db89daef96551271826a09c">BaseColor</a> = Colors.White;</div>
 <div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_box.html#a8ab867f2de3aec7dbe54f05f8391bb81">   20</a></span>&#160;    <span class="keyword">public</span> Vector2 <a class="code" href="class_physics_1_1_simple_box.html#a8ab867f2de3aec7dbe54f05f8391bb81">BodySize</a></div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      <span class="keyword">get</span> =&gt; rectangleShape2D.Extents * 2;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      <span class="keyword">set</span></div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      {</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        rectangleShape2D.Extents = value / 2;</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      }</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    }</div>
+<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_box.html#a8ab867f2de3aec7dbe54f05f8391bb81">   20</a></span>&#160;        <span class="keyword">public</span> Vector2 <a class="code" href="class_physics_1_1_simple_box.html#a8ab867f2de3aec7dbe54f05f8391bb81">BodySize</a></div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        {</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            <span class="keyword">get</span> =&gt; rectangleShape2D.Extents * 2;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            <span class="keyword">set</span></div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            {</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;                rectangleShape2D.Extents = value / 2;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            }</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;        }</div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keyword">private</span> readonly CollisionShape2D collisionShape2D;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keyword">private</span> readonly RectangleShape2D rectangleShape2D;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">private</span> readonly CollisionShape2D collisionShape2D;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">private</span> readonly RectangleShape2D rectangleShape2D;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_box.html#a7adf4ef2252521478173db919c6b04f0">   35</a></span>&#160;    <span class="keyword">public</span> <a class="code" href="class_physics_1_1_simple_box.html#a7adf4ef2252521478173db919c6b04f0">SimpleBox</a>()</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;      rectangleShape2D = <span class="keyword">new</span> RectangleShape2D { Extents = <span class="keyword">new</span> Vector2(10, 10) };</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      collisionShape2D = <span class="keyword">new</span> CollisionShape2D { Shape = rectangleShape2D };</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno"><a class="line" href="class_physics_1_1_simple_box.html#a7adf4ef2252521478173db919c6b04f0">   35</a></span>&#160;        <span class="keyword">public</span> <a class="code" href="class_physics_1_1_simple_box.html#a7adf4ef2252521478173db919c6b04f0">SimpleBox</a>()</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        {</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;            rectangleShape2D = <span class="keyword">new</span> RectangleShape2D { Extents = <span class="keyword">new</span> Vector2(10, 10) };</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            collisionShape2D = <span class="keyword">new</span> CollisionShape2D { Shape = rectangleShape2D };</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        }</div>
 <div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160; </div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;    {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;      AddChild(collisionShape2D);</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;    }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;            AddChild(collisionShape2D);</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;        }</div>
 <div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Draw()</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;      var outlineVec = <span class="keyword">new</span> Vector2(<a class="code" href="class_physics_1_1_simple_box.html#a90190a075c67d302efa0f33baf7c6d54">OutlineWidth</a>, <a class="code" href="class_physics_1_1_simple_box.html#a90190a075c67d302efa0f33baf7c6d54">OutlineWidth</a>);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;      DrawRect(<span class="keyword">new</span> Rect2(-<a class="code" href="class_physics_1_1_simple_box.html#a8ab867f2de3aec7dbe54f05f8391bb81">BodySize</a> / 2, <a class="code" href="class_physics_1_1_simple_box.html#a8ab867f2de3aec7dbe54f05f8391bb81">BodySize</a>), <a class="code" href="class_physics_1_1_simple_box.html#ac1ca81d61b8f5428cd64f13d2409ebfe">OutlineColor</a>);</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;      DrawRect(<span class="keyword">new</span> Rect2((-<a class="code" href="class_physics_1_1_simple_box.html#a8ab867f2de3aec7dbe54f05f8391bb81">BodySize</a> / 2) + (outlineVec / 2), <a class="code" href="class_physics_1_1_simple_box.html#a8ab867f2de3aec7dbe54f05f8391bb81">BodySize</a> - (outlineVec / 2)), <a class="code" href="class_physics_1_1_simple_box.html#a9c32b7d99db89daef96551271826a09c">BaseColor</a>);</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    }</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Draw()</div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;        {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;            var outlineVec = <span class="keyword">new</span> Vector2(<a class="code" href="class_physics_1_1_simple_box.html#a90190a075c67d302efa0f33baf7c6d54">OutlineWidth</a>, <a class="code" href="class_physics_1_1_simple_box.html#a90190a075c67d302efa0f33baf7c6d54">OutlineWidth</a>);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;            DrawRect(<span class="keyword">new</span> Rect2(-<a class="code" href="class_physics_1_1_simple_box.html#a8ab867f2de3aec7dbe54f05f8391bb81">BodySize</a> / 2, <a class="code" href="class_physics_1_1_simple_box.html#a8ab867f2de3aec7dbe54f05f8391bb81">BodySize</a>), <a class="code" href="class_physics_1_1_simple_box.html#ac1ca81d61b8f5428cd64f13d2409ebfe">OutlineColor</a>);</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;            DrawRect(<span class="keyword">new</span> Rect2((-<a class="code" href="class_physics_1_1_simple_box.html#a8ab867f2de3aec7dbe54f05f8391bb81">BodySize</a> / 2) + (outlineVec / 2), <a class="code" href="class_physics_1_1_simple_box.html#a8ab867f2de3aec7dbe54f05f8391bb81">BodySize</a> - (outlineVec / 2)), <a class="code" href="class_physics_1_1_simple_box.html#a9c32b7d99db89daef96551271826a09c">BaseColor</a>);</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        }</div>
 <div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    {</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;      Update();</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;    }</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;  }</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Process(<span class="keywordtype">float</span> delta)</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;        {</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;            Update();</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;        }</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;    }</div>
 <div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_physics_1_1_simple_box_html_a90190a075c67d302efa0f33baf7c6d54"><div class="ttname"><a href="class_physics_1_1_simple_box.html#a90190a075c67d302efa0f33baf7c6d54">Physics.SimpleBox.OutlineWidth</a></div><div class="ttdeci">float OutlineWidth</div><div class="ttdoc">Outline width</div><div class="ttdef"><b>Definition:</b> <a href="_simple_box_8cs_source.html#l00011">SimpleBox.cs:11</a></div></div>

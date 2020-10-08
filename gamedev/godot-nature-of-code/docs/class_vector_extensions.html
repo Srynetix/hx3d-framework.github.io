@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -143,12 +143,12 @@ Static Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Normal point</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_vector_extensions_8cs_source.html#l00048">48</a> of file <a class="el" href="_vector_extensions_8cs_source.html">VectorExtensions.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;    var ap = p - a;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;    var ab = (b - a).Normalized();</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;    var dot = ap.Dot(ab);</div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    <span class="keywordflow">return</span> a + (ab * dot);</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;  }</div>
+<div class="fragment"><div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;        var ap = p - a;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;        var ab = (b - a).Normalized();</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;        var dot = ap.Dot(ab);</div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;        <span class="keywordflow">return</span> a + (ab * dot);</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -197,12 +197,12 @@ Static Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Vector with jitter</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_vector_extensions_8cs_source.html#l00033">33</a> of file <a class="el" href="_vector_extensions_8cs_source.html">VectorExtensions.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;  {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    var vec = <span class="keyword">new</span> Vector2(vector.x, vector.y);</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    vec.x += <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#aafdf5a209e44dbad1c32d83be09e85dd">Randf</a>() * coef;</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    vec.y += <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#aafdf5a209e44dbad1c32d83be09e85dd">Randf</a>() * coef;</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keywordflow">return</span> vec;</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;  }</div>
+<div class="fragment"><div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;        var vec = <span class="keyword">new</span> Vector2(vector.x, vector.y);</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        vec.x += <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#aafdf5a209e44dbad1c32d83be09e85dd">Randf</a>() * coef;</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        vec.y += <a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#aafdf5a209e44dbad1c32d83be09e85dd">Randf</a>() * coef;</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        <span class="keywordflow">return</span> vec;</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -251,17 +251,17 @@ Static Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Normalized vector</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_vector_extensions_8cs_source.html#l00014">14</a> of file <a class="el" href="_vector_extensions_8cs_source.html">VectorExtensions.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;  {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    var vec = <span class="keyword">new</span> Vector2(vector.x, vector.y);</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    var len = vec.Length();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordflow">if</span> (len &gt; 0)</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    {</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      len /= length;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      vec.x *= len;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      vec.y *= len;</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordflow">return</span> vec;</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;  }</div>
+<div class="fragment"><div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    {</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;        var vec = <span class="keyword">new</span> Vector2(vector.x, vector.y);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        var len = vec.Length();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        <span class="keywordflow">if</span> (len &gt; 0)</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        {</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            len /= length;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            vec.x *= len;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            vec.y *= len;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;        }</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keywordflow">return</span> vec;</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>

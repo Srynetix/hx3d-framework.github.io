@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -84,7 +84,7 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    subprocess.call([exe] + list(args))</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;parser = argparse.ArgumentParser(description=<span class="stringliteral">&quot;Makefile&quot;</span>)</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;subs = parser.add_subparsers(dest=<span class="stringliteral">&quot;cmd&quot;</span>)</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;subs = parser.add_subparsers(dest=<span class="stringliteral">&quot;cmd&quot;</span>, required=<span class="keyword">True</span>)</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;subs.add_parser(<span class="stringliteral">&quot;format&quot;</span>)</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;subs.add_parser(<span class="stringliteral">&quot;export&quot;</span>)</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -70,6 +70,7 @@ $(function() {
   <div class="summary">
 <a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
+<a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="class_forces_1_1_simple_zone-members.html">List of all members</a>  </div>
   <div class="headertitle">
 <div class="title">Forces.SimpleZone Class Reference</div>  </div>
@@ -100,6 +101,12 @@ Protected Member Functions</h2></td></tr>
 <tr class="memitem:ab788cd4aaf73b94f92d7682bb5845e7f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_forces_1_1_simple_zone.html#ab788cd4aaf73b94f92d7682bb5845e7f">DrawZone</a> (Color color)</td></tr>
 <tr class="memdesc:ab788cd4aaf73b94f92d7682bb5845e7f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Draw zone.  <a href="class_forces_1_1_simple_zone.html#ab788cd4aaf73b94f92d7682bb5845e7f">More...</a><br /></td></tr>
 <tr class="separator:ab788cd4aaf73b94f92d7682bb5845e7f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
+Protected Attributes</h2></td></tr>
+<tr class="memitem:abe4c3c82446c78db0b103328b4ca895d"><td class="memItemLeft" align="right" valign="top">Font&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_forces_1_1_simple_zone.html#abe4c3c82446c78db0b103328b4ca895d">defaultFont</a></td></tr>
+<tr class="memdesc:abe4c3c82446c78db0b103328b4ca895d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default font  <a href="class_forces_1_1_simple_zone.html#abe4c3c82446c78db0b103328b4ca895d">More...</a><br /></td></tr>
+<tr class="separator:abe4c3c82446c78db0b103328b4ca895d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>Simple collision zone. </p>
@@ -138,14 +145,40 @@ Protected Member Functions</h2></td></tr>
   </dd>
 </dl>
 
-<p class="definition">Definition at line <a class="el" href="_simple_zone_8cs_source.html#l00020">20</a> of file <a class="el" href="_simple_zone_8cs_source.html">SimpleZone.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    {</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      DrawRect(<span class="keyword">new</span> Rect2(Vector2.Zero - (<a class="code" href="class_forces_1_1_simple_zone.html#ac96f5ade1efb6b4f49b4ac5d5c5d8454">Size</a> / 2), <a class="code" href="class_forces_1_1_simple_zone.html#ac96f5ade1efb6b4f49b4ac5d5c5d8454">Size</a>), color.WithAlpha(200));</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    }</div>
+<p class="definition">Definition at line <a class="el" href="_simple_zone_8cs_source.html#l00021">21</a> of file <a class="el" href="_simple_zone_8cs_source.html">SimpleZone.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        {</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            DrawRect(<span class="keyword">new</span> Rect2(Vector2.Zero - (<a class="code" href="class_forces_1_1_simple_zone.html#ac96f5ade1efb6b4f49b4ac5d5c5d8454">Size</a> / 2), <a class="code" href="class_forces_1_1_simple_zone.html#ac96f5ade1efb6b4f49b4ac5d5c5d8454">Size</a>), color.WithAlpha(200));</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        }</div>
 </div><!-- fragment -->
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="abe4c3c82446c78db0b103328b4ca895d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abe4c3c82446c78db0b103328b4ca895d">&#9670;&nbsp;</a></span>defaultFont</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">Font Forces.SimpleZone.defaultFont</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Default font </p>
+
+<p class="definition">Definition at line <a class="el" href="_simple_zone_8cs_source.html#l00015">15</a> of file <a class="el" href="_simple_zone_8cs_source.html">SimpleZone.cs</a>.</p>
+
+</div>
+</div>
 <a id="ac96f5ade1efb6b4f49b4ac5d5c5d8454"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac96f5ade1efb6b4f49b4ac5d5c5d8454">&#9670;&nbsp;</a></span>Size</h2>
 

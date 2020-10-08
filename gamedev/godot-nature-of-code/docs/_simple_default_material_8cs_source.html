@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -75,43 +75,34 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160; </div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_assets.html">Assets</a></div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_assets_1_1_simple_default_material.html">    8</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_assets_1_1_simple_default_material.html">SimpleDefaultMaterial</a></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;  {</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_assets_1_1_simple_default_material.html#adeae62285d45575a55b88819121468c5">   13</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">enum</span> <a class="code" href="class_assets_1_1_simple_default_material.html#adeae62285d45575a55b88819121468c5">Enum</a></div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    {</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;      Add</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    }</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> Material AddMaterial;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno"><a class="line" href="class_assets_1_1_simple_default_material.html#ad4d319cb3229516c74859c13ff7f7494">   26</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> Material <a class="code" href="class_assets_1_1_simple_default_material.html#ad4d319cb3229516c74859c13ff7f7494">FromEnum</a>(<a class="code" href="class_assets_1_1_simple_default_material.html#adeae62285d45575a55b88819121468c5">Enum</a> value)</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      Initialize();</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;      <span class="keywordflow">if</span> (value == <a class="code" href="class_assets_1_1_simple_default_material.html#adeae62285d45575a55b88819121468c5">Enum</a>.Add)</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      {</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="keywordflow">return</span> AddMaterial;</div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;      }</div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      <span class="keywordflow">return</span> <span class="keyword">null</span>;</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;    }</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160; </div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> Initialize()</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;    {</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;      <span class="keywordflow">if</span> (AddMaterial == <span class="keyword">null</span>)</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;      {</div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        AddMaterial = <span class="keyword">new</span> CanvasItemMaterial</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;        {</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;          BlendMode = CanvasItemMaterial.BlendModeEnum.Add</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        };</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;      }</div>
-<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    }</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;  }</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;}</div>
+<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="class_assets_1_1_simple_default_material.html">    8</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">class </span><a class="code" href="class_assets_1_1_simple_default_material.html">SimpleDefaultMaterial</a></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    {</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="class_assets_1_1_simple_default_material.html#a7ff26470e83396d96ffc004c71423967">   13</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">static</span> Material <a class="code" href="class_assets_1_1_simple_default_material.html#a7ff26470e83396d96ffc004c71423967">AddMaterial</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;        {</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;            <span class="keyword">get</span></div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;            {</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;                Initialize();</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;                <span class="keywordflow">return</span> _addMaterial;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            }</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;        }</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> Material _addMaterial;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;        <span class="keyword">private</span> <span class="keyword">static</span> <span class="keywordtype">void</span> Initialize()</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;        {</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keywordflow">if</span> (_addMaterial == <span class="keyword">null</span>)</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                _addMaterial = <span class="keyword">new</span> CanvasItemMaterial</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                {</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                    BlendMode = CanvasItemMaterial.BlendModeEnum.Add</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;                };</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            }</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;    }</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclass_assets_1_1_simple_default_material_html_adeae62285d45575a55b88819121468c5"><div class="ttname"><a href="class_assets_1_1_simple_default_material.html#adeae62285d45575a55b88819121468c5">Assets.SimpleDefaultMaterial.Enum</a></div><div class="ttdeci">Enum</div><div class="ttdoc">Material types.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_default_material_8cs_source.html#l00013">SimpleDefaultMaterial.cs:14</a></div></div>
 <div class="ttc" id="anamespace_assets_html"><div class="ttname"><a href="namespace_assets.html">Assets</a></div><div class="ttdoc">Lazy-loaded assets.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_default_font_8cs_source.html#l00006">SimpleDefaultFont.cs:7</a></div></div>
-<div class="ttc" id="aclass_assets_1_1_simple_default_material_html_ad4d319cb3229516c74859c13ff7f7494"><div class="ttname"><a href="class_assets_1_1_simple_default_material.html#ad4d319cb3229516c74859c13ff7f7494">Assets.SimpleDefaultMaterial.FromEnum</a></div><div class="ttdeci">static Material FromEnum(Enum value)</div><div class="ttdoc">Get or create a default material from an enum value.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_default_material_8cs_source.html#l00026">SimpleDefaultMaterial.cs:26</a></div></div>
+<div class="ttc" id="aclass_assets_1_1_simple_default_material_html_a7ff26470e83396d96ffc004c71423967"><div class="ttname"><a href="class_assets_1_1_simple_default_material.html#a7ff26470e83396d96ffc004c71423967">Assets.SimpleDefaultMaterial.AddMaterial</a></div><div class="ttdeci">static Material AddMaterial</div><div class="ttdoc">Add material.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_default_material_8cs_source.html#l00013">SimpleDefaultMaterial.cs:14</a></div></div>
 <div class="ttc" id="aclass_assets_1_1_simple_default_material_html"><div class="ttname"><a href="class_assets_1_1_simple_default_material.html">Assets.SimpleDefaultMaterial</a></div><div class="ttdoc">Contains lazy-loaded materials to use.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_default_material_8cs_source.html#l00008">SimpleDefaultMaterial.cs:9</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

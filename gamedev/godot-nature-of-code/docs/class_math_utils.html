@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -82,6 +82,9 @@ Static Public Member Functions</h2></td></tr>
 <tr class="memitem:aafdf5a209e44dbad1c32d83be09e85dd"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_math_utils.html#aafdf5a209e44dbad1c32d83be09e85dd">Randf</a> ()</td></tr>
 <tr class="memdesc:aafdf5a209e44dbad1c32d83be09e85dd"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a random floating number between 0 and 1.  <a href="class_math_utils.html#aafdf5a209e44dbad1c32d83be09e85dd">More...</a><br /></td></tr>
 <tr class="separator:aafdf5a209e44dbad1c32d83be09e85dd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aee5b9571ff4d34cd157a7d01fc5d4bcc"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_math_utils.html#aee5b9571ff4d34cd157a7d01fc5d4bcc">RandRangei</a> (int min, int max)</td></tr>
+<tr class="memdesc:aee5b9571ff4d34cd157a7d01fc5d4bcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return an int RandRange.  <a href="class_math_utils.html#aee5b9571ff4d34cd157a7d01fc5d4bcc">More...</a><br /></td></tr>
+<tr class="separator:aee5b9571ff4d34cd157a7d01fc5d4bcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26d35f478845659a49fe7ec08bc6616b"><td class="memItemLeft" align="right" valign="top">static float&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_math_utils.html#a26d35f478845659a49fe7ec08bc6616b">SignedRandf</a> ()</td></tr>
 <tr class="memdesc:a26d35f478845659a49fe7ec08bc6616b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Return a signed Randf, between -1 and 1.  <a href="class_math_utils.html#a26d35f478845659a49fe7ec08bc6616b">More...</a><br /></td></tr>
 <tr class="separator:a26d35f478845659a49fe7ec08bc6616b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -175,9 +178,9 @@ Static Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Mapped value</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_math_utils_8cs_source.html#l00017">17</a> of file <a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;  {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keywordflow">return</span> ostart + ((ostop - ostart) * ((value - istart) / (istop - istart)));</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;  }</div>
+<div class="fragment"><div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;        <span class="keywordflow">return</span> ostart + ((ostop - ostart) * ((value - istart) / (istop - istart)));</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -207,10 +210,10 @@ Static Public Member Functions</h2></td></tr>
 <p>Return a random color. </p>
 <dl class="section return"><dt>Returns</dt><dd>Random color</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_math_utils_8cs_source.html#l00107">107</a> of file <a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;  {</div>
-<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> Color((<span class="keywordtype">float</span>)GD.RandRange(0, 1), (<span class="keywordtype">float</span>)GD.RandRange(0, 1), (<span class="keywordtype">float</span>)GD.RandRange(0, 1));</div>
-<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="_math_utils_8cs_source.html#l00118">118</a> of file <a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00119"></a><span class="lineno">  119</span>&#160;    {</div>
+<div class="line"><a name="l00120"></a><span class="lineno">  120</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> Color((<span class="keywordtype">float</span>)GD.RandRange(0, 1), (<span class="keywordtype">float</span>)GD.RandRange(0, 1), (<span class="keywordtype">float</span>)GD.RandRange(0, 1));</div>
+<div class="line"><a name="l00121"></a><span class="lineno">  121</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -241,9 +244,9 @@ Static Public Member Functions</h2></td></tr>
 <dl class="section return"><dt>Returns</dt><dd>Random floating number</dd></dl>
 
 <p class="definition">Definition at line <a class="el" href="_math_utils_8cs_source.html#l00026">26</a> of file <a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;  {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)GD.RandRange(0, 1);</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;  }</div>
+<div class="fragment"><div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;    {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)GD.RandRange(0, 1);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -291,10 +294,61 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Random float</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_math_utils_8cs_source.html#l00046">46</a> of file <a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;  {</div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)GD.RandRange(min, max);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="_math_utils_8cs_source.html#l00057">57</a> of file <a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    {</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        <span class="keywordflow">return</span> (<span class="keywordtype">float</span>)GD.RandRange(min, max);</div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    }</div>
+</div><!-- fragment -->
+</div>
+</div>
+<a id="aee5b9571ff4d34cd157a7d01fc5d4bcc"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aee5b9571ff4d34cd157a7d01fc5d4bcc">&#9670;&nbsp;</a></span>RandRangei()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int MathUtils.RandRangei </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>min</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>max</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">inline</span><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Return an int RandRange. </p>
+<dl class="params"><dt>Parameters</dt><dd>
+  <table class="params">
+    <tr><td class="paramname">min</td><td>Lower bound</td></tr>
+    <tr><td class="paramname">max</td><td>Upper bound</td></tr>
+  </table>
+  </dd>
+</dl>
+<dl class="section return"><dt>Returns</dt><dd>Random int</dd></dl>
+
+<p class="definition">Definition at line <a class="el" href="_math_utils_8cs_source.html#l00037">37</a> of file <a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;    {</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;        <span class="keywordflow">return</span> Mathf.RoundToInt(<a class="code" href="class_math_utils.html#a493dfce1b52671313b5b9917ad393aff">RandRangef</a>(min, max));</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -349,10 +403,10 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Random vector</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_math_utils_8cs_source.html#l00058">58</a> of file <a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;  {</div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2(<a class="code" href="class_math_utils.html#a493dfce1b52671313b5b9917ad393aff">RandRangef</a>(minX, maxX), y);</div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="_math_utils_8cs_source.html#l00069">69</a> of file <a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160;    {</div>
+<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2(<a class="code" href="class_math_utils.html#a493dfce1b52671313b5b9917ad393aff">RandRangef</a>(minX, maxX), y);</div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -407,10 +461,10 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Random vector</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_math_utils_8cs_source.html#l00070">70</a> of file <a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;  {</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2(x, <a class="code" href="class_math_utils.html#a493dfce1b52671313b5b9917ad393aff">RandRangef</a>(minY, maxY));</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="_math_utils_8cs_source.html#l00081">81</a> of file <a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;    {</div>
+<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;        <span class="keywordflow">return</span> <span class="keyword">new</span> Vector2(x, <a class="code" href="class_math_utils.html#a493dfce1b52671313b5b9917ad393aff">RandRangef</a>(minY, maxY));</div>
+<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -472,14 +526,14 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Random vector</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_math_utils_8cs_source.html#l00094">94</a> of file <a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;  {</div>
-<div class="line"><a name="l00096"></a><span class="lineno">   96</span>&#160;    var vec = Vector2.Zero;</div>
-<div class="line"><a name="l00097"></a><span class="lineno">   97</span>&#160;    vec.x = (float)GD.RandRange(minX, maxX);</div>
-<div class="line"><a name="l00098"></a><span class="lineno">   98</span>&#160;    vec.y = (float)GD.RandRange(minY, maxY);</div>
-<div class="line"><a name="l00099"></a><span class="lineno">   99</span>&#160; </div>
-<div class="line"><a name="l00100"></a><span class="lineno">  100</span>&#160;    <span class="keywordflow">return</span> vec;</div>
-<div class="line"><a name="l00101"></a><span class="lineno">  101</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="_math_utils_8cs_source.html#l00105">105</a> of file <a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00106"></a><span class="lineno">  106</span>&#160;    {</div>
+<div class="line"><a name="l00107"></a><span class="lineno">  107</span>&#160;        var vec = Vector2.Zero;</div>
+<div class="line"><a name="l00108"></a><span class="lineno">  108</span>&#160;        vec.x = (float)GD.RandRange(minX, maxX);</div>
+<div class="line"><a name="l00109"></a><span class="lineno">  109</span>&#160;        vec.y = (float)GD.RandRange(minY, maxY);</div>
+<div class="line"><a name="l00110"></a><span class="lineno">  110</span>&#160; </div>
+<div class="line"><a name="l00111"></a><span class="lineno">  111</span>&#160;        <span class="keywordflow">return</span> vec;</div>
+<div class="line"><a name="l00112"></a><span class="lineno">  112</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -527,10 +581,10 @@ Static Public Member Functions</h2></td></tr>
 </dl>
 <dl class="section return"><dt>Returns</dt><dd>Random vector</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_math_utils_8cs_source.html#l00081">81</a> of file <a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00082"></a><span class="lineno">   82</span>&#160;  {</div>
-<div class="line"><a name="l00083"></a><span class="lineno">   83</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">RandVector2</a>(rangeX.x, rangeX.y, rangeY.x, rangeY.y);</div>
-<div class="line"><a name="l00084"></a><span class="lineno">   84</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="_math_utils_8cs_source.html#l00092">92</a> of file <a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00093"></a><span class="lineno">   93</span>&#160;    {</div>
+<div class="line"><a name="l00094"></a><span class="lineno">   94</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">RandVector2</a>(rangeX.x, rangeX.y, rangeY.x, rangeY.y);</div>
+<div class="line"><a name="l00095"></a><span class="lineno">   95</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -560,10 +614,10 @@ Static Public Member Functions</h2></td></tr>
 <p>Return a signed Randf, between -1 and 1. </p>
 <dl class="section return"><dt>Returns</dt><dd>Signed random floating number</dd></dl>
 
-<p class="definition">Definition at line <a class="el" href="_math_utils_8cs_source.html#l00035">35</a> of file <a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a>.</p>
-<div class="fragment"><div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;  {</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;    <span class="keywordflow">return</span> <a class="code" href="class_math_utils.html#a34a01167f3ae45f790e51c287f874f99">Map</a>((<span class="keywordtype">float</span>)GD.RandRange(0, 1), 0, 1, -1, 1);</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;  }</div>
+<p class="definition">Definition at line <a class="el" href="_math_utils_8cs_source.html#l00046">46</a> of file <a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a>.</p>
+<div class="fragment"><div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160;    {</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        <span class="keywordflow">return</span> <a class="code" href="class_math_utils.html#a34a01167f3ae45f790e51c287f874f99">Map</a>((<span class="keywordtype">float</span>)GD.RandRange(0, 1), 0, 1, -1, 1);</div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;    }</div>
 </div><!-- fragment -->
 </div>
 </div>
@@ -571,8 +625,8 @@ Static Public Member Functions</h2></td></tr>
 <li>scripts/utils/<a class="el" href="_math_utils_8cs_source.html">MathUtils.cs</a></li>
 </ul>
 </div><!-- contents -->
-<div class="ttc" id="aclass_math_utils_html_a493dfce1b52671313b5b9917ad393aff"><div class="ttname"><a href="class_math_utils.html#a493dfce1b52671313b5b9917ad393aff">MathUtils.RandRangef</a></div><div class="ttdeci">static float RandRangef(float min, float max)</div><div class="ttdoc">Return a float RandRange.</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00046">MathUtils.cs:46</a></div></div>
-<div class="ttc" id="aclass_math_utils_html_a930682fc1b0e30eb85d7cc9d33849e5e"><div class="ttname"><a href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">MathUtils.RandVector2</a></div><div class="ttdeci">static Vector2 RandVector2(Vector2 rangeX, Vector2 rangeY)</div><div class="ttdoc">Return a Vector with coordinates in a random range (vector limits).</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00081">MathUtils.cs:81</a></div></div>
+<div class="ttc" id="aclass_math_utils_html_a493dfce1b52671313b5b9917ad393aff"><div class="ttname"><a href="class_math_utils.html#a493dfce1b52671313b5b9917ad393aff">MathUtils.RandRangef</a></div><div class="ttdeci">static float RandRangef(float min, float max)</div><div class="ttdoc">Return a float RandRange.</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00057">MathUtils.cs:57</a></div></div>
+<div class="ttc" id="aclass_math_utils_html_a930682fc1b0e30eb85d7cc9d33849e5e"><div class="ttname"><a href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">MathUtils.RandVector2</a></div><div class="ttdeci">static Vector2 RandVector2(Vector2 rangeX, Vector2 rangeY)</div><div class="ttdoc">Return a Vector with coordinates in a random range (vector limits).</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00092">MathUtils.cs:92</a></div></div>
 <div class="ttc" id="aclass_math_utils_html_a34a01167f3ae45f790e51c287f874f99"><div class="ttname"><a href="class_math_utils.html#a34a01167f3ae45f790e51c287f874f99">MathUtils.Map</a></div><div class="ttdeci">static float Map(float value, float istart, float istop, float ostart, float ostop)</div><div class="ttdoc">Map a value from one bound to another.</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00017">MathUtils.cs:17</a></div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

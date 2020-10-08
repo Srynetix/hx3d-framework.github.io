@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -77,60 +77,60 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160; </div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples.html">Examples</a></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;  <span class="keyword">namespace </span>Chapter5</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  {</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter5_1_1_c5_example2.html">   17</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter5_1_1_c5_example2.html">C5Example2</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter5_1_1_c5_example2.html#a8b9e86783959f7a0257a8a626daec23b">   19</a></span>&#160;      <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter5_1_1_c5_example2.html#a8b9e86783959f7a0257a8a626daec23b">GetSummary</a>()</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      {</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;        <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 5.2:\n&quot;</span></div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;          + <span class="stringliteral">&quot;Boxes and Walls\n\n&quot;</span></div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;          + <span class="stringliteral">&quot;Touch screen to spawn boxes&quot;</span>;</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      }</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">namespace </span>Chapter5</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter5_1_1_c5_example2.html">   17</a></span>&#160;        <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter5_1_1_c5_example2.html">C5Example2</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        {</div>
+<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter5_1_1_c5_example2.html#a8b9e86783959f7a0257a8a626daec23b">   19</a></span>&#160;            <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter5_1_1_c5_example2.html#a8b9e86783959f7a0257a8a626daec23b">GetSummary</a>()</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            {</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;                <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 5.2:\n&quot;</span></div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;                  + <span class="stringliteral">&quot;Boxes and Walls\n\n&quot;</span></div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;                  + <span class="stringliteral">&quot;Touch screen to spawn boxes&quot;</span>;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            }</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;      <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      {</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;        var size = GetViewportRect().Size;</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> floorHeight = 25;</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> offset = 50;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;            <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            {</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;                var size = GetViewportRect().Size;</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">int</span> floorHeight = 25;</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">int</span> offset = 50;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;        <span class="comment">// Add left floor</span></div>
-<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;        var leftFloor = <span class="keyword">new</span> <a class="code" href="class_physics_1_1_simple_wall.html">SimpleWall</a></div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;        {</div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;          BodySize = <span class="keyword">new</span> Vector2(size.x / 2.5f, floorHeight),</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;          Position = <span class="keyword">new</span> Vector2((size.x / 2.5f / 2) + offset, size.y)</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        };</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;        AddChild(leftFloor);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;                <span class="comment">// Add left floor</span></div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;                var leftFloor = <span class="keyword">new</span> <a class="code" href="class_physics_1_1_simple_wall.html">SimpleWall</a></div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;                {</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;                    BodySize = <span class="keyword">new</span> Vector2(size.x / 2.5f, floorHeight),</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                    Position = <span class="keyword">new</span> Vector2((size.x / 2.5f / 2) + offset, size.y)</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                };</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;                AddChild(leftFloor);</div>
 <div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        <span class="comment">// Add right floor</span></div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;        var rightFloor = <span class="keyword">new</span> <a class="code" href="class_physics_1_1_simple_wall.html">SimpleWall</a></div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;        {</div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;          BodySize = <span class="keyword">new</span> Vector2(size.x / 2.5f, floorHeight),</div>
-<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;          Position = <span class="keyword">new</span> Vector2(size.x - (size.x / 2.5f / 2) - offset, size.y - (offset * 2))</div>
-<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;        };</div>
-<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;        AddChild(rightFloor);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;                <span class="comment">// Add right floor</span></div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;                var rightFloor = <span class="keyword">new</span> <a class="code" href="class_physics_1_1_simple_wall.html">SimpleWall</a></div>
+<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;                {</div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;                    BodySize = <span class="keyword">new</span> Vector2(size.x / 2.5f, floorHeight),</div>
+<div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160;                    Position = <span class="keyword">new</span> Vector2(size.x - (size.x / 2.5f / 2) - offset, size.y - (offset * 2))</div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160;                };</div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160;                AddChild(rightFloor);</div>
 <div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;        var spawner = <span class="keyword">new</span> <a class="code" href="class_utils_1_1_simple_touch_spawner.html">SimpleTouchSpawner</a></div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;        {</div>
-<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;          SpawnFunction = (position) =&gt;</div>
-<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;          {</div>
-<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;            <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="class_physics_1_1_simple_box.html">SimpleBox</a></div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;            {</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;              BodySize = <span class="keyword">new</span> Vector2(20, 20),</div>
-<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;              GlobalPosition = position</div>
-<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;            };</div>
-<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;          }</div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;        };</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;        AddChild(spawner);</div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;                var spawner = <span class="keyword">new</span> <a class="code" href="class_utils_1_1_simple_touch_spawner.html">SimpleTouchSpawner</a></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;                {</div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;                    SpawnFunction = (position) =&gt;</div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;                    {</div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160;                        <span class="keywordflow">return</span> <span class="keyword">new</span> <a class="code" href="class_physics_1_1_simple_box.html">SimpleBox</a></div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;                        {</div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;                            BodySize = <span class="keyword">new</span> Vector2(20, 20),</div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;                            GlobalPosition = position</div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;                        };</div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160;                    }</div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;                };</div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;                AddChild(spawner);</div>
 <div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160; </div>
-<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;        <span class="keyword">const</span> <span class="keywordtype">int</span> boxCount = 10;</div>
-<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;        <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; boxCount; ++i)</div>
-<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;        {</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;          spawner.SpawnBody(<a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">RandVector2</a>(offset * 2, size.x - (offset * 2), offset * 2, size.y - (offset * 2)));</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;        }</div>
-<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;      }</div>
-<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    }</div>
-<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;  }</div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;                <span class="keyword">const</span> <span class="keywordtype">int</span> boxCount = 10;</div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160;                <span class="keywordflow">for</span> (<span class="keywordtype">int</span> i = 0; i &lt; boxCount; ++i)</div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;                {</div>
+<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;                    spawner.SpawnBody(<a class="code" href="class_math_utils.html">MathUtils</a>.<a class="code" href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">RandVector2</a>(offset * 2, size.x - (offset * 2), offset * 2, size.y - (offset * 2)));</div>
+<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160;                }</div>
+<div class="line"><a name="l00066"></a><span class="lineno">   66</span>&#160;            }</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;        }</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160;    }</div>
 <div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_math_utils_html"><div class="ttname"><a href="class_math_utils.html">MathUtils</a></div><div class="ttdoc">Math utility functions</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00006">MathUtils.cs:7</a></div></div>
@@ -139,7 +139,7 @@ $(function() {
 <div class="ttc" id="aclass_physics_1_1_simple_wall_html"><div class="ttname"><a href="class_physics_1_1_simple_wall.html">Physics.SimpleWall</a></div><div class="ttdoc">Simple static wall.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_wall_8cs_source.html#l00008">SimpleWall.cs:9</a></div></div>
 <div class="ttc" id="aclass_utils_1_1_simple_touch_spawner_html"><div class="ttname"><a href="class_utils_1_1_simple_touch_spawner.html">Utils.SimpleTouchSpawner</a></div><div class="ttdoc">Touch spawner. Touch anywhere and spawn something. Can also spawn on demand using SpawnBody.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_touch_spawner_8cs_source.html#l00013">SimpleTouchSpawner.cs:14</a></div></div>
 <div class="ttc" id="aclass_examples_1_1_chapter5_1_1_c5_example2_html"><div class="ttname"><a href="class_examples_1_1_chapter5_1_1_c5_example2.html">Examples.Chapter5.C5Example2</a></div><div class="ttdoc">Example 5.2 - Boxes and Walls.</div><div class="ttdef"><b>Definition:</b> <a href="_c5_example2_8cs_source.html#l00017">C5Example2.cs:18</a></div></div>
-<div class="ttc" id="aclass_math_utils_html_a930682fc1b0e30eb85d7cc9d33849e5e"><div class="ttname"><a href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">MathUtils.RandVector2</a></div><div class="ttdeci">static Vector2 RandVector2(Vector2 rangeX, Vector2 rangeY)</div><div class="ttdoc">Return a Vector with coordinates in a random range (vector limits).</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00081">MathUtils.cs:81</a></div></div>
+<div class="ttc" id="aclass_math_utils_html_a930682fc1b0e30eb85d7cc9d33849e5e"><div class="ttname"><a href="class_math_utils.html#a930682fc1b0e30eb85d7cc9d33849e5e">MathUtils.RandVector2</a></div><div class="ttdeci">static Vector2 RandVector2(Vector2 rangeX, Vector2 rangeY)</div><div class="ttdoc">Return a Vector with coordinates in a random range (vector limits).</div><div class="ttdef"><b>Definition:</b> <a href="_math_utils_8cs_source.html#l00092">MathUtils.cs:92</a></div></div>
 <div class="ttc" id="aclass_examples_1_1_chapter5_1_1_c5_example2_html_a8b9e86783959f7a0257a8a626daec23b"><div class="ttname"><a href="class_examples_1_1_chapter5_1_1_c5_example2.html#a8b9e86783959f7a0257a8a626daec23b">Examples.Chapter5.C5Example2.GetSummary</a></div><div class="ttdeci">string GetSummary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c5_example2_8cs_source.html#l00019">C5Example2.cs:19</a></div></div>
 <div class="ttc" id="ainterface_examples_1_1_i_example_html"><div class="ttname"><a href="interface_examples_1_1_i_example.html">Examples.IExample</a></div><div class="ttdoc">Common example interface.</div><div class="ttdef"><b>Definition:</b> <a href="_example_8cs_source.html#l00006">Example.cs:7</a></div></div>
 <div class="ttc" id="aclass_physics_1_1_simple_box_html"><div class="ttname"><a href="class_physics_1_1_simple_box.html">Physics.SimpleBox</a></div><div class="ttdoc">Simple physics box.</div><div class="ttdef"><b>Definition:</b> <a href="_simple_box_8cs_source.html#l00008">SimpleBox.cs:9</a></div></div>

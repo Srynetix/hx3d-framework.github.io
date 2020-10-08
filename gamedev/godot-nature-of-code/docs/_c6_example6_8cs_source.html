@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">Godot Nature of Code
-   &#160;<span id="projectnumber">1.0.0</span>
+   &#160;<span id="projectnumber">1.1.0</span>
    </div>
    <div id="projectbrief">Nature of Code implemented in Godot Engine</div>
   </td>
@@ -76,38 +76,38 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="keyword">namespace </span><a class="code" href="namespace_examples_1_1_chapter6.html">Examples.Chapter6</a></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_example6.html">   10</a></span>&#160;  <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter6_1_1_c6_example6.html">C6Example6</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;  {</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_example6.html#ab6ed42c7a8e9c881815fdbf80bc04502">   12</a></span>&#160;    <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter6_1_1_c6_example6.html#ab6ed42c7a8e9c881815fdbf80bc04502">GetSummary</a>()</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    {</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;      <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 6.6:\nPath Following&quot;</span>;</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    }</div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_example6.html">   10</a></span>&#160;    <span class="keyword">public</span> <span class="keyword">class </span><a class="code" href="class_examples_1_1_chapter6_1_1_c6_example6.html">C6Example6</a> : Node2D, <a class="code" href="interface_examples_1_1_i_example.html">IExample</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    {</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="class_examples_1_1_chapter6_1_1_c6_example6.html#ab6ed42c7a8e9c881815fdbf80bc04502">   12</a></span>&#160;        <span class="keyword">public</span> <span class="keywordtype">string</span> <a class="code" href="class_examples_1_1_chapter6_1_1_c6_example6.html#ab6ed42c7a8e9c881815fdbf80bc04502">GetSummary</a>()</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;        {</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;            <span class="keywordflow">return</span> <span class="stringliteral">&quot;Example 6.6:\nPath Following&quot;</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;        }</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    {</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;      var size = GetViewportRect().Size;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;      var path = <span class="keyword">new</span> <a class="code" href="class_agents_1_1_simple_path.html">SimplePath</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;      path.Points.Add(<span class="keyword">new</span> Vector2(0, size.y / 2));</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;      path.Points.Add(<span class="keyword">new</span> Vector2(size.x / 8, size.y * 3 / 4));</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;      path.Points.Add(<span class="keyword">new</span> Vector2(size.x / 2, (size.y / 2) - 50));</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;      path.Points.Add(<span class="keyword">new</span> Vector2(size.x, size.y / 2));</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;      AddChild(path);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;        <span class="keyword">public</span> <span class="keyword">override</span> <span class="keywordtype">void</span> _Ready()</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;        {</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;            var size = GetViewportRect().Size;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;            var path = <span class="keyword">new</span> <a class="code" href="class_agents_1_1_simple_path.html">SimplePath</a>();</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;            path.Points.Add(<span class="keyword">new</span> Vector2(0, size.y / 2));</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;            path.Points.Add(<span class="keyword">new</span> Vector2(size.x / 8, size.y * 3 / 4));</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;            path.Points.Add(<span class="keyword">new</span> Vector2(size.x / 2, (size.y / 2) - 50));</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;            path.Points.Add(<span class="keyword">new</span> Vector2(size.x, size.y / 2));</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;            AddChild(path);</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;      var vehicle1 = <span class="keyword">new</span> <a class="code" href="class_agents_1_1_simple_vehicle.html">SimpleVehicle</a></div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;      {</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;        Position = <span class="keyword">new</span> Vector2(100, 100),</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;        TargetPath = path</div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;      };</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;      AddChild(vehicle1);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;            var vehicle1 = <span class="keyword">new</span> <a class="code" href="class_agents_1_1_simple_vehicle.html">SimpleVehicle</a></div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;            {</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;                Position = <span class="keyword">new</span> Vector2(100, 100),</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;                TargetPath = path</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;            };</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;            AddChild(vehicle1);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
-<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;      var vehicle2 = <span class="keyword">new</span> <a class="code" href="class_agents_1_1_simple_vehicle.html">SimpleVehicle</a></div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;      {</div>
-<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;        Position = <span class="keyword">new</span> Vector2(100, size.y - 100),</div>
-<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;        TargetPath = path</div>
-<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;      };</div>
-<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;      AddChild(vehicle2);</div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    }</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;  }</div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;            var vehicle2 = <span class="keyword">new</span> <a class="code" href="class_agents_1_1_simple_vehicle.html">SimpleVehicle</a></div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;            {</div>
+<div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160;                Position = <span class="keyword">new</span> Vector2(100, size.y - 100),</div>
+<div class="line"><a name="l00037"></a><span class="lineno">   37</span>&#160;                TargetPath = path</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160;            };</div>
+<div class="line"><a name="l00039"></a><span class="lineno">   39</span>&#160;            AddChild(vehicle2);</div>
+<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;        }</div>
+<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160;    }</div>
 <div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160;}</div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclass_examples_1_1_chapter6_1_1_c6_example6_html_ab6ed42c7a8e9c881815fdbf80bc04502"><div class="ttname"><a href="class_examples_1_1_chapter6_1_1_c6_example6.html#ab6ed42c7a8e9c881815fdbf80bc04502">Examples.Chapter6.C6Example6.GetSummary</a></div><div class="ttdeci">string GetSummary()</div><div class="ttdoc">Output a summary text</div><div class="ttdef"><b>Definition:</b> <a href="_c6_example6_8cs_source.html#l00012">C6Example6.cs:12</a></div></div>

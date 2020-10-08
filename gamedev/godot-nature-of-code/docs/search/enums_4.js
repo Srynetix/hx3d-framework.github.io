@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['vectormodeenum_965',['VectorModeEnum',['../class_virtual_controls.html#a5062858a41f3a3aadb1a1a2229d82ef0',1,'VirtualControls']]],
-  ['visibilitymodeenum_966',['VisibilityModeEnum',['../class_virtual_controls.html#a676f66afcfbc3f0ddaf08b8e59f5354e',1,'VirtualControls']]]
+  ['wrapbehaviorenum_1135',['WrapBehaviorEnum',['../namespace_automata.html#a79e93f2c9e1adc15156b8a30dbb3f97a',1,'Automata']]],
+  ['wrapmodeenum_1136',['WrapModeEnum',['../class_forces_1_1_simple_mover.html#ae8cb967d177fef6f7ee66ab40aae12f5',1,'Forces::SimpleMover']]]
 ];
