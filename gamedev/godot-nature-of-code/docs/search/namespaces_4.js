@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['oscillation_820',['Oscillation',['../namespace_oscillation.html',1,'']]]
+  ['oscillation_886',['Oscillation',['../namespace_oscillation.html',1,'']]]
 ];

@@ -1,7 +1,7 @@
 var searchData=
 [
-  ['scrolllines_1179',['ScrollLines',['../class_automata_1_1_cellular_automata1_d.html#a9740fc9454ec6ec69593ae3eaf4428fa',1,'Automata::CellularAutomata1D']]],
-  ['showline_1180',['ShowLine',['../class_oscillation_1_1_simple_oscillator.html#a6d79b7c8da6263ef26a14900534190a7',1,'Oscillation::SimpleOscillator']]],
-  ['size_1181',['Size',['../class_automata_1_1_cell.html#a42a88fc031d8e1a6de7838c17cc6397f',1,'Automata::Cell']]],
-  ['state_1182',['State',['../class_automata_1_1_cell.html#a8a01a991c8b67f060b84cf8f54fab898',1,'Automata::Cell']]]
+  ['paused_1277',['Paused',['../class_automata_1_1_cellular_automata2_d.html#a0648f25ce04e836716d4fde3201c806f',1,'Automata::CellularAutomata2D']]],
+  ['positiona_1278',['PositionA',['../class_drawing_1_1_simple_line_sprite.html#aaf456b8175ee20314846f97bc87bacf8',1,'Drawing::SimpleLineSprite']]],
+  ['positionb_1279',['PositionB',['../class_drawing_1_1_simple_line_sprite.html#a22e860e04bce76e7d96486620bdd1aaa',1,'Drawing::SimpleLineSprite']]],
+  ['previousstate_1280',['PreviousState',['../class_automata_1_1_cell.html#a002e44459f0cb19839ef3d2361329558',1,'Automata::Cell']]]
 ];

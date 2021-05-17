@@ -1,5 +1,7 @@
 var searchData=
 [
-  ['launcher_753',['Launcher',['../class_launcher.html',1,'']]],
-  ['lifeform_754',['Lifeform',['../class_ecosystem_1_1_ecosystem_1_1_lifeform.html',1,'Ecosystem::Ecosystem']]]
+  ['kochcurve_806',['KochCurve',['../class_fractals_1_1_koch_curve.html',1,'Fractals']]],
+  ['kochcurvenode_807',['KochCurveNode',['../class_fractals_1_1_koch_curve_node.html',1,'Fractals']]],
+  ['kochline_808',['KochLine',['../class_fractals_1_1_koch_line.html',1,'Fractals']]],
+  ['kochsnowflake_809',['KochSnowflake',['../class_fractals_1_1_koch_snowflake.html',1,'Fractals']]]
 ];
